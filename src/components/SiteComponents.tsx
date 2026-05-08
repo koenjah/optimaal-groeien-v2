@@ -43,7 +43,7 @@ export const Navbar = ({ activePage, setActivePage }: { activePage: string, setA
           <img
             src="/images/logo.png"
             alt="Optimaal Groeien"
-            className={`transition-all duration-300 ${isScrolled ? 'h-7' : 'h-8'}`}
+            className={`transition-all duration-300 ${isScrolled ? 'h-10' : 'h-12'}`}
           />
         </div>
 
@@ -183,32 +183,37 @@ export const PartnerHero = () => {
             </div>
 
             <h1 className="text-4xl lg:text-[3.5rem] font-display font-bold text-white leading-[1.1] mb-8 tracking-tight max-w-xl">
-               Je maakt de mooiste producten. <br />
-               <span className="text-brand-accent">Wij zorgen voor de rust.</span>
+               Commercieel Partner voor B2B bedrijven in de technische sector.
             </h1>
 
             <p className="text-lg text-white/50 mb-10 max-w-lg leading-relaxed font-light">
-               Bijna elke machinebouwer of fabrikant loopt tegen hetzelfde aan: de productie staat als een huis, maar de commercie voelt als los zand. Wij bouwen die ontbrekende fundering voor je.
+               Veel technische bedrijven groeien op toeval en netwerk. Wij veranderen dat in een voorspelbare commerciële machine door AI, Branding, Marketing & Sales met elkaar te verbinden.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-6 items-center">
+            <div className="flex flex-col sm:flex-row gap-4 items-center">
               <button
                 onClick={() => document.getElementById('tool')?.scrollIntoView({ behavior: 'smooth' })}
-                className="btn-primary w-full sm:w-auto !py-5 !px-10 text-base"
+                className="btn-primary w-full sm:w-auto !py-5 !px-10 text-base !bg-[#ed7c2f]"
               >
-                Ontdek je groeiruimte
+                Bereken pot. omzet
               </button>
-              <div className="flex items-center gap-4">
-                 <div className="flex -space-x-2">
-                   <img src="/images/team-1.jpg" className="w-9 h-9 rounded-full border-2 border-brand-primary object-cover object-[center_25%]" alt="Team" />
-                   <img src="/images/team-phone.jpg" className="w-9 h-9 rounded-full border-2 border-brand-primary object-cover object-top" alt="Team" />
-                   <img src="/images/team-4.png" className="w-9 h-9 rounded-full border-2 border-brand-primary object-cover object-top" alt="Team" />
-                 </div>
-                 <div className="flex flex-col">
-                    <span className="text-xs text-white font-bold opacity-70 leading-none mb-1">Stefan & team</span>
-                    <span className="text-[10px] text-brand-lime font-bold uppercase tracking-widest leading-none">Altijd bereikbaar</span>
-                 </div>
-              </div>
+              <button
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                className="w-full sm:w-auto px-8 py-5 bg-[#eeeeec] text-brand-primary rounded-2xl font-display font-bold transition-all hover:scale-[1.02] active:scale-[0.98] border-2 border-[#cfd62f] flex items-center justify-center gap-2 text-base"
+              >
+                Contact opnemen
+              </button>
+            </div>
+            <div className="flex items-center gap-4 mt-6">
+               <div className="flex -space-x-2">
+                 <img src="/images/team-1.jpg" className="w-9 h-9 rounded-full border-2 border-brand-primary object-cover object-[center_25%]" alt="Team" />
+                 <img src="/images/team-phone.jpg" className="w-9 h-9 rounded-full border-2 border-brand-primary object-cover object-top" alt="Team" />
+                 <img src="/images/team-4.png" className="w-9 h-9 rounded-full border-2 border-brand-primary object-cover object-top" alt="Team" />
+               </div>
+               <div className="flex flex-col">
+                  <span className="text-xs text-white font-bold opacity-70 leading-none mb-1">Stefan & team</span>
+                  <span className="text-[10px] text-brand-lime font-bold uppercase tracking-widest leading-none">Altijd bereikbaar</span>
+               </div>
             </div>
 
             <div className="mt-14 pt-8 border-t border-white/10 flex flex-wrap gap-8 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
@@ -242,12 +247,58 @@ export const PartnerHero = () => {
   );
 };
 
+export const ToolsSection = () => {
+  const tools = [
+    { name: "Meta", color: "#0668E1" },
+    { name: "Google", color: "#4285F4" },
+    { name: "HubSpot", color: "#FF7A59" },
+    { name: "SalesForce", color: "#00A1E0" },
+    { name: "LinkedIn", color: "#0A66C2" },
+    { name: "Make", color: "#6D00CC" },
+    { name: "Claude AI", color: "#CC785C" },
+    { name: "OpenAI", color: "#10A37F" },
+    { name: "Gemini", color: "#4285F4" },
+    { name: "Adobe", color: "#FF0000" },
+    { name: "Brevo", color: "#0B996E" },
+    { name: "Sales Navigator", color: "#0A66C2" },
+  ];
+  return (
+    <section className="py-16 px-6 bg-brand-bg border-y border-brand-soft">
+      <div className="max-w-7xl mx-auto text-center mb-10">
+        <h3 className="text-sm font-bold uppercase tracking-widest text-brand-primary/40 mb-2">Wij werken met de beste tools</h3>
+        <p className="text-brand-primary/50 text-sm max-w-2xl mx-auto leading-relaxed">
+          Wij begrijpen de complexiteit van jullie bedrijf, doelgroep en de markt. Dat stelt ons in staat om proactief de volledige regie over jullie groei te nemen, terwijl jij je focust op de operatie.
+        </p>
+      </div>
+      <div className="max-w-7xl mx-auto overflow-hidden relative">
+        <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-brand-bg to-transparent z-10" />
+        <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-brand-bg to-transparent z-10" />
+        <motion.div
+          className="flex gap-6 w-max"
+          animate={{ x: [0, -1200] }}
+          transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
+        >
+          {[...tools, ...tools, ...tools].map((tool, i) => (
+            <div
+              key={i}
+              className="flex items-center gap-3 px-6 py-3 bg-white border border-brand-soft rounded-full shadow-sm"
+            >
+              <span className="w-3 h-3 rounded-full" style={{ backgroundColor: tool.color }} />
+              <span className="text-sm font-bold text-brand-primary whitespace-nowrap">{tool.name}</span>
+            </div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
 export const HerkenJeDitSection = () => (
   <section className="py-24 px-6 bg-brand-bg">
     <div className="max-w-7xl mx-auto">
       <div className="flex flex-col lg:flex-row gap-12 items-start mb-16">
         <div className="lg:w-1/2">
-          <div className="label-pill">Begrijpen we elkaar?</div>
+          <div className="label-pill">De kosten van stilstand</div>
           <h2 className="text-4xl lg:text-5xl font-display font-bold text-brand-primary leading-tight mb-4">
             Je hebt grip op de techniek. <br />
             <span className="text-brand-accent">Maar je groei voelt als toeval.</span>
@@ -255,7 +306,7 @@ export const HerkenJeDitSection = () => (
         </div>
         <div className="lg:w-1/2 lg:pt-10">
           <p className="text-lg text-brand-primary/50 leading-relaxed font-light">
-            We horen het vaak: "Onze producten zijn top, onze klanten zijn blij, maar nieuwe klanten vinden is altijd hollen of stilstaan." Dat is heel normaal in de industrie — maar het hoeft niet zo te blijven.
+            We horen het vaak: "Onze producten zijn top, onze klanten zijn blij, maar nieuwe klanten vinden is volledig afhankelijk van ons netwerk". Je groeit groeit op basis van wie je kent, niet op basis van wat je waard bent. Wij bouwen een systeem dat jullie technische superioriteit vertaalt naar een constante stroom van de juiste opdrachten.
           </p>
         </div>
       </div>
@@ -292,23 +343,23 @@ export const HoeWeHelpenSection = () => (
       <div className="lg:w-3/5">
         <div className="label-pill">Hoe we je helpen</div>
         <h2 className="text-3xl lg:text-5xl font-display font-bold text-brand-primary mb-6 tracking-tight">
-          Je hebt een vakmanschap. <br/>
-          <span className="text-brand-accent">Wij helpen de wereld het zien.</span>
+          Wij begrijpen jullie techniek. <br/>
+          <span className="text-brand-accent">En bouwen de machine die het verkoopt.</span>
         </h2>
         <p className="text-lg text-brand-primary/50 mb-12 leading-relaxed max-w-xl font-light">
-          We bouwen geen ingewikkelde systemen waar je zelf mee moet puzzelen. We nemen het werk uit handen zodat jij kunt doen waar je goed in bent: ondernemen.
+          De meeste bureaus snappen de complexiteit van de industrie niet. Wij wel. We sturen geen dikke adviesrapporten vanaf de zijlijn, maar komen als team bij jullie langs om de kern van jullie bedrijf te doorgronden. Pas als we jullie vakmanschap écht begrijpen, bouwen we het systeem dat jullie groei dicteert.
         </p>
 
         <div className="grid sm:grid-cols-2 gap-x-10 gap-y-8">
             {[
-              { icon: Target, title: "Een Plan op Maat", desc: "Geen dik adviesrapport, maar een duidelijke routekaart voor je groei." },
-              { icon: Zap, title: "Echte Content", desc: "Foto's en video's van je eigen machines en mensen. Geen neppe stock." },
-              { icon: BarChart3, title: "Gevonden Worden", desc: "We zorgen dat beslissers in de industrie jou gaan zien als de expert." },
-              { icon: MessageSquare, title: "Tijdwinst met Flows", desc: "Zaken die automatisch gaan, zodat je meer tijd overhoudt voor je team." },
-              { icon: TrendingUp, title: "Je Eigen Gezicht", desc: "Je wordt de partij waar mensen direct aan denken als ze hulp nodig hebben." },
-              { icon: CheckCircle2, title: "Hulp bij Opvolging", desc: "We zorgen dat je geen enkele aanvraag meer mist. Alles wordt netjes opgepakt." },
-              { icon: Star, title: "Duidelijke Cijfers", desc: "In één oogopslag zien hoe het gaat. Gewoon op je telefoon." },
-              { icon: ShieldCheck, title: "Samen Sterker", desc: "We leren je eigen mensen hoe ze slim kunnen werken met het systeem." }
+              { icon: Users, title: "Vakkennis op locatie", desc: "Geen oppervlakkig praatje; wij komen fysiek langs en draaien mee op de werkvloer om jullie complexe service echt te doorgronden." },
+              { icon: Target, title: "Een plan op maat", desc: "Geen dik adviesrapport, maar een duidelijke routekaart voor je groei." },
+              { icon: Zap, title: "Echte content", desc: "Foto's en video's van je eigen machines en mensen. Geen neppe stock." },
+              { icon: BarChart3, title: "AI als fundament", desc: "Wij automatiseren wat werkt, van automatische leadopvolging tot real-time dashboards die je grip geven op de cijfers." },
+              { icon: Clock, title: "2-wekelijkse regie", desc: "Elke twee weken zitten we fysiek of digitaal samen om de voortgang te bespreken en de koers direct bij te sturen." },
+              { icon: MessageSquare, title: "Sluitende salesflows", desc: "Wij verbinden marketing direct aan sales, inclusief ondersteuning bij leadopvolging en scriptwerk om deals daadwerkelijk te sluiten." },
+              { icon: Star, title: "Gevonden worden", desc: "We zorgen dat beslissers in de industrie jou gaan zien als de expert." },
+              { icon: CheckCircle2, title: "Transparante cijfers", desc: "In één oogopslag zien hoe het gaat. Gewoon op je telefoon." }
             ].map((s, i) => (
               <div key={i} className="flex gap-4 group">
                 <div className="w-11 h-11 bg-brand-soft border border-brand-soft rounded-[16px] flex items-center justify-center shrink-0 mt-0.5 group-hover:border-brand-lime/40 group-hover:bg-brand-lime/10 transition-all">
@@ -478,9 +529,9 @@ export const OnzeBelofteSection = () => (
 
       <div className="grid lg:grid-cols-3 gap-5">
         {[
-          { t: "We gaan door tot het staat", d: "Zien we na 6 maanden niet de groei die we hadden afgesproken? Dan werken we gratis door. Zo simpel is het." },
-          { t: "Snel resultaat zien", d: "Binnen 30 dagen ben je live. Geen trajecten van een jaar, maar vlot en duidelijk aan de slag voor je onderneming." },
-          { t: "Jij bent en blijft de baas", d: "Alles wat we maken — van de foto's tot de data — is van jou. Je zit nooit aan ons vast. Vrijheid boven alles." }
+          { t: "Groei gegarandeerd", d: "Zien we na 6 maanden niet de groei die we hadden afgesproken? Dan werken we gratis door. Zo simpel is het." },
+          { t: "Binnen 30 dagen live", d: "Binnen 30 dagen ben je live. Geen trajecten van een jaar, maar vlot en duidelijk aan de slag voor je onderneming." },
+          { t: "Jij bent en blijft de baas", d: "Alles wat we maken, van de foto's tot de data, is van jou. Je zit nooit aan ons vast. Vrijheid boven alles." }
         ].map((g, i) => (
           <div key={i} className="bg-white p-10 rounded-[24px] border border-brand-soft flex flex-col items-center text-center hover:shadow-lg hover:shadow-brand-primary/5 transition-all">
             <div className="w-14 h-14 bg-brand-lime/10 rounded-[18px] flex items-center justify-center text-brand-accent mb-8">
@@ -523,7 +574,7 @@ export const SamenAanDeSlagSection = () => (
 
       <div className="mt-16 flex flex-col lg:flex-row gap-8 items-center">
         <div className="lg:w-1/2">
-          <img src="/images/team-stefan-relax.jpg" alt="Ontspannen maar gefocust" className="rounded-[24px] shadow-lg w-full object-cover object-top h-72" />
+          <img src="/images/team-stefan-relax.jpg" alt="Ontspannen maar gefocust" className="rounded-[24px] shadow-lg w-full object-cover object-[center_10%] h-96" />
         </div>
         <div className="lg:w-1/2">
           <h3 className="text-2xl font-display font-bold text-brand-primary mb-4">Ontspannen, maar gefocust op resultaat.</h3>

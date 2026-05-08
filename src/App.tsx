@@ -4,6 +4,7 @@ import {
   Navbar, 
   Footer, 
   PartnerHero, 
+  ToolsSection,
   HerkenJeDitSection, 
   HoeWeHelpenSection, 
   TeamSection,
@@ -58,6 +59,7 @@ function App() {
             transition={{ duration: 0.3 }}
           >
             <PartnerHero />
+            <ToolsSection />
             <HerkenJeDitSection />
             <HoeWeHelpenSection />
             <TeamSection />
