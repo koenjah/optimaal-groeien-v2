@@ -233,15 +233,7 @@ export const PartnerHero = () => {
           </div>
         </div>
 
-        {/* Full team photo band */}
-        <div className="mt-16 relative">
-          <div className="rounded-t-[40px] overflow-hidden shadow-2xl border border-white/10">
-            <img src="/images/team-full.jpg" alt="Het complete team van Optimaal Groeien" className="w-full h-80 lg:h-[28rem] object-cover object-center" />
-          </div>
-          <div className="absolute bottom-6 left-6 lg:bottom-10 lg:left-10 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl px-5 py-3">
-            <span className="text-white text-sm font-display font-bold">8 specialisten, 1 missie: jouw groei</span>
-          </div>
-        </div>
+        {/* Removed team photo band per request */}
       </div>
     </section>
   );
@@ -249,45 +241,41 @@ export const PartnerHero = () => {
 
 export const ToolsSection = () => {
   const tools = [
-    { name: "Meta", color: "#0668E1" },
-    { name: "Google", color: "#4285F4" },
-    { name: "HubSpot", color: "#FF7A59" },
-    { name: "SalesForce", color: "#00A1E0" },
-    { name: "LinkedIn", color: "#0A66C2" },
-    { name: "Make", color: "#6D00CC" },
-    { name: "Claude AI", color: "#CC785C" },
-    { name: "OpenAI", color: "#10A37F" },
-    { name: "Gemini", color: "#4285F4" },
-    { name: "Adobe", color: "#FF0000" },
-    { name: "Brevo", color: "#0B996E" },
-    { name: "Sales Navigator", color: "#0A66C2" },
+    { name: "Meta", src: "/images/logos/meta.svg" },
+    { name: "Google", src: "/images/logos/google.svg" },
+    { name: "HubSpot", src: "/images/logos/hubspot.svg" },
+    { name: "Salesforce", src: "/images/logos/salesforce.svg" },
+    { name: "LinkedIn", src: "/images/logos/linkedin.svg" },
+    { name: "Make", src: "/images/logos/make.svg" },
+    { name: "Claude AI", src: "/images/logos/claude.svg" },
+    { name: "OpenAI", src: "/images/logos/openai.svg" },
+    { name: "Gemini", src: "/images/logos/gemini.svg" },
+    { name: "Adobe", src: "/images/logos/adobe.svg" },
+    { name: "Brevo", src: "/images/logos/brevo.svg" },
+    { name: "Sales Navigator", src: "/images/logos/linkedin.svg" },
   ];
   return (
-    <section className="py-16 px-6 bg-brand-bg border-y border-brand-soft">
-      <div className="max-w-7xl mx-auto text-center mb-10">
-        <h3 className="text-sm font-bold uppercase tracking-widest text-brand-primary/40 mb-2">Wij werken met de beste tools</h3>
+    <section className="py-20 px-6 bg-brand-bg border-y border-brand-soft">
+      <div className="max-w-7xl mx-auto text-center mb-12">
+        <h3 className="text-sm font-bold uppercase tracking-widest text-brand-primary/40 mb-3">Wij werken met de beste tools</h3>
         <p className="text-brand-primary/50 text-sm max-w-2xl mx-auto leading-relaxed">
           Wij begrijpen de complexiteit van jullie bedrijf, doelgroep en de markt. Dat stelt ons in staat om proactief de volledige regie over jullie groei te nemen, terwijl jij je focust op de operatie.
         </p>
       </div>
-      <div className="max-w-7xl mx-auto overflow-hidden relative">
-        <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-brand-bg to-transparent z-10" />
-        <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-brand-bg to-transparent z-10" />
-        <motion.div
-          className="flex gap-6 w-max"
-          animate={{ x: [0, -1200] }}
-          transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
-        >
-          {[...tools, ...tools, ...tools].map((tool, i) => (
+      <div className="max-w-5xl mx-auto">
+        <div className="flex flex-wrap justify-center items-center gap-x-10 gap-y-8">
+          {tools.map((tool, i) => (
             <div
               key={i}
-              className="flex items-center gap-3 px-6 py-3 bg-white border border-brand-soft rounded-full shadow-sm"
+              className="group flex flex-col items-center gap-2 transition-all duration-300 hover:-translate-y-1"
+              title={tool.name}
             >
-              <span className="w-3 h-3 rounded-full" style={{ backgroundColor: tool.color }} />
-              <span className="text-sm font-bold text-brand-primary whitespace-nowrap">{tool.name}</span>
+              <div className="h-10 w-24 flex items-center justify-center grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300">
+                <img src={tool.src} alt={tool.name} className="max-h-full max-w-full object-contain" />
+              </div>
             </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
