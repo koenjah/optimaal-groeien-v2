@@ -236,7 +236,7 @@ export const PartnerHero = () => {
         {/* Full team photo band */}
         <div className="mt-16 relative">
           <div className="rounded-t-[40px] overflow-hidden shadow-2xl border border-white/10">
-            <img src="/images/team-full.jpg" alt="Het complete team van Optimaal Groeien" className="w-full h-64 lg:h-80 object-cover object-top" />
+            <img src="/images/team-full.jpg" alt="Het complete team van Optimaal Groeien" className="w-full h-80 lg:h-[28rem] object-cover object-center" />
           </div>
           <div className="absolute bottom-6 left-6 lg:bottom-10 lg:left-10 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl px-5 py-3">
             <span className="text-white text-sm font-display font-bold">8 specialisten, 1 missie: jouw groei</span>
@@ -439,7 +439,7 @@ export const TeamSection = () => (
 
       <div className="grid md:grid-cols-3 gap-6">
         <div className="md:col-span-2 rounded-[28px] overflow-hidden shadow-xl border border-brand-soft">
-          <img src="/images/team-full.jpg" alt="Het complete team van Optimaal Groeien" className="w-full h-80 object-cover object-top" />
+          <img src="/images/team-full.jpg" alt="Het complete team van Optimaal Groeien" className="w-full h-80 lg:h-96 object-cover object-center" />
         </div>
         <div className="bg-white p-8 rounded-[28px] border border-brand-soft flex flex-col justify-center">
           <div className="w-12 h-12 bg-brand-lime/10 rounded-2xl flex items-center justify-center text-brand-accent mb-6">
@@ -655,7 +655,7 @@ export const LatenWePratenSection = () => (
         </div>
         <div className="lg:w-1/2 w-full">
           <div className="rounded-[24px] overflow-hidden shadow-2xl border border-white/10">
-            <img src="/images/team-closeup.jpg" alt="Aan het werk voor jouw groei" className="w-full h-72 object-cover" />
+            <img src="/images/team-closeup.jpg" alt="Aan het werk voor jouw groei" className="w-full h-96 object-cover object-top" />
           </div>
         </div>
       </div>
