@@ -6,6 +6,7 @@ import {
   PartnerHero, 
   HerkenJeDitSection, 
   HoeWeHelpenSection, 
+  TeamSection,
   KlantverhalenSection, 
   OnzeBelofteSection, 
   SamenAanDeSlagSection, 
@@ -57,21 +58,9 @@ function App() {
             transition={{ duration: 0.3 }}
           >
             <PartnerHero />
-            
-            {/* Logo Cloud Section - Industry Focus */}
-            <section className="py-24 px-6 bg-white overflow-hidden border-b border-slate-100">
-              <div className="max-w-7xl mx-auto">
-                <p className="text-center text-[10px] uppercase tracking-[0.4em] font-bold text-slate-300 mb-16">Wij werken met de beste tools</p>
-                <div className="flex flex-wrap justify-center gap-12 lg:gap-24 grayscale opacity-30">
-                  {['Meta', 'Google', 'HubSpot', 'Salesforce', 'LinkedIn', 'Make'].map(p => (
-                    <span key={p} className="text-2xl font-display font-bold text-brand-primary tracking-tighter">{p}</span>
-                  ))}
-                </div>
-              </div>
-            </section>
-
             <HerkenJeDitSection />
             <HoeWeHelpenSection />
+            <TeamSection />
             <KlantverhalenSection />
             <OnzeBelofteSection />
             <SamenAanDeSlagSection />

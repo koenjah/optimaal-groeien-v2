@@ -15,7 +15,9 @@ import {
   Target,
   BarChart3,
   Zap,
-  MessageSquare
+  MessageSquare,
+  Users,
+  Phone
 } from 'lucide-react';
 import { OmzetCalculator } from './Calculator';
 
@@ -32,7 +34,7 @@ export const Navbar = ({ activePage, setActivePage }: { activePage: string, setA
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'bg-white/90 backdrop-blur-xl shadow-sm py-3' : 'bg-transparent py-6'}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'bg-white/95 backdrop-blur-xl shadow-sm py-3' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <div
           className="flex items-center gap-2 cursor-pointer group"
@@ -48,6 +50,7 @@ export const Navbar = ({ activePage, setActivePage }: { activePage: string, setA
         <div className="hidden md:flex items-center gap-8">
           {[
             { label: 'Hoe we helpen', id: 'diensten' },
+            { label: 'Het team', id: 'team' },
             { label: 'Klantverhalen', id: 'cases' },
             { label: 'Even praten?', id: 'contact' }
           ].map((item) => (
@@ -83,6 +86,7 @@ export const Navbar = ({ activePage, setActivePage }: { activePage: string, setA
         >
           {[
             { label: 'Hoe we helpen', id: 'diensten' },
+            { label: 'Het team', id: 'team' },
             { label: 'Klantverhalen', id: 'cases' },
             { label: 'Even praten?', id: 'contact' }
           ].map((item) => (
@@ -121,8 +125,8 @@ export const Footer = () => (
           <h4 className="text-[10px] font-bold uppercase tracking-widest text-brand-lime mb-8">Navigatie</h4>
           <ul className="space-y-4 text-sm text-white/50">
             <li><a href="#" className="hover:text-white transition-colors">Hoe we helpen</a></li>
+            <li><a href="#team" className="hover:text-white transition-colors">Het team</a></li>
             <li><a href="#cases" className="hover:text-white transition-colors">Verhalen van anderen</a></li>
-            <li><a href="#diensten" className="hover:text-white transition-colors">Onze werkwijze</a></li>
             <li><a href="#contact" className="hover:text-white transition-colors">Even kennismaken</a></li>
           </ul>
         </div>
@@ -165,64 +169,72 @@ export const PartnerHero = () => {
   const [extraYearly, setExtraYearly] = React.useState<number | null>(null);
 
   return (
-    <section className="bg-brand-primary pt-32 lg:pt-44 pb-20 px-6 overflow-hidden relative">
-      <div className="absolute inset-0 blueprint-grid opacity-[0.08] pointer-events-none" />
+    <section className="bg-brand-primary pt-32 lg:pt-40 pb-0 px-6 overflow-hidden relative">
+      <div className="absolute inset-0 blueprint-grid opacity-[0.06] pointer-events-none" />
       <div className="absolute top-20 left-20"><div className="technical-dot" /><div className="corner-bracket corner-tl" /></div>
       <div className="absolute top-20 right-20"><div className="technical-dot" /><div className="corner-bracket corner-tr" /></div>
-      <div className="absolute bottom-20 left-20"><div className="technical-dot" /><div className="corner-bracket corner-bl" /></div>
-      <div className="absolute bottom-20 right-20"><div className="technical-dot" /><div className="corner-bracket corner-br" /></div>
 
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16 lg:gap-20 relative z-10">
-        <div className="lg:w-1/2 text-left">
-          <div className="inline-flex items-center gap-3 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-wider font-bold text-white/60 mb-8">
-            <span className="w-2 h-2 bg-brand-lime rounded-full animate-pulse" />
-            Even voorstellen: Wij helpen je met je groei
-          </div>
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+          <div className="lg:w-1/2 text-left pb-16">
+            <div className="inline-flex items-center gap-3 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-wider font-bold text-white/60 mb-8">
+              <span className="w-2 h-2 bg-brand-lime rounded-full animate-pulse" />
+              Dit is ons team — Wij helpen je groeien
+            </div>
 
-          <h1 className="text-4xl lg:text-[3.5rem] font-display font-bold text-white leading-[1.1] mb-8 tracking-tight max-w-xl">
-             Je maakt de mooiste producten. <br />
-             <span className="text-brand-accent">Wij zorgen voor de rust.</span>
-          </h1>
+            <h1 className="text-4xl lg:text-[3.5rem] font-display font-bold text-white leading-[1.1] mb-8 tracking-tight max-w-xl">
+               Je maakt de mooiste producten. <br />
+               <span className="text-brand-accent">Wij zorgen voor de rust.</span>
+            </h1>
 
-          <p className="text-lg text-white/50 mb-10 max-w-lg leading-relaxed font-light">
-             Bijna elke machinebouwer of fabrikant loopt tegen hetzelfde aan: de productie staat als een huis, maar de commercie voelt als los zand. Wij bouwen die ontbrekende fundering voor je.
-          </p>
+            <p className="text-lg text-white/50 mb-10 max-w-lg leading-relaxed font-light">
+               Bijna elke machinebouwer of fabrikant loopt tegen hetzelfde aan: de productie staat als een huis, maar de commercie voelt als los zand. Wij bouwen die ontbrekende fundering voor je.
+            </p>
 
-          <div className="flex flex-col sm:flex-row gap-6 items-center">
-            <button
-              onClick={() => document.getElementById('tool')?.scrollIntoView({ behavior: 'smooth' })}
-              className="btn-primary w-full sm:w-auto !py-5 !px-10 text-base"
-            >
-              Ontdek je groeiruimte
-            </button>
-            <div className="flex items-center gap-4">
-               <div className="flex -space-x-2">
-                 <img src="/images/team-1.jpg" className="w-9 h-9 rounded-full border-2 border-brand-primary object-cover" alt="Team" />
-                 <img src="/images/team-3.png" className="w-9 h-9 rounded-full border-2 border-brand-primary object-cover" alt="Team" />
-                 <img src="/images/team-4.png" className="w-9 h-9 rounded-full border-2 border-brand-primary object-cover" alt="Team" />
-               </div>
-               <div className="flex flex-col">
-                  <span className="text-xs text-white font-bold opacity-70 leading-none mb-1">Stefan & team</span>
-                  <span className="text-[10px] text-brand-lime font-bold uppercase tracking-widest leading-none">Vragen? We helpen je</span>
-               </div>
+            <div className="flex flex-col sm:flex-row gap-6 items-center">
+              <button
+                onClick={() => document.getElementById('tool')?.scrollIntoView({ behavior: 'smooth' })}
+                className="btn-primary w-full sm:w-auto !py-5 !px-10 text-base"
+              >
+                Ontdek je groeiruimte
+              </button>
+              <div className="flex items-center gap-4">
+                 <div className="flex -space-x-2">
+                   <img src="/images/team-1.jpg" className="w-9 h-9 rounded-full border-2 border-brand-primary object-cover" alt="Team" />
+                   <img src="/images/team-phone.jpg" className="w-9 h-9 rounded-full border-2 border-brand-primary object-cover" alt="Team" />
+                   <img src="/images/team-4.png" className="w-9 h-9 rounded-full border-2 border-brand-primary object-cover" alt="Team" />
+                 </div>
+                 <div className="flex flex-col">
+                    <span className="text-xs text-white font-bold opacity-70 leading-none mb-1">Stefan & team</span>
+                    <span className="text-[10px] text-brand-lime font-bold uppercase tracking-widest leading-none">Altijd bereikbaar</span>
+                 </div>
+              </div>
+            </div>
+
+            <div className="mt-14 pt-8 border-t border-white/10 flex flex-wrap gap-8 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
+               <div className="text-xs font-bold uppercase tracking-widest text-white">Vertrouwd door:</div>
+               <span className="text-xs font-display font-bold text-white">Veldkamp</span>
+               <span className="text-xs font-display font-bold text-white">Equans</span>
+               <span className="text-xs font-display font-bold text-white">Carbify</span>
             </div>
           </div>
 
-          <div className="mt-14 pt-8 border-t border-white/10 flex flex-wrap gap-8 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
-             <div className="text-xs font-bold uppercase tracking-widest text-white">Vertrouwd door:</div>
-             <span className="text-xs font-display font-bold text-white">Veldkamp</span>
-             <span className="text-xs font-display font-bold text-white">Equans</span>
-             <span className="text-xs font-display font-bold text-white">Carbify</span>
-          </div>
-        </div>
-
-        <div className="lg:w-1/2 w-full">
-          <div className="relative">
+          <div className="lg:w-1/2 w-full relative">
             <div className="relative z-10 scale-95 lg:scale-100 lg:-rotate-1 lg:hover:rotate-0 transition-transform duration-700">
                <OmzetCalculator onCalculate={(val) => setExtraYearly(val)} />
             </div>
-            <div className="absolute -top-8 -right-8 w-36 h-36 border border-brand-lime/20 rounded-full animate-pulse lg:block hidden" />
-            <div className="absolute -bottom-8 -left-8 w-52 h-52 border border-white/5 rounded-full lg:block hidden" />
+            <div className="absolute -top-6 -right-6 w-28 h-28 border border-brand-lime/20 rounded-full animate-pulse lg:block hidden" />
+            <div className="absolute -bottom-6 -left-6 w-44 h-44 border border-white/5 rounded-full lg:block hidden" />
+          </div>
+        </div>
+
+        {/* Full team photo band */}
+        <div className="mt-16 relative">
+          <div className="rounded-t-[40px] overflow-hidden shadow-2xl border border-white/10">
+            <img src="/images/team-full.jpg" alt="Het complete team van Optimaal Groeien" className="w-full h-64 lg:h-80 object-cover object-top" />
+          </div>
+          <div className="absolute bottom-6 left-6 lg:bottom-10 lg:left-10 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl px-5 py-3">
+            <span className="text-white text-sm font-display font-bold">8 specialisten, 1 missie: jouw groei</span>
           </div>
         </div>
       </div>
@@ -231,24 +243,24 @@ export const PartnerHero = () => {
 };
 
 export const HerkenJeDitSection = () => (
-  <section className="py-28 px-6 bg-brand-bg">
+  <section className="py-24 px-6 bg-brand-bg">
     <div className="max-w-7xl mx-auto">
-      <div className="flex flex-col lg:flex-row gap-16 items-start mb-20">
+      <div className="flex flex-col lg:flex-row gap-12 items-start mb-16">
         <div className="lg:w-1/2">
           <div className="label-pill">Begrijpen we elkaar?</div>
-          <h2 className="text-4xl lg:text-5xl font-display font-bold text-brand-primary leading-tight mb-6">
+          <h2 className="text-4xl lg:text-5xl font-display font-bold text-brand-primary leading-tight mb-4">
             Je hebt grip op de techniek. <br />
             <span className="text-brand-accent">Maar je groei voelt als toeval.</span>
           </h2>
         </div>
-        <div className="lg:w-1/2 lg:pt-12">
+        <div className="lg:w-1/2 lg:pt-10">
           <p className="text-lg text-brand-primary/50 leading-relaxed font-light">
             We horen het vaak: "Onze producten zijn top, onze klanten zijn blij, maar nieuwe klanten vinden is altijd hollen of stilstaan." Dat is heel normaal in de industrie — maar het hoeft niet zo te blijven.
           </p>
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
         {[
           { title: "Je netwerk heeft een plafond", text: "Je bent gegroeid via mond-tot-mond reclame. Dat is prachtig, want het bewijst je kwaliteit. Maar het is niet meer genoeg om de volgende stap te zetten." },
           { title: "Marketing voelt als 'moeten'", text: "Je plaatst wel eens iets op LinkedIn of hebt een nieuwe website, maar eigenlijk voelt het als schieten in het donker. Wat levert het nou echt op?" },
@@ -257,7 +269,7 @@ export const HerkenJeDitSection = () => (
           { title: "Je doet het er 'even bij'", text: "Commercie is iets wat je doet tussen de bedrijven door. Er is geen vast moment, geen vast proces en daardoor geen rust." },
           { title: "Cijfers? Die zitten in je hoofd", text: "Je voelt wel hoe het gaat, maar je hebt geen dashboard dat je vertelt waar de beste kansen liggen. Je stuurt op je onderbuik." }
         ].map((item, i) => (
-          <div key={i} className="group p-8 bg-white border border-brand-soft rounded-[28px] transition-all hover:shadow-xl hover:shadow-brand-primary/5 hover:-translate-y-1">
+          <div key={i} className="group p-8 bg-white border border-brand-soft rounded-[24px] transition-all hover:shadow-lg hover:shadow-brand-primary/5 hover:-translate-y-1">
             <div className="mb-5 flex items-center justify-between">
                <div className="w-10 h-10 bg-brand-lime/10 rounded-xl flex items-center justify-center text-brand-accent">
                   <Plus size={20} />
@@ -274,20 +286,20 @@ export const HerkenJeDitSection = () => (
 );
 
 export const HoeWeHelpenSection = () => (
-  <section id="diensten" className="py-28 px-6 bg-white overflow-hidden relative">
+  <section id="diensten" className="py-24 px-6 bg-white overflow-hidden relative">
     <div className="absolute top-0 left-0 w-full h-px bg-brand-soft" />
-    <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-20 items-start">
+    <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-start">
       <div className="lg:w-3/5">
         <div className="label-pill">Hoe we je helpen</div>
         <h2 className="text-3xl lg:text-5xl font-display font-bold text-brand-primary mb-6 tracking-tight">
           Je hebt een vakmanschap. <br/>
           <span className="text-brand-accent">Wij helpen de wereld het zien.</span>
         </h2>
-        <p className="text-lg text-brand-primary/50 mb-14 leading-relaxed max-w-xl font-light">
+        <p className="text-lg text-brand-primary/50 mb-12 leading-relaxed max-w-xl font-light">
           We bouwen geen ingewikkelde systemen waar je zelf mee moet puzzelen. We nemen het werk uit handen zodat jij kunt doen waar je goed in bent: ondernemen.
         </p>
 
-        <div className="grid sm:grid-cols-2 gap-x-10 gap-y-10">
+        <div className="grid sm:grid-cols-2 gap-x-10 gap-y-8">
             {[
               { icon: Target, title: "Een Plan op Maat", desc: "Geen dik adviesrapport, maar een duidelijke routekaart voor je groei." },
               { icon: Zap, title: "Echte Content", desc: "Foto's en video's van je eigen machines en mensen. Geen neppe stock." },
@@ -312,17 +324,21 @@ export const HoeWeHelpenSection = () => (
       </div>
 
       <div className="lg:w-2/5 w-full lg:sticky lg:top-28 space-y-6">
-        <div className="rounded-[28px] overflow-hidden shadow-lg border border-brand-soft">
-          <img src="/images/dashboard.png" alt="SEO Dashboard" className="w-full h-56 object-cover" />
+        <div className="rounded-[24px] overflow-hidden shadow-lg border border-brand-soft">
+          <img src="/images/team-1.jpg" alt="Samenwerken bij Optimaal Groeien" className="w-full h-56 object-cover" />
+          <div className="p-5 bg-white">
+            <p className="text-sm font-display font-bold text-brand-primary">Samen werken we aan jouw groei.</p>
+            <p className="text-xs text-brand-primary/40 mt-1">Geen vage rapporten, maar echte samenwerking.</p>
+          </div>
         </div>
 
-        <div className="bg-brand-primary p-10 text-white rounded-[32px] relative overflow-hidden shadow-xl">
+        <div className="bg-brand-primary p-10 text-white rounded-[28px] relative overflow-hidden shadow-xl">
           <div className="soft-glow !bg-brand-lime/10" />
           <div className="text-2xl font-display font-bold leading-tight mb-6 relative z-10">
             “Wij ontzorgen je echt, <br />
             <span className="text-brand-lime">geen losse flodders.</span>”
           </div>
-          <p className="text-white/40 mb-8 relative z-10 leading-relaxed font-light">
+          <p className="text-white/40 mb-8 relative z-10 leading-relaxed font-light text-sm">
             We zijn geen bureau dat alleen maar rapporten stuurt. We zijn je partner die de mouwen opstroopt.
           </p>
 
@@ -347,10 +363,58 @@ export const HoeWeHelpenSection = () => (
   </section>
 );
 
+export const TeamSection = () => (
+  <section id="team" className="py-24 px-6 bg-brand-warm">
+    <div className="max-w-7xl mx-auto">
+      <div className="flex flex-col lg:flex-row gap-12 items-center mb-16">
+        <div className="lg:w-1/2">
+          <div className="label-pill">Het team</div>
+          <h2 className="text-4xl lg:text-5xl font-display font-bold text-brand-primary mb-6 tracking-tight">
+            Dit zijn de mensen die <span className="text-brand-accent">voor je aan de slag gaan.</span>
+          </h2>
+          <p className="text-lg text-brand-primary/50 leading-relaxed font-light max-w-md">
+            Geen anoniem bureau, maar een hecht team dat echt met je meedenkt. We werken vanuit Raalte, voor het hele land.
+          </p>
+        </div>
+        <div className="lg:w-1/2 flex gap-4">
+          <div className="rounded-[24px] overflow-hidden shadow-xl border border-brand-soft w-1/2">
+            <img src="/images/team-phone.jpg" alt="Teamlid aan het werk" className="w-full h-64 object-cover" />
+          </div>
+          <div className="rounded-[24px] overflow-hidden shadow-xl border border-brand-soft w-1/2 mt-8">
+            <img src="/images/team-4.png" alt="Teamleden" className="w-full h-64 object-cover" />
+          </div>
+        </div>
+      </div>
+
+      <div className="grid md:grid-cols-3 gap-6">
+        <div className="md:col-span-2 rounded-[28px] overflow-hidden shadow-xl border border-brand-soft">
+          <img src="/images/team-full.jpg" alt="Het complete team van Optimaal Groeien" className="w-full h-80 object-cover object-top" />
+        </div>
+        <div className="bg-white p-8 rounded-[28px] border border-brand-soft flex flex-col justify-center">
+          <div className="w-12 h-12 bg-brand-lime/10 rounded-2xl flex items-center justify-center text-brand-accent mb-6">
+            <Users size={24} />
+          </div>
+          <h3 className="text-2xl font-display font-bold text-brand-primary mb-3">8 specialisten</h3>
+          <p className="text-brand-primary/50 leading-relaxed font-light text-sm mb-6">
+            Van strategie tot content, van advertenties tot automatisering. Ieder zijn eigen expertise, samen jouw groeimachine.
+          </p>
+          <div className="flex -space-x-2">
+            <img src="/images/team-1.jpg" className="w-10 h-10 rounded-full border-2 border-white object-cover" alt="" />
+            <img src="/images/team-phone.jpg" className="w-10 h-10 rounded-full border-2 border-white object-cover" alt="" />
+            <img src="/images/team-stefan-relax.jpg" className="w-10 h-10 rounded-full border-2 border-white object-cover" alt="" />
+            <img src="/images/team-4.png" className="w-10 h-10 rounded-full border-2 border-white object-cover" alt="" />
+            <div className="w-10 h-10 rounded-full border-2 border-white bg-brand-soft flex items-center justify-center text-[10px] font-bold text-brand-primary">+4</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
 export const KlantverhalenSection = () => (
-  <section id="cases" className="py-28 px-6 bg-brand-primary relative overflow-hidden">
+  <section id="cases" className="py-24 px-6 bg-brand-primary relative overflow-hidden">
     <div className="absolute inset-0 blueprint-grid opacity-[0.05] pointer-events-none" />
-    <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-end mb-20">
+    <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-end mb-16">
       <div className="lg:w-1/2">
         <div className="label-pill !bg-white/10 !text-white !border-none">Kijk mee bij anderen</div>
         <h2 className="text-3xl lg:text-5xl font-display font-bold text-white mb-5 tracking-tight leading-tight">
@@ -360,19 +424,16 @@ export const KlantverhalenSection = () => (
           Geen saaie grafieken, maar echte verhalen van bedrijven die hun commercie voorgoed hebben veranderd.
         </p>
       </div>
-      <div className="lg:w-1/2 hidden lg:flex justify-end">
-        <img src="/images/illustration-1.png" alt="" className="w-48 h-48 object-contain opacity-60" />
-      </div>
     </div>
 
     <div className="max-w-7xl mx-auto">
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
         {[
           { name: "Veldkamp", sector: "Industrie", res: "+150% omzet", desc: "Zij dachten dat koude acquisitie de enige weg was. Nu komen de aanvragen gewoon via hun website binnen." },
           { name: "Equans", sector: "Techniek", res: "Beter bereik", desc: "Beslissers in de energiemarkt wisten hen niet te vinden. Nu staan ze overal bovenaan en weten klanten wie ze zijn." },
           { name: "Plintenfabriek", sector: "Machinebouw", res: "Marktleider", desc: "Alles werd handmatig gedaan. Nu lopen hun salesprocessen via een slim systeem dat nooit slaapt." },
         ].map((c, i) => (
-          <div key={i} className="group bg-white/[0.03] border border-white/10 p-8 hover:bg-white/[0.06] transition-all rounded-[28px] relative overflow-hidden">
+          <div key={i} className="group bg-white/[0.03] border border-white/10 p-8 hover:bg-white/[0.06] transition-all rounded-[24px] relative overflow-hidden">
             <div className="absolute top-0 right-0 p-6 opacity-10">
                <Star size={40} className="text-white" />
             </div>
@@ -402,26 +463,26 @@ export const KlantverhalenSection = () => (
 );
 
 export const OnzeBelofteSection = () => (
-  <section className="py-28 px-6 bg-brand-warm relative overflow-hidden">
+  <section className="py-24 px-6 bg-brand-bg relative overflow-hidden">
     <div className="max-w-7xl mx-auto">
-      <div className="flex flex-col lg:flex-row gap-16 items-center mb-20">
+      <div className="flex flex-col lg:flex-row gap-12 items-center mb-16">
         <div className="lg:w-1/2">
           <div className="label-pill">Geen kleine lettertjes</div>
           <h2 className="text-4xl lg:text-5xl font-display font-bold text-brand-primary mb-6 tracking-tight">Onze belofte aan jou.</h2>
           <p className="text-lg text-brand-primary/50 font-light max-w-md">Wij geloven zo sterk in wat we doen, dat we het risico graag bij onszelf leggen. Zo kun jij met een gerust hart beginnen.</p>
         </div>
         <div className="lg:w-1/2 flex justify-center">
-          <img src="/images/brand-blocks.jpg" alt="Build your brand" className="rounded-[28px] shadow-xl w-full max-w-sm object-cover" />
+          <img src="/images/team-4.png" alt="Team Optimaal Groeien" className="rounded-[24px] shadow-xl w-full max-w-xs object-cover" />
         </div>
       </div>
 
-      <div className="grid lg:grid-cols-3 gap-6">
+      <div className="grid lg:grid-cols-3 gap-5">
         {[
           { t: "We gaan door tot het staat", d: "Zien we na 6 maanden niet de groei die we hadden afgesproken? Dan werken we gratis door. Zo simpel is het." },
           { t: "Snel resultaat zien", d: "Binnen 30 dagen ben je live. Geen trajecten van een jaar, maar vlot en duidelijk aan de slag voor je onderneming." },
           { t: "Jij bent en blijft de baas", d: "Alles wat we maken — van de foto's tot de data — is van jou. Je zit nooit aan ons vast. Vrijheid boven alles." }
         ].map((g, i) => (
-          <div key={i} className="bg-white p-10 rounded-[28px] border border-brand-soft flex flex-col items-center text-center hover:shadow-xl hover:shadow-brand-primary/5 transition-all">
+          <div key={i} className="bg-white p-10 rounded-[24px] border border-brand-soft flex flex-col items-center text-center hover:shadow-lg hover:shadow-brand-primary/5 transition-all">
             <div className="w-14 h-14 bg-brand-lime/10 rounded-[18px] flex items-center justify-center text-brand-accent mb-8">
               <ShieldCheck size={28} />
             </div>
@@ -435,9 +496,9 @@ export const OnzeBelofteSection = () => (
 );
 
 export const SamenAanDeSlagSection = () => (
-  <section className="py-28 px-6 bg-white">
+  <section className="py-24 px-6 bg-white">
     <div className="max-w-7xl mx-auto">
-       <div className="text-center mb-20">
+       <div className="text-center mb-16">
         <div className="label-pill mx-auto">Hoe het werkt</div>
         <h2 className="text-4xl lg:text-5xl font-display font-bold text-brand-primary tracking-tight">In 4 stappen naar rust.</h2>
       </div>
@@ -460,34 +521,51 @@ export const SamenAanDeSlagSection = () => (
         ))}
       </div>
 
-      <div className="mt-20 flex justify-center">
-        <img src="/images/illustration-2.png" alt="Groei visual" className="rounded-[28px] shadow-lg w-full max-w-3xl object-cover" />
+      <div className="mt-16 flex flex-col lg:flex-row gap-8 items-center">
+        <div className="lg:w-1/2">
+          <img src="/images/team-stefan-relax.jpg" alt="Ontspannen maar gefocust" className="rounded-[24px] shadow-lg w-full object-cover h-72" />
+        </div>
+        <div className="lg:w-1/2">
+          <h3 className="text-2xl font-display font-bold text-brand-primary mb-4">Ontspannen, maar gefocust op resultaat.</h3>
+          <p className="text-brand-primary/50 leading-relaxed font-light mb-6">
+            We nemen het werk serieus, maar onszelf niet. Dat is precies waarom onze klanten met ons doorwerken: het voelt niet als een zware last, maar als een versterking van je eigen team.
+          </p>
+          <div className="flex items-center gap-4">
+            <img src="/images/team-1.jpg" className="w-12 h-12 rounded-full object-cover border border-brand-soft" alt="Stefan" />
+            <div>
+              <p className="font-display font-bold text-brand-primary text-sm">Stefan Kelderman</p>
+              <p className="text-xs text-brand-primary/40">Oprichter Optimaal Groeien</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 );
 
 export const WatAnderenZeggenSection = () => (
-  <section className="py-28 px-6 bg-brand-soft">
+  <section className="py-24 px-6 bg-brand-soft">
     <div className="max-w-7xl mx-auto">
-      <div className="text-center mb-20">
+      <div className="text-center mb-16">
         <div className="label-pill mx-auto">Eerlijke meningen</div>
         <h2 className="text-4xl lg:text-5xl font-display font-bold text-brand-primary tracking-tight">Wat ondernemers zeggen.</h2>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {[
-          { n: "Erik Veldkamp", f: "Veldkamp", q: "Het heeft ons rust gegeven. We weten nu dat er continu nieuwe kansen binnenkomen.", img: "/images/team-2.jpg" },
-          { n: "Marc de Boer", f: "Equans", q: "Geen vaag marketingverhaal, maar een team dat snapt hoe de industrie werkt.", img: "/images/team-1.jpg" },
-          { n: "Sandra Peters", f: "Plintenfabriek", q: "Fijn om eindelijk een partner te hebben die echt meedenkt en het werk ook doet.", img: "/images/team-4.png" }
+          { n: "Erik Veldkamp", f: "Veldkamp", q: "Het heeft ons rust gegeven. We weten nu dat er continu nieuwe kansen binnenkomen." },
+          { n: "Marc de Boer", f: "Equans", q: "Geen vaag marketingverhaal, maar een team dat snapt hoe de industrie werkt." },
+          { n: "Sandra Peters", f: "Plintenfabriek", q: "Fijn om eindelijk een partner te hebben die echt meedenkt en het werk ook doet." }
         ].map((r, i) => (
-          <div key={i} className="p-10 bg-white rounded-[28px] border border-brand-soft hover:shadow-xl hover:shadow-brand-primary/5 transition-all">
+          <div key={i} className="p-10 bg-white rounded-[24px] border border-brand-soft hover:shadow-lg hover:shadow-brand-primary/5 transition-all">
             <div className="flex gap-1 text-brand-accent mb-6">
               {[1,2,3,4,5].map(s => <Star key={s} size={16} fill="currentColor" />)}
             </div>
             <p className="text-base text-brand-primary font-light mb-8 leading-relaxed">“{r.q}”</p>
-            <div className="flex items-center gap-4">
-              <img src={r.img} alt={r.n} className="w-11 h-11 rounded-full object-cover border border-brand-soft" />
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-brand-soft flex items-center justify-center text-brand-primary font-bold text-sm border border-brand-soft">
+                {r.n.charAt(0)}
+              </div>
               <div>
                 <div className="font-display font-bold text-brand-primary text-sm mb-0.5">{r.n}</div>
                 <div className="text-[10px] uppercase tracking-widest text-brand-primary/30 font-bold">{r.f}</div>
@@ -501,10 +579,10 @@ export const WatAnderenZeggenSection = () => (
 );
 
 export const LatenWePratenSection = () => (
-  <section id="contact" className="py-28 px-6 bg-brand-primary relative overflow-hidden">
+  <section id="contact" className="py-24 px-6 bg-brand-primary relative overflow-hidden">
     <div className="soft-glow !bg-brand-lime/10" />
     <div className="max-w-5xl mx-auto relative z-10">
-      <div className="flex flex-col lg:flex-row gap-16 items-center">
+      <div className="flex flex-col lg:flex-row gap-12 items-center">
         <div className="lg:w-1/2 text-white">
           <h2 className="text-3xl lg:text-5xl font-display font-bold mb-6 leading-tight tracking-tight">
             Zullen we even <br />kennismaken?
@@ -525,8 +603,8 @@ export const LatenWePratenSection = () => (
           </div>
         </div>
         <div className="lg:w-1/2 w-full">
-          <div className="rounded-[28px] overflow-hidden shadow-2xl border border-white/10">
-            <img src="/images/hero-team.png" alt="Het team van Optimaal Groeien" className="w-full h-80 object-cover" />
+          <div className="rounded-[24px] overflow-hidden shadow-2xl border border-white/10">
+            <img src="/images/team-closeup.jpg" alt="Aan het werk voor jouw groei" className="w-full h-72 object-cover" />
           </div>
         </div>
       </div>
@@ -538,7 +616,7 @@ export const LatenWePratenSection = () => (
 // --- Page 2 Components ---
 
 export const DeLeadmachineSection = () => (
-  <section className="bg-brand-primary pt-44 pb-28 px-6 overflow-hidden relative text-center">
+  <section className="bg-brand-primary pt-44 pb-24 px-6 overflow-hidden relative text-center">
     <div className="soft-glow" />
     <div className="max-w-4xl mx-auto relative z-10">
       <div className="label-pill !bg-white/5 !text-white !border-white/10 !mb-8 mx-auto">
@@ -574,22 +652,22 @@ export const DeLeadmachineSection = () => (
 );
 
 export const SpeciaalVoorJouSection = () => (
-  <section className="py-28 px-6 bg-brand-bg">
+  <section className="py-24 px-6 bg-brand-bg">
     <div className="max-w-7xl mx-auto">
-      <div className="text-center mb-20 max-w-3xl mx-auto">
+      <div className="text-center mb-16 max-w-3xl mx-auto">
         <div className="label-pill mx-auto">Voor wie doen we dit?</div>
         <h2 className="text-4xl lg:text-5xl font-display font-bold text-brand-primary mb-6 tracking-tight">Is dit iets voor jou?</h2>
         <p className="text-lg text-brand-primary/50 font-light leading-relaxed">Onze leadmachine werkt het allerbest voor ondernemers die klaar zijn om te groeien, maar simpelweg de tijd of kennis niet hebben om de marketing zelf te doen.</p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-2 gap-5">
         {[
           { t: "Bedrijven in de groei", d: "Je hebt prachtige projecten, maar nog geen constante stroom van nieuwe aanvragen. Wij vullen je agenda zodat jij en je team door kunnen." },
           { t: "Ondernemers in de techniek", d: "Je weet alles van je vak, maar marketing voelt als een jungle. Wij spreken je taal en regelen het voor je." },
           { t: "Geen tijd om te wachten", d: "Je wilt geen traject van een jaar. Je wilt binnen een maand live zijn en zien of het voor je werkt." },
           { t: "Eerlijke groeiers", d: "Je zoekt een partner die snapt dat je alleen wilt groeien met klanten die ook echt bij je passen." }
         ].map((item, i) => (
-          <div key={i} className="bg-white p-10 rounded-[28px] border border-brand-soft flex flex-col group hover:shadow-xl hover:shadow-brand-primary/5 transition-all">
+          <div key={i} className="bg-white p-10 rounded-[24px] border border-brand-soft flex flex-col group hover:shadow-lg hover:shadow-brand-primary/5 transition-all">
              <div className="w-14 h-14 bg-brand-lime/10 rounded-[18px] flex items-center justify-center text-brand-accent mb-8 transition-transform group-hover:scale-110">
                <UserCheck size={26} />
              </div>
@@ -603,15 +681,15 @@ export const SpeciaalVoorJouSection = () => (
 );
 
 export const HoeHetWerktLeadsSection = () => (
-  <section id="start" className="py-28 px-6 bg-white overflow-hidden">
-    <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-20 relative items-start">
+  <section id="start" className="py-24 px-6 bg-white overflow-hidden">
+    <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 relative items-start">
       <div className="lg:w-3/5">
         <div className="label-pill">Wat krijg je precies?</div>
         <h2 className="text-3xl lg:text-4xl font-display font-bold text-brand-primary mb-10 tracking-tight">
           Een compleet systeem, <br /><span className="text-brand-accent">zonder gedoe.</span>
         </h2>
 
-        <div className="space-y-5">
+        <div className="space-y-4">
           {[
             { n: "01", t: "Slimme Advertenties", d: "We laten je bedrijf zien aan de mensen die ook echt beslissen. Geen verspild budget." },
             { n: "02", t: "Een Eigen Pagina", d: "Een landingspagina die niet alleen mooi is, maar die mensen ook echt overtuigt om contact op te nemen." },
@@ -620,7 +698,7 @@ export const HoeHetWerktLeadsSection = () => (
             { n: "05", t: "Automatische Mailtjes", d: "Een systeem dat mensen warm houdt terwijl jij bezig bent met je werk. Niemand wordt vergeten." },
             { n: "06", t: "Duidelijk Dashboard", d: "In één oogopslag zien wat het oplevert. Geen ingewikkelde rapporten, maar heldere cijfers." }
           ].map((s, i) => (
-            <div key={i} className="p-8 bg-brand-soft rounded-[24px] flex gap-6 group hover:bg-white hover:shadow-xl hover:shadow-brand-primary/5 transition-all border border-transparent hover:border-brand-soft">
+            <div key={i} className="p-8 bg-brand-soft rounded-[24px] flex gap-6 group hover:bg-white hover:shadow-lg hover:shadow-brand-primary/5 transition-all border border-transparent hover:border-brand-soft">
               <div className="w-12 h-12 bg-brand-primary text-white flex items-center justify-center shrink-0 font-display font-black text-lg rounded-[16px] transition-all group-hover:bg-brand-accent group-hover:rotate-3">
                 {s.n}
               </div>
@@ -634,7 +712,7 @@ export const HoeHetWerktLeadsSection = () => (
       </div>
 
       <div className="lg:w-2/5 sticky top-28 w-full space-y-6">
-        <div className="bg-brand-primary p-10 text-white rounded-[32px] shadow-xl relative overflow-hidden border border-white/5">
+        <div className="bg-brand-primary p-10 text-white rounded-[28px] shadow-xl relative overflow-hidden border border-white/5">
           <div className="soft-glow !bg-brand-lime/10" />
           <div className="label-pill !bg-white/10 !text-white !border-none !mb-8">Investering</div>
           <h3 className="text-2xl font-display font-bold mb-3 relative z-10">Je eigen Leadmachine</h3>
@@ -667,7 +745,7 @@ export const HoeHetWerktLeadsSection = () => (
         </div>
 
         <div className="rounded-[24px] overflow-hidden shadow-lg border border-brand-soft">
-          <img src="/images/dashboard.png" alt="Dashboard" className="w-full h-48 object-cover" />
+          <img src="/images/team-1.jpg" alt="Samen aan de slag" className="w-full h-48 object-cover" />
         </div>
       </div>
     </div>
@@ -675,10 +753,10 @@ export const HoeHetWerktLeadsSection = () => (
 );
 
 export const SamenGroeiRealiserenSection = () => (
-  <section id="cm" className="py-28 px-6 bg-brand-primary relative overflow-hidden">
+  <section id="cm" className="py-24 px-6 bg-brand-primary relative overflow-hidden">
     <div className="soft-glow !bg-brand-lime/10" />
     <div className="max-w-7xl mx-auto">
-      <div className="flex flex-col lg:flex-row gap-20 items-center">
+      <div className="flex flex-col lg:flex-row gap-16 items-center">
         <div className="lg:w-3/5">
           <div className="label-pill !bg-white/10 !text-white !border-none">Samenwerking</div>
           <h2 className="text-4xl lg:text-5xl font-display font-bold text-white mb-6 tracking-tight leading-tight">
@@ -717,14 +795,14 @@ export const SamenGroeiRealiserenSection = () => (
         </div>
 
         <div className="lg:w-2/5 flex flex-col gap-6 w-full">
-          <div className="glass-card !bg-white/5 !border-white/10 p-10 backdrop-blur-xl rounded-[32px]">
+          <div className="glass-card !bg-white/5 !border-white/10 p-10 backdrop-blur-xl rounded-[28px]">
              <h3 className="text-xl font-display font-bold text-white mb-4">Waarom dit werkt</h3>
              <p className="text-white/40 leading-relaxed font-light text-sm">
                Veel bedrijven hebben wel leads, maar geen tijd voor de opvolging. Of ze hebben tijd, maar geen leads. Wij brengen die twee werelden samen voor een resultaat dat staat.
              </p>
           </div>
 
-          <div className="bg-white/5 border border-white/10 p-8 rounded-[32px]">
+          <div className="bg-white/5 border border-white/10 p-8 rounded-[28px]">
              <div className="grid grid-cols-2 gap-y-6">
                 <div className="text-[10px] uppercase tracking-widest text-brand-lime font-bold pb-3">Zonder systeem</div>
                 <div className="text-[10px] uppercase tracking-widest text-white/40 font-bold pb-3 text-right">Met ons systeem</div>
@@ -746,9 +824,9 @@ export const SamenGroeiRealiserenSection = () => (
 );
 
 export const DuidelijkheidVoorafSection = () => (
-  <section className="py-28 px-6 bg-brand-bg">
+  <section className="py-24 px-6 bg-brand-bg">
     <div className="max-w-4xl mx-auto">
-      <div className="text-center mb-20">
+      <div className="text-center mb-16">
         <div className="label-pill mx-auto">Vragen</div>
         <h2 className="text-4xl lg:text-5xl font-display font-bold text-brand-primary tracking-tight">Geen geheimen.</h2>
       </div>
@@ -778,7 +856,7 @@ export const DuidelijkheidVoorafSection = () => (
 );
 
 export const DirectBesprekenSection = () => (
-  <section className="py-28 px-6 bg-brand-primary relative overflow-hidden text-center">
+  <section className="py-24 px-6 bg-brand-primary relative overflow-hidden text-center">
     <div className="soft-glow !bg-brand-lime/10" />
     <div className="max-w-4xl mx-auto relative z-10 text-white">
       <h2 className="text-4xl lg:text-5xl font-display font-bold mb-8 leading-tight tracking-tight">
