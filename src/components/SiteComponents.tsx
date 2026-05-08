@@ -200,9 +200,9 @@ export const PartnerHero = () => {
               </button>
               <div className="flex items-center gap-4">
                  <div className="flex -space-x-2">
-                   <img src="/images/team-1.jpg" className="w-9 h-9 rounded-full border-2 border-brand-primary object-cover" alt="Team" />
-                   <img src="/images/team-phone.jpg" className="w-9 h-9 rounded-full border-2 border-brand-primary object-cover" alt="Team" />
-                   <img src="/images/team-4.png" className="w-9 h-9 rounded-full border-2 border-brand-primary object-cover" alt="Team" />
+                   <img src="/images/team-1.jpg" className="w-9 h-9 rounded-full border-2 border-brand-primary object-cover object-[center_25%]" alt="Team" />
+                   <img src="/images/team-phone.jpg" className="w-9 h-9 rounded-full border-2 border-brand-primary object-cover object-top" alt="Team" />
+                   <img src="/images/team-4.png" className="w-9 h-9 rounded-full border-2 border-brand-primary object-cover object-top" alt="Team" />
                  </div>
                  <div className="flex flex-col">
                     <span className="text-xs text-white font-bold opacity-70 leading-none mb-1">Stefan & team</span>
@@ -325,7 +325,7 @@ export const HoeWeHelpenSection = () => (
 
       <div className="lg:w-2/5 w-full lg:sticky lg:top-28 space-y-6">
         <div className="rounded-[24px] overflow-hidden shadow-lg border border-brand-soft">
-          <img src="/images/team-1.jpg" alt="Samenwerken bij Optimaal Groeien" className="w-full h-56 object-cover" />
+          <img src="/images/team-1.jpg" alt="Samenwerken bij Optimaal Groeien" className="w-full h-56 object-cover object-[center_20%]" />
           <div className="p-5 bg-white">
             <p className="text-sm font-display font-bold text-brand-primary">Samen werken we aan jouw groei.</p>
             <p className="text-xs text-brand-primary/40 mt-1">Geen vage rapporten, maar echte samenwerking.</p>
@@ -378,10 +378,10 @@ export const TeamSection = () => (
         </div>
         <div className="lg:w-1/2 flex gap-4">
           <div className="rounded-[24px] overflow-hidden shadow-xl border border-brand-soft w-1/2">
-            <img src="/images/team-phone.jpg" alt="Teamlid aan het werk" className="w-full h-64 object-cover" />
+            <img src="/images/team-phone.jpg" alt="Teamlid aan het werk" className="w-full h-64 object-cover object-top" />
           </div>
           <div className="rounded-[24px] overflow-hidden shadow-xl border border-brand-soft w-1/2 mt-8">
-            <img src="/images/team-4.png" alt="Teamleden" className="w-full h-64 object-cover" />
+            <img src="/images/team-4.png" alt="Teamleden" className="w-full h-64 object-cover object-top" />
           </div>
         </div>
       </div>
@@ -399,10 +399,10 @@ export const TeamSection = () => (
             Van strategie tot content, van advertenties tot automatisering. Ieder zijn eigen expertise, samen jouw groeimachine.
           </p>
           <div className="flex -space-x-2">
-            <img src="/images/team-1.jpg" className="w-10 h-10 rounded-full border-2 border-white object-cover" alt="" />
-            <img src="/images/team-phone.jpg" className="w-10 h-10 rounded-full border-2 border-white object-cover" alt="" />
-            <img src="/images/team-stefan-relax.jpg" className="w-10 h-10 rounded-full border-2 border-white object-cover" alt="" />
-            <img src="/images/team-4.png" className="w-10 h-10 rounded-full border-2 border-white object-cover" alt="" />
+            <img src="/images/team-1.jpg" className="w-10 h-10 rounded-full border-2 border-white object-cover object-[center_25%]" alt="" />
+            <img src="/images/team-phone.jpg" className="w-10 h-10 rounded-full border-2 border-white object-cover object-top" alt="" />
+            <img src="/images/team-stefan-relax.jpg" className="w-10 h-10 rounded-full border-2 border-white object-cover object-top" alt="" />
+            <img src="/images/team-4.png" className="w-10 h-10 rounded-full border-2 border-white object-cover object-top" alt="" />
             <div className="w-10 h-10 rounded-full border-2 border-white bg-brand-soft flex items-center justify-center text-[10px] font-bold text-brand-primary">+4</div>
           </div>
         </div>
@@ -472,7 +472,7 @@ export const OnzeBelofteSection = () => (
           <p className="text-lg text-brand-primary/50 font-light max-w-md">Wij geloven zo sterk in wat we doen, dat we het risico graag bij onszelf leggen. Zo kun jij met een gerust hart beginnen.</p>
         </div>
         <div className="lg:w-1/2 flex justify-center">
-          <img src="/images/team-4.png" alt="Team Optimaal Groeien" className="rounded-[24px] shadow-xl w-full max-w-xs object-cover" />
+          <img src="/images/team-4.png" alt="Team Optimaal Groeien" className="rounded-[24px] shadow-xl w-full max-w-xs object-cover object-top" />
         </div>
       </div>
 
@@ -523,7 +523,7 @@ export const SamenAanDeSlagSection = () => (
 
       <div className="mt-16 flex flex-col lg:flex-row gap-8 items-center">
         <div className="lg:w-1/2">
-          <img src="/images/team-stefan-relax.jpg" alt="Ontspannen maar gefocust" className="rounded-[24px] shadow-lg w-full object-cover h-72" />
+          <img src="/images/team-stefan-relax.jpg" alt="Ontspannen maar gefocust" className="rounded-[24px] shadow-lg w-full object-cover object-top h-72" />
         </div>
         <div className="lg:w-1/2">
           <h3 className="text-2xl font-display font-bold text-brand-primary mb-4">Ontspannen, maar gefocust op resultaat.</h3>
@@ -531,7 +531,7 @@ export const SamenAanDeSlagSection = () => (
             We nemen het werk serieus, maar onszelf niet. Dat is precies waarom onze klanten met ons doorwerken: het voelt niet als een zware last, maar als een versterking van je eigen team.
           </p>
           <div className="flex items-center gap-4">
-            <img src="/images/team-1.jpg" className="w-12 h-12 rounded-full object-cover border border-brand-soft" alt="Stefan" />
+            <img src="/images/team-1.jpg" className="w-12 h-12 rounded-full object-cover object-[center_25%] border border-brand-soft" alt="Stefan" />
             <div>
               <p className="font-display font-bold text-brand-primary text-sm">Stefan Kelderman</p>
               <p className="text-xs text-brand-primary/40">Oprichter Optimaal Groeien</p>
@@ -745,7 +745,7 @@ export const HoeHetWerktLeadsSection = () => (
         </div>
 
         <div className="rounded-[24px] overflow-hidden shadow-lg border border-brand-soft">
-          <img src="/images/team-1.jpg" alt="Samen aan de slag" className="w-full h-48 object-cover" />
+          <img src="/images/team-1.jpg" alt="Samen aan de slag" className="w-full h-48 object-cover object-[center_20%]" />
         </div>
       </div>
     </div>
