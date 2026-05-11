@@ -14,6 +14,8 @@ const blog = defineCollection({
     heroImage: z.string().optional(),
     heroAlt: z.string().optional(),
     draft: z.boolean().default(false),
+    pullQuote: z.string().optional(),
+    statHighlight: z.object({ value: z.string(), label: z.string() }).optional(),
     client: z.string().optional(),
     sector: z.string().optional(),
     resultaten: z.array(z.object({ label: z.string(), waarde: z.string() })).optional(),

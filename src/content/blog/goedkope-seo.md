@@ -7,280 +7,143 @@ author: "Stefan Kelderman"
 category: "Marketing"
 tags: ['seo', 'marketingbudget', 'b2b', 'zoekmachine-optimalisatie']
 draft: false
+pullQuote: "Goedkope SEO bestaat niet. Wel slimme SEO met een beperkt budget."
+statHighlight:
+  value: "14x"
+  label: "hogere kans op conversie via SEO dan via outbound marketing"
 ---
-**Goedkope SEO betekent niet dat je kwaliteit opgeeft. Het gaat erom dat je slimme keuzes maakt en je geld steekt in de dingen die het meeste impact hebben.** Veel B2B-bedrijven denken dat zoekmachine optimalisatie duur en ingewikkeld is. Niets is minder waar. Met de juiste aanpak kom je al ver zonder een groot budget.
+Goedkope SEO bestaat niet. Maar slimme SEO met een beperkt budget — dat bestaat wel.
 
-In dit artikel lees je wat SEO kost, waar je op moet letten bij een goedkoop SEO-bureau, en welke stappen je zelf gratis kunt zetten. Ook bespreken we wanneer het slim is om SEO uit te besteden en wat dat oplevert voor technische B2B-bedrijven.
-
----
-
-## Wat is SEO en waarom is het belangrijk voor B2B-bedrijven?
-
-**SEO staat voor Search Engine Optimization.** In het Nederlands noemen we het zoekmachine optimalisatie. Het is alles wat je doet om hoger in Google te komen zonder te betalen voor advertenties.
-
-Denk aan het schrijven van goede teksten, het verbeteren van je website-techniek, en het verzamelen van reviews. Google bekijkt honderden signalen om te bepalen welke pagina bovenaan komt. SEO zorgt ervoor dat jouw website die signalen afgeeft.
-
-### Waarom B2B-bedrijven SEO niet kunnen negeren
-
-In de B2B-sector doen mensen eerst online onderzoek voordat ze een leverancier kiezen. Ze googelen zoektermen als "industriele koelinstallatie kopen" of "IT-beheer voor productiebedrijven". Als jij daar niet tussen staat, verlies je potentiële klanten aan je concurrenten.
-
-**SEO is voor B2B-bedrijven extra belangrijk omdat:**
-
-- De verkoopcyclus langer is en mensen meer informatie nodig hebben
-- De zoekwoorden specifiek zijn en minder concurrentie kennen
-- Een goede positie in Google vertrouwen schept
-- Je continue aanvragen krijgt zonder steeds te adverteren
-
-### Het verschil tussen SEO en SEA
-
-**SEA (Search Engine Advertising) is adverteren in Google.** Je betaalt per klik en staat direct bovenaan. SEO is gratis verkeer op de lange termijn. Beide hebben waarde, maar SEO levert op de lange duur meer op voor je geld.
+Er is een groot verschil. Wie op zoek gaat naar de goedkoopste aanbieder, eindigt vaak met een straf van Google. Wie zijn budget slim inzet, haalt er structureel klanten mee binnen. Dit artikel vertelt je wanneer je SEO zelf kunt doen, wanneer je het beter uitbesteedt, en waar je voor moet oppassen.
 
 ---
 
-## Wat kost SEO gemiddeld in Nederland?
+## Wat SEO eigenlijk kost — en waarom "goedkoop" een gevaarlijk woord is
 
-Dit is de vraag die iedereen stelt. En het eerlijke antwoord is: dat hangt ervan af. De kosten van SEO verschillen enorm per bureau en per aanpak.
+SEO kost tijd. Tijd van een specialist, of tijd van jou. Eén van de twee. Wie zegt dat het voor €99 per maand kan, liegt.
 
-### Prijsindicaties voor verschillende soorten bureaus
+Een klein, eerlijk bureau rekent **€500 tot €1.000 per maand** voor serieus MKB-werk. Een groter bureau zit op €2.000 tot €5.000. Freelancers zitten daar tussenin.
 
-Een groot, landelijk SEO-bureau rekent gemakkelijk **€2.000 tot €5.000 per maand**. Een kleiner, regionaal bureau zit vaak tussen de **€750 en €2.000 per maand**. Freelancers zijn goedkoper, meestal **€500 tot €1.500 per maand**.
+Onder de €500 per maand? Dan betaal je eigenlijk voor niets. Of erger: voor methoden die Google verbiedt.
 
-Voor MKB-bedrijven zijn er ook partijen die pakketten aanbieden vanaf **€500 per maand**. Dit noemen we goedkope SEO. Het is belangrijk om te weten wat je daarvoor terugkrijgt.
+### Wat je voor dat geld terugkrijgt
 
-### Wat je krijgt voor je geld
+Bij een realistisch budget (€500–€1.000) verwacht je dit minimaal:
 
-Bij een hoger bedrag krijg je meestal meer uren, uitgebreidere rapportages, en strategisch advies. Bij een lager bedrag focust het bureau zich op de basisingrediënten die het meeste verschil maken. Denk aan:
+- Technische analyse van je website
+- Zoekwoordonderzoek voor jouw markt
+- Optimalisatie van pagina's en titels
+- Maandelijkse rapportage met concrete cijfers
 
-- Technische optimalisatie van je website
-- Keyword-onderzoek voor jouw branche
-- Het schrijven of verbeteren van paginateksten
-- Het opbouwen van backlinks
-- Maandelijkse rapportage
-
-**Goedkope SEO focust op de quick wins.** Dure SEO gaat dieper en breedte. Voor veel B2B-bedrijven is een basispakket al genoeg om flinke stappen te maken.
-
-### Goedkoop versus duur: de verschillen
-
-Duur hoeft niet altijd beter te zijn. Een duur bureau met veel overheadkosten rekent meer uur, maar werkt niet per se harder. Een goedkoop bureau dat gespecialiseerd is in jouw branche kan soms sneller resultaat boeken.
-
-**Let bij het vergelijken op deze punten:**
-
-- Hoeveel uur werkt het bureau per maand voor je?
-- Wat is hun ervaring in jouw branche?
-- Krijg je strategisch advies of alleen uitvoering?
-- Hoe vaak communiceren ze met je?
-- Welke resultaten hebben ze al behaald voor vergelijkbare bedrijven?
+Bij meer budget krijg je meer uren, meer pagina's, meer diepgang. Maar de basis is al veel waard.
 
 ---
 
-## Hoe vind je goedkope SEO die wel werkt?
+## Wanneer je SEO zelf kunt doen
 
-Hier komt het gevaarlijke gedeelte. Er zijn genoeg partijen die beloven dat je voor €99 per maand op pagina één komt. Dat is onrealistisch en vaak oplichting.
+Zelf SEO doen is realistisch — in de juiste situatie. Het werkt als:
 
-### Waarom extreem goedkope SEO gevaarlijk is
+- Je actief bent in een kleine lokale markt (denk: regio, stad)
+- Je concurrentieniveau laag is
+- Je bereid bent er structureel tijd in te steken
 
-Een partij die €99 per maand vraagt, kan niet veel uren in je project stoppen. Vaak gebruiken ze **geautomatiseerde methoden of black-hat technieken**. Dit zijn trucjes die Google verbiedt. Je kunt er tijdelijk mee stijgen, maar uiteindelijk word je gestraft. En dan sta je verder terug dan waar je begon.
+Een installatiebedrijf in Raalte met weinig concurrenten kan met basisoptimalisatie al goed scoren. Een software-as-a-service bedrijf dat landelijk concurreert met tientallen spelers — dat is een ander verhaal.
 
-**Black-hat SEO kan leiden tot:**
+### Gratis tools waarmee je start
 
-- Een penalty van Google
-- Verwijdering uit de zoekresultaten
-- Image-schade voor je bedrijf
-- Geldverspilling aan een tijdelijk effect
+Je hebt geen abonnement van €300 per maand nodig. Begin hier:
 
-### Wat een eerlijke prijs is
+- **Google Search Console** — zie welke zoektermen je al verkeer opleveren, en welke pagina's slecht scoren
+- **Google Business Profile** — onmisbaar voor lokale vindbaarheid, volledig gratis
+- **Google PageSpeed Insights** — test hoe snel je website laadt
+- **Ubersuggest (gratis versie)** — ontdek zoekwoorden in jouw niche
 
-Voor een echt SEO-traject waarbij een professional aan de slag gaat, is **€500 tot €1.000 per maand een eerlijke prijs** voor MKB-bedrijven. Daarvoor krijg je serieuze aandacht en werk dat voldoet aan de richtlijnen van Google.
+Met Search Console en Business Profile alleen kom je al een heel eind. Veel MKB-bedrijven zetten die twee niet eens goed in.
 
-### Hoe je kwaliteit herkent tegen een lage prijs
+### Drie dingen die je vandaag gratis kunt doen
 
-Een goedkoop bureau dat wél kwaliteit levert, herken je aan deze kenmerken:
+**1. Vul je Google Business Profile volledig in.**
+Naam, adres, telefoonnummer, openingstijden, foto's, beschrijving. Alles. En post daarna elke twee weken een update. Dit kost je een uur en heeft direct effect op je lokale zichtbaarheid.
 
-- Ze zijn transparant over wat ze doen
-- Ze sturen maandelijks een duidelijk rapport
-- Ze leggen uit waarom ze bepaalde keuzes maken
-- Ze hebben referenties of reviews van klanten
-- Ze stellen realistische verwachtingen
-- Ze gebruiken geen vage termen of beloftes die te mooi klinken
+**2. Schrijf paginatitels die kloppen.**
+Elke pagina op je site heeft een titel die Google toont in de zoekresultaten. "Diensten" is geen goede titel. "IT-beheer voor productiebedrijven in Twente" wel. Gebruik je belangrijkste zoekwoord. Houd het onder de 60 tekens.
 
-### Waarschuwingssignalen
+**3. Vraag je beste klanten om een Google-review.**
+Stuur een directe link naar je reviewpagina. Reviews wegen mee in lokale rankings. En ze bouwen vertrouwen — ook bij nieuwe bezoekers.
 
-**Pas op als een bureau dit zegt:**
+---
 
-- "Gegarandeerd resultaat binnen een maand"
-- "We hebben een geheim trucje"
-- "Je hoeft niks te doen, wij regelen alles"
+## Wanneer je het beter uitbesteedt
+
+Zelf doen werkt niet altijd. Uitbesteden is slim als:
+
+- Je in een markt zit met serieuze concurrentie
+- Je technische problemen hebt op je website (redirects, laadsnelheid, crawlfouten)
+- Je geen tijd hebt om er maandelijks mee bezig te zijn
+- Je sneller wilt groeien dan je zelf kunt bijhouden
+
+Een specialist doet in een dag wat jou een week kost. En hij weet waar de kansen liggen — zonder eerst alles te moeten uitzoeken.
+
+Voor meer inzicht in wat professionele begeleiding je oplevert, lees ons artikel over [SEO-ondersteuning voor B2B-bedrijven](https://optimaalgroeien.nl/seo-ondersteuning).
+
+---
+
+## Waarschuwing: goedkope bureaus die black-hat werken
+
+Dit is het gevaarlijke deel. Er zijn bureaus die voor €99 of €199 per maand beloven dat je op pagina één komt. Ze gebruiken daarvoor methoden die Google verbiedt: massaal opgekochte backlinks, verborgen tekst, gespoofte profielen.
+
+Het werkt soms even. Daarna niet meer.
+
+**Google legt een penalty op.** Je pagina's verdwijnen uit de zoekresultaten. Herstel duurt maanden. Soms lukt het nooit meer volledig.
+
+Waarschuwingssignalen herken je zo:
+
+- "Gegarandeerd resultaat binnen vier weken"
 - "We bouwen honderden backlinks per maand"
-- "Technische kennis is niet nodig"
+- "Je hoeft niks te doen, wij regelen alles"
+- Geen transparantie over wat ze precies doen
+- Geen referenties of klantcases
 
-Een eerlijk bureau durft te zeggen dat SEO tijd kost. Gemiddeld zie je pas na drie tot zes maanden echt resultaat. Wie dat niet zegt, is niet eerlijk.
-
----
-
-## 7 SEO-tips die je zelf gratis kunt toepassen
-
-Je hoeft niet altijd een bureau in te huren. Er zijn genoeg dingen die je zelf kunt doen om hoger in Google te komen. Hieronder staan zeven praktische tips die je vandaag nog kunt toepassen.
-
-### Tip 1: Optimaliseer je Google Bedrijfspagina
-
-Dit is de makkelijkste en snelste win. **Je Google Bedrijfspagina (vroeger Google Mijn Bedrijf) is gratis en essentieel voor lokale vindbaarheid.** Zorg dat alle gegevens compleet zijn: bedrijfsnaam, adres, telefoonnummer, openingstijden, en website.
-
-Voeg ook foto's toe van je bedrijf, producten of diensten. Post regelmatig een update, bijvoorbeeld over een nieuw project of aanbieding. Dit laat Google zien dat je bedrijf actief is.
-
-Voor meer tips over lokale vindbaarheid, lees ons artikel over een [lokale SEO specialist](https://optimaalgroeien.nl/blog/lokale-seo-specialist).
-
-### Tip 2: Schrijf heldere paginatitels
-
-Elke pagina op je website heeft een titel die in Google verschijnt. Deze titel moet duidelijk maken waar de pagina over gaat. **Gebruik je belangrijkste zoekwoord in de titel.** Houd het kort: maximaal 60 tekens.
-
-Een slechte titel is: "Diensten". Een goede titel is: "SEO ondersteuning voor B2B-bedrijven | Optimaal Groeien". Zo weet Google én de zoeker direct wat er te vinden is.
-
-Wil je meer weten over het optimaliseren van je website? Lees dan ons artikel over [website optimalisatie](https://optimaalgroeien.nl/blog/website-optimalisatie).
-
-### Tip 3: Maak waardevolle content
-
-**Google beloont websites die echt waarde bieden.** Schrijf pagina's en blogartikelen die antwoord geven op de vragen van je doelgroep. Wat willen jouw potentiële klanten weten? Welke problemen hebben ze? Geef praktische informatie die hen verder helpt.
-
-Je hoeft geen roman te schrijven. Een goede pagina van 500 tot 800 woorden is al voldoende, zolang het maar nuttig is. Gebruik de woorden die jouw doelgroep ook gebruikt.
-
-Wil je weten hoe professionele SEO-teksten je kunnen helpen? Bekijk dan onze pagina over [SEO-teksten laten schrijven](https://optimaalgroeien.nl/blog/seo-teksten-laten-schrijven).
-
-### Tip 4: Verbeter je interne linkstructuur
-
-Een interne link is een verwijzing van de ene pagina op je website naar de andere. Dit helpt bezoekers én Google om je website beter te begrijpen. **Link vanuit je dienstenpagina's naar gerelateerde blogartikelen en andersom.**
-
-Gebruik beschrijvende linkteksten. In plaats van "klik hier", schrijf je "lees meer over zoekmachine optimalisatie voor MKB-bedrijven". Dit geeft context en helpt met je rankings.
-
-### Tip 5: Vraag klanten om reviews
-
-Reviews zijn een sterk signaal voor Google. Ze laten zien dat mensen met je bedrijf werken en tevreden zijn. **Vraag na een succesvol project of een tevreden klant een review wil achterlaten op Google.**
-
-Maak het makkelijk: stuur een linkje naar je Google Bedrijfspagina. Reageer ook altijd op reviews, zowel positief als negatief. Dit toont betrokkenheid.
-
-### Tip 6: Zorg voor een snelle website
-
-Niemand wacht graag op een trage website. **Google straft trage websites af.** Gebruik gratis tools als Google PageSpeed Insights om te testen hoe snel je website is.
-
-Een paar simpele verbeteringen:
-
-- Verklein je afbeeldingen voordat je ze uploadt
-- Zet caching aan (vraag je webbouwer)
-- Verwijder onnodige plug-ins
-- Kies een goede hostingpartij
-
-Een laadtijd onder de drie seconden is het streven.
-
-### Tip 7: Gebruik gratis SEO-tools
-
-Je hoeft geen dure software te kopen om SEO te doen. Er zijn uitstekende gratis tools beschikbaar:
-
-- **Google Search Console:** zie hoe je website presteert in Google
-- **Google Analytics:** meet het bezoekersgedrag op je website
-- **Ubersuggest:** ontdek nieuwe zoekwoorden en ideeën
-- **AnswerThePublic:** vind vragen die mensen stellen in Google
-- **Screaming Frog (gratis versie):** analyseer je website-techniek
-
-Met deze tools kom je al een heel eind zonder een euro uit te geven.
-
----
-
-## Wanneer moet je SEO uitbesteden?
-
-Soms is het verstandiger om SEO uit te besteden dan om het zelf te doen. Dit geldt vooral in deze situaties:
-
-### Als je geen tijd hebt
-
-SEO kost tijd. Niet alleen om het te leren, maar ook om het maandelijks bij te houden. **Als je al druk genoeg bent met je core business, schakel dan een professional in.** Zo weet je zeker dat het werk gedaan wordt en jij kunt focussen op waar je goed in bent.
-
-### Als je technische kennis mist
-
-Sommige SEO-werkzaamheden zijn technisch van aard. Denk aan het verbeteren van laadsnelheid, het oplossen van redirect-problemen, of het implementeren van structured data. Als je hier geen verstand van hebt, kan een foutje je website beschadigen.
-
-### Als je sneller resultaat wilt
-
-Een ervaren SEO-specialist weet waar de kansen liggen. Hij of zij hoeft niet eerst alles uit te zoeken. **Een professional kan in een paar uur doen wat jou een hele week kost.** Dit versnelt je groei en levert sneller nieuwe klanten op.
-
-### Als de concurrentie sterk is
-
-Zit je in een markt met veel concurrentie? Dan is basale SEO vaak niet genoeg. Je concurrenten investeren waarschijnlijk al in SEO. Om bij te blijven of voor te blijven, heb je een strategische aanpak nodig.
-
-**Wil je weten wat professionele SEO-ondersteuning voor jouw bedrijf kan betekenen?** Bekijk onze pagina over [SEO ondersteuning voor jouw bedrijf](https://optimaalgroeien.nl/seo-ondersteuning). We werken specifiek voor B2B-bedrijven in de technische sector en bieden een aanpak die past bij jouw budget.
+Een eerlijk bureau zegt: SEO duurt drie tot zes maanden voor je duidelijk resultaat ziet. Wie dat niet zegt, is niet eerlijk.
 
 ---
 
 ## Goedkope SEO voor technische B2B-bedrijven
 
-Technische B2B-bedrijven hebben hun eigen uitdagingen als het gaat om SEO. De producten en diensten zijn vaak complex en de doelgroep is specifiek. Dat biedt ook kansen.
+Technische B2B heeft iets dat veel andere sectoren niet heeft: lage concurrentie op specifieke zoektermen.
 
-### Specifieke uitdagingen in de technische sector
+"CNC frezen aluminium Overijssel" of "industriële koelinstallatie onderhoud Gelderland" — dat zijn zoekopdrachten met weinig concurrenten. Eén goede positie op zo'n term kan al tienduizenden euro's aan omzet opleveren.
 
-Technische bedrijven worstelen vaak met dezelfde problemen:
+Dat maakt technisch B2B bij uitstek geschikt voor een aanpak met een bescheiden budget. Je hoeft niet te concurreren met grote merken. Je hoeft alleen beter te scoren dan de twee of drie regionale concurrenten.
 
-- Jargon en vaktermen die de doelgroep niet begrijpt
-- Weinig tijd voor marketing omdat de focus op operatie ligt
-- Een website die technisch goed is, maar niet geoptimaliseerd voor zoekmachines
-- Specialistische diensten die moeilijk in tekst te vatten zijn
-
-**Het goede nieuws is dat deze uitdagingen ook een kans vormen.** Omdat technische zoektermen specifiek zijn, is de concurrentie vaak lager dan in consumentenmarkten.
-
-### Welke zoektermen belangrijk zijn
-
-In de technische B2B focussen we op zogenaamde **long-tail keywords**. Dit zijn specifieke zoekopdrachten met minder volume, maar hogere intentie. Voorbeelden zijn:
-
-- "CNC frezen aluminium Raalte"
-- "hybride cloud oplossing voor productiebedrijf"
-- "industriële automatiseringspartner Oost-Nederland"
-
-Deze termen worden minder vaak gezocht, maar mensen die ze intikken zijn vaak verder in hun koopproces. **Eén goede aanvraag via zo'n zoekwoord kan al duizenden euro's opleveren.**
-
-### Lokale SEO voor technische bedrijven
-
-Veel technische B2B-bedrijven werken regionaal of landelijk met een sterke lokale basis. Lokale SEO helpt om gevonden te worden in je eigen regio. Dit is extra belangrijk omdat bedrijven vaak een leverancier in de buurt zoeken.
-
-Zorg dat je NAP-gegevens (Naam, Adres, Postcode) overal hetzelfde zijn. Sta je vermeld in lokale bedrijvengidsen? En heb je al een [lokale SEO specialist](https://optimaalgroeien.nl/blog/lokale-seo-specialist) geconsulteerd over de kansen in jouw regio?
-
-Wil je meer weten over hoe je [hoger in Google komt met SEO](https://optimaalgroeien.nl/blog/hoger-in-google)? In dat artikel delen we nog meer praktische strategieën die werken voor B2B-bedrijven.
+Wil je meer weten over lokale vindbaarheid in je regio? Lees dan ons artikel over [lokale SEO voor B2B-bedrijven](https://optimaalgroeien.nl/blog/lokale-seo-specialist).
 
 ---
 
-## Veelgestelde vragen over goedkope SEO
+## Veelgestelde vragen
 
-**Is goedkope SEO veilig?**
+**Kan ik ooit echt "goedkoop" SEO kopen?**
 
-Ja, zolang je kiest voor een partij die eerlijk en transparant werkt. Een prijs van €500 tot €1.000 per maand is realistisch voor MKB-bedrijven. Pas op voor partijen die veel lager vragen of onrealistische beloftes doen.
+Nee — in de betekenis van weinig geld voor veel resultaat. Wel kun je met een bescheiden budget slim investeren: zelf de gratis basisstappen doen, en een specialist inschakelen voor technische optimalisatie en strategie.
 
 **Hoe lang duurt het voordat ik resultaat zie?**
 
-SEO is een langetermijnstrategie. De eerste verbeteringen zie je meestal na twee tot drie maanden. Echt significante resultaten volgen na zes tot twaalf maanden. Geduld loont.
-
-**Kan ik SEO niet gewoon zelf doen?**
-
-Jazeker. Met de tips in dit artikel kom je al een heel eind. Maar voor technische optimalisaties en strategische keuzes is een professional vaak effectiever. Het hangt af van je tijd, kennis, en ambitie.
+Drie tot zes maanden voor eerste beweging. Zes tot twaalf maanden voor structurele groei. Wie sneller belooft, liegt of gebruikt methoden die later problemen geven.
 
 **Wat is het verschil tussen SEO en SEA?**
 
-SEO is gratis verkeer via de organische zoekresultaten. SEA is betaald adverteren in Google. SEO levert op de lange termijn meer op, SEA geeft direct resultaat. De ideale mix is vaak een combinatie van beide.
+SEO is gratis organisch verkeer — het duurt langer maar bouwt duurzame zichtbaarheid. SEA (adverteren in Google) geeft direct resultaat maar stopt als je budget op is. Voor MKB met een beperkt budget is SEO op de lange termijn efficiënter.
 
-**Waarom is SEO duur bij sommige bureaus?**
+**Hoe meet ik of het werkt?**
 
-Grote bureaus hebben hogere kosten voor panden, personeel, en overhead. Ze werken vaak voor grote ondernemingen met grote budgetten. Voor MKB-bedrijven is een kleiner, gespecialiseerd bureau meestal een betere match.
-
-**Hoe weet ik of mijn SEO werkt?**
-
-Meet je resultaten met Google Search Console en Google Analytics. Kijk naar je posities, het organische verkeer, en het aantal aanvragen via je website. Een goed bureau stuurt je hier maandelijks een rapport over.
-
-**Moet ik een langjarig contract tekenen?**
-
-Nee, dat is meestal niet nodig. Een goed bureau werkt met een opzegtermijn van één tot drie maanden. Zo houd je flexibiliteit en blijft het bureau gemotiveerd om resultaat te leveren.
+Gebruik Google Search Console. Kijk naar het aantal vertoningen, klikken en de gemiddelde positie per zoekterm. Een goed bureau geeft je hier elke maand inzicht in — met concrete cijfers, niet met vaag marketingtaal.
 
 ---
 
-## Conclusie: goedkope SEO is slimme SEO
+## Concrete actie: begin deze week
 
-Goedkope SEO is geen synoniem voor slechte SEO. Het gaat erom dat je je geld investeert in de dingen die het meeste opleveren. Door slimme keuzes te maken, de basics zelf te regelen, en strategisch samen te werken met een bureau, haal je meer uit je marketingbudget dan je denkt.
+Stop met zoeken naar de goedkoopste aanbieder. Begin met wat gratis werkt.
 
-De belangrijkste takeaway: **begin gewoon.** Optimaliseer je Google Bedrijfspagina, schrijf waardevolle content, en zorg voor een technisch gezonde website. Dat kost je niets en levert al veel op.
+Open vandaag je Google Business Profile. Controleer of alle gegevens kloppen. Voeg een foto toe en schrijf een update. Log in op Google Search Console en kijk welke zoektermen al verkeer opleveren — en welke pagina's op positie 11 tot 20 staan. Die zijn laaghangende fruit.
 
-Wil je meer weten over hoe wij B2B-bedrijven helpen om te groeien met SEO? Neem een kijkje bij ons [full service marketing bureau](https://optimaalgroeien.nl/full-service-marketing-bureau) in Raalte. We denken graag met je mee over de beste aanpak voor jouw situatie en budget.
-
-**Welke van de zeven gratis tips ga jij deze week als eerste toepassen op je website?**
+Wil je daarna weten wat professionele SEO-begeleiding voor jouw bedrijf betekent? Bekijk dan wat we doen als [full-service marketingbureau voor B2B](https://optimaalgroeien.nl/full-service-marketing-bureau). We werken met bedrijven die serieus willen groeien — ook met een realistisch budget.
