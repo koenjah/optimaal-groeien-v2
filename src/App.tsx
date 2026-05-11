@@ -1,26 +1,33 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { 
-  Navbar, 
-  Footer, 
-  PartnerHero, 
+import {
+  Navbar,
+  Footer,
+  PartnerHero,
   ToolsSection,
-  HerkenJeDitSection, 
-  HoeWeHelpenSection, 
+  HerkenJeDitSection,
+  HoeWeHelpenSection,
   TeamSection,
-  KlantverhalenSection, 
-  OnzeBelofteSection, 
-  SamenAanDeSlagSection, 
-  WatAnderenZeggenSection, 
+  KlantverhalenSection,
+  OnzeBelofteSection,
+  SamenAanDeSlagSection,
+  WatAnderenZeggenSection,
   LatenWePratenSection,
-  DeLeadmachineSection,
-  SpeciaalVoorJouSection,
-  HoeHetWerktLeadsSection,
-  SamenGroeiRealiserenSection,
-  DuidelijkheidVoorafSection,
-  DirectBesprekenSection
 } from './components/SiteComponents';
 import { OmzetCalculator } from './components/Calculator';
+
+const LeadmachinePage = React.lazy(() => import('./components/LeadmachineComponents').then(m => ({
+  default: () => (
+    <>
+      <m.DeLeadmachineSection />
+      <m.SpeciaalVoorJouSection />
+      <m.HoeHetWerktLeadsSection />
+      <m.SamenGroeiRealiserenSection />
+      <m.DuidelijkheidVoorafSection />
+      <m.DirectBesprekenSection />
+    </>
+  )
+})));
 
 function App() {
   const [activePage, setActivePage] = React.useState<'partner' | 'funnel'>('partner');
@@ -77,12 +84,9 @@ function App() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <DeLeadmachineSection />
-            <SpeciaalVoorJouSection />
-            <HoeHetWerktLeadsSection />
-            <SamenGroeiRealiserenSection />
-            <DuidelijkheidVoorafSection />
-            <DirectBesprekenSection />
+            <React.Suspense fallback={null}>
+              <LeadmachinePage />
+            </React.Suspense>
           </motion.main>
         )}
       </AnimatePresence>
