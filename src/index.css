@@ -46,7 +46,8 @@
 }
 
 .guide-badge {
-  @apply inline-flex items-center gap-1 px-2 py-0.5 bg-brand-warm text-brand-accent text-[10px] font-bold rounded-lg border border-brand-accent/10;
+  @apply inline-flex items-center gap-1 px-2 py-0.5 bg-brand-warm text-[10px] font-bold rounded-lg border border-brand-accent/10;
+  color: #df6f1f;
 }
 
 .corner-bracket {
@@ -85,3 +86,11 @@
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
 }
+
+/* WCAG AA: brand-accent (#f17a29) on white → 2.7:1 (fails).
+   Heading spans (large bold 36px+): #d96500 → 3.30:1 passes 3:1 requirement.
+   Guide-badge (10px text): #a34800 → 5.37:1 passes 4.5:1 requirement. */
+h1 .text-brand-accent,
+h2 .text-brand-accent,
+h3 .text-brand-accent { color: #d96500; }
+.guide-badge { color: #a34800 !important; }

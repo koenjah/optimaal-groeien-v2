@@ -117,14 +117,14 @@ export const Footer = () => (
           <div className="flex items-center gap-2 mb-8">
             <img src="/images/logo.webp" alt="Optimaal Groeien" width="300" height="57" className="h-8 w-auto" />
           </div>
-          <p className="text-sm text-white/40 leading-relaxed max-w-xs">
+          <p className="text-sm text-white/65 leading-relaxed max-w-xs">
             Wij bouwen en runnen de volledige commerciële structuur van B2B-bedrijven in industrie, machinebouw, logistiek, bouw en techniek.
           </p>
         </div>
 
         <div>
           <h3 className="text-[10px] font-bold uppercase tracking-widest text-brand-lime mb-8">Navigatie</h3>
-          <ul className="space-y-4 text-sm text-white/50">
+          <ul className="space-y-4 text-sm text-white/72">
             <li><a href="#" className="hover:text-white transition-colors">Hoe we helpen</a></li>
             <li><a href="#team" className="hover:text-white transition-colors">Het team</a></li>
             <li><a href="#cases" className="hover:text-white transition-colors">Verhalen van anderen</a></li>
@@ -134,7 +134,7 @@ export const Footer = () => (
 
         <div>
           <h3 className="text-[10px] font-bold uppercase tracking-widest text-brand-lime mb-8">Contact</h3>
-          <ul className="space-y-4 text-sm text-white/50">
+          <ul className="space-y-4 text-sm text-white/72">
             <li>info@optimaalgroeien.nl</li>
             <li>+31 (0) 57 270 0246</li>
             <li>Boeierstraat 9, Raalte</li>
@@ -143,7 +143,7 @@ export const Footer = () => (
 
         <div>
           <h3 className="text-[10px] font-bold uppercase tracking-widest text-brand-lime mb-8">Legal</h3>
-          <ul className="space-y-4 text-sm text-white/50">
+          <ul className="space-y-4 text-sm text-white/72">
             <li>Privacybeleid</li>
             <li>Algemene Voorwaarden</li>
             <li>KVK: 7182910</li>
@@ -152,10 +152,10 @@ export const Footer = () => (
       </div>
 
       <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
-        <p className="text-[10px] text-white/20 uppercase tracking-widest font-bold">
+        <p className="text-[10px] text-white/55 uppercase tracking-widest font-bold">
           © 2026 Optimaal Groeien. Alle rechten voorbehouden.
         </p>
-        <div className="flex gap-10 text-[10px] uppercase tracking-widest font-bold text-white/30">
+        <div className="flex gap-10 text-[10px] uppercase tracking-widest font-bold text-white/60">
           <span>Raalte, Nederland</span>
           <span className="text-brand-lime">+3157 270 0246</span>
         </div>
@@ -209,7 +209,7 @@ export const PartnerHero = () => {
                </span>
             </h1>
 
-            <p className="text-lg text-white/50 mb-10 max-w-lg leading-relaxed font-light">
+            <p className="text-lg text-white/72 mb-10 max-w-lg leading-relaxed font-light">
                Veel technische bedrijven groeien op toeval en netwerk. Wij veranderen dat in een voorspelbare commerciële machine door AI, Branding, Marketing & Sales met elkaar te verbinden.
             </p>
 
@@ -264,23 +264,23 @@ export const PartnerHero = () => {
 
 export const ToolsSection = () => {
   const tools = [
-    { name: "Meta", src: "/images/logos/meta.webp", w: 397, h: 80 },
-    { name: "Google", src: "/images/logos/google.webp", w: 242, h: 80 },
-    { name: "HubSpot", src: "/images/logos/hubspot.webp", w: 279, h: 80 },
-    { name: "Salesforce", src: "/images/logos/salesforce.webp", w: 114, h: 80 },
-    { name: "LinkedIn", src: "/images/logos/linkedin.webp", w: 301, h: 80 },
-    { name: "Make", src: "/images/logos/make.webp", w: 388, h: 80 },
-    { name: "Claude AI", src: "/images/logos/claude.webp", w: 704, h: 80 },
-    { name: "OpenAI", src: "/images/logos/openai.webp", w: 290, h: 80 },
-    { name: "Gemini", src: "/images/logos/gemini.webp", w: 321, h: 80 },
-    { name: "Adobe", src: "/images/logos/adobe.webp", w: 303, h: 80 },
-    { name: "Brevo", src: "/images/logos/brevo.webp", w: 270, h: 80 },
+    { name: "Meta", src: "/images/logos/meta.webp", w: 178, h: 36 },
+    { name: "Google", src: "/images/logos/google.webp", w: 109, h: 36 },
+    { name: "HubSpot", src: "/images/logos/hubspot.webp", w: 125, h: 36 },
+    { name: "Salesforce", src: "/images/logos/salesforce.webp", w: 51, h: 36 },
+    { name: "LinkedIn", src: "/images/logos/linkedin.webp", w: 135, h: 36 },
+    { name: "Make", src: "/images/logos/make.webp", w: 174, h: 36 },
+    { name: "Claude AI", src: "/images/logos/claude.webp", w: 321, h: 36 },
+    { name: "OpenAI", src: "/images/logos/openai.webp", w: 130, h: 36 },
+    { name: "Gemini", src: "/images/logos/gemini.webp", w: 145, h: 36 },
+    { name: "Adobe", src: "/images/logos/adobe.webp", w: 136, h: 36 },
+    { name: "Brevo", src: "/images/logos/brevo.webp", w: 122, h: 36 },
   ];
   return (
     <section className="py-20 bg-brand-bg border-y border-brand-soft overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 text-center mb-14">
-        <p className="text-sm font-bold uppercase tracking-widest text-brand-primary/40 mb-3">Wij werken met de beste tools</p>
-        <p className="text-brand-primary/50 text-sm max-w-2xl mx-auto leading-relaxed">
+        <p className="text-sm font-bold uppercase tracking-widest text-brand-primary/75 mb-3">Wij werken met de beste tools</p>
+        <p className="text-brand-primary/75 text-sm max-w-2xl mx-auto leading-relaxed">
           Wij begrijpen de complexiteit van jullie bedrijf, doelgroep en de markt. Dat stelt ons in staat om proactief de volledige regie over jullie groei te nemen, terwijl jij je focust op de operatie.
         </p>
       </div>
@@ -325,7 +325,7 @@ export const HerkenJeDitSection = () => (
           </h2>
         </div>
         <div className="lg:w-1/2 lg:pt-10">
-          <p className="text-lg text-brand-primary/50 leading-relaxed font-light">
+          <p className="text-lg text-brand-primary/75 leading-relaxed font-light">
             We horen het vaak: "Onze producten zijn top, onze klanten zijn blij, maar nieuwe klanten vinden is volledig afhankelijk van ons netwerk". Je groeit groeit op basis van wie je kent, niet op basis van wat je waard bent. Wij bouwen een systeem dat jullie technische superioriteit vertaalt naar een constante stroom van de juiste opdrachten.
           </p>
         </div>
@@ -348,7 +348,7 @@ export const HerkenJeDitSection = () => (
                <span className="guide-badge">Herkenbaar?</span>
             </div>
             <h3 className="text-lg font-display font-bold text-brand-primary mb-3 leading-tight">{item.title}</h3>
-            <p className="text-sm text-brand-primary/50 leading-relaxed font-light">{item.text}</p>
+            <p className="text-sm text-brand-primary/75 leading-relaxed font-light">{item.text}</p>
           </div>
         ))}
       </div>
@@ -366,7 +366,7 @@ export const HoeWeHelpenSection = () => (
           Wij begrijpen jullie techniek. <br/>
           <span className="text-brand-accent">En bouwen de machine die het verkoopt.</span>
         </h2>
-        <p className="text-lg text-brand-primary/50 mb-12 leading-relaxed max-w-xl font-light">
+        <p className="text-lg text-brand-primary/75 mb-12 leading-relaxed max-w-xl font-light">
           De meeste bureaus snappen de complexiteit van de industrie niet. Wij wel. We sturen geen dikke adviesrapporten vanaf de zijlijn, maar komen als team bij jullie langs om de kern van jullie bedrijf te doorgronden. Pas als we jullie vakmanschap écht begrijpen, bouwen we het systeem dat jullie groei dicteert.
         </p>
 
@@ -383,11 +383,11 @@ export const HoeWeHelpenSection = () => (
             ].map((s, i) => (
               <div key={i} className="flex gap-4 group">
                 <div className="w-11 h-11 bg-brand-soft border border-brand-soft rounded-[16px] flex items-center justify-center shrink-0 mt-0.5 group-hover:border-brand-lime/40 group-hover:bg-brand-lime/10 transition-all">
-                   <s.icon size={18} className="text-brand-primary/40 group-hover:text-brand-accent transition-colors" />
+                   <s.icon size={18} className="text-brand-primary/75 group-hover:text-brand-accent transition-colors" />
                 </div>
                 <div>
                   <h3 className="font-display font-bold text-brand-primary mb-1 text-lg">{s.title}</h3>
-                  <p className="text-sm text-brand-primary/50 font-light leading-relaxed">{s.desc}</p>
+                  <p className="text-sm text-brand-primary/75 font-light leading-relaxed">{s.desc}</p>
                 </div>
               </div>
             ))}
@@ -399,7 +399,7 @@ export const HoeWeHelpenSection = () => (
           <img src="/images/team-1-lg.webp" srcSet="/images/team-1-sm.webp 480w, /images/team-1-lg.webp 800w" sizes="(max-width: 768px) 100vw, 50vw" alt="Samenwerken bij Optimaal Groeien" className="w-full h-56 object-cover object-[center_20%]" loading="lazy" />
           <div className="p-5 bg-white">
             <p className="text-sm font-display font-bold text-brand-primary">Samen werken we aan jouw groei.</p>
-            <p className="text-xs text-brand-primary/40 mt-1">Geen vage rapporten, maar echte samenwerking.</p>
+            <p className="text-xs text-brand-primary/75 mt-1">Geen vage rapporten, maar echte samenwerking.</p>
           </div>
         </div>
 
@@ -443,7 +443,7 @@ export const TeamSection = () => (
           <h2 className="text-4xl lg:text-5xl font-display font-bold text-brand-primary mb-6 tracking-tight">
             Dit zijn de mensen die <span className="text-brand-accent">voor je aan de slag gaan.</span>
           </h2>
-          <p className="text-lg text-brand-primary/50 leading-relaxed font-light max-w-md">
+          <p className="text-lg text-brand-primary/75 leading-relaxed font-light max-w-md">
             Geen anoniem bureau, maar een hecht team dat echt met je meedenkt. We werken vanuit Raalte, voor het hele land.
           </p>
         </div>
@@ -466,7 +466,7 @@ export const TeamSection = () => (
             <Users size={24} />
           </div>
           <h3 className="text-2xl font-display font-bold text-brand-primary mb-3">8 specialisten</h3>
-          <p className="text-brand-primary/50 leading-relaxed font-light text-sm mb-6">
+          <p className="text-brand-primary/75 leading-relaxed font-light text-sm mb-6">
             Van strategie tot content, van advertenties tot automatisering. Ieder zijn eigen expertise, samen jouw groeimachine.
           </p>
           <div className="flex -space-x-2">
@@ -491,7 +491,7 @@ export const KlantverhalenSection = () => (
         <h2 className="text-3xl lg:text-5xl font-display font-bold text-white mb-5 tracking-tight leading-tight">
           Succes is geen toeval, <br /><span className="text-brand-lime">het is een keuze.</span>
         </h2>
-        <p className="text-lg text-white/40 max-w-xl font-light leading-relaxed">
+        <p className="text-lg text-white/65 max-w-xl font-light leading-relaxed">
           Geen saaie grafieken, maar echte verhalen van bedrijven die hun commercie voorgoed hebben veranderd.
         </p>
       </div>
@@ -511,18 +511,18 @@ export const KlantverhalenSection = () => (
             <div className="flex justify-between items-start mb-8 relative z-10">
               <div>
                 <h3 className="text-xl font-display font-bold text-white mb-1 tracking-tight">{c.name}</h3>
-                <div className="text-[11px] uppercase tracking-widest text-white/20 font-bold">{c.sector}</div>
+                <div className="text-[11px] uppercase tracking-widest text-white/55 font-bold">{c.sector}</div>
               </div>
-              <div className="px-3 py-1 bg-brand-accent text-white text-[10px] font-bold uppercase tracking-widest rounded-full">
+              <div className="px-3 py-1 bg-brand-accent text-slate-900 text-[10px] font-bold uppercase tracking-widest rounded-full">
                 {c.res}
               </div>
             </div>
 
             <div className="relative z-10">
-              <p className="text-white/50 leading-relaxed font-light mb-8 text-sm min-h-[4rem]">
+              <p className="text-white/72 leading-relaxed font-light mb-8 text-sm min-h-[4rem]">
                 {c.desc}
               </p>
-              <button className="text-white/40 text-[11px] font-bold uppercase tracking-widest flex items-center gap-2 group-hover:text-brand-lime transition-colors">
+              <button className="text-white/65 text-[11px] font-bold uppercase tracking-widest flex items-center gap-2 group-hover:text-brand-lime transition-colors">
                 Hun verhaal lezen <ArrowRight size={14} />
               </button>
             </div>
@@ -540,7 +540,7 @@ export const OnzeBelofteSection = () => (
       <div className="text-center mb-16">
         <div className="label-pill !bg-white/10 !text-white !border-none mx-auto">Geen kleine lettertjes</div>
         <h2 className="text-4xl lg:text-5xl font-display font-bold text-white mb-6 tracking-tight">Onze belofte aan jou.</h2>
-        <p className="text-lg text-white/50 font-light max-w-xl mx-auto">Wij geloven zo sterk in wat we doen, dat we het risico graag bij onszelf leggen. Zo kun jij met een gerust hart beginnen.</p>
+        <p className="text-lg text-white/72 font-light max-w-xl mx-auto">Wij geloven zo sterk in wat we doen, dat we het risico graag bij onszelf leggen. Zo kun jij met een gerust hart beginnen.</p>
       </div>
 
       <div className="grid lg:grid-cols-3 gap-6">
@@ -559,7 +559,7 @@ export const OnzeBelofteSection = () => (
               </div>
               <div className="text-[10px] uppercase tracking-[0.2em] text-brand-lime font-bold mb-3">Belofte {g.n}</div>
               <h3 className="text-2xl font-display font-bold text-white mb-4 leading-tight">{g.t}</h3>
-              <p className="text-white/50 leading-relaxed font-light text-sm">{g.d}</p>
+              <p className="text-white/72 leading-relaxed font-light text-sm">{g.d}</p>
             </div>
             <div className="absolute bottom-0 left-0 right-0 h-1 bg-brand-lime/0 group-hover:bg-brand-lime/40 transition-all duration-500" />
           </div>
@@ -590,7 +590,7 @@ export const SamenAanDeSlagSection = () => (
               {i+1}
             </div>
             <h3 className="text-lg font-display font-bold text-brand-primary mb-3 leading-tight">{s.t}</h3>
-            <p className="text-brand-primary/50 leading-relaxed font-light text-sm px-2">{s.d}</p>
+            <p className="text-brand-primary/75 leading-relaxed font-light text-sm px-2">{s.d}</p>
           </div>
         ))}
       </div>
@@ -601,14 +601,14 @@ export const SamenAanDeSlagSection = () => (
         </div>
         <div className="lg:w-1/2">
           <h3 className="text-2xl font-display font-bold text-brand-primary mb-4">Ontspannen, maar gefocust op resultaat.</h3>
-          <p className="text-brand-primary/50 leading-relaxed font-light mb-6">
+          <p className="text-brand-primary/75 leading-relaxed font-light mb-6">
             We nemen het werk serieus, maar onszelf niet. Dat is precies waarom onze klanten met ons doorwerken: het voelt niet als een zware last, maar als een versterking van je eigen team.
           </p>
           <div className="flex items-center gap-4">
             <img src="/images/team-1-avatar.webp" className="w-12 h-12 rounded-full object-cover object-[center_25%] border border-brand-soft" alt="Stefan" loading="lazy" />
             <div>
               <p className="font-display font-bold text-brand-primary text-sm">Stefan Kelderman</p>
-              <p className="text-xs text-brand-primary/40">Oprichter Optimaal Groeien</p>
+              <p className="text-xs text-brand-primary/75">Oprichter Optimaal Groeien</p>
             </div>
           </div>
         </div>
@@ -642,7 +642,7 @@ export const WatAnderenZeggenSection = () => (
               </div>
               <div>
                 <div className="font-display font-bold text-brand-primary text-sm mb-0.5">{r.n}</div>
-                <div className="text-[10px] uppercase tracking-widest text-brand-primary/30 font-bold">{r.f}</div>
+                <div className="text-[10px] uppercase tracking-widest text-brand-primary/75 font-bold">{r.f}</div>
               </div>
             </div>
           </div>
@@ -661,7 +661,7 @@ export const LatenWePratenSection = () => (
           <h2 className="text-3xl lg:text-5xl font-display font-bold mb-6 leading-tight tracking-tight text-white">
             Zullen we even <br />kennismaken?
           </h2>
-          <p className="text-lg text-white/50 mb-10 leading-relaxed font-light">
+          <p className="text-lg text-white/72 mb-10 leading-relaxed font-light">
             We kunnen uren praten over wat we doen, maar het is veel fijner om te zien wat het voor jouw bedrijf betekent. Plan een gratis gesprekje van 45 minuten.
           </p>
           <a
@@ -672,7 +672,7 @@ export const LatenWePratenSection = () => (
           >
             Plan je analyse <ArrowRight size={20} />
           </a>
-          <div className="mt-8 text-[10px] font-bold uppercase tracking-[0.3em] text-white/20">
+          <div className="mt-8 text-[10px] font-bold uppercase tracking-[0.3em] text-white/55">
             Stefan staat zelf voor je klaar — Max 4 per maand
           </div>
         </div>
@@ -700,18 +700,18 @@ export const DeLeadmachineSection = () => (
         Een systeem dat klanten zoekt, <br />
         <span className="text-brand-lime">terwijl jij bouwt.</span>
       </h1>
-      <p className="text-lg text-white/50 mb-14 max-w-2xl mx-auto leading-relaxed font-light">
+      <p className="text-lg text-white/72 mb-14 max-w-2xl mx-auto leading-relaxed font-light">
         We bouwen een complete machine voor je: advertenties, een mooie pagina, slimme berichtjes en automatisering. Alles staat klaar om mensen enthousiast te maken over jouw werk.
       </p>
 
       <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mb-16 bg-white/5 p-10 rounded-[32px] border border-white/10 backdrop-blur-md">
         <div className="text-left">
-          <div className="text-[10px] uppercase tracking-[0.2em] text-white/20 font-bold mb-2">Instappen</div>
+          <div className="text-[10px] uppercase tracking-[0.2em] text-white/55 font-bold mb-2">Instappen</div>
           <div className="text-3xl font-display font-bold text-white">Vanaf € 1.450</div>
         </div>
         <div className="w-px h-10 bg-white/10 hidden sm:block" />
         <div className="text-left">
-          <div className="text-[10px] uppercase tracking-[0.2em] text-white/20 font-bold mb-2">Maandelijks beheer</div>
+          <div className="text-[10px] uppercase tracking-[0.2em] text-white/55 font-bold mb-2">Maandelijks beheer</div>
           <div className="text-3xl font-display font-bold text-brand-accent">Vanaf € 2.450</div>
         </div>
       </div>
@@ -731,7 +731,7 @@ export const SpeciaalVoorJouSection = () => (
       <div className="text-center mb-16 max-w-3xl mx-auto">
         <div className="label-pill mx-auto">Voor wie doen we dit?</div>
         <h2 className="text-4xl lg:text-5xl font-display font-bold text-brand-primary mb-6 tracking-tight">Is dit iets voor jou?</h2>
-        <p className="text-lg text-brand-primary/50 font-light leading-relaxed">Onze leadmachine werkt het allerbest voor ondernemers die klaar zijn om te groeien, maar simpelweg de tijd of kennis niet hebben om de marketing zelf te doen.</p>
+        <p className="text-lg text-brand-primary/75 font-light leading-relaxed">Onze leadmachine werkt het allerbest voor ondernemers die klaar zijn om te groeien, maar simpelweg de tijd of kennis niet hebben om de marketing zelf te doen.</p>
       </div>
 
       <div className="grid md:grid-cols-2 gap-5">
@@ -746,7 +746,7 @@ export const SpeciaalVoorJouSection = () => (
                <UserCheck size={26} />
              </div>
              <h3 className="text-xl font-display font-bold text-brand-primary mb-4 leading-tight">{item.t}</h3>
-             <p className="text-brand-primary/50 leading-relaxed font-light text-sm">{item.d}</p>
+             <p className="text-brand-primary/75 leading-relaxed font-light text-sm">{item.d}</p>
           </div>
         ))}
       </div>
@@ -778,7 +778,7 @@ export const HoeHetWerktLeadsSection = () => (
               </div>
               <div>
                 <h3 className="text-lg font-display font-bold text-brand-primary mb-2">{s.t}</h3>
-                <p className="text-brand-primary/50 font-light leading-relaxed text-sm">{s.d}</p>
+                <p className="text-brand-primary/75 font-light leading-relaxed text-sm">{s.d}</p>
               </div>
             </div>
           ))}
@@ -837,7 +837,7 @@ export const SamenGroeiRealiserenSection = () => (
             Wij regelen de leads. <br />
             <span className="text-brand-lime">Samen sluiten we de deals.</span>
           </h2>
-          <p className="text-lg text-white/40 mb-14 leading-relaxed font-light max-w-xl">
+          <p className="text-lg text-white/65 mb-14 leading-relaxed font-light max-w-xl">
              We kunnen ook helpen met de verkoop zelf. Zo heb je een volledig team achter je staan, zonder dat je mensen op de loonlijst hoeft te zetten.
           </p>
 
@@ -853,7 +853,7 @@ export const SamenGroeiRealiserenSection = () => (
                 </div>
                 <div>
                   <h3 className="text-lg font-display font-bold text-white mb-1">{s.t}</h3>
-                  <p className="text-sm text-white/30 leading-relaxed font-light">{s.d}</p>
+                  <p className="text-sm text-white/60 leading-relaxed font-light">{s.d}</p>
                 </div>
               </div>
             ))}
@@ -871,7 +871,7 @@ export const SamenGroeiRealiserenSection = () => (
         <div className="lg:w-2/5 flex flex-col gap-6 w-full">
           <div className="glass-card !bg-white/5 !border-white/10 p-10 backdrop-blur-xl rounded-[28px]">
              <h3 className="text-xl font-display font-bold text-white mb-4">Waarom dit werkt</h3>
-             <p className="text-white/40 leading-relaxed font-light text-sm">
+             <p className="text-white/65 leading-relaxed font-light text-sm">
                Veel bedrijven hebben wel leads, maar geen tijd voor de opvolging. Of ze hebben tijd, maar geen leads. Wij brengen die twee werelden samen voor een resultaat dat staat.
              </p>
           </div>
@@ -879,15 +879,15 @@ export const SamenGroeiRealiserenSection = () => (
           <div className="bg-white/5 border border-white/10 p-8 rounded-[28px]">
              <div className="grid grid-cols-2 gap-y-6">
                 <div className="text-[10px] uppercase tracking-widest text-brand-lime font-bold pb-3">Zonder systeem</div>
-                <div className="text-[10px] uppercase tracking-widest text-white/40 font-bold pb-3 text-right">Met ons systeem</div>
+                <div className="text-[10px] uppercase tracking-widest text-white/65 font-bold pb-3 text-right">Met ons systeem</div>
 
-                <div className="text-xs text-white/30 font-medium">Hopen op een aanvraag</div>
+                <div className="text-xs text-white/60 font-medium">Hopen op een aanvraag</div>
                 <div className="text-xs text-white font-bold text-right">Zekerheid van instroom</div>
 
-                <div className="text-xs text-white/30 font-medium">Marketing kost alleen geld</div>
+                <div className="text-xs text-white/60 font-medium">Marketing kost alleen geld</div>
                 <div className="text-xs text-white font-bold text-right">Het levert echt geld op</div>
 
-                <div className="text-xs text-white/30 font-medium">Geen idee hoe het gaat</div>
+                <div className="text-xs text-white/60 font-medium">Geen idee hoe het gaat</div>
                 <div className="text-xs text-white font-bold text-right">Duidelijk inzicht</div>
              </div>
           </div>
@@ -919,7 +919,7 @@ export const DuidelijkheidVoorafSection = () => (
                 <Plus size={24} />
               </span>
             </summary>
-            <div className="p-8 pt-0 text-brand-primary/50 leading-relaxed font-light">
+            <div className="p-8 pt-0 text-brand-primary/75 leading-relaxed font-light">
               {item.a}
             </div>
           </details>
@@ -936,7 +936,7 @@ export const DirectBesprekenSection = () => (
       <h2 className="text-4xl lg:text-5xl font-display font-bold mb-8 leading-tight tracking-tight">
         Zullen we <br />gewoon beginnen?
       </h2>
-      <p className="text-lg text-white/50 mb-14 max-w-xl mx-auto font-light leading-relaxed">
+      <p className="text-lg text-white/72 mb-14 max-w-xl mx-auto font-light leading-relaxed">
         Gun jezelf de rust en de groei die je verdient. We helpen je graag om de eerste stap te zetten.
       </p>
       <a

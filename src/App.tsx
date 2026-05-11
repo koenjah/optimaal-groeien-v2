@@ -37,13 +37,13 @@ function App() {
       <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-40 bg-brand-primary/95 backdrop-blur-md border border-white/10 p-2 rounded-[24px] flex gap-1 shadow-2xl">
         <button 
           onClick={() => setActivePage('partner')}
-          className={`px-8 py-3 rounded-full text-[11px] font-display font-bold uppercase tracking-widest transition-all ${activePage === 'partner' ? 'bg-brand-accent text-white shadow-lg' : 'text-white/50 hover:text-white hover:bg-white/5'}`}
+          className={`px-8 py-3 rounded-full text-[11px] font-display font-bold uppercase tracking-widest transition-all ${activePage === 'partner' ? 'bg-brand-accent text-white shadow-lg' : 'text-white/72 hover:text-white hover:bg-white/5'}`}
         >
           Voor Bedrijven
         </button>
         <button 
           onClick={() => setActivePage('funnel')}
-          className={`px-8 py-3 rounded-full text-[11px] font-display font-bold uppercase tracking-widest transition-all ${activePage === 'funnel' ? 'bg-brand-accent text-white shadow-lg' : 'text-white/50 hover:text-white hover:bg-white/5'}`}
+          className={`px-8 py-3 rounded-full text-[11px] font-display font-bold uppercase tracking-widest transition-all ${activePage === 'funnel' ? 'bg-brand-accent text-white shadow-lg' : 'text-white/72 hover:text-white hover:bg-white/5'}`}
         >
           Leadmachine
         </button>
