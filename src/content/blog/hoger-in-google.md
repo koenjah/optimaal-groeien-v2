@@ -7,241 +7,181 @@ author: "Stefan Kelderman"
 category: "Marketing"
 tags: ['seo', 'google', 'vindbaarheid', 'b2b']
 draft: false
-pullQuote: "Pagina twee van Google bestaat niet. Niemand scrollt zo ver."
+pullQuote: "Je staat op positie 1 voor je eigen bedrijfsnaam. Gefeliciteerd — je concurreert nu alleen nog met jezelf."
 statHighlight:
-  value: "75%"
-  label: "van alle zoekopdrachten eindigt op de eerste pagina van Google"
+  value: "68%"
+  label: "van B2B-kopers doet uitgebreid online onderzoek vóór het eerste contactmoment"
 ---
-Hoger in Google komen is geen toverkunst. Het is een kwestie van de juiste stappen volgen en consequent uitvoeren. In dit artikel lees je welke 10 stappen je als B2B bedrijf kunt nemen om beter vindbaar te worden. Geen theorie, wel een praktisch stappenplan.
 
-## Waarom hoger in Google cruciaal is voor B2B
+Misschien heb je het al geprobeerd. Een SEO-bureau ingehuurd, een paar maanden gewacht, facturen betaald. En daarna? Niets. Of bijna niets.
 
-Stel: een inkoper zoekt naar "machinebouw onderhoud Gelderland." Jouw concurrent staat bovenaan. Jij staat op pagina twee. Die klant bestaat voor jou simpelweg niet.
+Of je staat wél op positie 1 in Google — maar dan voor je eigen bedrijfsnaam. Prachtig. Maar niemand die jou nog niet kent zoekt op "Installatiebedrijf Van Dijk." Ze zoeken op "cv-ketel installateur Utrecht" of "onderhoud klimaatinstallaties Midden-Nederland."
 
-Pagina twee van Google bestaat niet. Niemand scrollt zo ver.
+Dat is het verschil tussen ijdele posities en omzetposities.
 
-**75% van alle zoekopdrachten eindigt op de eerste pagina.** Als je daar niet staat, mis je het grootste deel van je potentiële klanten. B2B-kopers doen uitgebreid research. Ze vergelijken leveranciers, lezen technische content en willen weten wie ze kunnen vertrouwen.
+## Wat telt écht: ijdele posities vs. posities die geld opleveren
 
-Nog iets opvallends: organische zoekresultaten wekken meer vertrouwen dan advertenties. Mensen weten dat bedrijven voor advertenties betalen. Als Google jou organisch bovenaan zet, is dat een keurmerk. Voor B2B, waar vertrouwen alles is, maakt dat een wereld van verschil.
+Stel: je bent technisch dienstverlener in de procesindustrie. Je staat bovenaan voor je eigen naam. Maar je concurrent staat bovenaan voor "preventief onderhoud chemische industrie" en "storingsonderhoud procesindustrie Rijnmond."
+
+Wie krijgt de aanvraag van de inkoper die om 8:47 's ochtends Google opent?
+
+Niet jij.
+
+Dat is geen kwestie van pech. Het is een kwestie van welke termen je bewust aanpakt. De meeste B2B-bedrijven investeren in zichtbaarheid voor wie hen al kent. SEO die werkt, richt zich op wie jou nog niet kent maar wél al zoekt.
 
 ## Hoe werkt Google eigenlijk?
 
 Google doet drie dingen:
 
-- **Crawlen:** Kleine programmaatjes speuren het internet af en volgen links.
-- **Indexeren:** Gevonden pagina's worden opgeslagen in een enorme database. Alleen geïndexeerde pagina's verschijnen in zoekresultaten.
-- **Ranken:** Google bepaalt welke pagina het beste antwoord geeft op een zoekvraag.
+- **Crawlen:** Programmaatjes volgen links en scannen pagina's.
+- **Indexeren:** Gevonden pagina's worden opgeslagen in een enorme database.
+- **Ranken:** Google kiest welke pagina het beste antwoord geeft op een zoekvraag.
 
-Twee factoren bepalen je positie: **relevantie** (past jouw pagina bij de zoekvraag?) en **autoriteit** (vertrouwt Google jou als bron?). Beide kun je beïnvloeden. Dat is precies waar de volgende 10 stappen over gaan.
+Twee factoren bepalen je positie: **relevantie** (past jouw pagina bij de zoekvraag?) en **autoriteit** (vertrouwt Google jou als bron?). Beide kun je beïnvloeden. Dat is precies waar de volgende stappen over gaan.
+
+## Hoe Brinkman Industrial Services van pagina 3 naar positie 1 ging
+
+Brinkman Industrial Services — een fictief technisch dienstverlener — deed het drie jaar lang op de traditionele manier. Een brochurewebsite, een pagina "Over ons", en een contactformulier.
+
+Ze stonden niet op Google. Of eigenlijk: op pagina 3. Dat is hetzelfde.
+
+Wat ze veranderden, was concreet en herhaalbaar. Laat me het stap voor stap uitleggen.
 
 ## 10 concrete stappen om hoger in Google te komen
 
 ### Stap 1: Onderzoek welke zoektermen je doelgroep gebruikt
 
-Je kunt niet hoger in Google komen als je niet weet waarnaar mensen zoeken. Begin met deze vragen:
+Brinkman begon met één simpele vraag: wat typt onze klant als hij ons nodig heeft maar ons nog niet kent?
 
-- Welke problemen heeft mijn doelgroep?
-- Welke termen gebruiken zij om die problemen op te lossen?
-- Wat vragen ze aan Google?
+Dat werden termen als "inspectiebedrijf lekkagedetectie industrie" en "onderhoud technische installaties Rijnmond." Niet "Brinkman." Niet "onderhoud." Specifiek en intentiegericht.
 
-Gebruik gratis tools zoals Google Keyword Planner of Ubersuggest. Zoek naar termen met een redelijk zoekvolume en niet te veel concurrentie.
-
-Voor B2B geldt: wees specifiek. "Machinebouw onderhoud Gelderland" werkt beter dan "onderhoud machines." Hoe specifieker de term, hoe kleiner de concurrentie en hoe groter de kans dat de zoeker echt bij jou past.
+Gebruik gratis tools zoals Google Keyword Planner of Ubersuggest. Zoek naar termen met redelijk volume en weinig concurrentie. Voor B2B geldt: hoe specifieker, hoe kleiner de concurrentie — en hoe groter de kans dat de zoeker precies bij jou past.
 
 ### Stap 2: Optimaliseer je paginatitels en meta descriptions
 
-Dit is wat mensen zien in Google, nog voor ze klikken. Jouw eerste indruk.
+Dit is wat mensen zien vóórdat ze klikken. Je eerste indruk, in twee regels.
 
-Een goede paginatitel:
-
-- Bevat je belangrijkste zoekterm
-- Is maximaal 60 tekens lang
-- Vertelt direct waar de pagina over gaat
-
-Een goede meta description:
-
-- Is maximaal 160 tekens
-- Nodigt uit om te klikken
-- Bevat een duidelijke aansporing zoals "Ontdek hoe" of "Lees meer"
-
-Jouw potentiële klanten kiezen op basis van die twee regels. Een slechte titel betekent dat ze doorklikken naar de concurrent.
+Een goede paginatitel bevat de zoekterm, is maximaal 60 tekens en vertelt direct waar de pagina over gaat. Een goede meta description nodigt uit, is maximaal 160 tekens en heeft een duidelijke aansporing. Brinkman herschreef elk van hun dienstenpagina's. Klikratio omhoog, gemiddelde positie omlaag.
 
 Wil je weten hoe je de technische kant aanpakt? Lees ons artikel over [website-optimalisatie](/blog/website-optimalisatie).
 
 ### Stap 3: Schrijf betere content dan je concurrenten
 
-Google wil de beste content tonen. Als jouw pagina waardevoller is dan die van je concurrent, kom je hoger. Zo eenvoudig is het.
+Google wil de beste content tonen. Niet de langste. Niet de mooiste. De meest nuttige.
 
-Hoe schrijf je betere content?
+Brinkman schreef een artikel van 1.200 woorden over "lekkagedetectie in industriële leidingen." Geen marketingproza. Concrete stappen, eigen cases, specifieke normen. Hun concurrent had een pagina van 300 woorden die nergens op sloeg.
 
-- Behandel het onderwerp volledig. Geen 300 woorden, maar diepgaande teksten die echt antwoord geven.
-- Gebruik praktijkvoorbeelden. Een B2B-koper die zoekt naar "machinebouw onderhoud Gelderland" wil weten hoe jij dat aanpakt, niet wat het woordenboek erover zegt.
-- Maak content scanbaar met kopjes, bullet points en korte alinea's.
+Wie denk je dat Google kiest?
 
-Analyseer de top drie in Google voor jouw zoekterm. Wat doen zij goed? Waar missen ze iets? Schrijf vervolgens iets dat op alle punten beter is.
+Behandel je onderwerp volledig. Gebruik praktijkvoorbeelden. Maak tekst scanbaar met kopjes en korte alinea's. Analyseer de top drie in Google voor jouw term — en schrijf iets dat op elk punt beter is.
 
 ### Stap 4: Verbeter de laadsnelheid van je website
 
-Een trage website wordt lager geplaatst. En bezoekers haken af. Een pagina die langer dan drie seconden laadt, verliest meer dan de helft van de bezoekers.
+Een trage website wordt lager geplaatst. En bezoekers haken af. Een pagina die langer dan drie seconden laadt, verliest meer dan de helft van haar bezoekers.
 
-Wat kun je doen?
-
-- Comprimeer afbeeldingen. Tools zoals TinyPNG helpen direct.
-- Gebruik caching zodat terugkerende bezoekers sneller laden.
-- Kies een goede hostingprovider. Goedkope shared hosting kost je bezoekers.
-- Verwijder overbodige scripts en plugins.
-
-Test je laadsnelheid met Google PageSpeed Insights. Je krijgt een score en concrete verbeterpunten.
+Comprimeer afbeeldingen via TinyPNG. Gebruik caching. Kies een goede hostingprovider. Verwijder overbodige scripts. Test je score via Google PageSpeed Insights — je krijgt direct concrete verbeterpunten.
 
 ### Stap 5: Zorg voor een mobielvriendelijke website
 
-Meer dan de helft van alle zoekopdrachten gebeurt via mobiel. Google kijkt eerst naar de mobiele versie van je website. Is die slecht? Dan kom je lager.
+Meer dan de helft van alle zoekopdrachten is mobiel. Google kijkt eerst naar de mobiele versie van je site.
 
-Controleer dit met de Mobile-Friendly Test van Google. Zorg dat:
+Controleer dit via de Mobile-Friendly Test van Google. Tekst moet leesbaar zijn zonder inzoomen. Knoppen groot genoeg om op te tikken. Menu's functioneel op touchscreen.
 
-- Tekst leesbaar is zonder in te zoomen
-- Knoppen groot genoeg zijn om te tikken
-- Afbeeldingen meeschalen
-- Menu's goed werken op touchscreen
-
-Sommige B2B-bedrijven denken nog: "Onze klanten zoeken vanaf de desktop." Maar zelfs beslissers scrollen op hun telefoon. De zoektocht begint mobiel, ook als de offerte-aanvraag via desktop binnenkomt.
+Sommige B2B-bedrijven denken: "onze klanten zoeken vanaf de desktop." Maar zelfs beslissers scrollen op hun telefoon. De zoektocht begint mobiel — ook als de offerte-aanvraag later via desktop binnenkomt.
 
 ### Stap 6: Bouw interne links tussen je pagina's
 
-Interne links verbinden pagina's op je eigen website. Ze helpen bezoekers om meer te ontdekken. En ze helpen Google begrijpen hoe jouw website in elkaar zit.
+Interne links verbinden pagina's op je eigen site. Ze helpen bezoekers meer te ontdekken. En ze helpen Google begrijpen hoe jouw website in elkaar zit.
 
-Praktische tips:
+Link vanuit blogartikelen naar dienstenpagina's. Verwijs in cases naar gerelateerde services. Gebruik beschrijvende linktekst — niet "klik hier," maar "meer over preventief onderhoud voor de procesindustrie." Zorg dat elke belangrijke pagina binnen drie klikken bereikbaar is.
 
-- Link vanuit blogartikelen naar relevante dienstenpagina's.
-- Verwijs in productpagina's naar gerelateerde cases of blogposts.
-- Gebruik beschrijvende linktekst. Niet "klik hier," maar "meer over onderhoud voor machinebouwers."
-- Zorg dat elke belangrijke pagina binnen drie klikken vanaf de homepage bereikbaar is.
-
-Interne links zijn een ondergeschoven kindje in SEO. Maar ze verdelen autoriteit over je website en houden bezoekers langer op je site. Beide signalen waardeert Google positief.
+Interne links zijn het meest onderschatte onderdeel van SEO. Ze verdelen autoriteit over je hele site en houden bezoekers langer. Beide waardeert Google positief.
 
 ### Stap 7: Verzamel reviews en versterk je lokale SEO
 
-Voor B2B-bedrijven met een regionale focus is lokale SEO goud waard. Wie zoekt naar "machinebouw onderhoud Gelderland," wil resultaten in die regio zien.
+Brinkman werkte in de Rijnmond-regio. Dat is een voordeel — als je het benut.
 
-De basis van lokale SEO:
-
-- Maak een Google Bedrijfspagina aan en vul die volledig in.
-- Vraag tevreden klanten om een review op Google.
-- Zorg dat naam, adres en telefoonnummer consistent staan op je website én externe platforms.
-- Gebruik lokale zoektermen in je content.
+Maak een Google Bedrijfspagina aan en vul die volledig in. Vraag tevreden klanten om een review. Gebruik lokale zoektermen in je content: niet alleen "inspectiebedrijf," maar "inspectiebedrijf Rotterdam-Rijnmond." Maak landingspagina's voor elke regio waar je actief bent.
 
 Meer weten? Onze [lokale SEO-specialist](/blog/lokale-seo-specialist) legt uit hoe je regionaal domineert.
 
-Reviews zijn trouwens meer dan een SEO-signaal. Een B2B-koper die ziet dat anderen positief zijn over jouw service, neemt sneller contact op.
-
 ### Stap 8: Publiceer content die mensen willen delen
 
-Content marketing en SEO gaan hand in hand. Waardevolle content trekt bezoekers. En het verdient backlinks, bouwt autoriteit op en vergroot je naamsbekendheid.
+Content marketing en SEO versterken elkaar. Waardevolle content trekt bezoekers en verdient backlinks.
 
-Welke content werkt goed voor B2B?
+Wat werkt voor B2B? Whitepapers met eigen data. Cases die concreet laten zien hoe je een klant hebt geholpen. Technische hoe-guides die aantonen dat je de expert bent. Video's voor wie niet leest.
 
-- **Whitepapers en e-books:** Diepgaande content die je aanbiedt in ruil voor contactgegevens.
-- **Cases:** Laat zien hoe je een klant hebt geholpen. Bewijs dat je kunt wat je belooft.
-- **Hoe-guides en tutorials:** Laat zien dat je de expert bent in jouw vakgebied.
-- **Video's en webinars:** Niet iedereen leest. Video is een uitstekend alternatief.
-
-Maak content zo waardevol dat mensen hem willen delen. Dat levert natuurlijke backlinks op en brengt nieuwe bezoekers. Win-win.
+Brinkman publiceerde een gratis inspectieprotocol als downloadbaar PDF. Dat protocol werd gedeeld in drie vakbladen — en leverde twintig backlinks op zonder actieve linkbuilding.
 
 ### Stap 9: Verdien backlinks van betrouwbare websites
 
-Backlinks zijn links van andere websites naar die van jou. Google ziet dit als een aanbeveling. Hoe meer betrouwbare websites naar jou linken, hoe hoger je autoriteit. En hoe hoger je autoriteit, hoe beter je rankt.
+Backlinks zijn aanbevelingen. Hoe meer betrouwbare websites naar jou linken, hoe hoger je autoriteit. En hoe hoger je autoriteit, hoe beter je rankt.
 
-Maar: **kwaliteit gaat boven kwantiteit.** Een link van een gerenommeerd vakblad in jouw branche is honderd keer meer waard dan tien linkjes van obscure blogs.
-
-Hoe krijg je backlinks?
-
-- Publiceer uniek onderzoek of data die niemand anders heeft.
-- Schrijf gastartikelen voor vakmedia in jouw branche.
-- Werk samen met partners en leveranciers en link naar elkaar.
-- Creëer tools of calculators die anderen willen delen.
+Kwaliteit gaat boven kwantiteit. Een link van een gerenommeerd vakblad in jouw branche is honderd keer meer waard dan tien linkjes van obscure blogs. Publiceer uniek onderzoek. Schrijf gastartikelen voor vakmedia. Werk samen met partners en link naar elkaar.
 
 Wil je alles weten over linkbuilding? Lees ons uitgebreide artikel over [alles wat je moet weten over linkbuilding](/blog/alles-wat-je-moet-weten-over-linkbuilding).
 
 ### Stap 10: Analyseer je resultaten en blijf verbeteren
 
-SEO is geen eenmalige actie. Google past zijn algoritme regelmatig aan. Wat vandaag werkt, kan morgen anders zijn.
+SEO is geen eenmalige actie. Google past zijn algoritme regelmatig aan.
 
-Zet deze gewoontes op:
+Controleer maandelijks je posities. Kijk in Google Search Console welke pagina's verkeer trekken. Analyseer via Google Analytics 4 welke pagina's converteren. Update bestaande content — een bijgewerkt artikel kan een directe rankingboost geven.
 
-- Controleer maandelijks je posities voor belangrijke zoektermen.
-- Kijk in Google Search Console welke pagina's verkeer trekken en welke niet.
-- Analyseer je verkeer met Google Analytics 4. Welke pagina's converteren het best?
-- Update bestaande content. Een blogpost die je in 2026 bijwerkt, kan een rankingboost geven.
-- Test en leer. SEO is voor een deel ook uitproberen.
+Brinkman deed dit consequent. Na negen maanden stond hun artikel over lekkagedetectie op positie 1. Niet door trucjes. Door diepgang, consistentie en geduld.
 
 ## E-E-A-T: het meest bepalende signaal in 2026
 
-In 2026 is er één ding dat Google zwaarder weegt dan alle technische trucs: **E-E-A-T**. Dat staat voor Expertise, Ervaring, Autoriteit en Betrouwbaarheid.
+In 2026 is er één ding dat Google zwaarder weegt dan alle technische trucjes: **E-E-A-T** — Expertise, Ervaring, Autoriteit, Betrouwbaarheid.
 
-Wat betekent dit concreet? Google wil weten of jij echt verstand hebt van wat je schrijft. En of je dat verstand ook hebt opgedaan in de praktijk.
-
-Stel: je schrijft over "machinebouw onderhoud Gelderland." Dan wil Google zien dat jij daadwerkelijk onderhoudsprojecten hebt uitgevoerd. Niet dat je Wikipedia hebt nageschreven.
+Google wil weten of je echt verstand hebt van wat je schrijft. En of je dat verstand ook in de praktijk hebt opgedaan.
 
 Hoe bouw je E-E-A-T op?
 
-- **Schrijf vanuit echte ervaring.** Gebruik concrete cijfers, projecten en resultaten.
-- **Vermeld de auteur.** Een naam, foto en korte bio maken content geloofwaardiger.
-- **Haal externe validatie.** Reviews, persberichten, backlinks van vakbladen — dit zijn signalen van autoriteit.
-- **Wees consistent.** Eén goed artikel is mooi. Twintig goede artikelen over jouw vakgebied bouwen echte autoriteit.
+- Schrijf vanuit echte ervaring. Gebruik concrete cijfers, projecten en resultaten.
+- Vermeld de auteur met naam, foto en korte bio.
+- Haal externe validatie: reviews, persberichten, backlinks van vakbladen.
+- Wees consistent. Twintig goede artikelen over jouw vakgebied bouwen echte autoriteit.
 
-Voor B2B-bedrijven is E-E-A-T eigenlijk het verlengde van wat je al doet: betrouwbaar zijn en expertise tonen. Alleen moet je dat nu ook zichtbaar maken op je website.
-
-## Lokale SEO: hoger in Google in jouw regio
-
-Voor veel B2B-bedrijven is de regio belangrijk. Dan wil je gevonden worden door mensen in jouw omgeving.
-
-Optimaliseer je Google Bedrijfspagina als eerste stap. Zorg dat bedrijfsnaam, categorie, beschrijving, openingstijden en foto's volledig en actueel zijn. Post regelmatig updates en reageer op reviews.
-
-Gebruik lokale zoektermen in je content. Schrijf niet alleen over "installatiebedrijf," maar over "installatiebedrijf Raalte" of "machinebouw onderhoud Gelderland." Maak landingspagina's voor elke regio waarin je actief bent.
-
-Reviews zijn essentieel. Vraag na een succesvol project of de klant een korte review wil plaatsen. Hoe meer positieve reviews, hoe beter je in de lokale zoekresultaten staat.
+Voor B2B is E-E-A-T eigenlijk het verlengde van wat je al doet: betrouwbaar zijn en expertise tonen. Alleen moet je dat nu ook zichtbaar maken op je website.
 
 ## Hoe lang duurt het om hoger in Google te komen?
 
 Het eerlijke antwoord: het hangt ervan af.
 
-Voor nieuwe websites duurt het vaak drie tot zes maanden voor je echt resultaat ziet. Google heeft tijd nodig om je site te ontdekken, te vertrouwen en te ranken. Voor bestaande websites kan het sneller gaan.
+Voor nieuwe websites duurt het vaak drie tot zes maanden voor je echt resultaat ziet. Voor bestaande websites kan het sneller gaan.
 
-Er zijn snelle wins en langetermijnresultaten:
+Er zijn snelle wins: meta descriptions bijwerken, laadsnelheid verbeteren, interne links aanpassen. En er zijn langetermijnresultaten: backlinks opbouwen, autoriteit vergroten, nieuwe content laten ranken.
 
-- **Snel resultaat:** Meta descriptions bijwerken, laadsnelheid verbeteren, interne links optimaliseren.
-- **Lange termijn:** Backlinks opbouwen, autoriteit vergroten, nieuwe content laten ranken.
-
-Het belangrijkste advies: wees geduldig maar consistent. Bedrijven die maandenlang doorzetten, worden beloond met stabiele, gratis bezoekersstroom.
+Wees geduldig maar consistent. Bedrijven die maandenlang doorzetten, worden beloond met stabiele, gratis bezoekersstroom.
 
 ## Veelgestelde vragen
 
 ### Moet ik technische kennis hebben om hoger in Google te komen?
 
-Nee. Veel stappen kun je zelf uitvoeren. Zoektermenonderzoek, content schrijven en reviews verzamelen doe je zonder technische kennis. Voor laadsnelheid en serverconfiguratie schakel je een expert in.
+Nee. Zoektermenonderzoek, content schrijven en reviews verzamelen doe je zonder technische kennis. Voor laadsnelheid en serverconfiguratie schakel je een expert in.
 
 ### Is adverteren in Google noodzakelijk als ik aan SEO doe?
 
-Nee. SEO en Google Ads vullen elkaar aan, maar SEO alleen levert al veel resultaat op. Het voordeel: gratis verkeer op de lange termijn. Ads stoppen zodra je stopt met betalen.
+Nee. SEO en Google Ads vullen elkaar aan, maar SEO alleen levert al veel resultaat op. Ads stoppen zodra je stopt met betalen. Organisch verkeer blijft.
 
 ### Hoe vaak moet ik nieuwe content publiceren?
 
-Kwaliteit gaat boven kwantiteit. Eén uitstekend artikel per maand is beter dan vier middelmatige. Kies een tempo dat je volhoudt en houd dat aan.
+Kwaliteit gaat boven kwantiteit. Eén uitstekend artikel per maand is beter dan vier middelmatige. Kies een tempo dat je volhoudt.
 
 ### Wat zijn de grootste fouten die B2B-bedrijven maken met SEO?
 
-Te algemene zoektermen gebruiken, te weinig publiceren en niet meten wat er gebeurt. Focus, consistentie en meten zijn de oplossingen.
+Te algemene zoektermen gebruiken, te weinig publiceren en niet meten wat er gebeurt. En focussen op ijdele posities terwijl de omzetposities braak liggen.
 
 ### Kan ik SEO zelf doen of moet ik het uitbesteden?
 
 Dat hangt af van je tijd, kennis en ambities. Veel B2B-bedrijven starten zelf en schakelen later hulp in voor technische aspecten en strategie. Een goede middenweg is [SEO-ondersteuning voor B2B](/seo-ondersteuning), waarbij je samenwerkt met specialisten zonder het volledig uit handen te geven.
 
-## Conclusie: begin vandaag nog
+## Begin bij de juiste vraag
 
-Hoger in Google komen is geen geheim. Het is een combinatie van de juiste techniek, waardevolle content, E-E-A-T opbouwen en geduld.
+Niet: "hoe kom ik hoger in Google?" Maar: "voor welke zoektermen moet ik gevonden worden?"
 
-Je hoeft niet alles tegelijk te doen. Begin bij stap 1: onderzoek je zoektermen. Ga dan door naar stap 2 en 3. Bouw het op, stap voor stap.
+Brinkman Industrial Services stond op pagina 3. Ze kwamen op positie 1 — niet door meer te betalen, maar door preciezer te zijn. De juiste termen, diepgaande content, en een website die Google kon vertrouwen.
 
-Voor B2B-bedrijven is SEO een van de meest rendabele marketingkanalen. Je bereikt mensen op het moment dat ze actief naar jouw oplossing zoeken. Of dat nu "ERP software voor maakbedrijven" is of "machinebouw onderhoud Gelderland."
+Jij staat op positie 1 voor je eigen bedrijfsnaam. Gefeliciteerd — je concurreert nu alleen nog met jezelf.
 
-**Laat een gratis SEO-scan uitvoeren en ontdek waar jouw kansen liggen.**
+**Laat een gratis SEO-scan uitvoeren en ontdek welke omzetposities jij nu laat liggen.**

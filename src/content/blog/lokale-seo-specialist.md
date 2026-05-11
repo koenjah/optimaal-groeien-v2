@@ -7,80 +7,76 @@ author: "Stefan Kelderman"
 category: "Marketing"
 tags: ['lokale-seo', 'seo', 'b2b', 'regio']
 draft: false
-pullQuote: "De beste klanten zitten soms op 15 kilometer afstand. Ze vinden je alleen niet."
+pullQuote: "Jouw beste klant zit op twaalf kilometer afstand. Hij vindt je concurrent, niet jou."
 statHighlight:
-  value: "46%"
-  label: "van alle Google-zoekopdrachten heeft een lokale intentie"
+  value: "76%"
+  label: "van de mensen die lokaal zoeken, bezoekt een bedrijf binnen 24 uur"
 ---
-**Lokale SEO helpt B2B-bedrijven om gevonden te worden door klanten in hun eigen regio.** Je optimaliseert je online aanwezigheid zodat je bovenaan staat op het moment dat iemand in jouw buurt zoekt. Voor een installatiebedrijf in Zwolle is dit het verschil tussen een volle orderkalender en onbekendheid.
+**Stel: een facilitair manager in Utrecht zoekt "elektrotechnisch bedrijf voor bedrijfspand".** Hij scrolt door de resultaten. Hij ziet drie bedrijven in het local pack. Jij staat er niet bij. Hij kiest er eentje. Jij verliest een opdracht van €12.000 — zonder het ooit te weten.
 
-46% van alle Google-zoekopdrachten heeft een lokale intentie. Dat zijn potentiële klanten die nú zoeken naar wat jij aanbiedt. Ze vinden alleen je concurrent.
-
----
-
-## Wat is lokale SEO precies?
-
-Lokale SEO is je online aanwezigheid optimaliseren voor een specifieke regio. Denk aan zoekopdrachten als "installatiebedrijf Zwolle" of "cv-ketel installateur Overijssel".
-
-Google kijkt waar de zoeker zich bevindt. Het toont dan resultaten die dichtbij zijn. Dat zie je terug in het **local pack**: het blok met drie bedrijven bovenaan, inclusief kaartje. Sta je daarin, dan krijg je meer aandacht dan de vijfde plek in de gewone zoekresultaten.
-
-Het grote verschil met reguliere SEO? Nabijheid. Je concurreert niet met heel Nederland. Alleen met bedrijven in jouw gemeente of regio. Dat maakt de strijd kleiner én winbaar.
-
-Het middelpunt van lokale SEO is je Google Business Profile (voorheen Google Mijn Bedrijf). Het is gratis. Het fungeert als je digitale visitekaartje. Google gebruikt het om te bepalen of jouw bedrijf relevant is voor lokale zoekers.
+Dat is lokale SEO in de praktijk. Niet zichtbaar zijn kost je klanten. Elke dag.
 
 ---
 
-## Waarom lokale SEO voor B2B?
+## Wat lokale SEO eigenlijk is
 
-Neem dat installatiebedrijf in Zwolle. De eigenaar denkt misschien: "Mijn klanten bellen via via." Dat klopt deels. Maar steeds meer zakelijke kopers zoeken online vóórdat ze bellen.
+Lokale SEO betekent dat je gevonden wordt door mensen in jouw regio. Niet door heel Nederland — door bedrijven in Utrecht, Breda, Eindhoven of Zwolle die op dit moment zoeken naar wat jij levert.
 
-Een facilitair manager typt "installatiebedrijf Zwolle" in. Hij wil een partij die dichtbij zit, snel kan schakelen en de regio kent. Als jij dan niet verschijnt, belt hij je concurrent.
+Google kijkt waar de zoeker zich bevindt. Het toont dan het **local pack**: drie bedrijven bovenaan, met een kaart. Sta je daarin, dan ben je zichtbaarder dan de vijfde plek in de gewone resultaten. Meer klikken, meer calls, meer opdrachten.
 
-Drie voordelen die direct tellen:
-
-**Meer relevante leads.** Iemand die zoekt op "cv-ketel installateur Zwolle" is klaar om te kopen. Dat levert hogere conversie op dan een generieke term.
-
-**Minder concurrentie.** "Installateur" is een bloedbad. "Installatiebedrijf Zwolle" heeft maar een handvol serieuze concurrenten.
-
-**Sneller vertrouwen.** Een fysiek adres in de regio, recente reviews en een actief profiel wekken vertrouwen. In B2B is dat cruciaal.
+Het mooie voor B2B? Je concurreert niet met heel Nederland. Alleen met bedrijven in jouw gemeente of regio. Dat maakt de strijd kleiner. En winbaarder.
 
 ---
 
-## Google Business Profile: de grootste quick win
+## Waarom dit voor B2B zo relevant is
 
-Dit is je startpunt. Veel bedrijven laten dit profiel half leeg. Zonde.
+Neem Elektrotechnisch bedrijf Van der Berg in Breda. Actief sinds 2009. Twaalf man in dienst. Prima reviews van bestaande klanten. Maar in Google Maps: onzichtbaar.
 
-**Vul elk veld in.** Bedrijfsnaam, adres, telefoonnummer, website, openingstijden, omschrijving. Hoe completer het profiel, hoe beter Google je matcht.
+De eigenaar dacht: "Mijn klanten komen via via." Dat klopte — tot een concurrent in Tilburg zijn Google Business Profile optimaliseerde. Ineens liepen leads naar rechts. Niet omdat die concurrent beter was. Wel omdat hij beter zichtbaar was.
 
-**Voeg foto's toe.** Bedrijven met foto's krijgen 42% meer klikken naar hun website. Laat je pand, team en werk zien.
+Na drie maanden lokale SEO stond Van der Berg in de top-3 van Breda. De telefoon begon te rinkelen. Nieuwe klanten — facilitaire dienstverleners, vastgoedbeheerders — die hem nooit eerder hadden gevonden.
 
-**Publiceer posts.** Deel updates, nieuws of aanbiedingen. Dit laat zien dat je actief bent.
-
-**Kies de juiste categorieën.** De primaire categorie bepaalt voor welke termen je verschijnt. Kies nauwkeurig.
+Jouw beste klant zit op twaalf kilometer afstand. Hij vindt je concurrent, niet jou.
 
 ---
 
-## Reviews: hoe je ze krijgt en wat ze doen
+## Google Business Profile: begin hier
 
-Reviews zijn een directe rankingfactor. Meer reviews én hogere scores betekenen een betere positie in het local pack.
+Dit is het belangrijkste onderdeel van lokale SEO. Het is gratis. Het heeft direct effect. En de meeste bedrijven laten het half leeg staan.
 
-Hoe doe je dat als installatiebedrijf in Zwolle?
+**Vul elk veld volledig in.** Bedrijfsnaam, adres, telefoon, website, openingstijden, omschrijving. Hoe completer het profiel, hoe beter Google je matcht aan lokale zoekopdrachten.
 
-Stuur na elke afgeronde klus een directe link naar je reviewpagina. Eén klik, vijf sterren. Maak het zo makkelijk mogelijk. Vraag er gewoon om. Tevreden klanten geven graag een review als je erom vraagt.
+**Kies de juiste primaire categorie.** Dit bepaalt voor welke termen je verschijnt. "Elektrotechnisch installateur" is specifieker dan "Aannemer" — en trekt betere leads.
 
-Reageer op elke review. Op de goede én op de negatieve. Een professionele reactie op kritiek laat zien dat je betrokken bent. Dat telt voor zowel Google als toekomstige klanten.
+**Voeg foto's toe.** Bedrijven mét foto's krijgen 42% meer klikken. Laat je pand, je team en je werk zien. Geen stockfoto's.
+
+**Publiceer posts.** Een korte update elke twee weken laat zien dat je actief bent. Google waardeert dat. Bezoekers ook.
+
+Dit zijn concrete stappen die je vandaag kunt zetten. Open je profiel, loop deze lijst door. Een uur werk.
+
+---
+
+## Reviews: het geheime wapen
+
+Reviews zijn een directe rankingfactor. Meer reviews — en hogere scores — betekenen een betere positie in het local pack.
+
+Hoe pak je dat aan als installatiebedrijf in Zwolle of elektrotechnisch bedrijf in Breda?
+
+Stuur na elke afgeronde klus een directe link naar je reviewpagina. Één klik voor de klant. Vijf sterren voor jou. Vraag er gewoon om — tevreden klanten geven graag een review als je erom vraagt.
+
+Reageer op elke review. Op de goede én de negatieve. Een professionele reactie op kritiek laat zien dat je betrokken bent. Dat telt voor Google én voor de volgende klant die jouw profiel bekijkt.
 
 ---
 
 ## NAP-consistentie: de stille saboteur
 
-NAP staat voor Name, Address, Phone number. Deze gegevens moeten overal exact hetzelfde zijn: op je website, je Google Business Profile, LinkedIn en in directories.
+NAP staat voor Name, Address, Phone number. Deze gegevens moeten overal exact hetzelfde zijn: op je website, in je Google Business Profile, op LinkedIn, in directories.
 
-Geen verschil in schrijfwijze. Geen oud telefoonnummer ergens. Geen "Zwolle" op de ene plek en "Zwolle, OV" op de andere.
+Geen verschil in schrijfwijze. Geen oud telefoonnummer dat nog ergens staat. Geen "Breda" op de ene plek en "Breda, NB" op de andere.
 
-Google vergelijkt al deze vermeldingen. Inconsistenties zijn een vertrouwenssignaal in de verkeerde richting. Ze kunnen je ranking actief schaden.
+Google vergelijkt al deze vermeldingen. Inconsistenties zijn een negatief signaal. Ze schaden je ranking actief.
 
-Controleer je NAP-gegevens op minimaal deze plekken:
+Controleer je NAP op minimaal deze plekken:
 - Je website (contactpagina én footer)
 - Google Business Profile
 - LinkedIn-bedrijfspagina
@@ -91,14 +87,14 @@ Controleer je NAP-gegevens op minimaal deze plekken:
 
 ## Lokale zoektermen op je website
 
-Je website moet bevestigen wat je Google Business Profile claimt. Gebruik lokale zoekwoorden in je titels, headers en teksten.
+Je website moet bevestigen wat je Google Business Profile claimt. Gebruik lokale zoekwoorden in titels, headers en teksten.
 
-Voor een installatiebedrijf in Zwolle betekent dat:
-- "Installatiebedrijf Zwolle" in de paginatitel
-- "Wij werken in Zwolle, Kampen en de Kop van Overijssel" in de tekst
+Voor een elektrotechnisch bedrijf in Eindhoven betekent dat:
+- "Elektrotechnisch installateur Eindhoven" in de paginatitel
+- "Wij werken in Eindhoven, Helmond en de Brainportregio" in de tekst
 - Een contactpagina met volledig adres en een ingesloten Google Maps-kaart
 
-Schrijf ook locatiespecifieke content. Een blogartikel als "Wanneer is een warmtepomp interessant voor bedrijven in Zwolle?" trekt lokale bezoekers. Het laat Google zien dat je verbonden bent met het gebied.
+Schrijf ook locatiespecifieke content. Een blogartikel als "Wanneer is zonnepanelen interessant voor bedrijven in Eindhoven?" trekt lokale bezoekers. Google ziet dat je verbonden bent met het gebied.
 
 Wil je weten hoe je website technisch scoort? Lees dan ons artikel over [website optimalisatie](/blog/website-optimalisatie).
 
@@ -106,17 +102,17 @@ Wil je weten hoe je website technisch scoort? Lees dan ons artikel over [website
 
 ## Stap voor stap aan de slag
 
-Dit zijn de vijf stappen die het meeste effect geven. Begin hier.
+Begin hier. Deze vijf stappen hebben het meeste effect.
 
-**Stap 1: Claim en verifieer je Google Business Profile.** Zoek je bedrijf op Google Maps. Claim het eigendom. Verifieer via de postkaart die Google stuurt.
+**Stap 1: Claim en verifieer je Google Business Profile.** Zoek je bedrijf op Google Maps. Claim het eigendom. Verifieer via de postkaart die Google opstuurt.
 
-**Stap 2: Maak je NAP-gegevens consistent.** Loop alle online vermeldingen na. Corrigeer afwijkingen. Dit is saai werk, maar het effect is groot.
+**Stap 2: Maak je NAP-gegevens consistent.** Loop alle online vermeldingen na. Corrigeer afwijkingen. Saai werk — groot effect.
 
 **Stap 3: Optimaliseer je website voor lokale termen.** Verwerk je stad en regio in teksten, titels en de contactpagina.
 
 **Stap 4: Verzamel reviews.** Stuur na elke klus een directe reviewlink. Reageer op alles wat binnenkomt.
 
-**Stap 5: Bouw lokale backlinks.** Word vermeld op de site van je ondernemersvereniging. Sponsor een regionaal evenement. Werk samen met andere lokale bedrijven.
+**Stap 5: Bouw lokale backlinks.** Word vermeld op de site van je ondernemersvereniging. Sponsor een regionaal evenement. Werk samen met andere lokale bedrijven in jouw regio.
 
 ---
 
@@ -124,7 +120,7 @@ Dit zijn de vijf stappen die het meeste effect geven. Begin hier.
 
 ### Is lokale SEO alleen voor bedrijven met een winkel?
 
-Nee. Ook een installatiebedrijf, adviesbureau of IT-dienstverlener profiteert. Zolang je een fysieke locatie hebt of een servicegebied, kun je lokaal ranken.
+Nee. Een installatiebedrijf, adviesbureau of IT-dienstverlener profiteert evengoed. Zolang je een fysieke locatie hebt of een servicegebied, kun je lokaal ranken.
 
 ### Hoe snel zie ik resultaat?
 
@@ -134,22 +130,18 @@ Met een goed geoptimaliseerd Google Business Profile zie je binnen enkele weken 
 
 Enkele negatieve reviews zijn geen ramp. Google kijkt naar het totaalplaatje. Professioneel reageren op kritiek oogt authentieker dan alleen maar vijf sterren.
 
-### Wat is het verschil tussen Google Business Profile en Google Maps?
-
-Je Google Business Profile is het beheerpaneel. Google Maps toont je informatie aan gebruikers. Hetzelfde systeem, twee verschillende plekken.
-
 ### Hoe kom ik hoger in Google met mijn lokale bedrijf?
 
 De snelste route: optimaliseer je Google Business Profile, maak je NAP-gegevens consistent, verzamel reviews en publiceer lokale content. Lees meer in ons artikel over [hoger in Google komen](/blog/hoger-in-google).
 
 ---
 
-## Begin vandaag
+## Begin vandaag — niet volgende week
 
 Lokale SEO is geen rocket science. Het is consequent en consistent je zaken op orde hebben.
 
-Voor een installatiebedrijf in Zwolle betekent dat: een volledig Google Business Profile, dezelfde NAP-gegevens overal, en een actieve reviewstrategie. Dat is genoeg om de meeste concurrenten in de regio voorbij te gaan.
+Van der Berg in Breda ging van onzichtbaar naar top-3. Niet door een groot budget. Wel door een volledig Google Business Profile, consistente NAP-gegevens en een actieve reviewstrategie. Dat is genoeg om de meeste concurrenten in de regio voorbij te gaan.
 
-Je hoeft niet alles tegelijk te doen. Begin met stap één: claim je Google Business Profile en vul het volledig in. Doe dat vandaag.
+Begin met stap één. Claim je Google Business Profile en vul het vandaag volledig in. Dat ene uur bepaalt of de facilitair manager in Utrecht jou vindt — of je concurrent.
 
 Wil je weten wat [SEO-ondersteuning voor B2B](/seo-ondersteuning) jou concreet oplevert? We bespreken graag je situatie.
