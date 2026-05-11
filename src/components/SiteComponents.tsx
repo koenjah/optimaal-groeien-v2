@@ -180,8 +180,8 @@ export const PartnerHero = () => {
       <div className="absolute top-1/2 left-1/3 w-[300px] h-[300px] rounded-full bg-brand-accent/4 blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-          <div className="lg:w-1/2 text-left pb-8 lg:pb-16">
+        <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-16">
+          <div className="lg:w-1/2 text-left pb-8 lg:pb-0">
             <div className="label-pill">
               <span className="w-2 h-2 bg-brand-accent rounded-full animate-pulse" />
               Dit is ons team — Wij helpen je groeien
@@ -243,7 +243,7 @@ export const PartnerHero = () => {
             </div>
           </div>
 
-          <div className="lg:w-1/2 flex items-start lg:items-center mt-12 lg:mt-0">
+          <div className="lg:w-1/2 w-full mt-8 lg:mt-0">
             <CommercialQuiz />
           </div>
         </div>
