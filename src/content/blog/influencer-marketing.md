@@ -11,6 +11,10 @@ pullQuote: "In B2B telt niet hoe groot iemands publiek is — maar hoe goed dat 
 statHighlight:
   value: "74%"
   label: "van B2B-kopers kiest een leverancier op basis van aanbevelingen van vakgenoten"
+keyTakeaways:
+  - "Kies vakexperts op relevantie van hun publiek, niet op aantal volgers."
+  - "Bouw eerst een relatie op voordat je om samenwerking vraagt."
+  - "Plan minimaal twaalf maanden: B2B thought leadership groeit langzaam maar duurzaam."
 ---
 
 Influencer marketing. Je denkt: tieners op TikTok met energiedrankjes. Of een beautyblogger met een kortingscode. Dat is jouw wereld niet.
@@ -23,9 +27,27 @@ Dat klopt. Maar er is een andere wereld. En daarin werkt influencer marketing vo
 
 B2B-directeuren haken af bij het woord "influencer". Begrijpelijk. De associaties kloppen niet.
 
-Maar het concept is simpel: iemand met geloofwaardigheid spreekt over jouw bedrijf. Die persoon heeft een publiek dat jou vertrouwt — omdat zij die persoon vertrouwen.
+Maar het concept is simpel. Iemand met geloofwaardigheid spreekt over jouw bedrijf. Die persoon heeft een publiek dat jou vertrouwt — omdat zij die persoon vertrouwen.
 
 In B2B heet die persoon geen influencer. Hij heet vakexpert, thought leader of gewoon: een gerespecteerde naam in de sector. De mechaniek is identiek. Het bereik is kleiner. De geloofwaardigheid is groter.
+
+> **Kern:** In B2B draait invloed niet om bereik — maar om vertrouwen binnen de juiste kring. Eén vakexpert met de juiste doelgroep is meer waard dan tienduizend willekeurige volgers.
+
+---
+
+## B2C versus B2B: twee totaal verschillende spelregels
+
+Veel B2B-ondernemers passen de B2C-logica toe. Dat is het echte probleem. De twee werelden lijken op elkaar — maar werken fundamenteel anders.
+
+| Aspect | B2C influencer | B2B vakexpert |
+|---|---|---|
+| Bereik | Groot (100k+) | Klein (2k–15k) |
+| Doelgroep | Breed en divers | Smal en specifiek |
+| Inkoopbeslissing | Snel en emotioneel | Lang en rationeel |
+| Geloofwaardigheid | Populariteit | Vakkennis en reputatie |
+| Beste kanaal | Instagram, TikTok | LinkedIn, vakbladen |
+
+Het kernmisverstand: meer volgers = meer resultaat. In B2B geldt het omgekeerde. Relevantie wint van bereik — altijd.
 
 ---
 

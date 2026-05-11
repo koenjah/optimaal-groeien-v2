@@ -11,6 +11,10 @@ pullQuote: "Je staat op positie 1 voor je eigen bedrijfsnaam. Gefeliciteerd — 
 statHighlight:
   value: "68%"
   label: "van B2B-kopers doet uitgebreid online onderzoek vóór het eerste contactmoment"
+keyTakeaways:
+  - "Onderzoek welke zoektermen je klant gebruikt voordat hij jou kent."
+  - "Bouw autoriteit op met diepgaande content en backlinks van vakbladen."
+  - "Meet maandelijks je posities en verbeter continu."
 ---
 
 Misschien heb je het al geprobeerd. Een SEO-bureau ingehuurd, een paar maanden gewacht, facturen betaald. En daarna? Niets. Of bijna niets.
@@ -29,15 +33,26 @@ Niet jij.
 
 Dat is geen kwestie van pech. Het is een kwestie van welke termen je bewust aanpakt. De meeste B2B-bedrijven investeren in zichtbaarheid voor wie hen al kent. SEO die werkt, richt zich op wie jou nog niet kent maar wél al zoekt.
 
+> **Kern:** Niet de bekendste positie wint — de meest relevante positie wint.
+
+### IJdele positie vs. omzetpositie: wat is het verschil?
+
+| | IJdele positie | Omzetpositie |
+|---|---|---|
+| **Wat is het?** | Positie 1 voor je eigen bedrijfsnaam | Positie 1 voor een zoekterm die je klant gebruikt |
+| **Waarom het telt** | Alleen zichtbaar voor wie jou al kent | Zichtbaar voor nieuwe, koopklare zoekers |
+| **Voorbeeld** | "Brinkman Industrial Services" | "storingsonderhoud procesindustrie Rijnmond" |
+| **Levert op** | Geen nieuwe leads | Directe aanvragen van onbekende kopers |
+
 ## Hoe werkt Google eigenlijk?
 
 Google doet drie dingen:
 
-- **Crawlen:** Programmaatjes volgen links en scannen pagina's.
-- **Indexeren:** Gevonden pagina's worden opgeslagen in een enorme database.
+- **Crawlen:** Programmaatjes (crawlers) volgen links en scannen pagina's.
+- **Indexeren:** Gevonden pagina's worden opgeslagen in een grote database.
 - **Ranken:** Google kiest welke pagina het beste antwoord geeft op een zoekvraag.
 
-Twee factoren bepalen je positie: **relevantie** (past jouw pagina bij de zoekvraag?) en **autoriteit** (vertrouwt Google jou als bron?). Beide kun je beïnvloeden. Dat is precies waar de volgende stappen over gaan.
+Twee factoren bepalen je positie. **Relevantie** — past jouw pagina bij de zoekvraag? En **autoriteit** — vertrouwt Google jou als bron? Beide kun je beïnvloeden. Dat is precies waar de volgende stappen over gaan.
 
 ## Hoe Brinkman Industrial Services van pagina 3 naar positie 1 ging
 
@@ -59,9 +74,9 @@ Gebruik gratis tools zoals Google Keyword Planner of Ubersuggest. Zoek naar term
 
 ### Stap 2: Optimaliseer je paginatitels en meta descriptions
 
-Dit is wat mensen zien vóórdat ze klikken. Je eerste indruk, in twee regels.
+De **paginatitel** is de blauwe klikbare link in Google. De **meta description** is de korte beschrijving eronder. Samen vormen ze je eerste indruk.
 
-Een goede paginatitel bevat de zoekterm, is maximaal 60 tekens en vertelt direct waar de pagina over gaat. Een goede meta description nodigt uit, is maximaal 160 tekens en heeft een duidelijke aansporing. Brinkman herschreef elk van hun dienstenpagina's. Klikratio omhoog, gemiddelde positie omlaag.
+Een goede paginatitel bevat de zoekterm en is maximaal 60 tekens. Een goede meta description nodigt uit en is maximaal 160 tekens. Brinkman herschreef elk van hun dienstenpagina's. De klikratio steeg direct.
 
 Wil je weten hoe je de technische kant aanpakt? Lees ons artikel over [website-optimalisatie](/blog/website-optimalisatie).
 
@@ -77,13 +92,13 @@ Behandel je onderwerp volledig. Gebruik praktijkvoorbeelden. Maak tekst scanbaar
 
 ### Stap 4: Verbeter de laadsnelheid van je website
 
-Een trage website wordt lager geplaatst. En bezoekers haken af. Een pagina die langer dan drie seconden laadt, verliest meer dan de helft van haar bezoekers.
+Een trage website wordt lager geplaatst. Een pagina die langer dan drie seconden laadt, verliest meer dan de helft van haar bezoekers.
 
 Comprimeer afbeeldingen via TinyPNG. Gebruik caching. Kies een goede hostingprovider. Verwijder overbodige scripts. Test je score via Google PageSpeed Insights — je krijgt direct concrete verbeterpunten.
 
 ### Stap 5: Zorg voor een mobielvriendelijke website
 
-Meer dan de helft van alle zoekopdrachten is mobiel. Google kijkt eerst naar de mobiele versie van je site.
+Meer dan de helft van alle zoekopdrachten is mobiel. Google kijkt eerst naar de mobiele versie van je site. Dat heet **mobile-first indexing**.
 
 Controleer dit via de Mobile-Friendly Test van Google. Tekst moet leesbaar zijn zonder inzoomen. Knoppen groot genoeg om op te tikken. Menu's functioneel op touchscreen.
 
@@ -91,7 +106,7 @@ Sommige B2B-bedrijven denken: "onze klanten zoeken vanaf de desktop." Maar zelfs
 
 ### Stap 6: Bouw interne links tussen je pagina's
 
-Interne links verbinden pagina's op je eigen site. Ze helpen bezoekers meer te ontdekken. En ze helpen Google begrijpen hoe jouw website in elkaar zit.
+**Interne links** zijn koppelingen tussen pagina's op je eigen site. Ze helpen bezoekers meer te ontdekken. En ze helpen Google begrijpen hoe jouw website in elkaar zit.
 
 Link vanuit blogartikelen naar dienstenpagina's. Verwijs in cases naar gerelateerde services. Gebruik beschrijvende linktekst — niet "klik hier," maar "meer over preventief onderhoud voor de procesindustrie." Zorg dat elke belangrijke pagina binnen drie klikken bereikbaar is.
 
@@ -99,7 +114,7 @@ Interne links zijn het meest onderschatte onderdeel van SEO. Ze verdelen autorit
 
 ### Stap 7: Verzamel reviews en versterk je lokale SEO
 
-Brinkman werkte in de Rijnmond-regio. Dat is een voordeel — als je het benut.
+**Lokale SEO** zorgt dat je gevonden wordt in een specifieke regio. Brinkman werkte in de Rijnmond-regio. Dat is een voordeel — als je het benut.
 
 Maak een Google Bedrijfspagina aan en vul die volledig in. Vraag tevreden klanten om een review. Gebruik lokale zoektermen in je content: niet alleen "inspectiebedrijf," maar "inspectiebedrijf Rotterdam-Rijnmond." Maak landingspagina's voor elke regio waar je actief bent.
 
@@ -115,9 +130,9 @@ Brinkman publiceerde een gratis inspectieprotocol als downloadbaar PDF. Dat prot
 
 ### Stap 9: Verdien backlinks van betrouwbare websites
 
-Backlinks zijn aanbevelingen. Hoe meer betrouwbare websites naar jou linken, hoe hoger je autoriteit. En hoe hoger je autoriteit, hoe beter je rankt.
+**Backlinks** zijn links van andere websites naar jouw site. Google ziet ze als aanbevelingen. Hoe meer betrouwbare websites naar jou linken, hoe hoger je autoriteit.
 
-Kwaliteit gaat boven kwantiteit. Een link van een gerenommeerd vakblad in jouw branche is honderd keer meer waard dan tien linkjes van obscure blogs. Publiceer uniek onderzoek. Schrijf gastartikelen voor vakmedia. Werk samen met partners en link naar elkaar.
+Kwaliteit gaat boven kwantiteit. Een link van een gerenommeerd vakblad is honderd keer meer waard dan tien linkjes van obscure blogs. Publiceer uniek onderzoek. Schrijf gastartikelen voor vakmedia. Werk samen met partners en link naar elkaar.
 
 Wil je alles weten over linkbuilding? Lees ons uitgebreide artikel over [alles wat je moet weten over linkbuilding](/blog/alles-wat-je-moet-weten-over-linkbuilding).
 
@@ -125,15 +140,13 @@ Wil je alles weten over linkbuilding? Lees ons uitgebreide artikel over [alles w
 
 SEO is geen eenmalige actie. Google past zijn algoritme regelmatig aan.
 
-Controleer maandelijks je posities. Kijk in Google Search Console welke pagina's verkeer trekken. Analyseer via Google Analytics 4 welke pagina's converteren. Update bestaande content — een bijgewerkt artikel kan een directe rankingboost geven.
+Controleer maandelijks je posities. Kijk in **Google Search Console** welke pagina's verkeer trekken. Analyseer via **Google Analytics 4** welke pagina's converteren. Update bestaande content — een bijgewerkt artikel kan een directe rankingboost geven.
 
 Brinkman deed dit consequent. Na negen maanden stond hun artikel over lekkagedetectie op positie 1. Niet door trucjes. Door diepgang, consistentie en geduld.
 
 ## E-E-A-T: het meest bepalende signaal in 2026
 
-In 2026 is er één ding dat Google zwaarder weegt dan alle technische trucjes: **E-E-A-T** — Expertise, Ervaring, Autoriteit, Betrouwbaarheid.
-
-Google wil weten of je echt verstand hebt van wat je schrijft. En of je dat verstand ook in de praktijk hebt opgedaan.
+In 2026 weegt één ding zwaarder dan alle technische trucs: **E-E-A-T**. Dat staat voor Expertise, Ervaring, Autoriteit en Betrouwbaarheid. Google wil weten of je echt verstand hebt van wat je schrijft.
 
 Hoe bouw je E-E-A-T op?
 

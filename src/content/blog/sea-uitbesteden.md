@@ -11,6 +11,10 @@ pullQuote: "Zelf Google Ads beheren kost je geen geld. Het kost je klanten."
 statHighlight:
   value: "76%"
   label: "van B2B Google Ads-budgetten lekt weg aan irrelevante klikken — bij zelfbeheer"
+keyTakeaways:
+  - "Controleer of je budget boven €1.500 per maand zit voor uitbesteden loont."
+  - "Verwacht minimaal drie maanden voor stabiele, kwalitatieve leadresultaten."
+  - "Eis altijd toegang tot je eigen Google Ads-account — nooit via een bureauaccount."
 ---
 
 **De meeste ondernemers die zelf Google Ads beheren, denken dat ze geld besparen. Ze betalen geen bureaufee. Maar ondertussen verbrand je tot driekwart van je budget aan klikken die nooit iets opleveren.**
@@ -21,13 +25,15 @@ Dat is geen theorie. Dat is wat we zien als we een account overnemen.
 
 ## Het verhaal van Meulenberg Techniek
 
-Marc Meulenberg runt een machinebouwbedrijf in Tilburg. Dertig medewerkers, projecten van €80.000 tot €400.000. Hij startte Google Ads zelf op — met tutorials van YouTube en een dagbudget van €60.
+Marc Meulenberg runt een machinebouwbedrijf in Tilburg. Dertig medewerkers, projecten van €80.000 tot €400.000. Hij startte Google Ads zelf op — met YouTube-tutorials en een dagbudget van €60.
 
-Na zes maanden: €11.000 uitgegeven, vier aanvragen. Drie daarvan kwamen van ZZP'ers die zijn machines wilden huren. Niet zijn doelgroep.
+Na zes maanden: €11.000 uitgegeven, vier aanvragen. Drie kwamen van ZZP'ers die zijn machines wilden huren. Niet zijn doelgroep.
 
-Het probleem zat niet in zijn budget. Het zat in de zoekwoorden. Marc adverteerde op "machinebouw" — breed, goedkoop, en waardeloos voor B2B-inkoopdirecteuren. Hij zag het zelf niet, omdat de klikken gewoon bleven binnenkomen.
+Het probleem zat niet in zijn budget. Het zat in de zoekwoorden. Marc adverteerde op "machinebouw" — breed, goedkoop en waardeloos voor B2B-inkoopdirecteuren. Hij zag het zelf niet. De klikken kwamen immers gewoon binnen.
 
 Dit patroon zien we keer op keer. Niet omdat ondernemers dom zijn. Maar omdat je van binnenuit niet ziet wat er misgaat.
+
+> **Kern:** Klikken zeggen niets. Gekwalificeerde aanvragen tellen.
 
 ---
 
@@ -48,22 +54,33 @@ Uitbesteden is niet voor iedereen de juiste keuze. Hieronder staat het eerlijke 
 - Je hebt nog geen heldere propositie of conversiepagina's
 - Je weet nog niet wie je ideale klant is — dan gooit een bureau ook mis
 
-Een goed bureau zegt dit zelf ook. Bij Optimaal Groeien sturen we regelmatig bedrijven weg die nog niet klaar zijn voor SEA. Dat klinkt gek. Maar een mislukte campagne kost jou meer dan het ons oplevert.
+Een goed bureau zegt dit zelf ook. Bij Optimaal Groeien sturen we regelmatig bedrijven weg die nog niet klaar zijn voor SEA. Een mislukte campagne kost jou meer dan het ons oplevert.
+
+### Zelf doen vs. uitbesteden
+
+| Aspect | Zelf doen | Uitbesteden |
+|---|---|---|
+| Kosten | Geen fee, wel leergeld | Bureaufee + advertentiebudget |
+| Tijdsinvestering | 5–10 uur per week | Maximaal 1 uur per maand overleg |
+| Expertise | Groeit langzaam | Direct beschikbaar |
+| Kwaliteit van leads | Vaak breed, weinig gefilterd | Gericht op jouw doelgroep |
+| Inzicht in resultaten | Beperkt zonder ervaring | Maandelijkse rapportage in klare taal |
 
 ---
 
 ## Wat een specialist doet dat jij niet doet
 
-Marc wist niet dat er zoiets bestaat als negatieve zoekwoorden. Daarmee sluit je uit dat je advertentie verschijnt op zoekopdrachten die niet relevant zijn. Zoek je op "machinebouw cursus"? Dan wil Meulenberg Techniek daar niet op klikken betalen.
+Marc wist niet dat er zoiets bestaat als negatieve zoekwoorden. Daarmee sluit je uit dat je advertentie verschijnt op niet-relevante zoekopdrachten. Zoekt iemand op "machinebouw cursus"? Dan wil Meulenberg Techniek daar geen klik op betalen.
 
 Een specialist bouwt een lijst van honderden negatieve zoekwoorden. Dat alleen al bespaart 20–40% van het budget.
 
 Daarnaast:
 
-- **Match types** instellen zodat je alleen betaalt voor exacte of zeer gerichte zoekopdrachten
+- **Match types** instellen zodat je betaalt voor gerichte zoekopdrachten — niet voor alles wat er op lijkt
 - **Quality Score** verhogen — hogere relevantie betekent lagere kosten per klik
-- **Landingspagina's** verbeteren zodat klikken ook daadwerkelijk omzetten
-- **A/B-testen** op advertentieteksten — wat trekt de juiste inkoper aan?
+- **CTR verhogen**, het percentage mensen dat klikt — betere advertentieteksten trekken de juiste inkoper
+- **Landingspagina's** verbeteren zodat klikken ook omzetten in aanvragen
+- **A/B-testen** op advertentieteksten — één betere variant kan je kosten halveren
 
 Na drie maanden bij een specialist: Marc's account leverde 9 gekwalificeerde aanvragen op. Zelfde budget. Twee opdrachten getekend.
 
@@ -79,7 +96,7 @@ Je betaalt twee dingen: je advertentiebudget (direct aan Google) en een bureaufe
 | €1.500–€2.500 | €750–€1.250 | Ja, als leadwaarde hoog genoeg is |
 | €3.000+ | 10–20% van budget | Bijna altijd |
 
-De sleutelrekening: wat is één lead waard? Bij Meulenberg Techniek was dat €400.000 / 10 verwachte conversies = €40.000 per lead. Een bureaufee van €1.200 per maand is dan statistisch gezien de beste investering die hij kan doen.
+De sleutelrekening: wat is één lead waard? Bij Meulenberg Techniek was dat €400.000 gedeeld door 10 verwachte conversies — €40.000 per lead. Een bureaufee van €1.200 per maand is dan de beste investering die hij kan doen.
 
 ---
 
@@ -101,7 +118,7 @@ Niet elk bureau werkt in jouw belang. Let op dit onderscheid.
 - Ze praten alleen over "bereik" en "zichtbaarheid"
 - Ze willen je voor een jaar of langer vastleggen
 
-Een [full-service marketingbureau](https://optimaalgroeien.nl/full-service-marketing-bureau) dat ook SEO en website-optimalisatie doet, kijkt bovendien naar het hele plaatje. SEA en [SEO](https://optimaalgroeien.nl/seo-ondersteuning) versterken elkaar — als je weet welke zoekwoorden converteren in ads, weet je ook waar je organisch op moet bouwen.
+Een [full-service marketingbureau](https://optimaalgroeien.nl/full-service-marketing-bureau) dat ook SEO en website-optimalisatie doet, kijkt bovendien naar het hele plaatje. SEA en [SEO](https://optimaalgroeien.nl/seo-ondersteuning) versterken elkaar — zoekwoorden die converteren in ads vertellen je precies waar je organisch op moet bouwen.
 
 ---
 
@@ -109,10 +126,10 @@ Een [full-service marketingbureau](https://optimaalgroeien.nl/full-service-marke
 
 SEA is snel, maar niet instant. Verwacht dit:
 
-- **Week 1–2**: campagne live, eerste data binnenkomt
-- **Maand 1**: budget wordt ingezoomd, negatieve zoekwoorden aangescherpt
-- **Maand 2–3**: échte optimalisatie begint, resultaten worden stabieler
-- **Maand 4+**: consistente leadstroom, bureau stuurt bij op basis van patronen
+- **Week 1–2**: campagne live, eerste data komt binnen
+- **Maand 1**: budget wordt bijgesteld, negatieve zoekwoorden aangescherpt
+- **Maand 2–3**: echte optimalisatie begint, resultaten worden stabieler
+- **Maand 4+**: consistente leadstroom, bureau stuurt bij op patronen
 
 Vergelijk het met een nieuwe medewerker. De eerste maand leert hij je bedrijf kennen. Daarna wordt hij waardevoller.
 
@@ -122,8 +139,8 @@ Vergelijk het met een nieuwe medewerker. De eerste maand leert hij je bedrijf ke
 
 Marc vroeg ons na zes weken: "Waarom heb ik dit niet eerder gedaan?"
 
-Het eerlijke antwoord: omdat uitbesteden voelt als controle verliezen. Maar wat je eigenlijk verliest, is de illusie van controle. Want zelf klikken monitoren zonder te weten wat je ziet, is geen controle.
+Het eerlijke antwoord: omdat uitbesteden voelt als controle verliezen. Maar wat je eigenlijk verliest, is de illusie van controle. Zelf klikken monitoren zonder te weten wat je ziet, is geen controle.
 
-Echte controle is: weten hoeveel een lead kost, hoeveel leads je nodig hebt en of je budget dat realistisch oplevert.
+Echte controle is dit: weten hoeveel een lead kost, hoeveel leads je nodig hebt en of je budget dat realistisch oplevert.
 
 **Wil je weten of SEA voor jouw bedrijf rendabel is?** Vraag een vrijblijvende scan aan. We kijken naar je huidige situatie — of je nu zelf beheert of overweegt uit te besteden — en rekenen eerlijk door wat realistisch haalbaar is.

@@ -11,6 +11,10 @@ pullQuote: "Meer omzet zonder systeem is meer chaos — Scaling Up maakt van gro
 statHighlight:
   value: "2,3×"
   label: "snellere omzetgroei bij bedrijven die Scaling Up consequent implementeren ten opzichte van het sectorgemiddelde"
+keyTakeaways:
+  - "Beoordeel elk teamlid op cultuurfit, functiepasheid en groeipotentieel."
+  - "Maak je strategie zo concreet dat elk teamlid hem in twee zinnen uitlegt."
+  - "Verkort je Cash Conversion Cycle met één gesprek over betaalafspraken."
 ---
 **Meer omzet, maar ook meer brand.** Meer klanten, maar ook meer fouten. Meer mensen, maar ook meer vergaderingen die niks opleveren. Herken je dit? Dan is je businessmodel niet het probleem. Je systeem is het probleem.
 
@@ -46,6 +50,13 @@ Herken je drie van de vier? Dan werkt Scaling Up voor jou. Te vroeg schalen scha
 ## De vier pijlers: mensen, strategie, executie, cash
 
 Neem Metatron Installaties. Een fictief installatiebedrijf uit Deventer. Veertig medewerkers, zes miljoen omzet, twaalf jaar oud. Directeur Mark wil naar vijftien miljoen in drie jaar. Het werk is goed. De klanten zijn tevreden. Toch loopt het bedrijf op zijn tenen.
+
+| Pijler | Wat het betekent | Signaal dat het niet klopt |
+|---|---|---|
+| Mensen | Juiste persoon, juiste plek, juiste fase | Jij doet nog zelf het werk van een manager |
+| Strategie | Een belofte die het hele team kent | Niemand kan de strategie in twee zinnen uitleggen |
+| Executie | Vaste ritmes en meetbare prioriteiten | Het meeting-ritme stopt zodra het druk wordt |
+| Cash | Korte cyclus tussen uitgaven en inkomsten | Groei voelt goed, maar je bankrekening niet |
 
 ### Mensen: de juiste persoon op de juiste plek
 
@@ -88,6 +99,8 @@ Klanten betaalden in negentig dagen. Leveranciers eisten dertig. Het bedrijf fin
 Scaling Up kijkt naar de **Cash Conversion Cycle**: het aantal dagen tussen uitgaande en inkomende cash. Hoe korter, hoe gezonder.
 
 Metatron vroeg voortaan dertig procent aanbetaling bij opdrachtverlening. Één gesprek. Geen klant weigerde. De cashpositie verbeterde in drie maanden met 180.000 euro.
+
+> **Kern:** Groei zonder systeem financiert je eigen chaos. De Cash Conversion Cycle verkorten is geen boekhoudtruc — het is de beslissing die je groei volhoudt.
 
 ---
 

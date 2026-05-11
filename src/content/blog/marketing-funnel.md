@@ -11,10 +11,14 @@ pullQuote: "Jouw klant legt de route toch al af. De vraag is alleen wie hem bege
 statHighlight:
   value: "77%"
   label: "van B2B-kopers stelt zijn shortlist samen vóórdat hij contact opneemt"
+keyTakeaways:
+  - "Begrijp welke drie fases elke B2B-klant doorloopt vóór hij beslist."
+  - "Maak per fase de juiste content — en stop lekken in je funnel."
+  - "Geef sales de context die Arjan al opbouwde, zodat het eerste gesprek raak is."
 ---
 **Jouw klant legt de route toch al af — of jij er iets mee doet of niet.** Dat is het principe achter de marketing funnel. De vraag is wie hem begeleidt: jij, of de concurrent die er wél content voor heeft gemaakt.
 
-In dit artikel volg je Arjan, technisch directeur bij een machinebouwer in Brabant. Hij heeft een probleem. Hij zoekt een oplossing. En hij beslist lang voordat hij een telefoon oppakt.
+In dit artikel volg je Arjan. Hij is technisch directeur bij een machinebouwer in Brabant. Hij heeft een probleem. Hij zoekt een oplossing. En hij beslist lang voordat hij een telefoon oppakt.
 
 ---
 
@@ -39,7 +43,7 @@ Marketing brengt Arjan zover dat hij zegt: "Dit bedrijf begrijpt mijn probleem."
 
 Arjan beslist niet alleen. Zijn directeur moet tekenen. De financieel manager kijkt naar de ROI. De technisch manager maakt bezwaar.
 
-Geen impulsaankoop na één LinkedIn-post. Het besluitvormingsproces duurt weken of maanden. Je funnel moet daarvoor geduld inbouwen — en inhoud bieden op elk moment dat Arjan twijfelt.
+Geen impulsaankoop na één LinkedIn-post. Het besluitvormingsproces duurt weken of maanden. Je funnel moet geduld inbouwen. En inhoud bieden op elk moment dat Arjan twijfelt.
 
 ---
 
@@ -53,6 +57,8 @@ Marketeers werken met TOFU, MOFU en BOFU. Klinkt als vakjargon. Is het ook. Maar
 
 We lopen er samen doorheen.
 
+> **Kern:** Elke fase vraagt andere content — wie dat begrijpt, begeleidt Arjan tot de finish.
+
 ### TOFU: bewustzijn — Arjan googelt zijn probleem
 
 Het is maandagochtend. Arjan typt: *"hoe verlaag ik uitvaltijd bij productielijnonderhoud"*.
@@ -61,7 +67,7 @@ Hij heeft nog nooit van jouw bedrijf gehoord. Dat maakt niet uit. Wat telt: jij 
 
 Jouw taak in deze fase is aanwezigheid. Niet verkopen — gevonden worden. De content gaat over zijn probleem, niet over jouw product.
 
-**Contenttip voor technische B2B:** schrijf geen productpagina maar een probleemanalyse. Titel als "Waarom uw productielijn 3x meer uitvalt dan nodig" doet het beter dan "Onze onderhoudsoplossing". Arjan zoekt herkenning, niet een pitch.
+**Contenttip voor technische B2B:** schrijf geen productpagina maar een probleemanalyse. Een titel als "Waarom uw productielijn 3x meer uitvalt dan nodig" doet het beter dan "Onze onderhoudsoplossing". Arjan zoekt herkenning, niet een pitch.
 
 Wat werkt in TOFU:
 - Technische blogartikelen over herkenbare problemen
@@ -90,7 +96,7 @@ Arjan heeft zijn shortlist. Twee partijen. U en een concurrent. Hij stuurt een a
 
 In deze fase gaat het om vertrouwen op het laatste moment. Arjan moet de beslissing intern verdedigen. Geef hem de munitie daarvoor — hij is uw bondgenoot in zijn eigen organisatie.
 
-**Contenttip voor technische B2B:** maak een één-pagina implementatieoverzicht. Geen 30 slides, maar een helder overzicht: wat gebeurt er wanneer, wie is aanspreekpunt, wat is de impact op de productie in week één. Dat helpt Arjan om ja te zeggen — en dat ja intern te verkopen.
+**Contenttip voor technische B2B:** maak een één-pagina implementatieoverzicht. Geen 30 slides, maar een helder overzicht. Wat gebeurt er wanneer? Wie is aanspreekpunt? Wat is de impact in week één? Dat helpt Arjan om ja te zeggen — en dat ja intern te verkopen.
 
 Wat hij verder nodig heeft:
 - Een directe contactpersoon — geen algemeen info@-adres
@@ -99,17 +105,27 @@ Wat hij verder nodig heeft:
 
 ---
 
+## Overzicht: fases, content en doel
+
+| Funnelfase | Type content | Doel voor technische B2B |
+|---|---|---|
+| **TOFU** — bewustzijn | Blogartikelen, checklists, video's | Gevonden worden bij het probleem |
+| **MOFU** — overweging | Casestudies, webinars, whitepapers | Vertrouwen opbouwen met bewijs |
+| **BOFU** — beslissing | Implementatieoverzicht, offerte, FAQ | Arjan helpen intern ja te verkopen |
+
+---
+
 ## Hoe bouw je de funnel stap voor stap?
 
 **Stap 1: Ken uw Arjan.** Maak een profiel van uw ideale klant. Welke functie? Wat houdt hem wakker? Waar zoekt hij informatie? Zonder dit fundament is uw funnel gissen.
 
-**Stap 2: Koppel kanaal aan fase.** LinkedIn-content werkt voor TOFU. Een persoonlijke mail werkt voor BOFU. Gebruik het juiste middel op het juiste moment — niet alles door elkaar.
+**Stap 2: Koppel kanaal aan fase.** LinkedIn-content werkt voor TOFU. Een persoonlijke mail werkt voor BOFU. Gebruik het juiste middel op het juiste moment.
 
-**Stap 3: Maak content per fase.** Begin waar u het meeste laat liggen. De meeste technische bedrijven hebben awareness-content, maar niets voor de overwegingsfase. Terwijl Arjan juist daar afhaakt.
+**Stap 3: Maak content per fase.** Begin waar u het meeste laat liggen. De meeste technische bedrijven hebben awareness-content. Maar niets voor de overwegingsfase. Terwijl Arjan juist daar afhaakt.
 
 **Stap 4: Zet lead magnets in.** Een lead magnet is waardevolle content die u weggeeft in ruil voor een e-mailadres. Een checklist, een technische gids, of een gratis scan. Zo zet u een anonieme bezoeker om in een bekende lead.
 
-**Stap 5: Automatiseer de opvolging.** Geen automatisering betekent handmatig alles bijhouden. Dat werkt bij vijf leads. Niet bij vijftig. Stel e-mailreeksen in die Arjan op het juiste moment de juiste informatie sturen.
+**Stap 5: Automatiseer de opvolging.** Geen automatisering betekent handmatig alles bijhouden. Dat werkt bij vijf leads. Niet bij vijftig. Stel e-mailreeksen in die Arjan op het juiste moment helpen.
 
 **Stap 6: Meet en verbeter.** Hoeveel bezoekers worden lead? Hoeveel leads vragen een offerte? Hoeveel offertes worden klant? Die cijfers vertellen u precies waar uw funnel lekt. Meer hierover leest u in ons artikel over [funnel management](/blog/funnel-management).
 
@@ -119,11 +135,11 @@ Wat hij verder nodig heeft:
 
 **Fout 1: Alleen TOFU-content.** Veel bezoekers, weinig leads. U trekt Arjan aan maar biedt niets waarmee hij verder kan. Bouw ook de midden- en onderkant.
 
-**Fout 2: Marketing en sales praten niet met elkaar.** Arjan heeft een offerte aangevraagd. Sales weet niets van de whitepaper die hij downloadde, de webinar die hij bijwoonde. De salescollega begint bij nul. Arjan voelt dat — en haakt af.
+**Fout 2: Marketing en sales praten niet met elkaar.** Arjan heeft een offerte aangevraagd. Sales weet niets van de whitepaper die hij downloadde. De salescollega begint bij nul. Arjan voelt dat — en haakt af.
 
-**Fout 3: Te vroeg om contactgegevens vragen.** Arjan bezoekt net uw homepage. U vraagt meteen zijn e-mailadres. Hij klikt weg. Verdien het vertrouwen eerst, geef dan pas iets te halen.
+**Fout 3: Te vroeg om contactgegevens vragen.** Arjan bezoekt net uw homepage. U vraagt meteen zijn e-mailadres. Hij klikt weg. Verdien het vertrouwen eerst.
 
-**Fout 4: De funnel staat stil.** Een funnel is geen eenmalig project. Arjans wereld verandert. Zijn concurrenten veranderen. Uw markt verandert. Blijf meten, testen en aanpassen.
+**Fout 4: De funnel staat stil.** Een funnel is geen eenmalig project. Arjans wereld verandert. Uw markt verandert. Blijf meten, testen en aanpassen.
 
 ---
 
@@ -133,7 +149,7 @@ Arjan heeft een voorkeur. Hij wil met u praten. Wat er nu gebeurt, bepaalt of hi
 
 Zorg dat sales weet wat Arjan al gezien heeft. Welke content. Welke pagina's. Welke vragen hij stelde bij de webinar. Die context maakt het eerste gesprek drie keer zo effectief.
 
-Maak duidelijke afspraken over wanneer een lead "sales-ready" is. Op basis van gedrag, op basis van een score, of op basis van een directe aanvraag. Gebruik marketing automation als brug. Een automatische melding naar sales zodra Arjan de drempel passeert — zo valt geen enkele warme lead meer tussen wal en schip.
+Maak duidelijke afspraken over wanneer een lead "sales-ready" is. Op basis van gedrag, een score, of een directe aanvraag. Gebruik marketing automation als brug. Een automatische melding naar sales zodra Arjan de drempel passeert — zo valt geen enkele warme lead meer tussen wal en schip.
 
 Benieuwd hoe dit er in de praktijk uitziet? Bij Optimaal Groeien bouwen we de hele funnel — inclusief de koppeling met uw salesteam. Bekijk hoe [B2B leadgeneratie uitbesteden](/b2b-leadgeneratie) eruitziet.
 
@@ -148,7 +164,7 @@ De meeste B2B-bedrijven zien de eerste resultaten na drie tot zes maanden. Een f
 Nee. Begin handmatig als dat moet. Maar zodra u meer dan tien leads per maand heeft, betaalt automation zichzelf terug.
 
 **Wat kost een funnel bouwen?**
-Dat hangt af van of u het zelf doet of uitbesteedt. De investering loont zodra de funnel draait — omdat hij dan structureel nieuwe leads aantrekt zonder steeds opnieuw hetzelfde werk te doen.
+Dat hangt af van of u het zelf doet of uitbesteedt. De investering loont zodra de funnel draait — omdat hij dan structureel nieuwe leads aantrekt.
 
 **Wat is het verschil met een customer journey?**
 Een customer journey beschrijft alle contactmomenten — ook na de aankoop. Een marketing funnel richt zich op de fase vóór de aankoop. De funnel is een onderdeel van de bredere journey.

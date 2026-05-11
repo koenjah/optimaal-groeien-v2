@@ -11,19 +11,23 @@ pullQuote: "Een goede coach lost jouw problemen niet op — hij zorgt dat jij ze
 statHighlight:
   value: "86%"
   label: "van gecoachte ondernemers rapporteert betere besluitvorming binnen 6 maanden (ICF, 2023)"
+keyTakeaways:
+  - "Kies een coach op aantoonbare resultaten, niet op charisma of volgersaantal."
+  - "Test elke coach met de vijf vragen uit dit artikel vóór je ja zegt."
+  - "Start met coaching als de groei stagneert — niet pas als het misgaat."
 ---
 
-Je hebt twintig mensen in dienst. De omzet klopt. Maar jij werkt zestig uur per week en het gevoel van controle glijdt langzaam weg. Je bent het probleem — en je weet het.
+Je hebt twintig mensen in dienst. De omzet klopt. Maar jij werkt zestig uur per week. Het gevoel van controle glijdt langzaam weg. Je bent het probleem — en je weet het.
 
-Dit is precies het moment waarop ondernemers beginnen te zoeken naar een business coach. En precies het moment waarop ze de verkeerde kiezen.
+Dit is precies het moment waarop ondernemers zoeken naar een business coach. En precies het moment waarop ze de verkeerde kiezen.
 
 ---
 
 ## Wat een goede coach doet — en wat niet
 
-Een business coach geeft je geen antwoorden. Hij stelt vragen die je dwingt ze zelf te vinden. Dat klinkt soft. Het is het tegendeel.
+Een business coach geeft je geen antwoorden. Hij stelt vragen. Die vragen dwingen jou de antwoorden zelf te vinden. Dat klinkt soft. Het is het tegendeel.
 
-Een consultant levert een rapport en vertrekt. Een coach blijft naast je staan terwijl jij het uitvoert. Dat is een fundamenteel verschil — zeker voor technische B2B bedrijven waar de uitvoering alles is.
+Een consultant levert een rapport en vertrekt. Een coach blijft naast je staan terwijl jij het uitvoert. Dat is een fundamenteel verschil. Zeker voor technische B2B bedrijven waar uitvoering alles is.
 
 Wat je van een serieuze coach kunt verwachten:
 
@@ -38,13 +42,27 @@ Wat je niet kunt verwachten:
 - Resultaat na drie sessies
 - Een standaardaanpak die voor elke directeur werkt
 
+> **Kern:** De juiste coach lost jouw problemen niet op. Hij zorgt dat jij leert ze zelf op te lossen — structureel.
+
+---
+
+## Goede coach versus slechte coach
+
+| Kenmerk | Goede coach | Slechte coach |
+|---|---|---|
+| **Resultaat meten** | Concrete doelen en harde meetpunten | "Dat voelen we gaandeweg" |
+| **Referenties** | Ondernemers die jij zelf mag benaderen | Geselecteerde testimonials op de website |
+| **Aanpak** | Aangepast aan jouw sector en groeifase | Standaard model voor iedereen |
+| **Ongemakkelijke vragen** | Gaat er direct naartoe | Blijft in de comfortzone |
+| **Eigen ervaring** | Heeft zelf een bedrijf gerund | Alleen theoretische achtergrond |
+
 ---
 
 ## Twee directeuren, twee coaches
 
-**Directeur A** — machinebouwbedrijf, 45 medewerkers — schakelde een coach in via een netwerkevenement. Charismatisch type, veel volgers op LinkedIn. Na acht maanden en tienduizenden euro's later had hij mooie modellen op papier. Zijn salesproces was nog steeds niet voorspelbaar. De coach had nooit gevraagd naar de werkelijke bottleneck: zijn eigen neiging om elk groot account zelf te managen.
+**Directeur A** — machinebouwbedrijf, 45 medewerkers — schakelde een coach in via een netwerkevenement. Charismatisch type. Veel volgers op LinkedIn. Na acht maanden en tienduizenden euro's had hij mooie modellen op papier. Zijn salesproces was nog steeds niet voorspelbaar. De coach had nooit gevraagd naar de echte bottleneck: zijn neiging om elk groot account zelf te managen.
 
-**Directeur B** — technisch installatiebedrijf, 30 mensen — koos iemand die hem in het tweede gesprek al oncomfortabel liet zitten. "Waarom heb jij nog steeds geen salesmanager aangesteld?" De coach had geen antwoord nodig. Hij wachtte. Directeur B had binnen een jaar een functionerend salesteam en werkte zelf vijftien uur minder per week.
+**Directeur B** — technisch installatiebedrijf, 30 mensen — koos iemand die hem al in het tweede gesprek oncomfortabel liet zitten. "Waarom heb jij nog steeds geen salesmanager aangesteld?" De coach wachtte. Hij had geen antwoord nodig. Directeur B had binnen een jaar een functionerend salesteam. Hij werkte zelf vijftien uur minder per week.
 
 Het verschil zit niet in de methode. Het zit in de bereidheid om naar de echte vraag te gaan.
 
@@ -52,28 +70,28 @@ Het verschil zit niet in de methode. Het zit in de bereidheid om naar de echte v
 
 ## 5 vragen die je aan elke coach moet stellen voordat je ja zegt
 
-Dit is geen beleefdheidsgesprek. Stel deze vragen, en luister goed naar wat er niet gezegd wordt.
+Dit is geen beleefdheidsgesprek. Stel deze vragen. Luister goed naar wat er niet gezegd wordt.
 
 **1. Welk bedrijf heb jij zelf gerund — en wat is er misgegaan?**
-Een coach zonder eigen ondernemerservaring kent jouw wereld niet van binnen. Vraag specifiek naar het falen. Hoe hij daarmee omging, vertelt je meer dan zijn successen.
+Een coach zonder ondernemerservaring kent jouw wereld niet van binnen. Vraag specifiek naar het falen. Hoe hij daarmee omging, vertelt je meer dan zijn successen.
 
 **2. Kun jij mij een referentie geven die ik zelf mag benaderen — niet één die jij kiest?**
 Geselecteerde testimonials zijn marketing. Een ondernemer die jij zelf opzoekt en belt, is bewijs. Een coach die hier moeite mee heeft, heeft iets te verbergen.
 
 **3. Hoe meet jij of de samenwerking werkt?**
-Als het antwoord vaag is — "dat voelen we gaandeweg" — loop weg. Een goede coach werkt met concrete doelen, tussentijdse check-ins en harde meetpunten. Gevoel is geen KPI.
+Als het antwoord vaag is — "dat voelen we gaandeweg" — loop weg. Een goede coach werkt met concrete doelen en harde meetpunten. Gevoel is geen KPI.
 
 **4. Wat gebeurt er als ik niet doe wat we afspreken?**
-Dit is een vreemde vraag. Stel hem toch. Een goede coach heeft hier een helder antwoord op. Hij is geen vriend — hij is een serieuze gesprekspartner die je bijhoudt aan je eigen woord.
+Dit is een vreemde vraag. Stel hem toch. Een goede coach heeft hier een helder antwoord op. Hij is geen vriend — hij houdt je aan je eigen woord.
 
 **5. Voor welk type ondernemer werkt jouw aanpak níet?**
-Iedere eerlijke coach kan dit beantwoorden. Als hij zegt "ik kan iedereen helpen", weet je genoeg.
+Iedere eerlijke coach kan dit beantwoorden. Zegt hij "ik kan iedereen helpen", weet je genoeg.
 
 ---
 
 ## Wanneer is het tijd?
 
-De meeste ondernemers wachten te lang. Ze denken dat coaching iets is voor als het echt misgaat. Het is juist het meest effectief op het moment dat alles goed lijkt te gaan — maar de groei begint te stagneren.
+De meeste ondernemers wachten te lang. Ze denken dat coaching iets is voor als het echt misgaat. Het is juist het meest effectief als alles goed lijkt te gaan — maar de groei begint te stagneren.
 
 Herken je dit?
 
@@ -88,7 +106,7 @@ Dan is het tijd. Niet over zes maanden.
 
 ## Hoe Optimaal Groeien werkt
 
-Optimaal Groeien is geen standaard coachingsbureau. Het is een [growth agency voor B2B ondernemers](/business-coach) — gebouwd voor de technische sector, met meer dan twintig jaar praktijkervaring in sales en marketing.
+Optimaal Groeien is geen standaard coachingsbureau. Het is een [growth agency voor B2B ondernemers](/business-coach). Gebouwd voor de technische sector. Met meer dan twintig jaar praktijkervaring in sales en marketing.
 
 De aanpak is concreet en in acht stappen:
 
@@ -127,7 +145,7 @@ Een coach van €3.000 per maand die je helpt €200.000 extra marge te realiser
 
 **Kan ik niet beter een salesmanager aannemen?**
 
-Een salesmanager voert uit. Een coach helpt jou de juiste keuzes maken en je leiderschap ontwikkelen. Begin met de strategie. Dan pas met de uitvoering.
+Een salesmanager voert uit. Een coach helpt jou de juiste keuzes maken. Begin met de strategie. Dan pas met de uitvoering.
 
 ---
 
@@ -135,6 +153,6 @@ Een salesmanager voert uit. Een coach helpt jou de juiste keuzes maken en je lei
 
 De beste [business coach voor B2B ondernemers](/business-coach) is niet degene met de meeste volgers. Het is degene die de juiste vragen stelt — ook als de antwoorden ongemakkelijk zijn.
 
-Kijk naar aantoonbare ervaring in jouw branche. Vraag om harde resultaten. Test de klik. En kies voor een aanpak die bewezen werkt, niet voor charisma.
+Kijk naar aantoonbare ervaring in jouw branche. Vraag om harde resultaten. Test de klik. Kies voor een aanpak die bewezen werkt, niet voor charisma.
 
 Vraag een gratis groeisessie aan. Na dat eerste gesprek weet je precies wat de volgende stap is — ongeacht of je verder gaat.

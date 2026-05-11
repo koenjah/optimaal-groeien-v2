@@ -11,9 +11,13 @@ pullQuote: "Een bureau neemt het werk over. Een coach zorgt dat jij het nooit me
 statHighlight:
   value: "40%"
   label: "meer marketingresultaat bij B2B-bedrijven die werken met een externe coach"
+keyTakeaways:
+  - "Kies een coach als je eigen team sterker wil worden."
+  - "Gebruik één strategie voor alle kanalen en bureaus."
+  - "Meet elke maand wat marketing concreet oplevert."
 ---
 
-Je geeft geld uit aan marketing. Een bureau, advertenties, misschien een freelancer. Maar niemand in jouw bedrijf weet precies wat het oplevert. En als het bureau stopt, staat je marketing stil.
+Je geeft geld uit aan marketing. Een bureau, advertenties, misschien een freelancer. Maar niemand in jouw bedrijf weet wat het oplevert. Als het bureau stopt, staat je marketing stil.
 
 Dat is het probleem. Niet het budget. Niet de markt. Maar de afhankelijkheid.
 
@@ -23,11 +27,21 @@ Dat is het probleem. Niet het budget. Niet de markt. Maar de afhankelijkheid.
 
 Dit onderscheid is de kern van alles.
 
-Een marketingbureau voert uit. Ze schrijven teksten, draaien campagnes en leveren een rapport. Als jij stopt met betalen, stopt het werk. Jouw team wordt er niet beter van.
+| Aspect | Marketingbureau | Marketing coach |
+|--------|----------------|-----------------|
+| Rol | Voert uit voor jou | Werkt met jou samen |
+| Resultaat | Campagnes en rapporten | Interne kennis en regie |
+| Na het contract | Marketing stopt | Jouw team blijft sterk |
+| Kosten | Per project of retainer | Per uur of traject |
+| Afhankelijkheid | Hoog | Laag |
 
-Een marketing coach doet iets anders. Die versterkt de interne capaciteit van jouw organisatie. Minder afhankelijkheid. Meer eigen regie. Een bureau neemt het werk over. Een coach zorgt dat jij het nooit meer uit handen hoeft te geven.
+Een marketingbureau voert uit. Ze schrijven teksten en draaien campagnes. Als jij stopt met betalen, stopt het werk. Jouw team wordt er niet beter van.
 
-Het verschil met een [business coach](https://optimaalgroeien.nl/business-coach) zit in de focus. Een business coach kijkt naar je hele bedrijf: strategie, team, processen, persoonlijke groei. Een marketing coach is smaller en daardoor scherper. Alleen marketing, maar tot op de bodem.
+Een marketing coach doet iets anders. Die versterkt je eigen mensen. Minder afhankelijkheid. Meer eigen regie.
+
+> **Kern:** Een bureau neemt het werk over. Een coach zorgt dat jij het nooit meer uit handen hoeft te geven.
+
+Het verschil met een [business coach](https://optimaalgroeien.nl/business-coach) zit in de focus. Een business coach kijkt naar je hele bedrijf. Strategie, team, processen, persoonlijke groei. Een marketing coach is smaller en daardoor scherper. Alleen marketing, maar tot op de bodem.
 
 ---
 
@@ -59,7 +73,7 @@ Iemand beheert LinkedIn. Iemand schrijft blogs. Iemand verstuurt nieuwsbrieven. 
 
 ### Je hebt groeidoelen maar geen plan
 
-Meer omzet, nieuwe markten, meer aanvragen. Prima ambities. Een coach helpt je van ambitie naar een concrete roadmap die je team direct uitvoert.
+Meer omzet, nieuwe markten, meer aanvragen. Prima ambities. Een coach vertaalt ambitie naar een concrete roadmap. Eén die je team direct uitvoert.
 
 ---
 
@@ -67,13 +81,13 @@ Meer omzet, nieuwe markten, meer aanvragen. Prima ambities. Een coach helpt je v
 
 Een goed traject is geen reeks willekeurige sessies. Het heeft een logische volgorde.
 
-**Eerste gesprek.** Je coach luistert. Wat doe je nu? Wat werkt? Waar loopt het vast? Dit gesprek duurt ongeveer een uur en is geen verkooppraatje. Het is een diagnose.
+**Eerste gesprek.** Je coach luistert. Wat doe je nu? Wat werkt? Waar loopt het vast? Dit gesprek duurt een uur. Het is een diagnose, geen verkooppraatje.
 
-**Diagnose.** De coach analyseert je huidige marketing: kanalen, budget, content, resultaten. Hij of zij spreekt ook kort met relevante mensen in je team. Daarna ligt er een eerlijk beeld op tafel.
+**Diagnose.** De coach analyseert je huidige marketing. Kanalen, budget, content, resultaten. Hij of zij spreekt ook kort met mensen in je team. Daarna ligt er een eerlijk beeld op tafel.
 
-**Plan.** Geen dik rapport. Wel een helder document: positionering, prioriteiten, kanalen en KPI's. Iets wat je team direct kan gebruiken.
+**Plan.** Geen dik rapport. Wel een helder document. Positionering, prioriteiten, kanalen en KPI's. Iets wat je team direct kan gebruiken.
 
-**Begeleiding.** Dit is het echte werk. Biweeklijkse sessies. Vragen beantwoorden. Keuzes doordenken. Je team coachen op concrete campagnes. De coach is beschikbaar, niet alleen in vergadering.
+**Begeleiding.** Dit is het echte werk. Tweewekelijkse sessies. Vragen beantwoorden. Keuzes doordenken. Je team coachen op concrete campagnes. De coach is beschikbaar, niet alleen in vergadering.
 
 **Evaluatie en bijsturen.** Elke vier tot zes weken kijk je samen terug. Wat werkte? Wat niet? Waar stuur je bij? Marketing is geen set-and-forget. Het is een doorlopend proces.
 
@@ -91,11 +105,11 @@ B2B marketing is niet overal aanwezig zijn. Het is kiezen. LinkedIn of SEO? E-ma
 
 ### Budget slimmer verdelen
 
-Veel B2B-bedrijven besteden te veel aan dure advertenties en te weinig aan organische groei. Een coach helpt je budget anders te verdelen. Meer resultaat, niet per se meer geld.
+Veel B2B-bedrijven betalen te veel voor advertenties. Te weinig voor organische groei. Een coach helpt je budget anders te verdelen. Meer resultaat, niet meer geld.
 
 ### Je team sterker maken
 
-De coach werkt met jouw echte projecten als lesmateriaal. Zo bouw je interne expertise op die blijft, ook als het traject afloopt.
+De coach werkt met jouw echte projecten als lesmateriaal. Zo bouw je interne expertise op. Die blijft, ook als het traject afloopt.
 
 ### Meten en bijsturen
 
@@ -105,16 +119,16 @@ De coach werkt met jouw echte projecten als lesmateriaal. Zo bouw je interne exp
 
 ## Wat kost een marketing coach?
 
-De tarieven voor een ervaren B2B marketing coach liggen tussen de 150 en 350 euro per uur. De prijs hangt af van ervaring en complexiteit.
+De tarieven liggen tussen de 150 en 350 euro per uur. De prijs hangt af van ervaring en complexiteit.
 
 Er zijn verschillende vormen:
 
 - **Uurtarief:** Flexibel, maar mist continuïteit.
 - **Retainer:** Vast aantal uren per maand. De coach leert je bedrijf steeds beter kennen.
-- **Traject:** Een programma van 3 tot 6 maanden met een duidelijk begin en eind.
+- **Traject:** Een programma van 3 tot 6 maanden. Duidelijk begin en eind.
 - **Hybride model:** Strategie door de coach, uitvoering door een [digital growth agency](https://optimaalgroeien.nl/digital-growth-agency). Ideaal als je team nog niet alles zelf kan.
 
-De investering verdient zich terug via efficiënter budget, betere leads en een team dat zelfstandig werkt. Voor de meeste B2B-bedrijven is dat binnen 3 tot 6 maanden zichtbaar.
+De investering verdient zich terug. Via efficiënter budget, betere leads en een team dat zelfstandig werkt. Voor de meeste B2B-bedrijven is dat binnen 3 tot 6 maanden zichtbaar.
 
 ---
 
@@ -122,17 +136,17 @@ De investering verdient zich terug via efficiënter budget, betere leads en een 
 
 Zes dingen om op te letten:
 
-**1. Ervaring in B2B marketing.** B2B is fundamenteel anders dan B2C. Langere verkoopcycli, meerdere beslissers, rationelere argumenten.
+**1. Ervaring in B2B marketing.** B2B is anders dan B2C. Langere verkoopcycli, meerdere beslissers, rationelere argumenten.
 
-**2. Sectorkennis.** Een coach die de technische sector kent, begrijpt hoe engineers denken en hoe inkoopprocessen werken.
+**2. Sectorkennis.** Een coach die de technische sector kent, begrijpt hoe engineers denken. En hoe inkoopprocessen werken.
 
 **3. Aantoonbare resultaten.** Vraag naar cases. Concrete cijfers zijn het beste bewijs.
 
-**4. Praktische aanpak.** Je hebt iemand nodig die ook de uitvoering begrijpt. Theorie is leuk, resultaten komen van actie.
+**4. Praktische aanpak.** Je hebt iemand nodig die ook de uitvoering begrijpt. Resultaten komen van actie, niet theorie.
 
 **5. Chemie en communicatie.** Je gaat intensief samenwerken. Vertrouw op je gevoel.
 
-**6. Flexibiliteit en beschikbaarheid.** Marketing vraagt soms snel schakelen. Een coach die pas over twee weken tijd heeft, is minder waardevol.
+**6. Flexibiliteit en beschikbaarheid.** Marketing vraagt snel schakelen. Een coach die pas over twee weken tijd heeft, is minder waardevol.
 
 ---
 
@@ -142,6 +156,6 @@ Als je budget uitgeeft en niet weet wat het oplevert, is dat het signaal. Niet o
 
 Een coach geeft je geen trucjes. Je krijgt een strategie, een team dat begrijpt wat het doet en inzicht in wat marketing werkelijk oplevert.
 
-De vraag is niet of je het je kunt veroorloven. De vraag is of je het je kunt veroorloven om door te gaan zoals het nu gaat.
+De vraag is niet of je het je kunt veroorloven. De vraag is of je door kunt gaan zoals het nu gaat.
 
 **Plan een gratis groeiscan bij Optimaal Groeien.** We kijken samen naar je situatie, je doelen en de kansen in je markt. Geen verplichtingen, wel direct bruikbare inzichten.
