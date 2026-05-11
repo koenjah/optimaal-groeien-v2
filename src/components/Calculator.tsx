@@ -50,7 +50,7 @@ export const OmzetCalculator: React.FC<CalculatorProps> = ({ onCalculate }) => {
       
       <div className="relative z-10">
         <div className="flex justify-between items-center mb-8">
-          <div className="text-[10px] font-mono text-slate-300 uppercase tracking-[0.3em]">Module: Growth_Calc_v4</div>
+          <div className="text-[10px] font-mono text-slate-500 uppercase tracking-[0.3em]">Module: Growth_Calc_v4</div>
           <div className="flex gap-1">
              <div className="w-1 h-1 rounded-full bg-slate-200" />
              <div className="w-1 h-1 rounded-full bg-slate-200" />
@@ -60,7 +60,7 @@ export const OmzetCalculator: React.FC<CalculatorProps> = ({ onCalculate }) => {
 
         <div className="grid grid-cols-2 gap-4 mb-8">
           <div className="space-y-1.5">
-            <label htmlFor="calc-ordervalue" className="text-[9px] font-display font-bold text-slate-400 uppercase tracking-widest">Orderwaarde</label>
+            <label htmlFor="calc-ordervalue" className="text-[9px] font-display font-bold text-slate-600 uppercase tracking-widest">Orderwaarde</label>
             <div className="relative">
                <span className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-300 text-xs">€</span>
                <input
@@ -73,7 +73,7 @@ export const OmzetCalculator: React.FC<CalculatorProps> = ({ onCalculate }) => {
             </div>
           </div>
           <div className="space-y-1.5">
-            <label htmlFor="calc-conversie" className="text-[9px] font-display font-bold text-slate-400 uppercase tracking-widest">Conversie (%)</label>
+            <label htmlFor="calc-conversie" className="text-[9px] font-display font-bold text-slate-600 uppercase tracking-widest">Conversie (%)</label>
             <input
               id="calc-conversie"
               type="number"
@@ -83,7 +83,7 @@ export const OmzetCalculator: React.FC<CalculatorProps> = ({ onCalculate }) => {
             />
           </div>
           <div className="space-y-1.5">
-            <label htmlFor="calc-leads" className="text-[9px] font-display font-bold text-slate-400 uppercase tracking-widest">Leads / mnd</label>
+            <label htmlFor="calc-leads" className="text-[9px] font-display font-bold text-slate-600 uppercase tracking-widest">Leads / mnd</label>
             <input
               id="calc-leads"
               type="number"
@@ -93,7 +93,7 @@ export const OmzetCalculator: React.FC<CalculatorProps> = ({ onCalculate }) => {
             />
           </div>
           <div className="space-y-1.5">
-            <label htmlFor="calc-type" className="text-[9px] font-display font-bold text-slate-400 uppercase tracking-widest">Type</label>
+            <label htmlFor="calc-type" className="text-[9px] font-display font-bold text-slate-600 uppercase tracking-widest">Type</label>
             <select
               id="calc-type"
               value={branch}
@@ -124,11 +124,11 @@ export const OmzetCalculator: React.FC<CalculatorProps> = ({ onCalculate }) => {
             >
               <div className="flex justify-between items-end mb-6">
                  <div>
-                    <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest mb-1">Jaarlijkse Groei</div>
+                    <div className="text-[9px] font-mono text-slate-600 uppercase tracking-widest mb-1">Jaarlijkse Groei</div>
                     <div className="text-3xl font-display font-black text-brand-primary tracking-tighter">{formatEuro(result.extraYearly)}</div>
                  </div>
                  <div className="text-right">
-                    <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest mb-1">Maand Extra</div>
+                    <div className="text-[9px] font-mono text-slate-600 uppercase tracking-widest mb-1">Maand Extra</div>
                     <div className="text-lg font-display font-bold text-brand-accent">{formatEuro(result.extraMonthly)}</div>
                  </div>
               </div>

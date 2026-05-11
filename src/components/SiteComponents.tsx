@@ -123,7 +123,7 @@ export const Footer = () => (
         </div>
 
         <div>
-          <h4 className="text-[10px] font-bold uppercase tracking-widest text-brand-lime mb-8">Navigatie</h4>
+          <h3 className="text-[10px] font-bold uppercase tracking-widest text-brand-lime mb-8">Navigatie</h3>
           <ul className="space-y-4 text-sm text-white/50">
             <li><a href="#" className="hover:text-white transition-colors">Hoe we helpen</a></li>
             <li><a href="#team" className="hover:text-white transition-colors">Het team</a></li>
@@ -133,7 +133,7 @@ export const Footer = () => (
         </div>
 
         <div>
-          <h4 className="text-[10px] font-bold uppercase tracking-widest text-brand-lime mb-8">Contact</h4>
+          <h3 className="text-[10px] font-bold uppercase tracking-widest text-brand-lime mb-8">Contact</h3>
           <ul className="space-y-4 text-sm text-white/50">
             <li>info@optimaalgroeien.nl</li>
             <li>+31 (0) 57 270 0246</li>
@@ -142,7 +142,7 @@ export const Footer = () => (
         </div>
 
         <div>
-          <h4 className="text-[10px] font-bold uppercase tracking-widest text-brand-lime mb-8">Legal</h4>
+          <h3 className="text-[10px] font-bold uppercase tracking-widest text-brand-lime mb-8">Legal</h3>
           <ul className="space-y-4 text-sm text-white/50">
             <li>Privacybeleid</li>
             <li>Algemene Voorwaarden</li>
@@ -264,38 +264,46 @@ export const PartnerHero = () => {
 
 export const ToolsSection = () => {
   const tools = [
-    { name: "Meta", src: "/images/logos/meta.svg" },
-    { name: "Google", src: "/images/logos/google.svg" },
-    { name: "HubSpot", src: "/images/logos/hubspot.svg" },
-    { name: "Salesforce", src: "/images/logos/salesforce.svg" },
-    { name: "LinkedIn", src: "/images/logos/linkedin.svg" },
-    { name: "Make", src: "/images/logos/make.svg" },
-    { name: "Claude AI", src: "/images/logos/claude.svg" },
-    { name: "OpenAI", src: "/images/logos/openai.svg" },
-    { name: "Gemini", src: "/images/logos/gemini.svg" },
-    { name: "Adobe", src: "/images/logos/adobe.svg" },
-    { name: "Brevo", src: "/images/logos/brevo.svg" },
+    { name: "Meta", src: "/images/logos/meta.webp", w: 397, h: 80 },
+    { name: "Google", src: "/images/logos/google.webp", w: 242, h: 80 },
+    { name: "HubSpot", src: "/images/logos/hubspot.webp", w: 279, h: 80 },
+    { name: "Salesforce", src: "/images/logos/salesforce.webp", w: 114, h: 80 },
+    { name: "LinkedIn", src: "/images/logos/linkedin.webp", w: 301, h: 80 },
+    { name: "Make", src: "/images/logos/make.webp", w: 388, h: 80 },
+    { name: "Claude AI", src: "/images/logos/claude.webp", w: 704, h: 80 },
+    { name: "OpenAI", src: "/images/logos/openai.webp", w: 290, h: 80 },
+    { name: "Gemini", src: "/images/logos/gemini.webp", w: 321, h: 80 },
+    { name: "Adobe", src: "/images/logos/adobe.webp", w: 303, h: 80 },
+    { name: "Brevo", src: "/images/logos/brevo.webp", w: 270, h: 80 },
   ];
   return (
-    <section className="py-20 px-6 bg-brand-bg border-y border-brand-soft">
-      <div className="max-w-7xl mx-auto text-center mb-14">
+    <section className="py-20 bg-brand-bg border-y border-brand-soft overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 text-center mb-14">
         <p className="text-sm font-bold uppercase tracking-widest text-brand-primary/40 mb-3">Wij werken met de beste tools</p>
         <p className="text-brand-primary/50 text-sm max-w-2xl mx-auto leading-relaxed">
           Wij begrijpen de complexiteit van jullie bedrijf, doelgroep en de markt. Dat stelt ons in staat om proactief de volledige regie over jullie groei te nemen, terwijl jij je focust op de operatie.
         </p>
       </div>
-      <div className="max-w-5xl mx-auto">
-        <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-10">
-          {tools.map((tool, i) => (
+      <div className="relative">
+        <div className="absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-brand-bg to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-brand-bg to-transparent z-10 pointer-events-none" />
+        <div
+          className="flex items-center"
+          style={{ animation: 'marquee 32s linear infinite' }}
+        >
+          {[...tools, ...tools].map((tool, i) => (
             <div
               key={i}
-              className="flex items-center justify-center transition-all duration-300 hover:-translate-y-0.5"
+              className="flex items-center justify-center shrink-0 px-8"
               title={tool.name}
             >
-              <img 
-                src={tool.src} 
-                alt={tool.name} 
-                className="h-8 lg:h-10 w-auto max-w-[120px] lg:max-w-[160px] object-contain opacity-60 hover:opacity-100 transition-all duration-300"
+              <img
+                src={tool.src}
+                alt={tool.name}
+                width={tool.w}
+                height={tool.h}
+                className="h-8 lg:h-9 w-auto object-contain opacity-50 hover:opacity-90 transition-opacity duration-300"
+                loading="lazy"
               />
             </div>
           ))}
@@ -378,7 +386,7 @@ export const HoeWeHelpenSection = () => (
                    <s.icon size={18} className="text-brand-primary/40 group-hover:text-brand-accent transition-colors" />
                 </div>
                 <div>
-                  <h4 className="font-display font-bold text-brand-primary mb-1 text-lg">{s.title}</h4>
+                  <h3 className="font-display font-bold text-brand-primary mb-1 text-lg">{s.title}</h3>
                   <p className="text-sm text-brand-primary/50 font-light leading-relaxed">{s.desc}</p>
                 </div>
               </div>
@@ -581,7 +589,7 @@ export const SamenAanDeSlagSection = () => (
             <div className={`w-16 h-16 rounded-[20px] font-display font-black text-xl flex items-center justify-center mb-8 transition-all ${s.highlight ? 'bg-brand-accent text-white shadow-xl shadow-brand-accent/20 scale-110' : 'bg-brand-soft text-brand-primary border border-brand-soft'}`}>
               {i+1}
             </div>
-            <h4 className="text-lg font-display font-bold text-brand-primary mb-3 leading-tight">{s.t}</h4>
+            <h3 className="text-lg font-display font-bold text-brand-primary mb-3 leading-tight">{s.t}</h3>
             <p className="text-brand-primary/50 leading-relaxed font-light text-sm px-2">{s.d}</p>
           </div>
         ))}

@@ -80,3 +80,8 @@
 .soft-glow {
   @apply absolute -top-24 -right-24 w-96 h-96 bg-brand-lime/10 blur-[120px] pointer-events-none;
 }
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
