@@ -54,7 +54,7 @@ export const Navbar = ({ activePage, setActivePage }: { activePage: string, setA
             <a
               key={item.label}
               href={`#${item.id}`}
-              className={`text-[11px] uppercase tracking-[0.15em] font-bold transition-colors ${isScrolled ? 'text-brand-primary/70 hover:text-brand-accent' : 'text-white/70 hover:text-white'}`}
+              className={`text-[11px] uppercase tracking-[0.15em] font-bold transition-colors ${isScrolled ? 'text-brand-primary/70 hover:text-brand-accent' : 'text-brand-primary/70 hover:text-brand-accent'}`}
             >
               {item.label}
             </a>
@@ -70,7 +70,7 @@ export const Navbar = ({ activePage, setActivePage }: { activePage: string, setA
           </button>
         </div>
 
-        <button aria-label={isOpen ? 'Menu sluiten' : 'Menu openen'} className={`${isScrolled ? 'text-brand-primary' : 'text-white'} md:hidden`} onClick={() => setIsOpen(!isOpen)}>
+        <button aria-label={isOpen ? 'Menu sluiten' : 'Menu openen'} className="text-brand-primary md:hidden" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
@@ -174,20 +174,21 @@ export const PartnerHero = () => {
   }, []);
 
   return (
-    <section className="bg-brand-primary pt-32 lg:pt-40 pb-0 px-6 overflow-hidden relative">
-      <div className="absolute inset-0 blueprint-grid opacity-[0.06] pointer-events-none" />
-      <div className="absolute top-20 left-20"><div className="technical-dot" /><div className="corner-bracket corner-tl" /></div>
-      <div className="absolute top-20 right-20"><div className="technical-dot" /><div className="corner-bracket corner-tr" /></div>
+    <section className="hero-warm min-h-screen relative overflow-hidden pt-32 lg:pt-40 pb-20 px-6">
+      {/* Decorative ambient blobs */}
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-brand-accent/5 blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-amber-300/8 blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/3 w-[300px] h-[300px] rounded-full bg-brand-accent/4 blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-          <div className="lg:w-1/2 text-left pb-16">
-            <div className="inline-flex items-center gap-3 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-wider font-bold text-white/60 mb-8">
-              <span className="w-2 h-2 bg-brand-lime rounded-full animate-pulse" />
+          <div className="lg:w-1/2 text-left pb-8 lg:pb-16">
+            <div className="label-pill">
+              <span className="w-2 h-2 bg-brand-accent rounded-full animate-pulse" />
               Dit is ons team — Wij helpen je groeien
             </div>
 
-            <h1 className="text-4xl lg:text-[3.5rem] font-display font-bold text-white leading-[1.1] mb-8 tracking-tight max-w-xl">
+            <h1 className="text-4xl lg:text-[3.5rem] font-display font-bold text-brand-primary leading-[1.1] mb-8 tracking-tight max-w-xl">
                Commercieel Partner voor B2B bedrijven in de{' '}
                <span className="relative inline-block">
                  <AnimatePresence mode="wait">
@@ -205,7 +206,7 @@ export const PartnerHero = () => {
                </span>
             </h1>
 
-            <p className="text-lg text-white/72 mb-10 max-w-lg leading-relaxed font-light">
+            <p className="text-lg text-brand-ink/80 mb-10 max-w-lg leading-relaxed font-light">
                Veel technische bedrijven groeien op toeval en netwerk. Wij veranderen dat in een voorspelbare commerciële machine door AI, Branding, Marketing & Sales met elkaar te verbinden.
             </p>
 
@@ -218,28 +219,28 @@ export const PartnerHero = () => {
               </button>
               <button
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="w-full sm:w-auto px-8 py-5 bg-[#eeeeec] text-brand-primary rounded-2xl font-display font-bold transition-all hover:scale-[1.02] active:scale-[0.98] border-2 border-[#cfd62f] flex items-center justify-center gap-2 text-base"
+                className="w-full sm:w-auto px-8 py-5 bg-white text-brand-primary rounded-2xl font-display font-bold transition-all hover:scale-[1.02] active:scale-[0.98] border-2 border-amber-200 shadow-sm flex items-center justify-center gap-2 text-base"
               >
                 Contact opnemen
               </button>
             </div>
             <div className="flex items-center gap-4 mt-6">
                <div className="flex -space-x-2">
-                 <img src="/images/team-1-avatar.webp" className="w-9 h-9 rounded-full border-2 border-brand-primary object-cover object-[center_25%]" alt="Team" loading="eager" />
-                 <img src="/images/team-phone-avatar.webp" className="w-9 h-9 rounded-full border-2 border-brand-primary object-cover object-top" alt="Team" loading="eager" />
-                 <img src="/images/team-4-avatar.webp" className="w-9 h-9 rounded-full border-2 border-brand-primary object-cover object-top" alt="Team" loading="eager" />
+                 <img src="/images/team-1-avatar.webp" className="w-9 h-9 rounded-full border-2 border-white object-cover object-[center_25%]" alt="Team" loading="eager" />
+                 <img src="/images/team-phone-avatar.webp" className="w-9 h-9 rounded-full border-2 border-white object-cover object-top" alt="Team" loading="eager" />
+                 <img src="/images/team-4-avatar.webp" className="w-9 h-9 rounded-full border-2 border-white object-cover object-top" alt="Team" loading="eager" />
                </div>
                <div className="flex flex-col">
-                  <span className="text-xs text-white font-bold opacity-70 leading-none mb-1">Stefan & team</span>
-                  <span className="text-[10px] text-brand-lime font-bold uppercase tracking-widest leading-none">Altijd bereikbaar</span>
+                  <span className="text-xs text-brand-ink font-bold opacity-70 leading-none mb-1">Stefan & team</span>
+                  <span className="text-[10px] text-brand-accent font-bold uppercase tracking-widest leading-none">Altijd bereikbaar</span>
                </div>
             </div>
 
-            <div className="mt-14 pt-8 border-t border-white/10 flex flex-wrap gap-8 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
-               <div className="text-xs font-bold uppercase tracking-widest text-white">Vertrouwd door:</div>
-               <span className="text-xs font-display font-bold text-white">Veldkamp</span>
-               <span className="text-xs font-display font-bold text-white">Equans</span>
-               <span className="text-xs font-display font-bold text-white">Carbify</span>
+            <div className="mt-14 pt-8 border-t border-amber-100 flex flex-wrap gap-8 opacity-50 grayscale hover:grayscale-0 transition-all duration-700">
+               <div className="text-xs font-bold uppercase tracking-widest text-brand-ink">Vertrouwd door:</div>
+               <span className="text-xs font-display font-bold text-brand-ink">Veldkamp</span>
+               <span className="text-xs font-display font-bold text-brand-ink">Equans</span>
+               <span className="text-xs font-display font-bold text-brand-ink">Carbify</span>
             </div>
           </div>
 
@@ -247,12 +248,10 @@ export const PartnerHero = () => {
             <div className="relative z-10 scale-95 lg:scale-100 lg:-rotate-1 lg:hover:rotate-0 transition-transform duration-700">
                <OmzetCalculator onCalculate={(val) => setExtraYearly(val)} />
             </div>
-            <div className="absolute -top-6 -right-6 w-28 h-28 border border-brand-lime/20 rounded-full animate-pulse lg:block hidden" />
-            <div className="absolute -bottom-6 -left-6 w-44 h-44 border border-white/5 rounded-full lg:block hidden" />
+            <div className="absolute -top-6 -right-6 w-28 h-28 border border-brand-accent/15 rounded-full animate-pulse lg:block hidden" />
+            <div className="absolute -bottom-6 -left-6 w-44 h-44 border border-amber-200/40 rounded-full lg:block hidden" />
           </div>
         </div>
-
-        {/* Removed team photo band per request */}
       </div>
     </section>
   );
@@ -273,7 +272,7 @@ export const ToolsSection = () => {
     { name: "Brevo", src: "/images/logos/brevo.webp", w: 122, h: 36 },
   ];
   return (
-    <section className="py-20 bg-brand-bg border-y border-brand-soft overflow-hidden">
+    <section className="py-20 bg-[#FFFAF4] border-y border-amber-100 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 text-center mb-14">
         <p className="text-sm font-bold uppercase tracking-widest text-brand-primary/75 mb-3">Wij werken met de beste tools</p>
         <p className="text-brand-primary/75 text-sm max-w-2xl mx-auto leading-relaxed">
@@ -281,8 +280,8 @@ export const ToolsSection = () => {
         </p>
       </div>
       <div className="relative">
-        <div className="absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-brand-bg to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-brand-bg to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-[#FFFAF4] to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-[#FFFAF4] to-transparent z-10 pointer-events-none" />
         <div
           className="flex items-center"
           style={{ animation: 'marquee 32s linear infinite' }}
@@ -310,7 +309,7 @@ export const ToolsSection = () => {
 };
 
 export const HerkenJeDitSection = () => (
-  <section className="py-24 px-6 bg-brand-bg">
+  <section className="py-24 px-6 bg-white">
     <div className="max-w-7xl mx-auto">
       <div className="flex flex-col lg:flex-row gap-12 items-start mb-16">
         <div className="lg:w-1/2">
@@ -336,9 +335,9 @@ export const HerkenJeDitSection = () => (
           { title: "Je doet het er 'even bij'", text: "Commercie is iets wat je doet tussen de bedrijven door. Er is geen vast moment, geen vast proces en daardoor geen rust." },
           { title: "Cijfers? Die zitten in je hoofd", text: "Je voelt wel hoe het gaat, maar je hebt geen dashboard dat je vertelt waar de beste kansen liggen. Je stuurt op je onderbuik." }
         ].map((item, i) => (
-          <div key={i} className="group p-8 bg-white border border-brand-soft rounded-[24px] transition-all hover:shadow-lg hover:shadow-brand-primary/5 hover:-translate-y-1">
+          <div key={i} className="warm-card p-8">
             <div className="mb-5 flex items-center justify-between">
-               <div className="w-10 h-10 bg-brand-lime/10 rounded-xl flex items-center justify-center text-brand-accent">
+               <div className="w-10 h-10 bg-amber-50 rounded-xl flex items-center justify-center text-brand-accent">
                   <Plus size={20} />
                </div>
                <span className="guide-badge">Herkenbaar?</span>
@@ -353,8 +352,8 @@ export const HerkenJeDitSection = () => (
 );
 
 export const HoeWeHelpenSection = () => (
-  <section id="diensten" className="py-24 px-6 bg-white overflow-hidden relative">
-    <div className="absolute top-0 left-0 w-full h-px bg-brand-soft" />
+  <section id="diensten" className="py-24 px-6 bg-[#FFFAF4] overflow-hidden relative">
+    <div className="absolute top-0 left-0 w-full h-px bg-amber-100" />
     <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-start">
       <div className="lg:w-3/5">
         <div className="label-pill">Hoe we je helpen</div>
@@ -378,8 +377,8 @@ export const HoeWeHelpenSection = () => (
               { icon: CheckCircle2, title: "Transparante cijfers", desc: "In één oogopslag zien hoe het gaat. Gewoon op je telefoon." }
             ].map((s, i) => (
               <div key={i} className="flex gap-4 group">
-                <div className="w-11 h-11 bg-brand-soft border border-brand-soft rounded-[16px] flex items-center justify-center shrink-0 mt-0.5 group-hover:border-brand-lime/40 group-hover:bg-brand-lime/10 transition-all">
-                   <s.icon size={18} className="text-brand-primary/75 group-hover:text-brand-accent transition-colors" />
+                <div className="w-11 h-11 bg-brand-accent/10 border border-amber-100 rounded-[16px] flex items-center justify-center shrink-0 mt-0.5 group-hover:border-brand-accent/30 group-hover:bg-brand-accent/15 transition-all">
+                   <s.icon size={18} className="text-brand-accent transition-colors" />
                 </div>
                 <div>
                   <h3 className="font-display font-bold text-brand-primary mb-1 text-lg">{s.title}</h3>
@@ -391,7 +390,7 @@ export const HoeWeHelpenSection = () => (
       </div>
 
       <div className="lg:w-2/5 w-full lg:sticky lg:top-28 space-y-6">
-        <div className="rounded-[24px] overflow-hidden shadow-lg border border-brand-soft">
+        <div className="warm-card">
           <img src="/images/team-1-lg.webp" srcSet="/images/team-1-sm.webp 480w, /images/team-1-lg.webp 800w" sizes="(max-width: 768px) 100vw, 50vw" alt="Samenwerken bij Optimaal Groeien" className="w-full h-56 object-cover object-[center_20%]" loading="lazy" />
           <div className="p-5 bg-white">
             <p className="text-sm font-display font-bold text-brand-primary">Samen werken we aan jouw groei.</p>
@@ -402,8 +401,8 @@ export const HoeWeHelpenSection = () => (
         <div className="bg-brand-primary p-10 text-white rounded-[28px] relative overflow-hidden shadow-xl">
           <div className="soft-glow !bg-brand-lime/10" />
           <div className="text-2xl font-display font-bold leading-tight mb-6 relative z-10 text-white">
-            “Wij ontzorgen je echt, <br />
-            <span className="text-brand-lime">geen losse flodders.</span>”
+            "Wij ontzorgen je echt, <br />
+            <span className="text-brand-lime">geen losse flodders.</span>"
           </div>
           <p className="text-white/70 mb-8 relative z-10 leading-relaxed font-light text-sm">
             We zijn geen bureau dat alleen maar rapporten stuurt. We zijn je partner die de mouwen opstroopt.
@@ -431,7 +430,7 @@ export const HoeWeHelpenSection = () => (
 );
 
 export const TeamSection = () => (
-  <section id="team" className="py-24 px-6 bg-brand-warm">
+  <section id="team" className="py-24 px-6 bg-white border-y border-amber-100">
     <div className="max-w-7xl mx-auto">
       <div className="flex flex-col lg:flex-row gap-12 items-center mb-16">
         <div className="lg:w-1/2">
@@ -479,15 +478,14 @@ export const TeamSection = () => (
 );
 
 export const KlantverhalenSection = () => (
-  <section id="cases" className="py-24 px-6 bg-brand-primary relative overflow-hidden">
-    <div className="absolute inset-0 blueprint-grid opacity-[0.05] pointer-events-none" />
+  <section id="cases" className="py-24 px-6 bg-white relative overflow-hidden">
     <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-end mb-16">
       <div className="lg:w-1/2">
-        <div className="label-pill !bg-white/10 !text-white !border-none">Kijk mee bij anderen</div>
-        <h2 className="text-3xl lg:text-5xl font-display font-bold text-white mb-5 tracking-tight leading-tight">
-          Succes is geen toeval, <br /><span className="text-brand-lime">het is een keuze.</span>
+        <div className="label-pill">Kijk mee bij anderen</div>
+        <h2 className="text-3xl lg:text-5xl font-display font-bold text-brand-primary mb-5 tracking-tight leading-tight">
+          Succes is geen toeval, <br /><span className="text-brand-accent">het is een keuze.</span>
         </h2>
-        <p className="text-lg text-white/65 max-w-xl font-light leading-relaxed">
+        <p className="text-lg text-brand-ink/75 max-w-xl font-light leading-relaxed">
           Geen saaie grafieken, maar echte verhalen van bedrijven die hun commercie voorgoed hebben veranderd.
         </p>
       </div>
@@ -500,25 +498,25 @@ export const KlantverhalenSection = () => (
           { name: "Equans", sector: "Techniek", res: "Beter bereik", desc: "Beslissers in de energiemarkt wisten hen niet te vinden. Nu staan ze overal bovenaan en weten klanten wie ze zijn." },
           { name: "Plintenfabriek", sector: "Machinebouw", res: "Marktleider", desc: "Alles werd handmatig gedaan. Nu lopen hun salesprocessen via een slim systeem dat nooit slaapt." },
         ].map((c, i) => (
-          <div key={i} className="group bg-white/[0.03] border border-white/10 p-8 hover:bg-white/[0.06] transition-all rounded-[24px] relative overflow-hidden">
-            <div className="absolute top-0 right-0 p-6 opacity-10">
-               <Star size={40} className="text-white" />
+          <div key={i} className="warm-card group p-8 relative">
+            <div className="absolute top-0 right-0 p-6 opacity-5">
+               <Star size={40} className="text-brand-accent" />
             </div>
             <div className="flex justify-between items-start mb-8 relative z-10">
               <div>
-                <h3 className="text-xl font-display font-bold text-white mb-1 tracking-tight">{c.name}</h3>
-                <div className="text-[11px] uppercase tracking-widest text-white/55 font-bold">{c.sector}</div>
+                <h3 className="text-xl font-display font-bold text-brand-primary mb-1 tracking-tight">{c.name}</h3>
+                <div className="text-[11px] uppercase tracking-widest text-brand-ink/55 font-bold">{c.sector}</div>
               </div>
-              <div className="px-3 py-1 bg-brand-accent text-slate-900 text-[10px] font-bold uppercase tracking-widest rounded-full">
+              <div className="px-3 py-1 bg-brand-accent text-white text-[10px] font-bold uppercase tracking-widest rounded-full">
                 {c.res}
               </div>
             </div>
 
             <div className="relative z-10">
-              <p className="text-white/72 leading-relaxed font-light mb-8 text-sm min-h-[4rem]">
+              <p className="text-brand-ink/75 leading-relaxed font-light mb-8 text-sm min-h-[4rem]">
                 {c.desc}
               </p>
-              <button className="text-white/65 text-[11px] font-bold uppercase tracking-widest flex items-center gap-2 group-hover:text-brand-lime transition-colors">
+              <button className="text-brand-ink/55 text-[11px] font-bold uppercase tracking-widest flex items-center gap-2 group-hover:text-brand-accent transition-colors">
                 Hun verhaal lezen <ArrowRight size={14} />
               </button>
             </div>
@@ -530,13 +528,12 @@ export const KlantverhalenSection = () => (
 );
 
 export const OnzeBelofteSection = () => (
-  <section className="py-24 px-6 bg-brand-primary relative overflow-hidden">
-    <div className="absolute inset-0 blueprint-grid opacity-[0.04] pointer-events-none" />
+  <section className="py-24 px-6 bg-[#FFFAF4] relative overflow-hidden">
     <div className="max-w-7xl mx-auto relative z-10">
       <div className="text-center mb-16">
-        <div className="label-pill !bg-white/10 !text-white !border-none mx-auto">Geen kleine lettertjes</div>
-        <h2 className="text-4xl lg:text-5xl font-display font-bold text-white mb-6 tracking-tight">Onze belofte aan jou.</h2>
-        <p className="text-lg text-white/72 font-light max-w-xl mx-auto">Wij geloven zo sterk in wat we doen, dat we het risico graag bij onszelf leggen. Zo kun jij met een gerust hart beginnen.</p>
+        <div className="label-pill mx-auto">Geen kleine lettertjes</div>
+        <h2 className="text-4xl lg:text-5xl font-display font-bold text-brand-primary mb-6 tracking-tight">Onze belofte aan jou.</h2>
+        <p className="text-lg text-brand-ink/75 font-light max-w-xl mx-auto">Wij geloven zo sterk in wat we doen, dat we het risico graag bij onszelf leggen. Zo kun jij met een gerust hart beginnen.</p>
       </div>
 
       <div className="grid lg:grid-cols-3 gap-6">
@@ -545,19 +542,19 @@ export const OnzeBelofteSection = () => (
           { n: "02", t: "Binnen 30 dagen live", d: "Binnen 30 dagen ben je live. Geen trajecten van een jaar, maar vlot en duidelijk aan de slag voor je onderneming." },
           { n: "03", t: "Jij bent en blijft de baas", d: "Alles wat we maken, van de foto's tot de data, is van jou. Je zit nooit aan ons vast. Vrijheid boven alles." }
         ].map((g, i) => (
-          <div key={i} className="group relative bg-white/[0.03] border border-white/10 p-10 rounded-[28px] hover:bg-white/[0.06] hover:border-brand-lime/30 transition-all duration-500 overflow-hidden">
-            <div className="absolute -top-4 -right-4 text-8xl font-display font-black text-white/[0.03] group-hover:text-brand-lime/10 transition-all duration-500 select-none">
+          <div key={i} className="warm-card group relative p-10 overflow-hidden">
+            <div className="absolute -top-4 -right-4 text-8xl font-display font-black text-amber-100/60 group-hover:text-brand-accent/10 transition-all duration-500 select-none">
               {g.n}
             </div>
             <div className="relative z-10">
-              <div className="w-16 h-16 bg-brand-lime/10 border border-brand-lime/20 rounded-2xl flex items-center justify-center text-brand-lime mb-8 group-hover:scale-110 group-hover:bg-brand-lime/20 transition-all duration-300">
+              <div className="w-16 h-16 bg-brand-accent/10 border border-amber-200 rounded-2xl flex items-center justify-center text-brand-accent mb-8 group-hover:scale-110 group-hover:bg-brand-accent/15 transition-all duration-300">
                 <ShieldCheck size={32} />
               </div>
-              <div className="text-[10px] uppercase tracking-[0.2em] text-brand-lime font-bold mb-3">Belofte {g.n}</div>
-              <h3 className="text-2xl font-display font-bold text-white mb-4 leading-tight">{g.t}</h3>
-              <p className="text-white/72 leading-relaxed font-light text-sm">{g.d}</p>
+              <div className="text-[10px] uppercase tracking-[0.2em] text-brand-accent font-bold mb-3">Belofte {g.n}</div>
+              <h3 className="text-2xl font-display font-bold text-brand-primary mb-4 leading-tight">{g.t}</h3>
+              <p className="text-brand-ink/75 leading-relaxed font-light text-sm">{g.d}</p>
             </div>
-            <div className="absolute bottom-0 left-0 right-0 h-1 bg-brand-lime/0 group-hover:bg-brand-lime/40 transition-all duration-500" />
+            <div className="absolute bottom-0 left-0 right-0 h-1 bg-brand-accent/0 group-hover:bg-brand-accent/30 transition-all duration-500" />
           </div>
         ))}
       </div>
@@ -566,7 +563,7 @@ export const OnzeBelofteSection = () => (
 );
 
 export const SamenAanDeSlagSection = () => (
-  <section className="py-24 px-6 bg-white">
+  <section className="py-24 px-6 bg-white border-y border-amber-50">
     <div className="max-w-7xl mx-auto">
        <div className="text-center mb-16">
         <div className="label-pill mx-auto">Hoe het werkt</div>
@@ -614,7 +611,7 @@ export const SamenAanDeSlagSection = () => (
 );
 
 export const WatAnderenZeggenSection = () => (
-  <section className="py-24 px-6 bg-brand-soft">
+  <section className="py-24 px-6 bg-[#FFFAF4]">
     <div className="max-w-7xl mx-auto">
       <div className="text-center mb-16">
         <div className="label-pill mx-auto">Eerlijke meningen</div>
@@ -627,13 +624,13 @@ export const WatAnderenZeggenSection = () => (
           { n: "Marc de Boer", f: "Equans", q: "Geen vaag marketingverhaal, maar een team dat snapt hoe de industrie werkt." },
           { n: "Sandra Peters", f: "Plintenfabriek", q: "Fijn om eindelijk een partner te hebben die echt meedenkt en het werk ook doet." }
         ].map((r, i) => (
-          <div key={i} className="p-10 bg-white rounded-[24px] border border-brand-soft hover:shadow-lg hover:shadow-brand-primary/5 transition-all">
+          <div key={i} className="warm-card p-10">
             <div className="flex gap-1 text-brand-accent mb-6">
               {[1,2,3,4,5].map(s => <Star key={s} size={16} fill="currentColor" />)}
             </div>
-            <p className="text-base text-brand-primary font-light mb-8 leading-relaxed">“{r.q}”</p>
+            <p className="text-base text-brand-primary font-light mb-8 leading-relaxed">"{r.q}"</p>
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-brand-soft flex items-center justify-center text-brand-primary font-bold text-sm border border-brand-soft">
+              <div className="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-brand-accent font-bold text-sm border border-amber-100">
                 {r.n.charAt(0)}
               </div>
               <div>
@@ -649,32 +646,32 @@ export const WatAnderenZeggenSection = () => (
 );
 
 export const LatenWePratenSection = () => (
-  <section id="contact" className="py-24 px-6 bg-brand-primary relative overflow-hidden">
-    <div className="soft-glow !bg-brand-lime/10" />
+  <section id="contact" className="py-24 px-6 bg-brand-accent relative overflow-hidden">
+    <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-white/5 blur-[120px] pointer-events-none" />
     <div className="max-w-5xl mx-auto relative z-10">
       <div className="flex flex-col lg:flex-row gap-12 items-center">
         <div className="lg:w-1/2 text-white">
           <h2 className="text-3xl lg:text-5xl font-display font-bold mb-6 leading-tight tracking-tight text-white">
             Zullen we even <br />kennismaken?
           </h2>
-          <p className="text-lg text-white/72 mb-10 leading-relaxed font-light">
+          <p className="text-lg text-white/85 mb-10 leading-relaxed font-light">
             We kunnen uren praten over wat we doen, maar het is veel fijner om te zien wat het voor jouw bedrijf betekent. Plan een gratis gesprekje van 45 minuten.
           </p>
           <a
             href="https://calendly.com/stefankelderman/15min"
             target="_blank"
             rel="noreferrer"
-            className="btn-primary !bg-white !text-brand-primary !px-10 !py-5 text-lg shadow-2xl hover:!scale-105 inline-flex"
+            className="inline-flex items-center gap-2 px-10 py-5 bg-white text-brand-accent rounded-2xl font-display font-bold transition-all hover:scale-[1.02] active:scale-[0.98] shadow-2xl text-lg"
           >
             Plan je analyse <ArrowRight size={20} />
           </a>
-          <div className="mt-8 text-[10px] font-bold uppercase tracking-[0.3em] text-white/55">
+          <div className="mt-8 text-[10px] font-bold uppercase tracking-[0.3em] text-white/65">
             Stefan staat zelf voor je klaar — Max 4 per maand
           </div>
         </div>
         <div className="lg:w-1/2 w-full">
-          <div className="rounded-[24px] overflow-hidden shadow-2xl border border-white/10">
-            <img src="/images/team-closeup-lg.webp" srcSet="/images/team-closeup-sm.webp 480w, /images/team-closeup-lg.webp 700w" sizes="(max-width: 768px) 100vw, 50vw" alt="Aan het werk voor jouw groei" className="w-full h-96 object-contain bg-white/5" loading="lazy" />
+          <div className="rounded-[24px] overflow-hidden shadow-2xl border border-white/20">
+            <img src="/images/team-closeup-lg.webp" srcSet="/images/team-closeup-sm.webp 480w, /images/team-closeup-lg.webp 700w" sizes="(max-width: 768px) 100vw, 50vw" alt="Aan het werk voor jouw groei" className="w-full h-96 object-contain bg-white/10" loading="lazy" />
           </div>
         </div>
       </div>

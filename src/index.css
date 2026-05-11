@@ -21,7 +21,7 @@
 
 @layer base {
   body {
-    @apply font-sans bg-brand-bg text-brand-ink antialiased leading-relaxed selection:bg-brand-lime/20;
+    @apply font-sans bg-[#FFFCF8] text-brand-ink antialiased leading-relaxed selection:bg-brand-lime/20;
   }
 
   h1, h2, h3, h4, .font-display {
@@ -85,6 +85,17 @@
 @keyframes marquee {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
+}
+
+/* design-warm overrides */
+.hero-warm {
+  background: linear-gradient(135deg, #FFFCF7 0%, #FFF8F0 50%, #FFFAF4 100%);
+}
+.warm-card {
+  @apply bg-white border border-amber-100/80 rounded-[32px] overflow-hidden transition-all duration-500 hover:shadow-lg hover:shadow-amber-500/8 hover:-translate-y-1;
+}
+.warm-section-alt {
+  background-color: #FFFAF4;
 }
 
 /* WCAG AA: brand-accent (#f17a29) on white → 2.7:1 (fails).
