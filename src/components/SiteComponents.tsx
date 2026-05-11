@@ -49,7 +49,6 @@ export const Navbar = ({ activePage, setActivePage }: { activePage: string, setA
             { label: 'Hoe we helpen', id: 'diensten' },
             { label: 'Het team', id: 'team' },
             { label: 'Klantverhalen', id: 'cases' },
-            { label: 'Even praten?', id: 'contact' }
           ].map((item) => (
             <a
               key={item.label}
@@ -59,6 +58,12 @@ export const Navbar = ({ activePage, setActivePage }: { activePage: string, setA
               {item.label}
             </a>
           ))}
+          <a
+            href="/blog"
+            className={`text-[11px] uppercase tracking-[0.15em] font-bold transition-colors ${isScrolled ? 'text-brand-primary/70 hover:text-brand-accent' : 'text-brand-primary/70 hover:text-brand-accent'}`}
+          >
+            Blog
+          </a>
           <button
             onClick={() => {
               setActivePage('partner');
@@ -82,12 +87,12 @@ export const Navbar = ({ activePage, setActivePage }: { activePage: string, setA
           className="md:hidden bg-white shadow-2xl p-10 flex flex-col gap-6 rounded-b-[40px]"
         >
           {[
-            { label: 'Hoe we helpen', id: 'diensten' },
-            { label: 'Het team', id: 'team' },
-            { label: 'Klantverhalen', id: 'cases' },
-            { label: 'Even praten?', id: 'contact' }
+            { label: 'Hoe we helpen', href: '#diensten' },
+            { label: 'Het team', href: '#team' },
+            { label: 'Klantverhalen', href: '#cases' },
+            { label: 'Blog', href: '/blog' },
           ].map((item) => (
-            <a key={item.label} href={`#${item.id}`} className="text-slate-600 font-bold uppercase tracking-widest text-xs py-4 border-b border-slate-50" onClick={() => setIsOpen(false)}>{item.label}</a>
+            <a key={item.label} href={item.href} className="text-slate-600 font-bold uppercase tracking-widest text-xs py-4 border-b border-slate-50" onClick={() => setIsOpen(false)}>{item.label}</a>
           ))}
           <button
              onClick={() => {

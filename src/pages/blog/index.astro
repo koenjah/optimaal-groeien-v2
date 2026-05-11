@@ -1,7 +1,6 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import BlogLayout from '../../layouts/BlogLayout.astro';
 import { getCollection } from 'astro:content';
-import '../../../src/index.css';
 
 const posts = (await getCollection('blog', ({ data }) => !data.draft))
   .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
@@ -9,25 +8,13 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
 const categories = [...new Set(posts.map(p => p.data.category))].sort();
 ---
 
-<Layout
+<BlogLayout
   title="Blog — Optimaal Groeien"
   description="Praktische artikelen over B2B leadgeneratie, sales, branding en groeistrategie voor technische bedrijven."
   canonical="https://optimaalgroeien.nl/blog"
 >
-  <!-- Minimal nav -->
-  <nav class="bg-brand-primary px-6 py-5 sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto flex items-center justify-between">
-      <a href="/" class="font-display font-bold text-white text-lg tracking-tight">
-        Optimaal Groeien
-      </a>
-      <a href="/#contact" class="text-sm font-bold text-white/70 hover:text-white transition-colors">
-        Plan een analyse →
-      </a>
-    </div>
-  </nav>
-
-  <!-- Header -->
-  <section class="bg-brand-primary pt-20 pb-16 px-6 text-center">
+  <!-- Header — matches site sections style -->
+  <section class="bg-brand-primary pt-40 pb-16 px-6 text-center">
     <div class="max-w-3xl mx-auto">
       <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 border border-white/20 rounded-full text-[11px] uppercase tracking-widest font-bold text-white/80 mb-6">
         Kennisbank
@@ -45,7 +32,6 @@ const categories = [...new Set(posts.map(p => p.data.category))].sort();
   <section class="py-20 px-6 bg-[#FFFCF8]">
     <div class="max-w-7xl mx-auto">
 
-      <!-- Category filter (static, JS-free) -->
       <div class="flex flex-wrap gap-2 mb-12">
         <span class="px-4 py-1.5 bg-brand-primary text-white text-[12px] font-bold rounded-full">Alle artikelen</span>
         {categories.map(cat => (
@@ -59,7 +45,7 @@ const categories = [...new Set(posts.map(p => p.data.category))].sort();
             href={`/blog/${post.data.slug}`}
             class="group bg-white border border-amber-100/80 rounded-[28px] overflow-hidden hover:shadow-lg hover:shadow-amber-500/8 hover:-translate-y-1 transition-all duration-300 flex flex-col"
           >
-            {post.data.heroImage && (
+            {post.data.heroImage ? (
               <div class="aspect-video overflow-hidden">
                 <img
                   src={post.data.heroImage}
@@ -68,10 +54,9 @@ const categories = [...new Set(posts.map(p => p.data.category))].sort();
                   loading="lazy"
                 />
               </div>
-            )}
-            {!post.data.heroImage && (
+            ) : (
               <div class="aspect-video bg-gradient-to-br from-brand-primary/5 to-brand-accent/10 flex items-center justify-center">
-                <span class="text-4xl font-display font-black text-brand-primary/10">OG</span>
+                <span class="text-[11px] font-bold uppercase tracking-widest text-brand-primary/20">{post.data.category}</span>
               </div>
             )}
             <div class="p-6 flex flex-col flex-1">
@@ -99,22 +84,8 @@ const categories = [...new Set(posts.map(p => p.data.category))].sort();
       </div>
     </div>
   </section>
+</BlogLayout>
 
-  <!-- Footer CTA -->
-  <section class="py-16 px-6 bg-brand-primary text-center">
-    <div class="max-w-2xl mx-auto">
-      <h2 class="text-2xl lg:text-3xl font-display font-bold text-white mb-4">
-        Meer weten over jouw groeikansen?
-      </h2>
-      <p class="text-white/65 mb-8">Plan een gratis analyse van 45 minuten. Stefan staat persoonlijk voor je klaar.</p>
-      <a
-        href="https://calendly.com/stefankelderman/15min"
-        target="_blank"
-        rel="noreferrer"
-        class="inline-flex items-center gap-2 px-8 py-4 bg-brand-accent text-white rounded-2xl font-display font-bold hover:bg-white hover:text-brand-accent transition-all duration-200"
-      >
-        Plan je analyse →
-      </a>
-    </div>
-  </section>
-</Layout>
+<style is:global>
+  .line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+</style>
