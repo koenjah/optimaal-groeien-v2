@@ -173,79 +173,85 @@ export const PartnerHero = () => {
   }, []);
 
   return (
-    <section className="hero-warm min-h-screen relative overflow-hidden pt-32 lg:pt-40 pb-20 px-6">
-      {/* Decorative ambient blobs */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-brand-accent/5 blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-amber-300/8 blur-[120px] pointer-events-none" />
-      <div className="absolute top-1/2 left-1/3 w-[300px] h-[300px] rounded-full bg-brand-accent/4 blur-[100px] pointer-events-none" />
+    <section className="hero-warm relative overflow-hidden pt-28 lg:pt-36 pb-16 lg:pb-24 px-6">
+      {/* Ambient glow — stays out of the way */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-brand-accent/5 blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[360px] h-[360px] rounded-full bg-amber-200/10 blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-16">
-          <div className="lg:w-1/2 text-left pb-8 lg:pb-0">
-            <div className="label-pill">
+        <div className="flex flex-col lg:flex-row lg:items-start gap-10 lg:gap-14">
+
+          {/* Left — text */}
+          <div className="lg:w-[52%] text-left flex flex-col gap-7">
+            <div className="label-pill self-start">
               <span className="w-2 h-2 bg-brand-accent rounded-full animate-pulse" />
-              Dit is ons team — Wij helpen je groeien
+              Wij helpen je groeien
             </div>
 
-            <h1 className="text-4xl lg:text-[3.5rem] font-display font-bold text-brand-primary leading-[1.1] mb-8 tracking-tight max-w-xl">
-               Commercieel Partner voor B2B bedrijven in de{' '}
-               <span className="relative inline-block">
-                 <AnimatePresence mode="wait">
-                   <motion.span
-                     key={sectorIdx}
-                     initial={{ opacity: 0, y: 14 }}
-                     animate={{ opacity: 1, y: 0 }}
-                     exit={{ opacity: 0, y: -14 }}
-                     transition={{ duration: 0.35, ease: 'easeInOut' }}
-                     className="text-brand-accent inline-block"
-                   >
-                     {SECTORS[sectorIdx]}
-                   </motion.span>
-                 </AnimatePresence>
-               </span>
+            <h1 className="text-[2.4rem] lg:text-[3.25rem] font-display font-bold text-brand-primary leading-[1.1] tracking-tight max-w-lg">
+              Commercieel Partner voor B2B bedrijven in de{' '}
+              <span className="relative inline-block">
+                <AnimatePresence mode="wait">
+                  <motion.span
+                    key={sectorIdx}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.3, ease: 'easeInOut' }}
+                    className="text-brand-accent inline-block"
+                  >
+                    {SECTORS[sectorIdx]}
+                  </motion.span>
+                </AnimatePresence>
+              </span>
             </h1>
 
-            <p className="text-lg text-brand-ink/80 mb-10 max-w-lg leading-relaxed font-light">
-               Veel technische bedrijven groeien op toeval en netwerk. Wij veranderen dat in een voorspelbare commerciële machine door AI, Branding, Marketing & Sales met elkaar te verbinden.
+            <p className="text-base lg:text-lg text-brand-ink/70 max-w-md leading-relaxed">
+              Veel technische bedrijven groeien op toeval en netwerk. Wij veranderen dat in een voorspelbare commerciële machine — AI, branding, marketing en sales als één geheel.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 items-center">
-              <button
-                onClick={() => document.getElementById('tool')?.scrollIntoView({ behavior: 'smooth' })}
-                className="btn-primary w-full sm:w-auto !py-5 !px-10 text-base !bg-[#ed7c2f]"
-              >
-                Bereken pot. omzet
-              </button>
+            <div className="flex flex-col sm:flex-row gap-3">
               <button
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="w-full sm:w-auto px-8 py-5 bg-white text-brand-primary rounded-2xl font-display font-bold transition-all hover:scale-[1.02] active:scale-[0.98] border-2 border-amber-200 shadow-sm flex items-center justify-center gap-2 text-base"
+                className="btn-primary w-full sm:w-auto !py-4 !px-9 text-sm !bg-[#ed7c2f]"
               >
-                Contact opnemen
+                Plan een gesprek
+              </button>
+              <button
+                onClick={() => document.getElementById('tool')?.scrollIntoView({ behavior: 'smooth' })}
+                className="w-full sm:w-auto px-7 py-4 bg-white text-brand-primary rounded-2xl font-display font-bold transition-all hover:scale-[1.02] active:scale-[0.98] border-2 border-amber-100 shadow-sm flex items-center justify-center gap-2 text-sm"
+              >
+                Bereken potentieel
               </button>
             </div>
-            <div className="flex items-center gap-4 mt-6">
-               <div className="flex -space-x-2">
-                 <img src="/images/team-1-avatar.webp" className="w-9 h-9 rounded-full border-2 border-white object-cover object-[center_25%]" alt="Team" loading="eager" />
-                 <img src="/images/team-phone-avatar.webp" className="w-9 h-9 rounded-full border-2 border-white object-cover object-top" alt="Team" loading="eager" />
-                 <img src="/images/team-4-avatar.webp" className="w-9 h-9 rounded-full border-2 border-white object-cover object-top" alt="Team" loading="eager" />
-               </div>
-               <div className="flex flex-col">
-                  <span className="text-xs text-brand-ink font-bold opacity-70 leading-none mb-1">Stefan & team</span>
-                  <span className="text-[10px] text-brand-accent font-bold uppercase tracking-widest leading-none">Altijd bereikbaar</span>
-               </div>
+
+            {/* Social proof row */}
+            <div className="flex items-center gap-4 pt-1">
+              <div className="flex -space-x-2">
+                <img src="/images/team-1-avatar.webp" className="w-8 h-8 rounded-full border-2 border-white object-cover object-[center_25%]" alt="Team" loading="eager" />
+                <img src="/images/team-phone-avatar.webp" className="w-8 h-8 rounded-full border-2 border-white object-cover object-top" alt="Team" loading="eager" />
+                <img src="/images/team-4-avatar.webp" className="w-8 h-8 rounded-full border-2 border-white object-cover object-top" alt="Team" loading="eager" />
+              </div>
+              <div>
+                <span className="block text-xs font-bold text-brand-ink/65 leading-none mb-1">Stefan & team</span>
+                <span className="block text-[10px] text-brand-accent font-bold uppercase tracking-widest leading-none">Altijd bereikbaar</span>
+              </div>
             </div>
 
-            <div className="mt-14 pt-8 border-t border-amber-100 flex flex-wrap gap-8 opacity-50 grayscale hover:grayscale-0 transition-all duration-700">
-               <div className="text-xs font-bold uppercase tracking-widest text-brand-ink">Vertrouwd door:</div>
-               <span className="text-xs font-display font-bold text-brand-ink">Veldkamp</span>
-               <span className="text-xs font-display font-bold text-brand-ink">Equans</span>
-               <span className="text-xs font-display font-bold text-brand-ink">Carbify</span>
+            {/* Trust logos */}
+            <div className="pt-6 border-t border-amber-100 flex flex-wrap items-center gap-6 opacity-45 hover:opacity-70 transition-opacity duration-500">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-brand-ink">Vertrouwd door</span>
+              <span className="text-xs font-display font-bold text-brand-ink">Veldkamp</span>
+              <span className="text-xs font-display font-bold text-brand-ink">Equans</span>
+              <span className="text-xs font-display font-bold text-brand-ink">Carbify</span>
             </div>
           </div>
 
-          <div className="lg:w-1/2 w-full mt-8 lg:mt-0">
+          {/* Right — quiz */}
+          <div className="lg:w-[48%] w-full">
             <CommercialQuiz />
           </div>
+
         </div>
       </div>
     </section>

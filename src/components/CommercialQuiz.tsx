@@ -1,327 +1,379 @@
 import React, { useState, useCallback } from 'react';
 import { ArrowRight, ChevronLeft, CheckCircle2 } from 'lucide-react';
 
-const themes = [
+// Flat list of all 8 questions — each has its own tailored options
+const QUESTIONS = [
   {
-    id: 'positionering',
-    title: 'Positionering & Boodschap',
-    num: '01',
-    questions: [
-      'Weet jouw doelgroep precies wat jij voor hen doet?',
-      'Hoe duidelijk is jouw onderscheid van concurrenten?',
+    themeNum: '01',
+    theme: 'Positionering',
+    question: 'Weet jouw doelgroep precies wat jij voor hen doet?',
+    options: [
+      'Niet echt — we zijn breed en pakken alles op',
+      'Deels — het wisselt per gesprek',
+      'Grotendeels — de kern klopt',
+      'Ja, heel helder en altijd consistent',
     ],
   },
   {
-    id: 'leadgeneratie',
-    title: 'Leadgeneratie',
-    num: '02',
-    questions: [
-      'Hoe voorspelbaar is jouw instroom van nieuwe prospects?',
-      'Genereer je actief leads, of draait het op netwerk en toeval?',
+    themeNum: '01',
+    theme: 'Positionering',
+    question: 'Hoe sterk is jouw verhaal ten opzichte van concurrenten?',
+    options: [
+      'We zeggen grotendeels hetzelfde als de rest',
+      'We zijn anders, maar benoemen dat zelden',
+      'We hebben een duidelijk onderscheid',
+      'Ons verhaal trekt precies de juiste klanten',
     ],
   },
   {
-    id: 'opvolging',
-    title: 'Opvolging & Conversie',
-    num: '03',
-    questions: [
-      'Wat doe je structureel na een eerste contactmoment?',
-      'Hoe goed zijn jouw offerte- en salesgesprekken ingericht?',
+    themeNum: '02',
+    theme: 'Leadgeneratie',
+    question: 'Hoe voorspelbaar is jouw instroom van nieuwe klanten?',
+    options: [
+      'Onvoorspelbaar — het overkomt ons',
+      'Soms een piek, dan weer maanden niets',
+      'Redelijk stabiel, maar niet gegarandeerd',
+      'Stabiel en schaalbaar — we weten wat werkt',
     ],
   },
   {
-    id: 'klantbehoud',
-    title: 'Klantbehoud & Groei',
-    num: '04',
-    questions: [
-      'Hoe actief bouw je bestaande klantrelaties uit?',
-      'Benut je actief upsell- en referral-mogelijkheden?',
+    themeNum: '02',
+    theme: 'Leadgeneratie',
+    question: 'Hoe actief genereer je leads buiten je netwerk?',
+    options: [
+      'We wachten af — toeval en mond-tot-mond',
+      'Af en toe iets, maar niet structureel',
+      'We hebben een aanpak, maar niet consistent',
+      'Actief en systematisch via meerdere kanalen',
+    ],
+  },
+  {
+    themeNum: '03',
+    theme: 'Opvolging & Conversie',
+    question: 'Wat gebeurt er na een eerste contactmoment?',
+    options: [
+      'Eigenlijk niets gestructureerds',
+      'We sturen een offerte en wachten af',
+      'We volgen op, maar niet altijd consequent',
+      'We hebben een strak, herhaalbaar opvolgproces',
+    ],
+  },
+  {
+    themeNum: '03',
+    theme: 'Opvolging & Conversie',
+    question: 'Hoe presteren jullie in salesgesprekken en offertes?',
+    options: [
+      'We presenteren een prijs en hopen',
+      'We verliezen meer offertes dan ons lief is',
+      'Het gaat redelijk — meer wins dan verlies',
+      'Onze conversie is sterk en voorspelbaar',
+    ],
+  },
+  {
+    themeNum: '04',
+    theme: 'Klantbehoud & Groei',
+    question: 'Hoe actief bouw je bestaande klantrelaties uit?',
+    options: [
+      'We reageren als ze bellen',
+      'We houden contact, maar niet structureel',
+      'We doen periodieke check-ins',
+      'We hebben actief accountmanagement',
+    ],
+  },
+  {
+    themeNum: '04',
+    theme: 'Klantbehoud & Groei',
+    question: 'Benut je kansen voor upsell en referrals?',
+    options: [
+      'We laten het er vanzelf uitkomen',
+      'Soms, als het vanzelf opkomt in gesprek',
+      'We doen het, maar niet systematisch',
+      'Actief — upsell en referral zitten in ons proces',
     ],
   },
 ];
 
-const scaleOptions = [
-  { val: 1, label: 'Nauwelijks', sub: 'volledig ad hoc' },
-  { val: 2, label: 'Soms', sub: 'niet consequent' },
-  { val: 3, label: 'Deels', sub: 'werk in uitvoering' },
-  { val: 4, label: 'Grotendeels', sub: 'bijna structureel' },
-  { val: 5, label: 'Volledig', sub: 'goed ingericht' },
+const THEMES = [
+  { num: '01', label: 'Positionering & Boodschap' },
+  { num: '02', label: 'Leadgeneratie' },
+  { num: '03', label: 'Opvolging & Conversie' },
+  { num: '04', label: 'Klantbehoud & Groei' },
 ];
 
-const quickWins: Record<string, string[]> = {
-  positionering: [
-    'Schrijf een one-liner: voor wie je er bent en waarom, in max 10 woorden.',
-    'Vraag 3 klanten hoe zij jou omschrijven — dat is jouw echte boodschap.',
+const QUICK_WINS: Record<string, string[]> = {
+  '01': [
+    'Schrijf een one-liner: voor wie je er bent en waarom — max 10 woorden.',
+    'Vraag 3 klanten hoe zij jou omschrijven. Dat is jouw echte verhaal.',
   ],
-  leadgeneratie: [
-    'Kies één kanaal en maak daar een wekelijks ritme van.',
-    'Maak een lijst van 20 ideale prospects en neem proactief contact op.',
+  '02': [
+    'Kies één kanaal en maak er een vast wekelijks ritme van.',
+    'Schrijf 20 ideale prospects op en neem proactief contact op.',
   ],
-  opvolging: [
-    'Maak een opvolgingsscript voor de dag na elk eerste contactmoment.',
-    'Stel een vaste reminder in om elke offerte na 3 dagen op te volgen.',
+  '03': [
+    'Maak een opvolgscript voor de dag na elk eerste contactmoment.',
+    'Stel een vaste reminder in: elke offerte na 3 dagen opvolgen.',
   ],
-  klantbehoud: [
-    'Plan deze maand een check-in bij je top-5 klanten.',
-    'Vraag actief om referrals na een succesvolle samenwerking.',
+  '04': [
+    'Plan deze maand een check-in bij je top-5 klanten — gewoon even bellen.',
+    'Vraag na elke succesvolle samenwerking actief om een referral.',
   ],
 };
 
-type Scores = Record<string, number[]>;
+const TOTAL = QUESTIONS.length;
 
-const TOTAL_STEPS = themes.reduce((a, t) => a + t.questions.length, 0);
+// Returns the theme number (01-04) for a given question index
+const themeNumAt = (qi: number) => QUESTIONS[qi].themeNum;
+
+// Average score per theme (0..1 range)
+const themeScore = (answers: (number | null)[], themeNum: string): number => {
+  const relevant = QUESTIONS.map((q, i) => ({ q, i }))
+    .filter(({ q }) => q.themeNum === themeNum)
+    .map(({ i }) => answers[i]);
+  const filled = relevant.filter((v): v is number => v !== null);
+  if (!filled.length) return 0;
+  // options are 0-indexed (0..3), normalize to 0..1
+  return filled.reduce((a, b) => a + b, 0) / filled.length / 3;
+};
 
 export const CommercialQuiz: React.FC = () => {
-  const [step, setStep] = useState<'intro' | number | 'result'>('intro');
-  const [scores, setScores] = useState<Scores>({});
-  const [currentQ, setCurrentQ] = useState(0);
-  const [flash, setFlash] = useState<number | null>(null);
+  const [phase, setPhase] = useState<'intro' | 'quiz' | 'result'>('intro');
+  const [current, setCurrent] = useState(0); // 0..7
+  const [answers, setAnswers] = useState<(number | null)[]>(Array(TOTAL).fill(null));
+  const [flash, setFlash] = useState<number | null>(null); // option index being animated
 
-  const themeIndex = typeof step === 'number' ? step : 0;
-  const theme = themes[themeIndex];
+  const q = QUESTIONS[current];
+  const isLast = current === TOTAL - 1;
 
-  const answeredSteps =
-    typeof step === 'number'
-      ? themes.slice(0, themeIndex).reduce((a, t) => a + t.questions.length, 0) + currentQ
-      : TOTAL_STEPS;
-
-  const advance = useCallback(
-    (val: number) => {
-      setFlash(val);
-      const updated: Scores = {
-        ...scores,
-        [theme.id]: [...(scores[theme.id] || []), val],
-      };
-      setScores(updated);
+  const pick = useCallback(
+    (optIdx: number) => {
+      if (flash !== null) return;
+      setFlash(optIdx);
+      const next = [...answers];
+      next[current] = optIdx;
+      setAnswers(next);
 
       setTimeout(() => {
         setFlash(null);
-        if (currentQ < theme.questions.length - 1) {
-          setCurrentQ((q) => q + 1);
+        if (isLast) {
+          setPhase('result');
         } else {
-          setCurrentQ(0);
-          if (themeIndex < themes.length - 1) {
-            setStep(themeIndex + 1);
-          } else {
-            setStep('result');
-          }
+          setCurrent((c) => c + 1);
         }
-      }, 320);
+      }, 300);
     },
-    [theme, scores, currentQ, themeIndex]
+    [flash, answers, current, isLast]
   );
 
-  const goBack = () => {
-    if (currentQ > 0) {
-      const prev = scores[theme.id] || [];
-      setScores({ ...scores, [theme.id]: prev.slice(0, -1) });
-      setCurrentQ((q) => q - 1);
-    } else if (typeof step === 'number' && step > 0) {
-      const prevTheme = themes[themeIndex - 1];
-      const prevScores = scores[prevTheme.id] || [];
-      setScores({ ...scores, [prevTheme.id]: prevScores.slice(0, -1) });
-      setStep(themeIndex - 1);
-      setCurrentQ(prevTheme.questions.length - 1);
+  const back = () => {
+    if (current > 0) {
+      const next = [...answers];
+      next[current - 1] = null;
+      setAnswers(next);
+      setCurrent((c) => c - 1);
     }
   };
 
-  const getAvg = (id: string) => {
-    const s = scores[id];
-    if (!s?.length) return 0;
-    return s.reduce((a, b) => a + b, 0) / s.length;
-  };
-
-  const weakest =
-    Object.entries(scores).sort(([, a], [, b]) => {
-      return a.reduce((x, y) => x + y, 0) / a.length - b.reduce((x, y) => x + y, 0) / b.length;
-    })[0]?.[0] || 'leadgeneratie';
+  // Result helpers
+  const weakestTheme = THEMES.slice().sort(
+    (a, b) => themeScore(answers, a.num) - themeScore(answers, b.num)
+  )[0];
 
   // ── INTRO ──────────────────────────────────────────────────────────────────
-  if (step === 'intro') {
+  if (phase === 'intro') {
     return (
-      <div className="bg-white rounded-3xl shadow-lg shadow-amber-900/6 border border-amber-100 p-7 flex flex-col gap-6">
-        <div>
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-brand-accent/10 rounded-full text-[11px] font-bold text-brand-accent uppercase tracking-wider mb-5">
-            <span className="w-1.5 h-1.5 bg-brand-accent rounded-full" />
-            Gratis &middot; 2 minuten
-          </span>
-          <h3 className="text-xl lg:text-2xl font-display font-bold text-brand-primary leading-tight mb-2">
-            Hoe sterk is jouw commerciele motor?
-          </h3>
-          <p className="text-sm text-brand-ink/65 leading-relaxed">
-            8 korte vragen. Ontdek direct waar jouw groei lekt en wat jouw quick wins zijn.
-          </p>
-        </div>
+      <div className="bg-white rounded-3xl shadow-lg shadow-amber-900/5 border border-amber-100 overflow-hidden">
+        {/* Top accent */}
+        <div className="h-1 bg-gradient-to-r from-brand-accent via-amber-400 to-brand-accent" />
+        <div className="p-7 lg:p-8 flex flex-col gap-6">
+          <div>
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-brand-accent/10 rounded-full text-[11px] font-bold text-brand-accent uppercase tracking-wider mb-5">
+              <span className="w-1.5 h-1.5 rounded-full bg-brand-accent animate-pulse" />
+              Gratis &middot; 2 minuten
+            </span>
+            <h3 className="text-[22px] lg:text-[24px] font-display font-bold text-brand-primary leading-snug mb-3">
+              Hoe sterk is jouw commercieel proces?
+            </h3>
+            <p className="text-sm text-brand-ink/60 leading-relaxed">
+              8 gerichte vragen. Ontdek direct waar jouw groei lekt en wat je morgen kunt verbeteren.
+            </p>
+          </div>
 
-        <div className="grid grid-cols-2 gap-2">
-          {themes.map((t) => (
-            <div key={t.id} className="flex items-start gap-2.5 p-3 rounded-2xl bg-brand-bg border border-brand-soft">
-              <span className="text-[10px] font-mono font-bold text-brand-accent/70 mt-0.5 shrink-0">{t.num}</span>
-              <span className="text-[12px] text-brand-ink/75 leading-snug font-medium">{t.title}</span>
-            </div>
-          ))}
-        </div>
+          <div className="grid grid-cols-2 gap-2">
+            {THEMES.map((t) => (
+              <div
+                key={t.num}
+                className="flex items-start gap-2.5 p-3.5 rounded-2xl bg-[#FFFAF4] border border-amber-100/80"
+              >
+                <span className="text-[10px] font-mono font-bold text-brand-accent/60 mt-0.5 shrink-0 leading-none">
+                  {t.num}
+                </span>
+                <span className="text-[12px] text-brand-ink/70 leading-snug font-medium">{t.label}</span>
+              </div>
+            ))}
+          </div>
 
-        <button
-          onClick={() => setStep(0)}
-          className="w-full bg-brand-primary text-white py-4 rounded-2xl font-display font-bold text-sm flex items-center justify-center gap-2 hover:bg-brand-accent transition-all duration-200 active:scale-[0.98]"
-        >
-          Start de scan <ArrowRight size={16} />
-        </button>
+          <button
+            onClick={() => setPhase('quiz')}
+            className="w-full bg-brand-primary text-white py-4 rounded-2xl font-display font-bold text-sm flex items-center justify-center gap-2 hover:bg-brand-accent transition-all duration-200 active:scale-[0.98]"
+          >
+            Start de scan <ArrowRight size={16} />
+          </button>
+        </div>
       </div>
     );
   }
 
   // ── RESULT ─────────────────────────────────────────────────────────────────
-  if (step === 'result') {
-    const wins = quickWins[weakest] || [];
+  if (phase === 'result') {
+    const wins = QUICK_WINS[weakestTheme.num] || [];
     return (
-      <div className="bg-white rounded-3xl shadow-lg shadow-amber-900/6 border border-amber-100 p-7 flex flex-col gap-5">
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-full bg-green-50 flex items-center justify-center shrink-0">
-            <CheckCircle2 size={14} className="text-green-600" />
+      <div className="bg-white rounded-3xl shadow-lg shadow-amber-900/5 border border-amber-100 overflow-hidden">
+        <div className="h-1 bg-gradient-to-r from-brand-accent via-amber-400 to-brand-accent" />
+        <div className="p-7 lg:p-8 flex flex-col gap-6">
+          {/* Header */}
+          <div className="flex items-center gap-2.5">
+            <div className="w-8 h-8 rounded-full bg-green-50 border border-green-100 flex items-center justify-center shrink-0">
+              <CheckCircle2 size={15} className="text-green-600" />
+            </div>
+            <div>
+              <p className="text-[11px] font-bold text-green-700 uppercase tracking-wider leading-none mb-0.5">Scan compleet</p>
+              <p className="text-[11px] text-brand-ink/45 leading-none">Jouw commercieel profiel</p>
+            </div>
           </div>
-          <span className="text-[11px] font-bold text-green-700 uppercase tracking-wider">Scan compleet</span>
-        </div>
 
-        <div>
-          <h3 className="text-lg font-display font-bold text-brand-primary mb-4">Jouw commercieel profiel</h3>
-          <div className="space-y-3">
-            {themes.map((t) => {
-              const avg = getAvg(t.id);
-              const pct = (avg / 5) * 100;
-              const isWeak = t.id === weakest;
+          {/* Score bars */}
+          <div className="space-y-4">
+            {THEMES.map((t) => {
+              const pct = themeScore(answers, t.num) * 100;
+              const isWeak = t.num === weakestTheme.num;
               return (
-                <div key={t.id}>
-                  <div className="flex justify-between items-center mb-1.5">
-                    <span className={`text-xs ${isWeak ? 'font-bold text-brand-accent' : 'text-brand-ink/60'}`}>
-                      {t.title}
+                <div key={t.num}>
+                  <div className="flex items-center justify-between mb-2">
+                    <span className={`text-[13px] font-medium ${isWeak ? 'text-brand-accent font-bold' : 'text-brand-ink/65'}`}>
+                      {t.label}
                     </span>
                     {isWeak && (
                       <span className="text-[10px] bg-brand-accent/10 text-brand-accent px-2 py-0.5 rounded-full font-bold shrink-0 ml-2">
-                        Grootste lekkage
+                        Lekkage
                       </span>
                     )}
                   </div>
-                  <div className="h-1.5 bg-brand-soft rounded-full overflow-hidden">
+                  <div className="h-2 bg-brand-soft rounded-full overflow-hidden">
                     <div
-                      className={`h-full rounded-full transition-all duration-700 ${isWeak ? 'bg-brand-accent' : 'bg-brand-primary/35'}`}
-                      style={{ width: `${Math.max(pct, 6)}%` }}
+                      className={`h-full rounded-full transition-all duration-700 delay-100 ${isWeak ? 'bg-brand-accent' : 'bg-brand-primary/30'}`}
+                      style={{ width: `${Math.max(pct, 7)}%` }}
                     />
                   </div>
                 </div>
               );
             })}
           </div>
-        </div>
 
-        <div className="bg-[#FFFAF4] border border-amber-100 rounded-2xl p-4">
-          <p className="text-[10px] font-bold text-brand-accent uppercase tracking-widest mb-2.5">Jouw quick wins</p>
-          <ul className="space-y-2">
-            {wins.map((w, i) => (
-              <li key={i} className="flex gap-2 text-xs text-brand-ink/75 leading-snug">
-                <span className="text-brand-accent/60 shrink-0">&#8212;</span>
-                {w}
-              </li>
-            ))}
-          </ul>
-        </div>
+          {/* Quick wins */}
+          <div className="bg-[#FFFAF4] border border-amber-100 rounded-2xl p-5">
+            <p className="text-[10px] font-bold text-brand-accent uppercase tracking-widest mb-3">
+              Jouw quick wins
+            </p>
+            <ul className="space-y-2.5">
+              {wins.map((w, i) => (
+                <li key={i} className="flex gap-2.5 text-[13px] text-brand-ink/70 leading-snug">
+                  <span className="w-4 h-4 rounded-full bg-brand-accent/15 flex items-center justify-center shrink-0 mt-0.5">
+                    <span className="block w-1.5 h-1.5 rounded-full bg-brand-accent" />
+                  </span>
+                  {w}
+                </li>
+              ))}
+            </ul>
+          </div>
 
-        <a
-          href="https://calendly.com/stefankelderman/15min"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-full bg-brand-accent text-white py-4 rounded-2xl font-display font-bold text-sm flex items-center justify-center gap-2 hover:bg-brand-primary transition-all duration-200 active:scale-[0.98]"
-        >
-          Bespreek jouw resultaat <ArrowRight size={16} />
-        </a>
+          <a
+            href="https://calendly.com/stefankelderman/15min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full bg-brand-accent text-white py-4 rounded-2xl font-display font-bold text-sm flex items-center justify-center gap-2 hover:bg-brand-primary transition-all duration-200 active:scale-[0.98]"
+          >
+            Bespreek jouw resultaat <ArrowRight size={16} />
+          </a>
+        </div>
       </div>
     );
   }
 
   // ── QUESTION ───────────────────────────────────────────────────────────────
-  const isBlocked = flash !== null;
+  const pctDone = (current / TOTAL) * 100;
 
   return (
-    <div className="bg-white rounded-3xl shadow-lg shadow-amber-900/6 border border-amber-100 p-7 flex flex-col gap-5">
-      {/* Progress */}
-      <div className="flex items-center gap-2.5">
-        <div className="flex gap-1 flex-1">
-          {Array.from({ length: TOTAL_STEPS }).map((_, i) => (
-            <div
-              key={i}
-              className={`h-1 flex-1 rounded-full transition-all duration-300 ${
-                i < answeredSteps
-                  ? 'bg-brand-accent'
-                  : i === answeredSteps
-                  ? 'bg-brand-accent/25'
-                  : 'bg-brand-soft'
-              }`}
-            />
-          ))}
+    <div className="bg-white rounded-3xl shadow-lg shadow-amber-900/5 border border-amber-100 overflow-hidden">
+      {/* Progress bar — top of card */}
+      <div className="h-1 bg-brand-soft">
+        <div
+          className="h-full bg-brand-accent transition-all duration-300 ease-out"
+          style={{ width: `${pctDone}%` }}
+        />
+      </div>
+
+      <div className="p-7 lg:p-8 flex flex-col gap-5">
+        {/* Theme + counter */}
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <span className="text-[10px] font-mono font-bold text-brand-accent/55">{q.themeNum}</span>
+            <span className="text-[11px] font-semibold text-brand-ink/40 uppercase tracking-wider">{q.theme}</span>
+          </div>
+          <span className="text-[10px] font-mono text-brand-ink/30 tabular-nums">
+            {current + 1}&thinsp;/&thinsp;{TOTAL}
+          </span>
         </div>
-        <span className="text-[10px] font-mono text-brand-ink/35 shrink-0 tabular-nums">
-          {answeredSteps + 1}/{TOTAL_STEPS}
-        </span>
-      </div>
 
-      {/* Theme chip */}
-      <div className="flex items-center gap-2">
-        <span className="text-[10px] font-mono font-bold text-brand-accent/60">{theme.num}</span>
-        <span className="text-[11px] font-semibold text-brand-ink/45 uppercase tracking-wider">{theme.title}</span>
-      </div>
+        {/* Question */}
+        <p className="text-[16px] lg:text-[17px] font-display font-semibold text-brand-primary leading-snug">
+          {q.question}
+        </p>
 
-      {/* Question */}
-      <p className="text-base lg:text-[17px] font-display font-semibold text-brand-primary leading-snug">
-        {theme.questions[currentQ]}
-      </p>
-
-      {/* Options — auto-advance on click */}
-      <div className="flex flex-col gap-2">
-        {scaleOptions.map(({ val, label, sub }) => {
-          const isActive = flash === val;
-          return (
-            <button
-              key={val}
-              onClick={() => !isBlocked && advance(val)}
-              disabled={isBlocked}
-              className={`w-full flex items-center gap-3 px-4 py-3 rounded-2xl border-2 text-left transition-all duration-200 ${
-                isActive
-                  ? 'bg-brand-accent border-brand-accent shadow-md shadow-brand-accent/15 scale-[1.01]'
-                  : 'bg-white border-brand-soft hover:border-brand-accent/35 hover:bg-[#FFFAF4] active:scale-[0.99]'
-              } ${isBlocked && !isActive ? 'opacity-40' : ''}`}
-            >
-              <span
-                className={`w-7 h-7 rounded-full border-2 flex items-center justify-center shrink-0 text-[11px] font-bold transition-all ${
-                  isActive ? 'border-white/50 text-white' : 'border-brand-soft text-brand-ink/40'
-                }`}
+        {/* Options */}
+        <div className="flex flex-col gap-2">
+          {q.options.map((opt, i) => {
+            const isFlashing = flash === i;
+            const isDimmed = flash !== null && !isFlashing;
+            return (
+              <button
+                key={i}
+                onClick={() => pick(i)}
+                disabled={flash !== null}
+                className={[
+                  'w-full text-left px-4 py-3.5 rounded-2xl border-2 text-[13px] lg:text-sm font-medium leading-snug transition-all duration-200',
+                  isFlashing
+                    ? 'bg-brand-accent border-brand-accent text-white shadow-md shadow-brand-accent/20 scale-[1.01]'
+                    : isDimmed
+                    ? 'bg-white border-brand-soft/60 text-brand-ink/30'
+                    : 'bg-white border-brand-soft text-brand-ink/75 hover:border-brand-accent/40 hover:bg-[#FFFAF4] hover:text-brand-primary active:scale-[0.99]',
+                ].join(' ')}
               >
-                {val}
-              </span>
-              <span className="flex-1 min-w-0">
-                <span className={`text-sm font-semibold block leading-tight ${isActive ? 'text-white' : 'text-brand-primary'}`}>
-                  {label}
+                <span className="flex items-center gap-3">
+                  <span
+                    className={`shrink-0 w-5 h-5 rounded-full border flex items-center justify-center transition-all ${
+                      isFlashing ? 'border-white/50 bg-white/20' : 'border-brand-soft/80 bg-transparent'
+                    }`}
+                  >
+                    {isFlashing && <CheckCircle2 size={12} className="text-white" />}
+                  </span>
+                  {opt}
                 </span>
-                <span className={`text-[11px] leading-none ${isActive ? 'text-white/65' : 'text-brand-ink/40'}`}>
-                  {sub}
-                </span>
-              </span>
-              {isActive && <CheckCircle2 size={15} className="text-white/80 shrink-0" />}
-            </button>
-          );
-        })}
-      </div>
+              </button>
+            );
+          })}
+        </div>
 
-      {/* Back — subtle, low visual priority */}
-      {typeof step === 'number' && (step > 0 || currentQ > 0) && (
-        <button
-          onClick={goBack}
-          disabled={isBlocked}
-          className="flex items-center gap-1 text-[12px] text-brand-ink/30 hover:text-brand-ink/55 transition-colors self-start -mt-1"
-        >
-          <ChevronLeft size={13} /> Vorige vraag
-        </button>
-      )}
+        {/* Back — only visible from question 2 onward, very subtle */}
+        {current > 0 && (
+          <button
+            onClick={back}
+            disabled={flash !== null}
+            className="flex items-center gap-1 text-[12px] text-brand-ink/28 hover:text-brand-ink/55 transition-colors self-start -mt-1"
+          >
+            <ChevronLeft size={13} /> Vorige
+          </button>
+        )}
+      </div>
     </div>
   );
 };
