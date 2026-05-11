@@ -566,9 +566,9 @@ export const OnzeBelofteSection = () => (
 export const SamenAanDeSlagSection = () => (
   <section className="py-24 px-6 bg-brand-primary">
     <div className="max-w-7xl mx-auto">
-       <div className="text-center mb-16">
-        <div className="label-pill mx-auto">Hoe het werkt</div>
-        <h2 className="text-4xl lg:text-5xl font-display font-bold text-brand-primary tracking-tight">In 4 stappen naar rust.</h2>
+      <div className="text-center mb-16">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 border border-white/20 rounded-full text-[11px] uppercase tracking-widest font-bold text-white/80 mb-6">Hoe het werkt</div>
+        <h2 className="text-4xl lg:text-5xl font-display font-bold text-white tracking-tight">In 4 stappen naar rust.</h2>
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -579,12 +579,12 @@ export const SamenAanDeSlagSection = () => (
           { t: "Lekker Groeien", d: "We houden alles in de gaten en schaven bij waar nodig. Jij hebt de controle.", highlight: true }
         ].map((s, i) => (
           <div key={i} className="flex flex-col items-center text-center relative">
-            {i < 3 && <div className="hidden lg:block absolute top-10 left-1/2 w-full h-px bg-brand-soft -z-10" />}
-            <div className={`w-16 h-16 rounded-[20px] font-display font-black text-xl flex items-center justify-center mb-8 transition-all ${s.highlight ? 'bg-brand-accent text-white shadow-xl shadow-brand-accent/20 scale-110' : 'bg-brand-soft text-brand-primary border border-brand-soft'}`}>
+            {i < 3 && <div className="hidden lg:block absolute top-10 left-1/2 w-full h-px bg-white/10 -z-10" />}
+            <div className={`w-16 h-16 rounded-[20px] font-display font-black text-xl flex items-center justify-center mb-8 transition-all ${s.highlight ? 'bg-brand-accent text-white shadow-xl shadow-brand-accent/20 scale-110' : 'bg-white/10 text-white border border-white/20'}`}>
               {i+1}
             </div>
-            <h3 className="text-lg font-display font-bold text-brand-primary mb-3 leading-tight">{s.t}</h3>
-            <p className="text-brand-primary/75 leading-relaxed font-light text-sm px-2">{s.d}</p>
+            <h3 className="text-lg font-display font-bold text-white mb-3 leading-tight">{s.t}</h3>
+            <p className="text-white/65 leading-relaxed font-light text-sm px-2">{s.d}</p>
           </div>
         ))}
       </div>
@@ -594,15 +594,15 @@ export const SamenAanDeSlagSection = () => (
           <img src="/images/team-stefan-relax-lg.webp" srcSet="/images/team-stefan-relax-sm.webp 480w, /images/team-stefan-relax-lg.webp 700w" sizes="(max-width: 768px) 100vw, 50vw" alt="Ontspannen maar gefocust" className="rounded-[24px] shadow-lg w-full object-cover object-[center_10%] h-96" loading="lazy" />
         </div>
         <div className="lg:w-1/2">
-          <h3 className="text-2xl font-display font-bold text-brand-primary mb-4">Ontspannen, maar gefocust op resultaat.</h3>
-          <p className="text-brand-primary/75 leading-relaxed font-light mb-6">
+          <h3 className="text-2xl font-display font-bold text-white mb-4">Ontspannen, maar gefocust op resultaat.</h3>
+          <p className="text-white/70 leading-relaxed font-light mb-6">
             We nemen het werk serieus, maar onszelf niet. Dat is precies waarom onze klanten met ons doorwerken: het voelt niet als een zware last, maar als een versterking van je eigen team.
           </p>
           <div className="flex items-center gap-4">
-            <img src="/images/team-1-avatar.webp" className="w-12 h-12 rounded-full object-cover object-[center_25%] border border-brand-soft" alt="Stefan" loading="lazy" />
+            <img src="/images/team-1-avatar.webp" className="w-12 h-12 rounded-full object-cover object-[center_25%] border border-white/25" alt="Stefan" loading="lazy" />
             <div>
-              <p className="font-display font-bold text-brand-primary text-sm">Stefan Kelderman</p>
-              <p className="text-xs text-brand-primary/75">Oprichter Optimaal Groeien</p>
+              <p className="font-display font-bold text-white text-sm">Stefan Kelderman</p>
+              <p className="text-xs text-white/60">Oprichter Optimaal Groeien</p>
             </div>
           </div>
         </div>
