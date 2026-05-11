@@ -1,0 +1,185 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection, render } from 'astro:content';
+import '../../../src/index.css';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map(post => ({
+    params: { slug: post.data.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+// Estimate reading time
+const words = post.body.split(/\s+/).length;
+const readingTime = Math.ceil(words / 200);
+
+// Get related posts (same category, exclude current)
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+const related = allPosts
+  .filter(p => p.data.slug !== post.data.slug && p.data.category === post.data.category)
+  .slice(0, 3);
+---
+
+<Layout
+  title={post.data.title + ' — Optimaal Groeien'}
+  description={post.data.description}
+  canonical={`https://optimaalgroeien.nl/blog/${post.data.slug}`}
+  ogImage={post.data.heroImage}
+>
+  <!-- Nav -->
+  <nav class="bg-brand-primary px-6 py-5 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="/" class="font-display font-bold text-white text-lg tracking-tight">
+        Optimaal Groeien
+      </a>
+      <div class="flex items-center gap-6">
+        <a href="/blog" class="text-sm text-white/60 hover:text-white transition-colors">← Blog</a>
+        <a href="/#contact" class="text-sm font-bold text-white/70 hover:text-white transition-colors">
+          Plan een analyse →
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="bg-brand-primary pt-16 pb-12 px-6">
+    <div class="max-w-3xl mx-auto">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="text-[10px] font-bold uppercase tracking-widest text-brand-accent px-3 py-1 bg-brand-accent/15 rounded-full">
+          {post.data.category}
+        </span>
+        <span class="text-[12px] text-white/40">
+          {new Date(post.data.date).toLocaleDateString('nl-NL', { day: 'numeric', month: 'long', year: 'numeric' })}
+        </span>
+        <span class="text-[12px] text-white/40">{readingTime} min lezen</span>
+      </div>
+      <h1 class="text-3xl lg:text-4xl font-display font-bold text-white leading-snug tracking-tight mb-6">
+        {post.data.title}
+      </h1>
+      <p class="text-lg text-white/65 leading-relaxed mb-8">
+        {post.data.description}
+      </p>
+      <div class="flex items-center gap-3">
+        <img
+          src="/images/team-1-avatar.webp"
+          alt={post.data.author}
+          class="w-10 h-10 rounded-full object-cover object-[center_25%] border border-white/20"
+          loading="eager"
+        />
+        <div>
+          <p class="text-sm font-bold text-white">{post.data.author}</p>
+          <p class="text-xs text-white/50">Oprichter Optimaal Groeien</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  {post.data.heroImage && (
+    <div class="max-w-4xl mx-auto px-6 -mt-6">
+      <img
+        src={post.data.heroImage}
+        alt={post.data.heroAlt || post.data.title}
+        class="w-full rounded-[24px] shadow-2xl object-cover max-h-[480px]"
+        loading="eager"
+      />
+    </div>
+  )}
+
+  <!-- Article body -->
+  <article class="py-16 px-6">
+    <div class="max-w-3xl mx-auto">
+      <div class="prose prose-lg prose-slate max-w-none
+        prose-headings:font-display prose-headings:text-brand-primary prose-headings:tracking-tight
+        prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4
+        prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
+        prose-p:text-brand-ink/75 prose-p:leading-relaxed
+        prose-strong:text-brand-primary prose-strong:font-bold
+        prose-a:text-brand-accent prose-a:no-underline hover:prose-a:underline
+        prose-ul:space-y-2 prose-li:text-brand-ink/75
+        prose-hr:border-brand-soft prose-hr:my-8
+        prose-blockquote:border-brand-accent prose-blockquote:bg-amber-50/50 prose-blockquote:rounded-r-xl prose-blockquote:py-1
+      ">
+        <Content />
+      </div>
+
+      <!-- Tags -->
+      <div class="mt-12 pt-8 border-t border-brand-soft flex flex-wrap gap-2">
+        {post.data.tags.map(tag => (
+          <span class="px-3 py-1 bg-brand-soft text-brand-ink/60 text-[12px] font-medium rounded-full">
+            #{tag}
+          </span>
+        ))}
+      </div>
+
+      <!-- CTA block -->
+      <div class="mt-12 bg-brand-primary rounded-[28px] p-8 text-center">
+        <h3 class="text-xl font-display font-bold text-white mb-3">
+          Wil je dit toepassen in jouw bedrijf?
+        </h3>
+        <p class="text-white/65 mb-6 text-sm leading-relaxed">
+          Plan een gratis analyse van 45 minuten. Stefan kijkt mee en geeft direct concrete aanbevelingen.
+        </p>
+        <a
+          href="https://calendly.com/stefankelderman/15min"
+          target="_blank"
+          rel="noreferrer"
+          class="inline-flex items-center gap-2 px-8 py-4 bg-brand-accent text-white rounded-2xl font-display font-bold hover:bg-white hover:text-brand-accent transition-all duration-200"
+        >
+          Plan je gratis analyse →
+        </a>
+      </div>
+    </div>
+  </article>
+
+  <!-- Related posts -->
+  {related.length > 0 && (
+    <section class="py-16 px-6 bg-[#FFFAF4]">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-2xl font-display font-bold text-brand-primary mb-8">Gerelateerde artikelen</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          {related.map(p => (
+            <a
+              href={`/blog/${p.data.slug}`}
+              class="group bg-white border border-amber-100/80 rounded-[24px] p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+            >
+              <span class="text-[10px] font-bold uppercase tracking-widest text-brand-accent">{p.data.category}</span>
+              <h3 class="text-[15px] font-display font-bold text-brand-primary mt-2 mb-3 leading-snug group-hover:text-brand-accent transition-colors">
+                {p.data.title}
+              </h3>
+              <p class="text-[12px] text-brand-ink/50 leading-relaxed line-clamp-2">{p.data.description}</p>
+              <div class="mt-4 text-[12px] font-bold text-brand-accent">
+                Lees artikel <span class="group-hover:translate-x-1 transition-transform inline-block">→</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+</Layout>
+
+<style is:global>
+  /* Tailwind prose doesn't ship by default in v4 — minimal article styles */
+  .prose h2 { font-size: 1.5rem; font-weight: 700; margin-top: 3rem; margin-bottom: 1rem; }
+  .prose h3 { font-size: 1.25rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.75rem; }
+  .prose p  { margin-bottom: 1.25rem; line-height: 1.75; }
+  .prose ul { list-style: disc; padding-left: 1.5rem; margin-bottom: 1.25rem; }
+  .prose ol { list-style: decimal; padding-left: 1.5rem; margin-bottom: 1.25rem; }
+  .prose li { margin-bottom: 0.4rem; }
+  .prose strong { font-weight: 700; }
+  .prose a { color: #f17a29; }
+  .prose a:hover { text-decoration: underline; }
+  .prose hr { border-color: #F1F5F9; margin: 2rem 0; }
+  .prose blockquote { border-left: 3px solid #f17a29; padding: 0.5rem 1rem; background: #fffaf4; border-radius: 0 12px 12px 0; }
+  .prose table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }
+  .prose th { background: #053b63; color: white; padding: 0.75rem 1rem; text-align: left; font-size: 0.875rem; }
+  .prose td { padding: 0.75rem 1rem; border-bottom: 1px solid #F1F5F9; font-size: 0.9rem; }
+  .prose tr:nth-child(even) td { background: #FAFBFC; }
+  .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+</style>

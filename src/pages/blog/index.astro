@@ -1,0 +1,120 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import '../../../src/index.css';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+
+const categories = [...new Set(posts.map(p => p.data.category))].sort();
+---
+
+<Layout
+  title="Blog — Optimaal Groeien"
+  description="Praktische artikelen over B2B leadgeneratie, sales, branding en groeistrategie voor technische bedrijven."
+  canonical="https://optimaalgroeien.nl/blog"
+>
+  <!-- Minimal nav -->
+  <nav class="bg-brand-primary px-6 py-5 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="/" class="font-display font-bold text-white text-lg tracking-tight">
+        Optimaal Groeien
+      </a>
+      <a href="/#contact" class="text-sm font-bold text-white/70 hover:text-white transition-colors">
+        Plan een analyse →
+      </a>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="bg-brand-primary pt-20 pb-16 px-6 text-center">
+    <div class="max-w-3xl mx-auto">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 border border-white/20 rounded-full text-[11px] uppercase tracking-widest font-bold text-white/80 mb-6">
+        Kennisbank
+      </div>
+      <h1 class="text-4xl lg:text-5xl font-display font-bold text-white tracking-tight mb-4">
+        Alles over B2B groei.
+      </h1>
+      <p class="text-lg text-white/65 leading-relaxed">
+        Praktische inzichten over leadgeneratie, sales, branding en strategie — speciaal voor technische B2B bedrijven.
+      </p>
+    </div>
+  </section>
+
+  <!-- Posts grid -->
+  <section class="py-20 px-6 bg-[#FFFCF8]">
+    <div class="max-w-7xl mx-auto">
+
+      <!-- Category filter (static, JS-free) -->
+      <div class="flex flex-wrap gap-2 mb-12">
+        <span class="px-4 py-1.5 bg-brand-primary text-white text-[12px] font-bold rounded-full">Alle artikelen</span>
+        {categories.map(cat => (
+          <span class="px-4 py-1.5 bg-white border border-brand-soft text-brand-ink/60 text-[12px] font-bold rounded-full">{cat}</span>
+        ))}
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {posts.map(post => (
+          <a
+            href={`/blog/${post.data.slug}`}
+            class="group bg-white border border-amber-100/80 rounded-[28px] overflow-hidden hover:shadow-lg hover:shadow-amber-500/8 hover:-translate-y-1 transition-all duration-300 flex flex-col"
+          >
+            {post.data.heroImage && (
+              <div class="aspect-video overflow-hidden">
+                <img
+                  src={post.data.heroImage}
+                  alt={post.data.heroAlt || post.data.title}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+              </div>
+            )}
+            {!post.data.heroImage && (
+              <div class="aspect-video bg-gradient-to-br from-brand-primary/5 to-brand-accent/10 flex items-center justify-center">
+                <span class="text-4xl font-display font-black text-brand-primary/10">OG</span>
+              </div>
+            )}
+            <div class="p-6 flex flex-col flex-1">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="text-[10px] font-bold uppercase tracking-widest text-brand-accent px-2 py-0.5 bg-brand-accent/8 rounded-full">
+                  {post.data.category}
+                </span>
+                <span class="text-[11px] text-brand-ink/35">
+                  {new Date(post.data.date).toLocaleDateString('nl-NL', { day: 'numeric', month: 'long', year: 'numeric' })}
+                </span>
+              </div>
+              <h2 class="text-[16px] font-display font-bold text-brand-primary leading-snug mb-3 group-hover:text-brand-accent transition-colors flex-1">
+                {post.data.title}
+              </h2>
+              <p class="text-[13px] text-brand-ink/55 leading-relaxed line-clamp-3 mb-4">
+                {post.data.description}
+              </p>
+              <div class="flex items-center gap-2 text-[12px] font-bold text-brand-accent">
+                Lees artikel
+                <span class="group-hover:translate-x-1 transition-transform inline-block">→</span>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer CTA -->
+  <section class="py-16 px-6 bg-brand-primary text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-2xl lg:text-3xl font-display font-bold text-white mb-4">
+        Meer weten over jouw groeikansen?
+      </h2>
+      <p class="text-white/65 mb-8">Plan een gratis analyse van 45 minuten. Stefan staat persoonlijk voor je klaar.</p>
+      <a
+        href="https://calendly.com/stefankelderman/15min"
+        target="_blank"
+        rel="noreferrer"
+        class="inline-flex items-center gap-2 px-8 py-4 bg-brand-accent text-white rounded-2xl font-display font-bold hover:bg-white hover:text-brand-accent transition-all duration-200"
+      >
+        Plan je analyse →
+      </a>
+    </div>
+  </section>
+</Layout>
