@@ -60,11 +60,12 @@ export const OmzetCalculator: React.FC<CalculatorProps> = ({ onCalculate }) => {
 
         <div className="grid grid-cols-2 gap-4 mb-8">
           <div className="space-y-1.5">
-            <label className="text-[9px] font-display font-bold text-slate-400 uppercase tracking-widest">Orderwaarde</label>
+            <label htmlFor="calc-ordervalue" className="text-[9px] font-display font-bold text-slate-400 uppercase tracking-widest">Orderwaarde</label>
             <div className="relative">
                <span className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-300 text-xs">€</span>
-               <input 
-                type="number" 
+               <input
+                id="calc-ordervalue"
+                type="number"
                 value={orderValue}
                 onChange={(e) => setOrderValue(e.target.value)}
                 className="w-full bg-slate-50 border border-slate-100 p-3 pl-8 rounded-xl text-sm text-brand-primary font-bold focus:outline-none focus:border-brand-accent transition-all"
@@ -72,26 +73,29 @@ export const OmzetCalculator: React.FC<CalculatorProps> = ({ onCalculate }) => {
             </div>
           </div>
           <div className="space-y-1.5">
-            <label className="text-[9px] font-display font-bold text-slate-400 uppercase tracking-widest">Conversie (%)</label>
-            <input 
-              type="number" 
+            <label htmlFor="calc-conversie" className="text-[9px] font-display font-bold text-slate-400 uppercase tracking-widest">Conversie (%)</label>
+            <input
+              id="calc-conversie"
+              type="number"
               value={closingRatio}
               onChange={(e) => setClosingRatio(e.target.value)}
               className="w-full bg-slate-50 border border-slate-100 p-3 rounded-xl text-sm text-brand-primary font-bold focus:outline-none focus:border-brand-accent transition-all"
             />
           </div>
           <div className="space-y-1.5">
-            <label className="text-[9px] font-display font-bold text-slate-400 uppercase tracking-widest">Leads / mnd</label>
-            <input 
-              type="number" 
+            <label htmlFor="calc-leads" className="text-[9px] font-display font-bold text-slate-400 uppercase tracking-widest">Leads / mnd</label>
+            <input
+              id="calc-leads"
+              type="number"
               value={leadsPerMonth}
               onChange={(e) => setLeadsPerMonth(e.target.value)}
               className="w-full bg-slate-50 border border-slate-100 p-3 rounded-xl text-sm text-brand-primary font-bold focus:outline-none focus:border-brand-accent transition-all"
             />
           </div>
           <div className="space-y-1.5">
-            <label className="text-[9px] font-display font-bold text-slate-400 uppercase tracking-widest">Type</label>
-            <select 
+            <label htmlFor="calc-type" className="text-[9px] font-display font-bold text-slate-400 uppercase tracking-widest">Type</label>
+            <select
+              id="calc-type"
               value={branch}
               onChange={(e) => setBranch(e.target.value)}
               className="w-full bg-slate-50 border border-slate-100 p-3 rounded-xl text-sm text-brand-primary font-bold focus:outline-none focus:border-brand-accent transition-all appearance-none outline-none"

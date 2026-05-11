@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'motion/react';
+import { motion, AnimatePresence } from 'motion/react';
 import {
   Menu,
   X,
@@ -41,9 +41,10 @@ export const Navbar = ({ activePage, setActivePage }: { activePage: string, setA
           onClick={() => setActivePage('partner')}
         >
           <img
-            src="/images/logo.png"
+            src="/images/logo.webp"
             alt="Optimaal Groeien"
-            className={`transition-all duration-300 ${isScrolled ? 'h-10' : 'h-12'}`}
+            width="300" height="57"
+            className={`transition-all duration-300 ${isScrolled ? 'h-10' : 'h-12'} w-auto`}
           />
         </div>
 
@@ -73,7 +74,7 @@ export const Navbar = ({ activePage, setActivePage }: { activePage: string, setA
           </button>
         </div>
 
-        <button className={`${isScrolled ? 'text-brand-primary' : 'text-white'} md:hidden`} onClick={() => setIsOpen(!isOpen)}>
+        <button aria-label={isOpen ? 'Menu sluiten' : 'Menu openen'} className={`${isScrolled ? 'text-brand-primary' : 'text-white'} md:hidden`} onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
@@ -114,7 +115,7 @@ export const Footer = () => (
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
         <div>
           <div className="flex items-center gap-2 mb-8">
-            <img src="/images/logo.png" alt="Optimaal Groeien" className="h-8" />
+            <img src="/images/logo.webp" alt="Optimaal Groeien" width="300" height="57" className="h-8 w-auto" />
           </div>
           <p className="text-sm text-white/40 leading-relaxed max-w-xs">
             Wij bouwen en runnen de volledige commerciële structuur van B2B-bedrijven in industrie, machinebouw, logistiek, bouw en techniek.
@@ -165,8 +166,16 @@ export const Footer = () => (
 
 // --- Page 1 Components ---
 
+const SECTORS = ['technische sector', 'industrie', 'logistiek', 'bouw'];
+
 export const PartnerHero = () => {
   const [extraYearly, setExtraYearly] = React.useState<number | null>(null);
+  const [sectorIdx, setSectorIdx] = React.useState(0);
+
+  React.useEffect(() => {
+    const t = setInterval(() => setSectorIdx(i => (i + 1) % SECTORS.length), 2800);
+    return () => clearInterval(t);
+  }, []);
 
   return (
     <section className="bg-brand-primary pt-32 lg:pt-40 pb-0 px-6 overflow-hidden relative">
@@ -183,7 +192,21 @@ export const PartnerHero = () => {
             </div>
 
             <h1 className="text-4xl lg:text-[3.5rem] font-display font-bold text-white leading-[1.1] mb-8 tracking-tight max-w-xl">
-               Commercieel Partner voor B2B bedrijven in de technische sector.
+               Commercieel Partner voor B2B bedrijven in de{' '}
+               <span className="relative inline-block">
+                 <AnimatePresence mode="wait">
+                   <motion.span
+                     key={sectorIdx}
+                     initial={{ opacity: 0, y: 14 }}
+                     animate={{ opacity: 1, y: 0 }}
+                     exit={{ opacity: 0, y: -14 }}
+                     transition={{ duration: 0.35, ease: 'easeInOut' }}
+                     className="text-brand-accent inline-block"
+                   >
+                     {SECTORS[sectorIdx]}
+                   </motion.span>
+                 </AnimatePresence>
+               </span>
             </h1>
 
             <p className="text-lg text-white/50 mb-10 max-w-lg leading-relaxed font-light">
@@ -206,9 +229,9 @@ export const PartnerHero = () => {
             </div>
             <div className="flex items-center gap-4 mt-6">
                <div className="flex -space-x-2">
-                 <img src="/images/team-1.jpg" className="w-9 h-9 rounded-full border-2 border-brand-primary object-cover object-[center_25%]" alt="Team" />
-                 <img src="/images/team-phone.jpg" className="w-9 h-9 rounded-full border-2 border-brand-primary object-cover object-top" alt="Team" />
-                 <img src="/images/team-4.png" className="w-9 h-9 rounded-full border-2 border-brand-primary object-cover object-top" alt="Team" />
+                 <img src="/images/team-1-avatar.webp" className="w-9 h-9 rounded-full border-2 border-brand-primary object-cover object-[center_25%]" alt="Team" loading="eager" />
+                 <img src="/images/team-phone-avatar.webp" className="w-9 h-9 rounded-full border-2 border-brand-primary object-cover object-top" alt="Team" loading="eager" />
+                 <img src="/images/team-4-avatar.webp" className="w-9 h-9 rounded-full border-2 border-brand-primary object-cover object-top" alt="Team" loading="eager" />
                </div>
                <div className="flex flex-col">
                   <span className="text-xs text-white font-bold opacity-70 leading-none mb-1">Stefan & team</span>
@@ -252,27 +275,28 @@ export const ToolsSection = () => {
     { name: "Gemini", src: "/images/logos/gemini.svg" },
     { name: "Adobe", src: "/images/logos/adobe.svg" },
     { name: "Brevo", src: "/images/logos/brevo.svg" },
-    { name: "Sales Navigator", src: "/images/logos/linkedin.svg" },
   ];
   return (
     <section className="py-20 px-6 bg-brand-bg border-y border-brand-soft">
-      <div className="max-w-7xl mx-auto text-center mb-12">
-        <h3 className="text-sm font-bold uppercase tracking-widest text-brand-primary/40 mb-3">Wij werken met de beste tools</h3>
+      <div className="max-w-7xl mx-auto text-center mb-14">
+        <p className="text-sm font-bold uppercase tracking-widest text-brand-primary/40 mb-3">Wij werken met de beste tools</p>
         <p className="text-brand-primary/50 text-sm max-w-2xl mx-auto leading-relaxed">
           Wij begrijpen de complexiteit van jullie bedrijf, doelgroep en de markt. Dat stelt ons in staat om proactief de volledige regie over jullie groei te nemen, terwijl jij je focust op de operatie.
         </p>
       </div>
       <div className="max-w-5xl mx-auto">
-        <div className="flex flex-wrap justify-center items-center gap-x-10 gap-y-8">
+        <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-10">
           {tools.map((tool, i) => (
             <div
               key={i}
-              className="group flex flex-col items-center gap-2 transition-all duration-300 hover:-translate-y-1"
+              className="flex items-center justify-center transition-all duration-300 hover:-translate-y-0.5"
               title={tool.name}
             >
-              <div className="h-10 w-24 flex items-center justify-center grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300">
-                <img src={tool.src} alt={tool.name} className="max-h-full max-w-full object-contain" />
-              </div>
+              <img 
+                src={tool.src} 
+                alt={tool.name} 
+                className="h-8 lg:h-10 w-auto max-w-[120px] lg:max-w-[160px] object-contain opacity-60 hover:opacity-100 transition-all duration-300"
+              />
             </div>
           ))}
         </div>
@@ -364,7 +388,7 @@ export const HoeWeHelpenSection = () => (
 
       <div className="lg:w-2/5 w-full lg:sticky lg:top-28 space-y-6">
         <div className="rounded-[24px] overflow-hidden shadow-lg border border-brand-soft">
-          <img src="/images/team-1.jpg" alt="Samenwerken bij Optimaal Groeien" className="w-full h-56 object-cover object-[center_20%]" />
+          <img src="/images/team-1-lg.webp" srcSet="/images/team-1-sm.webp 480w, /images/team-1-lg.webp 800w" sizes="(max-width: 768px) 100vw, 50vw" alt="Samenwerken bij Optimaal Groeien" className="w-full h-56 object-cover object-[center_20%]" loading="lazy" />
           <div className="p-5 bg-white">
             <p className="text-sm font-display font-bold text-brand-primary">Samen werken we aan jouw groei.</p>
             <p className="text-xs text-brand-primary/40 mt-1">Geen vage rapporten, maar echte samenwerking.</p>
@@ -373,11 +397,11 @@ export const HoeWeHelpenSection = () => (
 
         <div className="bg-brand-primary p-10 text-white rounded-[28px] relative overflow-hidden shadow-xl">
           <div className="soft-glow !bg-brand-lime/10" />
-          <div className="text-2xl font-display font-bold leading-tight mb-6 relative z-10">
+          <div className="text-2xl font-display font-bold leading-tight mb-6 relative z-10 text-white">
             “Wij ontzorgen je echt, <br />
             <span className="text-brand-lime">geen losse flodders.</span>”
           </div>
-          <p className="text-white/40 mb-8 relative z-10 leading-relaxed font-light text-sm">
+          <p className="text-white/70 mb-8 relative z-10 leading-relaxed font-light text-sm">
             We zijn geen bureau dat alleen maar rapporten stuurt. We zijn je partner die de mouwen opstroopt.
           </p>
 
@@ -391,7 +415,7 @@ export const HoeWeHelpenSection = () => (
                 <CheckCircle2 size={20} className="text-brand-lime shrink-0 mt-0.5" />
                 <div>
                   <div className="text-sm font-display font-bold text-white mb-0.5">{g.t}</div>
-                  <div className="text-xs text-white/30 font-medium">{g.d}</div>
+                  <div className="text-xs text-white/60 font-medium">{g.d}</div>
                 </div>
               </div>
             ))}
@@ -417,17 +441,17 @@ export const TeamSection = () => (
         </div>
         <div className="lg:w-1/2 flex gap-4">
           <div className="rounded-[24px] overflow-hidden shadow-xl border border-brand-soft w-1/2">
-            <img src="/images/team-phone.jpg" alt="Teamlid aan het werk" className="w-full h-64 object-cover object-top" />
+            <img src="/images/team-phone-lg.webp" srcSet="/images/team-phone-sm.webp 480w, /images/team-phone-lg.webp 800w" sizes="(max-width: 768px) 100vw, 50vw" alt="Teamlid aan het werk" className="w-full h-64 object-cover object-top" loading="lazy" />
           </div>
           <div className="rounded-[24px] overflow-hidden shadow-xl border border-brand-soft w-1/2 mt-8">
-            <img src="/images/team-4.png" alt="Teamleden" className="w-full h-64 object-cover object-top" />
+            <img src="/images/team-4-lg.webp" srcSet="/images/team-4-sm.webp 480w, /images/team-4-lg.webp 700w" sizes="(max-width: 768px) 100vw, 50vw" alt="Teamleden" className="w-full h-64 object-cover object-top" loading="lazy" />
           </div>
         </div>
       </div>
 
       <div className="grid md:grid-cols-3 gap-6">
         <div className="md:col-span-2 rounded-[28px] overflow-hidden shadow-xl border border-brand-soft">
-          <img src="/images/team-full.jpg" alt="Het complete team van Optimaal Groeien" className="w-full h-80 lg:h-96 object-cover object-center" />
+          <img src="/images/team-full-lg.webp" srcSet="/images/team-full-sm.webp 600w, /images/team-full-lg.webp 1000w" sizes="(max-width: 768px) 100vw, 65vw" alt="Het complete team van Optimaal Groeien" className="w-full h-80 lg:h-96 object-cover object-center" loading="lazy" />
         </div>
         <div className="bg-white p-8 rounded-[28px] border border-brand-soft flex flex-col justify-center">
           <div className="w-12 h-12 bg-brand-lime/10 rounded-2xl flex items-center justify-center text-brand-accent mb-6">
@@ -438,10 +462,10 @@ export const TeamSection = () => (
             Van strategie tot content, van advertenties tot automatisering. Ieder zijn eigen expertise, samen jouw groeimachine.
           </p>
           <div className="flex -space-x-2">
-            <img src="/images/team-1.jpg" className="w-10 h-10 rounded-full border-2 border-white object-cover object-[center_25%]" alt="" />
-            <img src="/images/team-phone.jpg" className="w-10 h-10 rounded-full border-2 border-white object-cover object-top" alt="" />
-            <img src="/images/team-stefan-relax.jpg" className="w-10 h-10 rounded-full border-2 border-white object-cover object-top" alt="" />
-            <img src="/images/team-4.png" className="w-10 h-10 rounded-full border-2 border-white object-cover object-top" alt="" />
+            <img src="/images/team-1-avatar.webp" className="w-10 h-10 rounded-full border-2 border-white object-cover object-[center_25%]" alt="" loading="lazy" />
+            <img src="/images/team-phone-avatar.webp" className="w-10 h-10 rounded-full border-2 border-white object-cover object-top" alt="" loading="lazy" />
+            <img src="/images/team-stefan-relax-avatar.webp" className="w-10 h-10 rounded-full border-2 border-white object-cover object-top" alt="" loading="lazy" />
+            <img src="/images/team-4-avatar.webp" className="w-10 h-10 rounded-full border-2 border-white object-cover object-top" alt="" loading="lazy" />
             <div className="w-10 h-10 rounded-full border-2 border-white bg-brand-soft flex items-center justify-center text-[10px] font-bold text-brand-primary">+4</div>
           </div>
         </div>
@@ -502,31 +526,34 @@ export const KlantverhalenSection = () => (
 );
 
 export const OnzeBelofteSection = () => (
-  <section className="py-24 px-6 bg-brand-bg relative overflow-hidden">
-    <div className="max-w-7xl mx-auto">
-      <div className="flex flex-col lg:flex-row gap-12 items-center mb-16">
-        <div className="lg:w-1/2">
-          <div className="label-pill">Geen kleine lettertjes</div>
-          <h2 className="text-4xl lg:text-5xl font-display font-bold text-brand-primary mb-6 tracking-tight">Onze belofte aan jou.</h2>
-          <p className="text-lg text-brand-primary/50 font-light max-w-md">Wij geloven zo sterk in wat we doen, dat we het risico graag bij onszelf leggen. Zo kun jij met een gerust hart beginnen.</p>
-        </div>
-        <div className="lg:w-1/2 flex justify-center">
-          <img src="/images/team-4.png" alt="Team Optimaal Groeien" className="rounded-[24px] shadow-xl w-full max-w-xs object-cover object-top" />
-        </div>
+  <section className="py-24 px-6 bg-brand-primary relative overflow-hidden">
+    <div className="absolute inset-0 blueprint-grid opacity-[0.04] pointer-events-none" />
+    <div className="max-w-7xl mx-auto relative z-10">
+      <div className="text-center mb-16">
+        <div className="label-pill !bg-white/10 !text-white !border-none mx-auto">Geen kleine lettertjes</div>
+        <h2 className="text-4xl lg:text-5xl font-display font-bold text-white mb-6 tracking-tight">Onze belofte aan jou.</h2>
+        <p className="text-lg text-white/50 font-light max-w-xl mx-auto">Wij geloven zo sterk in wat we doen, dat we het risico graag bij onszelf leggen. Zo kun jij met een gerust hart beginnen.</p>
       </div>
 
-      <div className="grid lg:grid-cols-3 gap-5">
+      <div className="grid lg:grid-cols-3 gap-6">
         {[
-          { t: "Groei gegarandeerd", d: "Zien we na 6 maanden niet de groei die we hadden afgesproken? Dan werken we gratis door. Zo simpel is het." },
-          { t: "Binnen 30 dagen live", d: "Binnen 30 dagen ben je live. Geen trajecten van een jaar, maar vlot en duidelijk aan de slag voor je onderneming." },
-          { t: "Jij bent en blijft de baas", d: "Alles wat we maken, van de foto's tot de data, is van jou. Je zit nooit aan ons vast. Vrijheid boven alles." }
+          { n: "01", t: "Groei gegarandeerd", d: "Zien we na 6 maanden niet de groei die we hadden afgesproken? Dan werken we gratis door. Zo simpel is het." },
+          { n: "02", t: "Binnen 30 dagen live", d: "Binnen 30 dagen ben je live. Geen trajecten van een jaar, maar vlot en duidelijk aan de slag voor je onderneming." },
+          { n: "03", t: "Jij bent en blijft de baas", d: "Alles wat we maken, van de foto's tot de data, is van jou. Je zit nooit aan ons vast. Vrijheid boven alles." }
         ].map((g, i) => (
-          <div key={i} className="bg-white p-10 rounded-[24px] border border-brand-soft flex flex-col items-center text-center hover:shadow-lg hover:shadow-brand-primary/5 transition-all">
-            <div className="w-14 h-14 bg-brand-lime/10 rounded-[18px] flex items-center justify-center text-brand-accent mb-8">
-              <ShieldCheck size={28} />
+          <div key={i} className="group relative bg-white/[0.03] border border-white/10 p-10 rounded-[28px] hover:bg-white/[0.06] hover:border-brand-lime/30 transition-all duration-500 overflow-hidden">
+            <div className="absolute -top-4 -right-4 text-8xl font-display font-black text-white/[0.03] group-hover:text-brand-lime/10 transition-all duration-500 select-none">
+              {g.n}
             </div>
-            <h3 className="text-xl font-display font-bold text-brand-primary mb-4 leading-tight">{g.t}</h3>
-            <p className="text-brand-primary/50 leading-relaxed font-light text-sm">{g.d}</p>
+            <div className="relative z-10">
+              <div className="w-16 h-16 bg-brand-lime/10 border border-brand-lime/20 rounded-2xl flex items-center justify-center text-brand-lime mb-8 group-hover:scale-110 group-hover:bg-brand-lime/20 transition-all duration-300">
+                <ShieldCheck size={32} />
+              </div>
+              <div className="text-[10px] uppercase tracking-[0.2em] text-brand-lime font-bold mb-3">Belofte {g.n}</div>
+              <h3 className="text-2xl font-display font-bold text-white mb-4 leading-tight">{g.t}</h3>
+              <p className="text-white/50 leading-relaxed font-light text-sm">{g.d}</p>
+            </div>
+            <div className="absolute bottom-0 left-0 right-0 h-1 bg-brand-lime/0 group-hover:bg-brand-lime/40 transition-all duration-500" />
           </div>
         ))}
       </div>
@@ -562,7 +589,7 @@ export const SamenAanDeSlagSection = () => (
 
       <div className="mt-16 flex flex-col lg:flex-row gap-8 items-center">
         <div className="lg:w-1/2">
-          <img src="/images/team-stefan-relax.jpg" alt="Ontspannen maar gefocust" className="rounded-[24px] shadow-lg w-full object-cover object-[center_10%] h-96" />
+          <img src="/images/team-stefan-relax-lg.webp" srcSet="/images/team-stefan-relax-sm.webp 480w, /images/team-stefan-relax-lg.webp 700w" sizes="(max-width: 768px) 100vw, 50vw" alt="Ontspannen maar gefocust" className="rounded-[24px] shadow-lg w-full object-cover object-[center_10%] h-96" loading="lazy" />
         </div>
         <div className="lg:w-1/2">
           <h3 className="text-2xl font-display font-bold text-brand-primary mb-4">Ontspannen, maar gefocust op resultaat.</h3>
@@ -570,7 +597,7 @@ export const SamenAanDeSlagSection = () => (
             We nemen het werk serieus, maar onszelf niet. Dat is precies waarom onze klanten met ons doorwerken: het voelt niet als een zware last, maar als een versterking van je eigen team.
           </p>
           <div className="flex items-center gap-4">
-            <img src="/images/team-1.jpg" className="w-12 h-12 rounded-full object-cover object-[center_25%] border border-brand-soft" alt="Stefan" />
+            <img src="/images/team-1-avatar.webp" className="w-12 h-12 rounded-full object-cover object-[center_25%] border border-brand-soft" alt="Stefan" loading="lazy" />
             <div>
               <p className="font-display font-bold text-brand-primary text-sm">Stefan Kelderman</p>
               <p className="text-xs text-brand-primary/40">Oprichter Optimaal Groeien</p>
@@ -623,7 +650,7 @@ export const LatenWePratenSection = () => (
     <div className="max-w-5xl mx-auto relative z-10">
       <div className="flex flex-col lg:flex-row gap-12 items-center">
         <div className="lg:w-1/2 text-white">
-          <h2 className="text-3xl lg:text-5xl font-display font-bold mb-6 leading-tight tracking-tight">
+          <h2 className="text-3xl lg:text-5xl font-display font-bold mb-6 leading-tight tracking-tight text-white">
             Zullen we even <br />kennismaken?
           </h2>
           <p className="text-lg text-white/50 mb-10 leading-relaxed font-light">
@@ -643,7 +670,7 @@ export const LatenWePratenSection = () => (
         </div>
         <div className="lg:w-1/2 w-full">
           <div className="rounded-[24px] overflow-hidden shadow-2xl border border-white/10">
-            <img src="/images/team-closeup.jpg" alt="Aan het werk voor jouw groei" className="w-full h-96 object-cover object-top" />
+            <img src="/images/team-closeup-lg.webp" srcSet="/images/team-closeup-sm.webp 480w, /images/team-closeup-lg.webp 700w" sizes="(max-width: 768px) 100vw, 50vw" alt="Aan het werk voor jouw groei" className="w-full h-96 object-contain bg-white/5" loading="lazy" />
           </div>
         </div>
       </div>
@@ -755,18 +782,18 @@ export const HoeHetWerktLeadsSection = () => (
           <div className="soft-glow !bg-brand-lime/10" />
           <div className="label-pill !bg-white/10 !text-white !border-none !mb-8">Investering</div>
           <h3 className="text-2xl font-display font-bold mb-3 relative z-10">Je eigen Leadmachine</h3>
-          <p className="text-white/30 mb-10 relative z-10 font-light italic text-sm">Duidelijke prijzen. Geen verrassingen achteraf.</p>
+          <p className="text-white/60 mb-10 relative z-10 font-light italic text-sm">Duidelijke prijzen. Geen verrassingen achteraf.</p>
 
           <div className="space-y-8 relative z-10">
             <div className="pb-8 border-b border-white/10">
               <div className="text-[10px] uppercase tracking-[0.2em] text-brand-lime font-bold mb-3">Eenmalig opzetten</div>
               <div className="text-3xl font-display font-bold mb-1">€ 1.450 — € 2.250</div>
-              <div className="text-xs text-white/20 font-medium italic">Binnen 30 dagen volledig live</div>
+              <div className="text-xs text-white/60 font-medium italic">Binnen 30 dagen volledig live</div>
             </div>
             <div className="pb-8">
               <div className="text-[10px] uppercase tracking-[0.2em] text-brand-lime font-bold mb-3">Beheer per maand</div>
               <div className="text-3xl font-display font-bold mb-1">€ 2.450 — € 4.200</div>
-              <div className="text-xs text-white/20 font-medium italic">Wij houden alles in de gaten voor je</div>
+              <div className="text-xs text-white/60 font-medium italic">Wij houden alles in de gaten voor je</div>
             </div>
           </div>
 
@@ -784,7 +811,7 @@ export const HoeHetWerktLeadsSection = () => (
         </div>
 
         <div className="rounded-[24px] overflow-hidden shadow-lg border border-brand-soft">
-          <img src="/images/team-1.jpg" alt="Samen aan de slag" className="w-full h-48 object-cover object-[center_20%]" />
+          <img src="/images/team-1-lg.webp" srcSet="/images/team-1-sm.webp 480w, /images/team-1-lg.webp 800w" sizes="(max-width: 768px) 100vw, 40vw" alt="Samen aan de slag" className="w-full h-48 object-cover object-[center_20%]" loading="lazy" />
         </div>
       </div>
     </div>
