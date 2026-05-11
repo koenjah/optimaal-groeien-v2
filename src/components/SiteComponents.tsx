@@ -15,7 +15,7 @@ import {
   MessageSquare,
   Users,
 } from 'lucide-react';
-import { OmzetCalculator } from './Calculator';
+import { CommercialQuiz } from './CommercialQuiz';
 
 // --- Shared Components ---
 
@@ -165,7 +165,6 @@ export const Footer = () => (
 const SECTORS = ['technische sector', 'industrie', 'logistiek', 'bouw'];
 
 export const PartnerHero = () => {
-  const [extraYearly, setExtraYearly] = React.useState<number | null>(null);
   const [sectorIdx, setSectorIdx] = React.useState(0);
 
   React.useEffect(() => {
@@ -244,12 +243,8 @@ export const PartnerHero = () => {
             </div>
           </div>
 
-          <div className="lg:w-1/2 w-full relative">
-            <div className="relative z-10 scale-95 lg:scale-100 lg:-rotate-1 lg:hover:rotate-0 transition-transform duration-700">
-               <OmzetCalculator onCalculate={(val) => setExtraYearly(val)} />
-            </div>
-            <div className="absolute -top-6 -right-6 w-28 h-28 border border-brand-accent/15 rounded-full animate-pulse lg:block hidden" />
-            <div className="absolute -bottom-6 -left-6 w-44 h-44 border border-amber-200/40 rounded-full lg:block hidden" />
+          <div className="lg:w-1/2 flex items-start lg:items-center mt-12 lg:mt-0">
+            <CommercialQuiz />
           </div>
         </div>
       </div>
@@ -272,7 +267,7 @@ export const ToolsSection = () => {
     { name: "Brevo", src: "/images/logos/brevo.webp", w: 122, h: 36 },
   ];
   return (
-    <section className="py-20 bg-[#FFFAF4] border-y border-amber-100 overflow-hidden">
+    <section className="py-20 bg-white border-y border-amber-100/60 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 text-center mb-14">
         <p className="text-sm font-bold uppercase tracking-widest text-brand-primary/75 mb-3">Wij werken met de beste tools</p>
         <p className="text-brand-primary/75 text-sm max-w-2xl mx-auto leading-relaxed">
@@ -280,8 +275,8 @@ export const ToolsSection = () => {
         </p>
       </div>
       <div className="relative">
-        <div className="absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-[#FFFAF4] to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-[#FFFAF4] to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
         <div
           className="flex items-center"
           style={{ animation: 'marquee 32s linear infinite' }}
@@ -309,7 +304,7 @@ export const ToolsSection = () => {
 };
 
 export const HerkenJeDitSection = () => (
-  <section className="py-24 px-6 bg-white">
+  <section className="py-24 px-6 bg-[#FFFAF4]">
     <div className="max-w-7xl mx-auto">
       <div className="flex flex-col lg:flex-row gap-12 items-start mb-16">
         <div className="lg:w-1/2">
@@ -352,7 +347,7 @@ export const HerkenJeDitSection = () => (
 );
 
 export const HoeWeHelpenSection = () => (
-  <section id="diensten" className="py-24 px-6 bg-[#FFFAF4] overflow-hidden relative">
+  <section id="diensten" className="py-24 px-6 bg-white overflow-hidden relative">
     <div className="absolute top-0 left-0 w-full h-px bg-amber-100" />
     <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-start">
       <div className="lg:w-3/5">
@@ -430,7 +425,7 @@ export const HoeWeHelpenSection = () => (
 );
 
 export const TeamSection = () => (
-  <section id="team" className="py-24 px-6 bg-white border-y border-amber-100">
+  <section id="team" className="py-24 px-6 bg-[#FFFAF4]">
     <div className="max-w-7xl mx-auto">
       <div className="flex flex-col lg:flex-row gap-12 items-center mb-16">
         <div className="lg:w-1/2">
@@ -563,7 +558,7 @@ export const OnzeBelofteSection = () => (
 );
 
 export const SamenAanDeSlagSection = () => (
-  <section className="py-24 px-6 bg-white border-y border-amber-50">
+  <section className="py-24 px-6 bg-brand-primary">
     <div className="max-w-7xl mx-auto">
        <div className="text-center mb-16">
         <div className="label-pill mx-auto">Hoe het werkt</div>
@@ -611,7 +606,7 @@ export const SamenAanDeSlagSection = () => (
 );
 
 export const WatAnderenZeggenSection = () => (
-  <section className="py-24 px-6 bg-[#FFFAF4]">
+  <section className="py-24 px-6 bg-white">
     <div className="max-w-7xl mx-auto">
       <div className="text-center mb-16">
         <div className="label-pill mx-auto">Eerlijke meningen</div>
