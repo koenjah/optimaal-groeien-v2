@@ -72,33 +72,28 @@ function getCategoryGradient(category: string): string {
                 />
               </div>
             ) : (
-              <div class={`aspect-[16/9] bg-gradient-to-br ${getCategoryGradient(post.data.category)} relative overflow-hidden flex items-end`}>
-                <!-- Decorative circles -->
-                <div class="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-white/5 group-hover:scale-110 transition-transform duration-500"></div>
-                <div class="absolute -bottom-6 -left-6 w-24 h-24 rounded-full bg-brand-accent/20"></div>
-                <div class="absolute top-4 left-6 w-2 h-2 rounded-full bg-brand-accent/60"></div>
-                <div class="absolute top-8 left-12 w-1.5 h-1.5 rounded-full bg-white/30"></div>
+              <div class="aspect-[16/9] bg-brand-primary/5 border-b border-amber-100/60 relative overflow-hidden flex items-center justify-between px-6">
+                <!-- Soft accent bar left -->
+                <div class="absolute left-0 top-0 bottom-0 w-1 bg-brand-accent/40 group-hover:bg-brand-accent transition-colors duration-300"></div>
 
-                <!-- Stat highlight as visual hero -->
+                <!-- Stat value — understated, left-aligned -->
                 {post.data.statHighlight ? (
-                  <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-5">
-                    <span class="text-[3.5rem] sm:text-[3rem] md:text-[3.5rem] font-display font-black text-brand-accent leading-none drop-shadow-sm">
+                  <div class="pl-4">
+                    <span class="block text-[2.2rem] font-display font-black text-brand-primary/20 group-hover:text-brand-accent/40 transition-colors duration-300 leading-none">
                       {post.data.statHighlight.value}
                     </span>
-                    <span class="text-[10px] text-white/55 mt-2 leading-snug max-w-[160px]">
+                    <span class="block text-[10px] text-brand-ink/30 mt-1 leading-snug max-w-[140px]">
                       {post.data.statHighlight.label}
                     </span>
                   </div>
                 ) : (
-                  <div class="absolute inset-0 flex items-center justify-center">
-                    <span class="text-[11px] font-bold uppercase tracking-widest text-white/30">
-                      {post.data.category}
-                    </span>
-                  </div>
+                  <span class="pl-4 text-[11px] font-bold uppercase tracking-widest text-brand-primary/20">
+                    {post.data.category}
+                  </span>
                 )}
 
-                <!-- Category pill bottom-left -->
-                <span class="relative z-10 m-4 text-[9px] font-bold uppercase tracking-widest text-brand-accent/90 px-2.5 py-1 bg-white/10 border border-white/15 rounded-full backdrop-blur-sm">
+                <!-- Category pill right -->
+                <span class="text-[9px] font-bold uppercase tracking-widest text-brand-accent px-2.5 py-1 bg-brand-accent/8 rounded-full">
                   {post.data.category}
                 </span>
               </div>
