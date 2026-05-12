@@ -61,8 +61,7 @@ function getCategoryGradient(category: string): string {
             href={`/blog/${post.data.slug}`}
             class="group bg-white border border-amber-100/80 rounded-[24px] overflow-hidden hover:shadow-xl hover:shadow-amber-500/10 hover:-translate-y-1.5 transition-all duration-300 flex flex-col"
           >
-            <!-- Thumbnail — branded stat card -->
-            {post.data.heroImage ? (
+            {post.data.heroImage && (
               <div class="aspect-[16/9] overflow-hidden">
                 <img
                   src={post.data.heroImage}
@@ -71,42 +70,14 @@ function getCategoryGradient(category: string): string {
                   loading="lazy"
                 />
               </div>
-            ) : (
-              <div class="aspect-[16/9] bg-brand-primary/5 border-b border-amber-100/60 relative overflow-hidden flex items-center justify-between px-6">
-                <!-- Soft accent bar left -->
-                <div class="absolute left-0 top-0 bottom-0 w-1 bg-brand-accent/40 group-hover:bg-brand-accent transition-colors duration-300"></div>
-
-                <!-- Stat value — understated, left-aligned -->
-                {post.data.statHighlight ? (
-                  <div class="pl-4">
-                    <span class="block text-[2.2rem] font-display font-black text-brand-primary/20 group-hover:text-brand-accent/40 transition-colors duration-300 leading-none">
-                      {post.data.statHighlight.value}
-                    </span>
-                    <span class="block text-[10px] text-brand-ink/30 mt-1 leading-snug max-w-[140px]">
-                      {post.data.statHighlight.label}
-                    </span>
-                  </div>
-                ) : (
-                  <span class="pl-4 text-[11px] font-bold uppercase tracking-widest text-brand-primary/20">
-                    {post.data.category}
-                  </span>
-                )}
-
-                <!-- Category pill right -->
-                <span class="text-[9px] font-bold uppercase tracking-widest text-brand-accent px-2.5 py-1 bg-brand-accent/8 rounded-full">
-                  {post.data.category}
-                </span>
-              </div>
             )}
 
             <!-- Card body -->
             <div class="p-5 sm:p-6 flex flex-col flex-1">
               <div class="flex items-center gap-2 mb-3">
-                {!post.data.heroImage && (
-                  <span class="text-[10px] font-bold uppercase tracking-widest text-brand-accent px-2 py-0.5 bg-brand-accent/8 rounded-full">
-                    {post.data.category}
-                  </span>
-                )}
+                <span class="text-[10px] font-bold uppercase tracking-widest text-brand-accent px-2 py-0.5 bg-brand-accent/8 rounded-full">
+                  {post.data.category}
+                </span>
                 <span class="text-[11px] text-brand-ink/35">
                   {new Date(post.data.date).toLocaleDateString('nl-NL', { day: 'numeric', month: 'long', year: 'numeric' })}
                 </span>
