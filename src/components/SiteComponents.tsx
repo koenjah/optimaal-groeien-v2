@@ -212,7 +212,7 @@ export const PartnerHero = () => {
             </h1>
 
             <p className="text-base lg:text-lg text-brand-ink/70 max-w-md leading-relaxed">
-              Veel technische bedrijven groeien op toeval en netwerk. Wij veranderen dat in een voorspelbare commerciële machine — AI, branding, marketing en sales als één geheel.
+              Veel technische bedrijven groeien op toeval en netwerk. Wij veranderen dat in een voorspelbare commerciële machine: AI, branding, marketing en sales als één geheel.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3">
