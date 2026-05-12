@@ -6,6 +6,20 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
   .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 
 const categories = [...new Set(posts.map(p => p.data.category))].sort();
+
+const categoryColors: Record<string, string> = {
+  'Leadgeneratie':        'from-[#053b63] to-[#0a5a94]',
+  'AI & Automatisering':  'from-[#1a1a2e] to-[#16213e]',
+  'SEO':                  'from-[#053b63] to-[#0d4f7a]',
+  'Branding':             'from-[#2d1b4e] to-[#4a2d7a]',
+  'Strategie':            'from-[#053b63] to-[#07365a]',
+  'Sales':                'from-[#0f3d2e] to-[#1a5c42]',
+  'Marketing':            'from-[#1a0a00] to-[#3d1f00]',
+};
+
+function getCategoryGradient(category: string): string {
+  return categoryColors[category] ?? 'from-[#053b63] to-[#0a4a7a]';
+}
 ---
 
 <BlogLayout
@@ -13,7 +27,7 @@ const categories = [...new Set(posts.map(p => p.data.category))].sort();
   description="Praktische artikelen over B2B leadgeneratie, sales, branding en groeistrategie voor technische bedrijven."
   canonical="https://optimaalgroeien.nl/blog"
 >
-  <!-- Header — matches site sections style -->
+  <!-- Header -->
   <section class="bg-brand-primary pt-40 pb-16 px-6 text-center">
     <div class="max-w-3xl mx-auto">
       <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 border border-white/20 rounded-full text-[11px] uppercase tracking-widest font-bold text-white/80 mb-6">
@@ -32,6 +46,7 @@ const categories = [...new Set(posts.map(p => p.data.category))].sort();
   <section class="py-20 px-6 bg-[#FFFCF8]">
     <div class="max-w-7xl mx-auto">
 
+      <!-- Category filters -->
       <div class="flex flex-wrap gap-2 mb-12">
         <span class="px-4 py-1.5 bg-brand-primary text-white text-[12px] font-bold rounded-full">Alle artikelen</span>
         {categories.map(cat => (
@@ -39,14 +54,16 @@ const categories = [...new Set(posts.map(p => p.data.category))].sort();
         ))}
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Cards grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {posts.map(post => (
           <a
             href={`/blog/${post.data.slug}`}
-            class="group bg-white border border-amber-100/80 rounded-[28px] overflow-hidden hover:shadow-lg hover:shadow-amber-500/8 hover:-translate-y-1 transition-all duration-300 flex flex-col"
+            class="group bg-white border border-amber-100/80 rounded-[24px] overflow-hidden hover:shadow-xl hover:shadow-amber-500/10 hover:-translate-y-1.5 transition-all duration-300 flex flex-col"
           >
+            <!-- Thumbnail — branded stat card -->
             {post.data.heroImage ? (
-              <div class="aspect-video overflow-hidden">
+              <div class="aspect-[16/9] overflow-hidden">
                 <img
                   src={post.data.heroImage}
                   alt={post.data.heroAlt || post.data.title}
@@ -55,23 +72,54 @@ const categories = [...new Set(posts.map(p => p.data.category))].sort();
                 />
               </div>
             ) : (
-              <div class="aspect-video bg-gradient-to-br from-brand-primary/5 to-brand-accent/10 flex items-center justify-center">
-                <span class="text-[11px] font-bold uppercase tracking-widest text-brand-primary/20">{post.data.category}</span>
-              </div>
-            )}
-            <div class="p-6 flex flex-col flex-1">
-              <div class="flex items-center gap-2 mb-3">
-                <span class="text-[10px] font-bold uppercase tracking-widest text-brand-accent px-2 py-0.5 bg-brand-accent/8 rounded-full">
+              <div class={`aspect-[16/9] bg-gradient-to-br ${getCategoryGradient(post.data.category)} relative overflow-hidden flex items-end`}>
+                <!-- Decorative circles -->
+                <div class="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-white/5 group-hover:scale-110 transition-transform duration-500"></div>
+                <div class="absolute -bottom-6 -left-6 w-24 h-24 rounded-full bg-brand-accent/20"></div>
+                <div class="absolute top-4 left-6 w-2 h-2 rounded-full bg-brand-accent/60"></div>
+                <div class="absolute top-8 left-12 w-1.5 h-1.5 rounded-full bg-white/30"></div>
+
+                <!-- Stat highlight as visual hero -->
+                {post.data.statHighlight ? (
+                  <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-5">
+                    <span class="text-[3.5rem] sm:text-[3rem] md:text-[3.5rem] font-display font-black text-brand-accent leading-none drop-shadow-sm">
+                      {post.data.statHighlight.value}
+                    </span>
+                    <span class="text-[10px] text-white/55 mt-2 leading-snug max-w-[160px]">
+                      {post.data.statHighlight.label}
+                    </span>
+                  </div>
+                ) : (
+                  <div class="absolute inset-0 flex items-center justify-center">
+                    <span class="text-[11px] font-bold uppercase tracking-widest text-white/30">
+                      {post.data.category}
+                    </span>
+                  </div>
+                )}
+
+                <!-- Category pill bottom-left -->
+                <span class="relative z-10 m-4 text-[9px] font-bold uppercase tracking-widest text-brand-accent/90 px-2.5 py-1 bg-white/10 border border-white/15 rounded-full backdrop-blur-sm">
                   {post.data.category}
                 </span>
+              </div>
+            )}
+
+            <!-- Card body -->
+            <div class="p-5 sm:p-6 flex flex-col flex-1">
+              <div class="flex items-center gap-2 mb-3">
+                {!post.data.heroImage && (
+                  <span class="text-[10px] font-bold uppercase tracking-widest text-brand-accent px-2 py-0.5 bg-brand-accent/8 rounded-full">
+                    {post.data.category}
+                  </span>
+                )}
                 <span class="text-[11px] text-brand-ink/35">
                   {new Date(post.data.date).toLocaleDateString('nl-NL', { day: 'numeric', month: 'long', year: 'numeric' })}
                 </span>
               </div>
-              <h2 class="text-[16px] font-display font-bold text-brand-primary leading-snug mb-3 group-hover:text-brand-accent transition-colors flex-1">
+              <h2 class="text-[15px] sm:text-[16px] font-display font-bold text-brand-primary leading-snug mb-3 group-hover:text-brand-accent transition-colors flex-1">
                 {post.data.title}
               </h2>
-              <p class="text-[13px] text-brand-ink/55 leading-relaxed line-clamp-3 mb-4">
+              <p class="text-[13px] text-brand-ink/55 leading-relaxed line-clamp-2 mb-4">
                 {post.data.description}
               </p>
               <div class="flex items-center gap-2 text-[12px] font-bold text-brand-accent">
@@ -84,8 +132,27 @@ const categories = [...new Set(posts.map(p => p.data.category))].sort();
       </div>
     </div>
   </section>
+
+  <!-- Bottom CTA -->
+  <section class="py-20 px-6 bg-brand-primary text-center">
+    <div class="max-w-2xl mx-auto">
+      <p class="text-[11px] uppercase tracking-widest font-bold text-brand-accent mb-4">Gratis adviesgesprek</p>
+      <h2 class="text-3xl font-display font-bold text-white mb-4">Wil je direct resultaat?</h2>
+      <p class="text-white/60 mb-8 leading-relaxed">
+        Plan een gratis analyse van 45 minuten. Stefan kijkt mee en geeft direct concrete aanbevelingen.
+      </p>
+      <a
+        href="https://calendly.com/stefankelderman/15min"
+        target="_blank"
+        rel="noreferrer"
+        class="inline-flex items-center gap-2 px-8 py-4 bg-brand-accent text-white rounded-2xl font-display font-bold hover:bg-white hover:text-brand-accent transition-all duration-200"
+      >
+        Plan je gratis analyse →
+      </a>
+    </div>
+  </section>
 </BlogLayout>
 
 <style is:global>
-  .line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 </style>

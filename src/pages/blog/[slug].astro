@@ -17,9 +17,22 @@ const words = post.body?.split(/\s+/).length ?? 0;
 const readingTime = Math.ceil(words / 200);
 
 const allPosts = await getCollection('blog', ({ data }) => !data.draft);
-const related = allPosts
-  .filter(p => p.data.slug !== post.data.slug && p.data.category === post.data.category)
-  .slice(0, 3);
+const sameCategory = allPosts.filter(p => p.data.slug !== post.data.slug && p.data.category === post.data.category);
+const otherPosts = allPosts.filter(p => p.data.slug !== post.data.slug && p.data.category !== post.data.category);
+const related = [...sameCategory, ...otherPosts].slice(0, 3);
+
+const categoryGradients: Record<string, string> = {
+  'Leadgeneratie':        'from-[#053b63] to-[#0a5a94]',
+  'AI & Automatisering':  'from-[#1a1a2e] to-[#16213e]',
+  'SEO':                  'from-[#053b63] to-[#0d4f7a]',
+  'Branding':             'from-[#2d1b4e] to-[#4a2d7a]',
+  'Strategie':            'from-[#053b63] to-[#07365a]',
+  'Sales':                'from-[#0f3d2e] to-[#1a5c42]',
+  'Marketing':            'from-[#1a0a00] to-[#3d1f00]',
+};
+function categoryGradient(cat: string) {
+  return categoryGradients[cat] ?? 'from-[#053b63] to-[#0a4a7a]';
+}
 ---
 
 <BlogLayout
@@ -145,31 +158,56 @@ const related = allPosts
     </div>
   </article>
 
-  <!-- Related posts -->
-  {related.length > 0 && (
-    <section class="py-16 px-6 bg-[#FFFAF4]">
-      <div class="max-w-7xl mx-auto">
-        <h2 class="text-2xl font-display font-bold text-brand-primary mb-8">Gerelateerde artikelen</h2>
-        <div class="grid md:grid-cols-3 gap-6">
-          {related.map(p => (
-            <a
-              href={`/blog/${p.data.slug}`}
-              class="group bg-white border border-amber-100/80 rounded-[24px] p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
-            >
-              <span class="text-[10px] font-bold uppercase tracking-widest text-brand-accent">{p.data.category}</span>
-              <h3 class="text-[15px] font-display font-bold text-brand-primary mt-2 mb-3 leading-snug group-hover:text-brand-accent transition-colors">
+  <!-- Related posts — always 3 -->
+  <section class="py-16 px-6 bg-[#FFFAF4]">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between mb-8 gap-4">
+        <h2 class="text-2xl font-display font-bold text-brand-primary">Lees ook</h2>
+        <a href="/blog" class="text-[12px] font-bold text-brand-accent hover:underline flex-shrink-0">Alle artikelen →</a>
+      </div>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
+        {related.map(p => (
+          <a
+            href={`/blog/${p.data.slug}`}
+            class="group bg-white border border-amber-100/80 rounded-[20px] overflow-hidden hover:shadow-lg hover:shadow-amber-500/10 hover:-translate-y-1 transition-all duration-300 flex flex-col"
+          >
+            <!-- Thumbnail -->
+            {p.data.heroImage ? (
+              <div class="aspect-[16/9] overflow-hidden">
+                <img src={p.data.heroImage} alt={p.data.heroAlt || p.data.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              </div>
+            ) : (
+              <div class={`aspect-[16/9] bg-gradient-to-br ${categoryGradient(p.data.category)} relative overflow-hidden`}>
+                <div class="absolute -top-8 -right-8 w-32 h-32 rounded-full bg-white/5 group-hover:scale-110 transition-transform duration-500"></div>
+                <div class="absolute -bottom-4 -left-4 w-18 h-18 rounded-full bg-brand-accent/20"></div>
+                {p.data.statHighlight ? (
+                  <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+                    <span class="text-3xl font-display font-black text-brand-accent leading-none">{p.data.statHighlight.value}</span>
+                    <span class="text-[9px] text-white/50 mt-1.5 leading-snug max-w-[130px]">{p.data.statHighlight.label}</span>
+                  </div>
+                ) : (
+                  <div class="absolute inset-0 flex items-center justify-center">
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-white/30">{p.data.category}</span>
+                  </div>
+                )}
+              </div>
+            )}
+            <!-- Card body -->
+            <div class="p-5 flex flex-col flex-1">
+              <span class="text-[9px] font-bold uppercase tracking-widest text-brand-accent mb-2 block">{p.data.category}</span>
+              <h3 class="text-[14px] font-display font-bold text-brand-primary leading-snug mb-2 group-hover:text-brand-accent transition-colors flex-1">
                 {p.data.title}
               </h3>
-              <p class="text-[12px] text-brand-ink/50 leading-relaxed line-clamp-2">{p.data.description}</p>
-              <div class="mt-4 text-[12px] font-bold text-brand-accent">
+              <p class="text-[12px] text-brand-ink/50 leading-relaxed line-clamp-2 mb-3">{p.data.description}</p>
+              <div class="text-[11px] font-bold text-brand-accent">
                 Lees artikel <span class="group-hover:translate-x-1 transition-transform inline-block">→</span>
               </div>
-            </a>
-          ))}
-        </div>
+            </div>
+          </a>
+        ))}
       </div>
-    </section>
-  )}
+    </div>
+  </section>
 </BlogLayout>
 
 <style is:global>
