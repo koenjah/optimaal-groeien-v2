@@ -9,12 +9,16 @@ interface Props {
   description?: string;
   canonical?: string;
   ogImage?: string;
+  ogType?: string;
+  noindex?: boolean;
+  publishedTime?: string;
+  author?: string;
 }
 
-const { title, description, canonical, ogImage } = Astro.props;
+const { title, description, canonical, ogImage, ogType, noindex, publishedTime, author } = Astro.props;
 ---
 
-<Layout {title} {description} {canonical} {ogImage}>
+<Layout {title} {description} {canonical} {ogImage} {ogType} {noindex} {publishedTime} {author}>
   <NavbarBlog client:load />
   <slot />
   <Footer client:load />

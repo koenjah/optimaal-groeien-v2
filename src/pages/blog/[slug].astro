@@ -27,6 +27,9 @@ const related = [...sameCategory, ...otherPosts].slice(0, 3);
   description={post.data.description}
   canonical={`https://optimaalgroeien.nl/blog/${post.data.slug}`}
   ogImage={post.data.heroImage}
+  ogType="article"
+  publishedTime={new Date(post.data.date).toISOString()}
+  author={post.data.author}
 >
   <!-- Hero — clean, readable -->
   <header class="bg-brand-primary pt-36 pb-10 px-6">

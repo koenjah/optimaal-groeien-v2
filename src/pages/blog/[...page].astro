@@ -2,30 +2,27 @@
 import BlogLayout from '../../layouts/BlogLayout.astro';
 import { getCollection } from 'astro:content';
 
-const posts = (await getCollection('blog', ({ data }) => !data.draft))
-  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
-
-const categories = [...new Set(posts.map(p => p.data.category))].sort();
-
-const categoryColors: Record<string, string> = {
-  'Leadgeneratie':        'from-[#053b63] to-[#0a5a94]',
-  'AI & Automatisering':  'from-[#1a1a2e] to-[#16213e]',
-  'SEO':                  'from-[#053b63] to-[#0d4f7a]',
-  'Branding':             'from-[#2d1b4e] to-[#4a2d7a]',
-  'Strategie':            'from-[#053b63] to-[#07365a]',
-  'Sales':                'from-[#0f3d2e] to-[#1a5c42]',
-  'Marketing':            'from-[#1a0a00] to-[#3d1f00]',
-};
-
-function getCategoryGradient(category: string): string {
-  return categoryColors[category] ?? 'from-[#053b63] to-[#0a4a7a]';
+export async function getStaticPaths({ paginate }: { paginate: Function }) {
+  const posts = (await getCollection('blog', ({ data }: { data: any }) => !data.draft))
+    .sort((a: any, b: any) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+  return paginate(posts, { pageSize: 12 });
 }
+
+const { page } = Astro.props;
+const posts = page.data;
+
+const allPosts = (await getCollection('blog', ({ data }: { data: any }) => !data.draft));
+const categories = [...new Set(allPosts.map((p: any) => p.data.category))].sort();
+
+const isFirstPage = page.currentPage === 1;
+const canonicalBase = 'https://optimaalgroeien.nl/blog';
+const canonical = isFirstPage ? canonicalBase : `${canonicalBase}/${page.currentPage}`;
 ---
 
 <BlogLayout
-  title="Blog — Optimaal Groeien"
+  title={isFirstPage ? 'Blog — Optimaal Groeien' : `Blog pagina ${page.currentPage} — Optimaal Groeien`}
   description="Praktische artikelen over B2B leadgeneratie, sales, branding en groeistrategie voor technische bedrijven."
-  canonical="https://optimaalgroeien.nl/blog"
+  canonical={canonical}
 >
   <!-- Header -->
   <section class="bg-brand-primary pt-40 pb-16 px-6 text-center">
@@ -48,15 +45,15 @@ function getCategoryGradient(category: string): string {
 
       <!-- Category filters -->
       <div class="flex flex-wrap gap-2 mb-12">
-        <span class="px-4 py-1.5 bg-brand-primary text-white text-[12px] font-bold rounded-full">Alle artikelen</span>
-        {categories.map(cat => (
+        <a href="/blog" class="px-4 py-1.5 bg-brand-primary text-white text-[12px] font-bold rounded-full">Alle artikelen</a>
+        {categories.map((cat: string) => (
           <span class="px-4 py-1.5 bg-white border border-brand-soft text-brand-ink/60 text-[12px] font-bold rounded-full">{cat}</span>
         ))}
       </div>
 
       <!-- Cards grid -->
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {posts.map(post => (
+        {posts.map((post: any) => (
           <a
             href={`/blog/${post.data.slug}`}
             class="group bg-white border border-amber-100/80 rounded-[24px] overflow-hidden hover:shadow-xl hover:shadow-amber-500/10 hover:-translate-y-1.5 transition-all duration-300 flex flex-col"
@@ -96,6 +93,52 @@ function getCategoryGradient(category: string): string {
           </a>
         ))}
       </div>
+
+      <!-- Pagination nav -->
+      {page.lastPage > 1 && (
+        <nav class="mt-16 flex items-center justify-center gap-2" aria-label="Paginering">
+          {page.url.prev && (
+            <a
+              href={page.url.prev}
+              class="flex items-center gap-2 px-5 py-2.5 bg-white border border-brand-soft text-brand-primary text-[13px] font-bold rounded-full hover:border-brand-accent hover:text-brand-accent transition-colors"
+            >
+              ← Vorige
+            </a>
+          )}
+
+          <div class="flex items-center gap-1">
+            {Array.from({ length: page.lastPage }, (_, i) => i + 1).map((num) => (
+              <a
+                href={num === 1 ? '/blog' : `/blog/${num}`}
+                class={`w-9 h-9 flex items-center justify-center text-[13px] font-bold rounded-full transition-colors ${
+                  num === page.currentPage
+                    ? 'bg-brand-accent text-white'
+                    : 'bg-white border border-brand-soft text-brand-primary hover:border-brand-accent hover:text-brand-accent'
+                }`}
+                aria-current={num === page.currentPage ? 'page' : undefined}
+              >
+                {num}
+              </a>
+            ))}
+          </div>
+
+          {page.url.next && (
+            <a
+              href={page.url.next}
+              class="flex items-center gap-2 px-5 py-2.5 bg-white border border-brand-soft text-brand-primary text-[13px] font-bold rounded-full hover:border-brand-accent hover:text-brand-accent transition-colors"
+            >
+              Volgende →
+            </a>
+          )}
+        </nav>
+      )}
+
+      <!-- Page indicator -->
+      {page.lastPage > 1 && (
+        <p class="text-center text-[12px] text-brand-ink/40 mt-4">
+          Pagina {page.currentPage} van {page.lastPage} — {page.total} artikelen
+        </p>
+      )}
     </div>
   </section>
 

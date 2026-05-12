@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://optimaalgroeien.nl/sitemap.xml
+Sitemap: https://optimaalgroeien.nl/sitemap-index.xml
