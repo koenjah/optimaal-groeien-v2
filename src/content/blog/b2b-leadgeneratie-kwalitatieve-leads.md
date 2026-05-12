@@ -1,5 +1,5 @@
 ---
-title: "B2B Leadgeneratie: Hoe Je Structureel Kwalitatieve Leads Aantrekt"
+title: "B2B leadgeneratie: hoe je structureel kwalitatieve leads aantrekt"
 slug: "b2b-leadgeneratie-kwalitatieve-leads"
 description: "B2B leadgeneratie: hoe trek je structureel kwalitatieve leads aan in 2026? Bewezen strategieën voor machinebouw, logistiek en bouw."
 date: "2026-05-12"

@@ -1,5 +1,5 @@
 ---
-title: "SEA uitbesteden: Waarom slimme B2B bedrijven hun advertenties laten beheren"
+title: "SEA uitbesteden: waarom slimme B2B bedrijven hun advertenties laten beheren"
 slug: "sea-uitbesteden"
 description: "SEA uitbesteden als B2B bedrijf? Ontdek wanneer het loont, wat het kost en hoe je het juiste bureau kiest voor jouw advertentiebudget."
 date: "2026-05-12"

@@ -41,7 +41,7 @@ export const NavbarBlog = () => {
                   ? 'text-brand-accent'
                   : isScrolled
                   ? 'text-brand-primary/70 hover:text-brand-accent'
-                  : 'text-brand-primary/70 hover:text-brand-accent'
+                  : 'text-white/80 hover:text-brand-accent'
               }`}
             >
               {item.label}
@@ -49,7 +49,11 @@ export const NavbarBlog = () => {
           ))}
           <a
             href="/#contact"
-            className="px-6 py-2.5 rounded-full text-[11px] uppercase tracking-wider font-display font-bold transition-all bg-brand-accent text-white shadow-lg shadow-brand-accent/20 hover:bg-brand-primary hover:shadow-brand-primary/20"
+            className={`px-6 py-2.5 rounded-full text-[11px] uppercase tracking-wider font-display font-bold transition-all ${
+              isScrolled
+                ? 'bg-brand-accent text-white shadow-lg shadow-brand-accent/20 hover:bg-brand-primary hover:shadow-brand-primary/20'
+                : 'bg-white/15 border border-white/25 text-white hover:bg-brand-accent hover:border-brand-accent'
+            }`}
           >
             Even kennismaken
           </a>
@@ -57,7 +61,7 @@ export const NavbarBlog = () => {
 
         <button
           aria-label={isOpen ? 'Menu sluiten' : 'Menu openen'}
-          className="text-brand-primary md:hidden"
+          className={`md:hidden transition-colors ${isScrolled ? 'text-brand-primary' : 'text-white'}`}
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
