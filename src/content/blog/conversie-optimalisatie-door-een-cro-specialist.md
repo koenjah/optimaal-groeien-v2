@@ -19,9 +19,13 @@ keyTakeaways:
 
 Je hebt 1.000 bezoekers per maand. Je ontvangt 2 aanvragen. Dat is een conversieratio van 0,2%.
 
+<div class="getal"><span class="getal-waarde">0,2%</span><span class="getal-label">gemiddelde B2B-websiteconversie — 1.000 bezoekers, 2 aanvragen</span></div>
+
 Dat klinkt laag — maar stel dat je die ratio verdubbelt naar 0,4%. Dan krijg je 4 aanvragen per maand. Twee extra warme leads. Met hetzelfde marketingbudget.
 
 Dat is wat een CRO-specialist doet.
+
+<div class="citaat"><p>"Meer bezoekers helpt niets als je website ze niet overtuigt om contact op te nemen."</p></div>
 
 ## Wat doet een CRO-specialist precies?
 
@@ -60,17 +64,19 @@ Resultaat: 60% meer aanvragen. Zonder extra advertentiebudget. Zonder nieuwe tek
 
 Doe deze zelfscan. Elk "ja" is een verbeterpunt.
 
-| Signaal | Wat je ziet | Wat het betekent |
-|---|---|---|
-| Formulier met meer dan vijf velden | Bezoekers starten maar maken het niet af | Elke extra vraag kost je aanvragen |
-| CTA-knop zegt "Verstuur" of "Verzenden" | Weinig klikken ondanks veel bezoekers | Bezoekers weten niet wat er daarna gebeurt |
-| Geen reactiebelofte op de contactpagina | Mensen twijfelen en wachten af | Vertrouwen ontbreekt op het beslissende moment |
-| Geen gezicht naast het formulier | Lage conversie op contactpagina | Mensen nemen contact op met mensen, niet met formulieren |
-| Social proof staat alleen op "Over ons" | Logo's en quotes werken niet | Zet bewijs vlak bij het moment van beslissing |
+<ul class="checklist">
+<li><span class="check"></span>Formulier met meer dan vijf velden — bezoekers starten maar maken het niet af.</li>
+<li><span class="check"></span>CTA-knop zegt "Verstuur" of "Verzenden" — bezoekers weten niet wat er daarna gebeurt.</li>
+<li><span class="check"></span>Geen reactiebelofte op de contactpagina — vertrouwen ontbreekt op het beslissende moment.</li>
+<li><span class="check"></span>Geen gezicht naast het formulier — mensen nemen contact op met mensen, niet met formulieren.</li>
+<li><span class="check"></span>Social proof staat alleen op "Over ons" — zet bewijs vlak bij het moment van beslissing.</li>
+</ul>
 
 Herken je twee of meer van deze signalen? Dan liggen er aanvragen op de website die je nu misloopt.
 
 ## Waarom CRO meer oplevert dan extra traffic kopen
+
+<div class="inzicht"><span class="inzicht-label">Inzicht</span><p>Meer traffic op een slecht converterende website vergroot alleen je verlies. Optimaliseer eerst wat je hebt — daarna is opschalen pas zinvol.</p></div>
 
 Stel: je conversierate is nu 0,5%. Je overweegt je advertentiebudget te verdubbelen.
 
@@ -82,11 +88,13 @@ Dat is de volgorde die een CRO-specialist hanteert: eerst optimaliseren, dan ops
 
 ## Drie stappen om direct mee te starten
 
-**Stap 1 — Vind je zwakste pagina.** Open Google Analytics. Zoek de pagina met veel bezoekers maar weinig conversies. Dat is je startpunt.
+<div class="stappen">
+  <div class="stap"><span class="stap-nr">1</span><div class="stap-tekst"><strong>Vind je zwakste pagina</strong> — Open Google Analytics. Zoek de pagina met veel bezoekers maar weinig conversies. Dat is je startpunt.</div></div>
+  <div class="stap"><span class="stap-nr">2</span><div class="stap-tekst"><strong>Formuleer één hypothese</strong> — Niet tien dingen tegelijk. Kies één element: het formulier, de headline, de CTA. Bedenk waarom dat element bezoekers tegenhoudt.</div></div>
+  <div class="stap"><span class="stap-nr">3</span><div class="stap-tekst"><strong>Test en meet</strong> — Voer de wijziging door. Meet na twee tot vier weken. Gebruik Hotjar of Microsoft Clarity voor heatmaps. Gebruik Google Analytics voor conversiedata.</div></div>
+</div>
 
-**Stap 2 — Formuleer één hypothese.** Niet tien dingen tegelijk. Kies één element: het formulier, de headline, de CTA. Bedenk waarom dat element bezoekers tegenhoudt.
-
-**Stap 3 — Test en meet.** Voer de wijziging door. Meet na twee tot vier weken. Gebruik Hotjar of Microsoft Clarity voor heatmaps — dat zijn tools die laten zien waar bezoekers op klikken. Gebruik Google Analytics voor conversiedata.
+<div class="tip"><span class="tip-label">Tip</span><p>Begin met je contactpagina. Verwijder alle formuliervelden behalve naam, e-mailadres en bericht. Verander de knoptekst van "Verstuur" naar "Plan een gratis gesprek". Voeg één zin toe: "Je hoort binnen één werkdag van ons." Dit zijn drie aanpassingen die je vanmiddag nog kunt doorvoeren.</p></div>
 
 Herhaal dit elke maand. Na zes maanden staat je website er fundamenteel anders voor.
 

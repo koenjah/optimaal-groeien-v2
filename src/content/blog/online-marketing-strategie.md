@@ -22,7 +22,7 @@ Herkenbaar? Dit patroon zie ik keer op keer. Niet te weinig budget. Niet te wein
 
 Elk bureau deed zijn eigen ding. De een schreef blogs. De ander draaide ads. Niemand vroeg: hoe werken die losse onderdelen samen?
 
-**Tactiek zonder strategie is ruis. Strategie zonder uitvoering is een vergadering.**
+<div class="citaat"><p>"Tactiek zonder strategie is ruis. Strategie zonder uitvoering is een vergadering."</p></div>
 
 Dit artikel laat zien hoe je dat doorbreekt.
 
@@ -41,13 +41,7 @@ De meeste B2B-directeurs zitten vol met tactieken. LinkedIn-posts. Nieuwsbrieven
 | Vraag die het beantwoordt | Waarom en voor wie? | Hoe en wanneer? |
 | Gevaar als het ontbreekt | Je bouwt de verkeerde dingen | Je bouwt inefficiënt |
 
-Een online marketing strategie bepaalt:
-
-- **Wie** je wilt bereiken — niet "de industrie", maar een specifieke beslisser met een specifiek probleem
-- **Wat** je belooft — de reden waarom iemand voor jou kiest en niet voor de concurrent
-- **Hoe** kanalen samenwerken — zodat een blogartikel leads voedt die LinkedIn Ads aantrok
-
-Als dat bestek ontbreekt, betaal je voor losse bakstenen. En bouw je nooit het huis.
+<div class="inzicht"><span class="inzicht-label">Inzicht</span><p>Een online marketing strategie bepaalt wie je wilt bereiken (niet "de industrie", maar een specifieke beslisser met een specifiek probleem), wat je belooft (de reden waarom iemand voor jou kiest), en hoe kanalen samenwerken zodat een blogartikel leads voedt die LinkedIn Ads aantrok. Als dat bestek ontbreekt, betaal je voor losse bakstenen — en bouw je nooit het huis.</p></div>
 
 Lees ook: [hoe zet je een marketing strategie op](/blog/hoe-zet-je-een-marketing-strategie-op) voor het fundamentele denkkader achter strategisch marketingdenken.
 
@@ -65,35 +59,11 @@ Dat vraagt een andere aanpak dan een webshop die op prijs concurreert.
 
 Dit is geen 7-stappenplan dat je uitprint en vergeet. Dit zijn drie stappen die op elkaar voortbouwen. Ze werken pas als je ze als geheel ziet.
 
-> **Kern:** Eén doelgroep, twee kanalen, meetbare aanvragen — dat is de kortste weg van stilstand naar systeem.
-
-### Stap 1: Eén doelgroep, één pijn, één belofte
-
-Kies één type klant. Niet drie. Één.
-
-Beschrijf die persoon concreet: functie, bedrijfsgrootte, de frustratie die hem 's nachts wakker houdt. Een productiemanager bij een metaalverwerkend bedrijf van 60 mensen die worstelt met verouderde machines en uitval. Dat is een doelgroep. "De industrie" is dat niet.
-
-Koppel daar één pijn aan. Formuleer één belofte die jij — en alleen jij — geloofwaardig kunt waarmaken.
-
-Alles wat je hierna doet, staat in dienst van die combinatie.
-
-### Stap 2: Twee kanalen, goed — niet vijf kanalen, half
-
-De meest gemaakte fout: te veel kanalen tegelijk opstarten.
-
-Kies twee kanalen die passen bij je doelgroep en je capaciteit. Voor technisch B2B zijn dat bijna altijd SEO en LinkedIn. SEO trekt mensen aan die al zoeken naar jouw oplossing. LinkedIn bereikt de beslisser voordat hij zoekt.
-
-Samen vullen ze de funnel van begin tot einde. Lees ons artikel over de [marketing funnel](/blog/marketing-funnel) om te zien hoe dat werkt in de praktijk.
-
-Voeg pas een derde kanaal toe als de eerste twee structureel resultaat geven. Consistentie wint van spreiding.
-
-### Stap 3: Meet wat telt, stuur bij wat niet werkt
-
-Vergeet likes en bereik. Die zijn makkelijk te meten en betekenen weinig.
-
-Meet dit: kwalitatieve aanvragen, kosten per lead per kanaal, conversie van lead naar offerte. Bespreek die cijfers elke maand. Stuur bij op basis van wat je ziet — niet op basis van wat je hoopt.
-
-Een strategie is geen document dat je opstelt en inlevert. Het is een systeem dat leeft.
+<div class="stappen">
+  <div class="stap"><span class="stap-nr">1</span><div class="stap-tekst"><strong>Eén doelgroep, één pijn, één belofte</strong> — Kies één type klant. Niet drie. Één. Beschrijf die persoon concreet: functie, bedrijfsgrootte, de frustratie die hem 's nachts wakker houdt. Een productiemanager bij een metaalverwerkend bedrijf van 60 mensen die worstelt met verouderde machines en uitval — dat is een doelgroep. "De industrie" is dat niet. Koppel daar één pijn aan en formuleer één belofte die jij — en alleen jij — geloofwaardig kunt waarmaken. Alles wat je hierna doet, staat in dienst van die combinatie.</div></div>
+  <div class="stap"><span class="stap-nr">2</span><div class="stap-tekst"><strong>Twee kanalen, goed — niet vijf kanalen, half</strong> — De meest gemaakte fout: te veel kanalen tegelijk opstarten. Kies twee kanalen die passen bij je doelgroep en je capaciteit. Voor technisch B2B zijn dat bijna altijd SEO en LinkedIn. SEO trekt mensen aan die al zoeken naar jouw oplossing; LinkedIn bereikt de beslisser voordat hij zoekt. Samen vullen ze de funnel van begin tot einde. Voeg pas een derde kanaal toe als de eerste twee structureel resultaat geven. Consistentie wint van spreiding.</div></div>
+  <div class="stap"><span class="stap-nr">3</span><div class="stap-tekst"><strong>Meet wat telt, stuur bij wat niet werkt</strong> — Vergeet likes en bereik. Die zijn makkelijk te meten en betekenen weinig. Meet dit: kwalitatieve aanvragen, kosten per lead per kanaal, conversie van lead naar offerte. Bespreek die cijfers elke maand en stuur bij op basis van wat je ziet — niet op basis van wat je hoopt. Een strategie is geen document dat je opstelt en inlevert. Het is een systeem dat leeft.</div></div>
+</div>
 
 ## Een concreet voorbeeld: van stilstand naar systeem
 
@@ -129,9 +99,7 @@ De logica is simpel. Één nieuwe klant levert gemiddeld vijftigduizend euro omz
 
 Veel directeurs wachten tot alles perfect is. De website. Het team. Het budget. Ondertussen wint de concurrent die gewoon begonnen is.
 
-Begin met dit: schrijf in drie zinnen op wie je ideale klant is, wat zijn grootste probleem is en wat jij daartegen doet. Dat is je strategie in miniatuur.
-
-De rest bouw je daaromheen — kanaal voor kanaal, maand voor maand.
+<div class="tip"><span class="tip-label">Tip</span><p>Begin vandaag: schrijf in drie zinnen op wie je ideale klant is, wat zijn grootste probleem is en wat jij daartegen doet. Dat is je strategie in miniatuur. De rest bouw je daaromheen — kanaal voor kanaal, maand voor maand.</p></div>
 
 Bij Optimaal Groeien helpen we technische en industriële B2B-bedrijven met het bouwen van een [marketing strategie voor B2B](/oplossingen/strategie) die alle onderdelen verbindt. Geen losse projecten, maar één systeem.
 

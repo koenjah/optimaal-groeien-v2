@@ -24,6 +24,8 @@ Florian heeft geen verkoopprobleem. Hij heeft een structuurprobleem.
 
 Dat is geen uitzondering. Het is de regel.
 
+<div class="citaat"><p>"De meeste B2B-bedrijven hebben geen salesprobleem. Ze hebben een structuurprobleem."</p></div>
+
 ## De rivier zonder sluizen
 
 Stel je voor: een rivier zonder sturing. Het water stroomt. Maar niemand weet waar het naartoe gaat.
@@ -39,6 +41,11 @@ Een sales funnel is het pad van eerste kennismaking tot getekend contract. In B2
 De trechtervorm klopt: van elke honderd bereikten, worden er tien een lead. Twee van die tien worden klant. Dat is geen falen — dat is filtering.
 
 Een funnel maakt die filtering zichtbaar. Je ziet waar mensen afhaken. En je kunt het repareren.
+
+<div class="getal">
+  <span class="getal-waarde">79%</span>
+  <span class="getal-label">van de marketing leads wordt nooit opgevolgd — gebrek aan structuur is de hoofdoorzaak</span>
+</div>
 
 ## De vier fases — en hoe Florian erdoorheen gaat
 
@@ -91,11 +98,16 @@ Florian begint met één vraag: *waar komen mijn beste klanten vandaan?*
 
 Niet uit koude acquisitie. Uit referrals en een LinkedIn-post die zes maanden geleden viraal ging. Dat is zijn aanvoerkanaal.
 
-Hij maakt één sterke leadmagnet: een ROI-calculator voor productielijnen. Download gratis. Invullen duurt vijf minuten. Uitkomst: concreet inzicht in verloren capaciteitskosten.
+<div class="stappen">
+  <div class="stap"><span class="stap-nr">1</span><div class="stap-tekst"><strong>Één sterke leadmagnet bouwen</strong> — een ROI-calculator voor productielijnen. Download gratis, invullen duurt vijf minuten. Uitkomst: concreet inzicht in verloren capaciteitskosten.</div></div>
+  <div class="stap"><span class="stap-nr">2</span><div class="stap-tekst"><strong>Een e-mailreeks van zes berichten inrichten</strong> — gespreid over acht weken. Elke mail geeft iets. De zesde nodigt uit voor een gesprek van dertig minuten.</div></div>
+  <div class="stap"><span class="stap-nr">3</span><div class="stap-tekst"><strong>Wekelijks meten waar prospects afhaken</strong> — niet achteraf, maar structureel. Zo repareer je de funnel op het juiste punt, in plaats van overal tegelijk te sleutelen.</div></div>
+</div>
 
-Vervolgens een e-mailreeks van zes berichten over acht weken. Elke mail geeft iets. De zesde mail nodigt uit voor een gesprek van dertig minuten.
-
-**De vuistregel:** elke euro die je investeert in het ophalen van leads, investeer je ook in het opvolgen ervan. Zonder follow-up is je leadmagnet weggegooid geld.
+<div class="tip">
+  <span class="tip-label">Tip</span>
+  <p><strong>De vuistregel:</strong> elke euro die je investeert in het ophalen van leads, investeer je ook in het opvolgen ervan. Stel je follow-up reeks in <em>vóór</em> je de eerste lead ophaalt — niet erna. Zonder follow-up is je leadmagnet weggegooid geld.</p>
+</div>
 
 ## Vijf cijfers die je funnel onthullen
 

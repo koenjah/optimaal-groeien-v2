@@ -34,11 +34,21 @@ In 2026 zijn er twee dingen fundamenteel verschoven.
 
 **Tweede:** multimodale AI (AI die tekst, beeld en video combineert) maakt technische content schaalbaar. Een video van een productdemo wordt automatisch een blogartikel, een LinkedIn-post en een FAQ. Één investering, vijf kanalen.
 
+<div class="inzicht">
+  <span class="inzicht-label">Inzicht</span>
+  <p>Multimodale AI is de gamechanger van 2026: één productdemo-video levert automatisch een blogartikel, een LinkedIn-post én een FAQ op. Bedrijven die dit inzetten schalen hun content zonder extra mensen aan te nemen.</p>
+</div>
+
 Voor Veltec betekent dit: hun marketeer stopt met overtypen en begint met denken.
 
 ## Wat AI nu concreet doet voor Veltec
 
 De marketeer van Veltec had wekelijks tien uur nodig voor contentwerk. Blogs, productbeschrijvingen, e-mails. Nu kost datzelfde werk twee uur.
+
+<div class="getal">
+  <span class="getal-waarde">8u</span>
+  <span class="getal-label">per week teruggewonnen op contentwerk — hetzelfde team, drie keer meer output</span>
+</div>
 
 Wat gebeurt er in de overige acht uur? Klantgesprekken. Strategiesessies. Het werk dat écht waarde toevoegt.
 
@@ -64,7 +74,7 @@ Wat je concreet wint als B2B-bedrijf:
 - Schaalbare personalisatie zonder extra headcount
 - Beslissingen op data — niet op gevoel
 
-> **Kern:** Elke maand dat je wacht, groeit de voorsprong van je concurrent — en krimpt jouw marge om in te halen.
+<div class="citaat"><p>"De bedrijven die nu wachten, bouwen morgen een achterstand in die ze niet meer inhalen."</p></div>
 
 ## De drie toepassingen die direct werken
 
@@ -108,15 +118,18 @@ De conversiewinst niet meegerekend.
 
 Je hoeft niet morgen alles om te gooien. Kies één pijnpunt en begin daar.
 
-**Stap 1: Bepaal waar je team de meeste tijd verliest.** Content schrijven, leads kwalificeren of campagneanalyse?
+<div class="stappen">
+  <div class="stap"><span class="stap-nr">1</span><div class="stap-tekst"><strong>Bepaal waar je team de meeste tijd verliest.</strong> — Content schrijven, leads kwalificeren of campagneanalyse?</div></div>
+  <div class="stap"><span class="stap-nr">2</span><div class="stap-tekst"><strong>Kies één tool en test die zes weken.</strong> — Pas daarna besluit je of je uitbreidt.</div></div>
+  <div class="stap"><span class="stap-nr">3</span><div class="stap-tekst"><strong>Meet de tijdsbesparing en de conversiecijfers.</strong> — Zo bouw je een business case voor de volgende stap.</div></div>
+  <div class="stap"><span class="stap-nr">4</span><div class="stap-tekst"><strong>Train je team een halve dag.</strong> — AI werkt alleen als mensen het goed aansturen.</div></div>
+  <div class="stap"><span class="stap-nr">5</span><div class="stap-tekst"><strong>Schaal op naar het volgende onderdeel.</strong> — Stap voor stap — maar wel in beweging blijven.</div></div>
+</div>
 
-**Stap 2: Kies één tool en test die zes weken.** Pas daarna besluit je of je uitbreidt.
-
-**Stap 3: Meet de tijdsbesparing en de conversiecijfers.** Zo bouw je een business case voor de volgende stap.
-
-**Stap 4: Train je team een halve dag.** AI werkt alleen als mensen het goed aansturen.
-
-**Stap 5: Schaal op naar het volgende onderdeel.** Stap voor stap — maar wel in beweging blijven.
+<div class="tip">
+  <span class="tip-label">Tip</span>
+  <p>Begin met één tool, niet alle vijf tegelijk. Kies het pijnpunt dat nu de meeste uren kost — voor de meeste B2B-marketeers is dat contentcreatie. Test zes weken en meet concreet: hoeveel uur bespaar je? Pas dan beslis je of je uitbreidt.</p>
+</div>
 
 ### De fouten die je wilt vermijden
 

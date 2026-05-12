@@ -32,16 +32,20 @@ Harnish bouwde voort op de **Rockefeller Habits** — principes die al in de 19e
 
 De methode werkt het best voor bedrijven tussen de 1 en 50 miljoen euro omzet. Je weet dat je model klopt. Nu wil je sneller, groter en winstgevender worden.
 
+<div class="citaat"><p>"Meer omzet zonder systeem is meer chaos — Scaling Up maakt van groei een beslissing, geen geluk."</p></div>
+
 ---
 
 ## Is Scaling Up iets voor jou?
 
 Vier signalen dat je klaar bent voor dit framework:
 
-- Je hebt meer dan tien terugkerende klanten die tevreden zijn.
-- Je omzet groeit, maar je marge blijft achter.
-- Jij bent nog steeds de spin in het web — alles loopt via jou.
-- Je hebt wel ideeën voor de volgende fase, maar geen systeem om ze uit te voeren.
+<ul class="checklist">
+  <li><span class="check"></span>Je hebt meer dan tien terugkerende klanten die tevreden zijn.</li>
+  <li><span class="check"></span>Je omzet groeit, maar je marge blijft achter.</li>
+  <li><span class="check"></span>Jij bent nog steeds de spin in het web — alles loopt via jou.</li>
+  <li><span class="check"></span>Je hebt wel ideeën voor de volgende fase, maar geen systeem om ze uit te voeren.</li>
+</ul>
 
 Herken je drie van de vier? Dan werkt Scaling Up voor jou. Te vroeg schalen schaalt je problemen op. Maar te laat is ook gevaarlijk — een concurrent neemt het momentum over.
 
@@ -51,12 +55,12 @@ Herken je drie van de vier? Dan werkt Scaling Up voor jou. Te vroeg schalen scha
 
 Neem Metatron Installaties. Een fictief installatiebedrijf uit Deventer. Veertig medewerkers, zes miljoen omzet, twaalf jaar oud. Directeur Mark wil naar vijftien miljoen in drie jaar. Het werk is goed. De klanten zijn tevreden. Toch loopt het bedrijf op zijn tenen.
 
-| Pijler | Wat het betekent | Signaal dat het niet klopt |
-|---|---|---|
-| Mensen | Juiste persoon, juiste plek, juiste fase | Jij doet nog zelf het werk van een manager |
-| Strategie | Een belofte die het hele team kent | Niemand kan de strategie in twee zinnen uitleggen |
-| Executie | Vaste ritmes en meetbare prioriteiten | Het meeting-ritme stopt zodra het druk wordt |
-| Cash | Korte cyclus tussen uitgaven en inkomsten | Groei voelt goed, maar je bankrekening niet |
+<div class="stappen">
+  <div class="stap"><span class="stap-nr">1</span><div class="stap-tekst"><strong>Mensen</strong> — Juiste persoon, juiste plek, juiste fase. Signaal dat het niet klopt: jij doet nog zelf het werk van een manager.</div></div>
+  <div class="stap"><span class="stap-nr">2</span><div class="stap-tekst"><strong>Strategie</strong> — Een belofte die het hele team kent. Signaal dat het niet klopt: niemand kan de strategie in twee zinnen uitleggen.</div></div>
+  <div class="stap"><span class="stap-nr">3</span><div class="stap-tekst"><strong>Executie</strong> — Vaste ritmes en meetbare prioriteiten. Signaal dat het niet klopt: het meeting-ritme stopt zodra het druk wordt.</div></div>
+  <div class="stap"><span class="stap-nr">4</span><div class="stap-tekst"><strong>Cash</strong> — Korte cyclus tussen uitgaven en inkomsten. Signaal dat het niet klopt: groei voelt goed, maar je bankrekening niet.</div></div>
+</div>
 
 ### Mensen: de juiste persoon op de juiste plek
 
@@ -100,7 +104,7 @@ Scaling Up kijkt naar de **Cash Conversion Cycle**: het aantal dagen tussen uitg
 
 Metatron vroeg voortaan dertig procent aanbetaling bij opdrachtverlening. Één gesprek. Geen klant weigerde. De cashpositie verbeterde in drie maanden met 180.000 euro.
 
-> **Kern:** Groei zonder systeem financiert je eigen chaos. De Cash Conversion Cycle verkorten is geen boekhoudtruc — het is de beslissing die je groei volhoudt.
+<div class="inzicht"><span class="inzicht-label">Inzicht</span><p>Groei zonder systeem financiert je eigen chaos. De Cash Conversion Cycle verkorten is geen boekhoudtruc — het is de beslissing die je groei volhoudt.</p></div>
 
 ---
 
@@ -115,6 +119,8 @@ Na achttien maanden Scaling Up stond Metatron er fundamenteel anders voor:
 - Een cashflow die groei financiert zonder externe lening
 
 Omzet: van zes naar 9,2 miljoen in anderhalf jaar. Op koers naar dertien.
+
+<div class="getal"><span class="getal-waarde">2,3×</span><span class="getal-label">snellere omzetgroei bij bedrijven die Scaling Up consequent implementeren ten opzichte van het sectorgemiddelde</span></div>
 
 Wat veranderde er écht? Mark nam beslissingen. Over mensen, strategie, executie en cash. Niet tegelijk, niet perfect. Maar consequent — elke week opnieuw.
 

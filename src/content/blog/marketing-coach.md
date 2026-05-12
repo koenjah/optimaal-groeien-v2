@@ -39,7 +39,9 @@ Een marketingbureau voert uit. Ze schrijven teksten en draaien campagnes. Als ji
 
 Een marketing coach doet iets anders. Die versterkt je eigen mensen. Minder afhankelijkheid. Meer eigen regie.
 
-> **Kern:** Een bureau neemt het werk over. Een coach zorgt dat jij het nooit meer uit handen hoeft te geven.
+<div class="citaat"><p>"Een bureau neemt het werk over. Een coach zorgt dat jij het nooit meer uit handen hoeft te geven."</p></div>
+
+<div class="inzicht"><span class="inzicht-label">Inzicht</span><p>Het bureau-vs-coach onderscheid gaat niet over geld of capaciteit — het gaat over eigenaarschap. Met een bureau bouw je afhankelijkheid op. Met een coach bouw je je eigen marketingkracht op, die intern blijft ook als het traject stopt.</p></div>
 
 Het verschil met een [business coach](https://optimaalgroeien.nl/business-coach) zit in de focus. Een business coach kijkt naar je hele bedrijf. Strategie, team, processen, persoonlijke groei. Een marketing coach is smaller en daardoor scherper. Alleen marketing, maar tot op de bodem.
 
@@ -81,15 +83,13 @@ Meer omzet, nieuwe markten, meer aanvragen. Prima ambities. Een coach vertaalt a
 
 Een goed traject is geen reeks willekeurige sessies. Het heeft een logische volgorde.
 
-**Eerste gesprek.** Je coach luistert. Wat doe je nu? Wat werkt? Waar loopt het vast? Dit gesprek duurt een uur. Het is een diagnose, geen verkooppraatje.
-
-**Diagnose.** De coach analyseert je huidige marketing. Kanalen, budget, content, resultaten. Hij of zij spreekt ook kort met mensen in je team. Daarna ligt er een eerlijk beeld op tafel.
-
-**Plan.** Geen dik rapport. Wel een helder document. Positionering, prioriteiten, kanalen en KPI's. Iets wat je team direct kan gebruiken.
-
-**Begeleiding.** Dit is het echte werk. Tweewekelijkse sessies. Vragen beantwoorden. Keuzes doordenken. Je team coachen op concrete campagnes. De coach is beschikbaar, niet alleen in vergadering.
-
-**Evaluatie en bijsturen.** Elke vier tot zes weken kijk je samen terug. Wat werkte? Wat niet? Waar stuur je bij? Marketing is geen set-and-forget. Het is een doorlopend proces.
+<div class="stappen">
+  <div class="stap"><span class="stap-nr">1</span><div class="stap-tekst"><strong>Eerste gesprek</strong> — Je coach luistert. Wat doe je nu? Wat werkt? Waar loopt het vast? Dit gesprek duurt een uur. Het is een diagnose, geen verkooppraatje.</div></div>
+  <div class="stap"><span class="stap-nr">2</span><div class="stap-tekst"><strong>Diagnose</strong> — De coach analyseert je huidige marketing. Kanalen, budget, content, resultaten. Hij of zij spreekt ook kort met mensen in je team. Daarna ligt er een eerlijk beeld op tafel.</div></div>
+  <div class="stap"><span class="stap-nr">3</span><div class="stap-tekst"><strong>Plan</strong> — Geen dik rapport. Wel een helder document. Positionering, prioriteiten, kanalen en KPI's. Iets wat je team direct kan gebruiken.</div></div>
+  <div class="stap"><span class="stap-nr">4</span><div class="stap-tekst"><strong>Begeleiding</strong> — Dit is het echte werk. Tweewekelijkse sessies. Vragen beantwoorden. Keuzes doordenken. Je team coachen op concrete campagnes. De coach is beschikbaar, niet alleen in vergadering.</div></div>
+  <div class="stap"><span class="stap-nr">5</span><div class="stap-tekst"><strong>Evaluatie en bijsturen</strong> — Elke vier tot zes weken kijk je samen terug. Wat werkte? Wat niet? Waar stuur je bij? Marketing is geen set-and-forget. Het is een doorlopend proces.</div></div>
+</div>
 
 ---
 
@@ -147,6 +147,8 @@ Zes dingen om op te letten:
 **5. Chemie en communicatie.** Je gaat intensief samenwerken. Vertrouw op je gevoel.
 
 **6. Flexibiliteit en beschikbaarheid.** Marketing vraagt snel schakelen. Een coach die pas over twee weken tijd heeft, is minder waardevol.
+
+<div class="tip"><span class="tip-label">Tip</span><p>Stel elke kandidaat-coach deze vraag: "Geef me een concreet voorbeeld van een B2B-bedrijf dat jij hebt geholpen — wat was het probleem, wat heb jij gedaan en welk meetbaar resultaat leverde dat op?" Een goede coach antwoordt direct met cijfers. Een coach die vaag blijft of naar referenties verwijst zonder inhoud, is dat niet waard.</p></div>
 
 ---
 

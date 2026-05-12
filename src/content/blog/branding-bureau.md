@@ -34,6 +34,8 @@ Een branding bureau vraagt: "Waarom kiezen klanten voor jou als een concurrent h
 
 Die tweede vraag is ongemakkelijk. Maar het antwoord is goud.
 
+<div class="inzicht"><span class="inzicht-label">Inzicht</span><p>Het verschil zit niet in de uren die een bureau maakt. Het zit in de eerste vraag die ze stellen. Een huisstijlbureau begint bij het oog. Een brandingbureau begint bij de markt.</p></div>
+
 ### Huisstijlbureau vs. brandingbureau
 
 | Aspect | Huisstijlbureau | Brandingbureau |
@@ -86,6 +88,8 @@ B2B-kopers nemen rationele beslissingen. Dat klopt. Maar ze nemen die beslissing
 
 Een inkoopmanager vergelijkt twee offertes. Technisch vrijwel gelijk. Eén bedrijf heeft een heldere website en een scherp verhaal. De andere heeft een verouderde uitstraling en onduidelijke positionering. Wie krijgt het vervolggesprek?
 
+<div class="getal"><span class="getal-waarde">23%</span><span class="getal-label">hogere offerteacceptatie bij B2B-bedrijven met een sterk merk</span></div>
+
 Dat is de kern van de bovenstaande statistiek: bedrijven met een sterk merk krijgen 23% meer offertes geaccepteerd. Niet omdat ze beter zijn. Maar omdat ze betrouwbaarder overkomen vóór de onderhandeling begint.
 
 Vertrouwen opbouwen op afstand is in de technische sector extra zwaar. De klant vertrouwt jou met zijn productieproces, zijn infrastructuur of zijn planning. Dan moet je uitstraling kloppen. Een professionele merkpresentatie laat zien dat je ook de details serieus neemt die de klant nooit ziet.
@@ -108,13 +112,15 @@ Lees ook ons artikel over [personal branding](https://www.optimaalgroeien.nl/blo
 
 Dit is wat een serieus bureau levert — en waar je op kunt toetsen:
 
-- **Scherpe strategische vragen** in het eerste gesprek. Over je doelgroep, concurrentie en groeidoelen. Niet alleen over je kleurvoorkeur.
-- **Een merkpositionering** die in één of twee zinnen staat. Helder, onderscheidend, herkenbaar.
-- **Een visuele identiteit** die consistent werkt op alle kanalen: website, offerte, LinkedIn, visitekaartje.
-- **Brand guidelines** die breed inzetbaar zijn — ook door mensen die er niet bij waren toen het merk gemaakt werd.
-- **Referenties uit vergelijkbare sectoren**. B2B-branding is anders dan consumentenbranding. Vraag ernaar.
-- **Een transparant proces** met duidelijke feedbackrondes en een afgesproken oplevering.
-- **Meedenken na de oplevering**. Branding is geen eenmalig project. Een goed bureau blijft beschikbaar.
+<ul class="checklist">
+<li><span class="check"></span>Scherpe strategische vragen in het eerste gesprek. Over je doelgroep, concurrentie en groeidoelen. Niet alleen over je kleurvoorkeur.</li>
+<li><span class="check"></span>Een merkpositionering die in één of twee zinnen staat. Helder, onderscheidend, herkenbaar.</li>
+<li><span class="check"></span>Een visuele identiteit die consistent werkt op alle kanalen: website, offerte, LinkedIn, visitekaartje.</li>
+<li><span class="check"></span>Brand guidelines die breed inzetbaar zijn — ook door mensen die er niet bij waren toen het merk gemaakt werd.</li>
+<li><span class="check"></span>Referenties uit vergelijkbare sectoren. B2B-branding is anders dan consumentenbranding. Vraag ernaar.</li>
+<li><span class="check"></span>Een transparant proces met duidelijke feedbackrondes en een afgesproken oplevering.</li>
+<li><span class="check"></span>Meedenken na de oplevering. Branding is geen eenmalig project. Een goed bureau blijft beschikbaar.</li>
+</ul>
 
 ---
 
@@ -153,7 +159,9 @@ Herkennen klanten je meteen? Weet iedereen intern wat je merk uitstraalt? Moet j
 
 ## Conclusie: de beste machines bouwen is niet genoeg
 
-Je kunt de beste machines bouwen in de regio. Maar als je dat niet zichtbaar maakt, prijst de markt je alsof je de middelste bent. Dat is het probleem dat een goed branding bureau oplost.
+<div class="citaat"><p>"Je kunt de beste machines bouwen in de regio. Maar als je dat niet zichtbaar maakt, prijst de markt je alsof je de middelste bent."</p></div>
+
+Dat is het probleem dat een goed branding bureau oplost.
 
 Niet door je te veranderen. Maar door zichtbaar te maken wie je al bent.
 

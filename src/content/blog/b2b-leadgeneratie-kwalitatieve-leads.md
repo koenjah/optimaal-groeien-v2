@@ -19,6 +19,8 @@ keyTakeaways:
 
 Maandagochtend. Je salesmanager loopt je kantoor in. Vorige maand: 90 gesprekken gevoerd. Acht daarvan hadden potentie. De rest? Geen budget, verkeerde sector, of iemand die nergens over kon beslissen. Negentig gesprekken. Acht kansen. Dat is geen salesprobleem. Dat is een leadkwaliteitsprobleem.
 
+<div class="getal"><span class="getal-waarde">79%</span><span class="getal-label">van B2B-leads wordt nooit omgezet door gebrekkige kwalificatie</span></div>
+
 De prijs is hoog. Niet alleen in geld, maar in tijd en energie. Je salesteam raakt gefrustreerd. De pipeline lijkt vol maar voelt leeg. De maand daarna begint precies hetzelfde.
 
 **Meer leads is niet het antwoord. Betere leads zijn dat.**
@@ -32,6 +34,8 @@ Veel B2B-bedrijven sturen op volume. Meer LinkedIn-berichten. Meer koude mails. 
 Kwalitatieve leads zijn anders. Ze passen bij je ideale klantprofiel. Ze hebben een concreet probleem. Ze zijn bereid te investeren. Ze zijn al verder in hun keuzeproces als ze contact opnemen.
 
 Vijf goede gesprekken zijn meer waard dan honderd verkeerde. Dat klinkt logisch. Toch stuurt bijna elk technisch B2B-bedrijf nog steeds op volume als het spannend wordt.
+
+<div class="citaat"><p>"Meer leads lossen niets op als ze niet passen. Vijf goede gesprekken zijn meer waard dan honderd verkeerde."</p></div>
 
 De switch begint niet bij een nieuw kanaal. Die begint bij een scherper beeld van wie je wilt aantrekken.
 
@@ -65,6 +69,8 @@ Een scherp ICP zorgt ervoor dat je content en outreach de verkeerde bedrijven we
 ## BANT: kwalificeer snel en concreet
 
 BANT is een kwalificatiemethode. De naam staat voor Budget, Authority, Need en Timeline. Je gebruikt het niet als bureaucratisch formulier, maar als denkraam om snel te beslissen of een lead een gesprek waard is.
+
+<div class="inzicht"><span class="inzicht-label">Inzicht</span><p>BANT werkt het best als gesprekstool, niet als checklijst. Stel de vragen in de loop van een normaal gesprek. Een lead die op alle vier de punten scoort, is klaar voor sales. De rest behoeft nurturing — of vriendelijk loslaten.</p></div>
 
 | Criterium | Vraag die je stelt | Wat een goed antwoord is |
 |---|---|---|
@@ -140,6 +146,8 @@ Je beste verkopers zijn tevreden klanten. Vraag actief om referenties na een suc
 ## Conclusie: begin met de juiste leads, niet meer leads
 
 De directeur met 90 leads en 82 teleurstellingen heeft geen leadgeneratieprobleem. Hij heeft een kwalificatieprobleem. Scherp je ICP aan. Gebruik BANT als filter. Introduceer lead scoring. Bouw content die de verkeerde bedrijven wegfiltert — vóór ze contact opnemen.
+
+<div class="tip"><span class="tip-label">Tip</span><p>Begin met je beste tien klanten. Schrijf op wat ze gemeen hebben: branche, omvang, de functie van de beslisser, en het probleem dat jij oploste. Dat is je ICP. Toets daarna elke nieuwe lead hier direct aan — vóór je een gesprek inplant.</p></div>
 
 In 2026 wint niet het bedrijf met de meeste leads. Het wint het bedrijf met het beste systeem om de juiste leads te herkennen en te converteren.
 

@@ -42,19 +42,13 @@ Wat je niet kunt verwachten:
 - Resultaat na drie sessies
 - Een standaardaanpak die voor elke directeur werkt
 
-> **Kern:** De juiste coach lost jouw problemen niet op. Hij zorgt dat jij leert ze zelf op te lossen — structureel.
+<div class="citaat"><p>"Een goede coach lost jouw problemen niet op — hij zorgt dat jij ze nooit meer hoeft te stellen."</p></div>
 
 ---
 
 ## Goede coach versus slechte coach
 
-| Kenmerk | Goede coach | Slechte coach |
-|---|---|---|
-| **Resultaat meten** | Concrete doelen en harde meetpunten | "Dat voelen we gaandeweg" |
-| **Referenties** | Ondernemers die jij zelf mag benaderen | Geselecteerde testimonials op de website |
-| **Aanpak** | Aangepast aan jouw sector en groeifase | Standaard model voor iedereen |
-| **Ongemakkelijke vragen** | Gaat er direct naartoe | Blijft in de comfortzone |
-| **Eigen ervaring** | Heeft zelf een bedrijf gerund | Alleen theoretische achtergrond |
+<div class="inzicht"><span class="inzicht-label">Inzicht</span><p><strong>Resultaat meten:</strong> Een goede coach werkt met concrete doelen en harde meetpunten. Een slechte coach zegt "dat voelen we gaandeweg."</p><p><strong>Referenties:</strong> Een goede coach geeft je ondernemers die jij zelf mag benaderen. Een slechte coach toont geselecteerde testimonials op zijn website.</p><p><strong>Aanpak:</strong> Een goede coach past zijn aanpak aan aan jouw sector en groeifase. Een slechte coach gebruikt een standaard model voor iedereen.</p><p><strong>Ongemakkelijke vragen:</strong> Een goede coach gaat er direct naartoe. Een slechte coach blijft in de comfortzone.</p><p><strong>Eigen ervaring:</strong> Een goede coach heeft zelf een bedrijf gerund. Een slechte coach heeft alleen een theoretische achtergrond.</p></div>
 
 ---
 
@@ -72,20 +66,13 @@ Het verschil zit niet in de methode. Het zit in de bereidheid om naar de echte v
 
 Dit is geen beleefdheidsgesprek. Stel deze vragen. Luister goed naar wat er niet gezegd wordt.
 
-**1. Welk bedrijf heb jij zelf gerund — en wat is er misgegaan?**
-Een coach zonder ondernemerservaring kent jouw wereld niet van binnen. Vraag specifiek naar het falen. Hoe hij daarmee omging, vertelt je meer dan zijn successen.
-
-**2. Kun jij mij een referentie geven die ik zelf mag benaderen — niet één die jij kiest?**
-Geselecteerde testimonials zijn marketing. Een ondernemer die jij zelf opzoekt en belt, is bewijs. Een coach die hier moeite mee heeft, heeft iets te verbergen.
-
-**3. Hoe meet jij of de samenwerking werkt?**
-Als het antwoord vaag is — "dat voelen we gaandeweg" — loop weg. Een goede coach werkt met concrete doelen en harde meetpunten. Gevoel is geen KPI.
-
-**4. Wat gebeurt er als ik niet doe wat we afspreken?**
-Dit is een vreemde vraag. Stel hem toch. Een goede coach heeft hier een helder antwoord op. Hij is geen vriend — hij houdt je aan je eigen woord.
-
-**5. Voor welk type ondernemer werkt jouw aanpak níet?**
-Iedere eerlijke coach kan dit beantwoorden. Zegt hij "ik kan iedereen helpen", weet je genoeg.
+<ul class="checklist">
+<li><span class="check"></span><strong>Welk bedrijf heb jij zelf gerund — en wat is er misgegaan?</strong> Een coach zonder ondernemerservaring kent jouw wereld niet van binnen. Vraag specifiek naar het falen. Hoe hij daarmee omging, vertelt je meer dan zijn successen.</li>
+<li><span class="check"></span><strong>Kun jij mij een referentie geven die ik zelf mag benaderen — niet één die jij kiest?</strong> Geselecteerde testimonials zijn marketing. Een ondernemer die jij zelf opzoekt en belt, is bewijs. Een coach die hier moeite mee heeft, heeft iets te verbergen.</li>
+<li><span class="check"></span><strong>Hoe meet jij of de samenwerking werkt?</strong> Als het antwoord vaag is — "dat voelen we gaandeweg" — loop weg. Een goede coach werkt met concrete doelen en harde meetpunten. Gevoel is geen KPI.</li>
+<li><span class="check"></span><strong>Wat gebeurt er als ik niet doe wat we afspreken?</strong> Dit is een vreemde vraag. Stel hem toch. Een goede coach heeft hier een helder antwoord op. Hij is geen vriend — hij houdt je aan je eigen woord.</li>
+<li><span class="check"></span><strong>Voor welk type ondernemer werkt jouw aanpak níet?</strong> Iedere eerlijke coach kan dit beantwoorden. Zegt hij "ik kan iedereen helpen", weet je genoeg.</li>
+</ul>
 
 ---
 
@@ -101,6 +88,8 @@ Herken je dit?
 - Je weet wat er moet veranderen, maar het komt er niet van
 
 Dan is het tijd. Niet over zes maanden.
+
+<div class="getal"><span class="getal-waarde">86%</span><span class="getal-label">van gecoachte ondernemers rapporteert betere besluitvorming binnen 6 maanden (ICF, 2023)</span></div>
 
 ---
 

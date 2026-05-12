@@ -16,6 +16,8 @@ keyTakeaways:
   - "Maak per fase de juiste content — en stop lekken in je funnel."
   - "Geef sales de context die Arjan al opbouwde, zodat het eerste gesprek raak is."
 ---
+<div class="citaat"><p>"Jouw klant legt de route toch al af. De vraag is alleen wie hem begeleidt."</p></div>
+
 **Jouw klant legt de route toch al af — of jij er iets mee doet of niet.** Dat is het principe achter de marketing funnel. De vraag is wie hem begeleidt: jij, of de concurrent die er wél content voor heeft gemaakt.
 
 In dit artikel volg je Arjan. Hij is technisch directeur bij een machinebouwer in Brabant. Hij heeft een probleem. Hij zoekt een oplossing. En hij beslist lang voordat hij een telefoon oppakt.
@@ -37,7 +39,9 @@ Dit is het kortste antwoord:
 - De **marketing funnel** trekt Arjan aan en warmt hem op.
 - De **sales funnel** sluit de deal.
 
-Marketing brengt Arjan zover dat hij zegt: "Dit bedrijf begrijpt mijn probleem." Sales neemt het over zodra hij vraagt: "Wat kost het?" Meer over die tweede fase lees je in ons artikel over de [sales funnel voor B2B](/blog/sales-funnel).
+<div class="inzicht"><span class="inzicht-label">Inzicht</span><p>Marketing brengt Arjan zover dat hij zegt: "Dit bedrijf begrijpt mijn probleem." Sales neemt het over zodra hij vraagt: "Wat kost het?" De twee fases volgen elkaar op — maar vergen een fundamenteel andere aanpak en andere content.</p></div>
+
+Meer over die tweede fase lees je in ons artikel over de [sales funnel voor B2B](/blog/sales-funnel).
 
 ### Waarom B2B fundamenteel anders is
 
@@ -67,28 +71,29 @@ Hij heeft nog nooit van jouw bedrijf gehoord. Dat maakt niet uit. Wat telt: jij 
 
 Jouw taak in deze fase is aanwezigheid. Niet verkopen — gevonden worden. De content gaat over zijn probleem, niet over jouw product.
 
-**Contenttip voor technische B2B:** schrijf geen productpagina maar een probleemanalyse. Een titel als "Waarom uw productielijn 3x meer uitvalt dan nodig" doet het beter dan "Onze onderhoudsoplossing". Arjan zoekt herkenning, niet een pitch.
-
-Wat werkt in TOFU:
-- Technische blogartikelen over herkenbare problemen
-- Korte LinkedIn-video's van uw monteurs of engineers
-- Checklists: "10 signalen dat uw machine het wil aangeven"
+<div class="stappen">
+  <div class="stap"><span class="stap-nr">1</span><div class="stap-tekst"><strong>Schrijf een probleemanalyse, geen productpagina</strong> — Een titel als "Waarom uw productielijn 3x meer uitvalt dan nodig" doet het beter dan "Onze onderhoudsoplossing". Arjan zoekt herkenning, niet een pitch.</div></div>
+  <div class="stap"><span class="stap-nr">2</span><div class="stap-tekst"><strong>Maak technische blogartikelen over herkenbare problemen</strong> — Schrijf over de situatie die Arjan elke week meemaakt. Geen bedrijfsverhaal, maar zijn verhaal.</div></div>
+  <div class="stap"><span class="stap-nr">3</span><div class="stap-tekst"><strong>Gebruik korte video's van uw monteurs of engineers</strong> — Authentiek vakmanschap op LinkedIn trekt precies de Arjans aan die u zoekt.</div></div>
+  <div class="stap"><span class="stap-nr">4</span><div class="stap-tekst"><strong>Publiceer checklists die direct bruikbaar zijn</strong> — Bijvoorbeeld: "10 signalen dat uw machine het wil aangeven." Waarde eerst, vertrouwen volgt vanzelf.</div></div>
+</div>
 
 ### MOFU: overweging — Arjan vergelijkt zijn opties
 
 Arjan is terug. Hij heeft uw whitepaper gedownload over voorspellend onderhoud. Hij volgt u op LinkedIn. Hij bekijkt ook twee concurrenten.
 
-**77% van B2B-kopers stelt zijn shortlist samen vóórdat hij contact opneemt.** U staat op die lijst — of niet. Dat hangt af van wat Arjan de afgelopen weken van u heeft gezien en gelezen.
+<div class="getal"><span class="getal-waarde">77%</span><span class="getal-label">van B2B-kopers stelt zijn shortlist samen vóórdat hij contact opneemt</span></div>
+
+U staat op die lijst — of niet. Dat hangt af van wat Arjan de afgelopen weken van u heeft gezien en gelezen.
 
 In deze fase wil hij bewijs. Geen beloftes — resultaten van bedrijven die op hem lijken.
 
-**Contenttip voor technische B2B:** maak casestudies zo concreet mogelijk. Niet "we verbeterden hun uptime." Maar: "Machinebouwer X in Eindhoven verlaagde ongeplande stilstand van 14% naar 4% in acht maanden. Zo deden we dat."
-
-Wat werkt in MOFU:
-- Casestudies met harde cijfers uit uw sector
-- Vergelijkingen: uw aanpak versus de traditionele werkwijze
-- Technische webinars met ruimte voor vragen
-- Gratis scans of quickscans
+<div class="stappen">
+  <div class="stap"><span class="stap-nr">1</span><div class="stap-tekst"><strong>Maak casestudies zo concreet mogelijk</strong> — Niet "we verbeterden hun uptime." Maar: "Machinebouwer X in Eindhoven verlaagde ongeplande stilstand van 14% naar 4% in acht maanden. Zo deden we dat."</div></div>
+  <div class="stap"><span class="stap-nr">2</span><div class="stap-tekst"><strong>Bouw vergelijkingscontent</strong> — Uw aanpak versus de traditionele werkwijze, helder naast elkaar. Arjan moet dit intern kunnen delen.</div></div>
+  <div class="stap"><span class="stap-nr">3</span><div class="stap-tekst"><strong>Organiseer technische webinars met ruimte voor vragen</strong> — Live contact zonder verkoopdruk. Arjan stelt zijn vragen, u bouwt vertrouwen.</div></div>
+  <div class="stap"><span class="stap-nr">4</span><div class="stap-tekst"><strong>Bied een gratis scan of quickscan aan</strong> — Lage drempel, hoge waarde. Arjan ervaart uw expertise vóórdat hij beslist.</div></div>
+</div>
 
 ### BOFU: beslissing — Arjan vraagt een offerte aan
 
@@ -96,12 +101,12 @@ Arjan heeft zijn shortlist. Twee partijen. U en een concurrent. Hij stuurt een a
 
 In deze fase gaat het om vertrouwen op het laatste moment. Arjan moet de beslissing intern verdedigen. Geef hem de munitie daarvoor — hij is uw bondgenoot in zijn eigen organisatie.
 
-**Contenttip voor technische B2B:** maak een één-pagina implementatieoverzicht. Geen 30 slides, maar een helder overzicht. Wat gebeurt er wanneer? Wie is aanspreekpunt? Wat is de impact in week één? Dat helpt Arjan om ja te zeggen — en dat ja intern te verkopen.
-
-Wat hij verder nodig heeft:
-- Een directe contactpersoon — geen algemeen info@-adres
-- Antwoorden op bezwaren die zijn directeur gaat opwerpen
-- Transparante contractsvoorwaarden zonder kleine lettertjes
+<div class="stappen">
+  <div class="stap"><span class="stap-nr">1</span><div class="stap-tekst"><strong>Maak een één-pagina implementatieoverzicht</strong> — Geen 30 slides, maar een helder overzicht. Wat gebeurt er wanneer? Wie is aanspreekpunt? Wat is de impact in week één? Dat helpt Arjan om ja te zeggen — en dat ja intern te verkopen.</div></div>
+  <div class="stap"><span class="stap-nr">2</span><div class="stap-tekst"><strong>Geef een directe contactpersoon</strong> — Geen algemeen info@-adres. Arjan wil weten wie hij spreekt en wie verantwoordelijk is.</div></div>
+  <div class="stap"><span class="stap-nr">3</span><div class="stap-tekst"><strong>Beantwoord de bezwaren van zijn directeur alvast</strong> — Arjan moet intern ja verkopen. Geef hem de antwoorden voordat de vragen komen.</div></div>
+  <div class="stap"><span class="stap-nr">4</span><div class="stap-tekst"><strong>Wees transparant over contractsvoorwaarden</strong> — Geen kleine lettertjes. Vertrouwen wint op het laatste moment van twijfel.</div></div>
+</div>
 
 ---
 

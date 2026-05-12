@@ -21,6 +21,8 @@ keyTakeaways:
 
 Dat is geen theorie. Dat is wat we zien als we een account overnemen.
 
+<div class="getal"><span class="getal-waarde">76%</span><span class="getal-label">van B2B Google Ads-budgetten lekt weg aan irrelevante klikken — bij zelfbeheer</span></div>
+
 ---
 
 ## Het verhaal van Meulenberg Techniek
@@ -33,7 +35,7 @@ Het probleem zat niet in zijn budget. Het zat in de zoekwoorden. Marc adverteerd
 
 Dit patroon zien we keer op keer. Niet omdat ondernemers dom zijn. Maar omdat je van binnenuit niet ziet wat er misgaat.
 
-> **Kern:** Klikken zeggen niets. Gekwalificeerde aanvragen tellen.
+<div class="citaat"><p>"Zelf Google Ads beheren kost je geen geld. Het kost je klanten."</p></div>
 
 ---
 
@@ -43,16 +45,20 @@ Uitbesteden is niet voor iedereen de juiste keuze. Hieronder staat het eerlijke 
 
 **Besteed uit als:**
 
-- Je advertentiebudget is €1.500 per maand of hoger
-- Een gemiddelde opdracht levert €15.000 of meer op
-- Je hebt geen tijd voor dagelijkse monitoring (5–10 uur per week)
-- Je campagnes draaien al drie maanden zonder concrete leads
+<ul class="checklist">
+  <li><span class="check"></span>Je advertentiebudget is €1.500 per maand of hoger</li>
+  <li><span class="check"></span>Een gemiddelde opdracht levert €15.000 of meer op</li>
+  <li><span class="check"></span>Je hebt geen tijd voor dagelijkse monitoring (5–10 uur per week)</li>
+  <li><span class="check"></span>Je campagnes draaien al drie maanden zonder concrete leads</li>
+</ul>
 
 **Doe het (nog) niet als:**
 
-- Je maandbudget is onder de €1.000 — de bureaufee eet je rendement op
-- Je hebt nog geen heldere propositie of conversiepagina's
-- Je weet nog niet wie je ideale klant is — dan gooit een bureau ook mis
+<ul class="checklist">
+  <li><span class="check"></span>Je maandbudget is onder de €1.000 — de bureaufee eet je rendement op</li>
+  <li><span class="check"></span>Je hebt nog geen heldere propositie of conversiepagina's</li>
+  <li><span class="check"></span>Je weet nog niet wie je ideale klant is — dan gooit een bureau ook mis</li>
+</ul>
 
 Een goed bureau zegt dit zelf ook. Bij Optimaal Groeien sturen we regelmatig bedrijven weg die nog niet klaar zijn voor SEA. Een mislukte campagne kost jou meer dan het ons oplevert.
 
@@ -142,5 +148,7 @@ Marc vroeg ons na zes weken: "Waarom heb ik dit niet eerder gedaan?"
 Het eerlijke antwoord: omdat uitbesteden voelt als controle verliezen. Maar wat je eigenlijk verliest, is de illusie van controle. Zelf klikken monitoren zonder te weten wat je ziet, is geen controle.
 
 Echte controle is dit: weten hoeveel een lead kost, hoeveel leads je nodig hebt en of je budget dat realistisch oplevert.
+
+<div class="tip"><span class="tip-label">Tip</span><p>Zet voor je eerste gesprek met een bureau drie dingen op papier: je maandbudget, de gemiddelde waarde van één opdracht en hoeveel leads je sales aankan per maand. Met die drie cijfers kun je direct doorrekenen of uitbesteden rendabel is — en houd je een bureau meteen scherp.</p></div>
 
 **Wil je weten of SEA voor jouw bedrijf rendabel is?** Vraag een vrijblijvende scan aan. We kijken naar je huidige situatie — of je nu zelf beheert of overweegt uit te besteden — en rekenen eerlijk door wat realistisch haalbaar is.

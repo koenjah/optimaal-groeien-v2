@@ -42,7 +42,7 @@ Na drie maanden lokale SEO stond Van der Berg in de top-3 van Breda. De telefoon
 
 > **Kern:** Lokale zichtbaarheid is geen luxe voor B2B — het is de voorwaarde om überhaupt mee te doen in jouw regio.
 
-Jouw beste klant zit op twaalf kilometer afstand. Hij vindt je concurrent, niet jou.
+<div class="citaat"><p>Jouw beste klant zit op twaalf kilometer afstand. Hij vindt je concurrent, niet jou.</p></div>
 
 ---
 
@@ -65,6 +65,8 @@ Gebruik de tabel hieronder als checklist. Loop elk onderdeel langs voordat je ve
 | Posts | ☐ | Eén update per twee weken toont activiteit aan Google |
 
 Bedrijven mét foto's krijgen 42% meer klikken. Eén uur werk op dit profiel heeft meer effect dan een maand lang bloggen.
+
+<div class="getal"><span class="getal-waarde">76%</span><span class="getal-label">van de mensen die lokaal zoeken, bezoekt een bedrijf binnen 24 uur</span></div>
 
 ---
 
@@ -116,15 +118,15 @@ Wil je weten hoe je website technisch scoort? Lees dan ons artikel over [website
 
 Begin hier. Deze vijf stappen hebben het meeste effect.
 
-**Stap 1: Claim en verifieer je Google Business Profile.** Zoek je bedrijf op Google Maps. Claim het eigendom. Verifieer via de postkaart die Google opstuurt.
+<ul class="checklist">
+<li><span class="check"></span>Stap 1: Claim en verifieer je Google Business Profile. Zoek je bedrijf op Google Maps. Claim het eigendom. Verifieer via de postkaart die Google opstuurt.</li>
+<li><span class="check"></span>Stap 2: Maak je NAP-gegevens consistent. Loop alle online vermeldingen na. Corrigeer afwijkingen. Saai werk — groot effect.</li>
+<li><span class="check"></span>Stap 3: Optimaliseer je website voor lokale termen. Verwerk je stad en regio in teksten, titels en de contactpagina.</li>
+<li><span class="check"></span>Stap 4: Verzamel reviews. Stuur na elke klus een directe reviewlink. Reageer op alles wat binnenkomt.</li>
+<li><span class="check"></span>Stap 5: Bouw lokale backlinks. Word vermeld op de site van je ondernemersvereniging. Sponsor een regionaal evenement. Werk samen met andere lokale bedrijven in jouw regio.</li>
+</ul>
 
-**Stap 2: Maak je NAP-gegevens consistent.** Loop alle online vermeldingen na. Corrigeer afwijkingen. Saai werk — groot effect.
-
-**Stap 3: Optimaliseer je website voor lokale termen.** Verwerk je stad en regio in teksten, titels en de contactpagina.
-
-**Stap 4: Verzamel reviews.** Stuur na elke klus een directe reviewlink. Reageer op alles wat binnenkomt.
-
-**Stap 5: Bouw lokale backlinks.** Word vermeld op de site van je ondernemersvereniging. Sponsor een regionaal evenement. Werk samen met andere lokale bedrijven in jouw regio.
+<div class="tip"><span class="tip-label">Tip</span><p>De meest onderschatte lokale SEO-actie: reageer op elke Google-review — ook de negatieve. Google registreert je activiteit op het profiel. Bedrijven die consistent reageren, ranken hoger dan bedrijven met meer reviews maar geen reacties.</p></div>
 
 ---
 

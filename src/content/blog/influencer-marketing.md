@@ -31,7 +31,9 @@ Maar het concept is simpel. Iemand met geloofwaardigheid spreekt over jouw bedri
 
 In B2B heet die persoon geen influencer. Hij heet vakexpert, thought leader of gewoon: een gerespecteerde naam in de sector. De mechaniek is identiek. Het bereik is kleiner. De geloofwaardigheid is groter.
 
-> **Kern:** In B2B draait invloed niet om bereik — maar om vertrouwen binnen de juiste kring. Eén vakexpert met de juiste doelgroep is meer waard dan tienduizend willekeurige volgers.
+<div class="citaat"><p>"In B2B telt niet hoe groot iemands publiek is — maar hoe goed dat publiek bij jou past."</p></div>
+
+**Kern:** In B2B draait invloed niet om bereik — maar om vertrouwen binnen de juiste kring. Eén vakexpert met de juiste doelgroep is meer waard dan tienduizend willekeurige volgers.
 
 ---
 
@@ -47,7 +49,7 @@ Veel B2B-ondernemers passen de B2C-logica toe. Dat is het echte probleem. De twe
 | Geloofwaardigheid | Populariteit | Vakkennis en reputatie |
 | Beste kanaal | Instagram, TikTok | LinkedIn, vakbladen |
 
-Het kernmisverstand: meer volgers = meer resultaat. In B2B geldt het omgekeerde. Relevantie wint van bereik — altijd.
+<div class="inzicht"><span class="inzicht-label">Inzicht</span><p>Het kernmisverstand: meer volgers = meer resultaat. In B2B geldt het omgekeerde. Relevantie wint van bereik — altijd. Wie B2C-logica toepast op B2B-inkoop, verliest aan de concurrent die wél de juiste kring aanspreekt.</p></div>
 
 ---
 
@@ -59,7 +61,7 @@ Voor een softwarebedrijf dat supply chain-oplossingen verkoopt, is dat goud. Eé
 
 Dat is het verschil met B2C-influencing. Bereik is irrelevant. Relevantie is alles.
 
-**In B2B telt niet hoe groot iemands publiek is — maar hoe goed dat publiek bij jou past.**
+<div class="getal"><span class="getal-waarde">74%</span><span class="getal-label">van B2B-kopers kiest een leverancier op basis van aanbevelingen van vakgenoten</span></div>
 
 ---
 
@@ -92,6 +94,8 @@ Dat kost alleen tijd. De return is duurzaam.
 Vakbladen en brancheblogs worden gelezen door precies jouw doelgroep. Hun auteurs hebben al vertrouwen opgebouwd. Dat vertrouwen straalt af op jou als jij samenwerkt.
 
 Identificeer drie tot vijf vakblogs in jouw sector. Reageer op artikelen. Bouw de relatie op. Stel na een paar weken voor om samen iets te schrijven. Je biedt kennis aan — geen reclame. Dat is de opening.
+
+<div class="tip"><span class="tip-label">Tip</span><p>Zoek op LinkedIn naar mensen die in jouw sector regelmatig publiceren: filter op "Berichten" en jouw brancheterm. Bekijk wie er actief reageert op vakdiscussies — dat zijn je eerste kandidaten. Stuur een persoonlijk bericht over een van hun posts, voeg waarde toe en bouw zo de relatie op voordat je ooit om samenwerking vraagt.</p></div>
 
 ### 3. Klanten als ambassadeur
 

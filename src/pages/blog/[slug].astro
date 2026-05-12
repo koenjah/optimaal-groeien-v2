@@ -20,7 +20,6 @@ const allPosts = await getCollection('blog', ({ data }) => !data.draft);
 const sameCategory = allPosts.filter(p => p.data.slug !== post.data.slug && p.data.category === post.data.category);
 const otherPosts = allPosts.filter(p => p.data.slug !== post.data.slug && p.data.category !== post.data.category);
 const related = [...sameCategory, ...otherPosts].slice(0, 3);
-
 ---
 
 <BlogLayout
@@ -29,45 +28,51 @@ const related = [...sameCategory, ...otherPosts].slice(0, 3);
   canonical={`https://optimaalgroeien.nl/blog/${post.data.slug}`}
   ogImage={post.data.heroImage}
 >
-  <!-- Hero -->
-  <header class="bg-brand-primary pt-40 pb-12 px-6">
+  <!-- Hero — clean, readable -->
+  <header class="bg-brand-primary pt-36 pb-10 px-6">
     <div class="max-w-3xl mx-auto">
-      <div class="flex items-center gap-3 mb-6">
+
+      <!-- Meta row -->
+      <div class="flex items-center gap-3 mb-5">
         <span class="text-[10px] font-bold uppercase tracking-widest text-brand-accent px-3 py-1 bg-brand-accent/15 rounded-full">
           {post.data.category}
         </span>
-        <span class="text-[12px] text-white/40">
+        <span class="text-[11px] text-white/35">
           {new Date(post.data.date).toLocaleDateString('nl-NL', { day: 'numeric', month: 'long', year: 'numeric' })}
         </span>
-        <span class="text-[12px] text-white/40">{readingTime} min lezen</span>
+        <span class="text-[11px] text-white/35">{readingTime} min</span>
       </div>
 
-      <h1 class="text-3xl lg:text-4xl font-display font-bold text-white leading-snug tracking-tight mb-6">
+      <!-- Title -->
+      <h1 class="text-3xl lg:text-[2.6rem] font-display font-bold text-white leading-snug tracking-tight mb-4">
         {post.data.title}
       </h1>
-      <p class="text-lg text-white/65 leading-relaxed mb-8">
+
+      <!-- Description -->
+      <p class="text-base lg:text-lg text-white/60 leading-relaxed mb-7 max-w-2xl">
         {post.data.description}
       </p>
 
-      <!-- Stat highlight — article-specific -->
-      {post.data.statHighlight && (
-        <div class="inline-flex items-baseline gap-3 bg-white/8 border border-white/12 rounded-2xl px-6 py-4 mb-8">
-          <span class="text-4xl font-display font-black text-brand-accent leading-none">{post.data.statHighlight.value}</span>
-          <span class="text-sm text-white/60 leading-snug max-w-[200px]">{post.data.statHighlight.label}</span>
+      <!-- Author + stat inline -->
+      <div class="flex items-center justify-between gap-6">
+        <div class="flex items-center gap-3">
+          <img
+            src="/images/team-1-avatar.webp"
+            alt={post.data.author}
+            class="w-9 h-9 rounded-full object-cover object-[center_25%] border border-white/20"
+            loading="eager"
+          />
+          <div>
+            <p class="text-sm font-bold text-white leading-none mb-0.5">{post.data.author}</p>
+            <p class="text-[11px] text-white/45">Oprichter Optimaal Groeien</p>
+          </div>
         </div>
-      )}
-
-      <div class="flex items-center gap-3">
-        <img
-          src="/images/team-1-avatar.webp"
-          alt={post.data.author}
-          class="w-10 h-10 rounded-full object-cover object-[center_25%] border border-white/20"
-          loading="eager"
-        />
-        <div>
-          <p class="text-sm font-bold text-white">{post.data.author}</p>
-          <p class="text-xs text-white/50">Oprichter Optimaal Groeien</p>
-        </div>
+        {post.data.statHighlight && (
+          <div class="text-right flex-shrink-0">
+            <span class="text-2xl font-display font-black text-brand-accent leading-none">{post.data.statHighlight.value}</span>
+            <p class="text-[10px] text-white/40 mt-0.5 max-w-[110px] leading-snug">{post.data.statHighlight.label}</p>
+          </div>
+        )}
       </div>
     </div>
   </header>
@@ -84,33 +89,22 @@ const related = [...sameCategory, ...otherPosts].slice(0, 3);
   )}
 
   <!-- Article body -->
-  <article class="py-16 px-6 bg-[#FFFCF8]">
+  <article class="pt-10 pb-16 px-6 bg-[#FFFCF8]">
     <div class="max-w-3xl mx-auto">
 
-      <!-- Key takeaways — article-specific -->
+      <!-- Key takeaways — light card, easy to skip -->
       {post.data.keyTakeaways && post.data.keyTakeaways.length > 0 && (
-        <div class="mb-10 bg-brand-primary rounded-[20px] px-7 py-6">
-          <p class="text-[11px] font-bold uppercase tracking-widest text-brand-accent mb-4">Wat je meeneemt</p>
-          <ul class="space-y-3">
+        <div class="mb-10 border border-amber-200/70 bg-white rounded-[16px] px-6 py-5">
+          <p class="text-[10px] font-bold uppercase tracking-widest text-brand-accent mb-3">Wat je meeneemt</p>
+          <ul class="space-y-2.5">
             {post.data.keyTakeaways.map(point => (
-              <li class="flex items-start gap-3">
-                <span class="mt-0.5 w-5 h-5 rounded-full bg-brand-accent/20 border border-brand-accent/40 flex items-center justify-center flex-shrink-0">
-                  <span class="w-1.5 h-1.5 rounded-full bg-brand-accent block"></span>
-                </span>
-                <span class="text-sm text-white/80 leading-snug">{point}</span>
+              <li class="flex items-start gap-2.5">
+                <span class="mt-[0.35rem] w-1.5 h-1.5 rounded-full bg-brand-accent flex-shrink-0"></span>
+                <span class="text-[13px] text-brand-ink/70 leading-snug">{point}</span>
               </li>
             ))}
           </ul>
         </div>
-      )}
-
-      <!-- Pull quote — article-specific highlight -->
-      {post.data.pullQuote && (
-        <blockquote class="mb-10 border-l-4 border-brand-accent bg-white rounded-r-2xl px-6 py-5 shadow-sm">
-          <p class="text-lg font-display font-semibold text-brand-primary leading-snug italic">
-            "{post.data.pullQuote}"
-          </p>
-        </blockquote>
       )}
 
       <div class="article-body">
@@ -164,7 +158,6 @@ const related = [...sameCategory, ...otherPosts].slice(0, 3);
                 <img src={p.data.heroImage} alt={p.data.heroAlt || p.data.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
               </div>
             )}
-            <!-- Card body -->
             <div class="p-5 flex flex-col flex-1">
               <span class="text-[9px] font-bold uppercase tracking-widest text-brand-accent mb-2 block">{p.data.category}</span>
               <h3 class="text-[14px] font-display font-bold text-brand-primary leading-snug mb-2 group-hover:text-brand-accent transition-colors flex-1">
@@ -183,9 +176,10 @@ const related = [...sameCategory, ...otherPosts].slice(0, 3);
 </BlogLayout>
 
 <style is:global>
+  /* ── Base article typography ── */
   .article-body h2 { font-size: 1.4rem; font-weight: 700; color: #053b63; margin-top: 3rem; margin-bottom: 0.875rem; font-family: var(--font-display); padding-bottom: 0.5rem; border-bottom: 2px solid #FEF3E8; }
   .article-body h3 { font-size: 1.1rem; font-weight: 700; color: #053b63; margin-top: 2rem; margin-bottom: 0.625rem; font-family: var(--font-display); }
-  .article-body p  { color: rgba(51,65,85,0.82); line-height: 1.85; margin-bottom: 1.25rem; font-size: 1.0rem; }
+  .article-body p  { color: rgba(51,65,85,0.82); line-height: 1.85; margin-bottom: 1.25rem; font-size: 1rem; }
   .article-body > p:first-of-type { font-size: 1.05rem; color: rgba(51,65,85,0.90); }
   .article-body ul { list-style: none; padding-left: 0; margin-bottom: 1.25rem; }
   .article-body ul li { color: rgba(51,65,85,0.82); margin-bottom: 0.55rem; line-height: 1.75; padding-left: 1.5rem; position: relative; }
@@ -204,5 +198,42 @@ const related = [...sameCategory, ...otherPosts].slice(0, 3);
   .article-body td { padding: 0.75rem 1rem; border-bottom: 1px solid #F1F5F9; color: rgba(51,65,85,0.82); }
   .article-body tr:last-child td { border-bottom: none; }
   .article-body tr:nth-child(even) td { background: #FAFBFC; }
+
+  /* ── Custom in-article elements (for subagent use) ── */
+
+  /* Pull quote — for embedding in article body */
+  .citaat { border-left: 3px solid #f17a29; padding: 0.875rem 1.25rem; background: #fffaf4; border-radius: 0 16px 16px 0; margin: 2rem 0; }
+  .citaat p, .citaat { color: #053b63; font-style: italic; font-size: 1.05rem; line-height: 1.7; margin-bottom: 0; font-weight: 600; }
+
+  /* Callout / tip box — orange accent */
+  .tip { background: #FFF8F2; border: 1px solid #FAE0C8; border-left: 3px solid #f17a29; border-radius: 0 14px 14px 0; padding: 1rem 1.25rem; margin: 2rem 0; }
+  .tip-label { display: block; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #f17a29; margin-bottom: 0.4rem; }
+  .tip p { color: rgba(51,65,85,0.85); margin-bottom: 0; line-height: 1.7; font-size: 0.95rem; }
+
+  /* Insight card — blue tint, subtle shadow */
+  .inzicht { background: white; border: 1px solid #E4EEF8; border-radius: 16px; padding: 1.25rem 1.5rem; margin: 2rem 0; box-shadow: 0 2px 12px rgba(5,59,99,0.06); }
+  .inzicht-label { display: block; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #053b63; margin-bottom: 0.5rem; }
+  .inzicht p { color: rgba(51,65,85,0.85); margin-bottom: 0; line-height: 1.7; font-size: 0.95rem; }
+
+  /* Numbered steps — custom visual list */
+  .stappen { margin: 2rem 0; display: flex; flex-direction: column; gap: 1rem; }
+  .stap { display: flex; gap: 1rem; align-items: flex-start; }
+  .stap-nr { width: 2rem; height: 2rem; background: #053b63; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; flex-shrink: 0; margin-top: 0.1rem; }
+  .stap-tekst { flex: 1; color: rgba(51,65,85,0.82); line-height: 1.75; padding-top: 0.25rem; }
+  .stap-tekst strong { color: #053b63; }
+
+  /* Big number highlight — inline stat emphasis */
+  .getal { display: flex; align-items: baseline; gap: 0.75rem; margin: 2rem 0; padding: 1.25rem 1.5rem; background: #053b63; border-radius: 16px; }
+  .getal-waarde { font-size: 2.5rem; font-weight: 900; color: #f17a29; line-height: 1; font-family: var(--font-display); }
+  .getal-label { color: rgba(255,255,255,0.65); font-size: 0.875rem; line-height: 1.5; max-width: 220px; }
+
+  /* Checklist — branded checkbox list */
+  .checklist { list-style: none; padding: 0; margin: 1.5rem 0; }
+  .checklist li { display: flex; gap: 0.75rem; align-items: flex-start; margin-bottom: 0.6rem; color: rgba(51,65,85,0.82); line-height: 1.7; font-size: 0.95rem; padding-left: 0 !important; }
+  .checklist li::before { display: none !important; }
+  .checklist li::after { content: none; }
+  .check { width: 1.1rem; height: 1.1rem; border-radius: 4px; background: #f17a29; flex-shrink: 0; margin-top: 0.25rem; display: flex; align-items: center; justify-content: center; }
+  .check::after { content: '✓'; color: white; font-size: 0.6rem; font-weight: 900; }
+
   .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 </style>

@@ -33,6 +33,8 @@ Wat heeft hij gekregen voor zijn geld? Waarschijnlijk automatisch gegenereerde t
 
 Dat is de realiteit van €150 per maand. Niet altijd. Maar vaak.
 
+<div class="citaat"><p>"Voor 150 euro per maand koop je geen SEO. Je koopt het gevoel dat je er iets aan doet."</p></div>
+
 > **Kern:** Goedkope SEO bestaat niet — maar slim beginnen zonder budget wel. Het verschil zit in eerlijkheid over wat je krijgt.
 
 ---
@@ -65,6 +67,8 @@ Het kan even werken. Daarna legt Google een penalty op. Penalty betekent: Google
 Dit is wat SEO eigenlijk kost. Een eerlijke specialist besteedt uren aan jouw situatie. Technische analyse, zoekwoordonderzoek, pagina-optimalisatie, maandelijkse rapportage.
 
 Goedkoop is dit niet. Maar het bouwt iets op. En het houdt stand.
+
+<div class="inzicht"><span class="inzicht-label">Inzicht</span><p>De keuze tussen de drie smaken is in de kern een keuze tussen tijd en geld. DIY kost je wekelijkse uren maar niets aan abonnement. Een goedkoop bureau kost geld én risico, zonder garantie op rendement. Een serieuze specialist kost meer, maar levert het enige iets op dat telt: duurzame groei zonder boete-risico.</p></div>
 
 ---
 
@@ -108,6 +112,8 @@ Voor meer inzicht in wat professionele begeleiding oplevert, lees ons artikel ov
 
 ## Hoe je een eerlijk bureau herkent
 
+<div class="tip"><span class="tip-label">Tip</span><p>Vraag elk bureau dat je spreekt: "Kun je me uitleggen wat jullie de eerste drie maanden concreet gaan doen, en hoe we dat meten?" Een bureau dat dat niet helder en specifiek kan beantwoorden — zonder verwijzing naar vage "strategieën" — is een bureau dat je beter links kunt laten liggen.</p></div>
+
 Er zijn rode vlaggen die je altijd ziet bij bureaus die te goedkoop zijn.
 
 - "Gegarandeerd resultaat binnen vier weken"
@@ -132,7 +138,9 @@ Nee — in de betekenis van weinig geld voor veel resultaat. Wel kun je slim inv
 
 **Hoe lang duurt het voordat ik resultaat zie?**
 
-Zes tot twaalf maanden voor structurele groei. Wie sneller belooft, liegt of gebruikt methoden die later problemen geven.
+<div class="getal"><span class="getal-waarde">6–12</span><span class="getal-label">maanden voordat serieuze SEO structureel resultaat geeft — wie sneller belooft, liegt</span></div>
+
+Wie sneller belooft, liegt of gebruikt methoden die later problemen geven.
 
 **Wat is het verschil tussen SEO en SEA?**
 
