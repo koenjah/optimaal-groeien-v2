@@ -25,13 +25,13 @@ Dat is geen theorie. Dat is wat we zien als we een account overnemen.
 
 ---
 
-## Het verhaal van Meulenberg Techniek
+## Het verhaal van een machinebouwbedrijf
 
-Marc Meulenberg runt een machinebouwbedrijf in Tilburg. Dertig medewerkers, projecten van €80.000 tot €400.000. Hij startte Google Ads zelf op — met YouTube-tutorials en een dagbudget van €60.
+Een ondernemer runt een machinebouwbedrijf in Tilburg. Dertig medewerkers, projecten van €80.000 tot €400.000. Hij startte Google Ads zelf op — met YouTube-tutorials en een dagbudget van €60.
 
 Na zes maanden: €11.000 uitgegeven, vier aanvragen. Drie kwamen van ZZP'ers die zijn machines wilden huren. Niet zijn doelgroep.
 
-Het probleem zat niet in zijn budget. Het zat in de zoekwoorden. Marc adverteerde op "machinebouw" — breed, goedkoop en waardeloos voor B2B-inkoopdirecteuren. Hij zag het zelf niet. De klikken kwamen immers gewoon binnen.
+Het probleem zat niet in zijn budget. Het zat in de zoekwoorden. Hij adverteerde op "machinebouw" — breed, goedkoop en waardeloos voor B2B-inkoopdirecteuren. Hij zag het zelf niet. De klikken kwamen immers gewoon binnen.
 
 Dit patroon zien we keer op keer. Niet omdat ondernemers dom zijn. Maar omdat je van binnenuit niet ziet wat er misgaat.
 
@@ -76,7 +76,7 @@ Een goed bureau zegt dit zelf ook. Bij Optimaal Groeien sturen we regelmatig bed
 
 ## Wat een specialist doet dat jij niet doet
 
-Marc wist niet dat er zoiets bestaat als negatieve zoekwoorden. Daarmee sluit je uit dat je advertentie verschijnt op niet-relevante zoekopdrachten. Zoekt iemand op "machinebouw cursus"? Dan wil Meulenberg Techniek daar geen klik op betalen.
+De ondernemer wist niet dat er zoiets bestaat als negatieve zoekwoorden. Daarmee sluit je uit dat je advertentie verschijnt op niet-relevante zoekopdrachten. Zoekt iemand op "machinebouw cursus"? Dan wil je daar geen klik op betalen.
 
 Een specialist bouwt een lijst van honderden negatieve zoekwoorden. Dat alleen al bespaart 20–40% van het budget.
 
@@ -88,7 +88,7 @@ Daarnaast:
 - **Landingspagina's** verbeteren zodat klikken ook omzetten in aanvragen
 - **A/B-testen** op advertentieteksten — één betere variant kan je kosten halveren
 
-Na drie maanden bij een specialist: Marc's account leverde 9 gekwalificeerde aanvragen op. Zelfde budget. Twee opdrachten getekend.
+Na drie maanden bij een specialist: het account leverde 9 gekwalificeerde aanvragen op. Zelfde budget. Twee opdrachten getekend.
 
 ---
 
@@ -102,7 +102,7 @@ Je betaalt twee dingen: je advertentiebudget (direct aan Google) en een bureaufe
 | €1.500–€2.500 | €750–€1.250 | Ja, als leadwaarde hoog genoeg is |
 | €3.000+ | 10–20% van budget | Bijna altijd |
 
-De sleutelrekening: wat is één lead waard? Bij Meulenberg Techniek was dat €400.000 gedeeld door 10 verwachte conversies — €40.000 per lead. Een bureaufee van €1.200 per maand is dan de beste investering die hij kan doen.
+De sleutelrekening: wat is één lead waard? Bij dit machinebouwbedrijf was dat €400.000 gedeeld door 10 verwachte conversies — €40.000 per lead. Een bureaufee van €1.200 per maand is dan de beste investering die hij kan doen.
 
 ---
 
@@ -141,9 +141,9 @@ Vergelijk het met een nieuwe medewerker. De eerste maand leert hij je bedrijf ke
 
 ---
 
-## De volgende stap voor Meulenberg — en voor jou
+## De volgende stap — ook voor jou
 
-Marc vroeg ons na zes weken: "Waarom heb ik dit niet eerder gedaan?"
+De ondernemer vroeg ons na zes weken: "Waarom heb ik dit niet eerder gedaan?"
 
 Het eerlijke antwoord: omdat uitbesteden voelt als controle verliezen. Maar wat je eigenlijk verliest, is de illusie van controle. Zelf klikken monitoren zonder te weten wat je ziet, is geen controle.
 

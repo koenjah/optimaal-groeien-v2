@@ -53,7 +53,7 @@ Herken je drie van de vier? Dan werkt Scaling Up voor jou. Te vroeg schalen scha
 
 ## De vier pijlers: mensen, strategie, executie, cash
 
-Neem Metatron Installaties. Een fictief installatiebedrijf uit Deventer. Veertig medewerkers, zes miljoen omzet, twaalf jaar oud. Directeur Mark wil naar vijftien miljoen in drie jaar. Het werk is goed. De klanten zijn tevreden. Toch loopt het bedrijf op zijn tenen.
+Neem een installatiebedrijf in Deventer. Veertig medewerkers, zes miljoen omzet, twaalf jaar oud. De directeur wil naar vijftien miljoen in drie jaar. Het werk is goed. De klanten zijn tevreden. Toch loopt het bedrijf op zijn tenen.
 
 <div class="stappen">
   <div class="stap"><span class="stap-nr">1</span><div class="stap-tekst"><strong>Mensen</strong> — Juiste persoon, juiste plek, juiste fase. Signaal dat het niet klopt: jij doet nog zelf het werk van een manager.</div></div>
@@ -64,21 +64,21 @@ Neem Metatron Installaties. Een fictief installatiebedrijf uit Deventer. Veertig
 
 ### Mensen: de juiste persoon op de juiste plek
 
-Mark doet nog altijd de grote offertes zelf. Zijn projectleiders hebben geen mandaat. Het team voert uit — maar denkt niet mee.
+De directeur doet nog altijd de grote offertes zelf. Zijn projectleiders hebben geen mandaat. Het team voert uit — maar denkt niet mee.
 
 **De eerste pijler van Scaling Up is simpel maar pijnlijk.** Beoordeel elk teamlid op drie punten: past hij bij de cultuur, past hij bij de functie, heeft hij groeipotentieel?
 
-Bij Metatron betekende dit een eerlijk gesprek met de uitvoerend manager. Loyaal. Hard werkend. Maar niet de persoon voor de volgende fase. Mark wachtte twee jaar te lang. Dat kostte hem minstens één miljoen aan gemiste groei.
+Bij dit installatiebedrijf betekende dit een eerlijk gesprek met de uitvoerend manager. Loyaal. Hard werkend. Maar niet de persoon voor de volgende fase. De directeur wachtte twee jaar te lang. Dat kostte hem minstens één miljoen aan gemiste groei.
 
 ### Strategie: een belofte die je waarmaakt
 
-Mark had een strategie. Hij kon hem niet in twee zinnen uitleggen. Zijn team al helemaal niet.
+De directeur had een strategie. Hij kon hem niet in twee zinnen uitleggen. Zijn team al helemaal niet.
 
 Scaling Up vraagt één heldere vraag: **waarom kiezen klanten voor jou en niet voor de concurrent?** Niet abstract. Maar in een belofte die je elke keer waarmaakt.
 
-Metatron koos: "Wij leveren complete installatieprojecten binnen de afgesproken doorlooptijd, of je krijgt vijf procent korting." Meetbaar. Onderscheidend. Iedereen kent het.
+Het bedrijf koos: "Wij leveren complete installatieprojecten binnen de afgesproken doorlooptijd, of je krijgt vijf procent korting." Meetbaar. Onderscheidend. Iedereen kent het.
 
-Erbij hoort een scherpe focus: welke klanten bedien je, en welke bewust niet? Metatron stopte met projecten onder 60.000 euro. Pijnlijk op korte termijn. Maar het vrijmaakte ruimte voor de klanten die echt pasten.
+Erbij hoort een scherpe focus: welke klanten bedien je, en welke bewust niet? Ze stopten met projecten onder 60.000 euro. Pijnlijk op korte termijn. Maar het vrijmaakte ruimte voor de klanten die echt pasten.
 
 ### Executie: het ritme dat groei maakt
 
@@ -90,19 +90,19 @@ Scaling Up introduceert drie concrete instrumenten:
 
 **Het meeting-ritme** — dagelijkse stand-up van tien minuten, wekelijkse teammeeting van negentig minuten, kwartaaldag. Geen uitzonderingen. Dit ritme is de hartslag van je bedrijf.
 
-Bij Metatron stopten ze met dit ritme zodra het druk werd. Dat was precies het probleem. Discipline in rustige tijden bepaalt je resultaat in drukke tijden.
+Bij dit bedrijf stopte dat ritme zodra het druk werd. Dat was precies het probleem. Discipline in rustige tijden bepaalt je resultaat in drukke tijden.
 
 **Kritische nummers** — kies drie tot vijf metrics die écht laten zien of je groeit. Niet alleen omzet. Denk aan offerteconversie, doorlooptijd per project, marge per opdrachtgever.
 
 ### Cash: de motor van je groei
 
-Metatron groeide van zes naar acht miljoen in één jaar. En had cashproblemen. Hoe?
+Het bedrijf groeide van zes naar acht miljoen in één jaar. En had cashproblemen. Hoe?
 
 Klanten betaalden in negentig dagen. Leveranciers eisten dertig. Het bedrijf financierde zijn eigen groei voor zestig dagen per project.
 
 Scaling Up kijkt naar de **Cash Conversion Cycle**: het aantal dagen tussen uitgaande en inkomende cash. Hoe korter, hoe gezonder.
 
-Metatron vroeg voortaan dertig procent aanbetaling bij opdrachtverlening. Één gesprek. Geen klant weigerde. De cashpositie verbeterde in drie maanden met 180.000 euro.
+Ze vroegen voortaan dertig procent aanbetaling bij opdrachtverlening. Één gesprek. Geen klant weigerde. De cashpositie verbeterde in drie maanden met 180.000 euro.
 
 <div class="inzicht"><span class="inzicht-label">Inzicht</span><p>Groei zonder systeem financiert je eigen chaos. De Cash Conversion Cycle verkorten is geen boekhoudtruc — het is de beslissing die je groei volhoudt.</p></div>
 
@@ -110,7 +110,7 @@ Metatron vroeg voortaan dertig procent aanbetaling bij opdrachtverlening. Één 
 
 ## Van zes naar dertien miljoen: wat veranderde er echt?
 
-Na achttien maanden Scaling Up stond Metatron er fundamenteel anders voor:
+Na achttien maanden Scaling Up stond het bedrijf er fundamenteel anders voor:
 
 - Een projectdirecteur met volledig mandaat — Mark offereert niet meer zelf
 - Een Brand Promise die het hele team uit het hoofd kent
@@ -152,7 +152,7 @@ Het boek geeft goede achtergrond. Maar het is geen vereiste. Veel directeuren we
 
 Schalen gaat niet vanzelf. Het begint met vier beslissingen — mensen, strategie, executie, cash. Niet één keer, maar elke week opnieuw.
 
-Metatron Installaties bestond al twaalf jaar toen Mark die beslissingen serieus nam. Achttien maanden later staat het bedrijf er fundamenteel anders voor.
+Het installatiebedrijf bestond al twaalf jaar toen de directeur die beslissingen serieus nam. Achttien maanden later staat het bedrijf er fundamenteel anders voor.
 
 **Het systeem werkt. De vraag is of jij het durft door te voeren.**
 

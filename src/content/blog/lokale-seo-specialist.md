@@ -34,11 +34,11 @@ Het voordeel voor B2B? Je concurreert niet met heel Nederland. Alleen met bedrij
 
 ## Waarom dit voor B2B zo relevant is
 
-Neem Elektrotechnisch bedrijf Van der Berg in Breda. Actief sinds 2009. Twaalf man in dienst. Prima reviews van bestaande klanten. Maar in Google Maps: onzichtbaar.
+Neem een elektrotechnisch bedrijf in Breda. Actief sinds 2009. Twaalf man in dienst. Prima reviews van bestaande klanten. Maar in Google Maps: onzichtbaar.
 
 De eigenaar dacht: "Mijn klanten komen via via." Dat klopte — tot een concurrent in Tilburg zijn Google Business Profile optimaliseerde. Ineens liepen leads naar rechts. Niet omdat die concurrent beter was. Wel omdat hij beter zichtbaar was.
 
-Na drie maanden lokale SEO stond Van der Berg in de top-3 van Breda. De telefoon begon te rinkelen. Nieuwe klanten — facilitaire dienstverleners, vastgoedbeheerders — die hem nooit eerder hadden gevonden.
+Na drie maanden lokale SEO stond het bedrijf in de top-3 van Breda. De telefoon begon te rinkelen. Nieuwe klanten — facilitaire dienstverleners, vastgoedbeheerders — die hen nooit eerder hadden gevonden.
 
 > **Kern:** Lokale zichtbaarheid is geen luxe voor B2B — het is de voorwaarde om überhaupt mee te doen in jouw regio.
 
@@ -154,7 +154,7 @@ De snelste route: optimaliseer je Google Business Profile, maak je NAP-gegevens 
 
 Lokale SEO is geen rocket science. Het is consequent en consistent je zaken op orde hebben.
 
-Van der Berg in Breda ging van onzichtbaar naar top-3. Niet door een groot budget. Wel door een volledig Google Business Profile, consistente NAP-gegevens en een actieve reviewstrategie. Dat is genoeg om de meeste concurrenten in de regio voorbij te gaan.
+Een elektrotechnisch bedrijf in Breda ging van onzichtbaar naar top-3. Niet door een groot budget. Wel door een volledig Google Business Profile, consistente NAP-gegevens en een actieve reviewstrategie. Dat is genoeg om de meeste concurrenten in de regio voorbij te gaan.
 
 Begin met stap één. Claim je Google Business Profile en vul het vandaag volledig in. Dat ene uur bepaalt of de facilitair manager in Utrecht jou vindt — of je concurrent.
 

@@ -20,9 +20,9 @@ keyTakeaways:
 
 Dit is geen toekomstverhaal. Dit is wat er nu al gebeurt in de industriële sector.
 
-Neem Veltec Systems — een fictief maar herkenbaar voorbeeld. Een technisch bedrijf in machinebouwcomponenten. Vijftig medewerkers. Goede producten. Een marketeer die elke week verzuipt in het schrijven van productpagina's en nieuwsbrieven. Leads komen binnen, maar opvolging loopt altijd een week achter.
+Stel je voor: een machinebouwbedrijf met vijftig medewerkers. Goede producten. Een marketeer die elke week verzuipt in het schrijven van productpagina's en nieuwsbrieven. Leads komen binnen, maar opvolging loopt altijd een week achter.
 
-In dit artikel volgen we Veltec. Zo zie je precies wat AI marketing voor een bedrijf als dat van jou doet.
+In dit artikel volgen we dit bedrijf. Zo zie je precies wat AI marketing voor een bedrijf als dat van jou doet.
 
 ## Wat er in 2026 is veranderd
 
@@ -39,11 +39,11 @@ In 2026 zijn er twee dingen fundamenteel verschoven.
   <p>Multimodale AI is de gamechanger van 2026: één productdemo-video levert automatisch een blogartikel, een LinkedIn-post én een FAQ op. Bedrijven die dit inzetten schalen hun content zonder extra mensen aan te nemen.</p>
 </div>
 
-Voor Veltec betekent dit: hun marketeer stopt met overtypen en begint met denken.
+Voor dit machinebouwbedrijf betekent dit: hun marketeer stopt met overtypen en begint met denken.
 
-## Wat AI nu concreet doet voor Veltec
+## Wat AI nu concreet doet voor zo'n bedrijf
 
-De marketeer van Veltec had wekelijks tien uur nodig voor contentwerk. Blogs, productbeschrijvingen, e-mails. Nu kost datzelfde werk twee uur.
+De marketeer had wekelijks tien uur nodig voor contentwerk. Blogs, productbeschrijvingen, e-mails. Nu kost datzelfde werk twee uur.
 
 <div class="getal">
   <span class="getal-waarde">8u</span>
@@ -52,7 +52,7 @@ De marketeer van Veltec had wekelijks tien uur nodig voor contentwerk. Blogs, pr
 
 Wat gebeurt er in de overige acht uur? Klantgesprekken. Strategiesessies. Het werk dat écht waarde toevoegt.
 
-Wat AI voor Veltec overneemt:
+Wat AI overneemt:
 
 - Eerste versies schrijven van technische blogs en whitepapers
 - Leads scoren op basis van websitegedrag, downloadpatroon en bedrijfsgrootte
@@ -65,7 +65,7 @@ Het grote verschil met gewone automatisering: AI leert van elke interactie. Het 
 
 Een technisch B2B-bedrijf heeft een lange verkoopcyclus. Meerdere beslissers. Content die vakinhoudelijk klopt. Precies daar maakt AI het verschil.
 
-Veltec had voor AI gemiddeld acht contactmomenten nodig voor een offerteaanvraag. Na drie maanden met slimme leadscoring en gepersonaliseerde e-mailflows: vijf contactmomenten. Kortere cyclus. Hogere conversie. Zelfde salesteam.
+Een van onze technische B2B-klanten had voor AI gemiddeld acht contactmomenten nodig voor een offerteaanvraag. Na drie maanden met slimme leadscoring en gepersonaliseerde e-mailflows: vijf contactmomenten. Kortere cyclus. Hogere conversie. Zelfde salesteam.
 
 Wat je concreet wint als B2B-bedrijf:
 
@@ -80,7 +80,7 @@ Wat je concreet wint als B2B-bedrijf:
 
 ### Contentcreatie zonder concessies aan kwaliteit
 
-Veltec schrijft nu een productblog in twee stappen. Eerst een prompt (instructie aan de AI) met technische specificaties en klantvragen. Dan een eerste versie via ChatGPT of Jasper AI. Daarna voegt de marketeer vakkennis en klantverhalen toe.
+Een van onze klanten schrijft nu een productblog in twee stappen. Eerst een prompt (instructie aan de AI) met technische specificaties en klantvragen. Dan een eerste versie via ChatGPT of Jasper AI. Daarna voegt de marketeer vakkennis en klantverhalen toe.
 
 Het resultaat: drie keer meer content. Betere SEO-positie. Minder stress.
 
@@ -104,13 +104,13 @@ Je verkopers bellen de mensen die klaar zijn voor een gesprek. Niet de mensen di
 
 HubSpot AI analyseert wanneer leads hun e-mail openen en welke content ze waarderen. Het systeem stuurt automatisch op het moment dat de kans op opening het hoogst is.
 
-**Het gevolg: hogere openrates, meer kliks, kortere doorlooptijden.** Veltec zag na acht weken een stijging van 34% in e-mailopeningen. Zonder nieuwe content te schrijven.
+**Het gevolg: hogere openrates, meer kliks, kortere doorlooptijden.** Diezelfde klant zag na acht weken een stijging van 34% in e-mailopeningen. Zonder nieuwe content te schrijven.
 
 ## Wat het kost en wat het oplevert
 
 Voor een technisch B2B-bedrijf met tien tot vijftig medewerkers reken je op 500 tot 2.000 euro per maand voor een complete AI-marketingstack.
 
-Veltec bespaart vier uur per week op contentwerk. Dat zijn twee werkdagen per maand. Tegen een uurtarief van 60 euro: 480 euro terugverdiend. Elke maand. Alleen op tijdsbesparing.
+De klant bespaart vier uur per week op contentwerk. Dat zijn twee werkdagen per maand. Tegen een uurtarief van 60 euro: 480 euro terugverdiend. Elke maand. Alleen op tijdsbesparing.
 
 De conversiewinst niet meegerekend.
 
@@ -144,7 +144,7 @@ Nee. Strategie, vakkennis en relatiebeheer blijven mensenwerk.
 
 Wat wél verandert: de marketeer wordt meer strateeg en minder uitvoerder. Wil je weten hoe AI-agents daarin een rol spelen? Lees ons artikel over [de opkomst van AI agents](/blog/de-opkomst-van-ai-agents).
 
-Veltec's marketeer werkt vandaag meer aan klantbegrip en contentstrategie. Minder aan de derde versie van een productbeschrijving.
+De marketeer van een technisch B2B-bedrijf werkt vandaag meer aan klantbegrip en contentstrategie. Minder aan de derde versie van een productbeschrijving.
 
 ---
 
