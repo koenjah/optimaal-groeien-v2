@@ -62,17 +62,64 @@ const faqSchema = faqItems.length > 0
       })),
     })
   : undefined;
+
+// Article schema — required for blog post rich snippets in Google
+const articleSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: post.data.title,
+  description: post.data.description,
+  image: post.data.heroImage
+    ? (post.data.heroImage.startsWith('http') ? post.data.heroImage : `https://optimaalgroeien.nl${post.data.heroImage}`)
+    : 'https://optimaalgroeien.nl/images/team-full.jpg',
+  datePublished: new Date(post.data.date).toISOString(),
+  dateModified: new Date(post.data.date).toISOString(),
+  author: {
+    '@type': 'Person',
+    name: post.data.author,
+    url: 'https://optimaalgroeien.nl/over-ons/',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Optimaal Groeien',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://optimaalgroeien.nl/images/logo.webp',
+    },
+  },
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': `https://optimaalgroeien.nl/blog/${post.data.slug}/`,
+  },
+  wordCount: words,
+  articleSection: post.data.category,
+  keywords: (post.data.tags ?? []).join(', '),
+  inLanguage: 'nl-NL',
+});
+
+// BreadcrumbList — Home > Blog > Article
+const breadcrumbSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://optimaalgroeien.nl/' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://optimaalgroeien.nl/blog/' },
+    { '@type': 'ListItem', position: 3, name: post.data.title, item: `https://optimaalgroeien.nl/blog/${post.data.slug}/` },
+  ],
+});
 ---
 
 <BlogLayout
   title={post.data.title + ' — Optimaal Groeien'}
   description={post.data.description}
-  canonical={`https://optimaalgroeien.nl/blog/${post.data.slug}`}
+  canonical={`https://optimaalgroeien.nl/blog/${post.data.slug}/`}
   ogImage={post.data.heroImage}
   ogType="article"
   publishedTime={new Date(post.data.date).toISOString()}
   author={post.data.author}
   faqSchema={faqSchema}
+  articleSchema={articleSchema}
+  breadcrumbSchema={breadcrumbSchema}
 >
   <!-- Hero — clean, readable -->
   <header class="bg-brand-primary pt-36 pb-10 px-6">
