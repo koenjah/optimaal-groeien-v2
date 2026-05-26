@@ -1,0 +1,32 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import AIScan from '../../components/AIScan';
+import '../../index.css';
+---
+
+<Layout
+  title="AI Analyse Scan — Optimaal Groeien"
+  description="Vertel ons wie je bent en hoe je werkt. Wij analyseren je website en commercieel proces en laten je zien waar AI vandaag al het verschil maakt."
+  canonical="https://optimaalgroeien.nl/ai-scan"
+>
+  <div class="min-h-screen bg-[#FFFCF8] flex flex-col">
+
+    <!-- Minimal top bar — logo only, no nav -->
+    <header class="shrink-0 px-6 py-5 flex items-center justify-between border-b border-brand-soft/60">
+      <a href="/" class="flex items-center">
+        <img src="/images/logo.webp" alt="Optimaal Groeien" class="h-7 w-auto" />
+      </a>
+      <span class="text-[11px] font-bold uppercase tracking-widest text-brand-ink/55">
+        AI Analyse Scan
+      </span>
+    </header>
+
+    <!-- Form — takes all remaining space -->
+    <main class="flex-1 flex flex-col items-center justify-start px-4 pt-5 pb-6 sm:pt-6">
+      <div class="w-full max-w-xl">
+        <AIScan client:load />
+      </div>
+    </main>
+
+  </div>
+</Layout>
