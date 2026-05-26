@@ -22,6 +22,32 @@ const {
   author,
   faqSchema,
 } = Astro.props;
+
+// Normalize canonical: always include trailing slash to match Astro's URL output
+// (prevents canonical → 307 redirect → final URL chain)
+const canonicalUrl = canonical.endsWith('/') ? canonical : canonical + '/';
+
+// Organization schema (on every page) — required for Knowledge Graph + AI citations
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Optimaal Groeien",
+  "url": "https://optimaalgroeien.nl/",
+  "logo": "https://optimaalgroeien.nl/images/logo.webp",
+  "description": "Commercieel partner voor B2B-bedrijven in industrie, machinebouw, logistiek en bouw. Branding, marketing en sales als geïntegreerd systeem.",
+  "sameAs": [
+    "https://www.linkedin.com/company/optimaal-groeien/",
+  ],
+};
+
+// WebSite schema (on every page)
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Optimaal Groeien",
+  "url": "https://optimaalgroeien.nl/",
+  "inLanguage": "nl-NL",
+};
 ---
 
 <!doctype html>
@@ -31,8 +57,8 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <link rel="canonical" href={canonical} />
-    {noindex && <meta name="robots" content="noindex, follow" />}
+    <link rel="canonical" href={canonicalUrl} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -41,7 +67,7 @@ const {
     <link rel="preload" href="/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin />
     <!-- Open Graph -->
     <meta property="og:type" content={ogType} />
-    <meta property="og:url" content={canonical} />
+    <meta property="og:url" content={canonicalUrl} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
@@ -51,6 +77,9 @@ const {
     {publishedTime && <meta property="article:published_time" content={publishedTime} />}
     {author && <meta property="article:author" content={author} />}
     {faqSchema && <script type="application/ld+json" set:html={faqSchema} />}
+    <!-- Structured data — Organization + WebSite (every page) -->
+    <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
     <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
