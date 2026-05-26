@@ -1,0 +1,37 @@
+---
+import ServiceLayout from '../layouts/ServiceLayout.astro';
+import {
+  OnzeMethodeHero,
+  PijnpuntenSection,
+  DrieLagenSection,
+  ModulesSection,
+  HoeHetSamenkomtSection,
+  TrajectIntroSection,
+} from '../components/OnzeMethodeComponents';
+import {
+  RoadmapSection,
+  OnzeBelofteSection,
+  KlantenLogosSection,
+  KlantverhalenSection,
+  LatenWePratenSection,
+} from '../components/SiteComponents';
+---
+
+<ServiceLayout
+  title="Onze methode — Het Commercial Intelligence System | Optimaal Groeien"
+  description="Het Commercial Intelligence System (CIS) brengt branding, marketing, sales en AI samen in één systeem. De groeimethode voor B2B-bedrijven in maakindustrie, techniek, logistiek en bouw."
+  canonical="https://optimaalgroeien.nl/onze-methode"
+  darkHero={true}
+>
+  <OnzeMethodeHero client:load />
+  <PijnpuntenSection />
+  <DrieLagenSection />
+  <ModulesSection />
+  <HoeHetSamenkomtSection />
+  <TrajectIntroSection />
+  <RoadmapSection />
+  <OnzeBelofteSection />
+  <KlantenLogosSection />
+  <KlantverhalenSection />
+  <LatenWePratenSection client:load />
+</ServiceLayout>
