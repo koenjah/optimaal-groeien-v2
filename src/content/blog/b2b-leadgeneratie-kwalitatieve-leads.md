@@ -2,7 +2,7 @@
 title: "B2B leadgeneratie: hoe je structureel kwalitatieve leads aantrekt"
 slug: "b2b-leadgeneratie-kwalitatieve-leads"
 description: "B2B leadgeneratie: hoe trek je structureel kwalitatieve leads aan in 2026? Bewezen strategieën voor machinebouw, logistiek en bouw."
-date: "2026-05-12"
+date: "2026-02-21"
 author: "Stefan Kelderman"
 category: "Leadgeneratie"
 tags: ['leadgeneratie', 'b2b', 'technische-sector', 'sales']
@@ -143,6 +143,12 @@ Je beste verkopers zijn tevreden klanten. Vraag actief om referenties na een suc
 
 ---
 
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Praktisch toepassen?</span>
+  <p>Een scherp ICP, slimme leadscoring en inbound content die de verkeerde bedrijven al uitfiltert — dat zijn geen losse trucjes, maar onderdelen van één commercieel systeem. Bij Optimaal Groeien bouwen we dat systeem voor technische B2B-bedrijven die willen stoppen met bellen om niks.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>
+
 ## Conclusie: begin met de juiste leads, niet meer leads
 
 De directeur met 90 leads en 82 teleurstellingen heeft geen leadgeneratieprobleem. Hij heeft een kwalificatieprobleem. Scherp je ICP aan. Gebruik BANT als filter. Introduceer lead scoring. Bouw content die de verkeerde bedrijven wegfiltert — vóór ze contact opnemen.
@@ -151,4 +157,6 @@ De directeur met 90 leads en 82 teleurstellingen heeft geen leadgeneratieproblee
 
 In 2026 wint niet het bedrijf met de meeste leads. Het wint het bedrijf met het beste systeem om de juiste leads te herkennen en te converteren.
 
-Bij Optimaal Groeien helpen we technische B2B-bedrijven dagelijks bij het opzetten van zo'n systeem. Wil je weten waar jouw grootste lek zit? **Plan een vrijblijvende groeiscan** en ontdek binnen 30 minuten wat er beter kan.
+Dat systeem begint niet bij een nieuw kanaal of een groter budget. Het begint bij de vraag: weten wij precies wie we wíllen binnenkrijgen — en filtert onze aanpak actief de rest weg?
+
+Als het antwoord nee is, weet je waar je moet beginnen. [Plan een groeiscan](/contact) en ontdek binnen 30 minuten waar jouw grootste lek zit.

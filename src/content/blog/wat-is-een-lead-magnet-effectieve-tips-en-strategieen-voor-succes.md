@@ -2,7 +2,7 @@
 title: "Wat is een lead magnet? Effectieve tips en strategieën voor succes"
 slug: "wat-is-een-lead-magnet-effectieve-tips-en-strategieen-voor-succes"
 description: "Een lead magnet trekt potentiële klanten aan door gratis waarde te bieden. Leer wat een goede lead magnet is, welke soorten werken en hoe je er zelf mee begint."
-date: "2025-05-05"
+date: "2026-05-07"
 author: "Stefan Kelderman"
 category: "Leadgeneratie"
 tags: ['lead magnet', 'leadgeneratie', 'e-mailmarketing']
@@ -107,6 +107,10 @@ Marketing automation helpt dit te schalen. Je stelt de e-mailreeks eenmalig in. 
   <div class="stap"><span class="stap-nr">5</span><div class="stap-tekst"><strong>Volg op met een e-mailreeks</strong> — Stuur minimaal drie e-mails na de download. Bied waarde, bouw vertrouwen en introduceer daarna je aanbod.</div></div>
 </div>
 
-Een goed doordachte lead magnet brengt structureel nieuwe leads binnen. Het is een van de meest kosteneffectieve manieren om je marketingresultaten te verbeteren.
+Een goed doordachte lead magnet brengt structureel nieuwe leads binnen. Maar de lead magnet is alleen de opening. Het is stap één in een proces dat uiteindelijk naar een gesprek moet leiden — en dan naar een klant.
 
-Wil je weten welke lead magnet het beste past bij jouw bedrijf en doelgroep? [Neem contact op](/#contact) voor een vrijblijvend gesprek.
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Van download naar gesprek</span>
+  <p>Een lead magnet is pas effectief als de opvolging klopt. Voor B2B-bedrijven in de technische sector bouwen wij het hele leadgeneratieproces op — van het eerste aanbod tot het kwalificeren van leads die klaar zijn voor een gesprek.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>

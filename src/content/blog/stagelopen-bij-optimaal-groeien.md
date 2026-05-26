@@ -2,7 +2,7 @@
 title: "Stagelopen bij Optimaal Groeien: eerste indrukken van Diede en Donna"
 slug: "stagelopen-bij-optimaal-groeien"
 description: "Diede en Donna lopen stage bij Optimaal Groeien op de afdelingen marketing en branding. In dit blog delen ze hun eerste ervaringen, wat ze leren en tips voor toekomstige stagiairs."
-date: "2025-12-20"
+date: "2026-04-23"
 author: "Stefan Kelderman"
 category: "Marketing"
 tags: ['stage', 'marketing', 'branding', 'leren', 'team']
@@ -93,3 +93,9 @@ We zijn heel blij met onze keuze.
 Groetjes,
 
 **Diede & Donna**
+
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Interesse in een stage bij Optimaal Groeien?</span>
+  <p>We begeleiden stagiairs in marketing, branding en sales — met echte opdrachten, directe feedback en ruimte om te groeien. Stuur een berichtje als je wilt weten wat er mogelijk is.</p>
+  <a href="/#contact" class="cta-link">Neem contact op →</a>
+</div>

@@ -2,7 +2,7 @@
 title: "Sales strategie ontwikkelen: zo kies je de aanpak die bij jouw bedrijf past"
 slug: "sales-strategie"
 description: "Een goede sales strategie bepaalt hoe je verkoopt, aan wie en via welk kanaal. Leer de vijf veelgebruikte strategieën kennen en ontdek welke aanpak past bij jouw bedrijf en doelgroep."
-date: "2025-12-05"
+date: "2026-04-16"
 author: "Stefan Kelderman"
 category: "Sales"
 tags: ['sales strategie', 'verkoopstrategie', 'leadgeneratie', 'sales funnel', 'acquisitie']
@@ -89,8 +89,12 @@ Stel jezelf de volgende vragen:
 
 ## Van strategie naar resultaat
 
-Een sales strategie op papier is niets waard zonder uitvoering. Het gaat om de dagelijkse discipline: het opvolgen van leads, het voeren van goede gesprekken, het bijhouden van je CRM en het sluiten van deals.
+Een sales strategie op papier is niets waard zonder uitvoering. Het gaat om de dagelijkse discipline: leads opvolgen, goede gesprekken voeren, je CRM bijhouden en deals sluiten. Theorie is het makkelijke deel.
 
-Winnaars in sales zijn niet degenen met de beste techniek. Het zijn degenen die consistent doen wat nodig is. Met de juiste motivatie, structuur en vaardigheden volgt succes vanzelf.
+Welke strategie past bij jouw situatie hangt af van je markt, je team en je fase. Dat is geen generiek antwoord — dat vraagt een specifiek gesprek.
 
-Wil je een sales strategie ontwikkelen die past bij jouw bedrijf? [Neem contact op](/#contact) en we bespreken samen welke aanpak het beste bij jouw situatie aansluit.
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Welke aanpak past bij jou?</span>
+  <p>Niet elk bedrijf heeft dezelfde strategie nodig. We kijken naar jouw doelgroep, je huidige kanalen en je groeifase — en maken de keuze concreet.</p>
+  <a href="/#contact" class="cta-link">Neem contact op →</a>
+</div>

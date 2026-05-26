@@ -2,7 +2,7 @@
 title: "Zoekmachine optimalisatie voor mkb-bedrijven: wat je moet weten"
 slug: "zoekmachine-optimalisatie-voor-mkb-bedrijven"
 description: "SEO is ook voor mkb-bedrijven haalbaar en lonend. Leer hoe zoekmachine optimalisatie werkt, wat het kost en wanneer je resultaten kunt verwachten."
-date: "2025-07-25"
+date: "2026-05-15"
 author: "Stefan Kelderman"
 category: "SEO"
 tags: ['SEO mkb', 'zoekmachine optimalisatie', 'lokale SEO', 'kleine bedrijven', 'organisch verkeer']
@@ -135,8 +135,14 @@ Maar de combinatie van technische kennis, contentstrategie en linkbuilding vraag
 
 <div class="citaat"><p>"Je hoeft SEO niet zelf te doen. Maar je moet wel begrijpen waarom het belangrijk is — en welke richting je op wilt."</p></div>
 
-## Beginnen met SEO
+## Wat kan SEO concreet opleveren voor jouw mkb-bedrijf?
 
-Wil je meer weten over wat SEO voor jouw mkb-bedrijf kan betekenen? Of wil je weten hoe jouw website er nu voor staat?
+SEO levert bezoekers op die actief zoeken naar wat jij aanbiedt. Dat is anders dan een advertentie die je opdringt aan iemand die er niet op zit te wachten. Organisch gevonden worden is een vorm van vertrouwen — en vertrouwen converteert beter.
 
-[Neem contact op](/#contact) voor een vrijblijvend gesprek. We kijken samen naar de kansen voor jouw situatie.
+De vraag is niet of SEO werkt voor mkb-bedrijven. De vraag is wat er daarna gebeurt als iemand aankomt op je website.
+
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Meer bezoekers via Google — en daarna?</span>
+  <p>SEO brengt de juiste mensen op je website. Maar mkb-bedrijven die structureel groeien, hebben ook een helder aanbod, een opvolgproces en een salesstructuur die leads niet laat liggen. Dat geheel bouwen wij — als commercieel partner, niet als bureau.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>

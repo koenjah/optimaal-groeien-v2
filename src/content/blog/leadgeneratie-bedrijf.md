@@ -2,7 +2,7 @@
 title: "Leadgeneratie voor jouw bedrijf: zo doe je het"
 slug: "leadgeneratie-bedrijf"
 description: "Leads zijn de motor van elk bedrijf. Ontdek wat leadgeneratie is, hoe het verschilt van B2B naar B2C, en welke kanalen het meest effectief zijn voor jouw situatie."
-date: "2025-10-20"
+date: "2026-04-01"
 author: "Stefan Kelderman"
 category: "Leadgeneratie"
 tags: ['leadgeneratie', 'B2B leads', 'contentmarketing', 'SEO']
@@ -93,8 +93,12 @@ Bij **B2C** gaat het sneller. Consumenten beslissen vaker op gevoel en directe b
 <li><span class="check"></span>24/7 actief: je funnel werkt ook als jij niet werkt</li>
 </ul>
 
-## Conclusie
+## Leadgeneratie als systeem: zo haal je structureel nieuwe klanten binnen
 
 Leadgeneratie is geen trucje. Het is een systeem. Een systeem dat bestaat uit de juiste kanalen, relevante content en een goede opvolgstrategie. Wie dat systeem heeft, haalt structureel nieuwe klanten binnen. Wie het niet heeft, blijft afhankelijk van geluk en koude acquisitie.
 
-Wil je weten hoe jij een effectief leadgeneratiesysteem opbouwt? [Neem contact op](/#contact) en we kijken samen naar de beste aanpak voor jouw bedrijf.
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Praktisch toepassen?</span>
+  <p>Structureel nieuwe B2B-leads aantrekken vraagt meer dan één kanaal. Bij Optimaal Groeien bouwen we het hele systeem — van SEO en content tot de opvolging door sales — zodat je niet afhankelijk bent van geluk of koude acquisitie.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>

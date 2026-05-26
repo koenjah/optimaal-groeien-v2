@@ -2,7 +2,7 @@
 title: "De beste business coach van Nederland vinden: waar moet je op letten?"
 slug: "de-beste-business-coach-van-nederland"
 description: "Hoe vind je de beste business coach van Nederland? Lees waar je op moet letten, wat het kost en wat een goede coach voor jouw bedrijf doet."
-date: "2026-05-12"
+date: "2026-03-01"
 author: "Stefan Kelderman"
 category: "Strategie"
 tags: ['business-coach', 'groei', 'ondernemerschap', 'coaching']
@@ -144,4 +144,10 @@ De beste [business coach voor B2B ondernemers](/business-coach) is niet degene m
 
 Kijk naar aantoonbare ervaring in jouw branche. Vraag om harde resultaten. Test de klik. Kies voor een aanpak die bewezen werkt, niet voor charisma.
 
-Vraag een gratis groeisessie aan. Na dat eerste gesprek weet je precies wat de volgende stap is — ongeacht of je verder gaat.
+De directeur die wacht tot het écht misgaat, betaalt twee keer. Eén keer voor de schade. Een tweede keer voor de coach die het moet repareren.
+
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Praktisch toepassen?</span>
+  <p>Groeivragen in de technische B2B-sector vragen om iemand die jouw wereld kent en direct meewerkt aan de uitvoering — niet iemand die je een rapport geeft. Stefan Kelderman werkt rechtstreeks met directeuren aan strategie, salesproces en schaalbaarheid, als commerciële partner naast hun bedrijf.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>

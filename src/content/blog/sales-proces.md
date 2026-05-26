@@ -2,7 +2,7 @@
 title: "Een gestructureerd sales proces: de zeven stappen naar meer klanten"
 slug: "sales-proces"
 description: "Een goed sales proces geeft je verkoopteam houvast en maakt groei voorspelbaar. Leer de zeven stappen, de meest voorkomende fouten en hoe je het proces optimaliseert."
-date: "2025-12-01"
+date: "2026-04-17"
 author: "Stefan Kelderman"
 category: "Sales"
 tags: ['sales proces', 'leadgeneratie', 'CRM', 'verkoopstrategie', 'klantrelaties']
@@ -88,6 +88,12 @@ Zonder CRM vertrouw je op geheugen en notities. Dat werkt zolang het team klein 
 
 ## Van proces naar groeifactor
 
-Een gestructureerd sales proces is meer dan een stappenplan. Het is de basis voor voorspelbare, schaalbare groei. Het geeft je team richting. Het verbetert de klantervaring. En het maakt bijsturen makkelijk.
+Een gestructureerd sales proces is meer dan een stappenplan. Het is de basis voor voorspelbare groei — en het maakt bijsturen makkelijk als het tegenvalt. Zonder CRM, zonder follow-up schema, zonder heldere stappen is elke lead een gok.
 
-Wil je jouw sales proces doorlichten of opbouwen? [Neem contact op](/#contact) voor een vrijblijvend gesprek. We kijken samen naar waar de grootste kansen liggen.
+Wil je jouw sales proces doorlichten of helemaal opbouwen? Stefan denkt graag mee — geen dik rapport, maar een eerlijk gesprek over waar het schuurt.
+
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Waar haakt het bij jou af?</span>
+  <p>Stap drie of stap zes — er zit altijd een plek in het proces waar leads verloren gaan. We kijken samen welke stap dat is en wat er concreet verandert.</p>
+  <a href="/#contact" class="cta-link">Neem contact op →</a>
+</div>

@@ -2,7 +2,7 @@
 title: "Hoger in Google komen in 2026: 10 werkbare stappen voor B2B bedrijven"
 slug: "hoger-in-google"
 description: "Hoger in Google komen in 2026? 10 werkbare stappen voor B2B bedrijven. Van technische SEO tot contentoptimalisatie en linkbuilding."
-date: "2026-05-12"
+date: "2026-03-24"
 author: "Stefan Kelderman"
 category: "Marketing"
 tags: ['seo', 'google', 'vindbaarheid', 'b2b']
@@ -136,4 +136,8 @@ Het bedrijf stond op pagina 3. Ze kwamen op positie 1 — niet door meer te beta
 
 Jij staat op positie 1 voor je eigen bedrijfsnaam. Gefeliciteerd — je concurreert nu alleen nog met jezelf.
 
-**Laat een gratis SEO-scan uitvoeren en ontdek welke omzetposities jij nu laat liggen.**
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Een omzetpositie halen — en er iets mee doen</span>
+  <p>Bovenaan staan voor de juiste zoekterm levert verkeer op. Maar de inkoper die om 8:47 doorklikt, wil een scherpe propositie zien, een helder vervolgpad en een opvolging die niet weken duurt. Dat commerciële systeem bouwen wij samen met de SEO die het voedt.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>

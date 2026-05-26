@@ -2,7 +2,7 @@
 title: "Hoe werkt marketing automation?"
 slug: "hoe-werkt-marketing-automation"
 description: "Marketing automation stuurt automatisch de juiste boodschap naar de juiste persoon op het juiste moment. Leer hoe het werkt, wat de voordelen zijn, en hoe je ermee start."
-date: "2025-08-20"
+date: "2026-03-20"
 author: "Stefan Kelderman"
 category: "AI & Automatisering"
 tags: ['marketing automation', 'lead nurturing', 'e-mailmarketing']
@@ -91,8 +91,12 @@ Bij B2B zijn de salestrajecten langer. Leads hebben meer contactmomenten nodig. 
 
 Bij B2C gaat het sneller. Consumenten beslissen vaker op gevoel en impulsen. Automation helpt hier met retargeting, verlaten winkelwagens en loyaliteitsprogramma's.
 
-## Conclusie
+## Automation werkt alleen als de strategie klopt
 
 Marketing automation werkt als jij een duidelijk doel hebt en je klantproces begrijpt. Het is geen magische knop. Maar goed ingezet, is het een van de krachtigste tools voor groei.
 
-Wil je weten hoe automation voor jouw bedrijf kan werken? [Neem contact op](/#contact) en we denken graag mee.
+<div class="artikel-cta">
+  <span class="artikel-cta-label">De flow is pas het begin</span>
+  <p>Automation zonder de juiste strategie automatiseert gewoon de verkeerde dingen. De vraag is niet welk platform je kiest — maar of de strategie, de propositie en het salesproces sterk genoeg zijn om automation zinvol te maken.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>

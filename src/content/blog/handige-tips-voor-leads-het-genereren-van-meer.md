@@ -2,7 +2,7 @@
 title: "Meer leads genereren: 5 tips die echt werken"
 slug: "handige-tips-voor-leads-het-genereren-van-meer"
 description: "Meer leads genereren begint met de juiste aanpak. Ontdek vijf concrete tips voor effectieve leadgeneratie, van social media tot lead nurturing en conversie-optimalisatie."
-date: "2025-07-01"
+date: "2026-03-16"
 author: "Stefan Kelderman"
 category: "Leadgeneratie"
 tags: ['leadgeneratie', 'leads genereren', 'lead nurturing', 'conversie-optimalisatie', 'inbound marketing']
@@ -126,7 +126,13 @@ Het doel is niet pushen — het is begeleiden. Je helpt de lead om zelf tot de c
 
 <div class="inzicht"><span class="inzicht-label">Inzicht</span><p>Marketing automation is een krachtig hulpmiddel bij lead nurturing. Het stelt je in staat om op schaal persoonlijk te communiceren — op het moment dat de lead er klaar voor is.</p></div>
 
-## Conclusie
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Leads binnenkrijgen is het begin — wat daarna komt, telt</span>
+  <p>Leads genereren is één stap. Ze ook daadwerkelijk converteren naar klanten vraagt een compleet commercieel systeem. Voor B2B-bedrijven in de technische sector bouwen en runnen wij dat systeem — van eerste contact tot getekend contract.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>
+
+## Leads genereren is één stap — het systeem erachter maakt het verschil
 
 Meer leads genereren vraagt om structuur. Niet om meer kanalen of meer content — om slimmere keuzes op basis van wat werkt.
 

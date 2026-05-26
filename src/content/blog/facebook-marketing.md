@@ -2,7 +2,7 @@
 title: "Facebook marketing voor B2B: zo zet je het slim in"
 slug: "facebook-marketing"
 description: "Facebook wordt in B2B onderschat. Toch is het voor remarketing en naamsbekendheid een waardevol kanaal. Lees hoe je Facebook effectief inzet als onderdeel van je commerciële strategie."
-date: "2025-11-05"
+date: "2026-03-10"
 author: "Stefan Kelderman"
 category: "Marketing"
 tags: ['Facebook marketing', 'remarketing', 'social media', 'B2B adverteren', 'lead advertenties']
@@ -122,10 +122,16 @@ Via de Facebook-pixel en conversietracking koppel je campagnes aan concrete resu
 
 Remarketingcampagnes tonen binnen één tot twee weken effect. Naamsbekendheidscampagnes hebben twee tot drie maanden nodig voor meetbare impact. Lead advertenties kunnen binnen dagen eerste leads opleveren, maar optimalisatie kost vier tot zes weken.
 
-## Conclusie
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Herhaalde zichtbaarheid heeft een bestemming nodig</span>
+  <p>Facebook houdt je merk zichtbaar bij mensen die al interesse toonden — maar zichtbaarheid is geen eindpunt. Als iemand doorklikte en er niets klaarstand om hem verder te brengen, was die remarketingeuro weg. Het kanaal werkt alleen als de rest van de commerciële keten ook staat.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>
+
+## Facebook als remarketingkanaal: zo haalt het B2B zijn waarde
 
 Facebook marketing is voor B2B-bedrijven geen must-have, maar een waardevolle aanvulling. De echte kracht zit in remarketing: websitebezoekers opnieuw bereiken, je merk verankeren en het beslissingsproces versnellen.
 
 Als los kanaal levert het teleurstellende resultaten. Als onderdeel van je commerciële aanpak — samen met [LinkedIn](/blog/linkedin-marketing), [e-mailmarketing](/blog/email-marketing) en salesopvolging — wordt het een versnellende factor.
 
-Begin klein: zet een remarketingpixel op je website, bouw een doelgroep op en start met een bescheiden budget. Optimaliseer op basis van de data die je terugkrijgt.
+Begin klein: zet een remarketingpixel op je website, bouw een doelgroep op en start met een bescheiden budget. Het kanaal bewijst zichzelf in de data — niet in de belofte.

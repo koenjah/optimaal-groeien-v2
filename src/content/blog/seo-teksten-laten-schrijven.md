@@ -2,7 +2,7 @@
 title: "SEO teksten laten schrijven: wat werkt en wat niet"
 slug: "seo-teksten-laten-schrijven"
 description: "Goede SEO teksten zijn leesbaar voor mensen én vindbaar voor zoekmachines. Leer wat er nodig is voor effectieve content, hoe zoekwoordenonderzoek werkt en wanneer je het beste uitbesteedt."
-date: "2025-12-15"
+date: "2026-04-21"
 author: "Stefan Kelderman"
 category: "SEO"
 tags: ['SEO', 'content', 'zoekwoorden', 'vindbaarheid', 'webteksten']
@@ -94,8 +94,14 @@ Uitbesteden is slim als:
 
 Bij Optimaal Groeien combineren we zoekwoordonderzoek, contentstrategie en schrijfwerk. Zo levert elke tekst maximale waarde — voor Google én voor je lezer.
 
-## Conclusie
+## SEO teksten schrijven: kennis van doelgroep, zoekmachines en copywriting in één
 
-SEO teksten schrijven is een vak. Het vergt kennis van je doelgroep, van zoekmachines en van goede copywriting. Die combinatie is zeldzaam — maar als je hem vindt, is het effect merkbaar.
+SEO teksten schrijven is een vak. Niet omdat het ingewikkeld is, maar omdat je drie dingen tegelijk goed moet doen: weten wat je doelgroep zoekt, weten hoe Google dat beoordeelt, en het ook nog leesbaar opschrijven. Die combinatie is zeldzaam.
 
-Wil je weten hoe je content beter kunt laten presteren? [Neem contact op](/#contact) voor een vrijblijvend gesprek over je huidige situatie en de kansen die we zien.
+Als je bestaande teksten niet presteren of je weet niet goed op welke zoekwoorden je wilt inzetten, begint het met een eerlijk beeld van waar je nu staat.
+
+<div class="artikel-cta">
+  <span class="artikel-cta-label">De tekst trekt de bezoeker — wat overtuigt hem daarna?</span>
+  <p>Goede content brengt de juiste lezer op je pagina. Maar of die lezer ook contact opneemt, hangt af van wat er daarna komt: de propositie, het aanbod, de opvolging. We schrijven de teksten én denken mee over het systeem eromheen.</p>
+  <a href="/#contact" class="cta-link">Neem contact op →</a>
+</div>

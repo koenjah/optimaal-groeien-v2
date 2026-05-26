@@ -2,7 +2,7 @@
 title: "WordPress SEO: zo maak je jouw site beter vindbaar"
 slug: "wordpress-seo"
 description: "WordPress is van nature SEO-vriendelijk, maar er is meer nodig. Lees hoe je met de juiste plugins, instellingen en technieken jouw WordPress-site hoger laat scoren in Google."
-date: "2025-07-15"
+date: "2026-05-13"
 author: "Stefan Kelderman"
 category: "SEO"
 tags: ['WordPress SEO', 'Yoast SEO', 'on-page SEO', 'technische SEO', 'WordPress']
@@ -150,10 +150,16 @@ Jouw WordPress-thema heeft meer invloed op SEO dan je misschien denkt. Een zwaar
 
 Plugins zijn nuttig, maar elke plugin voegt belasting toe. Installeer alleen plugins die je echt gebruikt. Verwijder wat je niet gebruikt.
 
-## Aan de slag met WordPress SEO
+## WordPress SEO: kennis en consistentie bepalen je positie
 
 WordPress biedt alle tools die je nodig hebt. Maar weten welke instellingen je moet aanpassen, welke content je moet schrijven en hoe je linkbuilding aanpakt — dat vraagt om kennis en ervaring.
 
 <div class="inzicht"><span class="inzicht-label">Inzicht</span><p>WordPress SEO is geen eenmalig project. Het is een doorlopend proces. Wie consistent verbetert, bouwt duurzame vindbaarheid op.</p></div>
 
-Wil je jouw WordPress-website hoger laten scoren in Google? [Neem contact op](/#contact) en bespreek de mogelijkheden.
+Een hogere positie in Google is haalbaar. Maar posities alleen zetten de meter niet in beweging. Uiteindelijk gaat het om bezoekers die een actie ondernemen — die bellen, een formulier invullen, terugkomen.
+
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Je WordPress-site staat goed ingesteld — wie vangt de bezoeker op?</span>
+  <p>WordPress SEO zorgt dat je gevonden wordt. Maar een bezoeker die aankomt op een site zonder helder aanbod, logische opvolging of conversiepad, vertrekt ook weer zonder actie. Wij optimaliseren de vindbaarheid én de commerciële structuur erachter.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>

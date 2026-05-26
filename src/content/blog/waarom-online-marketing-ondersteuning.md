@@ -2,7 +2,7 @@
 title: "Waarom online marketing ondersteuning je bedrijf sneller laat groeien"
 slug: "waarom-online-marketing-ondersteuning"
 description: "Online marketing is een vak apart. Leer wanneer het slim is om ondersteuning te zoeken, wat dat oplevert en hoe SEO en SEA je zichtbaarheid structureel vergroten."
-date: "2025-03-25"
+date: "2026-05-03"
 author: "Stefan Kelderman"
 category: "Marketing"
 tags: ['online marketing', 'SEO', 'SEA']
@@ -98,10 +98,16 @@ Niet elk bedrijf heeft dezelfde behoefte. Online marketing ondersteuning is vers
 
 In al die gevallen is het verstandiger om expertise in te huren dan te blijven improviseren.
 
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Geen losse kanalen, maar één systeem</span>
+  <p>Voor B2B-bedrijven in de technische sector combineren wij SEO, contentmarketing en betaalde kanalen in één samenhangende aanpak. Geen bureau dat één ding doet en de rest loslaat — maar een partner die de volledige commerciële structuur runt en bijstuurt op resultaat.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>
+
 ## De eerste stap: een goede analyse
 
 Elk succesvol marketingtraject begint met een eerlijke analyse. Niet van wat je wilt, maar van waar je nu staat. Welke kanalen werken al? Waar verlies je bezoekers? Wat doet de concurrentie beter?
 
 Op basis van die analyse maak je een plan. En dat plan geeft je richting — geen losse acties, maar een samenhangende aanpak die opbouwt naar groei.
 
-Benieuwd wat online marketing ondersteuning voor jouw bedrijf kan betekenen? [Neem contact op](/#contact) voor een vrijblijvend gesprek.
+Wil je weten waar je nu staat en wat er als eerste aandacht verdient? [Neem contact op](/#contact) — we beginnen altijd met een analyse, niet met een voorstel.

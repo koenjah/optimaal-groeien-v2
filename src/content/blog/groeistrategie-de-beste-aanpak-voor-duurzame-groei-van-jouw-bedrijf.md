@@ -2,7 +2,7 @@
 title: "Groeistrategie: de beste aanpak voor duurzame groei van jouw bedrijf"
 slug: "groeistrategie-de-beste-aanpak-voor-duurzame-groei-van-jouw-bedrijf"
 description: "Een groeistrategie geeft richting aan de groei van je bedrijf. Lees over de Ansoff-matrix, vier groeistrategieën en hoe je een aanpak kiest die bij jou past."
-date: "2025-06-10"
+date: "2026-03-14"
 author: "Stefan Kelderman"
 category: "Strategie"
 tags: ['groeistrategie', 'Ansoff-matrix', 'innovatie', 'marktpenetratie', 'bedrijfsgroei']
@@ -88,7 +88,13 @@ Een groeistrategie is geen document dat je opstelt en vergeet. Het is een levend
 
 <div class="inzicht"><span class="inzicht-label">Inzicht</span><p>De meeste groeiplannen mislukken niet door een slechte strategie, maar door slechte uitvoering. Een goed plan dat consistent wordt uitgevoerd, verslaat een perfect plan dat op de plank blijft liggen.</p></div>
 
-## Conclusie
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Strategie is stap één — uitvoering is het werk</span>
+  <p>De meeste groeiplannen mislukken niet door een slechte strategie, maar doordat er niemand is die de uitvoering bijhoudt. Wij helpen B2B-bedrijven in de technische sector om van plan naar actie te gaan — met marketing, sales en AI als één commercieel geheel.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>
+
+## Kies de groeistrategie die past bij waar jij nu staat
 
 Duurzame groei ontstaat niet door hard werken alleen. Het vraagt om richting, keuzes en structuur. Een groeistrategie geeft je die drie dingen.
 

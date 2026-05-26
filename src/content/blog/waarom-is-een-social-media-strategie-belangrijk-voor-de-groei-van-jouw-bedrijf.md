@@ -2,7 +2,7 @@
 title: "Waarom is een social media strategie belangrijk voor je bedrijfsgroei?"
 slug: "waarom-is-een-social-media-strategie-belangrijk-voor-de-groei-van-jouw-bedrijf"
 description: "Zonder strategie is social media tijdverspilling. Leer waarom een doordachte aanpak het verschil maakt en hoe je stap voor stap een werkende strategie bouwt."
-date: "2025-02-15"
+date: "2026-04-28"
 author: "Stefan Kelderman"
 category: "Marketing"
 tags: ['social media', 'strategie', 'contentmarketing']
@@ -107,8 +107,16 @@ Dit is geen eenmalige actie. Het is een cyclus die zichzelf versterkt als je hem
 
 <div class="citaat"><p>"Social media is geen megafoon. Het is een gesprek. Luisteren is net zo belangrijk als zenden."</p></div>
 
-## Begin vandaag
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Likes betalen geen salarissen</span>
+  <p>Social media werkt als het onderdeel is van een systeem — niet als het systeem zelf. De vraag is niet of je genoeg post, maar wat er gebeurt als iemand reageert. Is er een funnel? Een opvolging? Een commerciële structuur die die interesse omzet in omzet?</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>
+
+## Zo begin je morgen met één kanaal en één doel
 
 Je hoeft geen perfecte strategie te hebben voor je begint. Begin met één duidelijk doel, één kanaal en één type content. Maak het meetbaar. Leer ervan. Bouw verder.
+
+Dat klinkt eenvoudig — en dat is het ook, als je weet wat je meet en waarom. Wie dat inzicht mist, post jarenlang zonder richting. Wie het heeft, ziet al na een paar maanden waar het naartoe gaat.
 
 Wil je hulp bij het ontwikkelen van een social media strategie die past bij jouw bedrijf? [Neem contact op](/#contact) en we kijken samen wat werkt.

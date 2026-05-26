@@ -2,7 +2,7 @@
 title: "Salesfunnel optimaliseren voor duurzame groei"
 slug: "salesfunnel-optimaliseren-duurzame-groei"
 description: "Een goed ingerichte salesfunnel is de motor achter duurzame groei. Leer hoe je data, marketing en sales combineert tot een systeem dat consistent nieuwe klanten oplevert."
-date: "2025-12-10"
+date: "2026-04-18"
 author: "Stefan Kelderman"
 category: "Strategie"
 tags: ['salesfunnel', 'groei', 'leadgeneratie', 'marketing automation', 'CRM']
@@ -97,8 +97,12 @@ Bedrijven die deze vragen helder beantwoorden, zien hun funnel beter presteren. 
 
 ## Duurzame groei begint bij de basis
 
-Een salesfunnel optimaliseren is geen eenmalig project. Het is een continu proces van meten, leren en aanpassen. Bedrijven die daarin excelleren, groeien sneller — en stabieler.
+Een salesfunnel is geen eenmalig bouwproject. Je legt hem neer, meet wat er gebeurt, en stuurt bij. Bedrijven die dat volhouden — ook als het druk is — groeien consistenter dan bedrijven die alles inzetten op losse campagnes.
 
-De sleutel ligt in de combinatie: datagedreven inzichten, nauwe samenwerking tussen marketing en sales, slimme technologie en een goed georganiseerd team.
+De vraag is niet of je een funnel nodig hebt. De vraag is welk deel van jouw funnel nu het meeste lekt.
 
-Wil je jouw salesfunnel doorlichten of opbouwen? [Neem contact op](/#contact) en ontdek hoe we jouw bedrijf helpen om sneller, slimmer en structureler te groeien.
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Waar verlies jij de meeste leads?</span>
+  <p>Awareness? Interesse? Of haak je af bij de beslissing? We kijken naar je funnel en wijzen aan waar de grootste winst zit — zonder grote verbouwing als dat niet nodig is.</p>
+  <a href="/#contact" class="cta-link">Neem contact op →</a>
+</div>

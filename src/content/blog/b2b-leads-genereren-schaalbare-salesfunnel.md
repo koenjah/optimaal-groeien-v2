@@ -2,7 +2,7 @@
 title: "B2B leads genereren met een schaalbare salesfunnel"
 slug: "b2b-leads-genereren-schaalbare-salesfunnel"
 description: "B2B leadgeneratie werkt alleen als marketing en sales samenwerken in één systeem. Lees hoe een schaalbare salesfunnel structuur brengt in je groei en losse campagnes overbodig maakt."
-date: "2025-03-01"
+date: "2026-02-22"
 author: "Stefan Kelderman"
 category: "Leadgeneratie"
 tags: ['B2B', 'salesfunnel', 'leadgeneratie', 'marketing', 'sales']
@@ -74,12 +74,18 @@ Schaalbaarheid vraagt om herhaalbaarheid. Een goede funnel werkt elke keer opnie
 <li><span class="check"></span>Groei is meetbaar en voorspelbaar</li>
 </ul>
 
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Praktisch toepassen?</span>
+  <p>Een schaalbare salesfunnel bouwen waarbij marketing en sales als één geheel werken — van funnelarchitectuur tot actieve opvolging — is precies wat we doen voor B2B-bedrijven in de technische sector. Zonder dat jij elk los kanaal zelf hoeft aan te sturen.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>
+
 ## Een funnel als fundament voor duurzame groei
 
 Een salesfunnel is geen statisch model. Het is een doorlopend proces dat meebeweegt met je markt en je organisatie. Door regelmatig te evalueren blijft de funnel aansluiten op veranderende behoeften.
 
 Wanneer de funnel goed functioneert, ontstaat rust. Beslissingen worden gemaakt op basis van data, niet op gevoel. Teams weten wat ze moeten doen en wanneer.
 
-B2B leadgeneratie wordt zo geen reeks losse experimenten, maar een stabiel fundament. Elke inspanning draagt meetbaar bij aan resultaat.
+Dat is het verschil tussen een organisatie die reageert en een organisatie die stuurt. Losse experimenten houden je bezig. Een fundament brengt je verder.
 
-Wil je weten hoe een schaalbare salesfunnel eruitziet voor jouw organisatie? [Neem contact op](/contact) voor een strategisch gesprek.
+De vraag is niet of je een funnel nodig hebt. De vraag is welke onderdelen bij jou al staan en wat er nog ontbreekt. [Neem contact op](/contact) voor een gesprek waarin we dat samen uitzoeken.

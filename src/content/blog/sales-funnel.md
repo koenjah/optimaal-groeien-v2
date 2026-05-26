@@ -2,7 +2,7 @@
 title: "Wat is een sales funnel en hoe bouw je een die wél convertert?"
 slug: "sales-funnel"
 description: "Wat is een sales funnel en hoe bouw je er een die écht converteert voor B2B? Ontdek de 4 fases, een praktisch stappenplan en veelgemaakte fouten."
-date: "2026-05-12"
+date: "2026-04-15"
 author: "Stefan Kelderman"
 category: "Leadgeneratie"
 tags: ['sales-funnel', 'leadgeneratie', 'b2b', 'conversie']
@@ -142,3 +142,9 @@ Hij heeft één kanaal gekozen. Één leadmagnet gebouwd. Een reeks van zes mail
 Zijn conversie van gesprek naar voorstel steeg van 20% naar 41%. Niet omdat hij beter verkoopt. Maar omdat hij nu alleen gesprekken voert met prospects die al warm zijn.
 
 De meeste B2B-bedrijven hebben geen salesprobleem. Ze hebben een structuurprobleem. Een funnel lost dat op — niet door harder te werken, maar door slimmer te sturen.
+
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Bouw de funnel één keer goed</span>
+  <p>Een sales funnel die je in elkaar zet terwijl de leads al binnenkomen, werkt nooit goed. Optimaal Groeien zet de volledige commerciële structuur op voor technische B2B-bedrijven: van leadmagnet tot opvolgingsreeks tot CRM-inrichting.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>

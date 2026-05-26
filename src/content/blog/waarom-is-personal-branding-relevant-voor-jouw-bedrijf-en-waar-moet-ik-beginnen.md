@@ -2,7 +2,7 @@
 title: "Waarom is personal branding relevant voor jouw bedrijf?"
 slug: "waarom-is-personal-branding-relevant-voor-jouw-bedrijf-en-waar-moet-ik-beginnen"
 description: "Mensen kopen van mensen. Personal branding laat zien wie er achter jouw bedrijf zit. Leer waarom dat werkt en hoe je er laagdrempelig mee begint."
-date: "2025-03-05"
+date: "2026-05-01"
 author: "Stefan Kelderman"
 category: "Branding"
 tags: ['personal branding', 'LinkedIn', 'zichtbaarheid']
@@ -94,10 +94,18 @@ Daarmee bouw je niet alleen bereik op. Je bouwt relaties. En relaties leiden op 
   <li><span class="check"></span>Tag mensen die je hebt gesproken of van wie je iets hebt geleerd</li>
 </ul>
 
-## Begin nu, niet morgen
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Zichtbaarheid die ook ergens naartoe leidt</span>
+  <p>Personal branding vergroot je bereik en bouwt vertrouwen op — maar vertrouwen zonder systeem erachter blijft een slapende kans. Wie je bent moet kloppen met wat je aanbiedt en hoe je leads omzet in klanten. Dat is één verhaal, geen drie losse dingen.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>
 
-Er komt nooit een perfecte moment. Wie wacht op de perfecte post, wacht eeuwig. Wie begint, leert. En wie leert, groeit.
+## Personal branding als ondernemer: waarom wachten je duurste zet is
 
-Personal branding is op dit moment een van de krachtigste groeimiddelen voor ondernemers. Onzichtbaar blijven is de duurste keuze die je kunt maken.
+Er komt nooit een perfect moment. Wie wacht op de perfecte post, wacht eeuwig. Wie begint, leert. En wie leert, groeit.
 
-Wil je weten hoe je personal branding inzet voor jouw bedrijf? [Neem contact op](/#contact) en we helpen je concreet op weg.
+Wat je vaak ziet: ondernemers die zichtbaar worden, merken pas achteraf hoe onzichtbaar ze daarvoor waren. Klanten die ze al kenden, namen toch contact op met de concurrent. Niet omdat die beter was, maar omdat die zichtbaarder was.
+
+Dat is het stille verlies van onzichtbaarheid. Het telt nooit op, maar het kost wel gewoon geld.
+
+Wil je weten hoe je personal branding concreet inzet voor jouw bedrijf? [Neem contact op](/#contact) — we kijken samen naar waar je nu staat en wat er als eerste helpt.

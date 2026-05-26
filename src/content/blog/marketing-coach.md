@@ -2,7 +2,7 @@
 title: "Wat doet een marketing coach en hoe helpt die jouw B2B bedrijf groeien?"
 slug: "marketing-coach"
 description: "Wat doet een marketing coach en hoe helpt die jouw B2B bedrijf groeien? Leer wanneer je een coach inschakelt en wat het oplevert."
-date: "2026-05-12"
+date: "2026-04-06"
 author: "Stefan Kelderman"
 category: "Strategie"
 tags: ['marketing-coach', 'groei', 'coaching', 'b2b']
@@ -160,4 +160,8 @@ Een coach geeft je geen trucjes. Je krijgt een strategie, een team dat begrijpt 
 
 De vraag is niet of je het je kunt veroorloven. De vraag is of je door kunt gaan zoals het nu gaat.
 
-**Plan een gratis groeiscan bij Optimaal Groeien.** We kijken samen naar je situatie, je doelen en de kansen in je markt. Geen verplichtingen, wel direct bruikbare inzichten.
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Wil je weten wat er bij jou speelt?</span>
+  <p>Soms heb je iemand nodig die niet alleen coacht, maar ook direct de commerciële structuur bouwt en uitvoert. Stefan Kelderman komt langs, kijkt mee en werkt direct mee — geen rapport, wel actie. Neem contact op voor een eerste gesprek.</p>
+  <a href="/#contact" class="cta-link">Plan een kennismaking →</a>
+</div>

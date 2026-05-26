@@ -2,7 +2,7 @@
 title: "Hoe stel je een online marketing strategie op die wérkt voor jouw B2B bedrijf"
 slug: "online-marketing-strategie"
 description: "Hoe stel je een online marketing strategie op die werkt voor je B2B bedrijf? Stap-voor-stap aanpak met concrete tactieken en KPI's."
-date: "2026-05-12"
+date: "2026-04-10"
 author: "Stefan Kelderman"
 category: "Marketing"
 tags: ['online-marketing', 'strategie', 'b2b', 'digital']
@@ -95,7 +95,7 @@ Uitbesteden varieert van tweeduizend tot achtduizend euro per maand, afhankelijk
 
 De logica is simpel. Één nieuwe klant levert gemiddeld vijftigduizend euro omzet op. Als je strategie maandelijks drie kwalitatieve aanvragen genereert en er wordt één klant, is de investering snel terugverdiend. Break-even ligt voor de meeste technische B2B-bedrijven tussen zes en twaalf maanden.
 
-## Begin hier — niet elders
+## Drie zinnen over je ideale klant — zo begint elke werkende strategie
 
 Veel directeurs wachten tot alles perfect is. De website. Het team. Het budget. Ondertussen wint de concurrent die gewoon begonnen is.
 
@@ -103,4 +103,8 @@ Veel directeurs wachten tot alles perfect is. De website. Het team. Het budget. 
 
 Bij Optimaal Groeien helpen we technische en industriële B2B-bedrijven met het bouwen van een [marketing strategie voor B2B](/oplossingen/strategie) die alle onderdelen verbindt. Geen losse projecten, maar één systeem.
 
-Wil je weten of jouw aanpak klopt? [Neem contact op](/digital-growth-agency) voor een vrijblijvend gesprek van 30 minuten.
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Wil je weten of jouw aanpak klopt?</span>
+  <p>Een online marketing strategie werkt pas als marketing en sales samen optrekken. Bij Optimaal Groeien bouwen we die structuur voor technische B2B-bedrijven — van doelgroepbepaling tot meetbaar kanaalplan. Neem contact op voor een gesprek van 30 minuten.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>

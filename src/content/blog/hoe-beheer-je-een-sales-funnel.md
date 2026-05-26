@@ -2,7 +2,7 @@
 title: "Hoe beheer je een sales funnel? 5 tips voor betere conversie"
 slug: "hoe-beheer-je-een-sales-funnel"
 description: "Een sales funnel opzetten is een begin. Goed beheer en optimalisatie zorgen dat hij blijft converteren. Lees vijf praktische tips voor effectief funnelbeheer."
-date: "2025-08-01"
+date: "2026-03-19"
 author: "Stefan Kelderman"
 category: "Sales"
 tags: ['sales funnel', 'funnelbeheer', 'conversie-optimalisatie', 'call-to-action', 'klantbehoud']
@@ -125,3 +125,9 @@ Een sales funnel is geen project dat je afrondt. Het is een continu proces van m
 Maak funnelbeheer een vaste gewoonte. Plan maandelijks een moment om data te analyseren en verbeteringen door te voeren.
 
 De bedrijven die consistent groeien, zijn niet de bedrijven met de mooiste funnel bij de start. Het zijn de bedrijven die hun funnel het vaakst verbeteren.
+
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Praktisch toepassen?</span>
+  <p>Een goed beheerde sales funnel vraagt om constante aandacht — en dat is precies wat er bij de meeste B2B-bedrijven ontbreekt. Wij bouwen en onderhouden funnels die aansluiten op de langere besliscyclus in de technische sector, zodat leads niet verdwijnen maar klant worden.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>

@@ -2,7 +2,7 @@
 title: "Digitale marketing: hoe bereik je de juiste klant op het juiste moment?"
 slug: "digitale-marketing"
 description: "Digitale marketing helpt bedrijven hun doelgroep gericht te bereiken. Lees welke kanalen en technieken werken en hoe je meetbare resultaten behaalt."
-date: "2025-05-01"
+date: "2026-03-06"
 author: "Stefan Kelderman"
 category: "Marketing"
 tags: ['digitale marketing', 'online marketing', 'SEO', 'e-mailmarketing', 'social media']
@@ -101,8 +101,14 @@ Digitale marketing werkt andersom. Je definieert van tevoren wie je wilt bereike
 
 <div class="inzicht"><span class="inzicht-label">Inzicht</span><p>Traditionele marketing is zenden. Digitale marketing is het beginnen van een gesprek. Je meet de reactie, past je boodschap aan en bouwt een relatie op. Dat is een structureel ander model.</p></div>
 
-## Conclusie
+## Slim aanwezig zijn, niet overal aanwezig zijn
 
 Digitale marketing draait niet om aanwezig zijn op zoveel mogelijk plekken. Het gaat om slim aanwezig zijn op de juiste plekken. Begrijp je doelgroep, kies de kanalen die passen, meet wat er gebeurt en stuur bij.
 
 Dat is de kern. Alles wat werkt, volgt uit die cyclus.
+
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Praktisch toepassen?</span>
+  <p>Digitale marketing werkt pas als kanalen, boodschap en salesopvolging op elkaar aansluiten. Bij Optimaal Groeien bouwen we de volledige digitale commerciële structuur voor B2B-bedrijven — van zichtbaarheid en leadgeneratie tot het moment dat een prospect klant wordt.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>

@@ -2,7 +2,7 @@
 title: "De Scaling Up methode: hoe je je B2B bedrijf structureel laat groeien"
 slug: "scaling-up-methode"
 description: "De Scaling Up methode voor B2B bedrijven uitgelegd. Hoe gebruik je dit bewezen framework om jouw bedrijf structureel te laten groeien?"
-date: "2026-05-12"
+date: "2026-04-20"
 author: "Stefan Kelderman"
 category: "Strategie"
 tags: ['scaling-up', 'groei', 'strategie', 'b2b']
@@ -147,6 +147,12 @@ Beide methodes lijken op elkaar. EOS focust meer op operationele structuur. Scal
 Het boek geeft goede achtergrond. Maar het is geen vereiste. Veel directeuren werken liever met een coach die de implementatie begeleidt en het systeem levend houdt.
 
 ---
+
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Op welke pijler loopt jouw bedrijf vast?</span>
+  <p>Mensen, strategie, executie of cash — de meeste bedrijven weten precies welke pijler wankelt. Het lastige is dat je het van binnenuit niet altijd goed kunt beoordelen. Stefan kijkt mee en benoemt het direct.</p>
+  <a href="/#contact" class="cta-link">Neem contact op →</a>
+</div>
 
 ## Groei is een beslissing
 

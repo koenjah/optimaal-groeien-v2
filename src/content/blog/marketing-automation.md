@@ -2,7 +2,7 @@
 title: "Marketing automation: wat het is en hoe je ermee groeit"
 slug: "marketing-automation"
 description: "Marketing automation bespaart tijd en verhoogt je conversie. Lees hoe het werkt, wat e-mailautomation doet, en hoe LinkedIn automation B2B-leads oplevert."
-date: "2025-11-01"
+date: "2026-04-05"
 author: "Stefan Kelderman"
 category: "AI & Automatisering"
 tags: ['marketing automation', 'e-mailmarketing', 'LinkedIn', 'leadgeneratie']
@@ -94,8 +94,12 @@ Maar zodra het eenmaal staat, werkt het voor je. En de meeste moderne platforms 
 
 Begin simpel: één e-mailflow voor nieuwe leads. Kijk hoe het werkt. Leer van de data. Bouw daarna verder.
 
-## Conclusie
+## Marketing automation: meer resultaat met minder handmatig werk
 
 Marketing automation maakt je marketing efficiënter en je leads relevanter. Het vraagt een investering in setup en strategie. Maar het levert structureel meer resultaat op met minder handmatig werk.
 
-Wil je weten hoe je marketing automation kunt inzetten voor jouw bedrijf? [Neem contact op](/#contact) en we bespreken de mogelijkheden.
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Automatiseren wat al werkt</span>
+  <p>Marketing automation werkt als het de juiste mensen op het juiste moment aanspreekt — en dan direct koppelt aan sales. Automation van een onduidelijke propositie of een gebroken opvolgproces maakt het probleem groter, niet kleiner.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>

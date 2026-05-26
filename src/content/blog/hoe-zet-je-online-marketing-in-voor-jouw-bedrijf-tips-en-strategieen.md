@@ -2,7 +2,7 @@
 title: "Hoe zet je online marketing in voor jouw bedrijf?"
 slug: "hoe-zet-je-online-marketing-in-voor-jouw-bedrijf-tips-en-strategieen"
 description: "Online marketing biedt kleine en grote bedrijven de kans om meetbaar te groeien. Leer welke kanalen werken, hoe je doelen stelt en hoe je je strategie evalueert."
-date: "2025-09-10"
+date: "2026-03-23"
 author: "Stefan Kelderman"
 category: "Marketing"
 tags: ['online marketing', 'digitale strategie', 'SEO', 'e-mailmarketing']
@@ -108,4 +108,8 @@ Kijk elke maand of je KPI's worden gehaald. Wat werkt goed? Wat kan beter? Pas j
 
 Veel ondernemers doen online marketing zelf in het begin. Dat is prima. Maar naarmate je groeit, kost het meer tijd dan je hebt. Op dat moment is uitbesteden aan een bureau een slimme keuze.
 
-Wil je weten hoe jij online marketing het beste kunt inzetten voor jouw bedrijf? [Neem contact op](/#contact) en we bespreken de mogelijkheden.
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Welke kanalen passen bij jouw bedrijf?</span>
+  <p>De stappen in dit artikel zijn helder op papier — maar de praktijk vraagt om keuzes. Welke kanalen werken in jouw sector? Wat zijn realistische KPI's? En hoe zorg je dat de uitvoering ook echt doorgaat? Voor B2B-bedrijven in de technische sector helpen wij die keuzes concreet te maken.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>

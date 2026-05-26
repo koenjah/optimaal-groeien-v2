@@ -2,7 +2,7 @@
 title: "Waarom ondernemers groei uitstellen (en wat het je kost)"
 slug: "waarom-ondernemers-groei-uitstellen"
 description: "Veel ondernemers willen groeien maar stellen het uit. Herken de patronen van uitstelgedrag, begrijp de echte oorzaken en leer hoe je wél in beweging komt."
-date: "2025-03-15"
+date: "2026-05-02"
 author: "Stefan Kelderman"
 category: "Strategie"
 tags: ['groei', 'leiderschap', 'ondernemerschap']
@@ -95,6 +95,12 @@ Groeien hoeft niet meteen groots of risicovol te zijn. Juist kleine, gerichte st
 </div>
 
 <div class="tip"><span class="tip-label">Tip</span><p>Soms is de grootste doorbraak niet een grote investering. Het is een eerlijk gesprek over waar je bedrijf nu staat en wat je werkelijk tegenhoudt. Begin daar.</p></div>
+
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Soms is de eerste stap gewoon een eerlijk gesprek</span>
+  <p>Uitstelgedrag doorbreken lukt het snelst als iemand van buitenaf meekijkt en meedenkt — iemand die niet vastzit in de dagelijkse operatie. Wij nemen bij B2B-bedrijven in de technische sector de commerciële structuur uit handen, zodat groei niet langer wacht op het perfecte moment.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>
 
 ## Groei vraagt geen perfecte timing, maar een bewuste keuze
 

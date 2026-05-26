@@ -2,7 +2,7 @@
 title: "Employer branding-strategie: zo trek je de juiste mensen aan"
 slug: "employer-branding-strategie"
 description: "Een sterke employer branding-strategie helpt je om talent aan te trekken en te behouden. Ontdek de basisstappen en hoe je resultaten meet en bijstuurt."
-date: "2025-05-10"
+date: "2026-03-09"
 author: "Stefan Kelderman"
 category: "Branding"
 tags: ['employer branding', 'werkgeversmerk', 'recruitment', 'talent', 'branding']
@@ -97,10 +97,16 @@ Verzamel die feedback actief. Stuur een korte enquête na elk sollicitatiegespre
 
 Pas je strategie aan op basis van wat je hoort. Een employer branding-strategie is geen eenmalig project — het is een doorlopend proces.
 
-## Conclusie
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Werkgeversmerk als onderdeel van het grotere verhaal</span>
+  <p>Een sterk werkgeversmerk trekt mensen aan — maar pas als het klopt met hoe je bedrijf naar buiten treedt, wat je propositie is en hoe je groeit, wordt het geloofwaardig. Intern en extern merk versterken elkaar alleen als ze op hetzelfde fundament rusten.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>
+
+## Een werkgeversmerk dat werft zonder dat je er steeds bij hoeft te zijn
 
 Een sterk werkgeversmerk bouw je niet in een maand. Het is het resultaat van eerlijke communicatie, een goede werkcultuur en de bereidheid om te luisteren en te verbeteren.
 
 Maar als het staat, werkt het voor je. Het trekt de juiste mensen aan, houdt ze langer vast en maakt je organisatie weerbaarder in een competitieve markt.
 
-Dat is het doel.
+Dat is het doel — en de enige manier om dat te bereiken is beginnen. Niet met een grote campagne, maar met eerlijkheid over wie je bent als werkgever.

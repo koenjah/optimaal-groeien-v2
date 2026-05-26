@@ -2,7 +2,7 @@
 title: "Wat is growth hacking en wat kan het voor jouw marketing betekenen?"
 slug: "wat-is-growth-hacking-en-wat-kan-het-betekenen-voor-jouw-marketing"
 description: "Growth hacking is een datagedreven aanpak om snel en goedkoop te groeien. Leer wat het is, hoe het werkt en welke strategieën je kunt toepassen in jouw bedrijf."
-date: "2025-06-15"
+date: "2026-05-10"
 author: "Stefan Kelderman"
 category: "Strategie"
 tags: ['growth hacking', 'groei', 'marketing', 'experimenten', 'startup']
@@ -117,6 +117,10 @@ Voor je kunt groeien, moet je weten dat mensen jouw product écht willen. Dat he
 
 Bij growth hacking is data heilig. Je stelt een hypothese op, je test hem, je meet het resultaat. Geen aannames, geen onderbuikgevoel. Wat werkt, schaal je op. Wat niet werkt, stop je.
 
-Dat klinkt eenvoudig. Maar consistent dit volhouden — ook als een idee mislukt — is wat growth hackers onderscheidt van gewone marketeers.
+Dat klinkt eenvoudig. Maar consistent dit volhouden — ook als een idee mislukt — is wat growth hackers onderscheidt van gewone marketeers. En het is precies de reden dat de meeste bedrijven er te vroeg mee stoppen: niet omdat het niet werkt, maar omdat ze de discipline missen om te blijven meten.
 
-Wil je weten hoe je growth hacking kunt toepassen in jouw bedrijf? [Neem contact op](/#contact) en ontdek de groeikansen die nu nog onbenut zijn.
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Experimenten opzetten die ook echt iets opleveren</span>
+  <p>Growth hacking draait om snel experimenteren en schalen wat werkt. Voor B2B-bedrijven in de technische sector betekent dat: de juiste groeiexperimenten opzetten in marketing én sales tegelijk. Dat is precies wat wij samen met je doen.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>

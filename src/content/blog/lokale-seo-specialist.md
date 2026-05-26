@@ -2,7 +2,7 @@
 title: "Lokale SEO voor B2B bedrijven: zo word je gevonden in jouw regio"
 slug: "lokale-seo-specialist"
 description: "Lokale SEO voor B2B bedrijven: zo word je gevonden in jouw regio. Praktische tips voor Google Business en lokale zoektermen."
-date: "2026-05-12"
+date: "2026-04-04"
 author: "Stefan Kelderman"
 category: "Marketing"
 tags: ['lokale-seo', 'seo', 'b2b', 'regio']
@@ -150,7 +150,7 @@ De snelste route: optimaliseer je Google Business Profile, maak je NAP-gegevens 
 
 ---
 
-## Begin vandaag — niet volgende week
+## Van onzichtbaar naar top-3 in jouw regio: zo begin je
 
 Lokale SEO is geen rocket science. Het is consequent en consistent je zaken op orde hebben.
 
@@ -158,4 +158,8 @@ Een elektrotechnisch bedrijf in Breda ging van onzichtbaar naar top-3. Niet door
 
 Begin met stap één. Claim je Google Business Profile en vul het vandaag volledig in. Dat ene uur bepaalt of de facilitair manager in Utrecht jou vindt — of je concurrent.
 
-Wil je weten wat [SEO-ondersteuning voor B2B](/seo-ondersteuning) jou concreet oplevert? We bespreken graag je situatie.
+<div class="artikel-cta">
+  <span class="artikel-cta-label">De facilitair manager vindt jou — en dan?</span>
+  <p>Lokale zichtbaarheid brengt de aanvraag binnen. Maar bedrijven die die aanvraag snel en professioneel opvolgen, winnen de opdracht. Wij bouwen de lokale zichtbaarheid én het commerciële proces dat er direct achter zit.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>

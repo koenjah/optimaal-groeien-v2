@@ -2,7 +2,7 @@
 title: "Wat is een groeistrategie voor mijn bedrijf?"
 slug: "wat-is-een-groeistrategie-voor-mijn-bedrijf"
 description: "Een groeistrategie geeft richting aan je ambities. Leer de zeven soorten strategieën kennen, welke bij jouw situatie past en hoe je concreet begint."
-date: "2025-04-25"
+date: "2026-05-06"
 author: "Stefan Kelderman"
 category: "Strategie"
 tags: ['groeistrategie', 'Ansoff-matrix', 'bedrijfsgroei']
@@ -107,6 +107,12 @@ Een strategie op papier is niets waard als de uitvoering ontbreekt. Werk in spri
 </ul>
 
 <div class="getal"><span class="getal-waarde">90</span><span class="getal-label">dagen is de ideale sprintlengte voor het uitvoeren van een groeistrategie</span></div>
+
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Strategie op papier is niets waard zonder uitvoering</span>
+  <p>Een groeistrategie heeft alleen waarde als die ook wordt uitgevoerd. Wij helpen B2B-bedrijven in de technische sector de juiste richting te kiezen én nemen de commerciële uitvoering over — van merk tot sales, in concrete stappen.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>
 
 ## Groei begint bij een eerlijke analyse
 

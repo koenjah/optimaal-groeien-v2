@@ -2,7 +2,7 @@
 title: "Hoe stel je een social media strategie op voor B2B?"
 slug: "social-media-strategie"
 description: "Een social media strategie geeft richting aan je online aanwezigheid. Leer in vijf stappen hoe je de juiste kanalen kiest, consistent content maakt en meetbare resultaten haalt."
-date: "2025-09-25"
+date: "2026-04-22"
 author: "Stefan Kelderman"
 category: "Marketing"
 tags: ['social media strategie', 'LinkedIn', 'content planning', 'B2B marketing', 'social media']
@@ -156,10 +156,16 @@ LinkedIn is voor de meeste B2B-bedrijven het meest effectieve kanaal. Voor lokal
 
 Reken voor twee kanalen op vier tot acht uur per week: contentcreatie, publicatie, reacties en analyse. Outsourcen kan, maar vraagt om een goede briefing zodat de content authentiek blijft.
 
-## Conclusie
-
-Een social media strategie is geen luxe, maar een noodzaak voor B2B-bedrijven die serieus willen groeien via online kanalen. Het geeft richting, zorgt voor consistentie en levert meetbare resultaten op.
+## Social media strategie voor B2B: richting, consistentie en meetbare resultaten
 
 Begin klein: kies één of twee kanalen, definieer twee concrete doelen en maak een contentkalender voor de komende vier weken. Evalueer na een maand wat werkt. Pas aan op basis van de data.
 
 Wil je meer weten over specifieke kanalen? Lees onze artikelen over [LinkedIn marketing](/blog/linkedin-marketing), [Instagram marketing](/blog/instagram-marketing) en [Facebook marketing](/blog/facebook-marketing).
+
+Maar onthoud: likes zijn geen leads. Een goede social media strategie verdient een commercieel systeem erachter — een funnel, een follow-up en een propositie die overtuigt. Anders blijft het bij bereik.
+
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Van strategie naar commercieel systeem</span>
+  <p>Posts zetten mensen in beweging. Maar wat beweegt ze daarna? Als er geen funnel en geen follow-up klaarstaat, blijft engagement entertainment. We kijken naar wat er achter jouw social media moet staan.</p>
+  <a href="/#contact" class="cta-link">Neem contact op →</a>
+</div>

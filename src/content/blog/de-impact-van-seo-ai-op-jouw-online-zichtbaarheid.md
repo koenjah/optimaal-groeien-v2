@@ -2,7 +2,7 @@
 title: "De impact van SEO en AI op jouw online zichtbaarheid"
 slug: "de-impact-van-seo-ai-op-jouw-online-zichtbaarheid"
 description: "AI verandert hoe bedrijven werken aan zoekmachineoptimalisatie. Lees wat SEO AI is, wat het oplevert, welke risico's er zijn en hoe je het slim inzet in je contentstrategie."
-date: "2025-04-10"
+date: "2026-03-02"
 author: "Stefan Kelderman"
 category: "SEO"
 tags: ['SEO', 'AI', 'contentmarketing', 'zoekwoordenonderzoek', 'zoekmachineoptimalisatie']
@@ -99,6 +99,10 @@ Laat AI helpen met structuur, zoekwoordenonderzoek en eerste drafts. Gebruik je 
 
 AI zal een steeds grotere rol spelen. Denk aan zelflerende contentstrategieën en gepersonaliseerde content op basis van gebruikersdata.
 
-Maar hoe krachtig de technologie ook wordt, bedrijven die hun eigen stem behouden én AI slim inzetten, halen het meeste succes. De balans tussen technologie en creativiteit is wat jouw merk onderscheidt.
+Maar hoe krachtig de technologie ook wordt, bedrijven die hun eigen stem behouden én AI slim inzetten, halen het meeste succes. De balans tussen technologie en creativiteit is wat jouw merk onderscheidt. AI bepaalt hoe snel je publiceert. Jij bepaalt of het de moeite waard is om te lezen.
 
-Wil je AI inzetten voor je SEO maar weet je niet waar te beginnen? [Neem contact op](/contact) en we kijken samen wat de beste aanpak is voor jouw situatie.
+<div class="artikel-cta">
+  <span class="artikel-cta-label">AI versnelt zichtbaarheid — maar wie volgt de bezoeker op?</span>
+  <p>AI-gedreven SEO haalt meer bezoekers naar je site. Wat er daarna gebeurt — hoe je die bezoeker opvolgt, converteert en terughaalt — is het commerciële systeem dat wij bouwen als partner, niet als bureau.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>

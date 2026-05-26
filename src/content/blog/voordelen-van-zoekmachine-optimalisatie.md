@@ -2,7 +2,7 @@
 title: "De voordelen van zoekmachine optimalisatie voor jouw bedrijf"
 slug: "voordelen-van-zoekmachine-optimalisatie"
 description: "Zoekmachine optimalisatie (SEO) vergroot je online zichtbaarheid, trekt relevanter verkeer aan en levert langdurige resultaten op. Ontdek de vier belangrijkste voordelen en hoe SEO jouw bedrijf helpt groeien."
-date: "2025-01-10"
+date: "2026-04-25"
 author: "Stefan Kelderman"
 category: "SEO"
 tags: ['SEO', 'zoekmachine optimalisatie', 'vindbaarheid', 'organisch verkeer', 'ROI']
@@ -102,8 +102,14 @@ SEA levert direct resultaat. Je staat morgen bovenaan — als je betaalt. Maar s
 
 SEO bouwt langdurige zichtbaarheid op. Het duurt langer om resultaat te zien, maar de effecten blijven. Wie beide combineert, is zichtbaar op de korte én de lange termijn.
 
-## Waar begin je?
+## Waar liggen jouw SEO-kansen?
 
-Wil je weten hoe je website er nu voor staat? Hoe je scoort op relevante zoekwoorden? En waar de grootste kansen liggen?
+Meer bezoekers via Google is voordeel één. Voordeel twee is een systeem dat die bezoekers opvangt, kwalificeert en opvolgt. Beide zijn nodig — maar je begint bij weten hoe je er nu voor staat.
 
-[Neem contact op](/#contact) voor een vrijblijvend gesprek. We kijken samen naar jouw huidige positie en de stappen die leiden naar duurzame groei in Google.
+Scoort je website al op zoektermen die jouw doelgroep gebruikt? Of verdwijnt je pagina achter pagina twee, drie, of verder? Dat is meetbaar. En als je het weet, weet je ook waar je kunt winnen.
+
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Organisch verkeer levert alleen iets op als het ook leads worden</span>
+  <p>Hogere posities brengen bezoekers — maar of die bezoekers contact opnemen hangt af van wat er op de pagina staat. We kijken naar je huidige SEO-positie én naar wat er daarna moet gebeuren om het te laten renderen.</p>
+  <a href="/#contact" class="cta-link">Neem contact op →</a>
+</div>

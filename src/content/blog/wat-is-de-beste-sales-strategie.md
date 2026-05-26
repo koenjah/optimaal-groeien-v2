@@ -2,7 +2,7 @@
 title: "Wat is de beste sales strategie voor jouw bedrijf?"
 slug: "wat-is-de-beste-sales-strategie"
 description: "De beste sales strategie is er geen van kopiëren maar van bouwen. Leer welke elementen onmisbaar zijn en hoe je stap voor stap een aanpak maakt die bij jou past."
-date: "2025-04-15"
+date: "2026-05-05"
 author: "Stefan Kelderman"
 category: "Sales"
 tags: ['sales strategie', 'verkoopstrategie', 'klantrelaties']
@@ -97,6 +97,12 @@ Er zijn verschillende basismodellen voor een sales strategie. Welk model het bes
   <li><span class="check"></span>Verspil nooit de tijd van een prospect — wees altijd goed voorbereid</li>
 </ul>
 
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Marketing trekt aan — sales sluit. Beide moeten kloppen</span>
+  <p>Een sales strategie is pas sterk als marketing en sales op elkaar zijn afgestemd. Leads die binnenkomen maar niet worden opgevolgd, zijn verspild werk. Leads die worden opgevolgd maar niet passen bij de aanbieding, ook. Voor B2B-bedrijven in de technische sector bouwen wij beide tegelijk op — van het eerste contactmoment tot een gesloten deal.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>
+
 ## Evalueer en stuur bij
 
 Een sales strategie is nooit af. Evalueer maandelijks. Wat converteert goed? Waar haken mensen af? Welke bron levert de beste leads op?
@@ -105,4 +111,6 @@ Gebruik KPI's om je prestaties te meten: aantal leads, conversieratio, gemiddeld
 
 <div class="getal"><span class="getal-waarde">44%</span><span class="getal-label">van verkopers geeft op na één follow-up — terwijl 80% van deals na vijf contactmomenten wordt gesloten</span></div>
 
-Een goede sales strategie is de basis van voorspelbare groei. Wil je weten hoe je die strategie opzet voor jouw specifieke situatie? [Neem contact op](/#contact) en we denken graag mee.
+Dat getal zegt meer over discipline dan over talent. Een goede strategie bouwt die discipline in — zodat opvolging niet afhankelijk is van wie er toevallig energie voor heeft die dag.
+
+Wil je weten hoe je die strategie opzet voor jouw specifieke situatie? [Neem contact op](/#contact) en we kijken samen wat er concreet nodig is.

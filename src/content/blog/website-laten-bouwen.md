@@ -2,7 +2,7 @@
 title: "Website laten bouwen: waar moet je op letten?"
 slug: "website-laten-bouwen"
 description: "Een nieuwe website laten bouwen vraagt om meer dan een mooi design. Lees wat er allemaal bij komt kijken, van strategie tot techniek, en hoe je de juiste keuzes maakt."
-date: "2025-06-25"
+date: "2026-05-12"
 author: "Stefan Kelderman"
 category: "Marketing"
 tags: ['website laten bouwen', 'webdesign', 'UX', 'WordPress', 'online marketing']
@@ -147,8 +147,12 @@ Let bij de keuze van een bouwer op:
 
 ## Na oplevering: je website blijft groeien
 
-Een website is nooit echt klaar. Na de lancering blijf je werken aan content, vindbaarheid en conversie. Regelmatige updates houden de site veilig en actueel.
+Een website is nooit echt klaar. Na de lancering blijf je werken aan content, vindbaarheid en conversie. Regelmatige updates houden de site veilig en actueel. Met tools zoals Google Analytics zie je welke pagina's goed presteren en waar bezoekers afhaken — en op basis daarvan optimaliseer je verder.
 
-Denk ook aan het analyseren van bezoekersgedrag. Met tools zoals Google Analytics zie je welke pagina's goed presteren en waar bezoekers afhaken. Op basis daarvan optimaliseer je verder.
+Maar analyseren helpt alleen als je daarna ook actie onderneemt. Een website die je na de lancering links laat liggen, presteert na een jaar slechter dan op dag één.
 
-Wil je weten wat er voor jouw situatie de beste aanpak is? [Neem contact op](/#contact) en we bespreken het graag.
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Een website is geen strategie</span>
+  <p>Een technisch goede website zonder heldere propositie, lead capture en salesopvolging is een digitale brochure. Wij bouwen niet alleen de site — we bouwen de commerciële structuur eromheen, zodat bezoekers ook daadwerkelijk klant worden.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>

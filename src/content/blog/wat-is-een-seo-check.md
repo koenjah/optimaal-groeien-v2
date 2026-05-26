@@ -2,7 +2,7 @@
 title: "Wat is een SEO check en waarom is die belangrijk?"
 slug: "wat-is-een-seo-check"
 description: "Een SEO check analyseert hoe goed jouw website scoort in Google. Ontdek wat er onderzocht wordt, waarom het belangrijk is en hoe je actie onderneemt op de bevindingen."
-date: "2025-06-05"
+date: "2026-05-11"
 author: "Stefan Kelderman"
 category: "SEO"
 tags: ['SEO check', 'SEO scan', 'zoekmachine optimalisatie', 'technische SEO', 'vindbaarheid']
@@ -116,8 +116,12 @@ Voer daarom minstens één keer per kwartaal een check uit. Zo blijf je op de ho
 
 <div class="inzicht"><span class="inzicht-label">Inzicht</span><p>SEO is een marathon, geen sprint. Maar met regelmatige checks weet je altijd waar je staat en wat de volgende stap is.</p></div>
 
-## Begin met inzicht
+## Een vrijblijvende SEO check aanvragen
 
-Wil je weten hoe jouw website er nu voor staat? Een goede SEO check geeft je dat overzicht. Van technische fouten tot content-kansen — je ziet precies wat je kunt verbeteren.
+Een SEO check is geen doel op zich. Het is een beginpunt. Je leert waar je staat, wat er mist en wat de meeste impact heeft als je het aanpakt. Die helderheid is waardevol — ook als je de uitvoering zelf doet.
 
-[Neem contact op](/#contact) en vraag een vrijblijvende SEO check aan.
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Je weet nu waar je staat — maar wat ziet de bezoeker als hij doorklikt?</span>
+  <p>Een SEO-check brengt technische en inhoudelijke kansen in beeld. Wat die check niet ziet, is of jouw site bezoekers ook daadwerkelijk converteert. Wij kijken naar beide: vindbaarheid én de commerciële structuur die er de waarde uit haalt.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>

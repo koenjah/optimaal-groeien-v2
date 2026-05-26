@@ -2,7 +2,7 @@
 title: "Het probleem achter tegenvallende marketingresultaten"
 slug: "het-probleem-achter-tegenvallende-marketingresultaten"
 description: "Marketing die niet oplevert heeft zelden een slechte uitvoering als oorzaak. Het echte probleem is gebrek aan samenhang. Lees hoe een geïntegreerd systeem het verschil maakt."
-date: "2025-07-20"
+date: "2026-03-18"
 author: "Stefan Kelderman"
 category: "Marketing"
 tags: ['marketingstrategie', 'groei', 'leadgeneratie', 'SEO', 'conversie-optimalisatie']
@@ -107,10 +107,16 @@ Dat is het punt waarop groei schaalbaar en voorspelbaar wordt.
 
 Het goede nieuws: je hoeft niet te beginnen met een volledig systeem. Je kunt stap voor stap de onderdelen verbinden. Begin met de schakel die het meeste verkeer verliest. Fix die. Ga door naar de volgende.
 
-## Conclusie
+## Van losse acties naar een systeem dat groeit
 
 Tegenvallende marketingresultaten zijn zelden een teken van slechte uitvoering. Het is een signaal dat de onderdelen niet samenwerken.
 
 Zodra je dat patroon doorbreekt en marketing als een geïntegreerd geheel gaat benaderen, verandert er iets structureels. Groei wordt minder afhankelijk van losse successen en meer een logisch gevolg van hoe je werkt.
 
 Dat is het verschil tussen hopen op groei en groei organiseren.
+
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Praktisch toepassen?</span>
+  <p>De samenhang waar dit artikel over gaat — tussen zichtbaarheid, funnel, content en sales — is precies wat wij voor B2B-bedrijven in de technische sector inrichten. Niet als losse diensten, maar als één commercieel systeem dat voorspelbaar groei genereert.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>

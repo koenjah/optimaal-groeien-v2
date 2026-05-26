@@ -2,7 +2,7 @@
 title: "Google's Search Generative Experience: wat betekent het voor jouw SEO?"
 slug: "googles-search-generative-experience"
 description: "Google's Search Generative Experience verandert hoe zoekresultaten eruitzien. Lees wat SGE is, wat de gevolgen zijn voor SEO en hoe je je aanpast."
-date: "2025-06-01"
+date: "2026-03-13"
 author: "Stefan Kelderman"
 category: "SEO"
 tags: ['SGE', 'Google AI', 'zoekmachineoptimalisatie', 'AI in zoeken', 'SEO 2025']
@@ -81,6 +81,12 @@ De vertraging heeft een reden. Generatieve AI produceert soms onjuiste informati
 
 Wat we wél weten: de richting is duidelijk. AI wordt een steeds groter onderdeel van hoe Google zoekresultaten presenteert. De vraag is niet of het verandert, maar hoe snel.
 
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Wanneer Google het antwoord geeft — wat doet de bezoeker dan nog?</span>
+  <p>SGE verandert hoe mensen zoeken, maar niet waarom ze kopen. Bedrijven die nu investeren in autoriteit én in de commerciële structuur achter hun zichtbaarheid, staan straks sterker — ongeacht hoe het zoeklandschap verschuift.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>
+
 ## De toekomst van zoekmachineoptimalisatie
 
 AI verandert SEO fundamenteel. Niet op de korte termijn misschien, maar de beweging is onomkeerbaar.
@@ -89,4 +95,4 @@ Waardevolle, goed geschreven content blijft het fundament. Maar de technische la
 
 <div class="inzicht"><span class="inzicht-label">Inzicht</span><p>SEO gaat minder over trucjes en meer over autoriteit. De vraag die Google stelt is: verdient deze website het vertrouwen van de gebruiker? Bouw daar aan.</p></div>
 
-Blijf de ontwikkelingen volgen. De markt beweegt snel — en wie nu aanpast, heeft een voorsprong op wie wacht.
+De regels veranderen. Maar de onderliggende vraag blijft dezelfde: heeft jouw bedrijf iets te zeggen dat anderen niet zeggen? Als het antwoord ja is, vind je een weg — ook als het algoritme schuift.

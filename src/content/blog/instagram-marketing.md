@@ -2,7 +2,7 @@
 title: "Instagram marketing voor B2B: employer branding en visual storytelling"
 slug: "instagram-marketing"
 description: "Instagram is voor B2B geen directe verkooptool, maar een krachtig kanaal voor employer branding en bedrijfscultuur. Ontdek wanneer het zinvol is en hoe je het strategisch inzet."
-date: "2025-08-25"
+date: "2026-03-26"
 author: "Stefan Kelderman"
 category: "Marketing"
 tags: ['Instagram marketing', 'employer branding', 'social media', 'visual storytelling', 'B2B']
@@ -164,10 +164,16 @@ Meet op basis van je doelen, niet op basis van generieke metrics:
 - **Merkbekendheid** → impressies, volgersgroei, engagement rate
 - **Websiteverkeer** → klikken via bio-link of Stories
 
-## Conclusie
+## Instagram voor B2B: employer branding eerst, sales op de achtergrond
 
 Instagram marketing is voor B2B-bedrijven een waardevol maar vaak onderschat kanaal. De sterkste toepassing is employer branding en het tonen van je bedrijfscultuur — niet het genereren van directe leads.
 
 De sleutel tot succes is een strategische aanpak die Instagram integreert in je bredere commerciële activiteiten. Geen losse posts, maar een doordachte strategie die aansluit bij je marketing- en brandingdoelen.
 
 Wil je meer weten over hoe Instagram past in een bredere strategie? Lees dan ons artikel over [social media strategie](/blog/social-media-strategie) of ontdek hoe [employer branding](/blog/employer-branding-strategie) werkt.
+
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Vertrouwen opbouwen is stap één</span>
+  <p>Instagram laat zien wie je bent — maar een prospect die je bedrijfscultuur mooi vindt, koopt nog niets. Wat er na dat eerste vertrouwen moet gebeuren — hoe je die interesse omzet in een gesprek, een aanvraag, een klant — dat is het deel dat de meeste bedrijven missen.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>

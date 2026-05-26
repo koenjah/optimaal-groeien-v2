@@ -2,7 +2,7 @@
 title: "Wat is display advertising en wanneer zet je het in?"
 slug: "display-advertising"
 description: "Display advertising zijn visuele banners op websites die je merk zichtbaar maken bij de juiste mensen. In dit artikel lees je hoe het werkt, wanneer het effectief is en hoe je een succesvolle campagne opzet."
-date: "2025-08-05"
+date: "2026-03-05"
 author: "Stefan Kelderman"
 category: "Marketing"
 tags: ['display advertising', 'online adverteren', 'remarketing', 'Google Display Network', 'B2B marketing']
@@ -129,15 +129,14 @@ Zorg dat tracking correct is ingesteld. Zonder dat weet je niet welke campagnes 
 
 Display advertising werkt het beste als het deel is van een groter geheel. Een banner die iemand ziet, maar die niet aansluit op wat hij daarna op je website tegenkomt, levert weinig op.
 
-Stel jezelf de volgende vragen:
-
-- Hoe past display advertising in je totale marketingmix?
-- Welke landingspagina krijgt de bezoeker te zien?
-- Hoe wordt een lead opgevolgd?
-- Hoe meet je of het bijdraagt aan omzet?
+De meeste campagnes mislukken niet door slechte banners. Ze mislukken omdat de landingspagina niet aansluit, er geen opvolging is ingericht, of het salesproces niet klaarstaat om de interesse op te vangen.
 
 <div class="citaat"><p>"Het verschil tussen een campagne die geld kost en een campagne die omzet oplevert, zit in de aanpak. Losse advertenties zonder plan werken niet."</p></div>
 
-Display advertising is een schakel in de keten — geen einddoel op zich. Ingebed in een doordachte strategie, met aansluitende landingspagina's en heldere opvolging, levert het meetbare resultaten op.
+Display advertising is een schakel in de keten — geen einddoel op zich. Begin met een helder doel, een scherpe doelgroep en een eerlijk testbudget. De rest bouw je op basis van wat de data je vertelt.
 
-Wil je aan de slag met display advertising? Begin met een helder doel, een scherpe doelgroep en een eerlijk testbudget. De rest bouw je op basis van wat de data je vertelt.
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Van banner tot opdracht</span>
+  <p>Een campagne brengt klikken — maar wat er op de landingspagina en daarna met die bezoeker gebeurt, bepaalt of het ook iets oplevert. Display werkt pas als het onderdeel is van een commerciële structuur die bezoekers opvangt, opvolgt en naar sales brengt.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>

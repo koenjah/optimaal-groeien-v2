@@ -2,7 +2,7 @@
 title: "E-mailmarketing voor B2B: zo werkt het en zo begin je"
 slug: "email-marketing"
 description: "E-mailmarketing is het B2B-kanaal met de hoogste ROI. Ontdek hoe je een werkende e-mailstrategie opzet: van database opbouw tot geautomatiseerde reeksen en lead nurturing."
-date: "2025-10-05"
+date: "2026-03-08"
 author: "Stefan Kelderman"
 category: "Marketing"
 tags: ['e-mailmarketing', 'lead nurturing', 'marketing automation', 'B2B', 'nieuwsbrief']
@@ -102,6 +102,12 @@ E-mailmarketing werkt het beste als het onderdeel is van een groter systeem. Ste
 
 Koppel je e-mailmarketing dan ook aan je CRM en zorg dat sales weet welke leads actief zijn.
 
+<div class="artikel-cta">
+  <span class="artikel-cta-label">E-mail als schakel, niet als eindpunt</span>
+  <p>E-mail brengt de lead terug — maar de opvolging erna bepaalt of het ook een opdracht wordt. Wij bouwen de commerciële keten eromheen: van nurturing-reeks tot het moment dat sales het overneemt en weet wat die lead al heeft gezien.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>
+
 ## Veelgestelde vragen
 
 ### Hoe vaak moet ik een nieuwsbrief versturen?
@@ -118,10 +124,10 @@ Nee. E-mail bestaat al decennia en is nog altijd het meest effectieve digitale k
 
 De software begint al vanaf een paar tientjes per maand. De echte investering zit in de tijd voor strategie, content en optimalisatie — of in de kosten als je dat uitbesteedt. Met een ROI van gemiddeld 42:1 verdient een goede aanpak zichzelf snel terug.
 
-## Conclusie
+## E-mailmarketing werkt — maar alleen als het aan sales is gekoppeld
 
 E-mailmarketing is geen optioneel kanaal voor B2B-bedrijven die willen groeien. Het biedt direct contact met beslissers, een uitzonderlijk hoge ROI en een database die jou toebehoort. Maar het moet goed worden aangepakt: strategisch, gemeten en als onderdeel van je totale commerciële aanpak.
 
 Losse nieuwsbrieven leveren nauwelijks iets op. Een geïntegreerde strategie — met automatisering, lead nurturing en koppeling aan sales — wél.
 
-Wil je meer weten over hoe marketing automation hierin past? Lees ons artikel over [marketing automation](/blog/marketing-automation) of ontdek hoe [B2B leadgeneratie](/blog/b2b-leadgeneratie-kwalitatieve-leads) werkt als geheel.
+E-mail is het kanaal dat werkt terwijl jij andere dingen doet. Mits er iemand klaarstaat om het gesprek over te nemen op het moment dat een lead klikt.

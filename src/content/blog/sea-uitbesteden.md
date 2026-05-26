@@ -2,7 +2,7 @@
 title: "SEA uitbesteden: waarom slimme B2B bedrijven hun advertenties laten beheren"
 slug: "sea-uitbesteden"
 description: "SEA uitbesteden als B2B bedrijf? Ontdek wanneer het loont, wat het kost en hoe je het juiste bureau kiest voor jouw advertentiebudget."
-date: "2026-05-12"
+date: "2026-04-19"
 author: "Stefan Kelderman"
 category: "Marketing"
 tags: ['sea', 'google-ads', 'uitbesteden', 'b2b']
@@ -141,6 +141,12 @@ Vergelijk het met een nieuwe medewerker. De eerste maand leert hij je bedrijf ke
 
 ---
 
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Klikken zijn het makkelijkste deel</span>
+  <p>Ads brengen bezoekers — maar als de propositie op de landingspagina niet scherp is en de opvolging niet snel, gaat het budget verloren ongeacht wie het beheert. Wij kijken naar de hele keten: campagne, landingspagina en het salesproces dat de lead ontvangt.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>
+
 ## De volgende stap — ook voor jou
 
 De ondernemer vroeg ons na zes weken: "Waarom heb ik dit niet eerder gedaan?"
@@ -151,4 +157,4 @@ Echte controle is dit: weten hoeveel een lead kost, hoeveel leads je nodig hebt 
 
 <div class="tip"><span class="tip-label">Tip</span><p>Zet voor je eerste gesprek met een bureau drie dingen op papier: je maandbudget, de gemiddelde waarde van één opdracht en hoeveel leads je sales aankan per maand. Met die drie cijfers kun je direct doorrekenen of uitbesteden rendabel is — en houd je een bureau meteen scherp.</p></div>
 
-**Wil je weten of SEA voor jouw bedrijf rendabel is?** Vraag een vrijblijvende scan aan. We kijken naar je huidige situatie — of je nu zelf beheert of overweegt uit te besteden — en rekenen eerlijk door wat realistisch haalbaar is.
+**Wil je weten of SEA voor jouw bedrijf rendabel is?** Zet je maandbudget, de gemiddelde waarde van één opdracht en het aantal leads dat je sales aankan op papier. Met die drie cijfers kunnen we al in het eerste gesprek eerlijk doorrekenen of het klopt.

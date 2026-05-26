@@ -2,7 +2,7 @@
 title: "Influencer marketing voor B2B: hoe je thought leaders inzet voor groei"
 slug: "influencer-marketing"
 description: "Influencer marketing voor B2B: hoe zet je thought leaders in voor groei? Praktische aanpak voor bedrijven in de technische sector."
-date: "2026-05-12"
+date: "2026-03-25"
 author: "Stefan Kelderman"
 category: "Marketing"
 tags: ['influencer-marketing', 'thought-leadership', 'b2b', 'linkedin']
@@ -115,7 +115,7 @@ Vraag een klant samen een casestudy te schrijven. Of interview hem voor een podc
 
 ---
 
-## Hoe start je vandaag?
+## Drie stappen die je vandaag kunt zetten — zonder budget
 
 Geen budget nodig. Geen bureau. Drie stappen:
 
@@ -151,3 +151,9 @@ Jij deelt kennis. Klanten vertellen hun verhaal. Vakexperts versterken jouw bood
 Begin bij jezelf. Schrijf vandaag je eerste post. Maak hem concreet, eerlijk en nuttig.
 
 Wil je meer leren over hoe je [brand marketing voor B2B](https://optimaalgroeien.nl/brand-marketing) inzet naast thought leadership? Lees dan dat artikel als volgende stap.
+
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Als iemand reageert op je post — wat dan?</span>
+  <p>Thought leadership zorgt dat de juiste mensen je naam kennen. Maar als iemand zijn hand opsteekt — een reactie, een DM, een klik naar je website — moet er iets klaarstaan. Een profiel dat overtuigt, een website die converteert, een opvolging die niet voelt als koude acquisitie. Dat is het verschil tussen zichtbaarheid en groei.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>

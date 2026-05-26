@@ -2,7 +2,7 @@
 title: "Growth hacking: wat het is, hoe het werkt en wanneer je het inzet"
 slug: "growth-hacking"
 description: "Growth hacking combineert data, creativiteit en snelheid om snel te groeien met weinig middelen. Lees wat het inhoudt en hoe je ermee aan de slag gaat."
-date: "2025-06-20"
+date: "2026-03-15"
 author: "Stefan Kelderman"
 category: "Strategie"
 tags: ['growth hacking', 'groeimarketing', 'AARRR', 'experimenten', 'startup groei']
@@ -107,7 +107,13 @@ Begin niet met growth hacking als je product nog niet klopt. Alle groei die je b
 
 <div class="inzicht"><span class="inzicht-label">Inzicht</span><p>Growth hacking versnelt wat al werkt. Het lost geen fundamentele problemen in je product of propositie op. Zorg eerst dat je aanbod solide is — dan vergroot je het effect van elk experiment.</p></div>
 
-## Conclusie
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Testen werkt alleen als je weet wat je meet</span>
+  <p>De growth hacking mindset — hypothese, experiment, bijsturen — past precies bij hoe wij werken met B2B-bedrijven. Geen dikke rapporten, maar concrete experimenten die snel laten zien wat groei oplevert in jouw markt.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>
+
+## Growth hacking werkt pas als je product al waarde levert
 
 Growth hacking is geen magie en geen snelkoppeling. Het is een gestructureerde manier om snel te leren wat werkt en dat vervolgens op te schalen.
 

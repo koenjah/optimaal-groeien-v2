@@ -2,7 +2,7 @@
 title: "Wat is branded content?"
 slug: "wat-is-branded-content"
 description: "Branded content is marketing die mensen wil helpen, niet alleen verkopen. Leer wat het is, bekijk sterke voorbeelden en ontdek hoe je het inzet voor jouw merk."
-date: "2025-04-05"
+date: "2026-05-04"
 author: "Stefan Kelderman"
 category: "Branding"
 tags: ['branded content', 'contentmarketing', 'storytelling']
@@ -64,7 +64,7 @@ Goede branded content heeft altijd twee eigenschappen:
 
 **Informatieve of entertainende waarde.** De content biedt iets waardevols aan de consument. Een verhaal, een inzicht, een belevenis.
 
-**Een commerciële component.** Het merk is zichtbaar, maar opdringerig. De associatie met het merk groeit organisch door de content.
+**Een commerciële component.** Het merk is zichtbaar, maar niet opdringerig. De associatie met het merk groeit organisch door de content.
 
 ## Hoe zet je branded content in voor jouw merk?
 
@@ -88,10 +88,16 @@ Contentmarketing is breder: het gaat om elke content die je maakt om je doelgroe
 
 Alle branded content is contentmarketing. Niet alle contentmarketing is branded content.
 
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Content die verder gaat dan bereik</span>
+  <p>Branded content bouwt een relatie met je doelgroep — maar een relatie zonder ergens naartoe te leiden is entertainment, geen groei. De vraag is wat er achter die content staat: een heldere propositie, een manier om interesse vast te houden en een weg naar een gesprek.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>
+
 ## De kracht van authenticiteit
 
 De beste branded content voelt niet als marketing. Het voelt als iets wat het waard is om te bekijken of te lezen. Dat bereik je alleen met authenticiteit.
 
 Maak content die past bij wie jouw merk écht is. Niet wat je denkt dat mensen willen horen, maar wat jij oprecht kunt vertellen. Dat is het verschil tussen content die vergeten wordt en content die bijblijft.
 
-Wil je weten hoe branded content past bij jouw merk en doelgroep? [Neem contact op](/#contact) en we denken mee.
+Wil je weten hoe branded content past bij jouw merk en doelgroep — en hoe je het verbindt aan een commercieel resultaat? [Neem contact op](/#contact) en we kijken samen wat er concreet mogelijk is.

@@ -2,7 +2,7 @@
 title: "Wat is een marketingstrategie en hoe implementeer je die?"
 slug: "wat-is-een-marketingstrategie-en-hoe-implementeer-ik-deze"
 description: "Een marketingstrategie is een langetermijnplan om je bedrijfsdoelen te bereiken. Lees wat het inhoudt, hoe je er een maakt en welke modellen je daarbij helpen."
-date: "2025-05-15"
+date: "2026-05-08"
 author: "Stefan Kelderman"
 category: "Marketing"
 tags: ['marketingstrategie', 'marketing', 'groei', 'concurrentieanalyse', 'SWOT']
@@ -118,7 +118,13 @@ Veel marketingstrategieën mislukken door dezelfde oorzaken:
 
 Een strategie die niemand kent of begrijpt, werkt niet. Betrek je team. Maak doelen concreet. En meet structureel wat werkt.
 
-## Hoe begin je?
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Een strategie die ook echt wordt uitgevoerd</span>
+  <p>Een marketingstrategie die op papier goed staat maar niet wordt uitgevoerd, verandert niets. Wij nemen voor B2B-bedrijven in de technische sector de volledige marketingstrategie op ons — van positionering en doelgroep tot kanalen en resultaatmeting.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>
+
+## Drie vragen waarmee je je marketingstrategie start
 
 Begin klein. Je hoeft geen tien pagina's te schrijven. Start met drie vragen:
 

@@ -2,7 +2,7 @@
 title: "Conversie optimalisatie voor B2B: zo haal je meer uit je websitebezoekers"
 slug: "conversie-optimalisatie-door-een-cro-specialist"
 description: "Conversie optimalisatie voor B2B: zo haal je meer uit je websitebezoekers. Bewezen CRO-technieken die direct meer aanvragen opleveren."
-date: "2026-05-12"
+date: "2026-02-27"
 author: "Stefan Kelderman"
 category: "Marketing"
 tags: ['conversie-optimalisatie', 'cro', 'b2b', 'website']
@@ -119,8 +119,10 @@ Een bezoeker overweegt contact op te nemen. Hij heeft twijfels. Die twijfels moe
 
 Pas als het antwoord op alle drie "ja" is, converteert iemand. CRO maakt die antwoorden elke keer een stukje duidelijker.
 
----
+Dat is geen eenmalig project. Het is een gewoonte. Wie elke maand één pagina verbetert, heeft na een jaar een fundamenteel andere website — zonder extra marketingbudget.
 
-Wil je weten hoe CRO past in je bredere marketingstrategie? Lees dan hoe [B2B-leadgeneratie](/b2b-leadgeneratie) en conversie samenwerken. Of ontdek hoe je met [contentmarketing voor B2B](/blog/contentmarketing-b2b) het vertrouwen opbouwt dat bezoekers over de drempel trekt.
-
-Meer weten over hoe wij dit aanpakken voor technische B2B-bedrijven? [Neem contact op](/contact) — we kijken graag mee naar je website.
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Hogere conversie — en dan?</span>
+  <p>Hogere conversie heeft alleen waarde als de leads die binnenkomen ook goed worden opgevolgd. Een sterk formulier en een zwak salesproces geeft je meer aanvragen die nergens op uitlopen. Wij kijken naar de hele keten, van pagina tot opdracht.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>

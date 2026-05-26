@@ -2,7 +2,7 @@
 title: "Hoe laat ik mijn sales ondersteunen?"
 slug: "hoe-laat-ik-mijn-sales-ondersteunen"
 description: "Een goed product verkoopt zich niet vanzelf. Ontdek wat sales ondersteuning inhoudt, wanneer je het nodig hebt, en welke taken je kunt uitbesteden aan een specialist."
-date: "2025-08-10"
+date: "2026-03-21"
 author: "Stefan Kelderman"
 category: "Sales"
 tags: ['sales ondersteuning', 'leadgeneratie', 'verkoopstrategie']
@@ -84,8 +84,12 @@ Sales ondersteuning kun je intern opbouwen, maar het vergt tijd en kennis. Veel 
 
 Of je nu intern of extern kiest: het belangrijkste is dat je salesteam de ruimte krijgt om te doen waar het goed in is. Relaties bouwen. Deals sluiten. Klanten helpen.
 
-## Conclusie
+## Meer capaciteit, minder chaos — zo werkt sales ondersteuning
 
 Sales ondersteuning is geen luxe. Het is een slimme investering als je wilt groeien. Door routinetaken over te dragen aan een specialist, vergroot je de capaciteit van je salesteam zonder de werkdruk te verhogen.
 
-Wil je weten hoe je dit voor jouw bedrijf aanpakt? [Neem contact op](/#contact) en we kijken samen naar de beste aanpak.
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Praktisch toepassen?</span>
+  <p>Voor B2B-bedrijven in de technische sector is sales ondersteuning zelden een kwestie van één extra medewerker. Het vraagt om de juiste structuur: marketing en sales die op elkaar aansluiten, buyer persona's die kloppen, en opvolging die niet tussen wal en schip valt. Dat is wat wij inrichten.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>

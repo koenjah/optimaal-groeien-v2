@@ -2,7 +2,7 @@
 title: "B2B leadgeneratie in 2025: waarom je een funnel nodig hebt"
 slug: "b2b-leadgeneratie-2025-funnel-nodig"
 description: "Losse marketingacties leveren in 2025 te weinig op voor B2B bedrijven. Lees waarom een complete salesfunnel de enige manier is om voorspelbaar en schaalbaar te groeien."
-date: "2025-02-10"
+date: "2026-02-19"
 author: "Stefan Kelderman"
 category: "Leadgeneratie"
 tags: ['B2B', 'leadgeneratie', 'salesfunnel', 'marketing', 'groei']
@@ -79,8 +79,16 @@ Een systeem waarin sociale media, advertenties, content, website en opvolging vo
 
 Bedrijven die dit nu goed inrichten, lopen straks voor op de rest. Ze bouwen aan vertrouwen, autoriteit en voorspelbare groei.
 
-## Wil je weten hoe jouw funnel eruit moet zien?
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Praktisch toepassen?</span>
+  <p>Een B2B funnel bouwen die echt werkt betekent dat elk kanaal — LinkedIn, content, e-mail, ads — op elkaar is afgestemd en samen een logisch verhaal vertelt. Dat is precies wat we bij Optimaal Groeien doen voor bedrijven in de technische sector: één geïntegreerd commercieel systeem, van eerste zichtbaarheid tot gesloten deal.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>
 
-In een korte strategiecall laten we zien waar jouw klantreis vastloopt. Welke stappen ontbreken. Hoe jouw doelgroep beslissingen neemt. En welke funnelstructuur past bij jouw markt.
+## Waar loopt jouw klantreis vast?
 
-Bedrijven die hun funnel scherp neerzetten, hoeven niet harder te werken. Wel slimmer. En dat is precies hoe B2B groei in 2025 wordt gewonnen. [Plan een gesprek](/contact) om te ontdekken waar jouw kansen liggen.
+Bijna elk bedrijf heeft één of twee plekken in de klantreis waar prospects stil vallen. Niet omdat ze niet geïnteresseerd zijn — maar omdat de volgende stap ontbreekt of niet logisch aansluit.
+
+Die plek is niet altijd makkelijk te zien van binnenuit. Je zit te dicht op je eigen aanbod. Soms helpt het om iemand van buiten te laten meekijken: niet met een dik rapport, maar met een concreet gesprek over waar de keten nu breekt.
+
+[Plan een gesprek](/contact) als je wilt weten waar jouw klantreis vastzit — en wat er nodig is om die door te trekken.

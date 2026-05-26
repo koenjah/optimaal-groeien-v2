@@ -2,7 +2,7 @@
 title: "B2B leadgeneratie: zo pakken wij het aan"
 slug: "b2b-leadgeneratie-hoe-wij-bij-optimaal-groeien"
 description: "Effectieve B2B leadgeneratie vraagt om strategie, kennis van de doelgroep en een heldere funnel. Lees hoe wij bij Optimaal Groeien dit aanpakken en welke resultaten dat oplevert."
-date: "2025-02-20"
+date: "2026-02-20"
 author: "Stefan Kelderman"
 category: "Leadgeneratie"
 tags: ['B2B', 'leadgeneratie', 'contentstrategie', 'LinkedIn', 'salesfunnel']
@@ -86,10 +86,16 @@ Het vraagt om inzicht in complexe besluitvormingsprocessen. Om kennis van langer
 
 <div class="tip"><span class="tip-label">Tip</span><p>Werk data-gedreven. Bepaal voor elke campagne vooraf welke metrics succes meten: cost-per-lead, conversiepercentage of aantal MQL's. Zonder meetdoel stuur je blind.</p></div>
 
-## De toekomst van B2B leads
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Praktisch toepassen?</span>
+  <p>B2B leadgeneratie werkt het beste als contentmarketing, LinkedIn en e-mail automation onderdeel zijn van één systeem — niet als losse acties. Bij Optimaal Groeien bouwen we dat systeem voor bedrijven in de technische sector, meten we op data en sturen we bij waar nodig.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>
 
-AI-tools, first-party data en gepersonaliseerde content spelen een steeds grotere rol. Maar wat nooit verandert, is de basis: relevantie, timing en vertrouwen.
+## De basis verandert niet
 
-Of je nu 10 of 1.000 leads per maand nodig hebt, de logica blijft dezelfde. Begrijp wie je klant is, waarom ze kopen en wanneer ze openstaan voor contact.
+AI-tools, first-party data en gepersonaliseerde content spelen een steeds grotere rol in hoe leads worden aangetrokken en opgewarmd. Maar wat nooit verandert, is de kern: relevantie, timing en vertrouwen.
 
-Wil je af van ad-hoc campagnes en werken aan een voorspelbare stroom leads? [Neem contact op](/contact) en ontdek wat er mogelijk is voor jouw situatie.
+Of je nu 10 of 1.000 leads per maand nodig hebt — de logica is dezelfde. Begrijp wie je klant is, waarom ze kopen en wanneer ze openstaan voor contact. Wie dat goed heeft, heeft een systeem. Wie dat niet heeft, heeft campagnes.
+
+Ad-hoc acties geven je pieken. Een systeem geeft je voorspelbaarheid. Als je wilt stoppen met gissen en wilt beginnen met sturen, is het [gesprek](/contact) een goed startpunt.

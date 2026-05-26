@@ -2,7 +2,7 @@
 title: "Je website op SEO en Google-vindbaarheid checken: 5 stappen"
 slug: "je-website-op-seo-en-google-vindbaarheid-checken-5-essentiele-stappen"
 description: "Wil je weten hoe goed jouw website gevonden wordt in Google? Volg deze vijf stappen om je SEO-status te checken en gericht te verbeteren."
-date: "2025-10-01"
+date: "2026-03-28"
 author: "Stefan Kelderman"
 category: "SEO"
 tags: ['SEO', 'Google vindbaarheid', 'website optimalisatie', 'technische SEO']
@@ -93,8 +93,12 @@ SEO is geen eenmalige actie. Het vraagt continue aandacht.
 
 <div class="tip"><span class="tip-label">Tip</span><p>Varieer in je woordkeuze. Schrijf niet tien keer hetzelfde zoekwoord. Gebruik synoniemen en gerelateerde termen. Dit maakt je content leesbaarder én geeft Google meer context.</p></div>
 
-## Samenvatting: begin vandaag
+## Je eerste stap naar betere vindbaarheid in Google
 
 SEO-verbetering hoeft niet groot te beginnen. Kies één stap uit dit artikel en voer hem uit. Controleer daarna of je in Search Console ziet dat er iets verandert.
 
-Wil je hulp bij het beoordelen of verbeteren van je vindbaarheid? [Neem contact op](/#contact) voor een gratis eerste analyse.
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Je vindbaarheid klopt — wat gebeurt er daarna?</span>
+  <p>Een SEO-check vertelt je waar je staat in Google. Maar de vraag die je omzet bepaalt, is wat er met die bezoekers gebeurt: worden ze leads, worden leads klanten, en hoe snel? Dat is het systeem dat wij inrichten — naast de vindbaarheid.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>

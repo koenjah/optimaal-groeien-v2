@@ -2,7 +2,7 @@
 title: "De marketing funnel uitgelegd: zo trek je structureel meer klanten aan"
 slug: "marketing-funnel"
 description: "De marketing funnel uitgelegd voor B2B bedrijven. Leer hoe je elke fase inzet om structureel meer klanten aan te trekken."
-date: "2026-05-12"
+date: "2026-04-08"
 author: "Stefan Kelderman"
 category: "Marketing"
 tags: ['marketing-funnel', 'leadgeneratie', 'b2b', 'strategie']
@@ -179,10 +179,16 @@ Meet de conversie per fase: bezoeker → lead → offertekans → klant. Zodra e
 
 ---
 
-## Begin nu — niet na de zomer
+## Jouw Arjan wacht niet — begin met twee blogartikelen en één lead magnet
 
 Jouw klant legt de route toch al af. De vraag is alleen wie hem begeleidt.
 
-U heeft geen perfect systeem nodig om te starten. Twee sterke blogartikelen, één lead magnet, een eenvoudige e-mailreeks. Dat is genoeg voor een eerste funnel. Bouw daarna stap voor stap uit op basis van wat u meet.
+Je hebt geen perfect systeem nodig om te starten. Twee sterke blogartikelen, één lead magnet, een eenvoudige e-mailreeks. Dat is genoeg voor een eerste funnel. Bouw daarna stap voor stap uit op basis van wat je meet.
 
-Arjan is er al. U ook — of niet.
+Arjan is er al. Jij ook — of niet.
+
+<div class="artikel-cta">
+  <span class="artikel-cta-label">De funnel staat er — maar wie begeleidt Arjan?</span>
+  <p>Een funnel bouwen die werkt voor technische B2B-bedrijven vraagt kennis van de sector én van het koopproces van beslissers zoals Arjan. Bij Optimaal Groeien bouwen we de hele structuur — van het eerste blogartikel tot de warme overdracht aan sales.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>

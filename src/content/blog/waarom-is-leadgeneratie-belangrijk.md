@@ -2,7 +2,7 @@
 title: "Waarom is leadgeneratie belangrijk?"
 slug: "waarom-is-leadgeneratie-belangrijk"
 description: "Leadgeneratie is de motor achter bedrijfsgroei. Dit artikel legt uit wat een lead is, hoe je er meer van aantrekt en waarom een goed systeem onmisbaar is."
-date: "2025-02-25"
+date: "2026-04-30"
 author: "Stefan Kelderman"
 category: "Leadgeneratie"
 tags: ['leadgeneratie', 'sales funnel', 'inbound marketing']
@@ -101,6 +101,12 @@ Dat doe je door regelmatig waardevolle content te sturen. Denk aan blogartikelen
 
 Marketing automation helpt daarbij. Je stelt een reeks e-mails in die automatisch worden verstuurd op basis van het gedrag van de lead. Dat bespaart tijd en zorgt voor consistente opvolging.
 
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Leads binnenhalen is één ding — ze ook opvolgen is een ander</span>
+  <p>Veel bedrijven hebben een systeem dat leads aantrekt, maar geen systeem dat ze opvolgt. De klik is er, het formulier is ingevuld — en dan wordt het stil. Voorspelbare groei begint bij het sluiten van die kloof. Dat bouwen wij samen met je op, van contentstrategie tot het moment dat sales de lead overneemt.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>
+
 ## Maak een plan voor leadgeneratie
 
 Effectieve leadgeneratie begint met een duidelijk plan. Zonder plan schiet je met hagel.
@@ -114,4 +120,4 @@ Effectieve leadgeneratie begint met een duidelijk plan. Zonder plan schiet je me
   <li><span class="check"></span>Meet je resultaten elke maand</li>
 </ul>
 
-Wil je weten hoe leadgeneratie er voor jouw bedrijf uit kan zien? [Neem contact op](/#contact) voor een vrijblijvend gesprek.
+Wil je weten hoe een leadgeneratiesysteem er voor jouw bedrijf concreet uitziet? [Neem contact op](/#contact) — geen verkooppraatje, maar een eerlijk gesprek over wat er nu mist en wat het eerste stap is.

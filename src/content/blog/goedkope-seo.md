@@ -2,7 +2,7 @@
 title: "Goedkope SEO voor B2B: hoe je meer uit je marketingbudget haalt"
 slug: "goedkope-seo"
 description: "Goedkope SEO voor B2B: hoe haal je meer uit een beperkt marketingbudget? Slimme aanpak zonder dure bureaus. Praktische tips."
-date: "2026-05-12"
+date: "2026-03-11"
 author: "Stefan Kelderman"
 category: "Marketing"
 tags: ['seo', 'marketingbudget', 'b2b', 'zoekmachine-optimalisatie']
@@ -130,6 +130,12 @@ Drie maanden later begon de telefoon vaker te gaan. Niet spectaculair. Maar stru
 
 ---
 
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Geen goedkope SEO — wel eerlijke groei</span>
+  <p>Meer verkeer heeft alleen zin als er iets achter zit: een propositie die aanslaat, een opvolgproces dat werkt, een commercieel systeem dat leads niet laat liggen. Dat is wat wij bouwen — SEO inbegrepen.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>
+
 ## Veelgestelde vragen
 
 **Kan ik ooit echt "goedkoop" SEO kopen?**
@@ -158,6 +164,4 @@ Stop met zoeken naar de goedkoopste aanbieder. Begin met wat gratis werkt.
 
 Open vandaag je Google Business Profile. Controleer of alle gegevens kloppen. Voeg een foto toe. Log daarna in op Google Search Console en kijk welke pagina's op positie 11 tot 20 staan. Dat is het laaghangende fruit.
 
-Wil je weten wat professionele SEO-begeleiding voor jouw bedrijf betekent? Bekijk dan wat we doen als [full-service marketingbureau voor B2B](https://optimaalgroeien.nl/full-service-marketing-bureau). We werken met bedrijven die serieus willen groeien — ook als het budget niet onbeperkt is. Maar dan wel eerlijk over wat dat inhoudt.
-
-Wil je ook meer weten over lokale vindbaarheid? Lees ons artikel over [lokale SEO voor B2B-bedrijven](https://optimaalgroeien.nl/blog/lokale-seo-specialist).
+Daarna weet je of je zelf verder kunt — of dat er een specialist naar je technische situatie moet kijken. Dat onderscheid is het eerlijkste startpunt.

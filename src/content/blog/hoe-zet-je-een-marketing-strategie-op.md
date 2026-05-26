@@ -2,7 +2,7 @@
 title: "Hoe zet je een marketingstrategie op?"
 slug: "hoe-zet-je-een-marketing-strategie-op"
 description: "Een marketingstrategie zonder plan levert geen resultaat. In dit artikel lees je stap voor stap hoe je zelf een effectieve strategie bouwt, van analyse tot uitvoering."
-date: "2025-09-01"
+date: "2026-03-22"
 author: "Stefan Kelderman"
 category: "Marketing"
 tags: ['marketingstrategie', 'SWOT-analyse', 'buyer persona']
@@ -96,4 +96,8 @@ Een marketingstrategie is geen document dat je één keer maakt en daarna in een
 
 Het opzetten van een marketingstrategie kost tijd en kennis. Heb je die intern? Dan is zelf doen een goede optie. Mis je capaciteit of expertise? Dan loont het om een bureau in te schakelen dat je helpt bij de analyse, de strategie én de uitvoering.
 
-Wil je weten wat een goede [online marketing strategie](/blog/marketing-strategie) voor jouw bedrijf kan betekenen? [Neem contact op](/#contact) voor een vrijblijvend gesprek.
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Praktisch toepassen?</span>
+  <p>Een marketingstrategie opzetten is één ding — maar voor B2B-bedrijven in de technische sector is de uitvoering vaak de bottleneck. Wij combineren strategie, branding, marketing en sales in één aanpak, zodat het plan ook daadwerkelijk tot groei leidt en niet in een bureaulade verdwijnt.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>

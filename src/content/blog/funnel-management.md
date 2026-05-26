@@ -2,7 +2,7 @@
 title: "Funnel management: zo houd je grip op je verkoopproces"
 slug: "funnel-management"
 description: "Funnel management helpt je leads te kwalificeren, te begeleiden en om te zetten in klanten. Lees wat het inhoudt en hoe je het toepast in de praktijk."
-date: "2025-05-20"
+date: "2026-03-12"
 author: "Stefan Kelderman"
 category: "Strategie"
 tags: ['funnel management', 'sales funnel', 'leadgeneratie', 'marketing funnel', 'CRM']
@@ -93,8 +93,16 @@ Meten is weten. Houd deze drie getallen bij:
 
 <div class="tip"><span class="tip-label">Tip</span><p>Bereken je conversieratio per funnelfase. Als 100 leads de top bereiken, 40 de middelste fase en 10 de aankoop doen, heb je een conversieratio van 10% totaal. Maar je ziet ook dat 60% al in de eerste fase afhaakt — dat is je verbeterpunt.</p></div>
 
-## Conclusie
+<div class="artikel-cta">
+  <span class="artikel-cta-label">Weten waar leads afhaken is één ding — het oplossen is het andere</span>
+  <p>Een goed werkende funnel vereist dat marketing en sales als één geheel opereren. Wij bouwen en beheren die volledige commerciële structuur voor B2B-bedrijven — van lead tot klant, zonder losse eindjes.</p>
+  <a href="/#contact" class="cta-link">Bekijk hoe wij dat aanpakken →</a>
+</div>
+
+## Funnel management is de basis van een schaalbaar verkoopproces
 
 Funnel management geeft je controle over je groeiproces. Je stopt met gissen en begint met sturen. Je weet waar leads vandaan komen, waar ze afhaken en hoe je dat kunt voorkomen.
 
 Dat is geen luxe. Dat is de basis van een schaalbaar bedrijf.
+
+Maar beheer begint met inzicht. En inzicht begint met meten. Wie dat consequent doet, heeft over zes maanden een ander gesprek dan wie wacht op gevoel.
