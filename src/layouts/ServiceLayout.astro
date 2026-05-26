@@ -1,0 +1,22 @@
+---
+import Layout from './Layout.astro';
+import { NavbarService } from '../components/NavbarService';
+import { Footer } from '../components/SiteComponents';
+import '../index.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical: string;
+  ogImage?: string;
+  darkHero?: boolean;
+}
+
+const { title, description, canonical, ogImage, darkHero = false } = Astro.props;
+---
+
+<Layout {title} {description} {canonical} {ogImage}>
+  <NavbarService client:load darkHero={darkHero} />
+  <slot />
+  <Footer client:load />
+</Layout>

@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { NavbarBlog } from '../components/NavbarBlog';
+import { Footer } from '../components/SiteComponents';
+import {
+  DeLeadmachineSection,
+  SpeciaalVoorJouSection,
+  HoeHetWerktLeadsSection,
+  SamenGroeiRealiserenSection,
+  DuidelijkheidVoorafSection,
+  DirectBesprekenSection,
+} from '../components/LeadmachineComponents';
+import '../index.css';
+---
+
+<Layout
+  title="Leadmachine — Geautomatiseerde leadgeneratie voor B2B | Optimaal Groeien"
+  description="Een geautomatiseerd systeem dat kwalitatieve B2B-leads genereert terwijl jij je focust op je vak. Ontdek hoe de leadmachine werkt."
+  canonical="https://optimaalgroeien.nl/leadmachine"
+  noindex={true}
+>
+  <NavbarBlog client:load darkHero={true} />
+  <main>
+    <DeLeadmachineSection client:load />
+    <SpeciaalVoorJouSection client:load />
+    <HoeHetWerktLeadsSection client:load />
+    <SamenGroeiRealiserenSection client:load />
+    <DuidelijkheidVoorafSection client:load />
+    <DirectBesprekenSection client:load />
+  </main>
+  <Footer client:load />
+</Layout>

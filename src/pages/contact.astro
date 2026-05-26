@@ -1,0 +1,186 @@
+---
+import ServiceLayout from '../layouts/ServiceLayout.astro';
+---
+
+<ServiceLayout
+  title="Contact — Maak kennis met Optimaal Groeien | Stefan Kelderman"
+  description="Plan een vrijblijvend gesprek met Stefan Kelderman. 15 minuten kennismaken, geen pitch, geen verplichtingen."
+  canonical="https://optimaalgroeien.nl/contact"
+>
+
+  <!-- ═══ HERO: full-bleed split ═══ -->
+  <section class="flex flex-col lg:flex-row lg:min-h-screen">
+
+    <!-- Foto: links, rand tot rand, vol scherm hoog -->
+    <div class="w-full h-[52vw] max-h-[480px] lg:max-h-none lg:h-auto lg:w-[44%] lg:min-h-screen relative overflow-hidden shrink-0">
+      <img
+        src="/images/team-stefan-relax-lg.webp"
+        alt="Stefan Kelderman — oprichter Optimaal Groeien"
+        class="w-full h-full object-cover object-[center_12%]"
+        loading="eager"
+      />
+      <!-- Subtiele vignette aan onderkant op mobile -->
+      <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-[#FFFAF4] to-transparent lg:hidden pointer-events-none"></div>
+    </div>
+
+    <!-- Tekst + contact: rechts, warm achtergrond -->
+    <div class="lg:w-[56%] bg-[#FFFAF4] flex items-center lg:items-center">
+      <div class="w-full px-8 lg:px-16 xl:px-24 py-14 lg:py-0 lg:pt-36 lg:pb-24 max-w-xl lg:max-w-none">
+
+        <div class="label-pill mb-8">
+          <span class="w-2 h-2 bg-brand-accent rounded-full animate-pulse"></span>
+          Neem contact op
+        </div>
+
+        <h1 class="text-[2.6rem] lg:text-[3.4rem] xl:text-[4rem] font-display font-bold text-brand-primary leading-[1.06] tracking-tight mb-6">
+          Laten we kennis<br />
+          <span class="text-brand-accent">maken.</span>
+        </h1>
+
+        <p class="text-lg text-brand-ink/65 leading-relaxed mb-12 font-light max-w-sm">
+          Geen formulier, geen wachtrij.<br />Stefan staat zelf voor je klaar.
+        </p>
+
+        <!-- Primaire CTA -->
+        <a
+          href="https://meetings-eu1.hubspot.com/stefan-kelderman"
+          target="_blank"
+          rel="noreferrer"
+          class="group inline-flex items-center gap-3 px-8 py-4 bg-brand-primary text-white rounded-2xl font-display font-bold text-base transition-all hover:bg-brand-accent hover:scale-[1.02] shadow-lg shadow-brand-primary/15 mb-8 w-full sm:w-auto justify-center sm:justify-start"
+        >
+          Plan een gesprek — 15 min
+          <svg class="w-4 h-4 transition-transform group-hover:translate-x-1 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+
+        <!-- Secundaire opties -->
+        <div class="flex flex-col gap-3 pt-6 border-t border-amber-200/60 mb-12">
+          <a href="mailto:stefan@optimaalgroeien.nl" class="group flex items-center gap-3 text-brand-ink/60 hover:text-brand-primary transition-colors text-sm font-medium">
+            <svg class="w-4 h-4 text-brand-accent/70 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            stefan@optimaalgroeien.nl
+          </a>
+          <a href="tel:+31572700246" class="group flex items-center gap-3 text-brand-ink/60 hover:text-brand-primary transition-colors text-sm font-medium">
+            <svg class="w-4 h-4 text-brand-accent/70 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.9 12.45 19.79 19.79 0 0 1 1.97 3.92 2 2 0 0 1 3.95 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +31 57 270 02 46
+          </a>
+          <a href="https://www.linkedin.com/in/stefan-kelderman-28b4b6168/" target="_blank" rel="noreferrer" class="group flex items-center gap-3 text-brand-ink/60 hover:text-brand-primary transition-colors text-sm font-medium">
+            <svg class="w-4 h-4 text-brand-accent/70 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn — Stefan Kelderman
+          </a>
+          <div class="flex items-center gap-3 text-brand-ink/40 text-sm">
+            <svg class="w-4 h-4 text-brand-accent/50 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Boeierstraat 9, Raalte
+          </div>
+        </div>
+
+        <!-- Stefan handtekening -->
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full overflow-hidden shrink-0 border border-amber-200">
+            <img src="/images/team-stefan.webp" alt="Stefan Kelderman" class="w-full h-full object-cover object-top" loading="lazy" />
+          </div>
+          <div>
+            <div class="font-display font-bold text-brand-primary text-sm">Stefan Kelderman</div>
+            <div class="text-xs text-brand-ink/40 font-medium">Oprichter · max 4 kennismakingen per maand</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PERSOONLIJKE NOOT ═══ -->
+  <section class="py-28 px-6 bg-white">
+    <div class="max-w-2xl mx-auto">
+
+      <p class="text-[1.65rem] lg:text-[2rem] font-display font-bold text-brand-primary leading-[1.3] mb-8">
+        "Ik spreek liever met je dan dat ik je een offerte mail."
+      </p>
+
+      <p class="text-brand-ink/60 leading-relaxed mb-4 font-light text-lg">
+        Een kwartier praten vertelt mij meer dan vijf pagina's intake. Als er een klik is, weet je dat snel.
+      </p>
+      <p class="text-brand-ink/60 leading-relaxed mb-10 font-light text-lg">
+        Geen klik? Dan zeg ik dat ook gewoon. Geen moeite gedaan, geen tijd verspild.
+      </p>
+
+      <a
+        href="https://meetings-eu1.hubspot.com/stefan-kelderman"
+        target="_blank"
+        rel="noreferrer"
+        class="inline-flex items-center gap-2 px-7 py-3.5 bg-brand-accent text-white rounded-2xl font-display font-bold text-sm transition-all hover:scale-[1.02] shadow-md shadow-brand-accent/20"
+      >
+        Plan een vrijblijvend gesprek
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ═══ FAQ ═══ -->
+  <section class="py-28 px-6 bg-[#FFFAF4]">
+    <div class="max-w-5xl mx-auto">
+      <div class="flex flex-col lg:flex-row gap-16 items-start">
+
+        <div class="lg:w-[36%] lg:sticky lg:top-32">
+          <div class="label-pill">Veelgestelde vragen</div>
+          <h2 class="text-3xl lg:text-4xl font-display font-bold text-brand-primary mb-4">
+            Wat mensen<br /><span class="text-brand-accent">ons vragen.</span>
+          </h2>
+          <p class="text-brand-ink/50 leading-relaxed font-light">Eerlijke vragen, eerlijke antwoorden.</p>
+        </div>
+
+        <div class="lg:w-[64%] w-full space-y-3">
+
+          <details class="group bg-white border border-amber-100/80 rounded-[24px] overflow-hidden">
+            <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none font-display font-semibold text-brand-primary text-base hover:text-brand-accent transition-colors select-none">
+              Is Optimaal Groeien geschikt voor mijn bedrijf?
+              <span class="w-8 h-8 rounded-full bg-amber-50 border border-amber-100 flex items-center justify-center shrink-0 transition-transform duration-200 group-open:rotate-45">
+                <svg class="w-4 h-4 text-brand-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+              </span>
+            </summary>
+            <div class="px-6 pb-6 pt-2 text-brand-ink/60 text-sm leading-relaxed border-t border-amber-50">
+              We werken met technische B2B-bedrijven: machinebouwers, installateurs, ingenieursbureaus en toeleveranciers. Lange verkoopcyclus, complexe offertes of moeite met nieuwe klanten aantrekken? Dan past onze aanpak waarschijnlijk goed.
+            </div>
+          </details>
+
+          <details class="group bg-white border border-amber-100/80 rounded-[24px] overflow-hidden">
+            <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none font-display font-semibold text-brand-primary text-base hover:text-brand-accent transition-colors select-none">
+              Wat kost samenwerking?
+              <span class="w-8 h-8 rounded-full bg-amber-50 border border-amber-100 flex items-center justify-center shrink-0 transition-transform duration-200 group-open:rotate-45">
+                <svg class="w-4 h-4 text-brand-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+              </span>
+            </summary>
+            <div class="px-6 pb-6 pt-2 text-brand-ink/60 text-sm leading-relaxed border-t border-amber-50">
+              We werken niet met standaard tariefkaarten. Na een kennismaking maken we een voorstel op maat — afgestemd op jouw situatie. Geen verrassingen achteraf.
+            </div>
+          </details>
+
+          <details class="group bg-white border border-amber-100/80 rounded-[24px] overflow-hidden">
+            <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none font-display font-semibold text-brand-primary text-base hover:text-brand-accent transition-colors select-none">
+              Hoe snel kunnen we starten?
+              <span class="w-8 h-8 rounded-full bg-amber-50 border border-amber-100 flex items-center justify-center shrink-0 transition-transform duration-200 group-open:rotate-45">
+                <svg class="w-4 h-4 text-brand-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+              </span>
+            </summary>
+            <div class="px-6 pb-6 pt-2 text-brand-ink/60 text-sm leading-relaxed border-t border-amber-50">
+              Zodra er een klik is en het voorstel staat, kunnen we binnen een tot twee weken starten. Als jij klaar bent, zijn wij dat ook.
+            </div>
+          </details>
+
+          <details class="group bg-white border border-amber-100/80 rounded-[24px] overflow-hidden">
+            <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none font-display font-semibold text-brand-primary text-base hover:text-brand-accent transition-colors select-none">
+              Wat als ik nu nog niet klaar ben?
+              <span class="w-8 h-8 rounded-full bg-amber-50 border border-amber-100 flex items-center justify-center shrink-0 transition-transform duration-200 group-open:rotate-45">
+                <svg class="w-4 h-4 text-brand-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+              </span>
+            </summary>
+            <div class="px-6 pb-6 pt-2 text-brand-ink/60 text-sm leading-relaxed border-t border-amber-50">
+              Geen enkel probleem. Een gesprek is vrijblijvend en verplicht je tot niets. Je gaat er altijd iets aan hebben — ook als we uiteindelijk niet samenwerken.
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+</ServiceLayout>

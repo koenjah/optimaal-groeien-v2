@@ -1,0 +1,331 @@
+---
+import ServiceLayout from '../layouts/ServiceLayout.astro';
+---
+
+<ServiceLayout
+  title="Oplossingen voor commerciële B2B-groei | Optimaal Groeien"
+  description="Van SEO en leadgeneratie tot strategie en branding — Optimaal Groeien regelt de volledige commerciële machine voor technische B2B-bedrijven."
+  canonical="https://optimaalgroeien.nl/oplossingen"
+>
+
+  <!-- Hero -->
+  <section class="hero-warm pt-36 pb-20 px-6 relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-brand-accent/5 blur-[140px] pointer-events-none"></div>
+    <div class="absolute bottom-0 left-1/4 w-[300px] h-[300px] rounded-full bg-brand-lime/5 blur-[100px] pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="flex flex-col lg:flex-row gap-12 items-center">
+
+        <!-- Left: text -->
+        <div class="lg:w-[55%]">
+          <div class="label-pill">
+            <span class="w-2 h-2 bg-brand-accent rounded-full animate-pulse"></span>
+            Commerciële groei voor B2B
+          </div>
+          <h1 class="text-[2.2rem] lg:text-[3.1rem] font-display font-bold text-brand-primary leading-[1.1] tracking-tight mb-5">
+            Alles wat jouw technisch B2B-bedrijf nodig heeft —
+            <span class="text-brand-accent"> op één plek.</span>
+          </h1>
+          <p class="text-lg text-brand-ink/70 max-w-xl leading-relaxed mb-8 font-light">
+            Losse bureaus werken niet samen. Jij coördineert, betaalt meerdere rekeningen en niemand is eindverantwoordelijk. Wij zijn dat wel — van de eerste zoekterm tot een deal.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a href="https://meetings-eu1.hubspot.com/stefan-kelderman" target="_blank" rel="noreferrer"
+              class="btn-primary !py-4 !px-8 text-sm !bg-[#ed7c2f] w-full sm:w-auto justify-center">
+              Plan een gratis gesprek
+            </a>
+            <a href="#bouwstenen"
+              class="w-full sm:w-auto px-7 py-4 bg-white text-brand-primary rounded-2xl font-display font-bold transition-all hover:scale-[1.02] border-2 border-amber-100 shadow-sm flex items-center justify-center gap-2 text-sm">
+              Bekijk de bouwstenen
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg>
+            </a>
+          </div>
+
+          <!-- Social proof badges -->
+          <div class="flex flex-wrap gap-3 mt-8">
+            {[
+              "Eén aanspreekpunt",
+              "Binnen 30 dagen live",
+              "Groei of gratis door",
+            ].map(badge => (
+              <div class="flex items-center gap-2 px-4 py-2 bg-white border border-amber-100 rounded-xl shadow-sm">
+                <svg class="w-4 h-4 text-brand-lime shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span class="text-xs font-display font-bold text-brand-primary">{badge}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Right: image -->
+        <div class="lg:w-[45%] w-full relative">
+          <div class="relative rounded-[32px] overflow-hidden shadow-2xl">
+            <img
+              src="/images/oplossingen-hero.webp"
+              alt="Commercieel B2B-team aan het werk bij Optimaal Groeien"
+              class="w-full h-[360px] lg:h-[420px] object-cover"
+              loading="eager"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-primary/30 to-transparent"></div>
+          </div>
+          <!-- Floating stat card -->
+          <div class="absolute -bottom-5 -left-4 sm:-left-6 bg-white rounded-2xl shadow-xl p-4 sm:p-5 border border-amber-100">
+            <div class="text-3xl font-display font-black text-brand-primary">+3×</div>
+            <div class="text-xs text-brand-ink/60 font-light mt-0.5">meer aanvragen<br/>gemiddeld na 6 mnd</div>
+          </div>
+          <!-- Decorative shape -->
+          <div class="absolute -top-4 -right-4 w-20 h-20 rounded-2xl bg-brand-lime/20 border border-brand-lime/30 rotate-12 hidden sm:block"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: De 6 bouwstenen -->
+  <section class="py-20 lg:py-28 px-6 bg-white" id="bouwstenen">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-2xl mb-12 lg:mb-16">
+        <div class="label-pill">De bouwstenen van commerciële groei</div>
+        <h2 class="text-3xl lg:text-4xl font-display font-bold text-brand-primary mb-4">
+          Zeven disciplines. <span class="text-brand-accent">AI gedreven, geïntegreerd in één systeem.</span>
+        </h2>
+        <p class="text-lg text-brand-ink/70 leading-relaxed font-light">
+          Elk onderdeel versterkt het andere. SEO trekt bezoekers aan, branding overtuigt ze, strategie zet ze om in klanten en AI optimaliseert en maakt het schaalbaar. Zo werkt een commercieel systeem dat echt presteert.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
+        {[
+          {
+            href: "/ai-scan",
+            icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>`,
+            title: "AI",
+            desc: "AI als fundament van je commerciële machine. Van automatische leadopvolging tot real-time dashboards die je grip geven op de cijfers.",
+            color: "bg-violet-50 border-violet-100 text-violet-600",
+            cta: "Start de AI Analyse",
+          },
+          {
+            href: "/oplossingen/lead-generatie",
+            icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
+            title: "Leadgeneratie",
+            desc: "Gekwalificeerde leads uit de juiste sectoren. Beslissers komen naar jou via SEO, content en gerichte campagnes.",
+            color: "bg-blue-50 border-blue-100 text-blue-600",
+            cta: "Meer over Leadgeneratie",
+          },
+          {
+            href: "/oplossingen/branding",
+            icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>`,
+            title: "Branding",
+            desc: "Een sterk merk wint vertrouwen voordat het eerste gesprek plaatsvindt. Wij bouwen een identiteit die past bij wie jij bent en wie jij wilt bereiken.",
+            color: "bg-orange-50 border-orange-100 text-brand-accent",
+            cta: "Meer over Branding",
+          },
+          {
+            href: "/oplossingen/marketing",
+            icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/><path stroke-linecap="round" stroke-linejoin="round" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"/></svg>`,
+            title: "Marketing",
+            desc: "Content, e-mail, social media en AI-gestuurde campagnes die aansluiten bij jouw sales cyclus. Geen losse posts, maar een machine die maand na maand meer oplevert.",
+            color: "bg-lime-50 border-lime-100 text-lime-700",
+            cta: "Meer over Marketing",
+          },
+          {
+            href: "/oplossingen/strategie",
+            icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>`,
+            title: "Sales",
+            desc: "Wij verbinden marketing direct aan sales. Sluitende salesflows, scriptwerk en ondersteuning bij leadopvolging zodat deals daadwerkelijk gesloten worden.",
+            color: "bg-purple-50 border-purple-100 text-purple-600",
+            cta: "Meer over Sales",
+          },
+          {
+            href: "/oplossingen/onze-aanpak",
+            icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>`,
+            title: "Recruitment",
+            desc: "De juiste mensen aantrekken via employer branding en gerichte marketingcampagnes. Want groei vraagt ook om het juiste team.",
+            color: "bg-amber-50 border-amber-100 text-amber-600",
+            cta: "Meer over Recruitment",
+          },
+          {
+            href: "/oplossingen/onze-expertise",
+            icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"/></svg>`,
+            title: "CRM & Proces",
+            desc: "Structuur in je commerciële proces. Van CRM-inrichting tot geautomatiseerde opvolging, zodat geen lead meer door de mazen van het net valt.",
+            color: "bg-teal-50 border-teal-100 text-teal-600",
+            cta: "Meer over CRM & Proces",
+          },
+        ].map(item => (
+          <a href={item.href} class="warm-card p-6 sm:p-8 flex flex-col gap-4 group hover:shadow-lg hover:-translate-y-1 transition-all duration-300 no-underline">
+            <div class={`w-12 h-12 rounded-2xl border flex items-center justify-center shrink-0 ${item.color}`} set:html={item.icon} />
+            <div>
+              <h3 class="text-base sm:text-lg font-display font-bold text-brand-primary mb-2">{item.title}</h3>
+              <p class="text-sm text-brand-ink/70 leading-relaxed font-light">{item.desc}</p>
+            </div>
+            <div class="flex items-center gap-1.5 text-brand-accent text-sm font-display font-bold mt-auto">
+              {item.cta}
+              <svg class="w-4 h-4 transition-transform group-hover:translate-x-1 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Waarom losse bureaus niet werken -->
+  <section class="py-20 lg:py-28 px-6 bg-[#FFFAF4]">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
+
+        <!-- Left: argument -->
+        <div class="lg:w-1/2">
+          <div class="label-pill">Waarom losse bureaus niet werken</div>
+          <h2 class="text-3xl lg:text-4xl font-display font-bold text-brand-primary mb-5">
+            Iedereen verantwoordelijk.<br /><span class="text-brand-accent">Niemand aansprakelijk.</span>
+          </h2>
+          <p class="text-lg text-brand-ink/70 leading-relaxed font-light mb-5">
+            Je SEO-bureau zorgt voor traffic. Je brandingbureau voor een mooie site. Je marketingbureau voor nieuwsbrieven. Maar niemand weet waarom de aanvragen uitblijven — want niemand heeft het totaalplaatje.
+          </p>
+          <p class="text-brand-ink/70 leading-relaxed font-light mb-8">
+            Bij Optimaal Groeien is er één aanspreekpunt dat verantwoordelijk is voor alles: van de eerste Google-zoekterm tot het moment dat een lead in jouw salesgesprek zit.
+          </p>
+          <div class="flex items-start gap-4 p-5 bg-white border border-amber-100 rounded-2xl shadow-sm">
+            <div class="w-10 h-10 bg-brand-accent/10 rounded-xl flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5 text-brand-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+            </div>
+            <div>
+              <div class="text-sm font-display font-bold text-brand-primary mb-1">Gemiddeld 3 tot 5 losse bureaus per B2B-bedrijf</div>
+              <div class="text-sm text-brand-ink/60 font-light">Dat is driemaal de overhead, driemaal de inwerktijd en driemaal de miscommunicatie.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: comparison table -->
+        <div class="lg:w-1/2 w-full">
+          <div class="bg-white rounded-[28px] border border-amber-100 shadow-lg overflow-hidden">
+
+            <!-- Table header -->
+            <div class="grid grid-cols-[1fr_1fr_1fr] bg-brand-primary text-white text-[10px] sm:text-xs font-display font-bold uppercase tracking-widest">
+              <div class="p-4 sm:p-5 border-r border-white/10">Aspect</div>
+              <div class="p-4 sm:p-5 border-r border-white/10 text-center text-white/60">Losse bureaus</div>
+              <div class="p-4 sm:p-5 text-center text-brand-lime">Optimaal Groeien</div>
+            </div>
+
+            <!-- Table rows -->
+            {[
+              ["Aanspreekpunt",      "Meerdere",          "Eén vast contact"],
+              ["Strategie",         "Elk bureau los",    "Geïntegreerd plan"],
+              ["Snelheid",          "Wachten",           "Live in 30 dagen"],
+              ["Verantwoording",    "Verdeeld",          "Wij zijn aansprakelijk"],
+              ["Sectorkennis",      "Generiek",          "Puur technisch B2B"],
+              ["Kosten",            "3–5× overhead",     "Één maandtarief"],
+              ["Groeigarantie",     "Geen",              "Gratis door na 6 mnd"],
+            ].map((row, i) => (
+              <div class={`grid grid-cols-[1fr_1fr_1fr] border-b border-amber-50 ${i % 2 === 0 ? 'bg-white' : 'bg-[#FFFAF4]'}`}>
+                <div class="p-3 sm:p-4 border-r border-amber-100 flex items-center">
+                  <span class="text-[11px] sm:text-xs font-display font-bold text-brand-primary leading-snug">{row[0]}</span>
+                </div>
+                <div class="p-3 sm:p-4 border-r border-amber-100 flex items-center justify-center">
+                  <div class="flex items-center gap-1">
+                    <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5 text-red-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+                    <span class="text-[10px] sm:text-[11px] text-brand-ink/50 font-light leading-snug">{row[1]}</span>
+                  </div>
+                </div>
+                <div class="p-3 sm:p-4 flex items-center justify-center">
+                  <div class="flex items-center gap-1">
+                    <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5 text-brand-lime shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span class="text-[10px] sm:text-[11px] text-brand-primary font-bold leading-snug">{row[2]}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Stats -->
+  <section class="py-20 lg:py-28 px-6 bg-white relative overflow-hidden">
+    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+      <div class="w-[700px] h-[700px] rounded-full bg-brand-accent/4 blur-[160px]"></div>
+    </div>
+    <div class="max-w-4xl mx-auto relative z-10 text-center">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-brand-lime/15 border border-brand-lime/25 rounded-full text-[11px] uppercase tracking-widest font-bold text-lime-700 mb-8">
+        Resultaat in de praktijk
+      </div>
+      <blockquote class="text-[1.75rem] lg:text-[2.6rem] font-display font-bold text-brand-primary leading-[1.2] tracking-tight mb-10">
+        "Technische B2B-bedrijven met een geïntegreerd commercieel systeem
+        <span class="text-brand-accent"> groeien twee keer zo snel</span>
+        als bedrijven die het per losse opdracht oplossen."
+      </blockquote>
+
+      <div class="grid grid-cols-3 gap-6 mt-10">
+        <div class="text-center">
+          <div class="text-4xl lg:text-5xl font-display font-black text-brand-primary mb-2">+150<span class="text-brand-accent text-xl lg:text-2xl">%</span></div>
+          <div class="text-xs sm:text-sm text-brand-ink/60 font-light">organisch verkeer na 6 maanden</div>
+        </div>
+        <div class="text-center border-x border-amber-100 px-2">
+          <div class="text-4xl lg:text-5xl font-display font-black text-brand-primary mb-2">3<span class="text-brand-accent text-xl lg:text-2xl">×</span></div>
+          <div class="text-xs sm:text-sm text-brand-ink/60 font-light">meer gekwalificeerde aanvragen</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl lg:text-5xl font-display font-black text-brand-primary mb-2">&lt;30<span class="text-brand-accent text-lg lg:text-2xl ml-0.5">dgn</span></div>
+          <div class="text-xs sm:text-sm text-brand-ink/60 font-light">van start tot eerste resultaten</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Dark outro CTA -->
+  <section class="py-20 lg:py-28 px-6 bg-brand-primary relative overflow-hidden" id="contact">
+    <div class="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-white/5 blur-[140px] pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-brand-lime/5 blur-[120px] pointer-events-none"></div>
+
+    <div class="max-w-5xl mx-auto relative z-10 flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
+
+      <!-- Left: CTA text -->
+      <div class="lg:w-[55%] text-white">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-brand-lime/20 border border-brand-lime/30 rounded-full text-[11px] uppercase tracking-widest font-bold text-brand-lime mb-7">
+          Een team. Een aanpak. Een resultaat.
+        </div>
+        <h2 class="text-3xl lg:text-[2.75rem] font-display font-bold mb-5 leading-tight tracking-tight text-white">
+          Klaar om je commerciële machine
+          <span class="text-brand-lime"> écht op orde te brengen?</span>
+        </h2>
+        <p class="text-lg text-white/75 mb-8 leading-relaxed font-light">
+          In een vrijblijvend gesprek van 15 minuten kijken we samen naar jouw situatie. Waar lekt commerciële energie? Wat is de snelste win? Stefan staat persoonlijk voor je klaar.
+        </p>
+        <a href="https://meetings-eu1.hubspot.com/stefan-kelderman" target="_blank" rel="noreferrer"
+          class="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-9 py-5 bg-brand-accent text-white rounded-2xl font-display font-bold transition-all hover:scale-[1.02] shadow-xl text-base">
+          Plan je gratis gesprek van 15 minuten
+          <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <p class="mt-4 text-[10px] font-bold uppercase tracking-[0.3em] text-white/40">Stefan staat zelf voor je klaar &mdash; Max 4 plekken per maand</p>
+      </div>
+
+      <!-- Right: image + name card -->
+      <div class="lg:w-[45%] w-full">
+        <div class="relative">
+          <div class="rounded-[28px] overflow-hidden shadow-2xl">
+            <img
+              src="/images/oplossingen-team.webp"
+              alt="Stefan en het Optimaal Groeien team in gesprek met een B2B-klant"
+              class="w-full h-[320px] lg:h-[400px] object-cover"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-primary/60 to-transparent rounded-[28px]"></div>
+          </div>
+          <!-- Overlay name card -->
+          <div class="absolute bottom-5 left-5 right-5">
+            <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4">
+              <div class="text-white text-sm font-display font-bold mb-0.5">Stefan Kelderman</div>
+              <div class="text-white/70 text-xs font-light">Commercieel directeur &amp; oprichter</div>
+              <div class="text-brand-lime text-xs font-bold mt-1">Persoonlijk bereikbaar via Calendly</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</ServiceLayout>

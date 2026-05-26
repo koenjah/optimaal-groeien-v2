@@ -1,0 +1,460 @@
+---
+import ServiceLayout from '../layouts/ServiceLayout.astro';
+
+const cases = [
+  {
+    client: "Equans",
+    sector: "Techniek & Installatie",
+    slug: "equans",
+    challenge: "Equans genereerde nauwelijks nieuwe leads via digitale kanalen. Het salesteam was volledig afhankelijk van mond-tot-mondreclame en bestaande relaties.",
+    metric: "+400%",
+    metricLabel: "meer leads in 3 maanden",
+    quote: "Geen vaag marketingverhaal, maar een team dat snapt hoe de industrie werkt.",
+    author: "Marc de Boer",
+    authorTitle: "Commercieel Directeur · Equans",
+    image: "/images/case-equans.jpg",
+    tags: ["Leadgeneratie", "B2B marketing", "Techniek"],
+  },
+  {
+    client: "Veldkamp",
+    sector: "Industriële dienstverlening",
+    slug: "veldkamp",
+    challenge: "Veldkamp groeide al jaren op bestaande klanten. New business was bijna nul — geen structuur, geen funnel, geen systematische aanpak.",
+    metric: "+150%",
+    metricLabel: "omzetgroei uit new business",
+    quote: "Het heeft ons rust gegeven. We weten nu dat er continu nieuwe kansen binnenkomen.",
+    author: "Erik Veldkamp",
+    authorTitle: "Directeur · Veldkamp Industrie",
+    image: "/images/case-veldkamp.jpg",
+    tags: ["New business", "Salesfunnel", "Industrie"],
+  },
+  {
+    client: "Farrow + Dutch",
+    sector: "Recruitment & HR Tech",
+    slug: "farrow-dutch",
+    challenge: "Farrow + Dutch stond nauwelijks in de zoekresultaten. Concurrenten domineerden alle relevante zoektermen en de site converteerde niet.",
+    metric: "Nr. 1",
+    metricLabel: "in Google + 150% meer aanvragen",
+    quote: "We staan nu op nummer 1 voor de zoektermen die er echt toe doen. Dat had ik nooit voor mogelijk gehouden.",
+    author: "Directeur · Farrow + Dutch",
+    authorTitle: "Farrow + Dutch",
+    image: "/images/case-farrow.png",
+    tags: ["SEO", "Organisch verkeer", "Recruitment"],
+  },
+  {
+    client: "Avia Volt",
+    sector: "Energie & Duurzaamheid",
+    slug: "avia-volt",
+    challenge: "Avia Volt was actief in een groeimarkt maar slaagde er niet in zichtbaarheid en leadstroom op te bouwen in het tempo van de markt.",
+    metric: "+34%",
+    metricLabel: "groei in korte tijd",
+    quote: "In een paar maanden zagen we meer resultaat dan in de twee jaar ervoor.",
+    author: "Commercieel team · Avia Volt",
+    authorTitle: "Avia Volt",
+    image: "/images/case-aviavolt.jpg",
+    tags: ["Groei", "Duurzaamheid", "Leadgeneratie"],
+  },
+  {
+    client: "Plintenfabriek",
+    sector: "Productie & E-commerce",
+    slug: "plintenfabriek",
+    challenge: "Na een sitewissel zakte Plintenfabriek weg in Google. Concurrenten namen hun posities over en het verkeer daalde maand na maand.",
+    metric: "Nr. 1",
+    metricLabel: "in Google binnen 3 maanden",
+    quote: "Van weggezakt naar marktleider in drie maanden. Dit had ik niet voor mogelijk gehouden.",
+    author: "Eigenaar · Plintenfabriek",
+    authorTitle: "Plintenfabriek",
+    image: "/images/case-plintenfabriek.jpg",
+    tags: ["SEO", "Herstel", "E-commerce"],
+  },
+  {
+    client: "Carbify",
+    sector: "Duurzaamheid & B2B SaaS",
+    slug: "carbify",
+    challenge: "Carbify wilde internationaal groeien maar miste de structuur en het netwerk om buiten Nederland actief nieuwe klanten aan te trekken.",
+    metric: "+35%",
+    metricLabel: "internationale B2B-groei",
+    quote: "Met Optimaal Groeien als partner konden we eindelijk de stap naar internationale klanten zetten.",
+    author: "CEO · Carbify",
+    authorTitle: "Carbify",
+    image: "/images/case-carbify.jpg",
+    tags: ["Internationaal", "B2B", "Scale-up"],
+  },
+  {
+    client: "Paradera Park",
+    sector: "Hospitality & Vastgoed",
+    slug: "paradera-park",
+    challenge: "Paradera Park op Aruba had moeite bezoekers digitaal te bereiken en het unieke gevoel van het resort over te brengen naar potentiële kopers.",
+    metric: "Succesvol",
+    metricLabel: "verkopen via digitale kanalen",
+    quote: "Eindelijk een team dat begrijpt hoe je gevoel verkoopt — ook online.",
+    author: "Management · Paradera Park",
+    authorTitle: "Paradera Park · Aruba",
+    image: "/images/case-paradera.jpg",
+    tags: ["Branding", "Vastgoed", "International"],
+  },
+];
+
+const featuredCases = cases.slice(0, 4);
+const compactCases = cases.slice(4);
+const allClientLogos: { name: string; logo: string | null }[] = [
+  { name: "Equans",               logo: "/images/klanten/equans.webp" },
+  { name: "Veldkamp",             logo: "/images/klanten/veldkamp.webp" },
+  { name: "Farrow + Dutch",       logo: "/images/klanten/farrow-dutch.webp" },
+  { name: "Avia Volt",            logo: "/images/klanten/avia-volt.webp" },
+  { name: "Plintenfabriek",       logo: "/images/klanten/plintenfabriek.webp" },
+  { name: "Carbify",              logo: "/images/klanten/carbify.webp" },
+  { name: "Paradera Park",        logo: "/images/klanten/paradera-park.webp" },
+  { name: "Laundry Total",        logo: "/images/klanten/laundry-total.webp" },
+  { name: "P. van Eijzeren",      logo: "/images/klanten/van-eijzeren.webp" },
+  { name: "Logistique",           logo: "/images/klanten/logistique.webp" },
+  { name: "Thuiszorgbed Voordeel",logo: "/images/klanten/thuiszorgbed-voordeel.webp" },
+  { name: "AHR Recycling",        logo: "/images/klanten/ahr-recycling.webp" },
+  { name: "Accura Flexcut",       logo: "/images/klanten/accura-flexcut.webp" },
+  { name: "Koot Flowers",         logo: "/images/klanten/koot-flowers.webp" },
+  { name: "People Jobs",          logo: "/images/klanten/people-jobs.webp" },
+  { name: "Ztahl",                logo: "/images/klanten/ztahl.webp" },
+  { name: "Unifloor",             logo: "/images/klanten/unifloor.webp" },
+  { name: "Ahorn",                logo: null },
+  { name: "MVB Couriers",         logo: "/images/klanten/mvb-couriers.webp" },
+  { name: "AS Kwadraad",          logo: "/images/klanten/as-kwadraad.webp" },
+  { name: "MSK",                  logo: "/images/klanten/msk.webp" },
+];
+
+const successTraits = [
+  {
+    title: "Een goed product of dienst",
+    desc: "Onze aanpak brengt meer klanten naar je toe. Maar die klanten moeten ook blij worden van wat je levert.",
+  },
+  {
+    title: "Ambitie voor structurele groei",
+    desc: "We werken niet met bedrijven die alleen een tijdelijke boost zoeken. Onze partners bouwen een systeem dat blijft werken.",
+  },
+  {
+    title: "Technische of B2B achtergrond",
+    desc: "We spreken de taal van je klanten en je branche. Dat maakt het verschil in elke campagne.",
+  },
+  {
+    title: "Directe communicatielijn",
+    desc: "We werken het liefst direct met de ondernemer of commercieel verantwoordelijke. Korte lijnen, snelle beslissingen.",
+  },
+];
+---
+
+<ServiceLayout
+  title="Klantcases — Resultaten voor B2B bedrijven | Optimaal Groeien"
+  description="Bekijk hoe technische B2B-bedrijven met Optimaal Groeien structureel meer klanten aantrekken. Echte resultaten, echte klanten."
+  canonical="https://optimaalgroeien.nl/klantcases"
+>
+
+  <!-- Hero -->
+  <section class="hero-warm pt-36 pb-20 px-6 relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-brand-accent/5 blur-[140px] pointer-events-none" aria-hidden="true"></div>
+    <div class="absolute bottom-0 left-[10%] w-[300px] h-[300px] rounded-full bg-brand-lime/5 blur-[100px] pointer-events-none" aria-hidden="true"></div>
+
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="flex flex-col lg:flex-row items-center gap-16">
+
+        <!-- Left: tekst -->
+        <div class="lg:w-[52%]">
+          <div class="label-pill">
+            <span class="w-2 h-2 bg-brand-accent rounded-full animate-pulse" aria-hidden="true"></span>
+            Bewezen resultaten
+          </div>
+
+          <h1 class="text-[2.4rem] lg:text-[3.5rem] font-display font-bold text-brand-primary leading-[1.08] tracking-tight mb-6">
+            Geen beloftes.<br />
+            <span class="text-brand-accent">Alleen resultaten.</span>
+          </h1>
+
+          <p class="text-lg text-brand-ink/70 max-w-xl leading-relaxed mb-10">
+            Technische B2B-bedrijven die met ons samenwerken groeien structureel. Niet door geluk, maar door systeem.
+          </p>
+
+          <!-- Aggregate metrics -->
+          <div class="flex flex-wrap gap-x-10 gap-y-6 mb-12">
+            {[
+              { num: "+400%", label: "meer leads (record)" },
+              { num: "7", label: "sectoren bediend" },
+              { num: "+150%", label: "gemiddelde groei new business" },
+            ].map(m => (
+              <div>
+                <div class="text-[2.8rem] font-display font-bold text-brand-primary leading-none">{m.num}</div>
+                <div class="text-[11px] text-brand-ink/50 uppercase tracking-widest font-bold mt-1.5">{m.label}</div>
+              </div>
+            ))}
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a
+              href="https://meetings-eu1.hubspot.com/stefan-kelderman"
+              target="_blank"
+              rel="noreferrer"
+              class="btn-primary w-full sm:w-auto"
+            >
+              Bespreek jouw kansen
+              <svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#cases" class="btn-ghost w-full sm:w-auto text-sm">
+              Bekijk de cases
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: gestapelde mockup collage -->
+        <div class="lg:w-[48%] w-full relative h-[340px] lg:h-[460px] hidden sm:block">
+          <!-- Achterste kaart -->
+          <div class="absolute top-0 right-8 w-[82%] rounded-[20px] overflow-hidden shadow-xl rotate-[3deg] border border-amber-100">
+            <img
+              src="/images/case-aviavolt.jpg"
+              alt="Avia Volt resultaten"
+              class="w-full h-52 lg:h-64 object-cover"
+              loading="eager"
+            />
+          </div>
+          <!-- Middelste kaart -->
+          <div class="absolute top-10 left-8 w-[82%] rounded-[20px] overflow-hidden shadow-xl -rotate-[2deg] border border-amber-100">
+            <img
+              src="/images/case-veldkamp.jpg"
+              alt="Veldkamp resultaten"
+              class="w-full h-52 lg:h-64 object-cover"
+              loading="eager"
+            />
+          </div>
+          <!-- Voorste kaart -->
+          <div class="absolute bottom-0 right-0 w-[75%] rounded-[20px] overflow-hidden shadow-2xl border border-white/80">
+            <img
+              src="/images/case-equans.jpg"
+              alt="Equans resultaten"
+              class="w-full h-44 lg:h-56 object-cover"
+              loading="eager"
+            />
+            <div class="bg-white px-4 py-3 flex items-center gap-3">
+              <div class="w-7 h-7 rounded-full bg-brand-accent/10 flex items-center justify-center shrink-0">
+                <svg class="w-3.5 h-3.5 text-brand-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div>
+                <div class="text-xs font-display font-bold text-brand-primary">Equans · +400% leads</div>
+                <div class="text-[10px] text-brand-ink/50">Techniek & Installatie</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured cases — 4 large cards -->
+  <section class="py-24 px-6 bg-white" id="cases">
+    <div class="max-w-7xl mx-auto">
+
+      <div class="mb-14">
+        <div class="label-pill">Uitgelichte cases</div>
+        <h2 class="text-3xl lg:text-4xl font-display font-bold text-brand-primary">
+          Wat structurele groei <span class="text-brand-accent">er in de praktijk uitziet</span>
+        </h2>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-8">
+        {featuredCases.map((c) => (
+          <article class="warm-card flex flex-col group">
+
+            <!-- Image with metric badge -->
+            <div class="relative overflow-hidden rounded-2xl h-56 sm:h-64 shrink-0">
+              <img
+                src={c.image}
+                alt={`Case ${c.client} — ${c.metricLabel}`}
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                loading="lazy"
+                width="800"
+                height="500"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-primary/65 via-transparent to-transparent"></div>
+              <div class="absolute bottom-4 left-4 max-w-[calc(100%-2rem)]">
+                <div class="inline-flex items-end gap-2 bg-brand-primary/85 backdrop-blur-sm border border-white/10 rounded-xl px-4 py-2.5">
+                  <span class="text-[2rem] font-display font-bold text-brand-accent leading-none">{c.metric}</span>
+                  <span class="text-[10px] text-white/75 uppercase tracking-widest font-bold pb-0.5 max-w-[130px] leading-tight">{c.metricLabel}</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Content -->
+            <div class="flex flex-col flex-1 p-6 lg:p-7">
+              <div class="text-[10px] text-brand-ink/40 uppercase tracking-widest font-bold mb-1">{c.sector}</div>
+              <h3 class="text-xl font-display font-bold text-brand-primary mb-3">{c.client}</h3>
+              <p class="text-sm text-brand-ink/65 leading-relaxed mb-5 flex-1">{c.challenge}</p>
+
+              <div class="mt-auto flex flex-wrap gap-2">
+                {c.tags.map((tag: string) => (
+                  <span class="text-[10px] font-bold uppercase tracking-widest px-2 py-1 bg-amber-50 text-brand-accent rounded-lg border border-amber-100">{tag}</span>
+                ))}
+              </div>
+            </div>
+
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Compact cases -->
+  <section class="py-20 px-6 bg-[#FFFAF4]">
+    <div class="max-w-7xl mx-auto">
+
+      <div class="mb-12">
+        <div class="label-pill">Meer cases</div>
+        <h2 class="text-3xl lg:text-4xl font-display font-bold text-brand-primary">
+          Meer bedrijven die resultaten boekten
+        </h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
+        {compactCases.map((c) => (
+          <article class="bg-white border border-amber-100/80 rounded-[24px] overflow-hidden group flex flex-col">
+            <div class="relative h-44 overflow-hidden shrink-0">
+              <img
+                src={c.image}
+                alt={`${c.client} — resultaten Optimaal Groeien`}
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                loading="lazy"
+                width="800"
+                height="500"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-primary/55 to-transparent"></div>
+              <div class="absolute bottom-3 left-3 max-w-[calc(100%-1.5rem)]">
+                <div class="text-[1.6rem] font-display font-bold text-brand-accent leading-none">{c.metric}</div>
+                <div class="text-[9px] text-white/75 uppercase tracking-widest font-bold leading-tight max-w-[120px]">{c.metricLabel}</div>
+              </div>
+            </div>
+            <div class="p-5 flex flex-col flex-1">
+              <div class="text-[10px] text-brand-ink/40 uppercase tracking-widest font-bold mb-1">{c.sector}</div>
+              <h3 class="text-base font-display font-bold text-brand-primary mb-2">{c.client}</h3>
+              <p class="text-xs text-brand-ink/60 leading-relaxed mb-4 flex-1">{c.challenge}</p>
+              <div class="flex flex-wrap gap-1.5 mt-auto">
+                {c.tags.map((tag: string) => (
+                  <span class="text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 bg-amber-50 text-brand-accent rounded-lg border border-amber-100">{tag}</span>
+                ))}
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Client name grid -->
+  <section class="py-20 px-6 bg-white">
+    <div class="max-w-7xl mx-auto">
+
+      <div class="text-center mb-12">
+        <div class="label-pill mx-auto w-fit">Onze klanten</div>
+        <h2 class="text-3xl lg:text-4xl font-display font-bold text-brand-primary">
+          Bedrijven die ons al vertrouwen
+        </h2>
+        <p class="text-brand-ink/60 mt-3 max-w-lg mx-auto text-base leading-relaxed">
+          Van scale-ups tot gevestigde industriele spelers — technische B2B-bedrijven die serieus willen groeien.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+        {allClientLogos.map((c) => (
+          <div class="flex items-center justify-center px-5 py-4 bg-[#FFFAF4] border border-amber-100 rounded-2xl hover:border-brand-accent/30 transition-all min-h-[72px]">
+            {c.logo ? (
+              <img
+                src={c.logo}
+                alt={c.name}
+                class="h-8 w-auto max-w-[140px] object-contain"
+                loading="lazy"
+              />
+            ) : (
+              <span class="text-sm font-display font-bold text-brand-primary/70 text-center leading-tight">{c.name}</span>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Pattern of success -->
+  <section class="py-24 px-6 bg-[#FFFAF4]">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-14 items-start">
+
+      <div class="lg:w-2/5 lg:sticky lg:top-32">
+        <div class="label-pill">Wat ze gemeen hebben</div>
+        <h2 class="text-3xl lg:text-4xl font-display font-bold text-brand-primary mb-5">
+          Bedrijven die hier resultaten halen <span class="text-brand-accent">herken je aan dit patroon</span>
+        </h2>
+        <p class="text-lg text-brand-ink/70 leading-relaxed mb-8">
+          We werken alleen samen als we zeker zijn dat we resultaat kunnen leveren. Dat betekent dat we scherp selecteren op een paar duidelijke signalen.
+        </p>
+        <div class="flex items-center gap-3 p-4 bg-white border border-amber-100 rounded-2xl w-fit">
+          <img
+            src="/images/stefan-teun.webp"
+            alt="Stefan Kelderman — oprichter Optimaal Groeien"
+            class="w-11 h-11 rounded-full object-cover shrink-0"
+            loading="lazy"
+            width="44"
+            height="44"
+          />
+          <div>
+            <div class="text-sm font-display font-bold text-brand-primary">Stefan Kelderman</div>
+            <div class="text-xs text-brand-ink/50 font-medium">Oprichter · Optimaal Groeien</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:w-3/5 grid sm:grid-cols-2 gap-5">
+        {successTraits.map(item => (
+          <div class="bg-white border border-amber-100/80 rounded-[22px] p-6 hover:border-brand-accent/25 transition-all">
+            <div class="w-8 h-8 rounded-xl bg-brand-accent/10 flex items-center justify-center mb-4">
+              <svg class="w-4 h-4 text-brand-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <h3 class="text-base font-display font-bold text-brand-primary mb-2">{item.title}</h3>
+            <p class="text-sm text-brand-ink/65 leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA outro -->
+  <section class="py-28 px-6 bg-brand-primary relative overflow-hidden" id="contact">
+    <div class="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-white/4 blur-[150px] pointer-events-none" aria-hidden="true"></div>
+    <div class="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-brand-lime/5 blur-[120px] pointer-events-none" aria-hidden="true"></div>
+
+    <div class="max-w-3xl mx-auto relative z-10 text-center">
+
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-brand-lime/15 border border-brand-lime/25 rounded-full text-[11px] uppercase tracking-widest font-bold text-brand-lime mb-8">
+        Het volgende succesverhaal
+      </div>
+
+      <h2 class="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-white mb-6 leading-tight tracking-tight">
+        Jij bent de volgende.
+      </h2>
+
+      <p class="text-lg text-white/65 max-w-xl mx-auto leading-relaxed mb-10">
+        Elke klant op deze pagina begon met een gesprek. Geen verplichtingen, geen verkooppraatje. Gewoon eerlijk kijken of het klikt.
+      </p>
+
+      <a
+        href="https://meetings-eu1.hubspot.com/stefan-kelderman"
+        target="_blank"
+        rel="noreferrer"
+        class="inline-flex items-center justify-center gap-3 w-full sm:w-auto px-12 py-5 bg-brand-accent text-white rounded-2xl font-display font-bold transition-all hover:scale-[1.02] shadow-2xl shadow-brand-accent/20 text-base mb-5"
+      >
+        Plan je gratis kennismaking
+        <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+
+      <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/35">
+        Stefan staat zelf voor je klaar &mdash; max 4 per maand
+      </p>
+
+    </div>
+  </section>
+
+</ServiceLayout>

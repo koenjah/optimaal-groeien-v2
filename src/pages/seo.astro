@@ -1,0 +1,220 @@
+---
+import ServiceLayout from '../layouts/ServiceLayout.astro';
+---
+
+<ServiceLayout
+  title="SEO voor B2B — Gevonden worden door de juiste beslissers | Optimaal Groeien"
+  description="B2B-SEO is anders dan consumentenmarketing. Langere sales cycles, meerdere beslissers, technische complexiteit. Wij bouwen SEO als onderdeel van je volledige commerciële systeem."
+  canonical="https://optimaalgroeien.nl/seo"
+>
+
+  <!-- Hero -->
+  <section class="hero-warm pt-36 pb-24 px-6 relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-brand-accent/5 blur-[140px] pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="max-w-3xl">
+        <div class="label-pill">
+          <span class="w-2 h-2 bg-brand-accent rounded-full animate-pulse"></span>
+          Zoekmachine-optimalisatie voor B2B
+        </div>
+        <h1 class="text-[2.4rem] lg:text-[3.4rem] font-display font-bold text-brand-primary leading-[1.1] tracking-tight mb-6">
+          Jouw ideale klant zoekt nu.<br />
+          <span class="text-brand-accent">Staat jij er al?</span>
+        </h1>
+        <p class="text-lg text-brand-ink/70 max-w-xl leading-relaxed mb-10">
+          De inkoper, de directeur, de technisch specialist — ze googelen allemaal voordat ze bellen. Wij zorgen dat zij jou vinden op het moment dat het telt. Niet toevallig, maar structureel.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a href="https://meetings-eu1.hubspot.com/stefan-kelderman" target="_blank" rel="noreferrer"
+            class="btn-primary w-full sm:w-auto">
+            Plan een gesprek
+          </a>
+          <a href="/seo-check"
+            class="w-full sm:w-auto px-7 py-4 bg-white text-brand-primary rounded-2xl font-display font-bold transition-all hover:scale-[1.02] border-2 border-amber-100 shadow-sm flex items-center justify-center gap-2 text-sm">
+            Gratis SEO-check aanvragen
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Waarom B2B SEO anders is -->
+  <section class="py-24 px-6 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col lg:flex-row gap-16 items-start">
+
+        <!-- Left: uitleg -->
+        <div class="lg:w-[48%]">
+          <div class="label-pill">Waarom B2B anders is</div>
+          <h2 class="text-3xl lg:text-4xl font-display font-bold text-brand-primary mb-6">
+            Jouw klant googelt anders<br /><span class="text-brand-accent">dan een consument.</span>
+          </h2>
+          <p class="text-lg text-brand-ink/70 leading-relaxed font-light mb-5">
+            Een inkoper in de industrie zoekt niet op "beste leverancier". Hij zoekt op "toeleverancier precisieonderdelen Oost-Nederland" of "ISO-gecertificeerde lasspecialist machinebouw". Lage volumes, enorm hoge intentie.
+          </p>
+          <p class="text-brand-ink/70 leading-relaxed font-light">
+            We richten ons op de zoekwoorden waar jouw ideale klant al klaar is om contact op te nemen. Niet op brede termen die alleen traffic trekken.
+          </p>
+        </div>
+
+        <!-- Right: 3 kaarten -->
+        <div class="lg:w-[52%] grid grid-cols-1 gap-4">
+          {[
+            {
+              title: "Lange sales cycles vragen geduld",
+              desc: "B2B beslissingen duren weken tot maanden. Goede SEO zorgt dat jij al aanwezig bent voordat de RFQ uitgestuurd wordt.",
+            },
+            {
+              title: "Meerdere beslissers, meerdere zoekvragen",
+              desc: "De inkoper, de directeur, de technisch specialist — ze googelen allemaal anders. Wij schrijven voor elk van hen.",
+            },
+            {
+              title: "Technische sectoren zoeken technisch",
+              desc: "We begrijpen de industrie. Onze content klinkt als iemand die echt snapt wat jij doet — geen generieke teksten.",
+            },
+          ].map(item => (
+            <div class="warm-card p-7">
+              <h3 class="text-base font-display font-bold text-brand-primary mb-2">{item.title}</h3>
+              <p class="text-sm text-brand-ink/70 leading-relaxed font-light">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Aanpak: 4 stappen -->
+  <section class="py-24 px-6 bg-[#FFFAF4]">
+    <div class="max-w-7xl mx-auto">
+
+      <div class="max-w-2xl mb-14">
+        <div class="label-pill">Onze aanpak</div>
+        <h2 class="text-3xl lg:text-4xl font-display font-bold text-brand-primary mb-4">
+          SEO als onderdeel van<br /><span class="text-brand-accent">het commerciële systeem.</span>
+        </h2>
+        <p class="text-lg text-brand-ink/70 leading-relaxed font-light">
+          SEO staat bij ons nooit op zichzelf. Het is de basis waaraan branding, content en salesflow hangen — zodat elk onderdeel het andere versterkt.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        {[
+          {
+            step: "1",
+            title: "Zoekwoordonderzoek op maat",
+            desc: "We brengen in kaart welke zoektermen jouw ideale klanten gebruiken — in hun taal, voor hun sector.",
+          },
+          {
+            step: "2",
+            title: "Technische optimalisatie",
+            desc: "We zorgen dat Google jouw site snel vindt, goed begrijpt en hoog waardeert. Van structuur tot laadsnelheid.",
+          },
+          {
+            step: "3",
+            title: "Content die rankt én overtuigt",
+            desc: "We schrijven niet voor robots. We schrijven voor beslissers — met echte kennis van jouw vakgebied.",
+          },
+          {
+            step: "4",
+            title: "Autoriteitsopbouw",
+            desc: "Relevante backlinks, sectorpublicaties, thought leadership. Jouw naam als dé expert in jouw niche.",
+          },
+        ].map(item => (
+          <div class="warm-card p-8 flex flex-col gap-4">
+            <div class="w-12 h-12 bg-brand-accent/10 border border-amber-200 rounded-2xl flex items-center justify-center font-display font-black text-brand-accent text-xl shrink-0">
+              {item.step}
+            </div>
+            <h3 class="text-base font-display font-bold text-brand-primary">{item.title}</h3>
+            <p class="text-sm text-brand-ink/70 leading-relaxed font-light">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Outro / CTA -->
+  <section class="py-24 px-6 bg-brand-primary relative overflow-hidden" id="contact">
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-white/5 blur-[120px] pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-[360px] h-[360px] rounded-full bg-brand-lime/5 blur-[100px] pointer-events-none"></div>
+
+    <div class="max-w-5xl mx-auto relative z-10 flex flex-col lg:flex-row gap-16 items-start">
+
+      <!-- Left: tekst + CTA -->
+      <div class="w-full lg:w-[58%] text-white">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-brand-lime/20 border border-brand-lime/30 rounded-full text-[11px] uppercase tracking-widest font-bold text-brand-lime mb-8">
+          SEO is een onderdeel. Niet het eindpunt.
+        </div>
+        <h2 class="text-3xl lg:text-5xl font-display font-bold mb-6 leading-tight tracking-tight text-white">
+          Rankings helpen.<br /><span class="text-brand-lime">Een systeem dat groeit werkt beter.</span>
+        </h2>
+        <p class="text-lg text-white/80 mb-8 leading-relaxed font-light">
+          Goede SEO brengt de juiste mensen naar je website. Maar als je branding niet klopt, je content niet overtuigt of je salesproces niet aansluit — verlies je ze alsnog. Wij bouwen het als één geheel: jouw volledige commerciële afdeling.
+        </p>
+
+        <div class="space-y-3 mb-10">
+          {[
+            {
+              title: "Eén partner, geen losse bureaus",
+              sub: "Geen SEO-bureau én contentbureau én brandingbureau. Wij zijn de afdeling die je niet zelf hoeft samen te stellen.",
+            },
+            {
+              title: "Binnen 30 dagen live",
+              sub: "We gaan snel, maar grondig. Geen maandlange trajecten voordat er iets zichtbaars gebeurt.",
+            },
+            {
+              title: "Resultaat of gratis door",
+              sub: "Na 6 maanden geen groei? Dan werken we gratis door totdat die er is.",
+            },
+          ].map(item => (
+            <div class="flex items-start gap-4 p-4 bg-white/5 border border-white/10 rounded-2xl">
+              <svg class="w-5 h-5 text-brand-lime shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <div>
+                <div class="text-sm font-display font-bold text-white mb-0.5">{item.title}</div>
+                <div class="text-xs text-white/60 font-medium leading-relaxed">{item.sub}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <!-- Emotionele slotzin -->
+        <p class="text-white/50 text-sm italic mb-6 leading-relaxed">
+          Elke dag dat jij onzichtbaar bent, staat je concurrent wel bovenaan. Die klant gaat niet wachten.
+        </p>
+
+        <a href="https://meetings-eu1.hubspot.com/stefan-kelderman" target="_blank" rel="noreferrer"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-10 py-5 bg-brand-accent text-white rounded-2xl font-display font-bold transition-all hover:scale-[1.02] shadow-xl text-base">
+          Plan je gratis analyse
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <p class="mt-4 text-[10px] font-bold uppercase tracking-[0.3em] text-white/40">Stefan staat zelf voor je klaar — max 4 plekken per maand</p>
+      </div>
+
+      <!-- Right: resultaatcijfers -->
+      <div class="w-full lg:w-[42%]">
+        <div class="bg-white/5 border border-white/10 rounded-[28px] p-8 lg:p-10">
+          <div class="text-brand-lime text-[11px] font-bold uppercase tracking-widest mb-8">Gemiddeld na 6 maanden samenwerking</div>
+          <div class="space-y-7">
+            <div>
+              <div class="text-5xl font-display font-black text-white mb-1">+150<span class="text-brand-accent text-2xl ml-1">%</span></div>
+              <div class="text-sm text-white/60 font-light">organisch verkeer</div>
+            </div>
+            <div class="h-px bg-white/10"></div>
+            <div>
+              <div class="text-5xl font-display font-black text-white mb-1">3<span class="text-brand-accent text-2xl ml-1">×</span></div>
+              <div class="text-sm text-white/60 font-light">meer gekwalificeerde aanvragen</div>
+            </div>
+            <div class="h-px bg-white/10"></div>
+            <div>
+              <div class="text-5xl font-display font-black text-white mb-1">Top<span class="text-brand-accent text-2xl ml-1">3</span></div>
+              <div class="text-sm text-white/60 font-light">voor de zoektermen die ertoe doen</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</ServiceLayout>

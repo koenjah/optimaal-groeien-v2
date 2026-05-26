@@ -1,0 +1,374 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+---
+
+<ServiceLayout
+  darkHero={true}
+  title="Commerciële strategie voor technische B2B-bedrijven | Optimaal Groeien"
+  description="Van ambitie naar een concreet commercieel routeplan. Optimaal Groeien bouwt de strategie en voert die samen met je uit — zodat groei geen toeval meer is."
+  canonical="https://optimaalgroeien.nl/oplossingen/strategie"
+>
+
+  <!-- ============================================================ -->
+  <!-- Hero: Dark navy, stepping-stones visual hidden on mobile     -->
+  <!-- ============================================================ -->
+  <section class="bg-brand-primary pt-36 pb-24 px-6 relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-brand-lime/5 blur-[140px] pointer-events-none"></div>
+    <div class="absolute bottom-0 left-[10%] w-[400px] h-[400px] rounded-full bg-brand-accent/8 blur-[120px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="flex flex-col lg:flex-row gap-16 items-center">
+
+        <!-- Text content -->
+        <div class="lg:w-[55%]">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-brand-lime/15 border border-brand-lime/25 rounded-full text-[11px] uppercase tracking-widest font-bold text-brand-lime mb-8">
+            Commerciële strategie
+          </div>
+          <h1 class="text-[2rem] sm:text-[2.6rem] lg:text-[3.5rem] font-display font-bold text-white leading-[1.05] tracking-tight mb-6">
+            Groei zonder routekaart<br />
+            <span class="text-brand-lime">is gokken.</span>
+          </h1>
+          <p class="text-base sm:text-lg text-white/75 leading-relaxed mb-10 max-w-xl font-light">
+            Ambitie hebben is niet het probleem. Wat ontbreekt is het systematische pad ernaartoe — en iemand die meeloopt tot het doel bereikt is.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a href="https://meetings-eu1.hubspot.com/stefan-kelderman" target="_blank" rel="noreferrer"
+              class="btn-primary !py-4 !px-9 text-sm !bg-brand-accent w-full sm:w-auto justify-center">
+              Plan een strategiegesprek
+            </a>
+            <a href="#aanpak"
+              class="w-full sm:w-auto px-7 py-4 bg-white/10 text-white rounded-2xl font-display font-bold transition-all hover:bg-white/15 border border-white/15 flex items-center justify-center gap-2 text-sm">
+              Bekijk onze aanpak
+            </a>
+          </div>
+        </div>
+
+        <!-- Stepping-stones visual: hidden on mobile, shown from lg -->
+        <div class="hidden lg:flex lg:w-[45%] justify-end">
+          <div class="relative w-full max-w-[360px]">
+            <!-- Connecting vertical line -->
+            <div class="absolute left-[28px] top-[44px] bottom-[44px] w-[2px] bg-gradient-to-b from-brand-lime/60 via-brand-accent/40 to-brand-lime/20 rounded-full"></div>
+
+            {[
+              { num: "1", label: "Analyse & Doelbepaling", sub: "Waar sta je nu? Waar wil je naartoe?" },
+              { num: "2", label: "Markt & Positionering", sub: "Hoe win je een herkenbare positie?" },
+              { num: "3", label: "Commercieel Routeplan", sub: "Welke stappen, in welke volgorde?" },
+              { num: "4", label: "Implementatie & Bijsturing", sub: "Uitvoeren, meten, aanpassen." },
+            ].map((step, i) => (
+              <div class="flex items-start gap-5 mb-8 last:mb-0 relative z-10">
+                <div class={`w-14 h-14 rounded-2xl flex items-center justify-center shrink-0 font-display font-bold text-lg shadow-lg ${i === 0 ? 'bg-brand-lime text-brand-primary' : i === 3 ? 'bg-brand-accent text-white' : 'bg-white/10 border border-white/20 text-white'}`}>
+                  {step.num}
+                </div>
+                <div class="pt-2">
+                  <div class="text-white font-display font-bold text-base leading-tight mb-1">{step.label}</div>
+                  <div class="text-white/50 text-sm font-light">{step.sub}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- Section 2: Het strategievraagstuk — pull quote + context    -->
+  <!-- ============================================================ -->
+  <section class="py-20 px-6 bg-white">
+    <div class="max-w-7xl mx-auto">
+
+      <!-- Pull quote: scaled for mobile -->
+      <div class="max-w-3xl mb-16">
+        <div class="label-pill mb-6">Wat we horen</div>
+        <blockquote class="text-2xl sm:text-4xl lg:text-5xl font-display font-bold text-brand-primary leading-[1.2] tracking-tight pl-6 border-l-4 border-brand-accent">
+          "We weten wel wat we willen,<br class="hidden sm:block" />
+          maar niet welke stap nu."
+        </blockquote>
+      </div>
+
+      <!-- Two columns: pattern left, consequences right -->
+      <div class="flex flex-col lg:flex-row gap-12 items-start">
+
+        <div class="lg:w-1/2">
+          <h2 class="text-2xl lg:text-3xl font-display font-bold text-brand-primary mb-5">
+            Het vraagstuk van de <span class="text-brand-accent">technische ondernemer</span>
+          </h2>
+          <div class="space-y-4 text-brand-ink/70 leading-relaxed font-light text-base">
+            <p>
+              Technische bedrijven groeien op vakmanschap. Tot op een zeker punt werkt dat uitstekend.
+            </p>
+            <p>
+              Maar als je verder wilt — nieuwe sectoren, hogere marges, meer volume — schiet die aanpak tekort. Een helder commercieel plan met meetbare mijlpalen ontbreekt bijna altijd.
+            </p>
+            <p>
+              Het gevolg: je werkt hard, het bedrijf draait, maar de groei die je voor ogen hebt blijft uit. Niet door pech. Door het ontbreken van een routekaart.
+            </p>
+          </div>
+        </div>
+
+        <div class="lg:w-1/2">
+          <h3 class="text-[11px] font-bold uppercase tracking-widest text-brand-ink/40 mb-5">Wat er gebeurt zonder strategie</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {[
+              { title: "Groei op toeval", desc: "Nieuwe klanten komen binnen via netwerk en geluk — niet via een systeem dat je zelf stuurt." },
+              { title: "Beslissen op gevoel", desc: "Zonder richting leid je op intuïtie. Soms goed, maar niet schaalbaar." },
+              { title: "Versnipperde prioriteiten", desc: "Alles voelt urgent. De energie spreidt zich over te veel richtingen tegelijk." },
+              { title: "Concurrentie pakt de positie", desc: "Terwijl jij wacht, bouwen anderen hun merkpositie in jouw markt." },
+            ].map(item => (
+              <div class="warm-card p-6">
+                <h4 class="text-sm font-display font-bold text-brand-primary mb-2">{item.title}</h4>
+                <p class="text-sm text-brand-ink/60 leading-relaxed font-light">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- Section 3: Aanpak in 4 fases — vertical timeline            -->
+  <!-- ============================================================ -->
+  <section class="py-20 px-6 bg-[#FFFAF4]" id="aanpak">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-14">
+        <div class="label-pill mx-auto mb-6">Onze aanpak</div>
+        <h2 class="text-3xl lg:text-4xl font-display font-bold text-brand-primary mb-4">
+          Strategische aanpak in <span class="text-brand-accent">4 fases</span>
+        </h2>
+        <p class="text-base sm:text-lg text-brand-ink/60 max-w-xl mx-auto font-light leading-relaxed">
+          Van de eerste analyse tot een werkende commerciële machine — stap voor stap, zonder ruis.
+        </p>
+      </div>
+
+      <!-- Vertical timeline -->
+      <div class="relative">
+        <!-- Connecting line: desktop only -->
+        <div class="absolute left-[31px] top-10 bottom-10 w-[2px] bg-gradient-to-b from-brand-accent via-brand-primary/30 to-brand-lime hidden md:block"></div>
+
+        <div class="space-y-8">
+          {[
+            {
+              num: "01",
+              title: "Analyse & Doelbepaling",
+              desc: "We beginnen met een commerciële doorlichting. Waar sta je, wie zijn je klanten, wat drijft je marge, en wat houdt je groei tegen? Op basis daarvan bepalen we samen meetbare doelen voor de komende twaalf maanden.",
+              output: "Commercieel baselinerapport + groeidoelen op papier",
+              color: "bg-brand-accent",
+              textColor: "text-white",
+            },
+            {
+              num: "02",
+              title: "Markt & Positionering",
+              desc: "We brengen de markt in kaart: wie zijn je concurrenten, welke segmenten zijn onderbenut, en op welke positie kun jij je het sterkst onderscheiden? Niet op gevoel, maar op basis van data en sectorkennis.",
+              output: "Positioneringskeuze + segmentatiematrix per doelmarkt",
+              color: "bg-brand-primary",
+              textColor: "text-white",
+            },
+            {
+              num: "03",
+              title: "Commercieel Routeplan",
+              desc: "Met analyse en positionering als basis bouwen we het routeplan. Welke kanalen, welke acties, in welke volgorde? Prioriteiten worden hard gemaakt: wat doen we nu, wat later, wat laten we bewust staan.",
+              output: "Prioriteitenkaart voor 90 dagen + commercieel jaarplan",
+              color: "bg-brand-primary",
+              textColor: "text-white",
+            },
+            {
+              num: "04",
+              title: "Implementatie & Bijsturing",
+              desc: "Een plan zonder uitvoering is papier. Wij lopen mee in de implementatie, houden je accountable, meten resultaten en sturen bij zodra de realiteit afwijkt van het plan.",
+              output: "Lopende rapportage + maandelijkse bijsturing",
+              color: "bg-brand-lime",
+              textColor: "text-brand-primary",
+            },
+          ].map((phase) => (
+            <div class="flex gap-6 md:gap-10 items-start relative">
+              <!-- Number bubble -->
+              <div class={`w-16 h-16 rounded-2xl ${phase.color} flex items-center justify-center shrink-0 relative z-10 shadow-md`}>
+                <span class={`font-display font-bold text-sm ${phase.textColor}`}>{phase.num}</span>
+              </div>
+
+              <!-- Content card -->
+              <div class="flex-1 bg-white border border-amber-100/80 rounded-[24px] p-6 sm:p-8 shadow-sm">
+                <h3 class="text-lg sm:text-xl font-display font-bold text-brand-primary mb-3">{phase.title}</h3>
+                <p class="text-sm sm:text-base text-brand-ink/70 leading-relaxed font-light mb-5">{phase.desc}</p>
+                <div class="flex items-start gap-3 p-4 bg-[#FFFAF4] rounded-xl border border-amber-100">
+                  <svg class="w-4 h-4 text-brand-accent shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+                  <div>
+                    <div class="text-[10px] font-bold uppercase tracking-widest text-brand-ink/40 mb-1">Wat je na deze fase hebt</div>
+                    <div class="text-sm font-display font-bold text-brand-primary">{phase.output}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- Section 4: Strategie die leeft — text + stat block          -->
+  <!-- ============================================================ -->
+  <section class="py-20 px-6 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col lg:flex-row gap-14 items-center">
+
+        <!-- Text -->
+        <div class="lg:w-[55%]">
+          <div class="label-pill mb-6">Strategie die leeft</div>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-brand-primary mb-6 leading-tight">
+            Een strategie die na drie maanden<br class="hidden sm:block" />
+            <span class="text-brand-accent">in een la verdwijnt helpt niemand.</span>
+          </h2>
+          <div class="space-y-4 text-brand-ink/70 leading-relaxed font-light text-base mb-8">
+            <p>
+              De meeste strategiedocumenten worden gemaakt met goede bedoelingen en daarna nooit meer aangeraakt. Niet omdat de ondernemer het niet wil, maar omdat er niemand is die hem aan de afspraken houdt als de waan van de dag terugkomt.
+            </p>
+            <p>
+              Wij houden je accountable. We meten wat werkt, passen aan wat niet werkt, en zorgen dat het plan een levend document blijft — geen archief.
+            </p>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <div class="flex items-start gap-3 p-4 bg-[#FFFAF4] border border-amber-100 rounded-2xl flex-1">
+              <svg class="w-5 h-5 text-brand-lime shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <div>
+                <div class="text-sm font-display font-bold text-brand-primary mb-0.5">Tweewekelijkse check-in</div>
+                <div class="text-xs text-brand-ink/60 font-light">Voortgang bespreken, blokkades oplossen, plan aanpassen.</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 p-4 bg-[#FFFAF4] border border-amber-100 rounded-2xl flex-1">
+              <svg class="w-5 h-5 text-brand-lime shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <div>
+                <div class="text-sm font-display font-bold text-brand-primary mb-0.5">Maandelijkse voortgangsreview</div>
+                <div class="text-xs text-brand-ink/60 font-light">Data-gedreven evaluatie van wat werkt en wat niet.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stat block -->
+        <div class="lg:w-[45%] w-full">
+          <div class="bg-brand-primary rounded-[28px] sm:rounded-[32px] p-8 sm:p-10 text-white relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-[300px] h-[300px] rounded-full bg-brand-lime/8 blur-[80px] pointer-events-none"></div>
+            <div class="relative z-10">
+              <div class="text-brand-lime text-[10px] font-bold uppercase tracking-widest mb-8">Wat onze klanten meemaken</div>
+
+              <div class="mb-7 pb-7 border-b border-white/10">
+                <div class="text-[3.5rem] sm:text-[4rem] font-display font-bold text-white leading-none mb-2">6-9</div>
+                <div class="text-brand-lime text-sm font-bold uppercase tracking-wide mb-1">maanden</div>
+                <div class="text-white/60 text-sm font-light leading-relaxed">
+                  Gemiddelde doorlooptijd van eerste gesprek tot een volledig werkend commercieel systeem.
+                </div>
+              </div>
+
+              <div class="mb-7 pb-7 border-b border-white/10">
+                <div class="text-[3.5rem] sm:text-[4rem] font-display font-bold text-white leading-none mb-2">100%</div>
+                <div class="text-brand-lime text-sm font-bold uppercase tracking-wide mb-1">uitvoering inbegrepen</div>
+                <div class="text-white/60 text-sm font-light leading-relaxed">
+                  Geen adviesrapport dat je zelf moet uitvoeren. Wij pakken het mee op.
+                </div>
+              </div>
+
+              <div>
+                <div class="text-[3.5rem] sm:text-[4rem] font-display font-bold text-white leading-none mb-2">1</div>
+                <div class="text-brand-lime text-sm font-bold uppercase tracking-wide mb-1">vast aanspreekpunt</div>
+                <div class="text-white/60 text-sm font-light leading-relaxed">
+                  Stefan werkt zelf met je — geen doorverwijzingen naar juniors of andere consultants.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- Section 5: CTA — dark outro with micro-testimonials         -->
+  <!-- ============================================================ -->
+  <section class="py-20 px-6 bg-brand-primary relative overflow-hidden" id="contact">
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-white/5 blur-[120px] pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-[360px] h-[360px] rounded-full bg-brand-lime/5 blur-[100px] pointer-events-none"></div>
+
+    <div class="max-w-5xl mx-auto relative z-10 flex flex-col lg:flex-row gap-14 items-start">
+
+      <!-- CTA text -->
+      <div class="lg:w-[58%] text-white">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-brand-lime/20 border border-brand-lime/30 rounded-full text-[11px] uppercase tracking-widest font-bold text-brand-lime mb-8">
+          Strategie + uitvoering in één
+        </div>
+        <h2 class="text-2xl sm:text-3xl lg:text-[2.75rem] font-display font-bold mb-6 leading-tight tracking-tight text-white">
+          Jij bepaalt de ambitie.<br />
+          <span class="text-brand-lime">Wij zorgen voor het plan en de uitvoering.</span>
+        </h2>
+        <p class="text-base sm:text-lg text-white/75 mb-10 leading-relaxed font-light">
+          Een commerciële strategie is pas iets waard als hij uitgevoerd wordt. Bij Optimaal Groeien splitsen we dat niet op: wij bouwen de routekaart en lopen mee tot je er bent.
+        </p>
+
+        <div class="space-y-3 mb-10">
+          {[
+            {
+              title: "Van analyse tot actie in vier fases",
+              sub: "Na elke fase heb je iets concreets in handen.",
+            },
+            {
+              title: "Eén partner voor strategie en uitvoering",
+              sub: "Geen coaches die adviseren terwijl anderen uitvoeren.",
+            },
+            {
+              title: "Resultaat of gratis door",
+              sub: "Na zes maanden geen aantoonbare groei? Dan werken we gratis door totdat die er is.",
+            },
+          ].map(item => (
+            <div class="flex items-start gap-4 p-4 bg-white/5 border border-white/10 rounded-2xl">
+              <svg class="w-5 h-5 text-brand-lime shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <div>
+                <div class="text-sm font-display font-bold text-white mb-0.5">{item.title}</div>
+                <div class="text-xs text-white/60 font-light">{item.sub}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <a href="https://meetings-eu1.hubspot.com/stefan-kelderman" target="_blank" rel="noreferrer"
+          class="inline-flex items-center gap-2 px-8 sm:px-10 py-4 sm:py-5 bg-brand-accent text-white rounded-2xl font-display font-bold transition-all hover:scale-[1.02] shadow-xl text-base w-full sm:w-auto justify-center">
+          Plan een vrijblijvend strategiegesprek
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <p class="mt-4 text-[10px] font-bold uppercase tracking-[0.3em] text-white/50">Stefan staat zelf voor je klaar &mdash; Max 4 intakes per maand</p>
+      </div>
+
+      <!-- Micro-testimonials -->
+      <div class="lg:w-[42%] w-full">
+        <div class="bg-white/5 border border-white/10 rounded-[28px] p-8">
+          <div class="text-brand-lime text-[11px] font-bold uppercase tracking-widest mb-6">Wat anderen zeggen</div>
+          <div class="space-y-5">
+            {[
+              {
+                quote: "Voor het eerst in jaren weten we precies welke stap we zetten en waarom. Dat geeft rust én resultaat.",
+                name: "Pieter Janssen",
+                company: "Janssen Techniek · Industrie",
+              },
+              {
+                quote: "Stefan heeft ons geholpen de markt te kiezen in plaats van achter elke aanvraag aan te lopen. Dat verschil merk je direct.",
+                name: "Anke Verhoeven",
+                company: "Verhoeven Engineering · B2B",
+              },
+            ].map(t => (
+              <div class="p-5 bg-white/5 border border-white/10 rounded-2xl">
+                <p class="text-sm text-white/80 italic leading-relaxed mb-4">"{t.quote}"</p>
+                <div class="text-xs font-bold text-white">{t.name}</div>
+                <div class="text-[10px] text-white/50 uppercase tracking-widest">{t.company}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</ServiceLayout>

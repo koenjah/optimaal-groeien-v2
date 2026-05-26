@@ -1,0 +1,445 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+---
+
+<ServiceLayout
+  title="Branding voor B2B-bedrijven — Van onbekend naar autoriteit | Optimaal Groeien"
+  description="Jouw merk vertelt het verhaal vóórdat je klant de telefoon pakt. Wij bouwen de positionering, visuele identiteit en tone of voice die bij jou passen."
+  canonical="https://optimaalgroeien.nl/oplossingen/branding"
+>
+
+  <!-- Hero -->
+  <section class="hero-warm pt-36 pb-20 px-6 relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-brand-accent/5 blur-[140px] pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-[300px] h-[300px] rounded-full bg-amber-200/10 blur-[100px] pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="flex flex-col lg:flex-row gap-16 items-center">
+
+        <!-- Copy block -->
+        <div class="lg:w-[55%]">
+          <div class="label-pill">
+            <span class="w-2 h-2 bg-brand-accent rounded-full animate-pulse"></span>
+            Positionering & merkidentiteit
+          </div>
+          <h1 class="text-[2.4rem] lg:text-[3.25rem] font-display font-bold text-brand-primary leading-[1.1] tracking-tight mb-6">
+            Je merk praat al<br />
+            <span class="text-brand-accent">voordat jij dat doet.</span>
+          </h1>
+          <p class="text-lg text-brand-ink/70 max-w-xl leading-relaxed mb-8">
+            Als een klant jouw website bezoekt of jouw offerte opent, vormt hij al een oordeel. Over jouw kwaliteit, jouw betrouwbaarheid en of hij jou vertrouwt. Dat oordeel valt in seconden — en wordt bepaald door hoe je eruitziet en hoe je klinkt.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a href="https://meetings-eu1.hubspot.com/stefan-kelderman" target="_blank" rel="noreferrer"
+              class="btn-primary !py-4 !px-9 text-sm w-full sm:w-auto justify-center">
+              Plan een gesprek
+            </a>
+            <a href="#wat-is-branding"
+              class="w-full sm:w-auto px-7 py-4 bg-white text-brand-primary rounded-2xl font-display font-bold transition-all hover:scale-[1.02] border-2 border-amber-100 shadow-sm flex items-center justify-center gap-2 text-sm">
+              Wat wij doen
+            </a>
+          </div>
+        </div>
+
+        <!-- Brand composition visual — hidden on mobile -->
+        <div class="hidden lg:flex lg:w-[45%] justify-end">
+          <div class="relative w-full max-w-[420px]">
+            <div class="bg-white rounded-[32px] shadow-2xl shadow-brand-primary/10 border border-amber-100/60 p-8 relative overflow-hidden">
+              <div class="absolute top-0 right-0 w-[200px] h-[200px] rounded-full bg-brand-accent/5 blur-[60px] pointer-events-none"></div>
+
+              <!-- Before / After label -->
+              <div class="flex items-center gap-3 mb-6">
+                <span class="px-3 py-1 bg-brand-primary/8 text-brand-primary text-[10px] font-bold uppercase tracking-widest rounded-full border border-brand-primary/15">Voor</span>
+                <svg class="w-4 h-4 text-brand-accent shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                <span class="px-3 py-1 bg-brand-accent/15 text-brand-accent text-[10px] font-bold uppercase tracking-widest rounded-full border border-brand-accent/25">Na branding</span>
+              </div>
+
+              <!-- Skeleton comparison -->
+              <div class="grid grid-cols-2 gap-4 mb-6">
+                <div class="bg-[#f5f5f5] rounded-2xl p-4 flex flex-col gap-3">
+                  <div class="h-3 bg-gray-300 rounded-full w-3/4"></div>
+                  <div class="h-2 bg-gray-200 rounded-full w-full"></div>
+                  <div class="h-2 bg-gray-200 rounded-full w-5/6"></div>
+                  <div class="h-8 bg-gray-300 rounded-xl w-2/3 mt-1"></div>
+                  <p class="text-[9px] text-gray-400 font-medium uppercase tracking-widest">Generiek</p>
+                </div>
+                <div class="bg-brand-primary rounded-2xl p-4 flex flex-col gap-3">
+                  <div class="h-3 bg-brand-accent/70 rounded-full w-3/4"></div>
+                  <div class="h-2 bg-white/20 rounded-full w-full"></div>
+                  <div class="h-2 bg-white/20 rounded-full w-5/6"></div>
+                  <div class="h-8 bg-brand-accent rounded-xl w-2/3 mt-1"></div>
+                  <p class="text-[9px] text-brand-lime font-bold uppercase tracking-widest">Herkenbaar</p>
+                </div>
+              </div>
+
+              <!-- Pillars -->
+              <div class="space-y-2.5">
+                {[
+                  { label: "Positionering", color: "bg-brand-accent" },
+                  { label: "Visuele identiteit", color: "bg-brand-lime" },
+                  { label: "Tone of voice", color: "bg-brand-primary" },
+                  { label: "Merkervaring", color: "bg-brand-accent/50" },
+                ].map(p => (
+                  <div class="flex items-center gap-3">
+                    <div class={`w-2 h-2 rounded-full shrink-0 ${p.color}`}></div>
+                    <span class="text-xs text-brand-primary/70 font-medium">{p.label}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <!-- Floating badge -->
+            <div class="absolute -bottom-4 -left-4 bg-brand-accent text-white px-4 py-2 rounded-2xl text-xs font-display font-bold shadow-lg shadow-brand-accent/30">
+              Eerste indruk telt altijd
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Sectie 2: Pijnpunten -->
+  <section class="py-24 px-6 bg-white">
+    <div class="max-w-7xl mx-auto">
+
+      <div class="flex flex-col lg:flex-row gap-12 items-start mb-16">
+        <div class="lg:w-1/2">
+          <div class="label-pill">Herkenbare pijnpunten</div>
+          <h2 class="text-3xl lg:text-4xl font-display font-bold text-brand-primary mb-4">
+            Waarom technische bedrijven<br /><span class="text-brand-accent">moeite hebben met branding.</span>
+          </h2>
+        </div>
+        <div class="lg:w-1/2 lg:pt-12">
+          <p class="text-lg text-brand-ink/70 leading-relaxed font-light">
+            Technische bedrijven zijn doorgaans beter in wat ze maken dan in hoe ze het vertellen. Dat is geen zwakte. Maar in een markt waar concurrenten dezelfde specs aanbieden, is jouw verhaal het enige echte onderscheid.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-5">
+        {[
+          {
+            nr: "01",
+            title: "We verkopen op specs, niet op verhaal.",
+            desc: "Technische specificaties zijn het fundament. Maar de klant kiest op gevoel, vertrouwen en herkenbaarheid — niet op een productsheet.",
+          },
+          {
+            nr: "02",
+            title: "Onze website past niet bij onze kwaliteit.",
+            desc: "Je maakt topwerk, maar je website oogt verouderd. Dat contrast kost je opdrachten nog voordat het gesprek begint.",
+          },
+          {
+            nr: "03",
+            title: "We weten niet hoe we onszelf moeten positioneren.",
+            desc: "Je bent goed in van alles. Maar voor wie ben jij de beste keuze? Zonder scherpe positie ben je voor niemand de duidelijke voorkeur.",
+          },
+          {
+            nr: "04",
+            title: "We zeggen niet overal hetzelfde.",
+            desc: "Website, LinkedIn, offerte — overal klinkt het net anders. Dat gebrek aan consistentie ondermijnt vertrouwen, ook als je het zelf niet doorhebt.",
+          },
+        ].map(item => (
+          <div class="warm-card p-8 flex gap-6 items-start group hover:shadow-lg transition-all duration-300 overflow-hidden">
+            <div
+              class="text-[4.5rem] font-display font-black text-amber-100 group-hover:text-brand-accent/15 transition-colors duration-500 select-none leading-none shrink-0 pt-1"
+              aria-hidden="true"
+            >
+              {item.nr}
+            </div>
+            <div class="min-w-0">
+              <h3 class="text-lg font-display font-bold text-brand-primary mb-3 leading-tight">{item.title}</h3>
+              <p class="text-sm text-brand-ink/70 leading-relaxed font-light">{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Sectie 3: Vier lagen van branding -->
+  <section class="py-24 px-6 bg-[#FFFAF4]" id="wat-is-branding">
+    <div class="max-w-7xl mx-auto">
+
+      <div class="max-w-2xl mb-16">
+        <div class="label-pill">Onze aanpak</div>
+        <h2 class="text-3xl lg:text-4xl font-display font-bold text-brand-primary mb-4">
+          Wat wij onder branding<br /><span class="text-brand-accent">verstaan.</span>
+        </h2>
+        <p class="text-lg text-brand-ink/70 leading-relaxed font-light">
+          Branding is meer dan een logo of kleurpalet. Het is de totale indruk die jouw bedrijf achterlaat. Wij werken aan vier lagen die samen een merk bouwen dat herkenbaar, geloofwaardig en onderscheidend is.
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-6">
+
+        <!-- Positionering -->
+        <div class="bg-white rounded-[28px] p-8 lg:p-10 border-l-4 border-brand-accent shadow-sm">
+          <div class="inline-flex items-center px-3 py-1 bg-brand-accent/10 border border-brand-accent/20 rounded-full text-[10px] font-bold uppercase tracking-widest text-brand-accent mb-5">
+            Laag 1
+          </div>
+          <h3 class="text-xl lg:text-2xl font-display font-bold text-brand-primary mb-4">Positionering</h3>
+          <p class="text-base text-brand-ink/70 leading-relaxed font-light mb-3">
+            Positionering beantwoordt drie vragen: wie ben je, voor wie, en waarom jij? Wij helpen je bepalen welke niche je echt dient en wat jou onderscheidt van de concurrent.
+          </p>
+          <p class="text-sm text-brand-ink/50 leading-relaxed font-light">
+            Een scherpe positie zorgt dat de juiste klant jou onmiddellijk begrijpt — en de verkeerde klant afvalt voordat hij belt.
+          </p>
+        </div>
+
+        <!-- Visuele identiteit -->
+        <div class="bg-white rounded-[28px] p-8 lg:p-10 border-l-4 border-brand-primary shadow-sm">
+          <div class="inline-flex items-center px-3 py-1 bg-brand-primary/8 border border-brand-primary/15 rounded-full text-[10px] font-bold uppercase tracking-widest text-brand-primary mb-5">
+            Laag 2
+          </div>
+          <h3 class="text-xl lg:text-2xl font-display font-bold text-brand-primary mb-4">Visuele identiteit</h3>
+          <p class="text-base text-brand-ink/70 leading-relaxed font-light mb-3">
+            Logo, kleuren, typografie en fotostijl — de bouwstenen waarmee jouw merk op het netvlies blijft. Niet als trucje, maar als systeem dat consistent werkt op elke drager.
+          </p>
+          <p class="text-sm text-brand-ink/50 leading-relaxed font-light">
+            Wie overal hetzelfde eruitziet, oogt professioneel — ongeacht het formaat.
+          </p>
+        </div>
+
+        <!-- Tone of voice -->
+        <div class="bg-white rounded-[28px] p-8 lg:p-10 border-l-4 border-brand-lime shadow-sm">
+          <div class="inline-flex items-center px-3 py-1 bg-brand-lime/20 border border-brand-lime/30 rounded-full text-[10px] font-bold uppercase tracking-widest text-[#6b7a0c] mb-5">
+            Laag 3
+          </div>
+          <h3 class="text-xl lg:text-2xl font-display font-bold text-brand-primary mb-4">Tone of voice</h3>
+          <p class="text-base text-brand-ink/70 leading-relaxed font-light mb-3">
+            Hoe klinkt jouw bedrijf? Formeel of direct? Technisch of toegankelijk? De manier waarop je schrijft en spreekt is net zo onderscheidend als je logo.
+          </p>
+          <p class="text-sm text-brand-ink/50 leading-relaxed font-light">
+            Van website tot offerte tot LinkedIn-bericht — dezelfde stem, dezelfde indruk.
+          </p>
+        </div>
+
+        <!-- Merkervaring -->
+        <div class="bg-white rounded-[28px] p-8 lg:p-10 border-l-4 border-brand-accent/50 shadow-sm">
+          <div class="inline-flex items-center px-3 py-1 bg-brand-accent/8 border border-brand-accent/15 rounded-full text-[10px] font-bold uppercase tracking-widest text-brand-accent mb-5">
+            Laag 4
+          </div>
+          <h3 class="text-xl lg:text-2xl font-display font-bold text-brand-primary mb-4">Merkervaring</h3>
+          <p class="text-base text-brand-ink/70 leading-relaxed font-light mb-3">
+            De som van alle contactmomenten: website, offerte, nieuwsbrief, LinkedIn, sales deck. Branding is pas sterk als elk touchpoint klopt.
+          </p>
+          <p class="text-sm text-brand-ink/50 leading-relaxed font-light">
+            Een klant die drie keer hetzelfde sterke gevoel krijgt, vertrouwt jou al voordat het gesprek begint.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Sectie 4: Van onbekend naar autoriteit -->
+  <section class="py-24 px-6 bg-white">
+    <div class="max-w-7xl mx-auto">
+
+      <div class="text-center mb-16">
+        <div class="label-pill mx-auto">Het traject</div>
+        <h2 class="text-3xl lg:text-4xl font-display font-bold text-brand-primary mb-4">
+          Van onbekend naar autoriteit.
+        </h2>
+        <p class="text-lg text-brand-ink/70 max-w-xl mx-auto leading-relaxed font-light">
+          Branding bouw je stap voor stap. Dit is het traject dat wij met je doorlopen — van nulmeting tot een merk dat werkt als je sterkste salestool.
+        </p>
+      </div>
+
+      <!-- Stage progression — stacks to single column on mobile -->
+      <div class="relative">
+        <!-- Connecting line — desktop only -->
+        <div class="hidden lg:block absolute top-[52px] left-[calc(12.5%+32px)] right-[calc(12.5%+32px)] h-px bg-gradient-to-r from-amber-100 via-brand-accent/30 to-brand-primary/30 z-0"></div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 relative z-10">
+          {[
+            {
+              stage: "1",
+              label: "Onzichtbaar",
+              title: "Nulmeting",
+              desc: "We brengen in kaart hoe jouw merk nu overkomt — op website, LinkedIn en ten opzichte van concurrenten.",
+              highlight: false,
+              labelColor: "bg-amber-50 border-amber-200 text-amber-700",
+            },
+            {
+              stage: "2",
+              label: "In ontwikkeling",
+              title: "Positionering",
+              desc: "We bepalen jouw scherpe marktpositie. Wie je bent, voor wie, en waarom. Vastgelegd in een helder positioneringsdocument.",
+              highlight: false,
+              labelColor: "bg-orange-50 border-orange-200 text-orange-700",
+            },
+            {
+              stage: "3",
+              label: "Herkenbaar",
+              title: "Identiteit",
+              desc: "Visuele identiteit en tone of voice worden uitgewerkt. Alles klopt — van logo tot taalgebruik tot fotostijl.",
+              highlight: false,
+              labelColor: "bg-blue-50 border-blue-200 text-blue-700",
+            },
+            {
+              stage: "4",
+              label: "Autoriteit",
+              title: "Marktpositie",
+              desc: "Jouw merk werkt. Klanten herkennen je, vertrouwen je en kiezen je — ook als concurrenten vergelijkbaar lijken.",
+              highlight: true,
+              labelColor: "bg-brand-accent/10 border-brand-accent/30 text-brand-accent",
+            },
+          ].map(s => (
+            <div class={`flex flex-col items-center text-center p-6 rounded-[24px] ${s.highlight ? 'bg-brand-accent/5 border border-brand-accent/20' : 'bg-white border border-amber-50'}`}>
+              <div class={`w-14 h-14 rounded-[18px] font-display font-black text-xl flex items-center justify-center mb-5 shadow-sm ${s.highlight ? 'bg-brand-accent text-white shadow-xl shadow-brand-accent/25 scale-110' : 'bg-white border-2 border-amber-100 text-brand-primary'}`}>
+                {s.stage}
+              </div>
+              <span class={`inline-flex items-center px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-widest border mb-4 ${s.labelColor}`}>
+                {s.label}
+              </span>
+              <h3 class={`text-base font-display font-bold mb-3 ${s.highlight ? 'text-brand-accent' : 'text-brand-primary'}`}>{s.title}</h3>
+              <p class="text-sm text-brand-ink/70 leading-relaxed font-light">{s.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Extra drie beloften -->
+      <div class="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {[
+          {
+            title: "Geen uitbestede templates.",
+            desc: "We werken met jou — niet over jou heen. De uitkomst klinkt als jij, maar dan scherper en consistenter.",
+          },
+          {
+            title: "Eén document dat alles stuurt.",
+            desc: "We leveren een merkdocument dat als intern kompas dient. Iedereen in je team weet hoe jullie klinken en wat jullie uitstralen.",
+          },
+          {
+            title: "Gebouwd voor de lange termijn.",
+            desc: "Een sterk merk hoef je niet elk jaar opnieuw op te bouwen. Het fundament schaalt mee met jouw groei.",
+          },
+        ].map(item => (
+          <div class="warm-card p-8">
+            <div class="w-8 h-1 bg-brand-accent rounded-full mb-5"></div>
+            <h3 class="text-base font-display font-bold text-brand-primary mb-3">{item.title}</h3>
+            <p class="text-sm text-brand-ink/70 leading-relaxed font-light">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Sectie 5: Dark outro -->
+  <section class="py-24 px-6 bg-brand-primary relative overflow-hidden" id="contact">
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-white/5 blur-[120px] pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-[360px] h-[360px] rounded-full bg-brand-lime/5 blur-[100px] pointer-events-none"></div>
+
+    <div class="max-w-5xl mx-auto relative z-10">
+      <div class="flex flex-col lg:flex-row gap-16 items-start">
+
+        <!-- CTA + testimonial -->
+        <div class="w-full lg:w-[58%] text-white">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-brand-lime/20 border border-brand-lime/30 rounded-full text-[11px] uppercase tracking-widest font-bold text-brand-lime mb-8">
+            Jouw merk is je sterkste salestool
+          </div>
+          <h2 class="text-3xl lg:text-5xl font-display font-bold mb-6 leading-tight tracking-tight text-white">
+            De klant kiest al<br /><span class="text-brand-lime">vóórdat jij belt.</span>
+          </h2>
+          <p class="text-lg text-white/75 mb-10 leading-relaxed font-light max-w-lg">
+            Elke klant die jou googelt of jouw offerte opent, maakt in seconden een inschatting. Of jij professioneel bent. Of je bij hem past. Een sterk merk zorgt dat dat oordeel in jouw voordeel valt.
+          </p>
+
+          <!-- Testimonial -->
+          <div class="bg-white/5 border border-white/10 rounded-[20px] p-7 mb-10">
+            <div class="flex gap-1 text-brand-accent mb-4">
+              {[1,2,3,4,5].map(() => (
+                <svg class="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                </svg>
+              ))}
+            </div>
+            <p class="text-base text-white/85 font-light leading-relaxed mb-5">
+              "Optimaal Groeien heeft me deskundig geholpen mijn zakelijke doelgroep te bereiken, met een gedegen strategie. Hierdoor heb ik mijn groeidoelstelling kunnen behalen — ik raad ze absoluut aan."
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-full bg-brand-lime/20 flex items-center justify-center text-brand-lime font-bold text-sm border border-brand-lime/30 shrink-0">
+                M
+              </div>
+              <div>
+                <div class="font-display font-bold text-white text-sm leading-tight">Maywand Nasrat</div>
+                <div class="text-[10px] uppercase tracking-widest text-white/50 font-bold mt-0.5">Ondernemer</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Beloften -->
+          <div class="space-y-3 mb-10">
+            {[
+              {
+                title: "Branding als onderdeel van je commercieel systeem",
+                sub: "We bouwen geen los logo — we zorgen dat branding, SEO, content en social op elkaar aansluiten.",
+              },
+              {
+                title: "Eén aanspreekpunt",
+                sub: "Stefan staat voor je klaar. Geen keuzemenu's, geen doorverbinden naar juniors.",
+              },
+              {
+                title: "Resultaat of gratis door",
+                sub: "Na 6 maanden geen groei? Dan werken we gratis door totdat die er is.",
+              },
+            ].map(item => (
+              <div class="flex items-start gap-4 p-4 bg-white/5 border border-white/10 rounded-2xl">
+                <svg class="w-5 h-5 text-brand-lime shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <div>
+                  <div class="text-sm font-display font-bold text-white mb-0.5">{item.title}</div>
+                  <div class="text-xs text-white/60 font-light leading-relaxed">{item.sub}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <a href="https://meetings-eu1.hubspot.com/stefan-kelderman" target="_blank" rel="noreferrer"
+            class="inline-flex items-center gap-2 px-10 py-5 bg-brand-accent text-white rounded-2xl font-display font-bold transition-all hover:scale-[1.02] shadow-xl shadow-brand-accent/20 text-base">
+            Plan je gratis merkgesprek
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <p class="mt-4 text-[10px] font-bold uppercase tracking-[0.3em] text-white/40">Stefan staat zelf voor je klaar — Max 4 per maand</p>
+        </div>
+
+        <!-- Stats panel -->
+        <div class="w-full lg:w-[42%] lg:pt-[120px]">
+          <div class="bg-white/5 border border-white/10 rounded-[28px] p-8 lg:p-10">
+            <div class="text-brand-lime text-[11px] font-bold uppercase tracking-widest mb-8">Wat een sterk merk oplevert</div>
+            <div class="space-y-7">
+              <div>
+                <div class="text-5xl font-display font-black text-white mb-1">
+                  2<span class="text-brand-accent text-2xl ml-0.5">x</span>
+                </div>
+                <div class="text-sm text-white/55 font-light">hogere conversie op offertes</div>
+              </div>
+              <div class="h-px bg-white/10"></div>
+              <div>
+                <div class="text-5xl font-display font-black text-white mb-1">
+                  +40<span class="text-brand-accent text-2xl ml-0.5">%</span>
+                </div>
+                <div class="text-sm text-white/55 font-light">meer vertrouwen bij eerste contact</div>
+              </div>
+              <div class="h-px bg-white/10"></div>
+              <div>
+                <div class="text-5xl font-display font-black text-white mb-1">
+                  1 <span class="text-brand-accent text-2xl">doc</span>
+                </div>
+                <div class="text-sm text-white/55 font-light">merkdocument dat alles stuurt</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</ServiceLayout>
