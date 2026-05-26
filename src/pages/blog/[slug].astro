@@ -20,6 +20,48 @@ const allPosts = await getCollection('blog', ({ data }) => !data.draft);
 const sameCategory = allPosts.filter(p => p.data.slug !== post.data.slug && p.data.category === post.data.category);
 const otherPosts = allPosts.filter(p => p.data.slug !== post.data.slug && p.data.category !== post.data.category);
 const related = [...sameCategory, ...otherPosts].slice(0, 3);
+
+// Extract FAQ items from question-style headings in the markdown body
+const faqItems: { q: string; a: string }[] = [];
+const QUESTION_WORDS = ['wat ', 'wanneer ', 'waarom ', 'hoe ', 'welke ', 'wie ', 'hoeveel ', 'is ', 'zijn ', 'kan ', 'kunnen ', 'moet ', 'what ', 'how ', 'why ', 'when '];
+const bodyLines = (post.body ?? '').split('\n');
+for (let i = 0; i < bodyLines.length && faqItems.length < 6; i++) {
+  const headingMatch = bodyLines[i].match(/^#{1,3}\s+(.+)/);
+  if (!headingMatch) continue;
+  const heading = headingMatch[1].trim();
+  const lower = heading.toLowerCase();
+  const isQuestion = heading.endsWith('?') || QUESTION_WORDS.some(w => lower.startsWith(w));
+  if (!isQuestion) continue;
+  // Collect next non-empty paragraphs as answer (strip HTML and markdown syntax)
+  let answer = '';
+  for (let j = i + 1; j < Math.min(i + 12, bodyLines.length); j++) {
+    if (bodyLines[j].match(/^#{1,3}\s/)) break;
+    const clean = bodyLines[j]
+      .replace(/<[^>]+>/g, ' ')
+      .replace(/\*\*|__|\*|_|`/g, '')
+      .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+      .trim();
+    if (clean && !clean.startsWith('#')) {
+      answer += (answer ? ' ' : '') + clean;
+      if (answer.length > 350) break;
+    }
+  }
+  if (answer.length > 40) {
+    const q = heading.endsWith('?') ? heading : heading + '?';
+    faqItems.push({ q, a: answer.substring(0, 500) });
+  }
+}
+const faqSchema = faqItems.length > 0
+  ? JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqItems.map(({ q, a }) => ({
+        '@type': 'Question',
+        name: q,
+        acceptedAnswer: { '@type': 'Answer', text: a },
+      })),
+    })
+  : undefined;
 ---
 
 <BlogLayout
@@ -30,6 +72,7 @@ const related = [...sameCategory, ...otherPosts].slice(0, 3);
   ogType="article"
   publishedTime={new Date(post.data.date).toISOString()}
   author={post.data.author}
+  faqSchema={faqSchema}
 >
   <!-- Hero — clean, readable -->
   <header class="bg-brand-primary pt-36 pb-10 px-6">
@@ -132,7 +175,7 @@ const related = [...sameCategory, ...otherPosts].slice(0, 3);
           Plan een gratis analyse van 45 minuten. Stefan kijkt mee en geeft direct concrete aanbevelingen.
         </p>
         <a
-          href="https://calendly.com/stefankelderman/15min"
+          href="https://meetings-eu1.hubspot.com/stefan-kelderman"
           target="_blank"
           rel="noreferrer"
           class="inline-flex items-center gap-2 px-8 py-4 bg-brand-accent text-white rounded-2xl font-display font-bold hover:bg-white hover:text-brand-accent transition-all duration-200"
@@ -226,9 +269,16 @@ const related = [...sameCategory, ...otherPosts].slice(0, 3);
   .stap-tekst strong { color: #053b63; }
 
   /* Big number highlight — inline stat emphasis */
-  .getal { display: flex; align-items: baseline; gap: 0.75rem; margin: 2rem 0; padding: 1.25rem 1.5rem; background: #053b63; border-radius: 16px; }
-  .getal-waarde { font-size: 2.5rem; font-weight: 900; color: #f17a29; line-height: 1; font-family: var(--font-display); }
-  .getal-label { color: rgba(255,255,255,0.65); font-size: 0.875rem; line-height: 1.5; max-width: 220px; }
+  .getal { display: flex; align-items: center; gap: 1.25rem; margin: 2rem 0; padding: 1.25rem 1.5rem; background: #FFF8F2; border: 1px solid #FAE0C8; border-left: 3px solid #f17a29; border-radius: 0 16px 16px 0; }
+  .getal-waarde { font-size: 2.5rem; font-weight: 900; color: #f17a29; line-height: 1; font-family: var(--font-display); flex-shrink: 0; }
+  .getal-label { color: rgba(51,65,85,0.80); font-size: 0.875rem; line-height: 1.5; }
+
+  /* In-article contextual CTA */
+  .artikel-cta { background: #FAFCFF; border: 1px solid #D8E8F5; border-left: 3px solid #053b63; border-radius: 0 16px 16px 0; padding: 1.25rem 1.5rem; margin: 2.5rem 0; }
+  .artikel-cta-label { display: block; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #053b63; margin-bottom: 0.4rem; }
+  .artikel-cta p { color: rgba(51,65,85,0.82); margin-bottom: 0.75rem; line-height: 1.7; font-size: 0.93rem; }
+  .artikel-cta a.cta-link { display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.875rem; font-weight: 700; color: #f17a29; text-decoration: none; border-bottom: 1px solid #f17a2960 !important; transition: border-color 0.15s; }
+  .artikel-cta a.cta-link:hover { border-bottom-color: #f17a29 !important; }
 
   /* Checklist — branded checkbox list */
   .checklist { list-style: none; padding: 0; margin: 1.5rem 0; }

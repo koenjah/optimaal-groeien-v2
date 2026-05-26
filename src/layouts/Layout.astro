@@ -8,6 +8,7 @@ interface Props {
   noindex?: boolean;
   publishedTime?: string;
   author?: string;
+  faqSchema?: string;
 }
 
 const {
@@ -19,6 +20,7 @@ const {
   noindex = false,
   publishedTime,
   author,
+  faqSchema,
 } = Astro.props;
 ---
 
@@ -31,8 +33,9 @@ const {
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     {noindex && <meta name="robots" content="noindex, follow" />}
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="apple-touch-icon" href="/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <!-- Self-hosted fonts -->
     <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin />
@@ -47,11 +50,14 @@ const {
     <meta property="og:locale" content="nl_NL" />
     {publishedTime && <meta property="article:published_time" content={publishedTime} />}
     {author && <meta property="article:author" content={author} />}
+    {faqSchema && <script type="application/ld+json" set:html={faqSchema} />}
     <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
+    <!-- Leadinfo -->
+    <script defer src="https://tracking.leadinfo.com/autotrack.js?t=LI-618941BAAC746" id="LeadinfoTracking"></script>
   </head>
   <body>
     <slot />

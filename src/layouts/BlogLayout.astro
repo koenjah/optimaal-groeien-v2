@@ -13,13 +13,14 @@ interface Props {
   noindex?: boolean;
   publishedTime?: string;
   author?: string;
+  faqSchema?: string;
 }
 
-const { title, description, canonical, ogImage, ogType, noindex, publishedTime, author } = Astro.props;
+const { title, description, canonical, ogImage, ogType, noindex, publishedTime, author, faqSchema } = Astro.props;
 ---
 
-<Layout {title} {description} {canonical} {ogImage} {ogType} {noindex} {publishedTime} {author}>
-  <NavbarBlog client:load />
+<Layout {title} {description} {canonical} {ogImage} {ogType} {noindex} {publishedTime} {author} {faqSchema}>
+  <NavbarBlog client:load darkHero={true} />
   <slot />
   <Footer client:load />
 </Layout>
