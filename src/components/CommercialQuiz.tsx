@@ -287,7 +287,7 @@ export const CommercialQuiz: React.FC = () => {
           </div>
 
           <a
-            href="https://calendly.com/stefankelderman/15min"
+            href="https://meetings-eu1.hubspot.com/stefan-kelderman"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full bg-brand-accent text-white py-4 rounded-2xl font-display font-bold text-sm flex items-center justify-center gap-2 hover:bg-brand-primary transition-all duration-200 active:scale-[0.98]"

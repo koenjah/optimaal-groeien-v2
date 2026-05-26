@@ -9,11 +9,11 @@ export const DeLeadmachineSection = () => (
          Alles-in-één Leadmachine
       </div>
       <h1 className="text-4xl lg:text-6xl font-display font-bold text-white leading-[1.1] mb-8 tracking-tight">
-        Een systeem dat klanten zoekt, <br />
-        <span className="text-brand-lime">terwijl jij bouwt.</span>
+        Van relatiebeheer naar <br />
+        <span className="text-brand-lime">structurele new business klanten.</span>
       </h1>
       <p className="text-lg text-white/72 mb-14 max-w-2xl mx-auto leading-relaxed font-light">
-        We bouwen een complete machine voor je: advertenties, een mooie pagina, slimme berichtjes en automatisering. Alles staat klaar om mensen enthousiast te maken over jouw werk.
+        We bouwen een complete leadmachine die elke dag nieuwe B2B-klanten naar je toe trekt — met advertenties, AI en een strakke opvolging. Zodat je bedrijf niet afhangt van jouw netwerk.
       </p>
 
       <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mb-16 bg-white/5 p-10 rounded-[32px] border border-white/10 backdrop-blur-md">
@@ -48,10 +48,10 @@ export const SpeciaalVoorJouSection = () => (
 
       <div className="grid md:grid-cols-2 gap-5">
         {[
-          { t: "Bedrijven in de groei", d: "Je hebt prachtige projecten, maar nog geen constante stroom van nieuwe aanvragen. Wij vullen je agenda zodat jij en je team door kunnen." },
-          { t: "Ondernemers in de techniek", d: "Je weet alles van je vak, maar marketing voelt als een jungle. Wij spreken je taal en regelen het voor je." },
-          { t: "Geen tijd om te wachten", d: "Je wilt geen traject van een jaar. Je wilt binnen een maand live zijn en zien of het voor je werkt." },
-          { t: "Eerlijke groeiers", d: "Je zoekt een partner die snapt dat je alleen wilt groeien met klanten die ook echt bij je passen." }
+          { t: "Je netwerk heeft een plafond", d: "Nieuwe opdrachten komen via via — maar dat houdt een keer op. Je wil structureel nieuwe klanten binnenhalen, buiten je eigen kring." },
+          { t: "Je hebt geen commerciële structuur", d: "Er is geen vast systeem voor new business. Acquisitie gebeurt ad hoc, en dat voelt wisselvallig en vermoeiend." },
+          { t: "Nieuwe sectoren kennen je niet", d: "Je wil groeien in nieuwe markten of doelgroepen, maar je bereikt ze niet met wat je nu doet." },
+          { t: "Je wil dit niet zelf doen", d: "Marketing en acquisitie is niet jouw vak. Je zoekt iemand die het systeem bouwt én bijhoudt, zodat jij je kunt focussen op je werk." }
         ].map((item, i) => (
           <div key={i} className="bg-white p-10 rounded-[24px] border border-brand-soft flex flex-col group hover:shadow-lg hover:shadow-brand-primary/5 transition-all">
              <div className="w-14 h-14 bg-brand-lime/10 rounded-[18px] flex items-center justify-center text-brand-accent mb-8 transition-transform group-hover:scale-110">
@@ -80,7 +80,7 @@ export const HoeHetWerktLeadsSection = () => (
             { n: "01", t: "Slimme Advertenties", d: "We laten je bedrijf zien aan de mensen die ook echt beslissen. Geen verspild budget." },
             { n: "02", t: "Een Eigen Pagina", d: "Een landingspagina die niet alleen mooi is, maar die mensen ook echt overtuigt om contact op te nemen." },
             { n: "03", t: "Echte Foto's & Video", d: "We komen bij je langs. Geen neppe plaatjes, maar jouw team en jouw machines in actie." },
-            { n: "04", t: "Iets van Waarde", d: "We maken een handige gids of handleiding die je klant direct helpt. Zo bewijs je je kennis." },
+            { n: "04", t: "Systemen automatiseren met AI", d: "We koppelen AI aan je opvolging. Leads worden direct gesorteerd, gescoord en opgevolgd — zonder handmatig werk." },
             { n: "05", t: "Automatische Mailtjes", d: "Een systeem dat mensen warm houdt terwijl jij bezig bent met je werk. Niemand wordt vergeten." },
             { n: "06", t: "Duidelijk Dashboard", d: "In één oogopslag zien wat het oplevert. Geen ingewikkelde rapporten, maar heldere cijfers." }
           ].map((s, i) => (
@@ -123,7 +123,7 @@ export const HoeHetWerktLeadsSection = () => (
           </div>
 
           <a
-            href="https://calendly.com/stefankelderman/15min"
+            href="https://meetings-eu1.hubspot.com/stefan-kelderman"
             className="btn-primary w-full !py-5 text-lg !bg-white !text-brand-primary shadow-xl relative z-10"
           >
             Start jullie aanvraag <ArrowRight size={20} />
@@ -252,7 +252,7 @@ export const DirectBesprekenSection = () => (
         Gun jezelf de rust en de groei die je verdient. We helpen je graag om de eerste stap te zetten.
       </p>
       <a
-        href="https://calendly.com/stefankelderman/15min"
+        href="https://meetings-eu1.hubspot.com/stefan-kelderman"
         target="_blank"
         className="btn-primary !bg-white !text-brand-primary !px-12 !py-5 text-lg hover:!scale-105"
       >
