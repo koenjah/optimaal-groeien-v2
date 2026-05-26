@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, AnimatePresence, useScroll, useVelocity, useTransform, useSpring } from 'motion/react';
 import {
   Menu,
   X,
@@ -19,9 +19,24 @@ import { CommercialQuiz } from './CommercialQuiz';
 
 // --- Shared Components ---
 
-export const Navbar = ({ activePage, setActivePage }: { activePage: string, setActivePage: (p: string) => void }) => {
+export const Navbar = (_: { activePage?: string, setActivePage?: (p: string) => void }) => {
   const [isOpen, setIsOpen] = React.useState(false);
   const [isScrolled, setIsScrolled] = React.useState(false);
+
+  const { scrollY } = useScroll();
+  const velocity = useVelocity(scrollY);
+  const rawScaleY = useTransform(velocity, [-2500, 0, 2500], [1.06, 1, 0.94]);
+  const rawY      = useTransform(velocity, [-2500, 0, 2500], [-3, 0, 3]);
+  const logoScaleY = useSpring(rawScaleY, { stiffness: 180, damping: 18, mass: 0.6 });
+  const logoY      = useSpring(rawY,      { stiffness: 180, damping: 18, mass: 0.6 });
+
+  const NAV_ITEMS = [
+    { label: 'Over ons',      href: '/over-ons' },
+    { label: 'Klantcases',    href: '/klantcases' },
+    { label: 'Onze methode',  href: '/onze-methode' },
+    { label: 'Blog',          href: '/blog' },
+    { label: 'Contact',       href: '/contact' },
+  ];
 
   React.useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -29,83 +44,70 @@ export const Navbar = ({ activePage, setActivePage }: { activePage: string, setA
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const linkClass = 'text-[11px] uppercase tracking-[0.15em] font-bold transition-colors text-brand-primary/70 hover:text-brand-accent';
+
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'bg-white/95 backdrop-blur-xl shadow-sm py-3' : 'bg-transparent py-6'}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'bg-white/95 backdrop-blur-xl shadow-sm py-3' : 'bg-transparent py-5'}`}>
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <div
-          className="flex items-center gap-2 cursor-pointer group"
-          onClick={() => setActivePage('partner')}
-        >
-          <img
+
+        <a href="/" className="flex items-center shrink-0">
+          <motion.img
             src="/images/logo.webp"
             alt="Optimaal Groeien"
             width="300" height="57"
-            className={`transition-all duration-300 ${isScrolled ? 'h-10' : 'h-12'} w-auto`}
+            className={`transition-[height] duration-300 ${isScrolled ? 'h-9' : 'h-10'} w-auto`}
+            style={{ scaleY: logoScaleY, y: logoY, transformOrigin: 'center' }}
           />
-        </div>
+        </a>
 
-        <div className="hidden md:flex items-center gap-8">
-          {[
-            { label: 'Hoe we helpen', id: 'diensten' },
-            { label: 'Het team', id: 'team' },
-            { label: 'Klantverhalen', id: 'cases' },
-          ].map((item) => (
-            <a
-              key={item.label}
-              href={`#${item.id}`}
-              className={`text-[11px] uppercase tracking-[0.15em] font-bold transition-colors ${isScrolled ? 'text-brand-primary/70 hover:text-brand-accent' : 'text-brand-primary/70 hover:text-brand-accent'}`}
-            >
-              {item.label}
-            </a>
+        <div className="hidden lg:flex items-center gap-7">
+          {NAV_ITEMS.map(item => (
+            <a key={item.href} href={item.href} className={linkClass}>{item.label}</a>
           ))}
+
           <a
-            href="/blog"
-            className={`text-[11px] uppercase tracking-[0.15em] font-bold transition-colors ${isScrolled ? 'text-brand-primary/70 hover:text-brand-accent' : 'text-brand-primary/70 hover:text-brand-accent'}`}
+            href="/ai-scan"
+            className="ml-2 flex items-center gap-2 px-5 py-2.5 rounded-full text-[11px] uppercase tracking-wider font-display font-bold bg-brand-accent text-white shadow-lg shadow-brand-accent/20 hover:bg-brand-primary hover:shadow-brand-primary/20 transition-all"
           >
-            Blog
+            Gratis AI Scan
+            <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
-          <button
-            onClick={() => {
-              setActivePage('partner');
-              setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100);
-            }}
-            className="px-6 py-2.5 rounded-full text-[11px] uppercase tracking-wider font-display font-bold transition-all bg-brand-accent text-white shadow-lg shadow-brand-accent/20 hover:bg-brand-primary hover:shadow-brand-primary/20"
-          >
-            Even kennismaken
-          </button>
         </div>
 
-        <button aria-label={isOpen ? 'Menu sluiten' : 'Menu openen'} className="text-brand-primary md:hidden" onClick={() => setIsOpen(!isOpen)}>
+        <button aria-label={isOpen ? 'Menu sluiten' : 'Menu openen'} className="lg:hidden text-brand-primary" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
-      {isOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="md:hidden bg-white shadow-2xl p-10 flex flex-col gap-6 rounded-b-[40px]"
-        >
-          {[
-            { label: 'Hoe we helpen', href: '#diensten' },
-            { label: 'Het team', href: '#team' },
-            { label: 'Klantverhalen', href: '#cases' },
-            { label: 'Blog', href: '/blog' },
-          ].map((item) => (
-            <a key={item.label} href={item.href} className="text-slate-600 font-bold uppercase tracking-widest text-xs py-4 border-b border-slate-50" onClick={() => setIsOpen(false)}>{item.label}</a>
-          ))}
-          <button
-             onClick={() => {
-               setActivePage('partner');
-               setIsOpen(false);
-               setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100);
-             }}
-             className="btn-primary w-full mt-6 !py-6"
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2 }}
+            className="lg:hidden bg-white shadow-2xl flex flex-col rounded-b-[32px] overflow-hidden"
           >
-            Even kennismaken
-          </button>
-        </motion.div>
-      )}
+            <div className="px-8 py-6 flex flex-col gap-1">
+              {NAV_ITEMS.map(item => (
+                <a key={item.href} href={item.href} className="text-brand-primary font-bold uppercase tracking-widest text-xs py-4 border-b border-slate-50" onClick={() => setIsOpen(false)}>
+                  {item.label}
+                </a>
+              ))}
+            </div>
+            <div className="px-8 pb-8">
+              <a
+                href="/ai-scan"
+                className="flex items-center justify-center gap-2 w-full py-4 bg-brand-accent text-white rounded-2xl font-display font-bold text-sm hover:bg-brand-primary transition-all"
+                onClick={() => setIsOpen(false)}
+              >
+                Gratis AI Scan
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };
@@ -190,7 +192,7 @@ export const PartnerHero = () => {
           <div className="lg:w-[52%] text-left flex flex-col gap-7">
             <div className="label-pill self-start">
               <span className="w-2 h-2 bg-brand-accent rounded-full animate-pulse" />
-              Wij helpen je groeien
+              Gedreven door AI
             </div>
 
             <h1 className="text-[2.4rem] lg:text-[3.25rem] font-display font-bold text-brand-primary leading-[1.1] tracking-tight max-w-lg">
@@ -216,39 +218,48 @@ export const PartnerHero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3">
-              <button
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="btn-primary w-full sm:w-auto !py-4 !px-9 text-sm !bg-[#ed7c2f]"
+              <a
+                href="https://meetings-eu1.hubspot.com/stefan-kelderman"
+                target="_blank"
+                rel="noreferrer"
+                className="btn-primary w-full sm:w-auto !py-4 !px-9 text-sm !bg-[#ed7c2f] flex items-center justify-center"
               >
                 Plan een gesprek
-              </button>
-              <button
-                onClick={() => document.getElementById('tool')?.scrollIntoView({ behavior: 'smooth' })}
+              </a>
+              <a
+                href="/ai-scan"
                 className="w-full sm:w-auto px-7 py-4 bg-white text-brand-primary rounded-2xl font-display font-bold transition-all hover:scale-[1.02] active:scale-[0.98] border-2 border-amber-100 shadow-sm flex items-center justify-center gap-2 text-sm"
               >
-                Bereken potentieel
-              </button>
+                Gratis AI Analyse
+              </a>
             </div>
 
-            {/* Social proof row */}
-            <div className="flex items-center gap-4 pt-1">
-              <div className="flex -space-x-2">
-                <img src="/images/team-1-avatar.webp" className="w-8 h-8 rounded-full border-2 border-white object-cover object-[center_25%]" alt="Team" loading="eager" />
-                <img src="/images/team-phone-avatar.webp" className="w-8 h-8 rounded-full border-2 border-white object-cover object-top" alt="Team" loading="eager" />
-                <img src="/images/team-4-avatar.webp" className="w-8 h-8 rounded-full border-2 border-white object-cover object-top" alt="Team" loading="eager" />
-              </div>
-              <div>
-                <span className="block text-xs font-bold text-brand-ink/65 leading-none mb-1">Stefan & team</span>
-                <span className="block text-[10px] text-brand-accent font-bold uppercase tracking-widest leading-none">Altijd bereikbaar</span>
-              </div>
+            {/* Garanties */}
+            <div className="flex flex-wrap gap-3 pt-1">
+              {[
+                'Geen verkoopgesprek',
+                'Binnen 30 dagen live',
+                'Groei of gratis door',
+              ].map((g) => (
+                <div key={g} className="flex items-center gap-2 px-3 py-1.5 bg-white border border-amber-100 rounded-xl shadow-sm">
+                  <svg className="w-3.5 h-3.5 text-brand-lime shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg>
+                  <span className="text-xs font-display font-bold text-brand-primary">{g}</span>
+                </div>
+              ))}
             </div>
 
             {/* Trust logos */}
-            <div className="pt-6 border-t border-amber-100 flex flex-wrap items-center gap-6 opacity-45 hover:opacity-70 transition-opacity duration-500">
-              <span className="text-[10px] font-bold uppercase tracking-widest text-brand-ink">Vertrouwd door</span>
-              <span className="text-xs font-display font-bold text-brand-ink">Veldkamp</span>
-              <span className="text-xs font-display font-bold text-brand-ink">Equans</span>
-              <span className="text-xs font-display font-bold text-brand-ink">Carbify</span>
+            <div className="pt-6 border-t border-amber-100 flex flex-wrap items-center gap-6 opacity-50 hover:opacity-80 transition-opacity duration-500">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-brand-ink shrink-0">Vertrouwd door</span>
+              {[
+                { name: "Veldkamp",  src: "/images/klanten/veldkamp.webp" },
+                { name: "Equans",    src: "/images/klanten/equans.webp" },
+                { name: "Carbify",   src: "/images/klanten/carbify.webp" },
+                { name: "Plintenfabriek", src: "/images/klanten/plintenfabriek.webp" },
+                { name: "Ztahl",     src: "/images/klanten/ztahl.webp" },
+              ].map(l => (
+                <img key={l.name} src={l.src} alt={l.name} className="h-6 w-auto max-w-[90px] object-contain grayscale" loading="lazy" />
+              ))}
             </div>
           </div>
 
@@ -334,11 +345,11 @@ export const HerkenJeDitSection = () => (
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
         {[
-          { title: "Je netwerk heeft een plafond", text: "Je bent gegroeid via mond-tot-mond reclame. Dat is prachtig, want het bewijst je kwaliteit. Maar het is niet meer genoeg om de volgende stap te zetten." },
-          { title: "Marketing voelt als 'moeten'", text: "Je plaatst wel eens iets op LinkedIn of hebt een nieuwe website, maar eigenlijk voelt het als schieten in het donker. Wat levert het nou echt op?" },
+          { title: "Je netwerk heeft een plafond", text: "Je bent gegroeid via mond-tot-mond reclame. Dat is prachtig, want het bewijst je kwaliteit. Maar het is niet meer genoeg om de volgende stap te zetten. Je bedrijf groeit, maar met name vanuit relatiebeheer. New business blijft te veel uit." },
+          { title: "Je doet het er 'even bij'", text: "Commercie is iets wat je er tussendoor doet. Er is geen vast moment, geen vaste structuur, en daardoor geen rust. Je weet dat het anders moet, maar wanneer?" },
+          { title: "Je wilt 'iets' met AI", text: "Je wilt wat met AI, maar wat? Iedereen wil innoveren met AI, maar de waan van de dag regeert. Omdat een structurele aanpak ontbreekt, mis je de aansluiting." },
+          { title: "Je mist commerciële structuur", text: "Leads en aanvragen worden ad-hoc opgepakt. Zonder een duidelijke structuur voor opvolging blijft er te veel liggen en haal je niet het maximale uit je markt." },
           { title: "Nieuwe sectoren kennen je niet", text: "Je weet zeker dat je bedrijven in andere branches perfect kunt helpen, maar zij weten simpelweg niet dat je bestaat. Die deur blijft voorlopig dicht." },
-          { title: "Kansen glippen door je vingers", text: "Soms komt er een prachtige aanvraag binnen, maar door de waan van de dag blijft de opvolging liggen. Zonde van de tijd én de moeite." },
-          { title: "Je doet het er 'even bij'", text: "Commercie is iets wat je doet tussen de bedrijven door. Er is geen vast moment, geen vast proces en daardoor geen rust." },
           { title: "Cijfers? Die zitten in je hoofd", text: "Je voelt wel hoe het gaat, maar je hebt geen dashboard dat je vertelt waar de beste kansen liggen. Je stuurt op je onderbuik." }
         ].map((item, i) => (
           <div key={i} className="warm-card p-8">
@@ -375,9 +386,9 @@ export const HoeWeHelpenSection = () => (
             {[
               { icon: Users, title: "Vakkennis op locatie", desc: "Geen oppervlakkig praatje; wij komen fysiek langs en draaien mee op de werkvloer om jullie complexe service echt te doorgronden." },
               { icon: Target, title: "Een plan op maat", desc: "Geen dik adviesrapport, maar een duidelijke routekaart voor je groei." },
-              { icon: Zap, title: "Echte content", desc: "Foto's en video's van je eigen machines en mensen. Geen neppe stock." },
+              { icon: Zap, title: "Bedrijfsvideo's & foto's", desc: "Foto's en video's van je eigen machines en mensen. Geen neppe stock." },
               { icon: BarChart3, title: "AI als fundament", desc: "Wij automatiseren wat werkt, van automatische leadopvolging tot real-time dashboards die je grip geven op de cijfers." },
-              { icon: Clock, title: "2-wekelijkse regie", desc: "Elke twee weken zitten we fysiek of digitaal samen om de voortgang te bespreken en de koers direct bij te sturen." },
+              { icon: Clock, title: "Wekelijks contact", desc: "Wekelijks contact en om de twee weken zitten we fysiek of digitaal samen om de voortgang te bespreken en de koers direct bij te sturen." },
               { icon: MessageSquare, title: "Sluitende salesflows", desc: "Wij verbinden marketing direct aan sales, inclusief ondersteuning bij leadopvolging en scriptwerk om deals daadwerkelijk te sluiten." },
               { icon: Star, title: "Gevonden worden", desc: "We zorgen dat beslissers in de industrie jou gaan zien als de expert." },
               { icon: CheckCircle2, title: "Transparante cijfers", desc: "In één oogopslag zien hoe het gaat. Gewoon op je telefoon." }
@@ -466,9 +477,9 @@ export const TeamSection = () => (
           <div className="w-12 h-12 bg-brand-lime/10 rounded-2xl flex items-center justify-center text-brand-accent mb-6">
             <Users size={24} />
           </div>
-          <h3 className="text-2xl font-display font-bold text-brand-primary mb-3">8 specialisten</h3>
+          <h3 className="text-2xl font-display font-bold text-brand-primary mb-3">Jouw commerciële afdeling</h3>
           <p className="text-brand-primary/75 leading-relaxed font-light text-sm mb-6">
-            Van strategie tot content, van advertenties tot automatisering. Ieder zijn eigen expertise, samen jouw groeimachine.
+            Van strategie tot content, van advertenties tot automatisering. Samen bouwen we de machine die jouw groei aanstuurt.
           </p>
           <div className="flex -space-x-2">
             <img src="/images/team-1-avatar.webp" className="w-10 h-10 rounded-full border-2 border-white object-cover object-[center_25%]" alt="" loading="lazy" />
@@ -533,6 +544,47 @@ export const KlantverhalenSection = () => (
   </section>
 );
 
+export const KlantenLogosSection = () => {
+  const logos = [
+    { name: "Equans",                 src: "/images/klanten/equans.webp" },
+    { name: "Veldkamp",               src: "/images/klanten/veldkamp.webp" },
+    { name: "Plintenfabriek",         src: "/images/klanten/plintenfabriek.webp" },
+    { name: "Carbify",                src: "/images/klanten/carbify.webp" },
+    { name: "Avia Volt",              src: "/images/klanten/avia-volt.webp" },
+    { name: "Laundry Total",          src: "/images/klanten/laundry-total.webp" },
+    { name: "Farrow + Dutch",         src: "/images/klanten/farrow-dutch.webp" },
+    { name: "Logistique",             src: "/images/klanten/logistique.webp" },
+    { name: "Paradera Park",          src: "/images/klanten/paradera-park.webp" },
+    { name: "AHR Recycling",          src: "/images/klanten/ahr-recycling.webp" },
+    { name: "People Jobs",            src: "/images/klanten/people-jobs.webp" },
+    { name: "Ztahl",                  src: "/images/klanten/ztahl.webp" },
+    { name: "Koot Flowers",           src: "/images/klanten/koot-flowers.webp" },
+    { name: "Accura Flexcut",         src: "/images/klanten/accura-flexcut.webp" },
+    { name: "Thuiszorgbed Voordeel",  src: "/images/klanten/thuiszorgbed-voordeel.webp" },
+    { name: "P. van Eijzeren",        src: "/images/klanten/van-eijzeren.webp" },
+  ];
+  return (
+    <section className="py-16 px-6 bg-white border-t border-amber-100/60 overflow-hidden">
+      <div className="max-w-7xl mx-auto">
+        <p className="text-center text-[11px] font-bold uppercase tracking-widest text-brand-primary/40 mb-10">
+          Zij gingen je al voor
+        </p>
+        <div className="relative">
+          <div className="absolute left-0 top-0 h-full w-20 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+          <div className="flex items-center gap-10" style={{ animation: 'marquee 40s linear infinite' }}>
+            {[...logos, ...logos].map((l, i) => (
+              <div key={i} className="shrink-0 flex items-center justify-center h-12 px-2 opacity-50 hover:opacity-80 transition-opacity">
+                <img src={l.src} alt={l.name} className="h-8 w-auto max-w-[120px] object-contain grayscale hover:grayscale-0 transition-all" loading="lazy" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 export const OnzeBelofteSection = () => (
   <section className="py-24 px-6 bg-[#FFFAF4] relative overflow-hidden">
     <div className="max-w-7xl mx-auto relative z-10">
@@ -568,47 +620,103 @@ export const OnzeBelofteSection = () => (
   </section>
 );
 
-export const SamenAanDeSlagSection = () => (
-  <section className="py-24 px-6 bg-brand-primary">
+export const RoadmapSection = () => (
+  <section className="py-24 px-6 bg-[#FFFAF4] relative overflow-hidden">
     <div className="max-w-7xl mx-auto">
       <div className="text-center mb-16">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 border border-white/20 rounded-full text-[11px] uppercase tracking-widest font-bold text-white/80 mb-6">Hoe het werkt</div>
-        <h2 className="text-4xl lg:text-5xl font-display font-bold text-white tracking-tight">In 4 stappen naar rust.</h2>
+        <div className="label-pill mx-auto">30 dagen naar live</div>
+        <h2 className="text-4xl lg:text-5xl font-display font-bold text-brand-primary tracking-tight mt-4">
+          Van eerste gesprek naar<br />
+          <span className="text-brand-accent">volledig systeem in 30 dagen.</span>
+        </h2>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
-        {[
-          { t: "De Analyse", d: "We kijken in 45 minuten waar je nu kansen laat liggen. Helemaal gratis." },
-          { t: "Het Fundament", d: "We bouwen de commerciële basis die precies bij jouw bedrijf past." },
-          { t: "De Start", d: "Ons team gaat aan de slag. Binnen een maand draait alles op volle toeren." },
-          { t: "Lekker Groeien", d: "We houden alles in de gaten en schaven bij waar nodig. Jij hebt de controle.", highlight: true }
-        ].map((s, i) => (
-          <div key={i} className="flex flex-col items-center text-center relative">
-            {i < 3 && <div className="hidden lg:block absolute top-10 left-1/2 w-full h-px bg-white/10 -z-10" />}
-            <div className={`w-16 h-16 rounded-[20px] font-display font-black text-xl flex items-center justify-center mb-8 transition-all ${s.highlight ? 'bg-brand-accent text-white shadow-xl shadow-brand-accent/20 scale-110' : 'bg-white/10 text-white border border-white/20'}`}>
-              {i+1}
+      <div className="relative">
+        {/* Connecting line desktop */}
+        <div className="hidden lg:block absolute top-12 left-[12.5%] right-[12.5%] h-px bg-amber-200 z-0" />
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+          {[
+            { n: '01', t: 'We komen langs bij jou op locatie', d: 'We lopen mee op de werkvloer, snappen wat jij maakt, en doorgronden wie jouw ideale klant is.' },
+            { n: '02', t: 'We ontwikkelen een commercieel plan op maat', d: 'Geen dik adviesrapport. Een concrete routekaart met prioriteiten, doelen en eerste stappen.' },
+            { n: '03', t: 'Professionele bedrijfsvideo en foto\'s', d: 'Wij komen langs voor beeldmateriaal van je machines, je mensen en je locatie. Echte content die converteert.' },
+            { n: '04', t: 'AI als fundament van je groei', d: 'We gaan aan de slag met jouw commerciële proces, met AI als motor achter leadopvolging en zichtbaarheid.', highlight: true },
+          ].map((s) => (
+            <div key={s.n} className="flex flex-col items-center text-center">
+              <div className={`w-24 h-24 rounded-[28px] font-display font-black text-2xl flex items-center justify-center mb-6 shadow-lg transition-all ${s.highlight ? 'bg-brand-accent text-white shadow-brand-accent/25 scale-110' : 'bg-white border-2 border-amber-100 text-brand-primary'}`}>
+                {s.n}
+              </div>
+              <h3 className="text-base font-display font-bold text-brand-primary mb-2 leading-tight px-2">{s.t}</h3>
+              <p className="text-sm text-brand-ink/65 leading-relaxed font-light px-3">{s.d}</p>
             </div>
-            <h3 className="text-lg font-display font-bold text-white mb-3 leading-tight">{s.t}</h3>
-            <p className="text-white/65 leading-relaxed font-light text-sm px-2">{s.d}</p>
-          </div>
-        ))}
-      </div>
-
-      <div className="mt-16 flex flex-col lg:flex-row gap-8 items-center">
-        <div className="lg:w-1/2">
-          <img src="/images/team-stefan-relax-lg.webp" srcSet="/images/team-stefan-relax-sm.webp 480w, /images/team-stefan-relax-lg.webp 700w" sizes="(max-width: 768px) 100vw, 50vw" alt="Ontspannen maar gefocust" className="rounded-[24px] shadow-lg w-full object-cover object-[center_10%] h-96" loading="lazy" />
+          ))}
         </div>
-        <div className="lg:w-1/2">
-          <h3 className="text-2xl font-display font-bold text-white mb-4">Ontspannen, maar gefocust op resultaat.</h3>
-          <p className="text-white/70 leading-relaxed font-light mb-6">
-            We nemen het werk serieus, maar onszelf niet. Dat is precies waarom onze klanten met ons doorwerken: het voelt niet als een zware last, maar als een versterking van je eigen team.
+      </div>
+
+      <div className="mt-16 text-center">
+        <div className="inline-flex items-center gap-3 px-8 py-4 bg-brand-primary text-white rounded-2xl font-display font-bold text-lg shadow-xl">
+          <svg className="w-6 h-6 text-brand-lime" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><polyline points="20 6 9 17 4 12"/></svg>
+          30 dagen — LIVE!
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
+export const SamenAanDeSlagSection = () => (
+  <section className="py-24 px-6 bg-brand-primary relative overflow-hidden">
+    <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-brand-accent/10 blur-[150px] pointer-events-none" />
+    <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-brand-lime/5 blur-[120px] pointer-events-none" />
+    <div className="max-w-7xl mx-auto relative z-10">
+      <div className="flex flex-col lg:flex-row gap-16 items-center">
+        <div className="lg:w-1/2 text-white">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-brand-accent/20 border border-brand-accent/30 rounded-full text-[11px] uppercase tracking-widest font-bold text-brand-accent mb-8">
+            Gratis, in 3 minuten
+          </div>
+          <h2 className="text-4xl lg:text-5xl font-display font-bold text-white mb-6 leading-tight tracking-tight">
+            Ontdek jouw commercieel groeipotentieel met AI.
+          </h2>
+          <p className="text-lg text-white/80 mb-8 leading-relaxed font-light">
+            We analyseren je website, je markt en je commerciële positie. Je krijgt direct een rapport met concrete verbeterpunten.
           </p>
-          <div className="flex items-center gap-4">
-            <img src="/images/team-1-avatar.webp" className="w-12 h-12 rounded-full object-cover object-[center_25%] border border-white/25" alt="Stefan" loading="lazy" />
-            <div>
-              <p className="font-display font-bold text-white text-sm">Stefan Kelderman</p>
-              <p className="text-xs text-white/60">Oprichter Optimaal Groeien</p>
-            </div>
+          <div className="space-y-3 mb-10">
+            {[
+              { t: 'Commerciële scan', d: 'Hoe scoor je op leadgeneratie, branding, AI en groei?' },
+              { t: 'Directe inzichten', d: 'Geen verkooppraatje. Gewoon eerlijk advies op maat.' },
+              { t: 'Binnen 3 minuten', d: 'Vul de scan in, ontvang direct je persoonlijk rapport.' },
+            ].map((item) => (
+              <div key={item.t} className="flex items-start gap-3 p-4 bg-white/5 border border-white/10 rounded-2xl">
+                <svg className="w-5 h-5 text-brand-lime shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><polyline points="20 6 9 17 4 12"/></svg>
+                <div>
+                  <div className="text-sm font-display font-bold text-white mb-0.5">{item.t}</div>
+                  <div className="text-xs text-white/60 font-medium">{item.d}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <a
+            href="/ai-scan"
+            className="inline-flex items-center gap-3 px-10 py-5 bg-brand-accent text-white rounded-2xl font-display font-bold transition-all hover:scale-[1.02] shadow-2xl shadow-brand-accent/20 text-base"
+          >
+            Start de gratis AI Analyse
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <p className="mt-4 text-[10px] font-bold uppercase tracking-[0.3em] text-white/40">Gratis. Geen verplichtingen.</p>
+        </div>
+        <div className="lg:w-1/2 w-full">
+          <div className="rounded-[32px] overflow-hidden shadow-2xl border border-white/10">
+            <img
+              src="/images/team-stefan-relax-lg.webp"
+              srcSet="/images/team-stefan-relax-sm.webp 480w, /images/team-stefan-relax-lg.webp 700w"
+              sizes="(max-width: 768px) 100vw, 50vw"
+              alt="Stefan Kelderman"
+              className="w-full h-[460px] object-cover object-[center_10%]"
+              loading="lazy"
+            />
+          </div>
+          <div className="mt-4 text-center">
+            <div className="text-white/80 font-display font-bold text-sm">Stefan Kelderman</div>
+            <div className="text-white/40 text-xs uppercase tracking-widest font-bold mt-0.5">Oprichter, Optimaal Groeien</div>
           </div>
         </div>
       </div>
@@ -626,9 +734,9 @@ export const WatAnderenZeggenSection = () => (
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {[
-          { n: "Erik Veldkamp", f: "Veldkamp", q: "Het heeft ons rust gegeven. We weten nu dat er continu nieuwe kansen binnenkomen." },
-          { n: "Marc de Boer", f: "Equans", q: "Geen vaag marketingverhaal, maar een team dat snapt hoe de industrie werkt." },
-          { n: "Sandra Peters", f: "Plintenfabriek", q: "Fijn om eindelijk een partner te hebben die echt meedenkt en het werk ook doet." }
+          { n: "Harm van Wijk", f: "Ondernemer", q: "Het team van Optimaal Groeien weet in no-time een 100% groei te realiseren in bezoekers, enkel al vanuit SEO. Sterker nog — dit binnen 1 maand. De samenwerking is daarbij zeer prettig in communicatie, overzicht en bovenal resultaat." },
+          { n: "Bram Voermans", f: "Ondernemer", q: "Door samen te werken met Optimaal Groeien hebben we onze groeidoelstellingen niet alleen bereikt, maar zelfs overtroffen. Hun unieke aanpak, die branding, marketing en sales verbindt, heeft ons geholpen om onze doelgroep effectiever te bereiken." },
+          { n: "Harry Derksen", f: "Ondernemer", q: "Met concrete doelen en eerlijke verwachtingen wordt er aan je website gesleuteld waarbij er na een maand al verbeteringen te zien zijn. Niet alleen het resultaat is prettig, ook de manier van samenwerken. Aanbevelenswaardig!" }
         ].map((r, i) => (
           <div key={i} className="warm-card p-10">
             <div className="flex gap-1 text-brand-accent mb-6">
@@ -664,7 +772,7 @@ export const LatenWePratenSection = () => (
             We kunnen uren praten over wat we doen, maar het is veel fijner om te zien wat het voor jouw bedrijf betekent. Plan een gratis gesprekje van 45 minuten.
           </p>
           <a
-            href="https://calendly.com/stefankelderman/15min"
+            href="https://meetings-eu1.hubspot.com/stefan-kelderman"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 px-10 py-5 bg-white text-brand-accent rounded-2xl font-display font-bold transition-all hover:scale-[1.02] active:scale-[0.98] shadow-2xl text-lg"
@@ -677,7 +785,7 @@ export const LatenWePratenSection = () => (
         </div>
         <div className="lg:w-1/2 w-full">
           <div className="rounded-[24px] overflow-hidden shadow-2xl border border-white/20">
-            <img src="/images/team-closeup-lg.webp" srcSet="/images/team-closeup-sm.webp 480w, /images/team-closeup-lg.webp 700w" sizes="(max-width: 768px) 100vw, 50vw" alt="Aan het werk voor jouw groei" className="w-full h-96 object-contain bg-white/10" loading="lazy" />
+            <img src="/images/team-stefan-relax-lg.webp" srcSet="/images/team-stefan-relax-sm.webp 480w, /images/team-stefan-relax-lg.webp 700w" sizes="(max-width: 768px) 100vw, 50vw" alt="Stefan Kelderman, Optimaal Groeien" className="w-full h-96 object-cover object-[center_10%]" loading="lazy" />
           </div>
         </div>
       </div>
