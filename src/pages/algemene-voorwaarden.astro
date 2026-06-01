@@ -1,0 +1,216 @@
+---
+import ServiceLayout from '../layouts/ServiceLayout.astro';
+
+const articles = [
+  {
+    title: 'Artikel 1 - Definities',
+    body: `
+      <p><strong>Optimaal Groeien:</strong> opdrachtnemer, gevestigd te Raalte, KvK 84358734.</p>
+      <p><strong>Opdrachtgever:</strong> de zakelijke wederpartij van Optimaal Groeien.</p>
+      <p><strong>Diensten:</strong> alle door Optimaal Groeien uitgevoerde werkzaamheden.</p>
+      <p><strong>Overeenkomst:</strong> de afspraken tussen Optimaal Groeien en opdrachtgever.</p>
+      <p><strong>Voorwaarden:</strong> deze algemene voorwaarden.</p>
+      <p><strong>Portaal:</strong> de online omgeving en systemen van Optimaal Groeien.</p>
+    `,
+  },
+  {
+    title: 'Artikel 2 - Toepasselijkheid',
+    body: `
+      <p>2.1 Deze voorwaarden zijn van toepassing op alle offertes, overeenkomsten en diensten van Optimaal Groeien.</p>
+      <p>2.2 Algemene voorwaarden van opdrachtgever worden uitdrukkelijk van de hand gewezen.</p>
+      <p>2.3 Indien een bepaling ongeldig blijkt, blijven de overige bepalingen onverminderd van kracht.</p>
+      <p>2.4 Bij tegenstrijdigheden prevaleert de Overeenkomst boven deze voorwaarden.</p>
+    `,
+  },
+  {
+    title: 'Artikel 3 - Totstandkoming van de overeenkomst',
+    body: `
+      <p>3.1 Offertes van Optimaal Groeien zijn vrijblijvend en kunnen ook na 30 dagen nog worden geaccepteerd, tenzij anders vermeld.</p>
+      <p>3.2 Een overeenkomst komt tot stand zodra opdrachtgever een voorstel van Optimaal Groeien accepteert, schriftelijk, per e-mail, WhatsApp of digitaal.</p>
+      <p>3.3 Na acceptatie is de opdracht onherroepelijk.</p>
+    `,
+  },
+  {
+    title: 'Artikel 4 - Duur en verlenging',
+    body: `
+      <p>4.1 De standaard looptijd van een overeenkomst bedraagt 12 maanden, tenzij schriftelijk anders overeengekomen.</p>
+      <p>4.2 Na afloop wordt de overeenkomst stilzwijgend en automatisch verlengd met telkens dezelfde looptijd en voorwaarden.</p>
+      <p>4.3 Optimaal Groeien heeft geen herinneringsplicht bij verlenging.</p>
+      <p>4.4 Opzegging kan uitsluitend schriftelijk of per e-mail, uiterlijk één maand voor het einde van de lopende termijn.</p>
+      <p>4.5 Zonder tijdige opzegging wordt de overeenkomst automatisch verlengd en blijft opdrachtgever betalingsplichtig voor de nieuwe termijn.</p>
+    `,
+  },
+  {
+    title: 'Artikel 5 - Inspanningsverplichting, geen resultaatgarantie',
+    body: `
+      <p>5.1 Optimaal Groeien voert haar werkzaamheden uit op basis van een inspanningsverplichting en niet op basis van een resultaatverplichting.</p>
+      <p>5.2 Er wordt geen enkele garantie gegeven op aantallen leads, afspraken, omzet, ranking, bereik of enig ander concreet resultaat.</p>
+      <p>5.3 Alle prognoses, voorbeelden, gemiddelden en KPI's zijn uitsluitend indicatief.</p>
+      <p>5.4 Tegenvallende resultaten, persoonlijke interpretaties van kwaliteit of meningsverschillen over inhoud geven geen recht op korting, opschorting, restitutie of ontbinding.</p>
+      <p>5.5 Het is opdrachtgever uitdrukkelijk niet toegestaan betaling op te schorten of te weigeren met een beroep op "kwaliteit" of "resultaat".</p>
+      <p>5.6 Externe factoren zoals marktveranderingen, concurrentie, algoritmes, seizoenen of klantgedrag vallen buiten de invloedssfeer van Optimaal Groeien.</p>
+    `,
+  },
+  {
+    title: 'Artikel 6 - Uitvoering',
+    body: `
+      <p>6.1 Optimaal Groeien voert de diensten uit naar beste inzicht, kunde en zorgvuldigheid.</p>
+      <p>6.2 Optimaal Groeien mag derden inschakelen voor (delen van) de uitvoering.</p>
+      <p>6.3 Opdrachtgever dient tijdig alle benodigde informatie, toegang, feedback en materialen aan te leveren.</p>
+      <p>6.4 Vertraging of extra werk door nalatigheid van opdrachtgever wordt aanvullend gefactureerd.</p>
+      <p>6.5 Bij gefaseerde trajecten mag Optimaal Groeien volgende fases opschorten tot goedkeuring van de voorgaande.</p>
+    `,
+  },
+  {
+    title: 'Artikel 7 - Klachten en acceptatie',
+    body: `
+      <p>7.1 Klachten over campagnes, leads, visuals of andere werkzaamheden dienen binnen 5 werkdagen na publicatie of oplevering schriftelijk gemeld te worden.</p>
+      <p>7.2 Klachten over facturen binnen 14 dagen na factuurdatum.</p>
+      <p>7.3 Zonder tijdige melding wordt het werk geacht te zijn goedgekeurd.</p>
+      <p>7.4 Klachten schorten betalingsverplichtingen nooit op.</p>
+    `,
+  },
+  {
+    title: 'Artikel 8 - Betaling',
+    body: `
+      <p>8.1 Facturen dienen te worden voldaan binnen 14 dagen na factuurdatum, zonder verrekening of opschorting.</p>
+      <p>8.2 Bij te late betaling is opdrachtgever automatisch in verzuim en is wettelijke handelsrente verschuldigd, vermeerderd met minimaal €250 incassokosten.</p>
+      <p>8.3 Alle betalingen strekken eerst tot voldoening van kosten en rente, daarna van hoofdsom.</p>
+      <p>8.4 Optimaal Groeien mag haar werkzaamheden opschorten bij betalingsachterstand, zonder dat dit de betalingsplicht beïnvloedt.</p>
+      <p>8.5 Beoordelingen over resultaat, kwaliteit of tevredenheid hebben geen invloed op de betalingsplicht. Alleen een rechterlijke uitspraak kan hiervan afwijken.</p>
+      <p>8.6 Indien betaling uitblijft, mag Optimaal Groeien de vordering uit handen geven aan derden. Alle kosten die daaruit voortvloeien komen volledig voor rekening van opdrachtgever.</p>
+      <p>8.7 Bij herhaaldelijke wanbetaling mag Optimaal Groeien de overeenkomst per direct beëindigen, zonder restitutie.</p>
+      <p>8.8 Opschorting bij niet-betaling: Indien opdrachtgever één of meerdere facturen niet tijdig voldoet, is Optimaal Groeien gerechtigd om haar werkzaamheden en toegang tot systemen, campagnes en communicatiemiddelen per direct op te schorten, zonder dat dit een tekortkoming of schadeplicht oplevert.</p>
+    `,
+  },
+  {
+    title: 'Artikel 9 - Prijzen en indexatie',
+    body: `
+      <p>9.1 Alle prijzen zijn exclusief btw en overige heffingen.</p>
+      <p>9.2 Optimaal Groeien mag jaarlijks per 1 januari haar tarieven verhogen met de CPI (alle huishoudens) plus maximaal 3%.</p>
+      <p>9.3 Kostenstijgingen van derden, zoals advertentiebudgetten of licenties, worden volledig doorbelast.</p>
+    `,
+  },
+  {
+    title: 'Artikel 10 - Tussentijdse beëindiging',
+    body: `
+      <p>10.1 Opdrachtgever kan tussentijds opzeggen tegen betaling van een afkoopsom van 70% van de resterende maandvergoedingen van de lopende termijn, vermeerderd met lopende externe kosten.</p>
+      <p>10.2 Optimaal Groeien mag de werkzaamheden direct staken bij tussentijdse opzegging.</p>
+      <p>10.3 Alle openstaande bedragen blijven volledig verschuldigd.</p>
+    `,
+  },
+  {
+    title: 'Artikel 11 - Bewijspositie',
+    body: `
+      <p>11.1 Rapportages, dashboards, e-mails, logbestanden en gegevens uit het Portaal van Optimaal Groeien gelden als bindend bewijs van prestaties, voortgang en aantallen.</p>
+      <p>11.2 Alleen aantoonbare fouten, binnen 5 werkdagen schriftelijk gemeld, kunnen aanleiding geven tot correctie.</p>
+    `,
+  },
+  {
+    title: 'Artikel 12 - Non-circumventie en personeel',
+    body: `
+      <p>12.1 Opdrachtgever mag gedurende de looptijd van de overeenkomst en tot 24 maanden daarna geen medewerkers, freelancers of partners van Optimaal Groeien direct of indirect benaderen, inhuren of buiten Optimaal Groeien om inzetten.</p>
+      <p>12.2 Bij overtreding geldt een direct opeisbare boete van €25.000 per overtreding, vermeerderd met 30% van de orderwaarde die via de omleiding wordt gerealiseerd, onverminderd het recht op volledige schadevergoeding.</p>
+    `,
+  },
+  {
+    title: 'Artikel 13 - Intellectueel eigendom',
+    body: `
+      <p>13.1 Alle door Optimaal Groeien ontwikkelde materialen, strategieën, ontwerpen, teksten, visuals en software blijven eigendom van Optimaal Groeien.</p>
+      <p>13.2 Opdrachtgever krijgt uitsluitend een niet-exclusief, niet-overdraagbaar gebruiksrecht voor de duur van de overeenkomst.</p>
+      <p>13.3 Ongeoorloofd gebruik of verspreiding leidt tot een boete van €10.000 per overtreding, naast schadevergoeding.</p>
+    `,
+  },
+  {
+    title: 'Artikel 14 - Opschorting en ontbinding',
+    body: `
+      <p>14.1 Optimaal Groeien mag de uitvoering opschorten of de overeenkomst ontbinden indien opdrachtgever tekortschiet, niet betaalt of in surseance/faillissement verkeert.</p>
+      <p>14.2 Alle vorderingen van Optimaal Groeien worden in dat geval direct opeisbaar.</p>
+    `,
+  },
+  {
+    title: 'Artikel 15 - Aansprakelijkheid',
+    body: `
+      <p>15.1 Optimaal Groeien is uitsluitend aansprakelijk voor directe schade door aantoonbare, toerekenbare tekortkoming, tot maximaal 50% van de in de 12 maanden voorafgaand aan het schadevoorval gefactureerde bedragen, met een maximum van €250.000.</p>
+      <p>15.2 Optimaal Groeien is niet aansprakelijk voor indirecte schade, winstderving, dataverlies of reputatieschade.</p>
+      <p>15.3 Aansprakelijkheid ontstaat pas na schriftelijke ingebrekestelling en redelijke hersteltermijn.</p>
+      <p>15.4 Vorderingen verjaren na 12 maanden.</p>
+    `,
+  },
+  {
+    title: 'Artikel 16 - Overmacht',
+    body: `
+      <p>16.1 Bij overmacht (zoals ziekte, internetstoringen, stakingen, brand, natuurrampen, overheidsmaatregelen of uitval van leveranciers) is geen sprake van een toerekenbare tekortkoming.</p>
+      <p>16.2 Duurt de overmacht langer dan 30 dagen, dan mag ieder van partijen de overeenkomst ontbinden zonder schadeplicht.</p>
+    `,
+  },
+  {
+    title: 'Artikel 17 - Privacy',
+    body: `
+      <p>17.1 Indien Optimaal Groeien persoonsgegevens verwerkt, treedt zij op als verwerker; opdrachtgever is verwerkingsverantwoordelijke.</p>
+      <p>17.2 Een verwerkersovereenkomst wordt gesloten indien dit wettelijk vereist is.</p>
+    `,
+  },
+  {
+    title: 'Artikel 18 - Overdracht',
+    body: `
+      <p>18.1 Optimaal Groeien mag rechten en verplichtingen uit de overeenkomst overdragen aan derden.</p>
+      <p>18.2 Opdrachtgever mag dit niet zonder schriftelijke toestemming.</p>
+    `,
+  },
+  {
+    title: 'Artikel 19 - Toepasselijk recht en geschillen',
+    body: `
+      <p>19.1 Op alle overeenkomsten is uitsluitend Nederlands recht van toepassing.</p>
+      <p>19.2 Geschillen worden uitsluitend beslecht door de bevoegde rechter in het arrondissement Overijssel (locatie Zwolle).</p>
+    `,
+  },
+  {
+    title: 'Artikel 20 - Websites, domeinen en hosting',
+    body: `
+      <p>20.1 Indien Optimaal Groeien voor opdrachtgever websites ontwikkelt of host, maakt dit deel uit van de overeengekomen diensten zolang de overeenkomst loopt.</p>
+      <p>20.2 Hosting, domeinen, onderhoud en licenties zijn doorlopende verplichtingen.</p>
+      <p>20.3 Bij opzegging blijft opdrachtgever deze kosten verschuldigd zolang de website of e-mail actief is.</p>
+      <p>20.4 Beëindiging van hosting of domeinregistratie moet schriftelijk en minimaal één maand van tevoren worden aangevraagd.</p>
+      <p>20.5 Bij betalingsachterstand mag Optimaal Groeien de website of e-maildiensten direct offline halen, zonder aansprakelijkheid voor schade.</p>
+      <p>20.6 Overdracht van een website of domeinnaam vindt uitsluitend plaats na volledige betaling van alle openstaande bedragen, inclusief een eenmalige overdrachtsvergoeding.</p>
+    `,
+  },
+];
+---
+
+<ServiceLayout
+  title="Algemene voorwaarden - Optimaal Groeien"
+  description="Algemene voorwaarden van Optimaal Groeien voor offertes, overeenkomsten en diensten."
+  canonical="https://optimaalgroeien.nl/algemene-voorwaarden"
+>
+  <section class="hero-warm pt-36 pb-16 px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="label-pill">Legal</div>
+      <h1 class="text-[2.5rem] lg:text-[4rem] font-display font-bold text-brand-primary leading-[1.08] mb-6">
+        Algemene voorwaarden<br />
+        <span class="text-brand-accent">Optimaal Groeien.</span>
+      </h1>
+      <p class="text-lg text-brand-ink/70 leading-relaxed max-w-2xl font-light">
+        Welkom bij de algemene voorwaarden van Optimaal Groeien. Deze overeenkomst beschrijft de voorwaarden die van toepassing zijn bij het gebruik van de diensten die u worden aangeboden door Optimaal Groeien. Hieronder valt ook de dienst marketing, sales en training.
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-white px-6 py-20">
+    <div class="max-w-4xl mx-auto">
+      <div class="rounded-[28px] border border-amber-100/80 bg-[#FFFCF8] p-6 sm:p-10 lg:p-12">
+        <div class="space-y-10">
+          {articles.map((article) => (
+            <article class="border-t border-amber-100/80 pt-8 first:border-t-0 first:pt-0">
+              <h2 class="text-xl sm:text-2xl font-display font-bold text-brand-primary mb-4">
+                {article.title}
+              </h2>
+              <div class="legal-copy text-sm sm:text-base text-brand-ink/75 leading-relaxed space-y-3" set:html={article.body} />
+            </article>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+</ServiceLayout>

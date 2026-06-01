@@ -147,8 +147,8 @@ export const Footer = () => (
         <div>
           <h3 className="text-[10px] font-bold uppercase tracking-widest text-brand-lime mb-8">Legal</h3>
           <ul className="space-y-4 text-sm text-white/72">
-            <li>Privacybeleid</li>
-            <li>Algemene Voorwaarden</li>
+            <li><a href="/privacybeleid" className="hover:text-white transition-colors">Privacybeleid</a></li>
+            <li><a href="/algemene-voorwaarden" className="hover:text-white transition-colors">Algemene Voorwaarden</a></li>
             <li>KVK: 7182910</li>
           </ul>
         </div>
@@ -792,4 +792,3 @@ export const LatenWePratenSection = () => (
     </div>
   </section>
 );
-

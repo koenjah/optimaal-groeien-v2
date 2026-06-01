@@ -1,0 +1,169 @@
+---
+import ServiceLayout from '../layouts/ServiceLayout.astro';
+---
+
+<ServiceLayout
+  title="Marketing coach voor B2B ondernemers | Optimaal Groeien"
+  description="Zoek je een marketing coach die niet alleen adviseert, maar ook helpt uitvoeren? Optimaal Groeien helpt B2B-ondernemers met strategie, structuur en commerciële groei."
+  canonical="https://optimaalgroeien.nl/marketing-coach"
+>
+
+  <section class="hero-warm pt-36 pb-24 px-6 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="max-w-3xl">
+        <div class="label-pill">
+          <span class="w-2 h-2 bg-brand-accent rounded-full animate-pulse"></span>
+          Marketing coaching
+        </div>
+        <h1 class="text-[2.35rem] lg:text-[3.35rem] font-display font-bold text-brand-primary leading-[1.08] tracking-tight mb-6">
+          Marketing coach voor ondernemers<br />
+          <span class="text-brand-accent">die resultaat willen zien.</span>
+        </h1>
+        <p class="text-lg text-brand-ink/70 max-w-2xl leading-relaxed mb-10">
+          Je wilt geen losse tips, maar een scherp plan en iemand die meekijkt tot het ook echt gebeurt. Wij helpen B2B-bedrijven hun marketing structureren, prioriteiten stellen en de uitvoering op gang brengen.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a href="https://meetings-eu1.hubspot.com/stefan-kelderman" target="_blank" rel="noreferrer"
+            class="btn-primary !py-4 !px-9 text-sm w-full sm:w-auto justify-center">
+            Plan een kennismaking
+          </a>
+          <a href="/marketing/"
+            class="w-full sm:w-auto px-7 py-4 bg-white text-brand-primary rounded-2xl font-display font-bold transition-all hover:scale-[1.02] border-2 border-amber-100 shadow-sm flex items-center justify-center gap-2 text-sm">
+            Bekijk marketingaanpak
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-6 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-14 items-start">
+        <div>
+          <div class="label-pill">Wanneer heb je dit nodig?</div>
+          <h2 class="text-3xl lg:text-4xl font-display font-bold text-brand-primary mb-5">
+            Je doet marketing.<br /><span class="text-brand-accent">Maar er zit geen systeem in.</span>
+          </h2>
+          <p class="text-brand-ink/70 leading-relaxed mb-5">
+            Veel B2B-ondernemers hebben wel een website, LinkedIn-posts, campagnes of een bureau. Toch blijft het resultaat onvoorspelbaar. Dat komt meestal niet door te weinig inzet, maar door te weinig richting.
+          </p>
+          <p class="text-brand-ink/70 leading-relaxed">
+            Een marketing coach helpt je de juiste keuzes maken: welke doelgroep krijgt prioriteit, welke boodschap moet scherper, welke kanalen leveren aanvragen op en welke acties moeten stoppen?
+          </p>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-5">
+          {[
+            ['Geen duidelijke positionering', 'Iedereen snapt wat je doet, maar niemand voelt waarom ze juist jou moeten kiezen.'],
+            ['Te veel losse acties', 'SEO, social en campagnes draaien naast elkaar, zonder gezamenlijke route naar aanvragen.'],
+            ['Geen ritme in uitvoering', 'Goede plannen blijven liggen zodra de operatie druk wordt.'],
+            ['Marketing en sales sluiten niet aan', 'Leads komen binnen, maar opvolging en commerciële context ontbreken.'],
+          ].map(([title, desc]) => (
+            <div class="warm-card p-7">
+              <h3 class="text-base font-display font-bold text-brand-primary mb-2">{title}</h3>
+              <p class="text-sm text-brand-ink/70 leading-relaxed font-light">{desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-6 bg-[#FFFAF4]">
+    <div class="max-w-6xl mx-auto">
+      <div class="max-w-2xl mb-12">
+        <div class="label-pill">Onze rol</div>
+        <h2 class="text-3xl lg:text-4xl font-display font-bold text-brand-primary mb-5">
+          Marketing coaching die doorloopt<br /><span class="text-brand-accent">tot in de uitvoering.</span>
+        </h2>
+        <p class="text-brand-ink/70 leading-relaxed">
+          We houden het praktisch. Geen dikke strategiepresentatie, maar een werkbaar commercieel ritme. Samen bepalen we wat prioriteit heeft en welke acties direct effect hebben op vindbaarheid, vertrouwen en aanvragen.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-5">
+        {[
+          {
+            title: 'Strategie scherpzetten',
+            desc: 'Doelgroep, propositie, boodschap en kanaalkeuze terugbrengen tot een heldere route.',
+          },
+          {
+            title: 'Content en SEO sturen',
+            desc: 'Kansen uit zoekdata vertalen naar pagina’s, artikelen en content die bij de klantreis passen.',
+          },
+          {
+            title: 'Ritme en accountability',
+            desc: 'Iedere twee weken prioriteiten, resultaten en blokkades bespreken. Niet praten om te praten, maar sturen.',
+          },
+          {
+            title: 'Sales meenemen',
+            desc: 'Zorgen dat marketing geen los eiland is, maar input levert voor betere commerciële gesprekken.',
+          },
+          {
+            title: 'Meten wat telt',
+            desc: 'Niet sturen op likes of bereik, maar op aanvragen, offertegesprekken en kwaliteit van leads.',
+          },
+          {
+            title: 'Uitvoering versnellen',
+            desc: 'Waar nodig pakken we SEO, content, campagnes en automation ook zelf mee op.',
+          },
+        ].map(item => (
+          <div class="bg-white border border-amber-100/80 rounded-[24px] p-7">
+            <h3 class="text-base font-display font-bold text-brand-primary mb-2">{item.title}</h3>
+            <p class="text-sm text-brand-ink/70 leading-relaxed font-light">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-6 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <div class="max-w-2xl mb-10">
+        <div class="label-pill">Veelgestelde vragen</div>
+        <h2 class="text-3xl lg:text-4xl font-display font-bold text-brand-primary mb-5">
+          Marketing coach, marketing bureau<br /><span class="text-brand-accent">of allebei?</span>
+        </h2>
+      </div>
+      <div class="space-y-5">
+        {[
+          {
+            q: 'Wat doet een marketing coach?',
+            a: 'Een marketing coach helpt je betere commerciële keuzes maken. Denk aan positionering, doelgroep, kanalen, content, meetpunten en prioriteit. Bij Optimaal Groeien koppelen we dat aan uitvoering, zodat het plan niet blijft liggen.',
+          },
+          {
+            q: 'Wanneer kies je voor marketing coaching?',
+            a: 'Als je merkt dat er veel marketingactiviteit is, maar weinig samenhang of voorspelbaar resultaat. Coaching helpt vooral wanneer je intern wel ambitie hebt, maar richting en ritme mist.',
+          },
+          {
+            q: 'Is een online marketing coach hetzelfde als een bureau?',
+            a: 'Niet helemaal. Een bureau voert vaak losse onderdelen uit. Een online marketing coach kijkt breder naar keuzes, structuur en accountability. Wij combineren beide: strategie scherpzetten en daarna helpen uitvoeren.',
+          },
+        ].map(item => (
+          <div class="border border-amber-100 rounded-[20px] p-6 bg-[#FFFCF8]">
+            <h3 class="text-lg font-display font-bold text-brand-primary mb-2">{item.q}</h3>
+            <p class="text-sm text-brand-ink/70 leading-relaxed font-light">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-28 px-6 bg-brand-primary relative overflow-hidden" id="contact">
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-brand-lime/20 border border-brand-lime/30 rounded-full text-[11px] uppercase tracking-widest font-bold text-brand-lime mb-8">
+        Eerst scherpte. Dan uitvoering.
+      </div>
+      <h2 class="text-3xl lg:text-5xl font-display font-bold text-white mb-6 leading-tight">
+        Wil je weten waar je marketing nu lekt?
+      </h2>
+      <p class="text-lg text-white/70 leading-relaxed max-w-2xl mx-auto mb-10">
+        Plan een gratis analyse. We kijken naar je positionering, website, content, vindbaarheid en opvolging. Je krijgt direct concrete verbeterpunten mee.
+      </p>
+      <a href="https://meetings-eu1.hubspot.com/stefan-kelderman" target="_blank" rel="noreferrer"
+        class="inline-flex items-center justify-center gap-2 px-10 py-5 bg-brand-accent text-white rounded-2xl font-display font-bold transition-all hover:scale-[1.02] shadow-xl text-base">
+        Plan je gratis analyse
+      </a>
+    </div>
+  </section>
+
+</ServiceLayout>

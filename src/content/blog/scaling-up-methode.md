@@ -1,7 +1,11 @@
 ---
 title: "De Scaling Up methode: hoe je je B2B bedrijf structureel laat groeien"
+seoTitle: "Scaling Up methode | Strategie voor scale-ups"
 slug: "scaling-up-methode"
 description: "De Scaling Up methode voor B2B bedrijven uitgelegd. Hoe gebruik je dit bewezen framework om jouw bedrijf structureel te laten groeien?"
+seoDescription: "Lees hoe de Scaling Up methode werkt voor scale-up bedrijven. Ontdek de vier pijlers, strategie, executie en implementatie in B2B."
+heroImage: "/images/blog/marketing-strategy-illustration.webp"
+heroAlt: "Handgetekende illustratie van een strategische groeiroute met doel, prioriteiten en meetpunten"
 date: "2026-04-20"
 author: "Stefan Kelderman"
 category: "Strategie"
@@ -48,6 +52,20 @@ Vier signalen dat je klaar bent voor dit framework:
 </ul>
 
 Herken je drie van de vier? Dan werkt Scaling Up voor jou. Te vroeg schalen schaalt je problemen op. Maar te laat is ook gevaarlijk — een concurrent neemt het momentum over.
+
+## Scaling Up strategie: van ambitie naar ritme
+
+Een Scaling Up strategie is geen ambitie op een slide. Het is een manier om keuzes elke week zichtbaar te maken. Welke klanten wil je wel en niet? Welke belofte maak je aan de markt? Welke drie prioriteiten bepalen dit kwartaal of je groeit?
+
+Voor een scale-up bedrijf is dat vaak de grootste omslag. In de eerste fase won je op energie, snelheid en ondernemerschap. In de volgende fase win je op focus, ritme en eigenaarschap. Scaling Up helpt om die overgang expliciet te maken.
+
+Een goede strategie binnen Scaling Up bestaat uit drie lagen:
+
+- **Marktkeuze** — voor wie wil je de beste worden?
+- **Belofte** — welk probleem los je aantoonbaar beter op?
+- **Ritme** — hoe vertaal je die keuze naar kwartaalprioriteiten, meetings en cijfers?
+
+Zonder die derde laag blijft strategie abstract. Met ritme wordt strategie gedrag.
 
 ---
 
@@ -162,4 +180,4 @@ Het installatiebedrijf bestond al twaalf jaar toen de directeur die beslissingen
 
 **Het systeem werkt. De vraag is of jij het durft door te voeren.**
 
-Wil je weten waar jouw bedrijf nu staat op de vier pijlers? Lees meer over [scale-up begeleiding voor B2B](/scale-up-bedrijf) of bekijk onze [groeistrategie voor B2B-bedrijven](/groeistrategie).
+Wil je weten waar jouw bedrijf nu staat op de vier pijlers? Lees meer over [scale-up begeleiding voor B2B](/oplossingen/strategie/) of bekijk onze [groeistrategie voor B2B-bedrijven](/oplossingen/strategie/).

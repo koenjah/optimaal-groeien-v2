@@ -125,7 +125,7 @@ Geen budget nodig. Geen bureau. Drie stappen:
 
 **Stap 3:** Zoek drie vakblogs in jouw sector. Reageer de komende twee weken op hun artikelen. Bouw de relatie op voordat je iets vraagt.
 
-Meer verdieping over hoe je een sterk persoonlijk merk opbouwt lees je in ons artikel over [personal branding voor ondernemers](https://optimaalgroeien.nl/blog/waarom-is-personal-branding-relevant). En voor een breder overzicht van B2B-strategie bekijk je onze [B2B marketing oplossingen](https://optimaalgroeien.nl/oplossingen/marketing).
+Meer verdieping over hoe je een sterk persoonlijk merk opbouwt lees je in ons artikel over [personal branding voor ondernemers](/blog/waarom-is-personal-branding-relevant-voor-jouw-bedrijf-en-waar-moet-ik-beginnen/). En voor een breder overzicht van B2B-strategie bekijk je onze [B2B marketing oplossingen](/oplossingen/marketing/).
 
 ---
 
@@ -150,7 +150,7 @@ Jij deelt kennis. Klanten vertellen hun verhaal. Vakexperts versterken jouw bood
 
 Begin bij jezelf. Schrijf vandaag je eerste post. Maak hem concreet, eerlijk en nuttig.
 
-Wil je meer leren over hoe je [brand marketing voor B2B](https://optimaalgroeien.nl/brand-marketing) inzet naast thought leadership? Lees dan dat artikel als volgende stap.
+Wil je meer leren over hoe je [brand marketing voor B2B](/oplossingen/branding/) inzet naast thought leadership? Lees dan dat artikel als volgende stap.
 
 <div class="artikel-cta">
   <span class="artikel-cta-label">Als iemand reageert op je post — wat dan?</span>

@@ -1,0 +1,109 @@
+---
+import ServiceLayout from '../layouts/ServiceLayout.astro';
+
+Astro.response.status = 404;
+
+const helpfulLinks = [
+  {
+    href: '/ai-scan/',
+    title: 'Gratis AI Analyse',
+    description: 'Ontdek waar jouw commerciële groei nu lekt.',
+  },
+  {
+    href: '/oplossingen/',
+    title: 'Oplossingen',
+    description: 'Bekijk hoe we B2B-bedrijven helpen groeien.',
+  },
+  {
+    href: '/blog/',
+    title: 'Kennisbank',
+    description: 'Lees artikelen over SEO, marketing, sales en AI.',
+  },
+  {
+    href: '/contact/',
+    title: 'Contact',
+    description: 'Plan direct een kennismaking met Stefan.',
+  },
+];
+---
+
+<ServiceLayout
+  title="Pagina niet gevonden | Optimaal Groeien"
+  description="Deze pagina bestaat niet meer of is verplaatst. Ga terug naar Optimaal Groeien of vind snel de juiste pagina."
+  canonical="https://optimaalgroeien.nl/404"
+  noindex
+>
+  <section class="hero-warm min-h-[82vh] pt-36 pb-20 px-6 flex items-center">
+    <div class="max-w-7xl mx-auto w-full">
+      <div class="grid lg:grid-cols-[0.95fr_1.05fr] gap-12 lg:gap-16 items-center">
+        <div>
+          <div class="label-pill mb-7">
+            <span class="w-2 h-2 bg-brand-accent rounded-full"></span>
+            404 · Pagina niet gevonden
+          </div>
+          <h1 class="text-[2.6rem] lg:text-[4rem] font-display font-bold text-brand-primary leading-[1.05] tracking-tight mb-6">
+            Deze pagina is<br />
+            <span class="text-brand-accent">verplaatst of verdwenen.</span>
+          </h1>
+          <p class="text-lg text-brand-ink/70 max-w-xl leading-relaxed mb-9 font-light">
+            Geen probleem. De belangrijkste routes staan hieronder, zodat je snel terug bent bij de juiste informatie.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a href="/" class="btn-primary !py-4 !px-8 text-sm !bg-[#ed7c2f] w-full sm:w-auto justify-center">
+              Terug naar home
+            </a>
+            <a
+              href="/ai-scan/"
+              class="w-full sm:w-auto px-7 py-4 bg-white text-brand-primary rounded-2xl font-display font-bold transition-all hover:scale-[1.02] border-2 border-amber-100 shadow-sm flex items-center justify-center gap-2 text-sm"
+            >
+              Start gratis AI Analyse
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-white border border-amber-100 rounded-[28px] shadow-xl shadow-amber-900/5 p-6 lg:p-8">
+          <div class="flex items-center justify-between gap-4 pb-5 border-b border-amber-100 mb-6">
+            <div>
+              <div class="text-sm font-display font-bold text-brand-primary">Waar wil je heen?</div>
+              <div class="text-xs text-brand-ink/45 mt-1">Populaire routes op Optimaal Groeien</div>
+            </div>
+            <div class="w-11 h-11 rounded-2xl bg-brand-accent/10 text-brand-accent flex items-center justify-center font-display font-black">
+              404
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-3">
+            {helpfulLinks.map((link) => (
+              <a
+                href={link.href}
+                class="group p-5 rounded-2xl border border-amber-100 bg-[#FFFAF4] hover:bg-white hover:border-brand-accent/35 transition-all"
+              >
+                <div class="flex items-center justify-between gap-3 mb-3">
+                  <h2 class="text-base font-display font-bold text-brand-primary group-hover:text-brand-accent transition-colors">
+                    {link.title}
+                  </h2>
+                  <svg class="w-4 h-4 text-brand-accent shrink-0 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </div>
+                <p class="text-sm text-brand-ink/60 leading-relaxed font-light">{link.description}</p>
+              </a>
+            ))}
+          </div>
+
+          <div class="mt-6 pt-5 border-t border-amber-100 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+            <p class="text-sm text-brand-ink/55 font-light">
+              Denk je dat deze pagina wel zou moeten bestaan?
+            </p>
+            <a href="mailto:info@optimaalgroeien.nl" class="text-sm font-display font-bold text-brand-accent hover:text-brand-primary transition-colors">
+              Mail ons
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</ServiceLayout>

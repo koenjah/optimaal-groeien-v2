@@ -1,7 +1,11 @@
 ---
 title: "Wat doet een marketing coach en hoe helpt die jouw B2B bedrijf groeien?"
+seoTitle: "Marketing coach voor B2B | Wat doet een coach?"
 slug: "marketing-coach"
 description: "Wat doet een marketing coach en hoe helpt die jouw B2B bedrijf groeien? Leer wanneer je een coach inschakelt en wat het oplevert."
+seoDescription: "Wat doet een marketing coach? Lees wanneer marketing coaching werkt, wat het kost en hoe een online marketing coach B2B-bedrijven helpt groeien."
+heroImage: "/images/blog/business-coaching-illustration.webp"
+heroAlt: "Handgetekende illustratie van marketing coaching met een groeipad en actiepunten"
 date: "2026-04-06"
 author: "Stefan Kelderman"
 category: "Strategie"
@@ -43,7 +47,7 @@ Een marketing coach doet iets anders. Die versterkt je eigen mensen. Minder afha
 
 <div class="inzicht"><span class="inzicht-label">Inzicht</span><p>Het bureau-vs-coach onderscheid gaat niet over geld of capaciteit — het gaat over eigenaarschap. Met een bureau bouw je afhankelijkheid op. Met een coach bouw je je eigen marketingkracht op, die intern blijft ook als het traject stopt.</p></div>
 
-Het verschil met een [business coach](https://optimaalgroeien.nl/business-coach) zit in de focus. Een business coach kijkt naar je hele bedrijf. Strategie, team, processen, persoonlijke groei. Een marketing coach is smaller en daardoor scherper. Alleen marketing, maar tot op de bodem.
+Het verschil met een [business coach](/business-coaching/) zit in de focus. Een business coach kijkt naar je hele bedrijf. Strategie, team, processen, persoonlijke groei. Een marketing coach is smaller en daardoor scherper. Alleen marketing, maar tot op de bodem.
 
 ---
 
@@ -126,7 +130,7 @@ Er zijn verschillende vormen:
 - **Uurtarief:** Flexibel, maar mist continuïteit.
 - **Retainer:** Vast aantal uren per maand. De coach leert je bedrijf steeds beter kennen.
 - **Traject:** Een programma van 3 tot 6 maanden. Duidelijk begin en eind.
-- **Hybride model:** Strategie door de coach, uitvoering door een [digital growth agency](https://optimaalgroeien.nl/digital-growth-agency). Ideaal als je team nog niet alles zelf kan.
+- **Hybride model:** Strategie door de coach, uitvoering door een [commerciële marketingafdeling](/marketing/). Ideaal als je team nog niet alles zelf kan.
 
 De investering verdient zich terug. Via efficiënter budget, betere leads en een team dat zelfstandig werkt. Voor de meeste B2B-bedrijven is dat binnen 3 tot 6 maanden zichtbaar.
 
@@ -157,6 +161,8 @@ Zes dingen om op te letten:
 Als je budget uitgeeft en niet weet wat het oplevert, is dat het signaal. Niet om te stoppen met marketing. Om het anders te doen.
 
 Een coach geeft je geen trucjes. Je krijgt een strategie, een team dat begrijpt wat het doet en inzicht in wat marketing werkelijk oplevert.
+
+Wil je liever direct naar onze dienstpagina? Bekijk dan hoe wij werken als [marketing coach voor B2B ondernemers](/marketing-coach/).
 
 De vraag is niet of je het je kunt veroorloven. De vraag is of je door kunt gaan zoals het nu gaat.
 

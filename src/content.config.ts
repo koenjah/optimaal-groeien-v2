@@ -5,8 +5,10 @@ const blog = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/blog' }),
   schema: z.object({
     title: z.string(),
+    seoTitle: z.string().optional(),
     slug: z.string(),
     description: z.string(),
+    seoDescription: z.string().optional(),
     date: z.string(),
     author: z.string().default('Stefan Kelderman'),
     category: z.string(),
@@ -27,8 +29,10 @@ const klantcases = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/klantcases' }),
   schema: z.object({
     title: z.string(),
+    seoTitle: z.string().optional(),
     slug: z.string(),
     description: z.string(),
+    seoDescription: z.string().optional(),
     date: z.string(),
     author: z.string().default('Stefan Kelderman'),
     category: z.string().default('Klantcase'),

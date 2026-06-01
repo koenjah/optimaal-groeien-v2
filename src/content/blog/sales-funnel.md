@@ -1,7 +1,11 @@
 ---
 title: "Wat is een sales funnel en hoe bouw je een die wél convertert?"
+seoTitle: "Sales funnel uitleg voor B2B | Voorbeeld en stappenplan"
 slug: "sales-funnel"
 description: "Wat is een sales funnel en hoe bouw je er een die écht converteert voor B2B? Ontdek de 4 fases, een praktisch stappenplan en veelgemaakte fouten."
+seoDescription: "Heldere sales funnel uitleg voor B2B. Bekijk de fases, een praktisch sales funnel voorbeeld en hoe je meer leads omzet in klanten."
+heroImage: "/images/blog/marketing-funnel-illustration.webp"
+heroAlt: "Handgetekende funnelillustratie die laat zien hoe B2B-leads richting een verkoopgesprek bewegen"
 date: "2026-04-15"
 author: "Stefan Kelderman"
 category: "Leadgeneratie"
@@ -34,7 +38,7 @@ Een sales funnel is het systeem van sluizen. Je bepaalt hoe het water beweegt. J
 
 Dat is het verschil tussen gokken en groeien.
 
-## Wat een funnel eigenlijk is
+## Wat is een sales funnel precies?
 
 Een sales funnel is het pad van eerste kennismaking tot getekend contract. In B2B is dat pad lang. Zakelijke kopers nemen geen impulsbesluiten. Ze vergelijken. Ze overleggen intern. Ze willen bewijs.
 
@@ -46,6 +50,10 @@ Een funnel maakt die filtering zichtbaar. Je ziet waar mensen afhaken. En je kun
   <span class="getal-waarde">79%</span>
   <span class="getal-label">van de marketing leads wordt nooit opgevolgd — gebrek aan structuur is de hoofdoorzaak</span>
 </div>
+
+Wie zoekt naar een simpele sales funnel uitleg, kan hem zo onthouden: elke fase moet één duidelijke vraag beantwoorden. Kent de prospect jou? Vertrouwt hij je? Begrijpt hij de waarde? Is de stap naar een gesprek logisch?
+
+Als één van die vragen onbeantwoord blijft, voelt de volgende stap te vroeg. Dan haakt de prospect af, niet omdat hij geen interesse heeft, maar omdat je funnel hem niet goed begeleidt.
 
 ## De vier fases — en hoe Florian erdoorheen gaat
 
@@ -104,6 +112,21 @@ Niet uit koude acquisitie. Uit referrals en een LinkedIn-post die zes maanden ge
   <div class="stap"><span class="stap-nr">3</span><div class="stap-tekst"><strong>Wekelijks meten waar prospects afhaken</strong> — niet achteraf, maar structureel. Zo repareer je de funnel op het juiste punt, in plaats van overal tegelijk te sleutelen.</div></div>
 </div>
 
+## Sales funnel voorbeeld voor B2B
+
+Een concreet sales funnel voorbeeld maakt het verschil zichtbaar. Stel: een technisch dienstverlener wil onderhoudscontracten verkopen aan productiebedrijven.
+
+| Fase | Wat de prospect ziet | Doel |
+|---|---|---|
+| Bewustwording | Blog over stilstand en onderhoudskosten | Herkenning creëren |
+| Interesse | Download: checklist preventief onderhoud | Contactgegevens verzamelen |
+| Overweging | Case study van vergelijkbaar productiebedrijf | Vertrouwen opbouwen |
+| Actie | Gesprek met ROI-berekening en planning | Besluit makkelijker maken |
+
+Dit voorbeeld werkt omdat elke stap logisch volgt uit de vorige. De blog verkoopt nog niets. De checklist helpt. De case bewijst. Het gesprek sluit aan op wat de prospect al heeft gelezen.
+
+Een sales funnel hoeft dus niet complex te zijn. Hij moet vooral consequent zijn.
+
 <div class="tip">
   <span class="tip-label">Tip</span>
   <p><strong>De vuistregel:</strong> elke euro die je investeert in het ophalen van leads, investeer je ook in het opvolgen ervan. Stel je follow-up reeks in <em>vóór</em> je de eerste lead ophaalt — niet erna. Zonder follow-up is je leadmagnet weggegooid geld.</p>
@@ -123,7 +146,7 @@ Meten is weten. In een funnel zie je precies waar het vastloopt.
 
 Is je traffic hoog maar je leads laag? Verbeter de leadmagnet. Haken leads af na mail drie? Maak je e-mails concreter. Worden voorstellen niet getekend? Je stuurt ze te vroeg, of naar de verkeerde persoon.
 
-Wil je je pipeline sneller vullen? Lees dan meer over [B2B leadgeneratie uitbesteden](https://optimaalgroeien.nl/b2b-leadgeneratie) als aanvulling op je eigen funnel.
+Wil je je pipeline sneller vullen? Lees dan meer over [B2B leadgeneratie uitbesteden](/oplossingen/lead-generatie/) als aanvulling op je eigen funnel.
 
 ## Drie fouten die de meeste B2B-funnels breken
 
@@ -133,7 +156,7 @@ Wil je je pipeline sneller vullen? Lees dan meer over [B2B leadgeneratie uitbest
 
 **Alles tegelijk automatiseren.** Software helpt. Maar zakelijke kopers willen op het juiste moment een mens spreken. Automatiseer het herhaalwerk. Houd menselijk contact voor de cruciale momenten.
 
-Als je wilt dat marketing en sales als één geheel werken, kijk dan ook naar een [high ticket closing strategie](https://optimaalgroeien.nl/high-ticket-closing-agency).
+Als je wilt dat marketing en sales als één geheel werken, kijk dan ook naar onze [leadmachine voor B2B](/leadmachine/).
 
 ## Florian, drie maanden later
 

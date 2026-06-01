@@ -1,7 +1,11 @@
 ---
 title: "De marketing funnel uitgelegd: zo trek je structureel meer klanten aan"
+seoTitle: "Marketing funnel maken | B2B stappenplan"
 slug: "marketing-funnel"
 description: "De marketing funnel uitgelegd voor B2B bedrijven. Leer hoe je elke fase inzet om structureel meer klanten aan te trekken."
+seoDescription: "Wil je een marketing funnel maken? Bekijk het B2B stappenplan met fases, content per fase en tips om meer aanvragen uit je funnel te halen."
+heroImage: "/images/blog/marketing-funnel-illustration.webp"
+heroAlt: "Handgetekende illustratie van een B2B marketing funnel met fases van bewustwording tot verkoopgesprek"
 date: "2026-04-08"
 author: "Stefan Kelderman"
 category: "Marketing"
@@ -13,7 +17,7 @@ statHighlight:
   label: "van B2B-kopers stelt zijn shortlist samen vóórdat hij contact opneemt"
 keyTakeaways:
   - "Begrijp welke drie fases elke B2B-klant doorloopt vóór hij beslist."
-  - "Maak per fase de juiste content — en stop lekken in je funnel."
+  - "Maak per fase de juiste content — en optimaliseer waar je funnel lekt."
   - "Geef sales de context die Arjan al opbouwde, zodat het eerste gesprek raak is."
 ---
 <div class="citaat"><p>"Jouw klant legt de route toch al af. De vraag is alleen wie hem begeleidt."</p></div>
@@ -136,6 +140,31 @@ In deze fase gaat het om vertrouwen op het laatste moment. Arjan moet de besliss
 
 ---
 
+## Funnel marketing: zo werkt het in de praktijk
+
+Funnel marketing betekent dat je marketing niet organiseert per kanaal, maar per fase van de klantreis. Je denkt dus niet: "we moeten iets met LinkedIn". Je denkt: "welke vraag heeft Arjan nu, en welke content helpt hem naar de volgende stap?"
+
+Dat maakt je keuzes scherper. Een LinkedIn-post bovenin de funnel hoeft niet direct leads op te leveren. Die moet herkenning bouwen. Een casestudy in het midden van de funnel hoeft niet viraal te gaan. Die moet vertrouwen geven. Een offertepagina onderin de funnel hoeft geen breed verhaal te vertellen. Die moet twijfel wegnemen.
+
+De meeste B2B-bedrijven slaan deze nuance over. Ze maken losse content en hopen dat er aanvragen uit komen. Funnel marketing draait die volgorde om: eerst de reis begrijpen, dan pas content maken.
+
+## Funnel optimalisatie: waar begin je?
+
+Een marketing funnel optimaliseren begint niet met meer traffic. Meer bezoekers in een lekkende funnel geeft vooral meer verspilling.
+
+Begin bij de zwakste overgang:
+
+| Overgang | Signaal | Eerste verbetering |
+|---|---|---|
+| Bezoeker naar lead | Veel verkeer, weinig downloads | Maak de lead magnet specifieker |
+| Lead naar gesprek | Veel downloads, weinig aanvragen | Voeg een e-mailreeks en duidelijke vervolgstap toe |
+| Gesprek naar offerte | Veel gesprekken, weinig voorstellen | Kwalificeer scherper en geef sales meer context |
+| Offerte naar klant | Veel offertes, weinig akkoord | Versterk bewijs, ROI en implementatie-uitleg |
+
+Zo voorkom je dat je overal tegelijk aan sleutelt. Optimaliseer één overgang, meet vier tot zes weken en ga dan pas door naar de volgende.
+
+---
+
 ## De vier fouten die funnels laten lekken
 
 **Fout 1: Alleen TOFU-content.** Veel bezoekers, weinig leads. U trekt Arjan aan maar biedt niets waarmee hij verder kan. Bouw ook de midden- en onderkant.
@@ -156,7 +185,7 @@ Zorg dat sales weet wat Arjan al gezien heeft. Welke content. Welke pagina's. We
 
 Maak duidelijke afspraken over wanneer een lead "sales-ready" is. Op basis van gedrag, een score, of een directe aanvraag. Gebruik marketing automation als brug. Een automatische melding naar sales zodra Arjan de drempel passeert — zo valt geen enkele warme lead meer tussen wal en schip.
 
-Benieuwd hoe dit er in de praktijk uitziet? Bij Optimaal Groeien bouwen we de hele funnel — inclusief de koppeling met uw salesteam. Bekijk hoe [B2B leadgeneratie uitbesteden](/b2b-leadgeneratie) eruitziet.
+Benieuwd hoe dit er in de praktijk uitziet? Bij Optimaal Groeien bouwen we de hele funnel — inclusief de koppeling met uw salesteam. Bekijk hoe [B2B leadgeneratie uitbesteden](/oplossingen/lead-generatie/) eruitziet.
 
 ---
 
@@ -164,6 +193,15 @@ Benieuwd hoe dit er in de praktijk uitziet? Bij Optimaal Groeien bouwen we de he
 
 **Hoe lang duurt het voordat een funnel resultaat geeft?**
 De meeste B2B-bedrijven zien de eerste resultaten na drie tot zes maanden. Een funnel is een langetermijninvestering, geen snelle fix.
+
+**Wat is funnel marketing?**
+Funnel marketing is marketing die is ingericht op de fases van de klantreis. Je maakt content, opvolging en salesacties per fase, zodat een onbekende bezoeker stap voor stap richting een gesprek beweegt.
+
+**Wat is het verschil tussen een marketing funnel en een sales funnel?**
+De marketing funnel brengt de juiste mensen binnen en warmt ze op. De sales funnel begint zodra een lead klaar is voor persoonlijk contact, offerte of onderhandeling. In B2B overlappen ze, maar ze vragen andere content en andere opvolging.
+
+**Hoe optimaliseer je een marketing funnel?**
+Meet eerst per fase waar mensen afhaken. Verbeter daarna één overgang tegelijk: van bezoeker naar lead, van lead naar gesprek, van gesprek naar offerte of van offerte naar klant.
 
 **Heb ik marketing automation nodig?**
 Nee. Begin handmatig als dat moet. Maar zodra u meer dan tien leads per maand heeft, betaalt automation zichzelf terug.

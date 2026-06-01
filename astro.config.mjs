@@ -6,7 +6,12 @@ import cloudflare from '@astrojs/cloudflare';
 
 export default defineConfig({
   site: 'https://optimaalgroeien.nl',
-  integrations: [react(), sitemap()],
+  integrations: [
+    react(),
+    sitemap({
+      filter: (page) => !page.endsWith('/admin/') && !page.endsWith('/404/'),
+    }),
+  ],
   output: 'static',
   adapter: cloudflare(),
   vite: {

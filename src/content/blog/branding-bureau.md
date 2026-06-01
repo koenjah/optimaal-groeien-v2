@@ -94,7 +94,7 @@ Dat is de kern van de bovenstaande statistiek: bedrijven met een sterk merk krij
 
 Vertrouwen opbouwen op afstand is in de technische sector extra zwaar. De klant vertrouwt jou met zijn productieproces, zijn infrastructuur of zijn planning. Dan moet je uitstraling kloppen. Een professionele merkpresentatie laat zien dat je ook de details serieus neemt die de klant nooit ziet.
 
-Lees ook ons artikel over [personal branding](https://www.optimaalgroeien.nl/blog/waarom-is-personal-branding-relevant) als je jezelf als ondernemer wil positioneren.
+Lees ook ons artikel over [personal branding](/blog/waarom-is-personal-branding-relevant-voor-jouw-bedrijf-en-waar-moet-ik-beginnen/) als je jezelf als ondernemer wil positioneren.
 
 ---
 

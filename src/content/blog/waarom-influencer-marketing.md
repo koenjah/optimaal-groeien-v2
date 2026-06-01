@@ -1,7 +1,9 @@
 ---
 title: "Waarom influencer marketing inzetten voor jouw bedrijf?"
+seoTitle: "Wat is influencer marketing? Betekenis en strategie"
 slug: "waarom-influencer-marketing"
 description: "Influencer marketing vergroot je bereik, bouwt vertrouwen op en spreekt je doelgroep aan via een authentieke stem. Ontdek de voordelen, de soorten influencers en hoe je de juiste kiest voor jouw campagne."
+seoDescription: "Wat is influencer marketing en hoe zet je het slim in? Lees de betekenis, voordelen, risico's en stappen voor een sterke influencer marketing strategie."
 date: "2026-04-27"
 author: "Stefan Kelderman"
 category: "Marketing"
@@ -25,6 +27,8 @@ Maar is influencer marketing ook zinvol voor jouw bedrijf? En hoe zet je het sli
 Influencer marketing is een vorm van marketing waarbij je samenwerkt met invloedrijke mensen op social media. Die mensen — influencers — hebben een publiek opgebouwd rond een specifiek onderwerp of levensstijl. Ze promoten jouw product of dienst bij hun volgers.
 
 Het grote verschil met traditionele reclame: het voelt niet als reclame. Een influencer deelt zijn of haar eigen ervaring. Dat komt over als eerlijk, persoonlijk en geloofwaardig.
+
+De betekenis van influencer marketing is dus niet "iemand met veel volgers betalen". Het is vertrouwen lenen van iemand die jouw doelgroep al serieus neemt. Dat werkt alleen als de match klopt. Een slechte match voelt als reclame. Een goede match voelt als een aanbeveling.
 
 <div class="getal"><span class="getal-waarde">22 mrd</span><span class="getal-label">dollar — verwachte marktomvang van influencer marketing in 2025</span></div>
 
@@ -94,6 +98,20 @@ Een succesvolle influencer campagne vraagt om een duidelijke aanpak.
 **Sluit een duidelijke overeenkomst.** Leg vast wat er gemaakt wordt, wanneer het gepubliceerd wordt en hoe je de resultaten meet.
 
 **Evalueer de samenwerking.** Hoeveel bereik leverde het op? Hoeveel klikken, aankopen of aanmeldingen? Gebruik die inzichten voor de volgende campagne.
+
+## Influencer marketing strategie: maak het meetbaar
+
+Een influencer marketing strategie begint niet bij de influencer. Die begint bij de rol van de campagne in je commerciële systeem.
+
+Stel jezelf vooraf drie vragen:
+
+- **Voor welke doelgroep is deze campagne bedoeld?**
+- **Welke vervolgstap moet iemand zetten na het zien van de content?**
+- **Waar meten we succes op: bereik, verkeer, leads of omzet?**
+
+Zonder die vragen blijft influencer marketing een bereikcampagne. Dat kan nuttig zijn, maar het maakt rendement lastig te beoordelen. Met een duidelijke strategie koppel je de campagne aan een landingspagina, lead magnet, retargeting of salesopvolging.
+
+Voor B2B werkt dit vaak beter met vakexperts dan met klassieke lifestyle-influencers. Denk aan een technische specialist, branchepersoonlijkheid of niche-account dat geloofwaardigheid heeft bij jouw doelgroep.
 
 ## Risico's om rekening mee te houden
 

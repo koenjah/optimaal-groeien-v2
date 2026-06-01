@@ -1,7 +1,11 @@
 ---
 title: "Wat is een lead magnet? Effectieve tips en strategieën voor succes"
+seoTitle: "Lead magnet maken | Voorbeelden en stappenplan"
 slug: "wat-is-een-lead-magnet-effectieve-tips-en-strategieen-voor-succes"
 description: "Een lead magnet trekt potentiële klanten aan door gratis waarde te bieden. Leer wat een goede lead magnet is, welke soorten werken en hoe je er zelf mee begint."
+seoDescription: "Wil je een lead magnet maken? Bekijk voorbeelden, formats en een praktisch stappenplan om meer kwalitatieve leads te verzamelen."
+heroImage: "/images/blog/lead-magnet-illustration.webp"
+heroAlt: "Handgetekende illustratie van een lead magnet die contactkaarten naar een downloadformulier trekt"
 date: "2026-05-07"
 author: "Stefan Kelderman"
 category: "Leadgeneratie"
@@ -36,6 +40,20 @@ Een lead magnet is een gratis product of dienst die je aanbiedt in ruil voor con
 Het gemeenschappelijke kenmerk: de lead magnet lost een concreet probleem op voor je doelgroep. Niet vaag, niet algemeen — maar specifiek en direct bruikbaar.
 
 <div class="inzicht"><span class="inzicht-label">Inzicht</span><p>De beste lead magnets spelen in op een pijnpunt dat je doelgroep herkent. Hoe specifieker de belofte, hoe hoger de conversie. "10 tips voor betere marketing" werkt minder goed dan "5 LinkedIn-posts die je volgende week kunt gebruiken."</p></div>
+
+## Lead magnet voorbeelden die vaak werken
+
+Een goed voorbeeld hangt af van je doelgroep en koopproces. Voor B2B werken vooral lead magnets die iemand helpen een probleem intern scherper te maken.
+
+| Voorbeeld | Wanneer werkt dit goed? | Waarom het converteert |
+|---|---|---|
+| Checklist | De bezoeker wil snel controleren of hij iets mist | Direct bruikbaar en laagdrempelig |
+| Calculator | De bezoeker wil kosten, besparing of rendement inschatten | Maakt urgentie concreet |
+| Template | De bezoeker wil sneller zelf aan de slag | Bespaart tijd |
+| Whitepaper | De aankoop is complex en vraagt onderbouwing | Bouwt autoriteit op |
+| Gratis scan | De bezoeker wil weten waar hij staat | Maakt de stap naar gesprek logisch |
+
+Voor technische B2B-bedrijven werkt een calculator of scan vaak sterker dan een algemeen e-book. De doelgroep wil geen inspiratie, maar inzicht dat helpt bij een besluit.
 
 ## Waarom heb je een lead magnet nodig?
 

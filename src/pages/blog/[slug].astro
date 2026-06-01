@@ -12,6 +12,25 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
+const seoTitle = post.data.seoTitle ?? post.data.title;
+const seoDescription = post.data.seoDescription ?? post.data.description;
+
+function getResponsiveBlogImage(src?: string, sizes = '(min-width: 1024px) 896px, calc(100vw - 3rem)') {
+  if (!src?.startsWith('/images/blog/') || !src.endsWith('.webp')) {
+    return { src, srcset: undefined, sizes: undefined, width: undefined, height: undefined };
+  }
+
+  const base = src.replace(/\.webp$/, '');
+  return {
+    src,
+    srcset: `${base}-768.webp 768w, ${base}-1200.webp 1200w, ${src} 1672w`,
+    sizes,
+    width: 1672,
+    height: 941,
+  };
+}
+
+const heroImage = getResponsiveBlogImage(post.data.heroImage);
 
 const words = post.body?.split(/\s+/).length ?? 0;
 const readingTime = Math.ceil(words / 200);
@@ -19,7 +38,13 @@ const readingTime = Math.ceil(words / 200);
 const allPosts = await getCollection('blog', ({ data }) => !data.draft);
 const sameCategory = allPosts.filter(p => p.data.slug !== post.data.slug && p.data.category === post.data.category);
 const otherPosts = allPosts.filter(p => p.data.slug !== post.data.slug && p.data.category !== post.data.category);
-const related = [...sameCategory, ...otherPosts].slice(0, 3);
+const related = [...sameCategory, ...otherPosts].slice(0, 3).map(p => ({
+  ...p,
+  responsiveImage: getResponsiveBlogImage(
+    p.data.heroImage,
+    '(min-width: 1024px) 30vw, (min-width: 640px) 45vw, calc(100vw - 3rem)',
+  ),
+}));
 
 // Extract FAQ items from question-style headings in the markdown body
 const faqItems: { q: string; a: string }[] = [];
@@ -110,8 +135,8 @@ const breadcrumbSchema = JSON.stringify({
 ---
 
 <BlogLayout
-  title={post.data.title + ' — Optimaal Groeien'}
-  description={post.data.description}
+  title={seoTitle + ' — Optimaal Groeien'}
+  description={seoDescription}
   canonical={`https://optimaalgroeien.nl/blog/${post.data.slug}/`}
   ogImage={post.data.heroImage}
   ogType="article"
@@ -173,7 +198,11 @@ const breadcrumbSchema = JSON.stringify({
   {post.data.heroImage && (
     <div class="max-w-4xl mx-auto px-6 -mt-6 relative z-10">
       <img
-        src={post.data.heroImage}
+        src={heroImage.src}
+        srcset={heroImage.srcset}
+        sizes={heroImage.sizes}
+        width={heroImage.width}
+        height={heroImage.height}
         alt={post.data.heroAlt || post.data.title}
         class="w-full rounded-[24px] shadow-2xl object-cover max-h-[480px]"
         loading="eager"
@@ -248,7 +277,16 @@ const breadcrumbSchema = JSON.stringify({
           >
             {p.data.heroImage && (
               <div class="aspect-[16/9] overflow-hidden">
-                <img src={p.data.heroImage} alt={p.data.heroAlt || p.data.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+                <img
+                  src={p.responsiveImage.src}
+                  srcset={p.responsiveImage.srcset}
+                  sizes={p.responsiveImage.sizes}
+                  width={p.responsiveImage.width}
+                  height={p.responsiveImage.height}
+                  alt={p.data.heroAlt || p.data.title}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
               </div>
             )}
             <div class="p-5 flex flex-col flex-1">

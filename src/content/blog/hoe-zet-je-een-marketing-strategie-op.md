@@ -1,7 +1,11 @@
 ---
 title: "Hoe zet je een marketingstrategie op?"
+seoTitle: "Marketingstrategie ontwikkelen | Stappenplan"
 slug: "hoe-zet-je-een-marketing-strategie-op"
 description: "Een marketingstrategie zonder plan levert geen resultaat. In dit artikel lees je stap voor stap hoe je zelf een effectieve strategie bouwt, van analyse tot uitvoering."
+seoDescription: "Wil je een marketingstrategie ontwikkelen of laten opstellen? Bekijk het praktische stappenplan van analyse tot kanalen, doelen en uitvoering."
+heroImage: "/images/blog/marketing-strategy-illustration.webp"
+heroAlt: "Handgetekende illustratie van een marketingstrategie met routekaart, kanalen en groeidoel"
 date: "2026-03-22"
 author: "Stefan Kelderman"
 category: "Marketing"
@@ -18,7 +22,21 @@ keyTakeaways:
 
 Veel bedrijven beginnen met marketing zonder strategie. Ze posten op social media, sturen e-mails en schrijven blogs. Maar zonder richting levert dat weinig op. Een marketingstrategie geeft je die richting. Het is een plan dat je helpt de juiste mensen te bereiken, op het juiste moment, met de juiste boodschap.
 
-In dit artikel lees je hoe je zelf zo'n strategie opzet.
+In dit artikel lees je hoe je zelf zo'n strategie opzet, wanneer je een marketingstrategie beter kunt laten opstellen en welke onderdelen echt niet mogen ontbreken.
+
+## Marketingstrategie ontwikkelen: wat moet erin staan?
+
+Een marketingstrategie ontwikkelen betekent keuzes maken. Niet: zoveel mogelijk kanalen gebruiken. Wel: bepalen voor wie je er bent, waarom zij voor jou kiezen en hoe je ze stap voor stap bereikt.
+
+Een sterke strategie bevat minimaal vijf onderdelen:
+
+- **Doelgroep** — wie wil je bereiken, en wie bewust niet?
+- **Positionering** — waarom ben jij de logische keuze?
+- **Boodschap** — welke pijn, wens of ambitie spreek je aan?
+- **Kanalen** — waar zoekt je doelgroep naar informatie?
+- **Meetpunten** — wanneer weet je dat de strategie werkt?
+
+Zonder deze onderdelen wordt marketing al snel een verzameling losse acties. Met deze onderdelen bouw je een routekaart waar content, SEO, advertenties en sales op aansluiten.
 
 ## Stap 1: doe een interne analyse
 
@@ -95,6 +113,20 @@ Een marketingstrategie is geen document dat je één keer maakt en daarna in een
 ## Zelf doen of uitbesteden?
 
 Het opzetten van een marketingstrategie kost tijd en kennis. Heb je die intern? Dan is zelf doen een goede optie. Mis je capaciteit of expertise? Dan loont het om een bureau in te schakelen dat je helpt bij de analyse, de strategie én de uitvoering.
+
+## Marketingstrategie laten opstellen: wanneer is dat slim?
+
+Een marketingstrategie laten opstellen is vooral slim wanneer je merkt dat de uitvoering versnipperd raakt. Je doet wel iets aan SEO, social media of campagnes, maar er is geen duidelijke lijn tussen doelgroep, boodschap en opvolging.
+
+Besteed het niet uit omdat je "even een plan" nodig hebt. Besteed het uit als je een scherpe buitenblik nodig hebt op keuzes die intern lastig zijn:
+
+- Welke markt of doelgroep krijgt prioriteit?
+- Welke diensten zijn commercieel het meest kansrijk?
+- Welke kanalen leveren echt aanvragen op?
+- Welke boodschap onderscheidt je van concurrenten?
+- Welke acties moeten juist stoppen?
+
+Een goed extern traject levert dus geen dik document op, maar een werkbaar commercieel plan. De strategie moet na afloop direct duidelijk maken wat je deze maand wel en niet gaat doen.
 
 <div class="artikel-cta">
   <span class="artikel-cta-label">Praktisch toepassen?</span>

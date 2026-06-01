@@ -1,0 +1,129 @@
+---
+import ServiceLayout from '../layouts/ServiceLayout.astro';
+
+const sections = [
+  {
+    title: '1. Contactgegevens',
+    body: `
+      <p>Optimaal Groeien, gevestigd aan de Boeierstraat 9 te Raalte, is verantwoordelijk voor de verwerking van persoonsgegevens zoals weergegeven in deze privacyverklaring.</p>
+      <ul class="list-disc pl-5 space-y-2">
+        <li>Optimaal Groeien</li>
+        <li>Boeierstraat 9, 8102 HS Raalte</li>
+        <li>0572 700 246</li>
+        <li>Stefan Kelderman is de Functionaris Gegevensbescherming van Optimaal Groeien. Hij is te bereiken via <a class="text-brand-accent underline underline-offset-4" href="mailto:stefan@optimaalgroeien.nl">stefan@optimaalgroeien.nl</a>.</li>
+      </ul>
+    `,
+  },
+  {
+    title: '2. Persoonsgegevens die wij verwerken',
+    body: `
+      <p>Optimaal Groeien verwerkt je persoonsgegevens doordat je gebruik maakt van onze diensten en/of omdat je deze gegevens zelf aan ons verstrekt. Hieronder vind je een overzicht van de persoonsgegevens die wij verwerken:</p>
+      <ul class="list-disc pl-5 space-y-2">
+        <li>Voor- en achternaam</li>
+        <li>Telefoonnummer</li>
+        <li>E-mailadres</li>
+        <li>Gegevens over jouw activiteiten op onze website</li>
+        <li>Gegevens over jouw surfgedrag over verschillende websites heen, bijvoorbeeld omdat dit bedrijf onderdeel is van een advertentienetwerk</li>
+      </ul>
+    `,
+  },
+  {
+    title: '3. Bijzondere en/of gevoelige persoonsgegevens die wij verwerken',
+    body: `
+      <p>Onze website en/of dienst heeft niet de intentie gegevens te verzamelen over websitebezoekers die jonger zijn dan 16 jaar, tenzij zij toestemming hebben van ouders of voogd. We kunnen echter niet controleren of een bezoeker ouder dan 16 is.</p>
+      <p>Wij raden ouders dan ook aan betrokken te zijn bij de online activiteiten van hun kinderen, om zo te voorkomen dat er gegevens over kinderen verzameld worden zonder ouderlijke toestemming. Als je ervan overtuigd bent dat wij zonder die toestemming persoonlijke gegevens hebben verzameld over een minderjarige, neem dan contact met ons op via <a class="text-brand-accent underline underline-offset-4" href="mailto:info@optimaalgroeien.nl">info@optimaalgroeien.nl</a>, dan verwijderen wij deze informatie.</p>
+    `,
+  },
+  {
+    title: '4. Met welk doel en op basis van welke grondslag wij persoonsgegevens verwerken',
+    body: `
+      <p>Optimaal Groeien verwerkt jouw persoonsgegevens voor de volgende doelen:</p>
+      <ul class="list-disc pl-5 space-y-2">
+        <li>Je te kunnen bellen of e-mailen indien dit nodig is om onze dienstverlening uit te kunnen voeren</li>
+        <li>Je te informeren over wijzigingen van onze diensten en producten</li>
+        <li>Om goederen en diensten bij je af te leveren</li>
+        <li>Optimaal Groeien analyseert jouw gedrag op de website om daarmee de website te verbeteren en het aanbod van producten en diensten af te stemmen op jouw voorkeuren.</li>
+      </ul>
+    `,
+  },
+  {
+    title: '5. Geautomatiseerde besluitvorming',
+    body: `
+      <p>Optimaal Groeien neemt geen besluiten op basis van geautomatiseerde verwerkingen over zaken die aanzienlijke gevolgen kunnen hebben voor personen.</p>
+    `,
+  },
+  {
+    title: '6. Hoe lang we persoonsgegevens bewaren',
+    body: `
+      <p>Optimaal Groeien bewaart je persoonsgegevens niet langer dan strikt nodig is om de doelen te realiseren waarvoor je gegevens worden verzameld.</p>
+    `,
+  },
+  {
+    title: '7. Delen van persoonsgegevens met derden',
+    body: `
+      <p>Optimaal Groeien verstrekt persoonsgegevens uitsluitend aan derden en alleen als dit nodig is voor de uitvoering van onze overeenkomst met jou of om te voldoen aan een wettelijke verplichting.</p>
+    `,
+  },
+  {
+    title: '8. Cookies, of vergelijkbare technieken, die wij gebruiken',
+    body: `
+      <p>Optimaal Groeien gebruikt functionele, analytische en tracking cookies. Een cookie is een klein tekstbestand dat bij het eerste bezoek aan deze website wordt opgeslagen in de browser van je computer, tablet of smartphone.</p>
+      <p>Optimaal Groeien gebruikt cookies met een puur technische functionaliteit. Deze zorgen ervoor dat de website naar behoren werkt en dat bijvoorbeeld jouw voorkeursinstellingen onthouden worden. Deze cookies worden ook gebruikt om de website goed te laten werken en deze te kunnen optimaliseren.</p>
+      <p>Daarnaast plaatsen we cookies die jouw surfgedrag bijhouden zodat we op maat gemaakte content en advertenties kunnen aanbieden. Je kunt je afmelden voor cookies door je internetbrowser zo in te stellen dat deze geen cookies meer opslaat. Daarnaast kun je ook alle informatie die eerder is opgeslagen via de instellingen van je browser verwijderen.</p>
+      <p>Zie voor een toelichting: <a class="text-brand-accent underline underline-offset-4" href="https://veiliginternetten.nl/themes/situatie/cookies-wat-zijn-het-en-wat-doe-ik-ermee/" rel="noreferrer" target="_blank">veiliginternetten.nl</a>.</p>
+    `,
+  },
+  {
+    title: '9. Gegevens inzien, aanpassen of verwijderen',
+    body: `
+      <p>Je hebt het recht om je persoonsgegevens in te zien, te corrigeren of te verwijderen. Daarnaast heb je het recht om je eventuele toestemming voor de gegevensverwerking in te trekken of bezwaar te maken tegen de verwerking van jouw persoonsgegevens door Optimaal Groeien en heb je het recht op gegevensoverdraagbaarheid.</p>
+      <p>Dat betekent dat je bij ons een verzoek kan indienen om de persoonsgegevens die wij van jou beschikken in een computerbestand naar jou of een ander, door jou genoemde organisatie, te sturen. Je kunt een verzoek tot inzage, correctie, verwijdering, gegevensoverdraging van je persoonsgegevens of verzoek tot intrekking van je toestemming of bezwaar op de verwerking van jouw persoonsgegevens sturen naar <a class="text-brand-accent underline underline-offset-4" href="mailto:info@optimaalgroeien.nl">info@optimaalgroeien.nl</a>.</p>
+      <p>Om er zeker van te zijn dat het verzoek tot inzage door jou is gedaan, vragen wij jou een kopie van je identiteitsbewijs met het verzoek mee te sturen. Maak in deze kopie je pasfoto, MRZ, paspoortnummer en Burgerservicenummer zwart. Dit ter bescherming van je privacy. We reageren zo snel mogelijk, maar binnen vier weken, op jouw verzoek.</p>
+      <p>Optimaal Groeien wil je er tevens op wijzen dat je de mogelijkheid hebt om een klacht in te dienen bij de nationale toezichthouder, de Autoriteit Persoonsgegevens. Dat kan via <a class="text-brand-accent underline underline-offset-4" href="https://autoriteitpersoonsgegevens.nl/nl/contact-met-de-autoriteit-persoonsgegevens/tip-ons" rel="noreferrer" target="_blank">autoriteitpersoonsgegevens.nl</a>.</p>
+    `,
+  },
+  {
+    title: '10. Hoe wij persoonsgegevens beveiligen',
+    body: `
+      <p>Optimaal Groeien neemt de bescherming van jouw gegevens serieus en neemt passende maatregelen om misbruik, verlies, onbevoegde toegang, ongewenste openbaarmaking en ongeoorloofde wijziging tegen te gaan.</p>
+      <p>Als jij het idee hebt dat jouw gegevens toch niet goed beveiligd zijn of er aanwijzingen zijn van misbruik, neem dan contact op via <a class="text-brand-accent underline underline-offset-4" href="mailto:info@optimaalgroeien.nl">info@optimaalgroeien.nl</a>.</p>
+    `,
+  },
+];
+---
+
+<ServiceLayout
+  title="Privacybeleid - Optimaal Groeien"
+  description="Privacybeleid van Optimaal Groeien over de verwerking van persoonsgegevens, cookies en rechten van bezoekers."
+  canonical="https://optimaalgroeien.nl/privacybeleid"
+>
+  <section class="hero-warm pt-36 pb-16 px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="label-pill">Legal</div>
+      <h1 class="text-[2.5rem] lg:text-[4rem] font-display font-bold text-brand-primary leading-[1.08] mb-6">
+        Privacybeleid<br />
+        <span class="text-brand-accent">Optimaal Groeien.</span>
+      </h1>
+      <p class="text-lg text-brand-ink/70 leading-relaxed max-w-2xl font-light">
+        In dit privacybeleid leggen we uit welke persoonsgegevens Optimaal Groeien verwerkt, waarom we dat doen en welke rechten je hebt.
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-white px-6 py-20">
+    <div class="max-w-4xl mx-auto">
+      <div class="rounded-[28px] border border-amber-100/80 bg-[#FFFCF8] p-6 sm:p-10 lg:p-12">
+        <div class="space-y-10">
+          {sections.map((section) => (
+            <article class="border-t border-amber-100/80 pt-8 first:border-t-0 first:pt-0">
+              <h2 class="text-xl sm:text-2xl font-display font-bold text-brand-primary mb-4">
+                {section.title}
+              </h2>
+              <div class="legal-copy text-sm sm:text-base text-brand-ink/75 leading-relaxed space-y-3" set:html={section.body} />
+            </article>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+</ServiceLayout>
