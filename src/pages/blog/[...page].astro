@@ -2,16 +2,39 @@
 import BlogLayout from '../../layouts/BlogLayout.astro';
 import { getCollection } from 'astro:content';
 
+const pageSize = 12;
+
 export async function getStaticPaths({ paginate }: { paginate: Function }) {
   const posts = (await getCollection('blog', ({ data }: { data: any }) => !data.draft))
     .sort((a: any, b: any) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
   return paginate(posts, { pageSize: 12 });
 }
 
-const { page } = Astro.props;
+const allPosts = (await getCollection('blog', ({ data }: { data: any }) => !data.draft))
+  .sort((a: any, b: any) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+const rawParam = Astro.url.searchParams.get('page') ?? Astro.params.page ?? '1';
+const param = rawParam.replace(/\/$/, '') || '1';
+const currentPage = Number(param);
+const lastPage = Math.max(1, Math.ceil(allPosts.length / pageSize));
+
+if (!Number.isInteger(currentPage) || currentPage < 1 || currentPage > lastPage) {
+  return Astro.redirect('/404');
+}
+
+const fallbackPage = {
+  data: allPosts.slice((currentPage - 1) * pageSize, currentPage * pageSize),
+  currentPage,
+  lastPage,
+  total: allPosts.length,
+  url: {
+    prev: currentPage > 1 ? (currentPage === 2 ? '/blog' : `/blog/${currentPage - 1}`) : undefined,
+    next: currentPage < lastPage ? `/blog/${currentPage + 1}` : undefined,
+  },
+};
+
+const page = Astro.props.page ?? fallbackPage;
 const posts = page.data;
 
-const allPosts = (await getCollection('blog', ({ data }: { data: any }) => !data.draft));
 const categories = [...new Set(allPosts.map((p: any) => p.data.category))].sort();
 
 const isFirstPage = page.currentPage === 1;

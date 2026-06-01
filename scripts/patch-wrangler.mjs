@@ -10,22 +10,57 @@ const entryPath = new URL('../dist/server/entry.mjs', import.meta.url);
 const redirectsPath = new URL('../public/_redirects', import.meta.url);
 const cfg = JSON.parse(fs.readFileSync(wranglerPath, 'utf8'));
 
-cfg.name = 'optimaal-groeien';
+const enableEmdash = process.env.ENABLE_EMDASH === 'true';
+const workerName = process.env.WORKER_NAME ?? 'optimaal-groeien';
+const scanDbName = process.env.DB_NAME ?? 'optimaal-groeien-scans';
+const scanDbId =
+  process.env.DB_ID ??
+  (scanDbName === 'optimaal-groeien-scans' ? 'eb2e5e8a-12ce-4190-94ec-ee7644a5cbff' : '');
+const emdashDbName = process.env.EMDASH_DB_NAME ?? 'optimaal-groeien-emdash-staging';
+const emdashDbId = process.env.EMDASH_DB_ID ?? '';
+const mediaBucketName = process.env.MEDIA_BUCKET ?? 'optimaal-groeien-emdash-staging-media';
+const canonicalOrigin =
+  process.env.CANONICAL_ORIGIN ??
+  (workerName === 'optimaal-groeien' ? 'https://optimaalgroeien.nl' : '');
+const publicHosts = process.env.PUBLIC_HOSTS
+  ? process.env.PUBLIC_HOSTS.split(',').map((host) => host.trim()).filter(Boolean)
+  : workerName === 'optimaal-groeien'
+    ? ['optimaalgroeien.nl', 'www.optimaalgroeien.nl']
+    : [];
+
+cfg.name = workerName;
 cfg.assets = {
   ...(cfg.assets ?? {}),
   run_worker_first: true,
 };
-cfg.kv_namespaces = [];
-cfg.d1_databases = [
-  {
-    binding: 'DB',
-    database_name: 'optimaal-groeien-scans',
-    database_id: 'eb2e5e8a-12ce-4190-94ec-ee7644a5cbff',
-  },
+cfg.compatibility_flags = [
+  ...new Set([...(cfg.compatibility_flags ?? []), ...(enableEmdash ? ['nodejs_compat'] : [])]),
 ];
+cfg.kv_namespaces = [];
+cfg.d1_databases = [{
+  binding: 'DB',
+  database_name: scanDbName,
+  ...(scanDbId ? { database_id: scanDbId } : {}),
+}];
+
+if (enableEmdash) {
+  cfg.d1_databases.push({
+    binding: 'EMDASH_DB',
+    database_name: emdashDbName,
+    ...(emdashDbId ? { database_id: emdashDbId } : {}),
+  });
+  cfg.r2_buckets = [{
+    binding: 'MEDIA',
+    bucket_name: mediaBucketName,
+  }];
+} else {
+  cfg.r2_buckets = [];
+}
+
 if (cfg.previews) {
   cfg.previews.kv_namespaces = [];
   cfg.previews.d1_databases = cfg.d1_databases;
+  cfg.previews.r2_buckets = cfg.r2_buckets;
 }
 
 fs.writeFileSync(wranglerPath, JSON.stringify(cfg, null, 2));
@@ -50,8 +85,8 @@ globalThis.process.env ??= {};
 import "cloudflare:workers";
 import { w as astroWorker } from "${workerImport[1]}";
 
-const canonicalOrigin = "https://optimaalgroeien.nl";
-const publicHosts = new Set(["optimaalgroeien.nl", "www.optimaalgroeien.nl"]);
+const canonicalOrigin = ${JSON.stringify(canonicalOrigin)};
+const publicHosts = new Set(${JSON.stringify(publicHosts)});
 const redirectRules = ${JSON.stringify(redirectRules)};
 const redirectMap = new Map(redirectRules);
 
@@ -78,7 +113,7 @@ function needsTrailingSlash(url) {
 
 function makeRedirect(request) {
   const url = new URL(request.url);
-  if (!publicHosts.has(url.hostname)) return null;
+  if (!canonicalOrigin || !publicHosts.has(url.hostname)) return null;
 
   const redirectTarget = redirectMap.get(url.pathname) ?? redirectMap.get(normalizePathname(url.pathname));
   if (redirectTarget) {
@@ -114,4 +149,4 @@ export default {
 `;
 
 fs.writeFileSync(entryPath, patchedEntry);
-console.log('✓ Patched dist/server/wrangler.json with D1 binding and Worker-first redirects');
+console.log(`Patched dist/server/wrangler.json for ${workerName}${enableEmdash ? ' with EmDash bindings' : ''}`);
