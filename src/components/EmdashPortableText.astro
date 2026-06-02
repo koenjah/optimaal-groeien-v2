@@ -1,0 +1,116 @@
+---
+type PortableBlock = Record<string, any>;
+
+interface Props {
+  value?: PortableBlock[] | string | null;
+}
+
+const { value } = Astro.props;
+
+function escapeHtml(value: unknown): string {
+  return String(value ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function safeHref(href: unknown): string {
+  const value = String(href ?? '').trim();
+  if (!value) return '#';
+  if (/^(https?:|mailto:|tel:|\/|#)/i.test(value)) return value;
+  return '#';
+}
+
+function renderSpan(span: Record<string, any>, markDefs: Record<string, any>[]): string {
+  if (span?._type !== 'span') return '';
+
+  let text = escapeHtml(span.text ?? '');
+  for (const mark of span.marks ?? []) {
+    const def = markDefs.find((item) => item._key === mark);
+    if (def?._type === 'link') {
+      text = `<a href="${escapeHtml(safeHref(def.href))}">${text}</a>`;
+    } else if (mark === 'strong') {
+      text = `<strong>${text}</strong>`;
+    } else if (mark === 'em') {
+      text = `<em>${text}</em>`;
+    } else if (mark === 'code') {
+      text = `<code>${text}</code>`;
+    }
+  }
+
+  return text;
+}
+
+function renderTextBlock(block: PortableBlock): string {
+  const markDefs = Array.isArray(block.markDefs) ? block.markDefs : [];
+  const inner = (Array.isArray(block.children) ? block.children : [])
+    .map((span) => renderSpan(span, markDefs))
+    .join('');
+
+  if (!inner.trim()) return '';
+
+  if (block.style === 'blockquote') return `<blockquote><p>${inner}</p></blockquote>`;
+  if (/^h[1-6]$/.test(block.style ?? '')) return `<${block.style}>${inner}</${block.style}>`;
+
+  return `<p>${inner}</p>`;
+}
+
+function renderImage(block: PortableBlock): string {
+  const src = block.asset?.url ?? block.asset?.src ?? block.src;
+  if (!src) return '';
+
+  const alt = block.alt ?? block.asset?.alt ?? '';
+  return `<figure><img src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" loading="lazy" /></figure>`;
+}
+
+function renderCode(block: PortableBlock): string {
+  const code = escapeHtml(block.code ?? '');
+  return code ? `<pre><code>${code}</code></pre>` : '';
+}
+
+function renderBlocks(blocks: PortableBlock[]): string {
+  let html = '';
+  let listType: 'ul' | 'ol' | null = null;
+
+  function closeList() {
+    if (listType) {
+      html += `</${listType}>`;
+      listType = null;
+    }
+  }
+
+  for (const block of blocks) {
+    if (block?._type === 'block' && block.listItem) {
+      const nextType = block.listItem === 'number' ? 'ol' : 'ul';
+      if (listType !== nextType) {
+        closeList();
+        listType = nextType;
+        html += `<${listType}>`;
+      }
+
+      const itemHtml = renderTextBlock({ ...block, listItem: undefined }).replace(/^<p>|<\/p>$/g, '');
+      html += `<li>${itemHtml}</li>`;
+      continue;
+    }
+
+    closeList();
+
+    if (block?._type === 'block') html += renderTextBlock(block);
+    else if (block?._type === 'image') html += renderImage(block);
+    else if (block?._type === 'code') html += renderCode(block);
+  }
+
+  closeList();
+  return html;
+}
+
+const html = Array.isArray(value)
+  ? renderBlocks(value)
+  : value
+    ? `<p>${escapeHtml(value)}</p>`
+    : '';
+---
+
+<Fragment set:html={html} />

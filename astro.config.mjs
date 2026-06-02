@@ -3,6 +3,7 @@ import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 import cloudflare from '@astrojs/cloudflare';
+import { fileURLToPath } from 'node:url';
 
 const enableEmdash = process.env.ENABLE_EMDASH === 'true';
 
@@ -35,6 +36,13 @@ export default defineConfig({
   vite: {
     define: {
       'process.env.ENABLE_EMDASH': JSON.stringify(enableEmdash ? 'true' : 'false'),
+    },
+    resolve: {
+      alias: enableEmdash
+        ? {}
+        : {
+            emdash: fileURLToPath(new URL('./src/lib/emdash-stub.ts', import.meta.url)),
+          },
     },
     plugins: [tailwindcss()],
   },

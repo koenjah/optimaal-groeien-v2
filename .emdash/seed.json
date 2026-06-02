@@ -1,0 +1,84 @@
+{
+  "$schema": "https://emdashcms.com/seed.schema.json",
+  "version": "1",
+  "meta": {
+    "name": "Optimaal Groeien CMS",
+    "description": "CMS schema for publishing Optimaal Groeien pages and blog posts."
+  },
+  "settings": {
+    "title": "Optimaal Groeien",
+    "tagline": "B2B groei voor technische bedrijven"
+  },
+  "collections": [
+    {
+      "slug": "posts",
+      "label": "Blogs",
+      "labelSingular": "Blog",
+      "supports": ["drafts", "revisions", "preview", "search", "seo"],
+      "urlPattern": "/blog/{slug}",
+      "fields": [
+        {
+          "slug": "title",
+          "label": "Titel",
+          "type": "string",
+          "required": true,
+          "searchable": true
+        },
+        {
+          "slug": "featured_image",
+          "label": "Uitgelichte afbeelding",
+          "type": "image"
+        },
+        {
+          "slug": "content",
+          "label": "Content",
+          "type": "portableText",
+          "searchable": true
+        },
+        {
+          "slug": "excerpt",
+          "label": "Samenvatting",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "slug": "pages",
+      "label": "Pagina's",
+      "labelSingular": "Pagina",
+      "supports": ["drafts", "revisions", "preview", "search", "seo"],
+      "urlPattern": "/{slug}",
+      "fields": [
+        {
+          "slug": "title",
+          "label": "Titel",
+          "type": "string",
+          "required": true,
+          "searchable": true
+        },
+        {
+          "slug": "content",
+          "label": "Content",
+          "type": "portableText",
+          "searchable": true
+        }
+      ]
+    }
+  ],
+  "taxonomies": [
+    {
+      "name": "category",
+      "label": "Categorieen",
+      "labelSingular": "Categorie",
+      "hierarchical": true,
+      "collections": ["posts"]
+    },
+    {
+      "name": "tag",
+      "label": "Tags",
+      "labelSingular": "Tag",
+      "hierarchical": false,
+      "collections": ["posts"]
+    }
+  ]
+}

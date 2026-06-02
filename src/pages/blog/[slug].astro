@@ -20,6 +20,10 @@ if (!post && Astro.params.slug && /^\d+$/.test(Astro.params.slug)) {
   return Astro.rewrite(`/blog/?page=${Astro.params.slug}`);
 }
 
+if (!post && Astro.params.slug) {
+  return Astro.rewrite(`/__cms-post/${Astro.params.slug}`);
+}
+
 if (!post) {
   return Astro.redirect('/404');
 }
