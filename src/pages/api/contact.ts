@@ -4,7 +4,7 @@ import type { APIRoute } from 'astro';
 import { env as cloudflareEnv } from 'cloudflare:workers';
 
 const RECIPIENT_EMAIL = 'sales@optimaalgroeien.nl';
-const SENDER_EMAIL = 'sales@optimaalgroeien.nl';
+const SENDER_EMAIL = 'website@optimaalgroeien.nl';
 
 interface ContactInput {
   name: string;

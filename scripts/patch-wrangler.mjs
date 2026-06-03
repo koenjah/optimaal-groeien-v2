@@ -12,6 +12,10 @@ const cfg = JSON.parse(fs.readFileSync(wranglerPath, 'utf8'));
 
 const enableEmdash = process.env.ENABLE_EMDASH === 'true';
 const workerName = process.env.WORKER_NAME ?? 'optimaal-groeien';
+const accountId =
+  process.env.CLOUDFLARE_ACCOUNT_ID ??
+  process.env.ACCOUNT_ID ??
+  (workerName === 'optimaal-groeien' ? 'c6b2726f6f179cede41f156972fd951a' : '');
 const scanDbName = process.env.DB_NAME ?? 'optimaal-groeien-scans';
 const scanDbId =
   process.env.DB_ID ??
@@ -30,6 +34,9 @@ const publicHosts = process.env.PUBLIC_HOSTS
     : [];
 
 cfg.name = workerName;
+if (accountId) {
+  cfg.account_id = accountId;
+}
 cfg.assets = {
   ...(cfg.assets ?? {}),
   run_worker_first: true,
