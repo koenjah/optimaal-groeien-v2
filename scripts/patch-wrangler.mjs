@@ -19,6 +19,7 @@ const scanDbId =
 const emdashDbName = process.env.EMDASH_DB_NAME ?? 'optimaal-groeien-emdash-staging';
 const emdashDbId = process.env.EMDASH_DB_ID ?? '';
 const mediaBucketName = process.env.MEDIA_BUCKET ?? 'optimaal-groeien-emdash-staging-media';
+const contactEmail = process.env.CONTACT_EMAIL ?? 'sales@optimaalgroeien.nl';
 const canonicalOrigin =
   process.env.CANONICAL_ORIGIN ??
   (workerName === 'optimaal-groeien' ? 'https://optimaalgroeien.nl' : '');
@@ -62,6 +63,13 @@ if (cfg.previews) {
   cfg.previews.d1_databases = cfg.d1_databases;
   cfg.previews.r2_buckets = cfg.r2_buckets;
 }
+
+cfg.send_email = contactEmail
+  ? [{
+      name: 'CONTACT_EMAIL',
+      destination_address: contactEmail,
+    }]
+  : [];
 
 fs.writeFileSync(wranglerPath, JSON.stringify(cfg, null, 2));
 

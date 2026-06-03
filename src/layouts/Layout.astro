@@ -92,7 +92,24 @@ const websiteSchema = {
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
     <!-- Leadinfo -->
-    <script defer src="https://tracking.leadinfo.com/autotrack.js?t=LI-618941BAAC746" id="LeadinfoTracking"></script>
+    <script is:inline>
+      (function (w, d, n, id) {
+        w.GlobalLeadinfoNamespace = w.GlobalLeadinfoNamespace || [];
+        w.GlobalLeadinfoNamespace.push(n);
+        w[n] = w[n] || function () {
+          (w[n].q = w[n].q || []).push(arguments);
+        };
+        w[n].t = id;
+        w[n].q = w[n].q || [];
+
+        var firstScript = d.getElementsByTagName('script')[0];
+        var script = d.createElement('script');
+        script.async = true;
+        script.id = 'LeadinfoTracking';
+        script.src = 'https://cdn.leadinfo.net/ping.js';
+        firstScript.parentNode.insertBefore(script, firstScript);
+      })(window, document, 'leadinfo', 'LI-618941BAAC746');
+    </script>
   </head>
   <body>
     <slot />

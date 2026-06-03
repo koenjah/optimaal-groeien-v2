@@ -21,3 +21,20 @@ CREATE TABLE IF NOT EXISTS scan_entries (
 
 CREATE INDEX IF NOT EXISTS idx_scan_entries_timestamp ON scan_entries(timestamp DESC);
 CREATE INDEX IF NOT EXISTS idx_scan_entries_email ON scan_entries(email);
+
+CREATE TABLE IF NOT EXISTS contact_submissions (
+  id TEXT PRIMARY KEY,
+  timestamp TEXT NOT NULL,
+  name TEXT NOT NULL,
+  email TEXT NOT NULL,
+  company TEXT,
+  phone TEXT,
+  message TEXT NOT NULL,
+  page_url TEXT,
+  source TEXT,
+  user_agent TEXT,
+  referrer TEXT,
+  email_sent INTEGER DEFAULT 0
+);
+
+CREATE INDEX IF NOT EXISTS idx_contact_submissions_timestamp ON contact_submissions(timestamp DESC);
