@@ -241,6 +241,7 @@ function applyAdminBranding(response, url) {
 }
 
 function syncRuntimeEnvironment(env) {
+  globalThis.__env__ = env;
   if (typeof env.CF_ACCESS_AUDIENCE === "string" && env.CF_ACCESS_AUDIENCE) {
     globalThis.process.env.CF_ACCESS_AUDIENCE = env.CF_ACCESS_AUDIENCE;
   }
