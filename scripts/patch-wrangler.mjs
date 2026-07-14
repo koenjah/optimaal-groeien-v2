@@ -235,9 +235,16 @@ function applyAdminBranding(response, url) {
     .transform(response);
 }
 
+function syncRuntimeEnvironment(env) {
+  if (typeof env.CF_ACCESS_AUDIENCE === "string" && env.CF_ACCESS_AUDIENCE) {
+    globalThis.process.env.CF_ACCESS_AUDIENCE = env.CF_ACCESS_AUDIENCE;
+  }
+}
+
 export default {
   ...astroWorker,
   async fetch(request, env, ctx) {
+    syncRuntimeEnvironment(env);
     const redirect = makeRedirect(request);
     if (redirect) return redirect;
     const response = await astroWorker.fetch(request, env, ctx);
