@@ -1,4 +1,9 @@
 import { defineMiddleware } from 'astro:middleware';
+import { env as cloudflareEnv } from 'cloudflare:workers';
+
+type AssetsBinding = {
+  fetch(request: Request): Promise<Response>;
+};
 
 export const onRequest = defineMiddleware((context, next) => {
   const { pathname, search } = context.url;
@@ -6,6 +11,13 @@ export const onRequest = defineMiddleware((context, next) => {
   const publicHosts = new Set(['optimaalgroeien.nl', 'www.optimaalgroeien.nl']);
   const canonicalOrigin = 'https://optimaalgroeien.nl';
   const forwardedProtocol = context.request.headers.get('x-forwarded-proto');
+
+  // EmDash owns /sitemap-{collection}.xml. Keep Astro's existing sitemap files
+  // available because their names also match that dynamic CMS route.
+  if (pathname === '/sitemap-index.xml' || pathname === '/sitemap-0.xml') {
+    const assets = (cloudflareEnv as Record<string, unknown>).ASSETS as AssetsBinding | undefined;
+    if (assets?.fetch) return assets.fetch(context.request);
+  }
 
   const redirectTo = (targetPath: string) => {
     const targetUrl = new URL(targetPath, canonicalOrigin);

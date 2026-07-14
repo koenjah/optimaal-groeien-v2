@@ -30,7 +30,7 @@ if (!post && params.slug && /^\d+$/.test(params.slug)) {
 }
 
 if (!post && params.slug) {
-  return Astro.rewrite(`/__cms-post/${params.slug}`);
+  return Astro.rewrite(`/cms-content/blog/${params.slug}`);
 }
 
 if (!post) {
