@@ -4,18 +4,27 @@ import { getCollection } from 'astro:content';
 import { getCmsBlogListEntries } from '../../lib/emdash-content';
 
 const pageSize = 12;
+const getBlogPosts = async () => (await (getCollection as any)(
+  'blog',
+  ({ data }: { data: any }) => !data.draft,
+)) as any[];
 
 export async function getStaticPaths({ paginate }: { paginate: Function }) {
-  const posts = (await getCollection('blog', ({ data }: { data: any }) => !data.draft))
+  const posts = (await (getCollection as any)(
+    'blog',
+    ({ data }: { data: any }) => !data.draft,
+  ))
     .sort((a: any, b: any) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
   return paginate(posts, { pageSize: 12 });
 }
 
-const markdownPosts = await getCollection('blog', ({ data }: { data: any }) => !data.draft);
+const markdownPosts = await getBlogPosts();
 const cmsPosts = await getCmsBlogListEntries();
 const allPosts = [...markdownPosts, ...cmsPosts]
   .sort((a: any, b: any) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
-const rawParam = Astro.url.searchParams.get('page') ?? Astro.params.page ?? '1';
+const params = Astro.params as Record<string, string | undefined>;
+const props = Astro.props as { page?: any };
+const rawParam = Astro.url.searchParams.get('page') ?? params.page ?? '1';
 const param = rawParam.replace(/\/$/, '') || '1';
 const currentPage = Number(param);
 const lastPage = Math.max(1, Math.ceil(allPosts.length / pageSize));
@@ -35,7 +44,7 @@ const fallbackPage = {
   },
 };
 
-const page = Astro.props.page ?? fallbackPage;
+const page = props.page ?? fallbackPage;
 const posts = page.data;
 
 const categories = [...new Set(allPosts.map((p: any) => p.data.category))].sort();

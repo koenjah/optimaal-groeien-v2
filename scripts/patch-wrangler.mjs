@@ -12,24 +12,40 @@ const cfg = JSON.parse(fs.readFileSync(wranglerPath, 'utf8'));
 
 const enableEmdash = process.env.ENABLE_EMDASH === 'true';
 const workerName = process.env.WORKER_NAME ?? 'optimaal-groeien';
+const isProduction = workerName === 'optimaal-groeien';
+const isEmdashStaging = workerName === 'optimaal-groeien-emdash-staging';
 const accountId =
   process.env.CLOUDFLARE_ACCOUNT_ID ??
   process.env.ACCOUNT_ID ??
-  (workerName === 'optimaal-groeien' ? 'c6b2726f6f179cede41f156972fd951a' : '');
-const scanDbName = process.env.DB_NAME ?? 'optimaal-groeien-scans';
+  (isProduction || isEmdashStaging ? '1a908255c94d3901bd9cdd3bd565704b' : '');
+const scanDbName =
+  process.env.DB_NAME ??
+  (isProduction ? 'optimaal-groeien-leads' : isEmdashStaging ? 'duidelijkdag_family' : 'optimaal-groeien-staging-scans');
 const scanDbId =
   process.env.DB_ID ??
-  (scanDbName === 'optimaal-groeien-scans' ? 'eb2e5e8a-12ce-4190-94ec-ee7644a5cbff' : '');
-const emdashDbName = process.env.EMDASH_DB_NAME ?? 'optimaal-groeien-emdash-staging';
-const emdashDbId = process.env.EMDASH_DB_ID ?? '';
+  (scanDbName === 'optimaal-groeien-leads'
+    ? 'c282d443-d328-45ca-b334-ba6bdf901814'
+    : scanDbName === 'duidelijkdag_family'
+      ? 'd63dd757-5070-46c1-9a62-da000bfd53d4'
+      : '');
+const emdashDbName = process.env.EMDASH_DB_NAME ?? (isProduction ? scanDbName : 'duidelijkdag_family');
+const emdashDbId = process.env.EMDASH_DB_ID ?? (isProduction || isEmdashStaging ? scanDbId : '');
 const mediaBucketName = process.env.MEDIA_BUCKET ?? 'optimaal-groeien-emdash-staging-media';
-const contactEmail = process.env.CONTACT_EMAIL ?? 'sales@optimaalgroeien.nl';
+const contactToEmail =
+  process.env.CONTACT_TO_EMAIL ??
+  process.env.CONTACT_RECIPIENT_EMAIL ??
+  'marketing@optimaalgroeien.nl';
+const contactEmail =
+  process.env.CONTACT_EMAIL ??
+  (isProduction ? contactToEmail : '');
+const resendFromEmail =
+  process.env.RESEND_FROM_EMAIL ?? 'Optimaal Groeien <website@send.closersmatch.com>';
 const canonicalOrigin =
   process.env.CANONICAL_ORIGIN ??
-  (workerName === 'optimaal-groeien' ? 'https://optimaalgroeien.nl' : '');
+  (isProduction ? 'https://optimaalgroeien.nl' : '');
 const publicHosts = process.env.PUBLIC_HOSTS
   ? process.env.PUBLIC_HOSTS.split(',').map((host) => host.trim()).filter(Boolean)
-  : workerName === 'optimaal-groeien'
+  : isProduction
     ? ['optimaalgroeien.nl', 'www.optimaalgroeien.nl']
     : [];
 
@@ -50,6 +66,11 @@ cfg.d1_databases = [{
   database_name: scanDbName,
   ...(scanDbId ? { database_id: scanDbId } : {}),
 }];
+cfg.vars = {
+  ...(cfg.vars ?? {}),
+  CONTACT_TO_EMAIL: contactToEmail,
+  RESEND_FROM_EMAIL: resendFromEmail,
+};
 
 if (enableEmdash) {
   cfg.d1_databases.push({

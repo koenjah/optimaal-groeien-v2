@@ -3,8 +3,9 @@ export const prerender = false;
 import type { APIRoute } from 'astro';
 import { env as cloudflareEnv } from 'cloudflare:workers';
 
-const RECIPIENT_EMAIL = 'sales@optimaalgroeien.nl';
-const SENDER_EMAIL = 'website@optimaalgroeien.nl';
+const DEFAULT_RECIPIENT_EMAIL = 'marketing@optimaalgroeien.nl';
+const DEFAULT_SENDER_EMAIL = 'website@optimaalgroeien.nl';
+const DEFAULT_RESEND_FROM = 'Optimaal Groeien <website@send.closersmatch.com>';
 
 interface ContactInput {
   name: string;
@@ -72,7 +73,12 @@ function headerSafe(value: string): string {
   return value.replace(/[\r\n]+/g, ' ').replace(/"/g, "'").trim();
 }
 
-function buildEmail(input: ContactInput, request: Request): EmailMessageBuilder {
+function buildEmail(
+  input: ContactInput,
+  request: Request,
+  recipientEmail = DEFAULT_RECIPIENT_EMAIL,
+  senderEmail = DEFAULT_SENDER_EMAIL,
+): EmailMessageBuilder {
   const subjectSuffix = input.company ? ` - ${input.company}` : '';
   const subject = headerSafe(`Nieuw contactformulier Optimaal Groeien${subjectSuffix}`);
   const submittedAt = new Date().toISOString();
@@ -99,9 +105,9 @@ function buildEmail(input: ContactInput, request: Request): EmailMessageBuilder 
   ].join('\n');
 
   return {
-    to: RECIPIENT_EMAIL,
+    to: recipientEmail,
     from: {
-      email: SENDER_EMAIL,
+      email: senderEmail,
       name: 'Optimaal Groeien Website',
     },
     replyTo: {
@@ -111,6 +117,41 @@ function buildEmail(input: ContactInput, request: Request): EmailMessageBuilder 
     subject,
     text: body,
   };
+}
+
+function envString(env: Record<string, unknown>, key: string): string {
+  const value = env[key];
+  return typeof value === 'string' ? value.trim() : '';
+}
+
+function formatReplyTo(replyTo: EmailMessageBuilder['replyTo']): string {
+  return `${headerSafe(replyTo.name)} <${replyTo.email}>`;
+}
+
+async function sendWithResend(
+  apiKey: string,
+  from: string,
+  message: EmailMessageBuilder,
+): Promise<void> {
+  const response = await fetch('https://api.resend.com/emails', {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${apiKey}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      from,
+      to: [message.to],
+      reply_to: formatReplyTo(message.replyTo),
+      subject: message.subject,
+      text: message.text,
+    }),
+  });
+
+  if (!response.ok) {
+    const body = await response.text().catch(() => '');
+    throw new Error(`Resend ${response.status}: ${body.slice(0, 240)}`);
+  }
 }
 
 async function ensureContactTable(db: D1Database): Promise<void> {
@@ -216,16 +257,37 @@ export const POST: APIRoute = async ({ request }) => {
   const cfEnv = cloudflareEnv as Record<string, unknown>;
   const db = cfEnv.DB as D1Database | undefined;
   const emailBinding = cfEnv.CONTACT_EMAIL as SendEmailBinding | undefined;
+  const recipientEmail =
+    clean(envString(cfEnv, 'CONTACT_TO_EMAIL') || envString(cfEnv, 'CONTACT_RECIPIENT_EMAIL'), 160) ||
+    DEFAULT_RECIPIENT_EMAIL;
+  const senderEmail = clean(envString(cfEnv, 'CONTACT_FROM_EMAIL'), 160) || DEFAULT_SENDER_EMAIL;
+  const resendFrom = envString(cfEnv, 'RESEND_FROM_EMAIL') || DEFAULT_RESEND_FROM;
+  const resendApiKey = envString(cfEnv, 'RESEND_API_KEY');
+  const emailMessage = buildEmail(input, request, recipientEmail, senderEmail);
 
   let emailSent = false;
   let emailError = '';
+  let emailProvider = '';
 
-  if (emailBinding?.send) {
+  if (resendApiKey) {
     try {
-      await emailBinding.send(buildEmail(input, request));
+      await sendWithResend(resendApiKey, resendFrom, emailMessage);
       emailSent = true;
+      emailProvider = 'resend';
     } catch (error) {
-      emailError = error instanceof Error ? error.message : 'Unknown email error';
+      emailError = error instanceof Error ? error.message : 'Unknown Resend error';
+      console.error('Contact Resend email failed:', emailError);
+    }
+  }
+
+  if (!emailSent && emailBinding?.send) {
+    try {
+      await emailBinding.send(emailMessage);
+      emailSent = true;
+      emailProvider = 'cloudflare-send-email';
+    } catch (error) {
+      const fallbackError = error instanceof Error ? error.message : 'Unknown email error';
+      emailError = emailError ? `${emailError}; fallback: ${fallbackError}` : fallbackError;
       console.error('Contact email failed:', emailError);
     }
   }
@@ -240,6 +302,7 @@ export const POST: APIRoute = async ({ request }) => {
     JSON.stringify({
       success: true,
       emailSent,
+      ...(emailProvider ? { emailProvider } : {}),
       stored: Boolean(db),
       ...(emailError ? { emailError } : {}),
     }),
