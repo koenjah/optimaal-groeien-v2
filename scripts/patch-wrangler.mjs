@@ -30,7 +30,10 @@ const scanDbId =
       : '');
 const emdashDbName = process.env.EMDASH_DB_NAME ?? (isProduction ? scanDbName : 'duidelijkdag_family');
 const emdashDbId = process.env.EMDASH_DB_ID ?? (isProduction || isEmdashStaging ? scanDbId : '');
-const mediaBucketName = process.env.MEDIA_BUCKET ?? 'optimaal-groeien-emdash-staging-media';
+const mediaBucketName =
+  process.env.MEDIA_BUCKET ??
+  (isProduction ? 'optimaal-groeien-emdash-media' : 'optimaal-groeien-emdash-staging-media');
+const accessAudience = process.env.CF_ACCESS_AUDIENCE?.trim();
 const contactToEmail =
   process.env.CONTACT_TO_EMAIL ??
   process.env.CONTACT_RECIPIENT_EMAIL ??
@@ -70,6 +73,7 @@ cfg.vars = {
   ...(cfg.vars ?? {}),
   CONTACT_TO_EMAIL: contactToEmail,
   RESEND_FROM_EMAIL: resendFromEmail,
+  ...(accessAudience ? { CF_ACCESS_AUDIENCE: accessAudience } : {}),
 };
 
 if (enableEmdash) {
