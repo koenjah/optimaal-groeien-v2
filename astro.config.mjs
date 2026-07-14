@@ -25,6 +25,11 @@ if (enableEmdash) {
     emdash({
       database: d1({ binding: 'EMDASH_DB' }),
       storage: r2({ binding: 'MEDIA' }),
+      admin: {
+        logo: '/images/logo.png',
+        siteName: 'Optimaal Groeien CMS',
+        favicon: '/images/logo-icon.png',
+      },
       ...(accessTeamDomain
         ? {
             auth: access({

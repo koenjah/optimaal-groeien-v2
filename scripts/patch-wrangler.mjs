@@ -133,6 +133,37 @@ const canonicalOrigin = ${JSON.stringify(canonicalOrigin)};
 const publicHosts = new Set(${JSON.stringify(publicHosts)});
 const redirectRules = ${JSON.stringify(redirectRules)};
 const redirectMap = new Map(redirectRules);
+const adminBrandCss = \`
+  :root,
+  [data-theme="kumo"] {
+    --font-emdash: Inter, ui-sans-serif, system-ui, sans-serif;
+    --color-kumo-brand: #f17a29;
+    --color-kumo-brand-hover: #d96500;
+    --text-color-kumo-brand: #b45309;
+    --text-color-kumo-link: #053b63;
+    --color-kumo-focus: #053b63;
+    --color-kumo-canvas: #fffcf8;
+    --color-kumo-elevated: #fffaf4;
+    --color-kumo-recessed: #f1f5f9;
+  }
+
+  [data-mode="dark"] {
+    --color-kumo-brand: #f17a29;
+    --color-kumo-brand-hover: #f59a5a;
+    --text-color-kumo-brand: #f59a5a;
+    --text-color-kumo-link: #93c5fd;
+    --color-kumo-focus: #f17a29;
+  }
+
+  .emdash-sidebar {
+    border-color: rgba(5, 59, 99, 0.18);
+  }
+
+  .emdash-brand-link img {
+    width: auto;
+    max-width: 2rem;
+  }
+\`;
 
 function normalizePathname(pathname) {
   return pathname.endsWith("/") && pathname !== "/" ? pathname.slice(0, -1) : pathname;
@@ -187,12 +218,30 @@ function makeRedirect(request) {
   return null;
 }
 
+function applyAdminBranding(response, url) {
+  const contentType = response.headers.get("content-type") || "";
+  if (!url.pathname.startsWith("/_emdash/admin") || !contentType.includes("text/html")) {
+    return response;
+  }
+
+  return new HTMLRewriter()
+    .on("head", {
+      element(element) {
+        element.append(\`<style id="optimaal-groeien-admin-brand">\${adminBrandCss}</style>\`, {
+          html: true,
+        });
+      },
+    })
+    .transform(response);
+}
+
 export default {
   ...astroWorker,
-  fetch(request, env, ctx) {
+  async fetch(request, env, ctx) {
     const redirect = makeRedirect(request);
     if (redirect) return redirect;
-    return astroWorker.fetch(request, env, ctx);
+    const response = await astroWorker.fetch(request, env, ctx);
+    return applyAdminBranding(response, new URL(request.url));
   },
 };
 `;
