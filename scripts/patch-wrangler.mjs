@@ -37,6 +37,9 @@ const emdashDbId = process.env.EMDASH_DB_ID ?? (isProduction || isEmdashStaging 
 const mediaBucketName =
   process.env.MEDIA_BUCKET ??
   (isProduction ? 'optimaal-groeien-emdash-media' : 'optimaal-groeien-emdash-staging-media');
+const sessionKvId =
+  process.env.SESSION_KV_ID ??
+  (isProduction ? 'c13f6e518d28427c8014e6a8abc920f6' : '');
 const accessAudience = process.env.CF_ACCESS_AUDIENCE?.trim();
 const contactToEmail =
   process.env.CONTACT_TO_EMAIL ??
@@ -67,7 +70,9 @@ cfg.assets = {
 cfg.compatibility_flags = [
   ...new Set([...(cfg.compatibility_flags ?? []), ...(enableEmdash ? ['nodejs_compat'] : [])]),
 ];
-cfg.kv_namespaces = [];
+cfg.kv_namespaces = enableEmdash && sessionKvId
+  ? [{ binding: 'SESSION', id: sessionKvId }]
+  : [];
 cfg.d1_databases = [{
   binding: 'DB',
   database_name: scanDbName,
@@ -95,7 +100,7 @@ if (enableEmdash) {
 }
 
 if (cfg.previews) {
-  cfg.previews.kv_namespaces = [];
+  cfg.previews.kv_namespaces = cfg.kv_namespaces;
   cfg.previews.d1_databases = cfg.d1_databases;
   cfg.previews.r2_buckets = cfg.r2_buckets;
 }
