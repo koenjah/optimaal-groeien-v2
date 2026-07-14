@@ -147,7 +147,12 @@ function isHttpRequest(request, url) {
 }
 
 function needsTrailingSlash(url) {
-  if (url.pathname === "/" || url.pathname.endsWith("/") || url.pathname.startsWith("/api/")) return false;
+  if (
+    url.pathname === "/" ||
+    url.pathname.endsWith("/") ||
+    url.pathname.startsWith("/api/") ||
+    url.pathname.startsWith("/_emdash/")
+  ) return false;
   return !/\\.[^/]+$/.test(url.pathname);
 }
 

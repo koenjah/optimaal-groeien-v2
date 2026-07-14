@@ -16,7 +16,11 @@ export const onRequest = defineMiddleware((context, next) => {
   // available because their names also match that dynamic CMS route.
   if (pathname === '/sitemap-index.xml' || pathname === '/sitemap-0.xml') {
     const assets = (cloudflareEnv as Record<string, unknown>).ASSETS as AssetsBinding | undefined;
-    if (assets?.fetch) return assets.fetch(context.request);
+    if (assets?.fetch) {
+      const assetUrl = new URL(context.request.url);
+      if (publicHosts.has(assetUrl.hostname)) assetUrl.hostname = 'optimaal-groeien.koenjah.workers.dev';
+      return assets.fetch(new Request(assetUrl, context.request));
+    }
   }
 
   const redirectTo = (targetPath: string) => {
