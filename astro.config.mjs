@@ -20,6 +20,7 @@ if (enableEmdash) {
     import('@emdash-cms/cloudflare'),
   ]);
   const accessTeamDomain = process.env.CF_ACCESS_TEAM_DOMAIN?.trim();
+  const accessAudience = process.env.CF_ACCESS_AUDIENCE?.trim();
 
   integrations.push(
     emdash({
@@ -34,7 +35,9 @@ if (enableEmdash) {
         ? {
             auth: access({
               teamDomain: accessTeamDomain,
-              audienceEnvVar: 'CF_ACCESS_AUDIENCE',
+              ...(accessAudience
+                ? { audience: accessAudience }
+                : { audienceEnvVar: 'CF_ACCESS_AUDIENCE' }),
               autoProvision: true,
               defaultRole: 50,
               syncRoles: true,
