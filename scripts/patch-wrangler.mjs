@@ -17,14 +17,18 @@ const isEmdashStaging = workerName === 'optimaal-groeien-emdash-staging';
 const accountId =
   process.env.CLOUDFLARE_ACCOUNT_ID ??
   process.env.ACCOUNT_ID ??
-  (isProduction || isEmdashStaging ? '1a908255c94d3901bd9cdd3bd565704b' : '');
+  (isProduction
+    ? 'c6b2726f6f179cede41f156972fd951a'
+    : isEmdashStaging
+      ? '1a908255c94d3901bd9cdd3bd565704b'
+      : '');
 const scanDbName =
   process.env.DB_NAME ??
-  (isProduction ? 'optimaal-groeien-leads' : isEmdashStaging ? 'duidelijkdag_family' : 'optimaal-groeien-staging-scans');
+  (isProduction ? 'optimaal-groeien-scans' : isEmdashStaging ? 'duidelijkdag_family' : 'optimaal-groeien-staging-scans');
 const scanDbId =
   process.env.DB_ID ??
-  (scanDbName === 'optimaal-groeien-leads'
-    ? 'c282d443-d328-45ca-b334-ba6bdf901814'
+  (scanDbName === 'optimaal-groeien-scans'
+    ? 'eb2e5e8a-12ce-4190-94ec-ee7644a5cbff'
     : scanDbName === 'duidelijkdag_family'
       ? 'd63dd757-5070-46c1-9a62-da000bfd53d4'
       : '');

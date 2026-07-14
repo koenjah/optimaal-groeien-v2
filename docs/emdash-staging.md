@@ -5,7 +5,7 @@ De CMS-versie staat los van de live website totdat alle controles hieronder zijn
 ## Huidige onderdelen
 
 - Live Worker: `optimaal-groeien`
-- Live D1: `optimaal-groeien-leads` (`c282d443-d328-45ca-b334-ba6bdf901814`)
+- Live D1: `optimaal-groeien-scans` (`eb2e5e8a-12ce-4190-94ec-ee7644a5cbff`)
 - Staging Worker: `optimaal-groeien-emdash-staging`
 - Staging D1: `duidelijkdag_family` (`d63dd757-5070-46c1-9a62-da000bfd53d4`)
 - Staging media: `optimaal-groeien-emdash-staging-media`
