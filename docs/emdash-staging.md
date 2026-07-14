@@ -15,6 +15,23 @@ De staging-D1 was leeg en nergens aan gekoppeld voordat hij hiervoor in gebruik 
 
 Staging heeft geen `send_email`-binding. Een test op staging kan dus nooit per ongeluk een echt contactbericht versturen.
 
+## Beheerlogin met Cloudflare Access
+
+Zonder `CF_ACCESS_TEAM_DOMAIN` gebruikt een EmDash-build de normale passkey-login. Dat is de huidige stagingfallback.
+
+Voor de definitieve omgeving wordt Cloudflare Access gebruikt:
+
+```bash
+CF_ACCESS_TEAM_DOMAIN="jouw-team.cloudflareaccess.com" ENABLE_EMDASH=true npm run build
+```
+
+De Worker moet daarnaast de runtimevariabele `CF_ACCESS_AUDIENCE` krijgen met de AUD-tag van de Access-applicatie. De Access-regel staat alleen deze adressen toe:
+
+- `marketing@optimaalgroeien.nl`
+- `koenjah@gmail.com`
+
+EmDash maakt een toegestane gebruiker bij de eerste login automatisch aan als admin. Cloudflare Access bepaalt wie de CMS-login mag bereiken; EmDash blijft alle beheer-API's zelf ook controleren.
+
 ## Lokale controles
 
 Gebruik de projectspecifieke Node-versie uit `.nvmrc`:

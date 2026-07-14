@@ -15,15 +15,27 @@ const integrations = [
 ];
 
 if (enableEmdash) {
-  const [{ default: emdash }, { d1, r2 }] = await Promise.all([
+  const [{ default: emdash }, { d1, r2, access }] = await Promise.all([
     import('emdash/astro'),
     import('@emdash-cms/cloudflare'),
   ]);
+  const accessTeamDomain = process.env.CF_ACCESS_TEAM_DOMAIN?.trim();
 
   integrations.push(
     emdash({
       database: d1({ binding: 'EMDASH_DB' }),
       storage: r2({ binding: 'MEDIA' }),
+      ...(accessTeamDomain
+        ? {
+            auth: access({
+              teamDomain: accessTeamDomain,
+              audienceEnvVar: 'CF_ACCESS_AUDIENCE',
+              autoProvision: true,
+              defaultRole: 50,
+              syncRoles: true,
+            }),
+          }
+        : {}),
     }),
   );
 }
