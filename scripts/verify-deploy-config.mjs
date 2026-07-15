@@ -10,8 +10,10 @@ if (target !== 'production' && target !== 'staging') {
 
 const configPath = new URL('../dist/server/wrangler.json', import.meta.url);
 const entryPath = new URL('../dist/server/entry.mjs', import.meta.url);
+const middlewarePath = new URL('../dist/server/virtual_astro_middleware.mjs', import.meta.url);
 const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
 const entry = fs.readFileSync(entryPath, 'utf8');
+const middleware = fs.readFileSync(middlewarePath, 'utf8');
 
 const expected = target === 'production'
   ? {
@@ -47,6 +49,11 @@ check(config.compatibility_flags?.includes('nodejs_compat'), 'nodejs_compat must
 check(config.assets?.run_worker_first === true, 'assets.run_worker_first must be enabled');
 check(entry.includes('SLUG_ALREADY_USED'), 'Reserved slug protection is missing from the Worker');
 check(entry.includes('og-admin-help'), 'CMS help link branding is missing from the Worker');
+check(
+  middleware.includes('skip the redundant KV session write')
+    && !middleware.includes('session?.set("user", { id: user.id });'),
+  'Cloudflare Access still performs a redundant KV session write on every request',
+);
 check(
   entry.includes('--color-kumo-canvas: #101417')
     && entry.includes('--text-color-kumo-strong: #f8fafc'),

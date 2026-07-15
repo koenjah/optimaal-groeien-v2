@@ -7,6 +7,7 @@ import fs from 'node:fs';
 
 const wranglerPath = new URL('../dist/server/wrangler.json', import.meta.url);
 const entryPath = new URL('../dist/server/entry.mjs', import.meta.url);
+const middlewarePath = new URL('../dist/server/virtual_astro_middleware.mjs', import.meta.url);
 const redirectsPath = new URL('../public/_redirects', import.meta.url);
 const cmsGuidePath = new URL('./templates/cms-handleiding.html', import.meta.url);
 const blogContentPath = new URL('../src/content/blog/', import.meta.url);
@@ -125,6 +126,19 @@ cfg.send_email = contactEmail
   : [];
 
 fs.writeFileSync(wranglerPath, JSON.stringify(cfg, null, 2));
+
+const middleware = fs.readFileSync(middlewarePath, 'utf8');
+const redundantExternalAuthSessionWrite = '    session?.set("user", { id: user.id });';
+if (!middleware.includes(redundantExternalAuthSessionWrite)) {
+  throw new Error('Could not find the external-auth session write in the generated middleware');
+}
+fs.writeFileSync(
+  middlewarePath,
+  middleware.replace(
+    redundantExternalAuthSessionWrite,
+    '    /* OG: Cloudflare Access authenticates every request; skip the redundant KV session write. */',
+  ),
+);
 
 const entry = fs.readFileSync(entryPath, 'utf8');
 const workerImport = entry.match(/import \{ w(?: as astroWorker)? \} from "([^"]+)";/);
