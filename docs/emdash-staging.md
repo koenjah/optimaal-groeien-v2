@@ -67,6 +67,8 @@ npm run build:production:emdash
 
 Beide buildcommando's controleren automatisch de Worker-naam, het Cloudflare-account, D1, R2, KV, Access en de e-mailbinding. De build stopt als een productie- en stagingonderdeel door elkaar staan.
 
+Iedere build rendert daarnaast de belangrijkste CMS-zijbalkcomponenten. De build stopt als een update van `@cloudflare/kumo` niet compatibel is met EmDash. De Kumo-versie staat daarom bewust vast op `2.3.0`.
+
 ## Staging testen
 
 Deploy eerst alleen staging:
