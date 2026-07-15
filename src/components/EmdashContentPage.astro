@@ -24,6 +24,15 @@ const date = getCmsDate(entry);
 const heroImage = getCmsHeroImage(entry);
 const socialImage = getCmsSeoImage(entry) || heroImage;
 const isPost = type === 'post';
+const category = typeof entry.data.category === 'string' && entry.data.category.trim()
+  ? entry.data.category.trim()
+  : isPost ? 'Blog' : 'Pagina';
+const author = typeof entry.data.author === 'string' && entry.data.author.trim()
+  ? entry.data.author.trim()
+  : 'Stefan Kelderman';
+const heroAlt = typeof entry.data.hero_alt === 'string' && entry.data.hero_alt.trim()
+  ? entry.data.hero_alt.trim()
+  : title;
 const canonicalPath = isPost ? `/blog/${slug}/` : `/${slug}/`;
 const canonical = entry.seo?.canonical || `https://optimaalgroeien.nl${canonicalPath}`;
 const pageTitle = entry.seo?.title || `${title} — Optimaal Groeien`;
@@ -42,7 +51,7 @@ const articleSchema = isPost
       dateModified: new Date(date).toISOString(),
       author: {
         '@type': 'Person',
-        name: 'Stefan Kelderman',
+        name: author,
         url: 'https://optimaalgroeien.nl/over-ons/',
       },
       publisher: {
@@ -69,7 +78,7 @@ const articleSchema = isPost
   ogImage={socialImage}
   ogType={isPost ? 'article' : 'website'}
   publishedTime={isPost ? new Date(date).toISOString() : undefined}
-  author={isPost ? 'Stefan Kelderman' : undefined}
+  author={isPost ? author : undefined}
   articleSchema={articleSchema}
   noindex={noindex}
 >
@@ -77,7 +86,7 @@ const articleSchema = isPost
     <div class="max-w-3xl mx-auto">
       <div class="flex items-center gap-3 mb-5">
         <span class="text-[10px] font-bold uppercase tracking-widest text-brand-accent px-3 py-1 bg-brand-accent/15 rounded-full">
-          {isPost ? 'Blog' : 'Pagina'}
+          {category}
         </span>
         {isPost && (
           <span class="text-[11px] text-white/35">
@@ -102,7 +111,7 @@ const articleSchema = isPost
     <div class="max-w-4xl mx-auto px-6 -mt-6 relative z-10">
       <img
         src={heroImage}
-        alt={title}
+        alt={heroAlt}
         class="w-full rounded-[24px] shadow-2xl object-cover max-h-[480px]"
         loading="eager"
       />

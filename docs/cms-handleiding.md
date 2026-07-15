@@ -17,11 +17,11 @@ Gebruik de ronde helpknop rechtsonder in de CMS om deze handleiding online te op
 
 **Blogs**
 
-Hier maak en beheer je nieuwe blogartikelen.
+Hier beheer je de bestaande blogartikelen en maak je nieuwe blogs.
 
-**Pagina's**
+**Losse pagina's**
 
-Hier maak je nieuwe losse websitepagina's.
+Hier maak je nieuwe losse websitepagina's. De vaste pagina's met een eigen ontwerp, zoals de homepage en dienstenpagina's, blijven technisch beheerd. Zo kan hun ontwerp niet per ongeluk stukgaan.
 
 **Media**
 
@@ -96,8 +96,8 @@ Een verwijderd item gaat eerst naar de prullenbak. Het kan daar nog worden herst
 
 ## Belangrijk bij bestaande inhoud
 
-De bestaande blogs en vaste pagina's van de huidige website blijven gewoon live. Zij zijn nog niet allemaal via dit CMS te bewerken.
+De bestaande blogs staan in het CMS en houden daarnaast een technische reservekopie. Een gepubliceerde CMS-versie wordt op de website gebruikt. Als die versie niet beschikbaar is, blijft de reservekopie bereikbaar.
 
-Nieuwe CMS-blogs en nieuwe CMS-pagina's zijn wel volledig via het CMS te beheren. Gebruik nooit dezelfde slug als een bestaande pagina of blog.
+De vaste pagina's met maatwerkontwerp staan bewust niet in de gewone teksteditor. Nieuwe losse CMS-pagina's zijn wel volledig via het CMS te beheren. Gebruik nooit dezelfde slug als een vaste pagina.
 
 Bij twijfel: sla op als concept en publiceer nog niet.

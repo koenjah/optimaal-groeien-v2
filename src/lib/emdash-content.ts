@@ -43,6 +43,12 @@ function asString(value: unknown): string | undefined {
   return typeof value === 'string' && value.trim() ? value.trim() : undefined;
 }
 
+function asDateString(value: unknown): string | undefined {
+  if (value instanceof Date && !Number.isNaN(value.getTime())) return value.toISOString();
+  const stringValue = asString(value);
+  return stringValue && !Number.isNaN(Date.parse(stringValue)) ? stringValue : undefined;
+}
+
 function getEntrySlug(entry: EmDashContentEntry): string {
   return asString(entry.data.slug) ?? entry.id;
 }
@@ -128,12 +134,11 @@ export function getCmsExcerpt(entry: EmDashContentEntry, fallback = ''): string 
 }
 
 export function getCmsDate(entry: EmDashContentEntry): string {
-  const date = asString(entry.data.publishedAt)
-    ?? asString(entry.data.updatedAt)
-    ?? asString(entry.data.createdAt)
+  const date = asDateString(entry.data.publishedAt)
+    ?? asDateString(entry.data.updatedAt)
+    ?? asDateString(entry.data.createdAt)
     ?? new Date().toISOString();
-
-  return Number.isNaN(Date.parse(date)) ? new Date().toISOString() : date;
+  return date;
 }
 
 export function getCmsHeroImage(entry: EmDashContentEntry): string | undefined {
@@ -222,9 +227,9 @@ export async function getCmsBlogListEntries(): Promise<BlogListEntry[]> {
           title,
           description: getCmsExcerpt(entry, bodyText),
           date: getCmsDate(entry),
-          category: 'CMS',
+          category: asString(entry.data.category) ?? 'Blog',
           heroImage: getCmsHeroImage(entry),
-          heroAlt: title,
+          heroAlt: asString(entry.data.hero_alt) ?? title,
         },
       };
     })

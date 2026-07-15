@@ -7,11 +7,24 @@ import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
 const accountId = 'c6b2726f6f179cede41f156972fd951a';
-const databaseId = 'eb2e5e8a-12ce-4190-94ec-ee7644a5cbff';
-const workerName = 'optimaal-groeien';
+const target = process.argv.find((arg) => arg.startsWith('--target='))?.split('=')[1] ?? 'production';
+if (!['production', 'staging'].includes(target)) throw new Error('Ongeldig back-updoel.');
+const targetConfig = target === 'production'
+  ? {
+      databaseId: 'eb2e5e8a-12ce-4190-94ec-ee7644a5cbff',
+      databaseName: 'optimaal-groeien-scans',
+      workerName: 'optimaal-groeien',
+    }
+  : {
+      databaseId: '1dc5542d-cc4e-4e98-a0bc-c2bbd0c22067',
+      databaseName: 'optimaal-groeien-cms-staging',
+      workerName: 'optimaal-groeien-emdash-staging',
+    };
+const { databaseId, databaseName, workerName } = targetConfig;
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const backupRoot = '/Users/gebruiker/Documents/STEFAN/backups/optimaal-groeien';
-const label = (process.argv[2] || 'manual').replace(/[^a-z0-9-]+/gi, '-').toLowerCase();
+const labelArg = process.argv.slice(2).find((arg) => !arg.startsWith('--')) ?? 'manual';
+const label = labelArg.replace(/[^a-z0-9-]+/gi, '-').toLowerCase();
 const timestamp = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d{3}Z$/, 'Z');
 const outputDir = path.join(backupRoot, `${label}-${timestamp}`);
 
@@ -107,7 +120,7 @@ const snapshot = {
   createdAt: new Date().toISOString(),
   accountId,
   databaseId,
-  databaseName: 'optimaal-groeien-scans',
+  databaseName,
   tables: {},
   skipped: [],
 };
@@ -129,22 +142,19 @@ for (const table of tableRows) {
   }
 }
 
-for (const requiredTable of [
-  'scan_entries',
-  'contact_submissions',
-  'users',
-  '_emdash_collections',
-  'ec_posts',
-  'ec_pages',
-  'media',
-]) {
+const requiredTables = target === 'production'
+  ? ['scan_entries', 'contact_submissions', 'users', '_emdash_collections', 'ec_posts', 'ec_pages', 'media']
+  : ['users', '_emdash_collections', 'ec_posts', 'ec_pages', 'media'];
+
+for (const requiredTable of requiredTables) {
   if (!snapshot.tables[requiredTable]) {
     throw new Error(`Kritieke tabel ontbreekt in de back-up: ${requiredTable}`);
   }
 }
 
+const logicalBackupName = `${databaseName}-logical.json`;
 fs.writeFileSync(
-  path.join(outputDir, 'optimaal-groeien-scans-logical.json'),
+  path.join(outputDir, logicalBackupName),
   `${JSON.stringify(snapshot, null, 2)}\n`,
 );
 
@@ -160,7 +170,7 @@ const generatedWranglerPath = path.join(projectRoot, 'dist/server/wrangler.json'
 if (fs.existsSync(generatedWranglerPath)) {
   const generatedWrangler = JSON.parse(fs.readFileSync(generatedWranglerPath, 'utf8'));
   if (generatedWrangler.name === workerName && generatedWrangler.account_id === accountId) {
-    fs.copyFileSync(generatedWranglerPath, path.join(outputDir, 'production-wrangler.json'));
+    fs.copyFileSync(generatedWranglerPath, path.join(outputDir, `${target}-wrangler.json`));
   }
 }
 

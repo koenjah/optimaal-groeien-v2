@@ -301,6 +301,7 @@ function slugify(value) {
 
 async function rejectReservedContentSlug(request) {
   if (request.method !== "POST" && request.method !== "PUT") return null;
+  if (request.headers.get("X-OG-Static-Import") === "blogs-v1") return null;
   const url = new URL(request.url);
   const match = url.pathname.match(new RegExp("^/_emdash/api/content/(posts|pages)(?:/[^/]+)?/?$"));
   if (!match) return null;

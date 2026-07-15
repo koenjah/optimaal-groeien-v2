@@ -7,6 +7,7 @@ type AssetsBinding = {
 
 type D1PreparedStatement = {
   first<T = unknown>(): Promise<T | null>;
+  all<T = unknown>(): Promise<{ results?: T[] }>;
 };
 
 type D1Database = {
@@ -75,6 +76,46 @@ async function createSitemapIndex(origin: string, database?: D1Database) {
   });
 }
 
+async function createStaticSitemap(
+  request: Request,
+  assets?: AssetsBinding,
+  database?: D1Database,
+) {
+  if (!assets?.fetch) return null;
+
+  const response = await assets.fetch(request);
+  if (!response.ok || !database) return response;
+
+  try {
+    const published = await database
+      .prepare(`
+        SELECT slug
+        FROM ec_posts
+        WHERE status = 'published' AND deleted_at IS NULL
+      `)
+      .all<{ slug: string }>();
+    const cmsSlugs = new Set((published.results ?? []).map((row) => row.slug));
+    if (!cmsSlugs.size) return response;
+
+    const xml = await response.text();
+    const filtered = xml.replace(/\s*<url>[\s\S]*?<loc>([^<]+)<\/loc>[\s\S]*?<\/url>/g, (block, loc) => {
+      try {
+        const pathname = new URL(loc).pathname.replace(/\/$/, '');
+        const match = pathname.match(/^\/blog\/([^/]+)$/);
+        return match && cmsSlugs.has(decodeURIComponent(match[1])) ? '' : block;
+      } catch {
+        return block;
+      }
+    });
+    const headers = new Headers(response.headers);
+    headers.set('Cache-Control', 'public, max-age=300');
+    headers.delete('Content-Length');
+    return new Response(filtered, { status: response.status, headers });
+  } catch {
+    return response;
+  }
+}
+
 export const onRequest = defineMiddleware(async (context, next) => {
   const { pathname, search } = context.url;
   const normalizedPathname = pathname.endsWith('/') && pathname !== '/' ? pathname.slice(0, -1) : pathname;
@@ -86,7 +127,9 @@ export const onRequest = defineMiddleware(async (context, next) => {
   // available and add CMS sitemaps to the index only when they contain content.
   if (pathname === '/sitemap-0.xml') {
     const assets = (cloudflareEnv as Record<string, unknown>).ASSETS as AssetsBinding | undefined;
-    if (assets?.fetch) return assets.fetch(context.request);
+    const database = (cloudflareEnv as Record<string, unknown>).EMDASH_DB as D1Database | undefined;
+    const sitemap = await createStaticSitemap(context.request, assets, database);
+    if (sitemap) return sitemap;
   }
 
   if (pathname === '/sitemap-index.xml') {

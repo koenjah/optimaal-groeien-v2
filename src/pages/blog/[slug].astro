@@ -1,6 +1,7 @@
 ---
 import BlogLayout from '../../layouts/BlogLayout.astro';
 import { getCollection, render } from 'astro:content';
+import { getCmsEntry } from '../../lib/emdash-content';
 
 const getBlogPosts = async () => (await (getCollection as any)(
   'blog',
@@ -19,6 +20,13 @@ export async function getStaticPaths() {
 }
 
 const params = Astro.params as Record<string, string | undefined>;
+
+// A migrated CMS article takes precedence. The Markdown copy remains in the
+// repository as an immediate fallback when no published CMS entry is present.
+if (params.slug && await getCmsEntry('posts', params.slug)) {
+  return Astro.rewrite(`/cms-content/blog/${params.slug}`);
+}
+
 let { post } = Astro.props as { post?: any };
 if (!post && params.slug) {
   const posts = await getBlogPosts();
