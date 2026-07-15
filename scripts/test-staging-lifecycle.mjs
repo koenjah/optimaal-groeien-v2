@@ -140,7 +140,7 @@ try {
   const adminHtml = await admin.text();
   assert(admin.status === 200 && adminHtml.includes('og-admin-help'), 'helpknop staat in de CMS beheeromgeving');
 
-  const guide = await request('/_emdash/handleiding/');
+  const guide = await request('/_emdash/admin/handleiding/');
   const guideHtml = await guide.text();
   assert(guide.status === 200 && guideHtml.includes('Veilig content maken en publiceren'), 'B1 handleiding is bereikbaar');
   assert(guide.headers.get('cache-control')?.includes('no-store'), 'handleiding wordt niet gecachet');

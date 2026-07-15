@@ -94,7 +94,7 @@ Voor een volledige uitroltest zijn op 15 juli 2026 deze stappen echt uitgevoerd:
 
 De preview-route accepteert alleen een geldig en tijdelijk ondertekend token. De preview krijgt `noindex` en `Cache-Control: private, no-store`. Zonder token geeft dezelfde route 404.
 
-De beveiligde handleiding staat op `/_emdash/handleiding/`. De CMS toont hiervoor een ronde helpknop. Bekende slugs van de bestaande website worden bij maken of aanpassen geblokkeerd voordat zij een onduidelijke URL-botsing kunnen veroorzaken.
+De beveiligde handleiding staat op `/_emdash/admin/handleiding/`. De CMS toont hiervoor een ronde helpknop. Bekende slugs van de bestaande website worden bij maken of aanpassen geblokkeerd voordat zij een onduidelijke URL-botsing kunnen veroorzaken.
 
 ## Productie deployen
 

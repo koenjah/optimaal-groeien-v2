@@ -28,7 +28,7 @@ const checks = [
   { path: '/robots.txt', allowed: [200], contains: 'sitemap-index.xml' },
   { path: '/api/health', allowed: [200], contains: '"status":"ok"' },
   { path: '/_emdash/admin/', allowed: [200], contains: 'Optimaal Groeien CMS Admin' },
-  { path: '/_emdash/handleiding/', allowed: [200], contains: 'Veilig content maken en publiceren' },
+  { path: '/_emdash/admin/handleiding/', allowed: [200], contains: 'Veilig content maken en publiceren' },
   { path: '/_emdash/api/setup/status', allowed: [200], setupComplete: true },
   { path: '/_emdash/api/manifest', allowed: [200], json: true },
   { path: '/_emdash/api/taxonomies', allowed: [200], json: true },

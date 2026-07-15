@@ -346,7 +346,7 @@ function applyAdminBranding(response, url) {
     .on("body", {
       element(element) {
         element.append(
-          '<a class="og-admin-help" href="/_emdash/handleiding/" aria-label="Open CMS-handleiding" title="CMS-handleiding">?</a>',
+          '<a class="og-admin-help" href="/_emdash/admin/handleiding/" aria-label="Open CMS-handleiding" title="CMS-handleiding">?</a>',
           { html: true },
         );
       },
@@ -355,7 +355,10 @@ function applyAdminBranding(response, url) {
 }
 
 function serveCmsGuide(url) {
-  if (url.pathname !== "/_emdash/handleiding" && url.pathname !== "/_emdash/handleiding/") {
+  if (
+    url.pathname !== "/_emdash/admin/handleiding"
+    && url.pathname !== "/_emdash/admin/handleiding/"
+  ) {
     return null;
   }
   return new Response(cmsGuideHtml, {
