@@ -8,6 +8,8 @@ import { fileURLToPath } from 'node:url';
 
 const enableEmdash = process.env.ENABLE_EMDASH === 'true';
 const siteOrigin = 'https://optimaalgroeien.nl';
+const trackingPluginEntry = fileURLToPath(new URL('./src/plugins/og-tracking/plugin.ts', import.meta.url));
+const trackingAdminEntry = fileURLToPath(new URL('./src/plugins/og-tracking/admin.tsx', import.meta.url));
 const blogContentPath = fileURLToPath(new URL('./src/content/blog/', import.meta.url));
 const staticBlogPages = readdirSync(blogContentPath)
   .filter((name) => name.endsWith('.md'))
@@ -52,6 +54,13 @@ if (enableEmdash) {
         siteName: 'Optimaal Groeien CMS',
         favicon: '/images/logo-icon.png',
       },
+      plugins: [{
+        id: 'og-tracking',
+        version: '1.0.0',
+        entrypoint: trackingPluginEntry,
+        adminEntry: trackingAdminEntry,
+        adminPages: [{ path: '/tracking', label: 'Google tracking', icon: 'chart-line' }],
+      }],
       ...(accessTeamDomain
         ? {
             auth: access({
@@ -80,10 +89,17 @@ export default defineConfig({
     },
     resolve: {
       alias: enableEmdash
-        ? {}
-        : {
-            emdash: fileURLToPath(new URL('./src/lib/emdash-stub.ts', import.meta.url)),
-          },
+        ? []
+        : [
+            {
+              find: /^emdash$/,
+              replacement: fileURLToPath(new URL('./src/lib/emdash-stub.ts', import.meta.url)),
+            },
+            {
+              find: /^emdash\/runtime$/,
+              replacement: fileURLToPath(new URL('./src/lib/emdash-runtime-stub.ts', import.meta.url)),
+            },
+          ],
     },
     plugins: [tailwindcss()],
   },

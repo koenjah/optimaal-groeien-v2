@@ -9,3 +9,7 @@ export async function getEmDashCollection() {
 export function extractPlainText() {
   return '';
 }
+
+export async function getPluginSettings() {
+  return {};
+}

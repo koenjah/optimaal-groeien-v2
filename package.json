@@ -21,6 +21,8 @@
     "deploy:staging:emdash": "node scripts/verify-cloudflare-access.mjs staging && npm run build:staging:emdash && cd dist/server && wrangler deploy --config wrangler.json --keep-vars",
     "test:staging:emdash": "node scripts/smoke-emdash.mjs",
     "test:staging:lifecycle": "node scripts/test-staging-lifecycle.mjs",
+    "test:staging:tracking": "node scripts/test-staging-tracking.mjs",
+    "test:tracking": "tsx scripts/test-google-tracking.ts",
     "test:production": "node scripts/smoke-production.mjs",
     "cms:import-blogs": "node scripts/import-static-blogs.mjs --target=staging",
     "cms:verify-blog-conversion": "node scripts/import-static-blogs.mjs --dry-run",

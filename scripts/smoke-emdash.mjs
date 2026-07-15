@@ -35,6 +35,7 @@ const checks = [
   { path: '/_emdash/api/content/posts', allowed: [200], json: true },
   { path: '/_emdash/api/media', allowed: [200], json: true },
   { path: '/_emdash/api/admin/users', allowed: [200], json: true },
+  { path: '/_emdash/api/plugins/og-tracking/settings', allowed: [200], json: true },
 ];
 
 let failed = false;

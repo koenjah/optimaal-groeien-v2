@@ -14,6 +14,16 @@ const middlewarePath = new URL('../dist/server/virtual_astro_middleware.mjs', im
 const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
 const entry = fs.readFileSync(entryPath, 'utf8');
 const middleware = fs.readFileSync(middlewarePath, 'utf8');
+const serverBundle = fs
+  .readdirSync(new URL('../dist/server/chunks/', import.meta.url))
+  .filter((name) => name.endsWith('.mjs'))
+  .map((name) => fs.readFileSync(new URL(`../dist/server/chunks/${name}`, import.meta.url), 'utf8'))
+  .join('\n');
+const clientBundle = fs
+  .readdirSync(new URL('../dist/client/_astro/', import.meta.url))
+  .filter((name) => name.endsWith('.js'))
+  .map((name) => fs.readFileSync(new URL(`../dist/client/_astro/${name}`, import.meta.url), 'utf8'))
+  .join('\n');
 
 const expected = target === 'production'
   ? {
@@ -60,6 +70,13 @@ check(
   'CMS dark-mode contrast tokens are missing from the Worker',
 );
 check(entry.includes('Veilig content maken en publiceren'), 'CMS guide is missing from the Worker');
+check(
+  serverBundle.includes('og-tracking')
+    && serverBundle.includes('data-og-google-tracking')
+    && serverBundle.includes('googletagmanager.com/gtm.js')
+    && clientBundle.includes('Beheer hier de Google-tag voor de hele website.'),
+  'Google tracking CMS module or public tag renderer is missing from the Worker',
+);
 
 const syntaxCheck = spawnSync(process.execPath, ['--check', entryPath.pathname], {
   encoding: 'utf8',

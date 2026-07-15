@@ -52,7 +52,7 @@ const request = async (path, options = {}) => fetch(`${origin}${path}`, {
 });
 
 const payload = {
-  slug: 'cms-seo-test-20260715',
+  slug: `cms-seo-test-${Date.now()}`,
   status: 'draft',
   data: {
     title: 'CMS SEO test',
@@ -94,12 +94,14 @@ const payload = {
 };
 
 let postId;
+let initialTotal;
 
 try {
   const initial = await request('/_emdash/api/content/posts');
   assert(initial.status === 200, 'inhoudslijst is bereikbaar');
   const initialBody = await initial.json();
-  assert(initialBody?.data?.total === 0, 'staging begint zonder testartikelen');
+  initialTotal = initialBody?.data?.total;
+  assert(Number.isInteger(initialTotal), 'bestaande CMS inhoud is geteld');
 
   const collision = await request('/_emdash/api/content/posts', {
     method: 'POST',
@@ -111,7 +113,7 @@ try {
 
   const afterCollision = await request('/_emdash/api/content/posts');
   const afterCollisionBody = await afterCollision.json();
-  assert(afterCollisionBody?.data?.total === 0, 'slugblokkade schrijft niets naar de CMS database');
+  assert(afterCollisionBody?.data?.total === initialTotal, 'slugblokkade schrijft niets naar de CMS database');
 
   const create = await request('/_emdash/api/content/posts', {
     method: 'POST',
@@ -161,9 +163,9 @@ try {
   const noIndexHtml = await noIndexPage.text();
   assert(noIndexHtml.includes('content="noindex, nofollow"'), 'niet indexeren staat in de openbare HTML');
 
-  const noIndexSitemap = await request(`/sitemap-index.xml?check=${payload.slug}-noindex`);
+  const noIndexSitemap = await request(`/sitemap-posts.xml?check=${payload.slug}-noindex`);
   const noIndexSitemapXml = await noIndexSitemap.text();
-  assert(!noIndexSitemapXml.includes('/sitemap-posts.xml'), 'niet indexeerbare CMS blogs staan niet in de sitemap-index');
+  assert(!noIndexSitemapXml.includes(`/blog/${payload.slug}`), 'niet indexeerbare CMS blog staat niet in de CMS sitemap');
 
   const admin = await request('/_emdash/admin/');
   const adminHtml = await admin.text();
@@ -188,7 +190,7 @@ try {
 
 const finalList = await request('/_emdash/api/content/posts');
 const finalBody = await finalList.json();
-assert(finalBody?.data?.total === 0, 'staging is na de test weer leeg');
+assert(finalBody?.data?.total === initialTotal, 'bestaande CMS inhoud is na de test ongewijzigd');
 
 const removedPage = await request(`/blog/${payload.slug}/`);
 assert(
@@ -197,8 +199,8 @@ assert(
   'verwijderd testartikel is niet meer openbaar',
 );
 
-const finalSitemap = await request(`/sitemap-index.xml?check=${payload.slug}-clean`);
+const finalSitemap = await request(`/sitemap-posts.xml?check=${payload.slug}-clean`);
 const finalSitemapXml = await finalSitemap.text();
-assert(!finalSitemapXml.includes('/sitemap-posts.xml'), 'lege CMS sitemap verdwijnt weer uit de sitemap-index');
+assert(!finalSitemapXml.includes(`/blog/${payload.slug}`), 'tijdelijke CMS blog is uit de sitemap verwijderd');
 
 console.log(`Staging lifecycle test passed: ${origin}`);

@@ -1,4 +1,10 @@
 ---
+import {
+  buildGoogleTagScript,
+  buildTagManagerScript,
+  getGoogleTrackingSettings,
+} from '../lib/google-tracking';
+
 interface Props {
   title?: string;
   description?: string;
@@ -30,6 +36,13 @@ const {
 // Normalize canonical: always include trailing slash to match Astro's URL output
 // (prevents canonical → 307 redirect → final URL chain)
 const canonicalUrl = canonical.endsWith('/') ? canonical : canonical + '/';
+const googleTracking = await getGoogleTrackingSettings();
+const tagManagerScript = googleTracking.enabled && googleTracking.type === 'gtm'
+  ? buildTagManagerScript(googleTracking.id)
+  : '';
+const googleTagScript = googleTracking.enabled && googleTracking.type === 'google-tag'
+  ? buildGoogleTagScript(googleTracking.id)
+  : '';
 
 // Organization schema (on every page) — required for Knowledge Graph + AI citations
 const organizationSchema = {
@@ -69,6 +82,13 @@ const websiteSchema = {
     <!-- Self-hosted fonts -->
     <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin />
+    {tagManagerScript && <script is:inline data-og-google-tracking="gtm" set:html={tagManagerScript} />}
+    {googleTagScript && (
+      <>
+        <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${googleTracking.id}`} data-og-google-tracking="google-tag"></script>
+        <script is:inline data-og-google-tracking="google-tag-config" set:html={googleTagScript} />
+      </>
+    )}
     <!-- Open Graph -->
     <meta property="og:type" content={ogType} />
     <meta property="og:url" content={canonicalUrl} />
@@ -112,6 +132,17 @@ const websiteSchema = {
     </script>
   </head>
   <body>
+    {tagManagerScript && (
+      <noscript>
+        <iframe
+          src={`https://www.googletagmanager.com/ns.html?id=${googleTracking.id}`}
+          height="0"
+          width="0"
+          style="display:none;visibility:hidden"
+          title="Google Tag Manager"
+        ></iframe>
+      </noscript>
+    )}
     <slot />
   </body>
 </html>
