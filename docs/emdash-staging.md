@@ -80,6 +80,8 @@ De preview-route accepteert alleen een geldig en tijdelijk ondertekend token. De
 
 Een productie-uitrol mag alleen na een geslaagde stagingtest.
 
+Gebruik altijd een expliciet deploycommando. Het algemene `npm run deploy` stopt bewust met een melding, zodat productie en staging niet per ongeluk worden verwisseld.
+
 1. Maak een actuele Git bundle, Worker-back-up en logische D1-back-up.
 2. Noteer de actieve Worker-versie.
 3. Controleer dat de Git-werkmap schoon is en dat de juiste commit op GitHub staat.
