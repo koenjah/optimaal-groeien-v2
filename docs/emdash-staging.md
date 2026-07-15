@@ -43,7 +43,7 @@ Een staging-build:
 npm run build:staging:emdash
 ```
 
-Na een stagingdeploy controleert dit commando ook echt maken, publiceren, openbare SEO, slugbescherming en opruimen van een tijdelijk artikel:
+Na een stagingdeploy controleert dit commando ook echt maken, publiceren, openbare SEO, sitemapgedrag, slugbescherming en opruimen van een tijdelijk artikel:
 
 ```bash
 npm run test:staging:lifecycle
@@ -95,6 +95,8 @@ Voor een volledige uitroltest zijn op 15 juli 2026 deze stappen echt uitgevoerd:
 De preview-route accepteert alleen een geldig en tijdelijk ondertekend token. De preview krijgt `noindex` en `Cache-Control: private, no-store`. Zonder token geeft dezelfde route 404.
 
 De beveiligde handleiding staat op `/_emdash/admin/handleiding/`. De CMS toont hiervoor een ronde helpknop. Bekende slugs van de bestaande website worden bij maken of aanpassen geblokkeerd voordat zij een onduidelijke URL-botsing kunnen veroorzaken.
+
+De openbare sitemap bevat de bloglijst en alle 90 bestaande blogs. Beheerpagina's zoals `/beheer/` en `/admin/` worden niet opgenomen. Een nieuw CMS-artikel of een nieuwe CMS-pagina wordt na publicatie automatisch aan de sitemap-index toegevoegd. Content met de instelling `Niet indexeren` blijft bewust buiten de sitemap.
 
 ## Productie deployen
 

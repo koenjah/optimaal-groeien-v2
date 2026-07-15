@@ -9,6 +9,7 @@ const checks = [
   { path: '/over-ons/', status: 200 },
   { path: '/robots.txt', status: 200, contains: 'sitemap-index.xml' },
   { path: '/sitemap-index.xml', status: 200, contains: '<sitemapindex' },
+  { path: '/sitemap-0.xml', status: 200, contains: '/blog/' },
   { path: '/api/health', status: 200, contains: '"status":"ok"' },
   { path: '/beheer/', status: 302, location: '/_emdash/admin/' },
   { path: '/_emdash/admin/handleiding/', status: 302, accessRedirect: true },

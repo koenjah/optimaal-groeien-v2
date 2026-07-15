@@ -89,7 +89,7 @@ const payload = {
     description: 'SEO beschrijving uit de CMS wordt openbaar gebruikt.',
     image: null,
     canonical: null,
-    noIndex: true,
+    noIndex: false,
   },
 };
 
@@ -133,8 +133,37 @@ try {
   const html = await publicPage.text();
   assert(html.includes('<title>SEO titel stagingtest | Optimaal Groeien</title>'), 'CMS SEO titel staat in de openbare HTML');
   assert(html.includes('content="SEO beschrijving uit de CMS wordt openbaar gebruikt."'), 'CMS SEO beschrijving staat in de openbare HTML');
-  assert(html.includes('content="noindex, nofollow"'), 'noindex instelling staat in de openbare HTML');
   assert(html.includes('CMS SEO test') && html.includes('SEO controle werkt'), 'titel en artikeltekst zijn zichtbaar');
+
+  const sitemapIndex = await request(`/sitemap-index.xml?check=${payload.slug}`);
+  const sitemapIndexXml = await sitemapIndex.text();
+  assert(sitemapIndex.status === 200 && sitemapIndexXml.includes('/sitemap-posts.xml'), 'gepubliceerde CMS blogs worden aan de sitemap-index toegevoegd');
+
+  const cmsSitemap = await request('/sitemap-posts.xml');
+  const cmsSitemapXml = await cmsSitemap.text();
+  assert(cmsSitemap.status === 200 && cmsSitemapXml.includes(`/blog/${payload.slug}`), 'gepubliceerde CMS blog staat in de CMS sitemap');
+
+  const noIndexUpdate = await request(`/_emdash/api/content/posts/${postId}`, {
+    method: 'PUT',
+    body: JSON.stringify({
+      seo: { ...payload.seo, noIndex: true },
+    }),
+  });
+  assert(noIndexUpdate.status === 200, 'niet indexeren kan op een bestaand artikel worden ingesteld');
+
+  const republish = await request(`/_emdash/api/content/posts/${postId}/publish`, {
+    method: 'POST',
+    body: '{}',
+  });
+  assert(republish.status === 200, 'SEO wijziging is gepubliceerd');
+
+  const noIndexPage = await request(`/blog/${payload.slug}/?check=noindex`);
+  const noIndexHtml = await noIndexPage.text();
+  assert(noIndexHtml.includes('content="noindex, nofollow"'), 'niet indexeren staat in de openbare HTML');
+
+  const noIndexSitemap = await request(`/sitemap-index.xml?check=${payload.slug}-noindex`);
+  const noIndexSitemapXml = await noIndexSitemap.text();
+  assert(!noIndexSitemapXml.includes('/sitemap-posts.xml'), 'niet indexeerbare CMS blogs staan niet in de sitemap-index');
 
   const admin = await request('/_emdash/admin/');
   const adminHtml = await admin.text();
@@ -167,5 +196,9 @@ assert(
     || (removedPage.status === 302 && removedPage.headers.get('location') === '/404'),
   'verwijderd testartikel is niet meer openbaar',
 );
+
+const finalSitemap = await request(`/sitemap-index.xml?check=${payload.slug}-clean`);
+const finalSitemapXml = await finalSitemap.text();
+assert(!finalSitemapXml.includes('/sitemap-posts.xml'), 'lege CMS sitemap verdwijnt weer uit de sitemap-index');
 
 console.log(`Staging lifecycle test passed: ${origin}`);
