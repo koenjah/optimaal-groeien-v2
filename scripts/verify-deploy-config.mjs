@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import fs from 'node:fs';
+import { spawnSync } from 'node:child_process';
 
 const target = process.argv[2];
 if (target !== 'production' && target !== 'staging') {
@@ -8,7 +9,9 @@ if (target !== 'production' && target !== 'staging') {
 }
 
 const configPath = new URL('../dist/server/wrangler.json', import.meta.url);
+const entryPath = new URL('../dist/server/entry.mjs', import.meta.url);
 const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
+const entry = fs.readFileSync(entryPath, 'utf8');
 
 const expected = target === 'production'
   ? {
@@ -42,6 +45,17 @@ check(
 );
 check(config.compatibility_flags?.includes('nodejs_compat'), 'nodejs_compat must be enabled');
 check(config.assets?.run_worker_first === true, 'assets.run_worker_first must be enabled');
+check(entry.includes('SLUG_ALREADY_USED'), 'Reserved slug protection is missing from the Worker');
+check(entry.includes('og-admin-help'), 'CMS help link branding is missing from the Worker');
+check(entry.includes('Veilig content maken en publiceren'), 'CMS guide is missing from the Worker');
+
+const syntaxCheck = spawnSync(process.execPath, ['--check', entryPath.pathname], {
+  encoding: 'utf8',
+});
+check(
+  syntaxCheck.status === 0,
+  `Generated Worker entry is not valid JavaScript: ${syntaxCheck.stderr.trim()}`,
+);
 
 for (const binding of ['DB', 'EMDASH_DB']) {
   const database = config.d1_databases?.find((item) => item.binding === binding);

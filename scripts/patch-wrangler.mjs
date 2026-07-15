@@ -8,6 +8,9 @@ import fs from 'node:fs';
 const wranglerPath = new URL('../dist/server/wrangler.json', import.meta.url);
 const entryPath = new URL('../dist/server/entry.mjs', import.meta.url);
 const redirectsPath = new URL('../public/_redirects', import.meta.url);
+const cmsGuidePath = new URL('./templates/cms-handleiding.html', import.meta.url);
+const blogContentPath = new URL('../src/content/blog/', import.meta.url);
+const pagesPath = new URL('../src/pages/', import.meta.url);
 const cfg = JSON.parse(fs.readFileSync(wranglerPath, 'utf8'));
 
 const enableEmdash = process.env.ENABLE_EMDASH === 'true';
@@ -138,6 +141,29 @@ const redirectRules = fs
   .filter((parts) => parts.length >= 3 && parts[2] === '301')
   .map(([from, to]) => [from, to]);
 
+const reservedBlogSlugs = fs
+  .readdirSync(blogContentPath)
+  .filter((name) => name.endsWith('.md'))
+  .map((name) => {
+    const source = fs.readFileSync(new URL(name, blogContentPath), 'utf8');
+    const frontmatter = source.match(/^---\s*\n([\s\S]*?)\n---/);
+    const slug = frontmatter?.[1].match(/^slug:\s*["']?([^"'\n]+)["']?\s*$/m)?.[1]?.trim();
+    return slug || name.replace(/\.md$/, '');
+  })
+  .sort();
+
+const reservedPageSlugs = fs
+  .readdirSync(pagesPath, { withFileTypes: true })
+  .flatMap((entry) => {
+    if (entry.name.startsWith('[')) return [];
+    if (entry.isDirectory()) return [entry.name];
+    if (!entry.name.endsWith('.astro')) return [];
+    return [entry.name.replace(/\.astro$/, '')];
+  })
+  .filter((slug) => slug !== '404')
+  .sort();
+const cmsGuideHtml = fs.readFileSync(cmsGuidePath, 'utf8');
+
 const patchedEntry = `globalThis.process ??= {};
 globalThis.process.env ??= {};
 import "cloudflare:workers";
@@ -147,6 +173,11 @@ const canonicalOrigin = ${JSON.stringify(canonicalOrigin)};
 const publicHosts = new Set(${JSON.stringify(publicHosts)});
 const redirectRules = ${JSON.stringify(redirectRules)};
 const redirectMap = new Map(redirectRules);
+const reservedContentSlugs = {
+  posts: new Set(${JSON.stringify(reservedBlogSlugs)}),
+  pages: new Set(${JSON.stringify(reservedPageSlugs)}),
+};
+const cmsGuideHtml = ${JSON.stringify(cmsGuideHtml)};
 const adminBrandCss = \`
   :root,
   [data-theme="kumo"] {
@@ -176,6 +207,32 @@ const adminBrandCss = \`
   .emdash-brand-link img {
     width: auto;
     max-width: 2rem;
+  }
+
+  .og-admin-help {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 1000;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border: 1px solid rgba(5, 59, 99, 0.18);
+    border-radius: 50%;
+    background: #053b63;
+    color: white;
+    font: 700 1rem/1 Inter, ui-sans-serif, system-ui, sans-serif;
+    text-decoration: none;
+    box-shadow: 0 8px 24px rgba(5, 59, 99, 0.22);
+  }
+
+  .og-admin-help:hover,
+  .og-admin-help:focus-visible {
+    background: #f17a29;
+    outline: 3px solid rgba(241, 122, 41, 0.28);
+    outline-offset: 2px;
   }
 \`;
 
@@ -232,6 +289,46 @@ function makeRedirect(request) {
   return null;
 }
 
+function slugify(value) {
+  return value
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+async function rejectReservedContentSlug(request) {
+  if (request.method !== "POST" && request.method !== "PUT") return null;
+  const url = new URL(request.url);
+  const match = url.pathname.match(new RegExp("^/_emdash/api/content/(posts|pages)(?:/[^/]+)?/?$"));
+  if (!match) return null;
+
+  let body;
+  try {
+    body = await request.clone().json();
+  } catch {
+    return null;
+  }
+
+  const explicitSlug = typeof body?.slug === "string" ? body.slug : "";
+  const generatedSlug = request.method === "POST" && typeof body?.data?.title === "string"
+    ? body.data.title
+    : "";
+  const slug = slugify(explicitSlug || generatedSlug);
+  const collection = match[1];
+  if (!slug || !reservedContentSlugs[collection].has(slug)) return null;
+
+  return Response.json({
+    success: false,
+    error: {
+      code: "SLUG_ALREADY_USED",
+      message: 'De slug "' + slug + '" wordt al gebruikt door de bestaande website. Kies een andere slug.',
+    },
+  }, { status: 409 });
+}
+
 function applyAdminBranding(response, url) {
   const contentType = response.headers.get("content-type") || "";
   if (!url.pathname.startsWith("/_emdash/admin") || !contentType.includes("text/html")) {
@@ -246,7 +343,30 @@ function applyAdminBranding(response, url) {
         });
       },
     })
+    .on("body", {
+      element(element) {
+        element.append(
+          '<a class="og-admin-help" href="/_emdash/handleiding/" aria-label="Open CMS-handleiding" title="CMS-handleiding">?</a>',
+          { html: true },
+        );
+      },
+    })
     .transform(response);
+}
+
+function serveCmsGuide(url) {
+  if (url.pathname !== "/_emdash/handleiding" && url.pathname !== "/_emdash/handleiding/") {
+    return null;
+  }
+  return new Response(cmsGuideHtml, {
+    status: 200,
+    headers: {
+      "Content-Type": "text/html; charset=utf-8",
+      "Cache-Control": "private, no-store",
+      "X-Robots-Tag": "noindex, nofollow",
+      "X-Content-Type-Options": "nosniff",
+    },
+  });
 }
 
 function syncRuntimeEnvironment(env) {
@@ -260,10 +380,15 @@ export default {
   ...astroWorker,
   async fetch(request, env, ctx) {
     syncRuntimeEnvironment(env);
+    const url = new URL(request.url);
     const redirect = makeRedirect(request);
     if (redirect) return redirect;
+    const cmsGuideResponse = serveCmsGuide(url);
+    if (cmsGuideResponse) return cmsGuideResponse;
+    const reservedSlugResponse = await rejectReservedContentSlug(request);
+    if (reservedSlugResponse) return reservedSlugResponse;
     const response = await astroWorker.fetch(request, env, ctx);
-    return applyAdminBranding(response, new URL(request.url));
+    return applyAdminBranding(response, url);
   },
 };
 `;

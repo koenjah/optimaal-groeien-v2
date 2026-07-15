@@ -16,6 +16,8 @@ Dit document beschrijft de vaste staging- en productieomgeving. Staging gebruikt
 
 Beide omgevingen staan in het losse Cloudflare-account voor Optimaal Groeien. Het account-ID is `c6b2726f6f179cede41f156972fd951a`.
 
+De standaard Wrangler-login op een computer kan naar een ander Cloudflare-account wijzen. Daarom controleert ieder deploycommando eerst via de Cloudflare API of de expliciete sleutel toegang heeft tot het juiste account, de juiste Worker en de juiste D1-database. Zonder die controle stopt de deploy.
+
 ## Toegang
 
 Cloudflare Access staat alleen deze adressen toe:
@@ -40,6 +42,22 @@ Een staging-build:
 ```bash
 npm run build:staging:emdash
 ```
+
+Na een stagingdeploy controleert dit commando ook echt maken, publiceren, openbare SEO, slugbescherming en opruimen van een tijdelijk artikel:
+
+```bash
+npm run test:staging:lifecycle
+```
+
+Hiervoor is een geldige Cloudflare Access-cookie nodig via `CF_ACCESS_COOKIE` of het lokale testcookiebestand. Het testartikel wordt na een geslaagde test definitief verwijderd.
+
+Voor een echte deploy moet een expliciete Cloudflare-inlog in de omgeving staan:
+
+```bash
+export CLOUDFLARE_API_TOKEN='...'
+```
+
+Een Global API Key werkt ook met `CLOUDFLARE_API_KEY` en `CLOUDFLARE_EMAIL`, maar een beperkte API-token heeft de voorkeur.
 
 Een productie-build:
 
@@ -76,6 +94,8 @@ Voor een volledige uitroltest zijn op 15 juli 2026 deze stappen echt uitgevoerd:
 
 De preview-route accepteert alleen een geldig en tijdelijk ondertekend token. De preview krijgt `noindex` en `Cache-Control: private, no-store`. Zonder token geeft dezelfde route 404.
 
+De beveiligde handleiding staat op `/_emdash/handleiding/`. De CMS toont hiervoor een ronde helpknop. Bekende slugs van de bestaande website worden bij maken of aanpassen geblokkeerd voordat zij een onduidelijke URL-botsing kunnen veroorzaken.
+
 ## Productie deployen
 
 Een productie-uitrol mag alleen na een geslaagde stagingtest.
@@ -91,9 +111,21 @@ Gebruik altijd een expliciet deploycommando. Het algemene `npm run deploy` stopt
 7. Voer `npm run test:production` uit.
 8. Log echt in en controleer dashboard, blogs, pagina's, media, tags en gebruikers.
 
-De nieuwste volledige back-up voor deze uitrol staat buiten de repository:
+Het vaste back-upcommando is:
 
-`/Users/gebruiker/Documents/STEFAN/backups/optimaal-groeien/post-cms-20260715-052126/`
+```bash
+npm run backup:production
+```
+
+Dit commando stopt zonder expliciete Cloudflare-inlog. Het bewaart de sleutel niet. De back-up bevat checksums en wordt buiten de repository opgeslagen onder `Documents/STEFAN/backups/optimaal-groeien/`.
+
+`/api/health` controleert zonder persoonsgegevens te tonen of de website, D1 en de CMS-schema's bereikbaar zijn. GitHub voert iedere ochtend automatisch de openbare productiecontroles uit. Bij een mislukte run verschijnt een fout in GitHub Actions.
+
+De gecontroleerde back-up direct voor deze uitrol staat buiten de repository:
+
+`/Users/gebruiker/Documents/STEFAN/backups/optimaal-groeien/predeploy-20260715T042710Z/`
+
+De back-up bevat 52 uitleesbare D1-tabellen. Alleen Cloudflares afgeschermde interne `_cf_KV`-tabel kan niet logisch worden uitgelezen. Alle kritieke tabellen en aantallen zijn wel gecontroleerd.
 
 Deze map bevat onder meer de Worker-code, Worker-instellingen, versies, deployments, een Git bundle, R2- en KV-metadata en een logische kopie van alle 52 bereikbare D1-tabellen. Controleer `SHA256SUMS` voordat een back-up wordt gebruikt.
 

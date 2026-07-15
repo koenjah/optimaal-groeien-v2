@@ -11,6 +11,8 @@ Deze handleiding is voor de beheerders van de website.
 
 De code is tien minuten geldig. Alleen `koenjah@gmail.com` en `marketing@optimaalgroeien.nl` hebben nu toegang.
 
+Gebruik de ronde helpknop rechtsonder in de CMS om deze handleiding online te openen. De online handleiding staat achter dezelfde beveiligde login.
+
 ## Wat je kunt beheren
 
 **Blogs**
@@ -65,6 +67,8 @@ Gebruik kleine letters en gewone streepjes. Verander een slug liever niet nadat 
 7. Publiceer pas na de controle.
 
 Een pagina gebruikt de slug direct achter `optimaalgroeien.nl`. Controleer daarom eerst of die URL nog niet bestaat.
+
+De CMS blokkeert slugs van bestaande blogs en vaste pagina's automatisch. Kies een andere slug als je de melding krijgt dat een slug al wordt gebruikt.
 
 ## Afbeeldingen
 

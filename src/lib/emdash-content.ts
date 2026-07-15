@@ -1,8 +1,17 @@
 export const isEmdashEnabled = process.env.ENABLE_EMDASH === 'true';
 
-type EmDashContentEntry = {
+export type CmsSeo = {
+  title: string | null;
+  description: string | null;
+  image: string | null;
+  canonical: string | null;
+  noIndex: boolean;
+};
+
+export type EmDashContentEntry = {
   id: string;
   data: Record<string, any>;
+  seo?: CmsSeo;
 };
 
 type BlogListEntry = {
@@ -53,6 +62,59 @@ function extractMediaSrc(value: unknown): string | undefined {
     ?? (asString(media.id) ? `/_emdash/api/media/file/${media.id}` : undefined);
 }
 
+function resolveSeoImage(value: unknown): string | undefined {
+  const image = asString(value);
+  if (!image) return undefined;
+  if (image.startsWith('http://') || image.startsWith('https://') || image.startsWith('/')) {
+    return image;
+  }
+  return `/_emdash/api/media/file/${image}`;
+}
+
+async function getCmsSeo(collection: 'posts' | 'pages', contentId: string): Promise<CmsSeo | undefined> {
+  try {
+    const { getDb } = await import('emdash/runtime');
+    const db = await getDb();
+    const row = await db
+      .selectFrom('_emdash_seo')
+      .select([
+        'seo_title',
+        'seo_description',
+        'seo_image',
+        'seo_canonical',
+        'seo_no_index',
+      ])
+      .where('collection', '=', collection)
+      .where('content_id', '=', contentId)
+      .executeTakeFirst();
+
+    if (!row) return undefined;
+
+    return {
+      title: row.seo_title,
+      description: row.seo_description,
+      image: row.seo_image,
+      canonical: row.seo_canonical,
+      noIndex: row.seo_no_index === 1,
+    };
+  } catch (error) {
+    console.warn(`[emdash] Failed to load SEO for ${collection}/${contentId}:`, error);
+    return undefined;
+  }
+}
+
+async function withCmsSeo(
+  collection: 'posts' | 'pages',
+  entry: EmDashContentEntry | null,
+): Promise<EmDashContentEntry | null> {
+  if (!entry) return null;
+  const contentId = asString(entry.data.id) ?? entry.id;
+  return {
+    ...entry,
+    seo: await getCmsSeo(collection, contentId),
+  };
+}
+
 export function getCmsTitle(entry: EmDashContentEntry): string {
   return asString(entry.data.title) ?? getEntrySlug(entry);
 }
@@ -78,6 +140,10 @@ export function getCmsHeroImage(entry: EmDashContentEntry): string | undefined {
   return extractMediaSrc(entry.data.featured_image ?? entry.data.heroImage);
 }
 
+export function getCmsSeoImage(entry: EmDashContentEntry): string | undefined {
+  return resolveSeoImage(entry.seo?.image);
+}
+
 export async function getCmsEntry(collection: 'posts' | 'pages', slug: string) {
   if (!isEmdashEnabled) return null;
 
@@ -89,7 +155,7 @@ export async function getCmsEntry(collection: 'posts' | 'pages', slug: string) {
     return null;
   }
 
-  return (entry as EmDashContentEntry | null) ?? null;
+  return withCmsSeo(collection, (entry as EmDashContentEntry | null) ?? null);
 }
 
 export async function getCmsPreviewEntry(collection: 'posts' | 'pages', id: string) {
@@ -119,7 +185,9 @@ export async function getCmsPreviewEntry(collection: 'posts' | 'pages', id: stri
   }
 
   // Never expose this internal ID route without a valid signed preview token.
-  return isPreview ? ((entry as EmDashContentEntry | null) ?? null) : null;
+  return isPreview
+    ? withCmsSeo(collection, (entry as EmDashContentEntry | null) ?? null)
+    : null;
 }
 
 export async function getCmsBlogListEntries(): Promise<BlogListEntry[]> {

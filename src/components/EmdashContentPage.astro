@@ -5,14 +5,13 @@ import {
   getCmsDate,
   getCmsExcerpt,
   getCmsHeroImage,
+  getCmsSeoImage,
   getCmsTitle,
+  type EmDashContentEntry,
 } from '../lib/emdash-content';
 
 interface Props {
-  entry: {
-    id: string;
-    data: Record<string, any>;
-  };
+  entry: EmDashContentEntry;
   type: 'post' | 'page';
   slug: string;
   isPreview?: boolean;
@@ -20,12 +19,15 @@ interface Props {
 
 const { entry, type, slug, isPreview = false } = Astro.props;
 const title = getCmsTitle(entry);
-const description = getCmsExcerpt(entry);
+const description = entry.seo?.description || getCmsExcerpt(entry);
 const date = getCmsDate(entry);
 const heroImage = getCmsHeroImage(entry);
+const socialImage = getCmsSeoImage(entry) || heroImage;
 const isPost = type === 'post';
 const canonicalPath = isPost ? `/blog/${slug}/` : `/${slug}/`;
-const canonical = `https://optimaalgroeien.nl${canonicalPath}`;
+const canonical = entry.seo?.canonical || `https://optimaalgroeien.nl${canonicalPath}`;
+const pageTitle = entry.seo?.title || `${title} — Optimaal Groeien`;
+const noindex = isPreview || entry.seo?.noIndex === true;
 
 const articleSchema = isPost
   ? JSON.stringify({
@@ -33,8 +35,8 @@ const articleSchema = isPost
       '@type': 'Article',
       headline: title,
       description,
-      image: heroImage
-        ? (heroImage.startsWith('http') ? heroImage : `https://optimaalgroeien.nl${heroImage}`)
+      image: socialImage
+        ? (socialImage.startsWith('http') ? socialImage : `https://optimaalgroeien.nl${socialImage}`)
         : 'https://optimaalgroeien.nl/images/team-full.jpg',
       datePublished: new Date(date).toISOString(),
       dateModified: new Date(date).toISOString(),
@@ -61,15 +63,15 @@ const articleSchema = isPost
 ---
 
 <BlogLayout
-  title={`${title} — Optimaal Groeien`}
+  title={pageTitle}
   description={description}
   canonical={canonical}
-  ogImage={heroImage}
+  ogImage={socialImage}
   ogType={isPost ? 'article' : 'website'}
   publishedTime={isPost ? new Date(date).toISOString() : undefined}
   author={isPost ? 'Stefan Kelderman' : undefined}
   articleSchema={articleSchema}
-  noindex={isPreview}
+  noindex={noindex}
 >
   <header class="bg-brand-primary pt-36 pb-10 px-6">
     <div class="max-w-3xl mx-auto">
