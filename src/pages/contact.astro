@@ -37,34 +37,75 @@ import ServiceLayout from '../layouts/ServiceLayout.astro';
           <span class="text-brand-accent">maken.</span>
         </h1>
 
-        <p class="text-lg text-brand-ink/65 leading-relaxed mb-12 font-light max-w-sm">
-          Geen formulier, geen wachtrij.<br />Stefan staat zelf voor je klaar.
+        <p class="text-lg text-brand-ink/65 leading-relaxed mb-8 font-light max-w-md">
+          Laat kort je gegevens achter. Stefan of iemand uit het team komt snel bij je terug.
         </p>
 
-        <!-- Primaire CTA -->
-        <a
-          href="https://meetings-eu1.hubspot.com/stefan-kelderman"
-          target="_blank"
-          rel="noreferrer"
-          class="group inline-flex items-center gap-3 px-8 py-4 bg-brand-primary text-white rounded-2xl font-display font-bold text-base transition-all hover:bg-brand-accent hover:scale-[1.02] shadow-lg shadow-brand-primary/15 mb-8 w-full sm:w-auto justify-center sm:justify-start"
+        <form
+          id="contact-form"
+          data-contact-form
+          class="bg-white/80 border border-amber-100/90 rounded-[24px] p-5 sm:p-6 shadow-sm mb-8"
         >
-          Plan een gesprek — 15 min
-          <svg class="w-4 h-4 transition-transform group-hover:translate-x-1 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
+          <div class="hidden" aria-hidden="true">
+            <label for="contact-website">Website</label>
+            <input id="contact-website" name="website" type="text" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label for="contact-name" class="block text-xs font-bold uppercase tracking-widest text-brand-primary/70 mb-2">Naam</label>
+              <input id="contact-name" name="name" type="text" required autocomplete="name" class="w-full px-4 py-3 rounded-2xl border border-amber-100 bg-white text-brand-ink placeholder:text-brand-ink/35 outline-none transition focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/10" />
+            </div>
+            <div>
+              <label for="contact-company" class="block text-xs font-bold uppercase tracking-widest text-brand-primary/70 mb-2">Bedrijf</label>
+              <input id="contact-company" name="company" type="text" required autocomplete="organization" class="w-full px-4 py-3 rounded-2xl border border-amber-100 bg-white text-brand-ink placeholder:text-brand-ink/35 outline-none transition focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/10" />
+            </div>
+            <div>
+              <label for="contact-email" class="block text-xs font-bold uppercase tracking-widest text-brand-primary/70 mb-2">E-mail</label>
+              <input id="contact-email" name="email" type="email" required autocomplete="email" class="w-full px-4 py-3 rounded-2xl border border-amber-100 bg-white text-brand-ink placeholder:text-brand-ink/35 outline-none transition focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/10" />
+            </div>
+            <div>
+              <label for="contact-phone" class="block text-xs font-bold uppercase tracking-widest text-brand-primary/70 mb-2">Telefoon</label>
+              <input id="contact-phone" name="phone" type="tel" autocomplete="tel" class="w-full px-4 py-3 rounded-2xl border border-amber-100 bg-white text-brand-ink placeholder:text-brand-ink/35 outline-none transition focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/10" />
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <label for="contact-message" class="block text-xs font-bold uppercase tracking-widest text-brand-primary/70 mb-2">Waar kunnen we mee helpen?</label>
+            <textarea id="contact-message" name="message" required rows="4" class="w-full px-4 py-3 rounded-2xl border border-amber-100 bg-white text-brand-ink placeholder:text-brand-ink/35 outline-none transition resize-none leading-relaxed focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/10"></textarea>
+          </div>
+
+          <div class="mt-5 flex flex-col sm:flex-row sm:items-center gap-3">
+            <button
+              type="submit"
+              class="group inline-flex items-center justify-center gap-3 px-7 py-4 bg-brand-primary text-white rounded-2xl font-display font-bold text-base transition-all hover:bg-brand-accent hover:scale-[1.02] shadow-lg shadow-brand-primary/15 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100"
+            >
+              Verstuur aanvraag
+              <svg class="w-4 h-4 transition-transform group-hover:translate-x-1 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <p data-contact-status class="text-sm text-brand-ink/60 min-h-[1.5rem]" aria-live="polite"></p>
+          </div>
+        </form>
 
         <!-- Secundaire opties -->
         <div class="flex flex-col gap-3 pt-6 border-t border-amber-200/60 mb-12">
-          <a href="mailto:stefan@optimaalgroeien.nl" class="group flex items-center gap-3 text-brand-ink/60 hover:text-brand-primary transition-colors text-sm font-medium">
-            <svg class="w-4 h-4 text-brand-accent/70 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            stefan@optimaalgroeien.nl
+          <a
+            href="https://meetings-eu1.hubspot.com/stefan-kelderman"
+            target="_blank"
+            rel="noreferrer"
+            data-leadinfo-url="/contact-plan-gesprek"
+            class="group flex items-center gap-3 text-brand-ink/60 hover:text-brand-primary transition-colors text-sm font-medium"
+          >
+            <svg class="w-4 h-4 text-brand-accent/70 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M8 7V3M16 7V3M4 11h16M5 5h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"/></svg>
+            Plan direct een gesprek
           </a>
-          <a href="tel:+31572700246" class="group flex items-center gap-3 text-brand-ink/60 hover:text-brand-primary transition-colors text-sm font-medium">
+          <a href="mailto:marketing@optimaalgroeien.nl" data-leadinfo-url="/contact-email-click" class="group flex items-center gap-3 text-brand-ink/60 hover:text-brand-primary transition-colors text-sm font-medium">
+            <svg class="w-4 h-4 text-brand-accent/70 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            marketing@optimaalgroeien.nl
+          </a>
+          <a href="tel:+31572700246" data-leadinfo-url="/contact-phone-click" class="group flex items-center gap-3 text-brand-ink/60 hover:text-brand-primary transition-colors text-sm font-medium">
             <svg class="w-4 h-4 text-brand-accent/70 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.9 12.45 19.79 19.79 0 0 1 1.97 3.92 2 2 0 0 1 3.95 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             +31 57 270 02 46
-          </a>
-          <a href="https://www.linkedin.com/in/stefan-kelderman-28b4b6168/" target="_blank" rel="noreferrer" class="group flex items-center gap-3 text-brand-ink/60 hover:text-brand-primary transition-colors text-sm font-medium">
-            <svg class="w-4 h-4 text-brand-accent/70 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            LinkedIn — Stefan Kelderman
           </a>
           <div class="flex items-center gap-3 text-brand-ink/40 text-sm">
             <svg class="w-4 h-4 text-brand-accent/50 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -182,5 +223,78 @@ import ServiceLayout from '../layouts/ServiceLayout.astro';
       </div>
     </div>
   </section>
+
+  <script is:inline>
+    const contactForm = document.querySelector('[data-contact-form]');
+    const contactStatus = document.querySelector('[data-contact-status]');
+
+    function trackLeadinfoPage(path) {
+      try {
+        if (typeof window.leadinfo === 'function') {
+          window.leadinfo('setCustomUrl', path);
+          window.leadinfo('trackPageView');
+        }
+      } catch (_) {
+        // Tracking should never block the conversion path.
+      }
+    }
+
+    document.querySelectorAll('[data-leadinfo-url]').forEach((link) => {
+      link.addEventListener('click', () => {
+        const path = link.getAttribute('data-leadinfo-url');
+        if (path) trackLeadinfoPage(path);
+      });
+    });
+
+    if (contactForm && contactStatus) {
+      const submitButton = contactForm.querySelector('button[type="submit"]');
+      const defaultButtonText = submitButton ? submitButton.innerHTML : '';
+
+      contactForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        if (!contactForm.reportValidity()) return;
+
+        const formData = new FormData(contactForm);
+        const payload = Object.fromEntries(formData.entries());
+        payload.pageUrl = window.location.href;
+        payload.source = 'contactpagina';
+
+        contactStatus.textContent = 'Versturen...';
+        contactStatus.className = 'text-sm text-brand-ink/60 min-h-[1.5rem]';
+        if (submitButton) {
+          submitButton.disabled = true;
+          submitButton.innerHTML = 'Versturen...';
+        }
+
+        try {
+          const response = await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload),
+          });
+          const data = await response.json().catch(() => ({}));
+
+          if (!response.ok || !data.success) {
+            throw new Error(data.error || 'Submit failed');
+          }
+
+          trackLeadinfoPage('/contactformulier-ingediend');
+          contactForm.reset();
+          contactStatus.textContent = 'Dank je. We nemen snel contact met je op.';
+          contactStatus.className = 'text-sm text-emerald-700 min-h-[1.5rem] font-medium';
+        } catch (_) {
+          contactStatus.innerHTML =
+            'Versturen lukt niet. Mail direct naar <a class="underline font-semibold" href="mailto:marketing@optimaalgroeien.nl">marketing@optimaalgroeien.nl</a>.';
+          contactStatus.className = 'text-sm text-red-700 min-h-[1.5rem] font-medium';
+        } finally {
+          if (submitButton) {
+            submitButton.disabled = false;
+            submitButton.innerHTML = defaultButtonText;
+          }
+        }
+      });
+    }
+  </script>
 
 </ServiceLayout>

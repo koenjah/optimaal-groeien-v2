@@ -1,17 +1,51 @@
 ---
 import BlogLayout from '../../layouts/BlogLayout.astro';
 import { getCollection, render } from 'astro:content';
+import { getCmsEntry } from '../../lib/emdash-content';
+
+const getBlogPosts = async () => (await (getCollection as any)(
+  'blog',
+  ({ data }: { data: any }) => !data.draft,
+)) as any[];
 
 export async function getStaticPaths() {
-  const posts = await getCollection('blog', ({ data }) => !data.draft);
-  return posts.map(post => ({
+  const posts = (await (getCollection as any)(
+    'blog',
+    ({ data }: { data: any }) => !data.draft,
+  )) as any[];
+  return posts.map((post: any) => ({
     params: { slug: post.data.slug },
     props: { post },
   }));
 }
 
-const { post } = Astro.props;
-const { Content } = await render(post);
+const params = Astro.params as Record<string, string | undefined>;
+
+// A migrated CMS article takes precedence. The Markdown copy remains in the
+// repository as an immediate fallback when no published CMS entry is present.
+if (params.slug && await getCmsEntry('posts', params.slug)) {
+  return Astro.rewrite(`/cms-content/blog/${params.slug}`);
+}
+
+let { post } = Astro.props as { post?: any };
+if (!post && params.slug) {
+  const posts = await getBlogPosts();
+  post = posts.find((entry: any) => entry.data.slug === params.slug);
+}
+
+if (!post && params.slug && /^\d+$/.test(params.slug)) {
+  return Astro.rewrite(`/blog/?page=${params.slug}`);
+}
+
+if (!post && params.slug) {
+  return Astro.rewrite(`/cms-content/blog/${params.slug}`);
+}
+
+if (!post) {
+  return Astro.redirect('/404');
+}
+
+const { Content } = await (render as any)(post);
 const seoTitle = post.data.seoTitle ?? post.data.title;
 const seoDescription = post.data.seoDescription ?? post.data.description;
 
@@ -35,10 +69,10 @@ const heroImage = getResponsiveBlogImage(post.data.heroImage);
 const words = post.body?.split(/\s+/).length ?? 0;
 const readingTime = Math.ceil(words / 200);
 
-const allPosts = await getCollection('blog', ({ data }) => !data.draft);
-const sameCategory = allPosts.filter(p => p.data.slug !== post.data.slug && p.data.category === post.data.category);
-const otherPosts = allPosts.filter(p => p.data.slug !== post.data.slug && p.data.category !== post.data.category);
-const related = [...sameCategory, ...otherPosts].slice(0, 3).map(p => ({
+const allPosts = await getBlogPosts();
+const sameCategory = allPosts.filter((p: any) => p.data.slug !== post.data.slug && p.data.category === post.data.category);
+const otherPosts = allPosts.filter((p: any) => p.data.slug !== post.data.slug && p.data.category !== post.data.category);
+const related = [...sameCategory, ...otherPosts].slice(0, 3).map((p: any) => ({
   ...p,
   responsiveImage: getResponsiveBlogImage(
     p.data.heroImage,
@@ -219,7 +253,7 @@ const breadcrumbSchema = JSON.stringify({
         <div class="mb-10 border border-amber-200/70 bg-white rounded-[16px] px-6 py-5">
           <p class="text-[10px] font-bold uppercase tracking-widest text-brand-accent mb-3">Wat je meeneemt</p>
           <ul class="space-y-2.5">
-            {post.data.keyTakeaways.map(point => (
+            {post.data.keyTakeaways.map((point: string) => (
               <li class="flex items-start gap-2.5">
                 <span class="mt-[0.35rem] w-1.5 h-1.5 rounded-full bg-brand-accent flex-shrink-0"></span>
                 <span class="text-[13px] text-brand-ink/70 leading-snug">{point}</span>
@@ -235,7 +269,7 @@ const breadcrumbSchema = JSON.stringify({
 
       <!-- Tags -->
       <div class="mt-12 pt-8 border-t border-brand-soft flex flex-wrap gap-2">
-        {post.data.tags.map(tag => (
+        {post.data.tags.map((tag: string) => (
           <span class="px-3 py-1 bg-white border border-brand-soft text-brand-ink/55 text-[12px] font-medium rounded-full">
             #{tag}
           </span>

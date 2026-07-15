@@ -42,6 +42,41 @@ interface CrawlData {
   hasSocialProof: boolean;
 }
 
+interface AnalysisReport {
+  scores: {
+    commercieleSlagkracht: number;
+    digitaleAanwezigheid: number;
+    aiReadiness: number;
+    groeiPotentieel: number;
+  };
+  classification: 'groen' | 'geel' | 'rood';
+  summaryLine: string;
+  crawlObservaties: string[];
+  quickWins: Array<{
+    titel: string;
+    beschrijving: string;
+    tijdsinvestering: string;
+    impact: string;
+  }>;
+  strategischeInzetten: Array<{
+    titel: string;
+    beschrijving: string;
+    roi: string;
+    investering: string;
+  }>;
+  roadmap: {
+    q1: { thema: string; focus: string; acties: string[] };
+    q2: { thema: string; focus: string; acties: string[] };
+    q3: { thema: string; focus: string; acties: string[] };
+    q4: { thema: string; focus: string; acties: string[] };
+  };
+  cta: {
+    headline: string;
+    body: string;
+    button: string;
+  };
+}
+
 // ─── Website Crawl ────────────────────────────────────────────────────────────
 
 async function crawlWebsite(url: string): Promise<CrawlData | null> {
@@ -303,42 +338,188 @@ Format (geef ALLEEN dit JSON object terug, geen extra tekst):
 // ─── OpenRouter (Claude) Call ─────────────────────────────────────────────────
 
 async function callClaude(prompt: string, apiKey: string): Promise<unknown> {
-  const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
-    method: 'POST',
-    headers: {
-      'Authorization': `Bearer ${apiKey}`,
-      'Content-Type': 'application/json',
-      'HTTP-Referer': 'https://optimaalgroeien.nl',
-      'X-Title': 'Optimaal Groeien AI Scan',
-    },
-    body: JSON.stringify({
-      model: 'anthropic/claude-haiku-4.5',
-      max_tokens: 4096,
-      messages: [{ role: 'user', content: prompt }],
-    }),
-  });
+  let lastError: unknown;
 
-  if (!response.ok) {
-    const errorText = await response.text().catch(() => 'unknown error');
-    throw new Error(`OpenRouter API error ${response.status}: ${errorText}`);
+  for (let attempt = 1; attempt <= 2; attempt += 1) {
+    try {
+      const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${apiKey}`,
+          'Content-Type': 'application/json',
+          'HTTP-Referer': 'https://optimaalgroeien.nl',
+          'X-Title': 'Optimaal Groeien AI Scan',
+        },
+        body: JSON.stringify({
+          model: 'anthropic/claude-haiku-4.5',
+          max_tokens: 4096,
+          messages: [{ role: 'user', content: prompt }],
+        }),
+      });
+
+      if (!response.ok) {
+        const errorText = await response.text().catch(() => 'unknown error');
+        throw new Error(`OpenRouter API error ${response.status}: ${errorText}`);
+      }
+
+      const data = (await response.json()) as {
+        choices?: Array<{ message?: { content?: string } }>;
+      };
+
+      const rawText = data?.choices?.[0]?.message?.content;
+      if (!rawText) {
+        throw new Error('Empty response from API');
+      }
+
+      return parseReportJson(rawText);
+    } catch (error) {
+      lastError = error;
+      if (attempt < 2) {
+        await new Promise((resolve) => setTimeout(resolve, 900));
+      }
+    }
   }
 
-  const data = (await response.json()) as {
-    choices?: Array<{ message?: { content?: string } }>;
-  };
+  throw lastError instanceof Error ? lastError : new Error('Unknown AI error');
+}
 
-  const rawText = data?.choices?.[0]?.message?.content;
-  if (!rawText) {
-    throw new Error('Empty response from API');
-  }
-
-  // Strip any accidental markdown code fences Claude might add
+function parseReportJson(rawText: string): unknown {
   const cleaned = rawText
     .replace(/^```(?:json)?\s*/i, '')
     .replace(/\s*```\s*$/i, '')
     .trim();
 
-  return JSON.parse(cleaned);
+  try {
+    return JSON.parse(cleaned);
+  } catch {
+    const firstBrace = cleaned.indexOf('{');
+    const lastBrace = cleaned.lastIndexOf('}');
+    if (firstBrace >= 0 && lastBrace > firstBrace) {
+      return JSON.parse(cleaned.slice(firstBrace, lastBrace + 1));
+    }
+    throw new Error('AI returned invalid JSON');
+  }
+}
+
+function clampScore(score: number): number {
+  return Math.max(1, Math.min(10, Math.round(score)));
+}
+
+function classify(scores: AnalysisReport['scores']): AnalysisReport['classification'] {
+  const average =
+    (scores.commercieleSlagkracht +
+      scores.digitaleAanwezigheid +
+      scores.aiReadiness +
+      scores.groeiPotentieel) /
+    4;
+  if (average > 6.5) return 'groen';
+  if (average >= 4) return 'geel';
+  return 'rood';
+}
+
+function buildFallbackReport(body: ScanInput, crawl: CrawlData | null): AnalysisReport {
+  const channelCount = Array.isArray(body.leadKanalen) ? body.leadKanalen.length : 0;
+  const hasCrm = /^ja$/i.test(body.crmGebruik ?? '');
+  const usesAi = /^ja$/i.test(body.aiToolsGebruik ?? '');
+  const websiteScore = crawl
+    ? 3 + (crawl.hasContact ? 1 : 0) + (crawl.hasDiensten ? 1 : 0) + (crawl.hasBlog ? 1 : 0) +
+      (crawl.hasSocialProof ? 1 : 0) + Math.min(2, crawl.ctaLinkCount)
+    : 3;
+
+  const scores = {
+    commercieleSlagkracht: clampScore(3 + channelCount + (hasCrm ? 2 : 0) + (body.leadOpvolging ? 1 : 0)),
+    digitaleAanwezigheid: clampScore(websiteScore),
+    aiReadiness: clampScore(3 + (usesAi ? 3 : 0) + (body.tijdvretendeTaken ? 2 : 0)),
+    groeiPotentieel: clampScore(5 + (body.ambitie ? 2 : 0) - (body.belemmering ? 1 : 0)),
+  };
+  const classification = classify(scores);
+  const websiteName = body.websiteUrl || 'de website';
+
+  return {
+    scores,
+    classification,
+    summaryLine:
+      `${body.bedrijfsbeschrijving.slice(0, 120)}${body.bedrijfsbeschrijving.length > 120 ? '...' : ''} ` +
+      `heeft groeipotentie, maar mist waarschijnlijk nog structuur in opvolging, data en automatisering.`,
+    crawlObservaties: [
+      crawl
+        ? `${websiteName} is bereikbaar en bevat ${crawl.ctaLinkCount} duidelijke CTA-link(s).`
+        : `${websiteName} kon niet betrouwbaar worden gecrawld; controleer bereikbaarheid, SSL en laadtijd.`,
+      crawl?.hasSocialProof
+        ? 'Er is social proof gevonden, wat kan helpen bij conversie.'
+        : 'Social proof, cases of klantresultaten zijn niet direct sterk zichtbaar.',
+      hasCrm
+        ? 'Er is CRM-gebruik opgegeven; dat is een goede basis voor betere opvolging.'
+        : 'Geen duidelijk CRM-gebruik opgegeven; daardoor raakt leadopvolging sneller versnipperd.',
+    ],
+    quickWins: [
+      {
+        titel: 'Maak leadopvolging meetbaar',
+        beschrijving:
+          'Leg per lead vast via welk kanaal deze binnenkomt, wie opvolgt en wat de volgende stap is. Zo zie je snel waar kansen blijven liggen.',
+        tijdsinvestering: '2-3 uur setup',
+        impact: 'Hoog',
+      },
+      {
+        titel: 'Versterk de belangrijkste CTA',
+        beschrijving:
+          'Zet op de belangrijkste pagina een duidelijke actie naar scan, afspraak of contact. Maak de belofte concreet en meet elke klik.',
+        tijdsinvestering: '1-2 uur',
+        impact: 'Gemiddeld',
+      },
+      {
+        titel: 'Automatiseer de eerste opvolging',
+        beschrijving:
+          'Gebruik een vaste e-mail of LinkedIn-opvolging direct na een aanvraag, zodat warme leads niet blijven liggen.',
+        tijdsinvestering: '2 uur',
+        impact: 'Hoog',
+      },
+    ],
+    strategischeInzetten: [
+      {
+        titel: 'Commerciële funnel met vaste meetpunten',
+        beschrijving:
+          'Breng leadbron, opvolgsnelheid, conversie en dealwaarde samen in één dashboard. Dan wordt groei stuurbaar.',
+        roi: 'Meer inzicht en minder gemiste kansen binnen 30 dagen',
+        investering: 'Licht tot gemiddeld',
+      },
+      {
+        titel: 'AI voor salesvoorbereiding en opvolging',
+        beschrijving:
+          'Laat AI conceptmails, belscripts en samenvattingen maken op basis van sector, website en leadbron.',
+        roi: 'Minder handwerk en snellere opvolging',
+        investering: 'Laag',
+      },
+    ],
+    roadmap: {
+      q1: {
+        thema: 'Fundering',
+        focus: 'Meetbaar maken van leads en opvolging.',
+        acties: ['CRM velden aanscherpen', 'Leadbronnen meten', 'Contactmomenten standaardiseren'],
+      },
+      q2: {
+        thema: 'Acceleratie',
+        focus: 'Meer conversie uit bestaande traffic en leads halen.',
+        acties: ['CTA verbeteren', 'Cases toevoegen', 'Opvolgflows automatiseren'],
+      },
+      q3: {
+        thema: 'Schaling',
+        focus: 'Leadgeneratie uitbreiden naar meerdere kanalen.',
+        acties: ['LinkedIn-campagnes testen', 'SEO-content uitbreiden', 'Retargeting opzetten'],
+      },
+      q4: {
+        thema: 'Optimalisatie',
+        focus: 'Data gebruiken om campagnes en salesproces te verbeteren.',
+        acties: ['Dashboard evalueren', 'Win/loss analyse doen', 'AI workflows aanscherpen'],
+      },
+    },
+    cta: {
+      headline: 'Er liggen duidelijke kansen om slimmer te groeien',
+      body:
+        'Deze analyse is automatisch veilig afgerond. In een gesprek kunnen we de grootste bottleneck en snelste groeikans concreet maken.',
+      button: 'Plan direct een gesprek',
+    },
+  };
 }
 
 // ─── Validation ───────────────────────────────────────────────────────────────
@@ -457,12 +638,6 @@ export const POST: APIRoute = async ({ request }) => {
   const cfEnv = cloudflareEnv as Record<string, unknown>;
   const apiKey = cfEnv.OPENROUTER_API_KEY as string | undefined;
   const db = cfEnv.DB as D1Database | undefined;
-  if (!apiKey) {
-    return new Response(
-      JSON.stringify({ success: false, error: 'API key not configured' }),
-      { status: 500, headers: corsHeaders }
-    );
-  }
 
   try {
     // 1. Crawl website
@@ -472,15 +647,21 @@ export const POST: APIRoute = async ({ request }) => {
     const prompt = buildPrompt(body, crawlData);
 
     // 3. Call Anthropic API
-    let report: unknown;
-    try {
-      report = await callClaude(prompt, apiKey);
-    } catch (claudeError) {
-      const msg = claudeError instanceof Error ? claudeError.message : 'Unknown Claude error';
-      return new Response(
-        JSON.stringify({ success: false, error: `AI analysis failed: ${msg}` }),
-        { status: 502, headers: corsHeaders }
-      );
+    let report: unknown = null;
+    let fallbackReport = false;
+    if (apiKey) {
+      try {
+        report = await callClaude(prompt, apiKey);
+      } catch (claudeError) {
+        fallbackReport = true;
+        const msg = claudeError instanceof Error ? claudeError.message : 'Unknown Claude error';
+        console.error('AI analysis failed, returning fallback report:', msg);
+        report = buildFallbackReport(body, crawlData);
+      }
+    } else {
+      fallbackReport = true;
+      console.error('OPENROUTER_API_KEY missing, returning fallback report');
+      report = buildFallbackReport(body, crawlData);
     }
 
     // 4. Save to D1 (Cloudflare-native storage, no Firebase)
@@ -497,6 +678,7 @@ export const POST: APIRoute = async ({ request }) => {
         report,
         meta: {
           websiteCrawled: crawlData !== null,
+          fallbackReport,
           contactEmail: body.contactEmail,
           contactNaam: `${body.contactVoornaam} ${body.contactAchternaam}`,
         },

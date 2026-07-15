@@ -1,0 +1,170 @@
+---
+import BlogLayout from '../layouts/BlogLayout.astro';
+import EmdashPortableText from './EmdashPortableText.astro';
+import {
+  getCmsDate,
+  getCmsExcerpt,
+  getCmsHeroImage,
+  getCmsSeoImage,
+  getCmsTitle,
+  type EmDashContentEntry,
+} from '../lib/emdash-content';
+
+interface Props {
+  entry: EmDashContentEntry;
+  type: 'post' | 'page';
+  slug: string;
+  isPreview?: boolean;
+}
+
+const { entry, type, slug, isPreview = false } = Astro.props;
+const title = getCmsTitle(entry);
+const description = entry.seo?.description || getCmsExcerpt(entry);
+const date = getCmsDate(entry);
+const heroImage = getCmsHeroImage(entry);
+const socialImage = getCmsSeoImage(entry) || heroImage;
+const isPost = type === 'post';
+const category = typeof entry.data.category === 'string' && entry.data.category.trim()
+  ? entry.data.category.trim()
+  : isPost ? 'Blog' : 'Pagina';
+const author = typeof entry.data.author === 'string' && entry.data.author.trim()
+  ? entry.data.author.trim()
+  : 'Stefan Kelderman';
+const heroAlt = typeof entry.data.hero_alt === 'string' && entry.data.hero_alt.trim()
+  ? entry.data.hero_alt.trim()
+  : title;
+const canonicalPath = isPost ? `/blog/${slug}/` : `/${slug}/`;
+const canonical = entry.seo?.canonical || `https://optimaalgroeien.nl${canonicalPath}`;
+const pageTitle = entry.seo?.title || `${title} — Optimaal Groeien`;
+const noindex = isPreview || entry.seo?.noIndex === true;
+
+const articleSchema = isPost
+  ? JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: title,
+      description,
+      image: socialImage
+        ? (socialImage.startsWith('http') ? socialImage : `https://optimaalgroeien.nl${socialImage}`)
+        : 'https://optimaalgroeien.nl/images/team-full.jpg',
+      datePublished: new Date(date).toISOString(),
+      dateModified: new Date(date).toISOString(),
+      author: {
+        '@type': 'Person',
+        name: author,
+        url: 'https://optimaalgroeien.nl/over-ons/',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Optimaal Groeien',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://optimaalgroeien.nl/images/logo.webp',
+        },
+      },
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': canonical,
+      },
+      inLanguage: 'nl-NL',
+    })
+  : undefined;
+---
+
+<BlogLayout
+  title={pageTitle}
+  description={description}
+  canonical={canonical}
+  ogImage={socialImage}
+  ogType={isPost ? 'article' : 'website'}
+  publishedTime={isPost ? new Date(date).toISOString() : undefined}
+  author={isPost ? author : undefined}
+  articleSchema={articleSchema}
+  noindex={noindex}
+>
+  <header class="bg-brand-primary pt-36 pb-10 px-6">
+    <div class="max-w-3xl mx-auto">
+      <div class="flex items-center gap-3 mb-5">
+        <span class="text-[10px] font-bold uppercase tracking-widest text-brand-accent px-3 py-1 bg-brand-accent/15 rounded-full">
+          {category}
+        </span>
+        {isPost && (
+          <span class="text-[11px] text-white/35">
+            {new Date(date).toLocaleDateString('nl-NL', { day: 'numeric', month: 'long', year: 'numeric' })}
+          </span>
+        )}
+      </div>
+
+      <h1 class="text-3xl lg:text-[2.6rem] font-display font-bold text-white leading-snug tracking-tight mb-4">
+        {title}
+      </h1>
+
+      {description && (
+        <p class="text-base lg:text-lg text-white/60 leading-relaxed mb-7 max-w-2xl">
+          {description}
+        </p>
+      )}
+    </div>
+  </header>
+
+  {heroImage && (
+    <div class="max-w-4xl mx-auto px-6 -mt-6 relative z-10">
+      <img
+        src={heroImage}
+        alt={heroAlt}
+        class="w-full rounded-[24px] shadow-2xl object-cover max-h-[480px]"
+        loading="eager"
+      />
+    </div>
+  )}
+
+  <article class="pt-10 pb-16 px-6 bg-[#FFFCF8]">
+    <div class="max-w-3xl mx-auto">
+      <div class="article-body">
+        <EmdashPortableText value={entry.data.content} />
+      </div>
+
+      {isPost && (
+        <div class="mt-12 bg-brand-primary rounded-[28px] p-8 lg:p-10 text-center">
+          <h3 class="text-xl font-display font-bold text-white mb-3">
+            Wil je dit toepassen in jouw bedrijf?
+          </h3>
+          <p class="text-white/65 mb-6 text-sm leading-relaxed">
+            Plan een gratis analyse van 45 minuten. Stefan kijkt mee en geeft direct concrete aanbevelingen.
+          </p>
+          <a
+            href="https://meetings-eu1.hubspot.com/stefan-kelderman"
+            target="_blank"
+            rel="noreferrer"
+            class="inline-flex items-center gap-2 px-8 py-4 bg-brand-accent text-white rounded-2xl font-display font-bold hover:bg-white hover:text-brand-accent transition-all duration-200"
+          >
+            Plan je gratis analyse →
+          </a>
+        </div>
+      )}
+    </div>
+  </article>
+</BlogLayout>
+
+<style is:global>
+  .article-body h1,
+  .article-body h2 { font-size: 1.4rem; font-weight: 700; color: #053b63; margin-top: 3rem; margin-bottom: 0.875rem; font-family: var(--font-display); padding-bottom: 0.5rem; border-bottom: 2px solid #FEF3E8; }
+  .article-body h3 { font-size: 1.1rem; font-weight: 700; color: #053b63; margin-top: 2rem; margin-bottom: 0.625rem; font-family: var(--font-display); }
+  .article-body p  { color: rgba(51,65,85,0.82); line-height: 1.85; margin-bottom: 1.25rem; font-size: 1rem; }
+  .article-body > p:first-of-type { font-size: 1.05rem; color: rgba(51,65,85,0.90); }
+  .article-body ul { list-style: none; padding-left: 0; margin-bottom: 1.25rem; }
+  .article-body ul li { color: rgba(51,65,85,0.82); margin-bottom: 0.55rem; line-height: 1.75; padding-left: 1.5rem; position: relative; }
+  .article-body ul li::before { content: ''; position: absolute; left: 0; top: 0.65em; width: 6px; height: 6px; border-radius: 50%; background: #f17a29; }
+  .article-body ol { list-style: none; padding-left: 0; margin-bottom: 1.25rem; counter-reset: ol-counter; }
+  .article-body ol li { color: rgba(51,65,85,0.82); margin-bottom: 0.55rem; line-height: 1.75; padding-left: 2rem; position: relative; counter-increment: ol-counter; }
+  .article-body ol li::before { content: counter(ol-counter); position: absolute; left: 0; top: 0.1em; width: 1.35rem; height: 1.35rem; border-radius: 50%; background: #053b63; color: white; font-size: 0.7rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+  .article-body strong { font-weight: 700; color: #053b63; }
+  .article-body a { color: #f17a29; text-decoration: none; border-bottom: 1px solid #f17a2940; transition: border-color 0.15s; }
+  .article-body a:hover { border-bottom-color: #f17a29; }
+  .article-body blockquote { border-left: 3px solid #f17a29; padding: 0.75rem 1.25rem; background: #fffaf4; border-radius: 0 14px 14px 0; margin: 1.75rem 0; }
+  .article-body blockquote p { margin-bottom: 0; color: #053b63; font-style: italic; }
+  .article-body figure { margin: 2rem 0; }
+  .article-body figure img { width: 100%; border-radius: 20px; box-shadow: 0 16px 36px rgba(5,59,99,0.10); }
+  .article-body pre { background: #052f4f; color: white; padding: 1rem; border-radius: 14px; overflow-x: auto; margin: 1.75rem 0; }
+  .article-body code { font-size: 0.9em; }
+</style>

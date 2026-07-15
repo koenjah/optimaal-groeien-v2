@@ -1,0 +1,15 @@
+---
+import EmdashContentPage from '../../../components/EmdashContentPage.astro';
+import { getCmsEntry } from '../../../lib/emdash-content';
+
+export const prerender = false;
+
+const slug = Astro.params.slug ?? '';
+const entry = slug ? await getCmsEntry('posts', slug) : null;
+
+if (!entry) {
+  return Astro.redirect('/404');
+}
+---
+
+<EmdashContentPage entry={entry} type="post" slug={slug} />

@@ -1,17 +1,60 @@
 ---
 import BlogLayout from '../../layouts/BlogLayout.astro';
 import { getCollection } from 'astro:content';
+import { getCmsBlogListEntries } from '../../lib/emdash-content';
+
+const pageSize = 12;
+const getBlogPosts = async () => (await (getCollection as any)(
+  'blog',
+  ({ data }: { data: any }) => !data.draft,
+)) as any[];
 
 export async function getStaticPaths({ paginate }: { paginate: Function }) {
-  const posts = (await getCollection('blog', ({ data }: { data: any }) => !data.draft))
+  const posts = (await (getCollection as any)(
+    'blog',
+    ({ data }: { data: any }) => !data.draft,
+  ))
     .sort((a: any, b: any) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
   return paginate(posts, { pageSize: 12 });
 }
 
-const { page } = Astro.props;
+const markdownPosts = await getBlogPosts();
+const cmsPosts = await getCmsBlogListEntries();
+const postsBySlug = new Map(
+  markdownPosts.map((post: any) => [post.data.slug, post]),
+);
+
+// CMS entries replace their Markdown counterpart in the overview. Keeping the
+// Markdown entry in the repository still gives every migrated blog a fallback.
+for (const post of cmsPosts) postsBySlug.set(post.data.slug, post);
+
+const allPosts = [...postsBySlug.values()]
+  .sort((a: any, b: any) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+const params = Astro.params as Record<string, string | undefined>;
+const props = Astro.props as { page?: any };
+const rawParam = Astro.url.searchParams.get('page') ?? params.page ?? '1';
+const param = rawParam.replace(/\/$/, '') || '1';
+const currentPage = Number(param);
+const lastPage = Math.max(1, Math.ceil(allPosts.length / pageSize));
+
+if (!Number.isInteger(currentPage) || currentPage < 1 || currentPage > lastPage) {
+  return Astro.redirect('/404');
+}
+
+const fallbackPage = {
+  data: allPosts.slice((currentPage - 1) * pageSize, currentPage * pageSize),
+  currentPage,
+  lastPage,
+  total: allPosts.length,
+  url: {
+    prev: currentPage > 1 ? (currentPage === 2 ? '/blog' : `/blog/${currentPage - 1}`) : undefined,
+    next: currentPage < lastPage ? `/blog/${currentPage + 1}` : undefined,
+  },
+};
+
+const page = props.page ?? fallbackPage;
 const posts = page.data;
 
-const allPosts = (await getCollection('blog', ({ data }: { data: any }) => !data.draft));
 const categories = [...new Set(allPosts.map((p: any) => p.data.category))].sort();
 
 const isFirstPage = page.currentPage === 1;

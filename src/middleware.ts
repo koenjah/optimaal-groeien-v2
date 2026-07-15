@@ -1,11 +1,141 @@
 import { defineMiddleware } from 'astro:middleware';
+import { env as cloudflareEnv } from 'cloudflare:workers';
 
-export const onRequest = defineMiddleware((context, next) => {
+type AssetsBinding = {
+  fetch(request: Request): Promise<Response>;
+};
+
+type D1PreparedStatement = {
+  first<T = unknown>(): Promise<T | null>;
+  all<T = unknown>(): Promise<{ results?: T[] }>;
+};
+
+type D1Database = {
+  prepare(query: string): D1PreparedStatement;
+};
+
+type SitemapState = {
+  count: number;
+  lastmod: string | null;
+};
+
+function sitemapStateQuery(table: 'ec_posts' | 'ec_pages', collection: 'posts' | 'pages') {
+  return `
+    SELECT COUNT(*) AS count, MAX(c.updated_at) AS lastmod
+    FROM ${table} c
+    LEFT JOIN _emdash_seo s
+      ON s.collection = '${collection}' AND s.content_id = c.id
+    WHERE c.status = 'published'
+      AND c.deleted_at IS NULL
+      AND (s.seo_no_index IS NULL OR s.seo_no_index = 0)
+  `;
+}
+
+function sitemapEntry(origin: string, filename: string, lastmod?: string | null) {
+  return [
+    '  <sitemap>',
+    `    <loc>${origin}/${filename}</loc>`,
+    ...(lastmod ? [`    <lastmod>${lastmod}</lastmod>`] : []),
+    '  </sitemap>',
+  ].join('\n');
+}
+
+async function createSitemapIndex(origin: string, database?: D1Database) {
+  const entries = [sitemapEntry(origin, 'sitemap-0.xml')];
+
+  if (database) {
+    try {
+      const [posts, pages] = await Promise.all([
+        database.prepare(sitemapStateQuery('ec_posts', 'posts')).first<SitemapState>(),
+        database.prepare(sitemapStateQuery('ec_pages', 'pages')).first<SitemapState>(),
+      ]);
+
+      if ((posts?.count ?? 0) > 0) {
+        entries.push(sitemapEntry(origin, 'sitemap-posts.xml', posts?.lastmod));
+      }
+      if ((pages?.count ?? 0) > 0) {
+        entries.push(sitemapEntry(origin, 'sitemap-pages.xml', pages?.lastmod));
+      }
+    } catch {
+      // Keep the static website sitemap available if the CMS database is unavailable.
+    }
+  }
+
+  return new Response([
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+    ...entries,
+    '</sitemapindex>',
+  ].join('\n'), {
+    status: 200,
+    headers: {
+      'Content-Type': 'application/xml; charset=utf-8',
+      'Cache-Control': 'public, max-age=300',
+      'X-Content-Type-Options': 'nosniff',
+    },
+  });
+}
+
+async function createStaticSitemap(
+  request: Request,
+  assets?: AssetsBinding,
+  database?: D1Database,
+) {
+  if (!assets?.fetch) return null;
+
+  const response = await assets.fetch(request);
+  if (!response.ok || !database) return response;
+
+  try {
+    const published = await database
+      .prepare(`
+        SELECT slug
+        FROM ec_posts
+        WHERE status = 'published' AND deleted_at IS NULL
+      `)
+      .all<{ slug: string }>();
+    const cmsSlugs = new Set((published.results ?? []).map((row) => row.slug));
+    if (!cmsSlugs.size) return response;
+
+    const xml = await response.text();
+    const filtered = xml.replace(/\s*<url>[\s\S]*?<loc>([^<]+)<\/loc>[\s\S]*?<\/url>/g, (block, loc) => {
+      try {
+        const pathname = new URL(loc).pathname.replace(/\/$/, '');
+        const match = pathname.match(/^\/blog\/([^/]+)$/);
+        return match && cmsSlugs.has(decodeURIComponent(match[1])) ? '' : block;
+      } catch {
+        return block;
+      }
+    });
+    const headers = new Headers(response.headers);
+    headers.set('Cache-Control', 'public, max-age=300');
+    headers.delete('Content-Length');
+    return new Response(filtered, { status: response.status, headers });
+  } catch {
+    return response;
+  }
+}
+
+export const onRequest = defineMiddleware(async (context, next) => {
   const { pathname, search } = context.url;
   const normalizedPathname = pathname.endsWith('/') && pathname !== '/' ? pathname.slice(0, -1) : pathname;
   const publicHosts = new Set(['optimaalgroeien.nl', 'www.optimaalgroeien.nl']);
   const canonicalOrigin = 'https://optimaalgroeien.nl';
   const forwardedProtocol = context.request.headers.get('x-forwarded-proto');
+
+  // EmDash owns /sitemap-{collection}.xml. Keep Astro's static sitemap file
+  // available and add CMS sitemaps to the index only when they contain content.
+  if (pathname === '/sitemap-0.xml') {
+    const assets = (cloudflareEnv as Record<string, unknown>).ASSETS as AssetsBinding | undefined;
+    const database = (cloudflareEnv as Record<string, unknown>).EMDASH_DB as D1Database | undefined;
+    const sitemap = await createStaticSitemap(context.request, assets, database);
+    if (sitemap) return sitemap;
+  }
+
+  if (pathname === '/sitemap-index.xml') {
+    const database = (cloudflareEnv as Record<string, unknown>).EMDASH_DB as D1Database | undefined;
+    return createSitemapIndex(canonicalOrigin, database);
+  }
 
   const redirectTo = (targetPath: string) => {
     const targetUrl = new URL(targetPath, canonicalOrigin);
