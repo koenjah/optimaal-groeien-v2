@@ -47,6 +47,11 @@ check(config.compatibility_flags?.includes('nodejs_compat'), 'nodejs_compat must
 check(config.assets?.run_worker_first === true, 'assets.run_worker_first must be enabled');
 check(entry.includes('SLUG_ALREADY_USED'), 'Reserved slug protection is missing from the Worker');
 check(entry.includes('og-admin-help'), 'CMS help link branding is missing from the Worker');
+check(
+  entry.includes('--color-kumo-canvas: #101417')
+    && entry.includes('--text-color-kumo-strong: #f8fafc'),
+  'CMS dark-mode contrast tokens are missing from the Worker',
+);
 check(entry.includes('Veilig content maken en publiceren'), 'CMS guide is missing from the Worker');
 
 const syntaxCheck = spawnSync(process.execPath, ['--check', entryPath.pathname], {

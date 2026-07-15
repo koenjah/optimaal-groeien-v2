@@ -197,7 +197,14 @@ const adminBrandCss = \`
     --color-kumo-brand-hover: #f59a5a;
     --text-color-kumo-brand: #f59a5a;
     --text-color-kumo-link: #93c5fd;
+    --text-color-kumo-default: #e5e7eb;
+    --text-color-kumo-strong: #f8fafc;
+    --text-color-kumo-subtle: #a3aab5;
     --color-kumo-focus: #f17a29;
+    --color-kumo-canvas: #101417;
+    --color-kumo-elevated: #151a1e;
+    --color-kumo-recessed: #1d2428;
+    --color-kumo-base: #111518;
   }
 
   .emdash-sidebar {
