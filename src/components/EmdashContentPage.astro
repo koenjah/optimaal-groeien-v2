@@ -15,9 +15,10 @@ interface Props {
   };
   type: 'post' | 'page';
   slug: string;
+  isPreview?: boolean;
 }
 
-const { entry, type, slug } = Astro.props;
+const { entry, type, slug, isPreview = false } = Astro.props;
 const title = getCmsTitle(entry);
 const description = getCmsExcerpt(entry);
 const date = getCmsDate(entry);
@@ -68,6 +69,7 @@ const articleSchema = isPost
   publishedTime={isPost ? new Date(date).toISOString() : undefined}
   author={isPost ? 'Stefan Kelderman' : undefined}
   articleSchema={articleSchema}
+  noindex={isPreview}
 >
   <header class="bg-brand-primary pt-36 pb-10 px-6">
     <div class="max-w-3xl mx-auto">

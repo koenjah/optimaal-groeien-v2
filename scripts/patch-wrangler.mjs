@@ -20,26 +20,30 @@ const accountId =
   (isProduction
     ? 'c6b2726f6f179cede41f156972fd951a'
     : isEmdashStaging
-      ? '1a908255c94d3901bd9cdd3bd565704b'
+      ? 'c6b2726f6f179cede41f156972fd951a'
       : '');
 const scanDbName =
   process.env.DB_NAME ??
-  (isProduction ? 'optimaal-groeien-scans' : isEmdashStaging ? 'duidelijkdag_family' : 'optimaal-groeien-staging-scans');
+  (isProduction ? 'optimaal-groeien-scans' : isEmdashStaging ? 'optimaal-groeien-cms-staging' : 'optimaal-groeien-staging-scans');
 const scanDbId =
   process.env.DB_ID ??
   (scanDbName === 'optimaal-groeien-scans'
     ? 'eb2e5e8a-12ce-4190-94ec-ee7644a5cbff'
-    : scanDbName === 'duidelijkdag_family'
-      ? 'd63dd757-5070-46c1-9a62-da000bfd53d4'
+    : scanDbName === 'optimaal-groeien-cms-staging'
+      ? '1dc5542d-cc4e-4e98-a0bc-c2bbd0c22067'
       : '');
-const emdashDbName = process.env.EMDASH_DB_NAME ?? (isProduction ? scanDbName : 'duidelijkdag_family');
+const emdashDbName = process.env.EMDASH_DB_NAME ?? (isProduction || isEmdashStaging ? scanDbName : 'duidelijkdag_family');
 const emdashDbId = process.env.EMDASH_DB_ID ?? (isProduction || isEmdashStaging ? scanDbId : '');
 const mediaBucketName =
   process.env.MEDIA_BUCKET ??
-  (isProduction ? 'optimaal-groeien-emdash-media' : 'optimaal-groeien-emdash-staging-media');
+  (isProduction ? 'optimaal-groeien-emdash-media' : 'optimaal-groeien-cms-staging-media');
 const sessionKvId =
   process.env.SESSION_KV_ID ??
-  (isProduction ? 'c13f6e518d28427c8014e6a8abc920f6' : '');
+  (isProduction
+    ? 'c13f6e518d28427c8014e6a8abc920f6'
+    : isEmdashStaging
+      ? 'c6ec2b0a7d7d4bef81b61971f26f178b'
+      : '');
 const accessAudience = process.env.CF_ACCESS_AUDIENCE?.trim();
 const contactToEmail =
   process.env.CONTACT_TO_EMAIL ??
@@ -62,6 +66,11 @@ const publicHosts = process.env.PUBLIC_HOSTS
 cfg.name = workerName;
 if (accountId) {
   cfg.account_id = accountId;
+}
+if (isEmdashStaging) {
+  cfg.workers_dev = true;
+  cfg.preview_urls = true;
+  delete cfg.routes;
 }
 cfg.assets = {
   ...(cfg.assets ?? {}),

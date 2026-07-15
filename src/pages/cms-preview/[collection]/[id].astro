@@ -1,0 +1,26 @@
+---
+import EmdashContentPage from '../../../components/EmdashContentPage.astro';
+import { getCmsPreviewEntry } from '../../../lib/emdash-content';
+
+export const prerender = false;
+
+const collection = Astro.params.collection;
+const id = Astro.params.id;
+
+if ((collection !== 'posts' && collection !== 'pages') || !id) {
+  return Astro.redirect('/404');
+}
+
+const entry = await getCmsPreviewEntry(collection, id);
+
+if (!entry) {
+  return Astro.redirect('/404');
+}
+
+const type = collection === 'posts' ? 'post' : 'page';
+const slug = typeof entry.data.slug === 'string' && entry.data.slug
+  ? entry.data.slug
+  : id;
+---
+
+<EmdashContentPage entry={entry} type={type} slug={slug} isPreview={true} />

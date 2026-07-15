@@ -1,95 +1,108 @@
-# EmDash CMS: staging en veilige uitrol
+# EmDash CMS: veilige uitrol
 
-De CMS-versie staat los van de live website totdat alle controles hieronder zijn afgerond.
+Dit document beschrijft de vaste staging- en productieomgeving. Staging gebruikt eigen opslag en kan de live website of live CMS-data niet wijzigen.
 
-## Huidige onderdelen
+## Omgevingen
 
-- Live Worker: `optimaal-groeien`
-- Live D1: `optimaal-groeien-scans` (`eb2e5e8a-12ce-4190-94ec-ee7644a5cbff`)
-- Staging Worker: `optimaal-groeien-emdash-staging`
-- Staging D1: `duidelijkdag_family` (`d63dd757-5070-46c1-9a62-da000bfd53d4`)
-- Staging media: `optimaal-groeien-emdash-staging-media`
-- Staging URL: `https://optimaal-groeien-emdash-staging.koenjah.workers.dev`
+| Onderdeel | Productie | Staging |
+| --- | --- | --- |
+| Website | `https://optimaalgroeien.nl` | `https://cms-staging.optimaalgroeien.nl` |
+| CMS | `https://optimaalgroeien.nl/beheer/` | `https://cms-staging.optimaalgroeien.nl/_emdash/admin/` |
+| Worker | `optimaal-groeien` | `optimaal-groeien-emdash-staging` |
+| D1 | `optimaal-groeien-scans` | `optimaal-groeien-cms-staging` |
+| R2 | `optimaal-groeien-emdash-media` | `optimaal-groeien-cms-staging-media` |
+| KV | `optimaal-groeien-cms-sessions` | `optimaal-groeien-cms-staging-sessions` |
+| E-mail verzenden | Ja, naar marketing | Uitgeschakeld |
 
-De staging-D1 was leeg en nergens aan gekoppeld voordat hij hiervoor in gebruik werd genomen. De tabellen van de AI-scan en EmDash hebben verschillende namen. De twee bindings op staging mogen daarom veilig naar dezelfde D1 wijzen.
+Beide omgevingen staan in het losse Cloudflare-account voor Optimaal Groeien. Het account-ID is `c6b2726f6f179cede41f156972fd951a`.
 
-Staging heeft geen `send_email`-binding. Een test op staging kan dus nooit per ongeluk een echt contactbericht versturen.
+## Toegang
 
-## Beheerlogin met Cloudflare Access
+Cloudflare Access staat alleen deze adressen toe:
 
-Zonder `CF_ACCESS_TEAM_DOMAIN` gebruikt een EmDash-build de normale passkey-login. Dat is de huidige stagingfallback.
+1. `koenjah@gmail.com`
+2. `marketing@optimaalgroeien.nl`
 
-Voor de definitieve omgeving wordt Cloudflare Access gebruikt:
+De beheerder vult het e-mailadres in en ontvangt een code van zes cijfers. EmDash maakt een toegestane gebruiker bij de eerste login automatisch aan als admin. De CMS-API controleert de gebruiker daarna nog een tweede keer.
 
-```bash
-CF_ACCESS_TEAM_DOMAIN="jouw-team.cloudflareaccess.com" ENABLE_EMDASH=true npm run build
-```
+## Veilig bouwen
 
-De Worker moet daarnaast de runtimevariabele `CF_ACCESS_AUDIENCE` krijgen met de AUD-tag van de Access-applicatie. De Access-regel staat alleen deze adressen toe:
-
-- `marketing@optimaalgroeien.nl`
-- `koenjah@gmail.com`
-
-EmDash maakt een toegestane gebruiker bij de eerste login automatisch aan als admin. Cloudflare Access bepaalt wie de CMS-login mag bereiken; EmDash blijft alle beheer-API's zelf ook controleren.
-
-## Lokale controles
-
-Gebruik de projectspecifieke Node-versie uit `.nvmrc`:
+Gebruik Node uit `.nvmrc`:
 
 ```bash
 nvm use
-```
-
-Deze versie is minimaal Node `22.18.0`, zoals ook in `package.json` staat.
-
-```bash
+npm ci
 npm run lint
-npm run build
-npm run build:emdash
 ```
 
-Controleer na `build:emdash` ook de echte deployconfig:
+Een staging-build:
 
 ```bash
-jq '{name,account_id,compatibility_flags,d1_databases,r2_buckets,send_email,images}' dist/server/wrangler.json
+npm run build:staging:emdash
 ```
 
-## Staging deployen en testen
+Een productie-build:
+
+```bash
+npm run build:production:emdash
+```
+
+Beide buildcommando's controleren automatisch de Worker-naam, het Cloudflare-account, D1, R2, KV, Access en de e-mailbinding. De build stopt als een productie- en stagingonderdeel door elkaar staan.
+
+## Staging testen
+
+Deploy eerst alleen staging:
 
 ```bash
 npm run deploy:staging:emdash
 npm run test:staging:emdash
 ```
 
-Open daarna `/_emdash/admin/setup` en maak de eerste beheerder aan met een passkey. Test voor een productie-uitrol minimaal:
+Zonder login-cookie controleert de smoketest of Cloudflare Access actief is. Met een geldige `CF_ACCESS_COOKIE` controleert hij ook de beheerpagina en alle belangrijke lees-API's.
 
-1. Inloggen en uitloggen.
-2. Een conceptblog maken, aanpassen en verwijderen.
-3. Een tag maken en aan het conceptblog koppelen.
-4. Een afbeelding uploaden en weer verwijderen.
-5. Publiceren en controleren dat titel, tekst, afbeelding en tags goed op de publieke pagina staan.
-6. Controleren dat bestaande websitepagina's, formulieren en AI-scan nog werken.
+Voor een volledige uitroltest zijn op 15 juli 2026 deze stappen echt uitgevoerd:
 
-## Productieregels
+1. Inloggen met een echte e-mailcode.
+2. Een blog als concept maken.
+3. Titel en tekst aanpassen.
+4. Een tag maken en koppelen.
+5. Een PNG uploaden, tonen en weer verwijderen.
+6. SEO-velden opslaan.
+7. Het blog publiceren en op de openbare blogpagina teruglezen.
+8. Een nieuwe conceptwijziging maken en controleren dat deze alleen in de preview stond.
+9. De conceptwijziging weggooien.
+10. Het blog eerst naar de prullenbak verplaatsen en daarna definitief verwijderen.
+11. Controleren dat content, prullenbak, tag en media weer leeg waren.
 
-Een productie-uitrol mag pas na een geslaagde, ingelogde stagingtest.
+De preview-route accepteert alleen een geldig en tijdelijk ondertekend token. De preview krijgt `noindex` en `Cache-Control: private, no-store`. Zonder token geeft dezelfde route 404.
 
-1. Maak direct voor de deploy een nieuwe Worker-back-up, D1-logische back-up en Git bundle.
-2. Leg de actieve Worker-versie en deployment-ID vast.
-3. Maak voor productie een aparte R2-bucket: `optimaal-groeien-emdash-media`.
-4. Bouw met `ENABLE_EMDASH=true`, Worker `optimaal-groeien`, de live D1 voor zowel `DB` als `EMDASH_DB`, en de productie-mediabucket.
-5. Controleer de gegenereerde `wrangler.json` voordat er wordt geupload.
-6. Gebruik bij de deploy `--keep-vars`, zodat bestaande Worker-instellingen behouden blijven.
-7. Vergelijk na de deploy de status, redirects en inhoud van de belangrijkste live pagina's met de nulmeting.
+## Productie deployen
+
+Een productie-uitrol mag alleen na een geslaagde stagingtest.
+
+1. Maak een actuele Git bundle, Worker-back-up en logische D1-back-up.
+2. Noteer de actieve Worker-versie.
+3. Controleer dat de Git-werkmap schoon is en dat de juiste commit op GitHub staat.
+4. Voer `npm run build:production:emdash` uit.
+5. Controleer `dist/server/wrangler.json` nog één keer.
+6. Deploy met `npm run deploy:production:emdash`. Dit gebruikt `--keep-vars`.
+7. Voer `npm run test:production` uit.
+8. Log echt in en controleer dashboard, blogs, pagina's, media, tags en gebruikers.
+
+De nieuwste volledige back-up voor deze uitrol staat buiten de repository:
+
+`/Users/gebruiker/Documents/STEFAN/backups/optimaal-groeien/post-cms-20260715-052126/`
+
+Deze map bevat onder meer de Worker-code, Worker-instellingen, versies, deployments, een Git bundle, R2- en KV-metadata en een logische kopie van alle 52 bereikbare D1-tabellen. Controleer `SHA256SUMS` voordat een back-up wordt gebruikt.
 
 ## Terugzetten
 
-Bij een fout eerst de vorige Cloudflare Worker-deployment herstellen. Dat zet de code en bindings snel terug zonder de D1-data te wissen.
+Bij een fout zet je eerst de vorige Cloudflare Worker-versie terug. Dat verandert geen D1-rijen en verwijdert geen R2-media.
 
-De D1-back-up is alleen nodig als CMS-data zelf verkeerd is gewijzigd. Herstel nooit blind de hele database: vergelijk eerst de tabellen en herstel alleen de getroffen rijen. De media in R2 staat los van de Worker-deployment en blijft bij een code-rollback bewaard.
+Gebruik de D1-back-up alleen als gegevens zelf verkeerd zijn gewijzigd. Herstel nooit blind de hele database. Vergelijk eerst de getroffen tabel en herstel alleen de juiste rijen.
 
-De lokale back-up van 14 juli 2026 staat buiten de repository in:
+R2-media en D1-data blijven bestaan als alleen de Worker-code wordt teruggezet.
 
-`/Users/gebruiker/Documents/STEFAN/backups/optimaal-groeien/20260714-120909/`
+## Bekende grens
 
-Controleer bij herstel eerst `SHA256SUMS` in die map.
+De bestaande blogs uit de repository blijven live en ongewijzigd. Nieuwe CMS-blogs verschijnen daarnaast in hetzelfde blogoverzicht. De bestaande statische blogs zijn nog niet naar EmDash geïmporteerd en zijn daarom nog niet via het CMS te bewerken. Maak geen nieuw CMS-item met een slug die al door een bestaande pagina of blog wordt gebruikt.

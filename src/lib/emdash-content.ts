@@ -92,6 +92,36 @@ export async function getCmsEntry(collection: 'posts' | 'pages', slug: string) {
   return (entry as EmDashContentEntry | null) ?? null;
 }
 
+export async function getCmsPreviewEntry(collection: 'posts' | 'pages', id: string) {
+  if (!isEmdashEnabled) return null;
+
+  const [{ ContentRepository, getEmDashEntry, getRequestContext }, { getDb }] = await Promise.all([
+    import('emdash'),
+    import('emdash/runtime'),
+  ]);
+  const preview = getRequestContext()?.preview;
+
+  if (preview?.collection !== collection || preview.id !== id) {
+    return null;
+  }
+
+  // The public Astro loader resolves entries by their URL slug. The signed
+  // preview token intentionally contains the immutable database ID, so resolve
+  // that ID to its current slug before loading the draft revision.
+  const item = await new ContentRepository(await getDb()).findByIdOrSlug(collection, id);
+  if (!item?.slug) return null;
+
+  const { entry, error, isPreview } = await getEmDashEntry(collection, item.slug);
+
+  if (error) {
+    console.warn(`[emdash] Failed to preview ${collection}/${id}:`, error);
+    return null;
+  }
+
+  // Never expose this internal ID route without a valid signed preview token.
+  return isPreview ? ((entry as EmDashContentEntry | null) ?? null) : null;
+}
+
 export async function getCmsBlogListEntries(): Promise<BlogListEntry[]> {
   if (!isEmdashEnabled) return [];
 
