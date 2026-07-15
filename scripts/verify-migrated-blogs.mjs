@@ -135,7 +135,7 @@ const listedSlugs = [];
 const overviewPages = Math.ceil(expectedOrder.length / 12);
 
 for (let page = 1; page <= overviewPages; page += 1) {
-  const path = page === 1 ? '/blog/' : `/blog/${page}`;
+  const path = page === 1 ? '/blog/' : `/blog/${page}/`;
   const response = await get(`${path}?cms_verify=1`);
   const html = await response.text();
   if (response.status !== 200) throw new Error(`${path} gaf HTTP ${response.status}`);
